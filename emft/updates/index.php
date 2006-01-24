@@ -55,7 +55,7 @@ if (function_exists('xslt_create')) {
 	echo "</tt>";
 } ?>
 
-<p><a href="view-source:http://www.eclipse.org/emft/updates/<?php echo $XMLfile; ?>" class="red">View as XML</a></p>
+<p><a href="view-source:http://download.eclipse.org/technology/emft/updates/<?php echo $XMLfile; ?>" class="red">View as XML</a></p>
 
 <?php include $pre . "includes/footer.php"; ?>
 <!-- $Id$ -->
