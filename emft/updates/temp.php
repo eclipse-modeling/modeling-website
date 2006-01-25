@@ -4,15 +4,18 @@ $pre = "../";
 
 // Process query string
 $vars = explode("&", $_SERVER['QUERY_STRING']);
-foreach ($vars as $k => $v) { echo "$k :: $v<br>\n"; }
+foreach ($vars as $k => $v) { echo "\$vars[".$k."] = $v<br>\n"; }
 for ($i=0;$i<=count($vars);$i++) {
   $var = explode("=", $vars[$i]);
   echo $i." :: ".$vars[$i]. " --> <br/>\n";
   foreach ($var as $k => $v) { echo "  > $k :: $v<br>\n"; }
   
   $qs[$var[0]] = $var[1];
-  echo $qs[$var[0]]." :: ".$var[1]."<br/>\n";  
+  echo "\$qs[".$var[0]."] :: ".$var[1]."<br/>\n";  
 }
+
+echo "<hr>\n";
+foreach ($qs as $k => $v) { echo "\$qs[".$k."] = $v<br>\n"; }
 
 $params = array();
 $params["project"] = $qs["proj"]; 
