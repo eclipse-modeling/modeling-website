@@ -2,10 +2,9 @@
 <xsl:output method="html" encoding="ISO-8859-1"/>
 
 <xsl:param name="project"></xsl:param> 
-<!-- TODO: implement filter by project; check for substring match in 
-	 <feature><category name="EMF SDK 2.0.5"/></feature> 
+<!-- filter by category-def name or label, eg.
+	 <category-def label="emft query SDK 1.0.0 I200601191253" name="emft query SDK 1.0.0 I200601191253">
 -->
-
 <xsl:key name="cat" match="category" use="@name"/>
 <xsl:template match="/">
 <xsl:for-each select="site">
@@ -39,7 +38,7 @@
 	<table width="100%" border="0" cellspacing="1" cellpadding="2">
 	<xsl:for-each select="category-def">
 		<xsl:sort select="@label" order="descending" case-order="upper-first"/>
-		<xsl:if test="count(key('cat',@name)) != 0">
+		<xsl:if test="count(key('cat',@name)) != 0 and ($project = '' or contains(@name,$project) or contains(@label,$project))">
 			<tr class="header">
 				<!-- <td class="sub-header" width="30%">
 					<xsl:value-of select="@name"/>
@@ -76,30 +75,6 @@
 						</xsl:choose>
 						<br />
 				</td>
-<!--				<td>
-					<table>
-						<xsl:if test="ancestor::feature//@os">
-							<tr><td class="log-text" id="indent">Operating Systems:</td>
-							<td class="log-text" id="indent"><xsl:value-of select="ancestor::feature//@os"/></td>
-							</tr>
-						</xsl:if>
-						<xsl:if test="ancestor::feature//@ws">
-							<tr><td class="log-text" id="indent">Windows Systems:</td>
-							<td class="log-text" id="indent"><xsl:value-of select="ancestor::feature//@ws"/></td>
-							</tr>
-						</xsl:if>
-						<xsl:if test="ancestor::feature//@nl">
-							<tr><td class="log-text" id="indent">Languages:</td>
-							<td class="log-text" id="indent"><xsl:value-of select="ancestor::feature//@nl"/></td>
-							</tr>
-						</xsl:if>
-						<xsl:if test="ancestor::feature//@arch">
-							<tr><td class="log-text" id="indent">Architecture:</td>
-							<td class="log-text" id="indent"><xsl:value-of select="ancestor::feature//@arch"/></td>
-							</tr>
-						</xsl:if>
-					</table>
-				</td> -->
 			</tr>
 			</xsl:for-each>
 			<tr><td class="spacer"><br/></td><td class="spacer"><br/></td></tr>
