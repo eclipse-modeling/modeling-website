@@ -6,11 +6,11 @@ $pre = "../";
 $vars = explode("&", $_SERVER['QUERY_STRING']);
 for ($i=0;$i<=count($vars);$i++) {
   $var = explode("=", $vars[$i]);
-  $qs[$var[0]] = $var[1];
+  $qsvars[$var[0]] = $var[1];
 }
 
 $params = array();
-$params["project"] = $qs["proj"]; 
+$params["project"] = $qsvars["proj"]; 
 
 $HTMLTitle = "EMF Technologies - Update Manager";
 $ProjectName = array(
@@ -33,7 +33,7 @@ include $pre . "includes/header.php";
  */
 
 // define XML and XSL sources 
-$XMLfile = $qs["XMLfile"] ? $qs["XMLfile"] : "site.xml";
+$XMLfile = $qsvars["XMLfile"] ? $qsvars["XMLfile"] : "site.xml";
 $XSLfile = "site.xsl";
 
 if (function_exists('xslt_create')) {
