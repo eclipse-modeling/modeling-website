@@ -180,6 +180,41 @@
 		<category name="emft validation SDK 1.0.0 I200601261257"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.transaction.doc_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.transaction.doc" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.transaction.examples" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.sdk_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.transaction.sdk" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.transaction" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workbench.doc_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.workbench.doc" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workbench.examples_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.workbench.examples" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workbench_1.0.0.I200601261315.jar" patch="false" id="org.eclipse.emf.workbench" version="1.0.0.I200601261315">
+		<category name="emft transaction SDK 1.0.0 I200601261315"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -219,6 +254,12 @@ This category contains the features of the 1.0.0 I200601261243 build of emft que
 	<category-def label="emft validation SDK 1.0.0 I200601261257" name="emft validation SDK 1.0.0 I200601261257">
 		<description>
 This category contains the features of the 1.0.0 I200601261257 build of emft validation SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft transaction SDK 1.0.0 I200601261315" name="emft transaction SDK 1.0.0 I200601261315">
+		<description>
+This category contains the features of the 1.0.0 I200601261315 build of emft transaction SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
