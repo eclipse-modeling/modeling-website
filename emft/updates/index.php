@@ -33,7 +33,7 @@ include $pre . "includes/header.php";
  */
 
 // define XML and XSL sources 
-$XMLfile = $qsvars["XMLfile"] ? $qsvars["XMLfile"] : "site.xml";
+$XMLfile = $qsvars["XMLfile"] ? str_replace("../","",$qsvars["XMLfile"]) : "site.xml";
 $XSLfile = "site.xsl";
 
 if (function_exists('xslt_create')) {
