@@ -235,6 +235,31 @@
 		<category name="emft ocl SDK 1.0.0 I200602020906"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.query.doc_1.0.0.I200602020940.jar" patch="false" id="org.eclipse.emf.query.doc" version="1.0.0.I200602020940">
+		<category name="emft query SDK 1.0.0 I200602020940"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples_1.0.0.I200602020940.jar" patch="false" id="org.eclipse.emf.query.examples" version="1.0.0.I200602020940">
+		<category name="emft query SDK 1.0.0 I200602020940"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl_1.0.0.I200602020940.jar" patch="false" id="org.eclipse.emf.query.ocl" version="1.0.0.I200602020940">
+		<category name="emft query SDK 1.0.0 I200602020940"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.sdk_1.0.0.I200602020940.jar" patch="false" id="org.eclipse.emf.query.sdk" version="1.0.0.I200602020940">
+		<category name="emft query SDK 1.0.0 I200602020940"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query_1.0.0.I200602020940.jar" patch="false" id="org.eclipse.emf.query" version="1.0.0.I200602020940">
+		<category name="emft query SDK 1.0.0 I200602020940"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -286,6 +311,12 @@ This category contains the features of the 1.0.0 I200601261315 build of emft tra
 	<category-def label="emft ocl SDK 1.0.0 I200602020906" name="emft ocl SDK 1.0.0 I200602020906">
 		<description>
 This category contains the features of the 1.0.0 I200602020906 build of emft ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft query SDK 1.0.0 I200602020940" name="emft query SDK 1.0.0 I200602020940">
+		<description>
+This category contains the features of the 1.0.0 I200602020940 build of emft query SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
