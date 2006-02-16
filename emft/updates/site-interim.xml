@@ -425,6 +425,26 @@
 		<category name="emft transaction SDK 1.0.0 I200602090913"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.ocl.doc_1.0.0.I200602161029.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.0.I200602161029">
+		<category name="emft ocl SDK 1.0.0 I200602161029"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples_1.0.0.I200602161029.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.0.I200602161029">
+		<category name="emft ocl SDK 1.0.0 I200602161029"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.sdk_1.0.0.I200602161029.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.0.0.I200602161029">
+		<category name="emft ocl SDK 1.0.0 I200602161029"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl_1.0.0.I200602161029.jar" patch="false" id="org.eclipse.emf.ocl" version="1.0.0.I200602161029">
+		<category name="emft ocl SDK 1.0.0 I200602161029"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -518,6 +538,12 @@ This category contains the features of the 1.0.0 I200602090903 build of emft val
 	<category-def label="emft transaction SDK 1.0.0 I200602090913" name="emft transaction SDK 1.0.0 I200602090913">
 		<description>
 This category contains the features of the 1.0.0 I200602090913 build of emft transaction SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft ocl SDK 1.0.0 I200602161029" name="emft ocl SDK 1.0.0 I200602161029">
+		<description>
+This category contains the features of the 1.0.0 I200602161029 build of emft ocl SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
