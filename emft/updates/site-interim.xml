@@ -535,36 +535,6 @@
 		<category name="emft eodm SDK 1.0.0 I200602161715"/>
 	</feature>
 
-
-	<feature url="features/org.eclipse.eodm.doc_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm.doc" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.eodm.examples_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm.examples" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.eodm.sdk_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm.sdk" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.eodm.source_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm.source" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.eodm.tests_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm.tests" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.eodm_1.0.0.I200602161715.jar" patch="false" id="org.eclipse.eodm" version="1.0.0.I200602161715">
-		<category name="emft eodm SDK 1.0.0 I200602161715"/>
-	</feature>
-
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -685,9 +655,4 @@ This category contains the features of the 1.0.0 I200602161715 build of emft eod
 		</description>
 	</category-def>
 
-	<category-def label="emft eodm SDK 1.0.0 I200602161715" name="emft eodm SDK 1.0.0 I200602161715">
-		<description>
-This category contains the features of the 1.0.0 I200602161715 build of emft eodm SDK, which includes source, plugins, and documentation.
-		</description>
-	</category-def>
 </site>
