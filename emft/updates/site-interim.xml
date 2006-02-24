@@ -560,6 +560,31 @@
 		<category name="emft validation SDK 1.0.0 I200602161109"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.validation.doc_1.0.0.I200602161109.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.0.0.I200602161109">
+		<category name="emft validation SDK 1.0.0 I200602161109"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples_1.0.0.I200602161109.jar" patch="false" id="org.eclipse.emf.validation.examples" version="1.0.0.I200602161109">
+		<category name="emft validation SDK 1.0.0 I200602161109"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl_1.0.0.I200602161109.jar" patch="false" id="org.eclipse.emf.validation.ocl" version="1.0.0.I200602161109">
+		<category name="emft validation SDK 1.0.0 I200602161109"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.sdk_1.0.0.I200602161109.jar" patch="false" id="org.eclipse.emf.validation.sdk" version="1.0.0.I200602161109">
+		<category name="emft validation SDK 1.0.0 I200602161109"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation_1.0.0.I200602161109.jar" patch="false" id="org.eclipse.emf.validation" version="1.0.0.I200602161109">
+		<category name="emft validation SDK 1.0.0 I200602161109"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -680,6 +705,12 @@ This category contains the features of the 1.0.0 I200602161715 build of emft eod
 		</description>
 	</category-def>
 
+
+	<category-def label="emft validation SDK 1.0.0 I200602161109" name="emft validation SDK 1.0.0 I200602161109">
+		<description>
+This category contains the features of the 1.0.0 I200602161109 build of emft validation SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 
 	<category-def label="emft validation SDK 1.0.0 I200602161109" name="emft validation SDK 1.0.0 I200602161109">
 		<description>
