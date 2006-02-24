@@ -725,6 +725,31 @@
 		<category name="emft transaction SDK 1.0.0M5 S200602241521"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.eodm.doc_1.0.0.qualifier.jar" patch="false" id="org.eclipse.eodm.doc" version="1.0.0.qualifier">
+		<category name="emft eodm SDK 1.0.0M5 S200602241604"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.examples_1.0.0.qualifier.jar" patch="false" id="org.eclipse.eodm.examples" version="1.0.0.qualifier">
+		<category name="emft eodm SDK 1.0.0M5 S200602241604"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.sdk_1.0.0.v200602241604--eSSGqGGYq.jar" patch="false" id="org.eclipse.eodm.sdk" version="1.0.0.v200602241604--eSSGqGGYq">
+		<category name="emft eodm SDK 1.0.0M5 S200602241604"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.source_1.0.0.v200602241604.jar" patch="false" id="org.eclipse.eodm.source" version="1.0.0.v200602241604">
+		<category name="emft eodm SDK 1.0.0M5 S200602241604"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm_1.0.0.qualifier.jar" patch="false" id="org.eclipse.eodm" version="1.0.0.qualifier">
+		<category name="emft eodm SDK 1.0.0M5 S200602241604"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -874,6 +899,12 @@ This category contains the features of the 1.0.0M5 S200602241450 build of emft v
 	<category-def label="emft transaction SDK 1.0.0M5 S200602241521" name="emft transaction SDK 1.0.0M5 S200602241521">
 		<description>
 This category contains the features of the 1.0.0M5 S200602241521 build of emft transaction SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft eodm SDK 1.0.0M5 S200602241604" name="emft eodm SDK 1.0.0M5 S200602241604">
+		<description>
+This category contains the features of the 1.0.0M5 S200602241604 build of emft eodm SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
