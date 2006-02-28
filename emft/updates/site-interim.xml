@@ -820,6 +820,46 @@
 		<category name="emft query SDK 1.0.0M5 S200602241441"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.validation.doc_1.0.0.v200602241450--644282258.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.0.0.v200602241450--644282258">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples.source_1.0.0.v200602241450--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.validation.examples.source" version="1.0.0.v200602241450--JDD8P88GP">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples_1.0.0.v200602241450--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.validation.examples" version="1.0.0.v200602241450--JDD8P88GP">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl.source_1.0.0.v200602241450--644282258.jar" patch="false" id="org.eclipse.emf.validation.ocl.source" version="1.0.0.v200602241450--644282258">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl_1.0.0.v200602241450--644282258.jar" patch="false" id="org.eclipse.emf.validation.ocl" version="1.0.0.v200602241450--644282258">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.sdk_1.0.0.v200602241450.jar" patch="false" id="org.eclipse.emf.validation.sdk" version="1.0.0.v200602241450">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.source_1.0.0.v200602241450--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.validation.source" version="1.0.0.v200602241450--JDD8P88GP">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation_1.0.0.v200602241450--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.validation" version="1.0.0.v200602241450--JDD8P88GP">
+		<category name="emft validation SDK 1.0.0M5 S200602241450"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -988,6 +1028,12 @@ This category contains the features of the 1.0.0M5 S200602241417 build of emft o
 	<category-def label="emft query SDK 1.0.0M5 S200602241441" name="emft query SDK 1.0.0M5 S200602241441">
 		<description>
 This category contains the features of the 1.0.0M5 S200602241441 build of emft query SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft validation SDK 1.0.0M5 S200602241450" name="emft validation SDK 1.0.0M5 S200602241450">
+		<description>
+This category contains the features of the 1.0.0M5 S200602241450 build of emft validation SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
