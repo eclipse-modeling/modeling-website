@@ -805,6 +805,46 @@
 		<category name="emft ocl SDK 1.0.0M5 S200602241417"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.query.doc_1.0.0.v200602241441--644282258.jar" patch="false" id="org.eclipse.emf.query.doc" version="1.0.0.v200602241441--644282258">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples.source_1.0.0.v200602241441--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.query.examples.source" version="1.0.0.v200602241441--JDD8P88GP">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples_1.0.0.v200602241441--JDD8P88GP.jar" patch="false" id="org.eclipse.emf.query.examples" version="1.0.0.v200602241441--JDD8P88GP">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl.source_1.0.0.v200602241441--644282258.jar" patch="false" id="org.eclipse.emf.query.ocl.source" version="1.0.0.v200602241441--644282258">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl_1.0.0.v200602241441--644282258.jar" patch="false" id="org.eclipse.emf.query.ocl" version="1.0.0.v200602241441--644282258">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.sdk_1.0.0.v200602241441--lXXJzJJez.jar" patch="false" id="org.eclipse.emf.query.sdk" version="1.0.0.qualifier">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.source_1.0.0.v200602241441--644282258.jar" patch="false" id="org.eclipse.emf.query.source" version="1.0.0.v200602241441--644282258">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query_1.0.0.v200602241441--644282258.jar" patch="false" id="org.eclipse.emf.query" version="1.0.0.v200602241441--644282258">
+		<category name="emft query SDK 1.0.0M5 S200602241441"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -972,6 +1012,12 @@ This category contains the features of the 1.0.0M5 S200602241604 build of emft e
 	<category-def label="emft ocl SDK 1.0.0M5 S200602241417" name="emft ocl SDK 1.0.0M5 S200602241417">
 		<description>
 This category contains the features of the 1.0.0M5 S200602241417 build of emft ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft query SDK 1.0.0M5 S200602241441" name="emft query SDK 1.0.0M5 S200602241441">
+		<description>
+This category contains the features of the 1.0.0M5 S200602241441 build of emft query SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
