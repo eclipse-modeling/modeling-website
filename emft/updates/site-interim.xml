@@ -1083,6 +1083,61 @@
 		<category name="emft query SDK 1.0.0M5a S200603021206"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.transaction.doc_1.0.0.v200603021214--425282258.jar" patch="false" id="org.eclipse.emf.transaction.doc" version="1.0.0.v200603021214--425282258">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples.source_1.0.0.v200603021214--425282258.jar" patch="false" id="org.eclipse.emf.transaction.examples.source" version="1.0.0.v200603021214--425282258">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples_1.0.0.v200603021214--425282258.jar" patch="false" id="org.eclipse.emf.transaction.examples" version="1.0.0.v200603021214--425282258">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.sdk_1.0.0.v200603021214--mSwTOSSxO.jar" patch="false" id="org.eclipse.emf.transaction.sdk" version="1.0.0.v200603021214--mSwTOSSxO">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.source_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.transaction.source" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.transaction" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.doc_1.0.0.v200603021214--425282258.jar" patch="false" id="org.eclipse.emf.workspace.doc" version="1.0.0.v200603021214--425282258">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples.source_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.workspace.examples.source" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.workspace.examples" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.source_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.workspace.source" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace_1.0.0.v200603021214--95A5G55AG.jar" patch="false" id="org.eclipse.emf.workspace" version="1.0.0.v200603021214--95A5G55AG">
+		<category name="emft transaction SDK 1.0.0M5a S200603021214"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -1295,6 +1350,12 @@ This category contains the features of the 1.0.0M5a S200603021156 build of emft 
 	<category-def label="emft query SDK 1.0.0M5a S200603021206" name="emft query SDK 1.0.0M5a S200603021206">
 		<description>
 This category contains the features of the 1.0.0M5a S200603021206 build of emft query SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft transaction SDK 1.0.0M5a S200603021214" name="emft transaction SDK 1.0.0M5a S200603021214">
+		<description>
+This category contains the features of the 1.0.0M5a S200603021214 build of emft transaction SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
