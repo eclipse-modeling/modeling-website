@@ -973,6 +973,36 @@
 		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.ocl.doc_1.0.0.v200603021134--425282258.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.0.v200603021134--425282258">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples.source_1.0.0.v200603021134--95A5G55AG.jar" patch="false" id="org.eclipse.emf.ocl.examples.source" version="1.0.0.v200603021134--95A5G55AG">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples_1.0.0.v200603021134--95A5G55AG.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.0.v200603021134--95A5G55AG">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.sdk_1.0.0.v200603021134--NDSDhDDSh.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.0.0.v200603021134--NDSDhDDSh">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.source_1.0.0.v200603021134--425282258.jar" patch="false" id="org.eclipse.emf.ocl.source" version="1.0.0.v200603021134--425282258">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl_1.0.0.v200603021134--425282258.jar" patch="false" id="org.eclipse.emf.ocl" version="1.0.0.v200603021134--425282258">
+		<category name="emft ocl SDK 1.0.0M5a S200603021134"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -1163,6 +1193,12 @@ This category contains the features of the 1.0.0M5a S200603021130 build of emft 
 		</description>
 	</category-def>
 >>>>>>> 1.42
+
+	<category-def label="emft ocl SDK 1.0.0M5a S200603021134" name="emft ocl SDK 1.0.0M5a S200603021134">
+		<description>
+This category contains the features of the 1.0.0M5a S200603021134 build of emft ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 
 	<category-def label="emft ocl SDK 1.0.0M5a S200603021134" name="emft ocl SDK 1.0.0M5a S200603021134">
 		<description>
