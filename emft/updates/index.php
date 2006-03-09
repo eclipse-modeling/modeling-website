@@ -47,13 +47,9 @@ if (function_exists('xslt_create')) {
 		echo "ERROR #".xslt_errno($processor) . " : " . xslt_error($processor);
 	}
 	echo $result; 
-} else {
-	echo "This server does not support Sablotron XSLT parsing w/ PHP. Contents below are raw, unformatted XML:<br/><br/>";
-	$fc = file($fileBase.$XMLfile);
-	echo "<tt class=\"code\">";
-	foreach ($fc as $line) { echo str_replace("<","&lt;",$line)."<br/>"; }
-	echo "</tt>";
-} ?>
+} else { ?>
+	<meta http-equiv="Refresh" content="0;url=site.html">
+<?php } ?>
 
 <p><a href="view-source:http://download.eclipse.org/technology/emft/updates/<?php echo $XMLfile; ?>" class="red">View as XML</a></p>
 
