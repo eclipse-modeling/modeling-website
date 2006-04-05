@@ -1785,6 +1785,31 @@
 	</feature>
 
 
+
+	<feature url="features/org.eclipse.jet.doc_1.0.0.v200603301532.jar" patch="false" id="org.eclipse.jet.doc" version="1.0.0.v200603301532">
+		<category name="emft jet SDK 1.0.0 I200603301532"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_1.0.0.v200603301532.jar" patch="false" id="org.eclipse.jet.examples" version="1.0.0.v200603301532">
+		<category name="emft jet SDK 1.0.0 I200603301532"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_1.0.0.v200603301532.jar" patch="false" id="org.eclipse.jet.sdk" version="1.0.0.v200603301532">
+		<category name="emft jet SDK 1.0.0 I200603301532"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_1.0.0.v200603301532.jar" patch="false" id="org.eclipse.jet.source" version="1.0.0.v200603301532">
+		<category name="emft jet SDK 1.0.0 I200603301532"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_1.0.0.v200603301532.jar" patch="false" id="org.eclipse.jet" version="1.0.0.v200603301532">
+		<category name="emft jet SDK 1.0.0 I200603301532"/>
+	</feature>
+
 <category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
 		<description>
 This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
@@ -2105,4 +2130,10 @@ This category contains the features of the 1.0.0 I200603301320 build of emft que
 		</description>
 	</category-def>
 
+
+	<category-def label="emft jet SDK 1.0.0 I200603301532" name="emft jet SDK 1.0.0 I200603301532">
+		<description>
+This category contains the features of the 1.0.0 I200603301532 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 </site>
