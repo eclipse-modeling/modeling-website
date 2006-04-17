@@ -6,26 +6,6 @@
 	</description>
 	
 
-	<feature url="features/org.eclipse.emf.ocl.doc_1.0.0.I200601191242.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.0.I200601191242">
-		<category name="emft ocl SDK 1.0.0 I200601191242"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.emf.ocl.examples_1.0.0.I200601191242.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.0.I200601191242">
-		<category name="emft ocl SDK 1.0.0 I200601191242"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.emf.ocl.sdk_1.0.0.I200601191242.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.0.0.I200601191242">
-		<category name="emft ocl SDK 1.0.0 I200601191242"/>
-	</feature>
-
-
-	<feature url="features/org.eclipse.emf.ocl_1.0.0.I200601191242.jar" patch="false" id="org.eclipse.emf.ocl" version="1.0.0.I200601191242">
-		<category name="emft ocl SDK 1.0.0 I200601191242"/>
-	</feature>
-
-
 	<feature url="features/org.eclipse.emf.validation.doc_1.0.0.I200601191249.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.0.0.I200601191249">
 		<category name="emft validation SDK 1.0.0 I200601191249"/>
 	</feature>
@@ -2214,12 +2194,6 @@
 	<feature url="features/org.eclipse.eodm_1.0.0.v200604132155.jar" patch="false" id="org.eclipse.eodm" version="1.0.0.v200604132155">
 		<category name="emft eodm SDK 1.0.0M6a S200604132155"/>
 	</feature>
-
-<category-def label="emft ocl SDK 1.0.0 I200601191242" name="emft ocl SDK 1.0.0 I200601191242">
-		<description>
-This category contains the features of the 1.0.0 I200601191242 build of emft ocl SDK, which includes source, plugins, and documentation.
-		</description>
-	</category-def>
 
 	<category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
