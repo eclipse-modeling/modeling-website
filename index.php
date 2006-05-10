@@ -34,7 +34,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<h2>Coming soon!</h2>
-		<p>This site is under development. This page is a placeholder while the project team works on the real site!</p>
+		<p>This site is currently under development. This page is a placeholder while the project team works on the real site!</p>
 		<div class="homeitem">
 			<h3>Narrow column</h3>
 			<ul>
