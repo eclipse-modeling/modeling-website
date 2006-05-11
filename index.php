@@ -74,6 +74,14 @@
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
+  			<h6>Dashboard</h6>
+  			<div align="center">
+   				<font size="+1"><?= $projectInfo->dashboard_liveness() ?></font><br/>
+   				<?= $projectInfo->dashboard_bugs_lights() ?><br/>
+   				<?= $projectInfo->dashboard_news_lights() ?>
+  			</div>
+ 		</div>
+		<div class="sideitem">
 			<h6>Related links</h6>
 			<ul>
 				<li><a href="#">Link</a> - descriptive text</li>
