@@ -33,33 +33,39 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>Coming soon!</h2>
-		<p>This site is currently under development. This page is a placeholder while the project team works on the real site!</p>
-		<div class="homeitem">
-			<h3>Narrow column</h3>
+		<h3>About Modeling (provisioning still in progress)...
+		<p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
+development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
+		<div class="homeitem3col">
+			<h3>Framework Projects</h3>
 			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="http://www.eclipse.org/emf">EMF</a>. Eclipse Modeling Framework: a modeling framework and code generation facility for building tools and other applications based on a structured data model.</li>
+				<li><a href="http://www.eclipse.org/gmf">GMF</a>. Graphical Modeling Framework: provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/emf" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
+				<li><a href="http://www.eclipse.org/emft/projects/validation">VF</a>. Validation Framework: provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
+				<li><a href="http://www.eclipse.org/mddi">MDDi</a>. Model Driven Development integration: produces an extensible framework and exemplary tools dedicated to integration of modeling tools in Eclipse.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>This is a wide column</h3>
+			<h3>Standards Implementations</h3>
 			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="http://www.eclipse.org/uml2">UML2</a>. Unified Modeling Language 2: an EMF-based implementation of the UMLª 2.x metamodel for the Eclipse platform.</li>
+				<li><a href="http://www.eclipse.org/emft/projects/ocl">OCL</a>. Object Constraint Language: defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+				<li><a href="http://www.eclipse.org/xsd">XSD</a>. XML Schema Infoset Model: a reference library that provides an <a href="http://download.eclipse.org/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
+				<li><a href="http://www.eclipse.org/emft/projects/eodm">EODM</a>. EMF Ontology Definition Metamodel is an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using EMF with additional parsing, inference, model transformation and editing functions.</li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Model Technology and Research Projects</h3>
+			<ul>
+				<li><a href="http://www.eclipse.org/emft/projects/jet">JET</a>. Java Emitter Templates: provides code generation framework & facilities that are used by EMF.</li>
+				<li><a href="http://www.eclipse.org/emft/projects/query">MQ</a>. Model Query: facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
+				<li><a href="http://www.eclipse.org/emft/projects/transaction">MT</a>. Model Transaction: provides a model management layer built on top of EMF for managing EMF resources.</li>
+				<li><a href="http://www.eclipse.org/gmt">GMT</a>. Generative Modeling Tools: research-oriented project focused on producing prototypes in the area of Model Driven Engineering (MDE).</li>
+				<li><a href="http://www.eclipse.org/mddi">MDDi</a>. Model Driven Development integration: produces an extensible framework and exemplary tools dedicated to integration of modeling tools in Eclipse.</li>
 			</ul>
 		</div>
 		<hr class="clearer" />
+<!--
 		<p>Some free text</p>
 		<ul class="midlist">
 			<li>list of items in free text</li>
@@ -71,34 +77,13 @@
 			<li>Ordered list</li>
 			<li>Ordered list</li>
 		</ol>
+-->
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
-  			<h6>Dashboard</h6>
-  			<div align="center">
-   				<font size="+1"><?= $projectInfo->dashboard_liveness() ?></font><br/>
-   				<?= $projectInfo->dashboard_bugs_lights() ?><br/>
-   				<?= $projectInfo->dashboard_news_lights() ?>
-  			</div>
- 		</div>
-		<div class="sideitem">
 			<h6>Related links</h6>
 			<ul>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-			</ul>
-		</div>
-		<div class="sideitem">
-			<h6>Related links</h6>
-			<ul>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
 			</ul>
 		</div>
 	</div>
