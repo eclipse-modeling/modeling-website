@@ -33,7 +33,7 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h3>About Modeling (provisioning still in progress)...
+		<h3>About Modeling (provisioning still in progress)...</h3>
 		<p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
 		<div class="homeitem3col">
