@@ -4,10 +4,10 @@
 	#
 	# index.php
 	#
-	# Author: 		Denis Roy
-	# Date:			2005-06-16
+	# Author: 		Richard Gronback
+	# Date:			2006-05-11
 	#
-	# Description: Type your page comments here - these are not sent to the browser
+	# Description: Modeling project homepage
 	#
 	#
 	#****************************************************************************
@@ -15,8 +15,8 @@
 	#
 	# Begin: page-specific settings.  Change these. 
 	$pageTitle 		= "Eclipse Modeling Project";
-	$pageKeywords	= "Type, page, keywords, here";
-	$pageAuthor		= "Type your name here";
+	$pageKeywords	= "modeling, UML, UML2, MDD, MDA, model-driven";
+	$pageAuthor		= "Richard Gronback";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
