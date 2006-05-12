@@ -47,14 +47,14 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="homeitem3col">
 			<h3>Industry Standards</h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/uml2">Unified Modeling Language 2</a> (UML2) : an EMF-based implementation of the UMLª 2.x metamodel for the Eclipse platform.</li>
+				<li><a href="http://www.eclipse.org/uml2">Unified Modeling Language 2</a> (UML2) : an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
 				<li><a href="http://www.eclipse.org/emft/projects/ocl">Object Constraint Language</a> (OCL) : defines APIs for OCL expression syntax for implementing queries and contraints.</li>
 				<li><a href="http://www.eclipse.org/xsd">XML Schema Infoset Model</a> (XSD) : a reference library that provides an <a href="http://download.eclipse.org/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
 				<li><a href="http://www.eclipse.org/emft/projects/eodm">EMF Ontology Definition Metamodel</a> (EODM) : is an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using EMF with additional parsing, inference, model transformation and editing functions.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Technology and Research Projects</h3>
+			<h3>Technology and Research</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/emft/projects/jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
 				<li><a href="http://www.eclipse.org/emft/projects/query">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
