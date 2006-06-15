@@ -3391,7 +3391,32 @@
 	</feature>
 
 
-	<category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
+	
+	<feature url="features/org.eclipse.jet.doc_0.7.0.v200606150846.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.0.v200606150846">
+		<category name="emft jet SDK 0.7.0 I200606150846"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.0.v200606150846.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.0.v200606150846">
+		<category name="emft jet SDK 0.7.0 I200606150846"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.0.v200606150846.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.0.v200606150846">
+		<category name="emft jet SDK 0.7.0 I200606150846"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.0.v200606150846.jar" patch="false" id="org.eclipse.jet.source" version="0.7.0.v200606150846">
+		<category name="emft jet SDK 0.7.0 I200606150846"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.0.v200606150846.jar" patch="false" id="org.eclipse.jet" version="0.7.0.v200606150846">
+		<category name="emft jet SDK 0.7.0 I200606150846"/>
+	</feature>
+
+<category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
 		</description>
@@ -4027,4 +4052,10 @@ This category contains the features of the 1.0.0 I200606081138 build of emft tra
 		</description>
 	</category-def>
 
+
+	<category-def label="emft jet SDK 0.7.0 I200606150846" name="emft jet SDK 0.7.0 I200606150846">
+		<description>
+This category contains the features of the 0.7.0 I200606150846 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 </site>	
