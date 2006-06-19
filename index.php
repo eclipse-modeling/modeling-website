@@ -86,6 +86,15 @@ development technologies within the Eclipse community by providing a unified set
 			</ul>
 		</div>
 	</div>
+	
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Events</h6>
+			<ul>
+				<li>Callisto webinar<a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 
