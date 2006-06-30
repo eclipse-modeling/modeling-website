@@ -4126,6 +4126,31 @@
 		<category name="emft transaction SDK 1.0.0RC7 S200606281500"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.net4j.doc_1.0.0.v200606271241.jar" patch="false" id="org.eclipse.net4j.doc" version="1.0.0.v200606271241">
+		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.examples_1.0.0.v200606271241.jar" patch="false" id="org.eclipse.net4j.examples" version="1.0.0.v200606271241">
+		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.sdk_1.0.0.v200606271241.jar" patch="false" id="org.eclipse.net4j.sdk" version="1.0.0.v200606271241">
+		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.source_1.0.0.v200606271241.jar" patch="false" id="org.eclipse.net4j.source" version="1.0.0.v200606271241">
+		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j_1.0.0.v200606271241.jar" patch="false" id="org.eclipse.net4j" version="1.0.0.v200606271241">
+		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -4874,6 +4899,12 @@ This category contains the features of the 1.0.0RC7 S200606281500 build of emft 
 	<category-def label="emft transaction SDK 1.0.0RC7 S200606281500" name="emft transaction SDK 1.0.0RC7 S200606281500">
 		<description>
 This category contains the features of the 1.0.0RC7 S200606281500 build of emft transaction SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft net4j SDK 1.0.0RC9 S200606271241" name="emft net4j SDK 1.0.0RC9 S200606271241">
+		<description>
+This category contains the features of the 1.0.0RC9 S200606271241 build of emft net4j SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
