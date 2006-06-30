@@ -4151,6 +4151,51 @@
 		<category name="emft net4j SDK 1.0.0RC9 S200606271241"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.cdo.client_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.client" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.dbgen_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.dbgen" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.doc_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.doc" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.examples_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.examples" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.jdbc_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.jdbc" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.sdk_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.sdk" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.server_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.server" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.source_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo.source" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo_1.0.0.v200606271248.jar" patch="false" id="org.eclipse.emf.cdo" version="1.0.0.v200606271248">
+		<category name="emft cdo SDK 1.0.0RC9 S200606271248"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -4905,6 +4950,12 @@ This category contains the features of the 1.0.0RC7 S200606281500 build of emft 
 	<category-def label="emft net4j SDK 1.0.0RC9 S200606271241" name="emft net4j SDK 1.0.0RC9 S200606271241">
 		<description>
 This category contains the features of the 1.0.0RC9 S200606271241 build of emft net4j SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft cdo SDK 1.0.0RC9 S200606271248" name="emft cdo SDK 1.0.0RC9 S200606271248">
+		<description>
+This category contains the features of the 1.0.0RC9 S200606271248 build of emft cdo SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
