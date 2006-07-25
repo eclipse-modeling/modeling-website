@@ -37,32 +37,69 @@
 		<p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
 		<div class="homeitem3col">
-			<h3>Infrastructure</h3>
+			<h3>Abstract Syntax Development</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/emf">Eclipse Modeling Framework</a> (EMF) : a modeling framework and code generation facility for building tools and other applications based on a structured data model.</li>
-				<li><a href="http://www.eclipse.org/gmf">Graphical Modeling Framework</a> (GMF) : provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/emf" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
-				<li><a href="http://www.eclipse.org/mddi">Model Driven Development integration</a> (MDDi) : produces an extensible framework and exemplary tools dedicated to integration of modeling tools in Eclipse.</li>
+				<ul>
+					<li><a href="http://www.eclipse.org/emft/projects/query">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/transaction">Model Transaction</a> (MT) : provides a model management layer built on top of EMF for managing EMF resources.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/validation">Validation Framework</a> (VF) : provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/cdo/">CDO</a> : a technology for distributed shared EMF models and a fast server-based O/R mapping solution. With CDO you can easily enhance your existing models in such a way that saving a resource transparently commits the applied changes to a relational database.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/net4j/">Net4j</a> : an extensible client-server system based on the Eclipse Runtime and the Spring Framework. You can easily extend the protocol stack with Eclipse plugins that provide new transport or application protocols.</li>
+				</ul>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Industry Standards</h3>
+			<h3>Concrete Syntax Development</h3>
+			<ul>
+				<li><a href="http://www.eclipse.org/gmf">Graphical Modeling Framework</a> (GMF) : provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/emf" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
+				<li><a href="">Textual Modeling Framework</a> (TMF) : awaiting proposal.</li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Model Development Tools</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/uml2">Unified Modeling Language 2</a> (UML2) : an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
-				<li><a href="http://www.eclipse.org/emft/projects/ocl">Object Constraint Language</a> (OCL) : defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+				<ul>
+					<li><a href="http://www.eclipse.org/emft/projects/ocl">Object Constraint Language</a> (OCL) : defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+				</ul>
 				<li><a href="http://www.eclipse.org/xsd">XML Schema Infoset Model</a> (XSD) : a reference library that provides an <a href="http://download.eclipse.org/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
 				<li><a href="http://www.eclipse.org/emft/projects/eodm">EMF Ontology Definition Metamodel</a> (EODM) : is an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using EMF with additional parsing, inference, model transformation and editing functions.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Technology and Research</h3>
+			<h3>Model Transformation</h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/emft/projects/jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
-				<li><a href="http://www.eclipse.org/emft/projects/query">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
-				<li><a href="http://www.eclipse.org/emft/projects/transaction">Model Transaction</a> (MT) : provides a model management layer built on top of EMF for managing EMF resources.</li>
-				<li><a href="http://www.eclipse.org/emft/projects/validation">Validation Framework</a> (VF) : provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
-				<li><a href="http://www.eclipse.org/gmt">Generative Modeling Tools</a> (GMT) : research-oriented project focused on producing prototypes in the area of Model Driven Engineering (MDE).</li>
+				<li><a href="http://www.eclipse.org/proposals/m2m/">Model to Model Transformation</a> (M2M) : will deliver an extensible framework for model-to-model transformation languages, with an exemplary implementation of the <a href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm#MOF_QVT">QVT</a> Core language.</li>
+				<li><a href="">Model to Text Transformation</a> (M2T) : awaiting proposal</li>
+				<ul>
+					<li><a href="http://www.eclipse.org/emft/projects/jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/jeteditor/">JET Editor</a> : leverages Eclipse text editor framework to provide this capability via features like syntax coloring, error highlighting and code completion.</li>
+				</ul>
 			</ul>
 		</div>
+		<div class="homeitem3col">
+			<h3>Model Integration</h3>
+			<ul>
+				<li><a href="http://www.eclipse.org/mddi">Model Driven Development integration</a> (MDDi) : produces an extensible framework and exemplary tools dedicated to integration of modeling tools in Eclipse.</li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>Technology and Research</h3>
+			<ul>
+				<li><a href="http://www.eclipse.org/gmt">Generative Modeling Technologies</a> (GMT) : research-oriented project focused on producing prototypes in the area of Model Driven Engineering (MDE).</li>
+				<ul>
+					<li><a href="http://www.eclipse.org/gmt/am3/">ATLAS MegaModel Management (AM3)</a> : the goal is to provide a practical support for modeling in the large. The objective is to deal with global resource management in a model-engineering environment. We base this activity on the concept of a "megamodel".</li>
+					<li><a href="http://www.eclipse.org/gmt/amw/">ATLAS Model Weaver (AMW)</a> : a tool for representing correspondences between models. The correspondences are stored in a model, called weaving model. It is created conforming to a weaving metamodel.</li>
+					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/doc/fuut/index.html">Fuut-je</a> : a prototype model-driven code and text generation tool for GMT.</li>
+					<li><a href="http://www.eclipse.org/gmt/mofscript/">MOFScript</a> : aims at developing tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models.</li>
+					<li><a href="http://www.eclipse.org/gmt/oaw/">openArchitecture Ware (oAW)</a> : a suite of tools and components assisting with model driven software development built upon a modular MDA/MDD generator framework implemented in Java(TM) supporting arbitrary import (design) formats, meta models, and output (code) formats.</li>
+					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/subprojects/UMLX/index.html>UMLX</a> : concrete graphical syntax to complement the OMG QVT model transformation language.</li>
+					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/subprojects/VIATRA2/index.html">VIATRA2</a> : aims to provide a general-purpose support for the entire life-cycle of engineering model transformations including the specification, design, execution, validation and maintenance of transformations within and between various modeling languages and domains.</li>
+				</ul>
+			</ul>
+		</div>
+		
 		<hr class="clearer" />
 <!--
 		<p>Some free text</p>
@@ -91,7 +128,7 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>Events</h6>
 			<ul>
-				<li>Callisto webinar<a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
+				<li>Callisto webinar <a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
 			</ul>
 		</div>
 	</div>
