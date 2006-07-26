@@ -36,6 +36,7 @@
 		<h3>About Modeling (provisioning still in progress)...</h3>
 		<p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
+		<p>The Modeling Project charter is posted <a href="http://www.eclipse.org/modeling/modeling-charter.php">here</a> and inherits from the <a href="http://www.eclipse.org/org/processes/Eclipse_Standard_TopLevel_Charter_v1.0.html">Eclipse Standard Top-Level Charter v1.0</a>.</p>
 		<div class="homeitem3col">
 			<h3>Abstract Syntax Development</h3>
 			<ul>
