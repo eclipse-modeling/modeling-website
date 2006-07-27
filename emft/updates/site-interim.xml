@@ -4633,6 +4633,31 @@
 		<category name="emft ocl SDK 1.0.1 M200607271021"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.0.v200607271220.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.0.v200607271220">
+		<category name="emft jet SDK 0.7.1 M200607271220"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.0.v200607271220.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.0.v200607271220">
+		<category name="emft jet SDK 0.7.1 M200607271220"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.0.v200607271220.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.0.v200607271220">
+		<category name="emft jet SDK 0.7.1 M200607271220"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.1.v200607271220.jar" patch="false" id="org.eclipse.jet.source" version="0.7.1.v200607271220">
+		<category name="emft jet SDK 0.7.1 M200607271220"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.1.v200607271220.jar" patch="false" id="org.eclipse.jet" version="0.7.1.v200607271220">
+		<category name="emft jet SDK 0.7.1 M200607271220"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -5466,6 +5491,12 @@ This category contains the features of the 1.0.1 M200607201220 build of emft tra
 	<category-def label="emft ocl SDK 1.0.1 M200607271021" name="emft ocl SDK 1.0.1 M200607271021">
 		<description>
 This category contains the features of the 1.0.1 M200607271021 build of emft ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.7.1 M200607271220" name="emft jet SDK 0.7.1 M200607271220">
+		<description>
+This category contains the features of the 0.7.1 M200607271220 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
