@@ -101,6 +101,46 @@
 		<category name="emft query SDK 1.0.0"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.validation.doc_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl.source_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.ocl.source" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.ocl" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.sdk_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.sdk" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.source_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.source" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples.source_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.examples.source" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples_1.0.0.v200606261144.jar" patch="false" id="org.eclipse.emf.validation.examples" version="1.0.0.v200606261144">
+		<category name="emft validation SDK 1.0.0"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -116,6 +156,12 @@ This category contains the features of the 1.0.0 build of emft ocl SDK, which in
 	<category-def label="emft query SDK 1.0.0" name="emft query SDK 1.0.0">
 		<description>
 This category contains the features of the 1.0.0 build of emft query SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft validation SDK 1.0.0" name="emft validation SDK 1.0.0">
+		<description>
+This category contains the features of the 1.0.0 build of emft validation SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
