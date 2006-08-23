@@ -42,9 +42,17 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<h3>About Modeling (provisioning still in progress)...</h3>
-		<p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
+		<table>
+		<tr>
+		<td><p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
 		<p>The Modeling Project charter is posted <a href="http://www.eclipse.org/modeling/modeling-charter.php">here</a> and inherits from the <a href="http://www.eclipse.org/org/processes/Eclipse_Standard_TopLevel_Charter_v1.0.html">Eclipse Standard Top-Level Charter v1.0</a>.</p>
+		<p>Hate the logo to the right?  Love it?  Let us know and/or contribute one of your own design to the Modeling project <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154906">logo contest</a>!
+		</td>
+		<td align="right">
+			<img src="http://www.eclipse.org/modeling/images/modeling_logo_abstract.png" height="250"/>
+		</td>
+		</table>
 		<div class="homeitem3col">
 			<h3>Abstract Syntax Development</h3>
 			<ul>
@@ -138,6 +146,8 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>Events</h6>
 			<ul>
+				<li>Modeling project <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154906">logo contest</a>.  Submit your ideas by September 30th!</li>
+				<li>Model Development Tools (MDT) project proposal <a href="http://www.eclipse.org/proposals/mdt/">posted</a>.</li>
 				<li>Callisto webinar <a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
 			</ul>
 		</div>
