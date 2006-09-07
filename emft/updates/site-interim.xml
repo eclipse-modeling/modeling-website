@@ -5778,6 +5778,46 @@
 		<category name="emft ocl SDK 1.0.1 M200609071146"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.query.doc_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.doc" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl.source_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.ocl.source" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.ocl" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.sdk_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.sdk" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.source_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.source" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples.source_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.examples.source" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples_1.0.0.v200609071206.jar" patch="false" id="org.eclipse.emf.query.examples" version="1.0.0.v200609071206">
+		<category name="emft query SDK 1.0.1 M200609071206"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -6791,6 +6831,12 @@ This category contains the features of the 1.0.1 M200608311138 build of emft val
 	<category-def label="emft ocl SDK 1.0.1 M200609071146" name="emft ocl SDK 1.0.1 M200609071146">
 		<description>
 This category contains the features of the 1.0.1 M200609071146 build of emft ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft query SDK 1.0.1 M200609071206" name="emft query SDK 1.0.1 M200609071206">
+		<description>
+This category contains the features of the 1.0.1 M200609071206 build of emft query SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
