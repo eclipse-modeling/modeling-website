@@ -6342,6 +6342,31 @@
 		<category name="emft jet SDK 0.7.1RC1 S200609151052"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.0.v200609210820.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.0.v200609210820">
+		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.source" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -7445,6 +7470,12 @@ This category contains the features of the 1.0.1RC1 S200609141925 build of emft 
 	<category-def label="emft jet SDK 0.7.1RC1 S200609151052" name="emft jet SDK 0.7.1RC1 S200609151052">
 		<description>
 This category contains the features of the 0.7.1RC1 S200609151052 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.7.1RC2 S200609210820" name="emft jet SDK 0.7.1RC2 S200609210820">
+		<description>
+This category contains the features of the 0.7.1RC2 S200609210820 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
