@@ -6367,6 +6367,36 @@
 		<category name="emft jet SDK 0.7.1RC2 S200609210820"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.ocl.doc_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.sdk_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.source_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl.source" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples.source_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl.examples.source" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples_1.0.0.v200609210937.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.0.v200609210937">
+		<category name="emft ocl SDK 1.0.1RC2 S200609210937"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -7476,6 +7506,12 @@ This category contains the features of the 0.7.1RC1 S200609151052 build of emft 
 	<category-def label="emft jet SDK 0.7.1RC2 S200609210820" name="emft jet SDK 0.7.1RC2 S200609210820">
 		<description>
 This category contains the features of the 0.7.1RC2 S200609210820 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft ocl SDK 1.0.1RC2 S200609210937" name="emft ocl SDK 1.0.1RC2 S200609210937">
+		<description>
+This category contains the features of the 1.0.1RC2 S200609210937 build of emft ocl SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
