@@ -220,6 +220,56 @@
 		<category name="emft net4j SDK 0.7.0"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.cdo.client_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.client" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.dbgen_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.dbgen" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.doc_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.doc" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.examples_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.examples" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.jdbc_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.jdbc" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.sdk_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.sdk" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.server_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.server" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.source_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.source" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.utilities_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo.utilities" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo_0.7.0.v200609251359.jar" patch="false" id="org.eclipse.emf.cdo" version="0.7.0.v200609251359">
+		<category name="emft cdo SDK 0.7.0"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -253,6 +303,12 @@ This category contains the features of the 1.0.0 build of emft transaction SDK, 
 	<category-def label="emft net4j SDK 0.7.0" name="emft net4j SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft net4j SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft cdo SDK 0.7.0" name="emft cdo SDK 0.7.0">
+		<description>
+This category contains the features of the 0.7.0 build of emft cdo SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
