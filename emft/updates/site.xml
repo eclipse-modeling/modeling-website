@@ -270,6 +270,31 @@
 		<category name="emft cdo SDK 0.7.0"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.0.v200609210820.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.0.v200609210820">
+		<category name="emft jet SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet.source" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.1.v200609210820.jar" patch="false" id="org.eclipse.jet" version="0.7.1.v200609210820">
+		<category name="emft jet SDK 0.7.1"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -309,6 +334,12 @@ This category contains the features of the 0.7.0 build of emft net4j SDK, which 
 	<category-def label="emft cdo SDK 0.7.0" name="emft cdo SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft cdo SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.7.1" name="emft jet SDK 0.7.1">
+		<description>
+This category contains the features of the 0.7.1 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
