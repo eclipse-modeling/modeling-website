@@ -460,6 +460,31 @@
 		<category name="emft transaction SDK 1.0.1"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.net4j.doc_0.7.1.v200610021152.jar" patch="false" id="org.eclipse.net4j.doc" version="0.7.1.v200610021152">
+		<category name="emft net4j SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.examples_0.7.1.v200610021152.jar" patch="false" id="org.eclipse.net4j.examples" version="0.7.1.v200610021152">
+		<category name="emft net4j SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.sdk_0.7.1.v200610021152.jar" patch="false" id="org.eclipse.net4j.sdk" version="0.7.1.v200610021152">
+		<category name="emft net4j SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.source_0.7.1.v200610021152.jar" patch="false" id="org.eclipse.net4j.source" version="0.7.1.v200610021152">
+		<category name="emft net4j SDK 0.7.1"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j_0.7.1.v200610021152.jar" patch="false" id="org.eclipse.net4j" version="0.7.1.v200610021152">
+		<category name="emft net4j SDK 0.7.1"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -529,6 +554,12 @@ This category contains the features of the 1.0.1 build of emft validation SDK, w
 	<category-def label="emft transaction SDK 1.0.1" name="emft transaction SDK 1.0.1">
 		<description>
 This category contains the features of the 1.0.1 build of emft transaction SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft net4j SDK 0.7.1" name="emft net4j SDK 0.7.1">
+		<description>
+This category contains the features of the 0.7.1 build of emft net4j SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
