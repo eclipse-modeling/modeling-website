@@ -6912,6 +6912,56 @@
 		<category name="emft net4j SDK 0.7.1 M200610041414"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.cdo.client_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.client" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.dbgen_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.dbgen" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.doc_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.doc" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.examples_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.examples" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.jdbc_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.jdbc" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.sdk_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.sdk" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.server_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.server" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.source_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.source" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo.utilities_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo.utilities" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.cdo_0.7.1.v200610041443.jar" patch="false" id="org.eclipse.emf.cdo" version="0.7.1.v200610041443">
+		<category name="emft cdo SDK 0.7.1 M200610041443"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -8105,6 +8155,12 @@ This category contains the features of the 0.7.5 I200609290842 build of emft ten
 	<category-def label="emft net4j SDK 0.7.1 M200610041414" name="emft net4j SDK 0.7.1 M200610041414">
 		<description>
 This category contains the features of the 0.7.1 M200610041414 build of emft net4j SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft cdo SDK 0.7.1 M200610041443" name="emft cdo SDK 0.7.1 M200610041443">
+		<description>
+This category contains the features of the 0.7.1 M200610041443 build of emft cdo SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
