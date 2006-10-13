@@ -535,6 +535,31 @@
 		<category name="emft cdo SDK 0.7.1"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.codegen.jet.editor.doc_1.0.0.v200610050245.jar" patch="false" id="org.eclipse.emf.codegen.jet.editor.doc" version="1.0.0.v200610050245">
+		<category name="emft jeteditor SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.codegen.jet.editor.examples_0.7.0.v200610050245.jar" patch="false" id="org.eclipse.emf.codegen.jet.editor.examples" version="0.7.0.v200610050245">
+		<category name="emft jeteditor SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.codegen.jet.editor.sdk_1.0.0.v200610050245.jar" patch="false" id="org.eclipse.emf.codegen.jet.editor.sdk" version="1.0.0.v200610050245">
+		<category name="emft jeteditor SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.codegen.jet.editor.source_0.7.0.v200610050245.jar" patch="false" id="org.eclipse.emf.codegen.jet.editor.source" version="0.7.0.v200610050245">
+		<category name="emft jeteditor SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.codegen.jet.editor_0.7.0.v200610050245.jar" patch="false" id="org.eclipse.emf.codegen.jet.editor" version="0.7.0.v200610050245">
+		<category name="emft jeteditor SDK 0.7.0"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -616,6 +641,12 @@ This category contains the features of the 0.7.1 build of emft net4j SDK, which 
 	<category-def label="emft cdo SDK 0.7.1" name="emft cdo SDK 0.7.1">
 		<description>
 This category contains the features of the 0.7.1 build of emft cdo SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jeteditor SDK 0.7.0" name="emft jeteditor SDK 0.7.0">
+		<description>
+This category contains the features of the 0.7.0 build of emft jeteditor SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
