@@ -6987,6 +6987,31 @@
 		<category name="emft teneo SDK 0.7.5 I200610041055"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.net4j.doc_0.7.1.v200610140643.jar" patch="false" id="org.eclipse.net4j.doc" version="0.7.1.v200610140643">
+		<category name="emft net4j SDK 0.7.1 M200610140643"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.examples_0.7.1.v200610140643.jar" patch="false" id="org.eclipse.net4j.examples" version="0.7.1.v200610140643">
+		<category name="emft net4j SDK 0.7.1 M200610140643"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.sdk_0.7.1.v200610140643.jar" patch="false" id="org.eclipse.net4j.sdk" version="0.7.1.v200610140643">
+		<category name="emft net4j SDK 0.7.1 M200610140643"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j.source_0.7.1.v200610140643.jar" patch="false" id="org.eclipse.net4j.source" version="0.7.1.v200610140643">
+		<category name="emft net4j SDK 0.7.1 M200610140643"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.net4j_0.7.1.v200610140643.jar" patch="false" id="org.eclipse.net4j" version="0.7.1.v200610140643">
+		<category name="emft net4j SDK 0.7.1 M200610140643"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -8192,6 +8217,12 @@ This category contains the features of the 0.7.1 M200610041443 build of emft cdo
 	<category-def label="emft teneo SDK 0.7.5 I200610041055" name="emft teneo SDK 0.7.5 I200610041055">
 		<description>
 This category contains the features of the 0.7.5 I200610041055 build of emft teneo SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft net4j SDK 0.7.1 M200610140643" name="emft net4j SDK 0.7.1 M200610140643">
+		<description>
+This category contains the features of the 0.7.1 M200610140643 build of emft net4j SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
