@@ -112,8 +112,8 @@ development technologies within the Eclipse community by providing a unified set
 					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/doc/fuut/index.html">Fuut-je</a> : a prototype model-driven code and text generation tool for GMT.</li>
 					<li><a href="http://www.eclipse.org/gmt/mofscript/">MOFScript</a> : aims at developing tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models.</li>
 					<li><a href="http://www.eclipse.org/gmt/oaw/">openArchitecture Ware (oAW)</a> : a suite of tools and components assisting with model driven software development built upon a modular MDA/MDD generator framework implemented in Java(TM) supporting arbitrary import (design) formats, meta models, and output (code) formats.</li>
-					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/subprojects/UMLX/index.html>UMLX</a> : concrete graphical syntax to complement the OMG QVT model transformation language.</li>
-					<li><a href="http://dev.eclipse.org/viewcvs/indextech.cgi/~checkout~/gmt-home/subprojects/VIATRA2/index.html">VIATRA2</a> : aims to provide a general-purpose support for the entire life-cycle of engineering model transformations including the specification, design, execution, validation and maintenance of transformations within and between various modeling languages and domains.</li>
+					<li><a href="http://www.eclipse.org/gmt">UMLX</a> : concrete graphical syntax to complement the OMG QVT model transformation language.</li>
+					<li><a href="http://www.eclipse.org/gmt">VIATRA2</a> : aims to provide a general-purpose support for the entire life-cycle of engineering model transformations including the specification, design, execution, validation and maintenance of transformations within and between various modeling languages and domains.</li>
 				</ul>
 			</ul>
 		</div>

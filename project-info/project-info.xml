@@ -50,7 +50,7 @@
      - they are the project leaders.  The <team> element contains the 
      - URL of the project's pages listing these important people.
     -->
-  <team url="/modeling/development/contributors.php"/>
+  <team url="/modeling/index.php"/>
   
   <!--
      - The source code of each Eclipse project is stored in CVS. Eclipse maintains
@@ -104,7 +104,7 @@
      - points to a web page on the project's site that describes how to
      - get started using and extending the project's tools and frameworks.
     -->
-  <getting-started url="/modeling/community/tutorials.php"/>
+  <getting-started url="/modeling/index.php"/>
   
   <!--
      - It is also important to help new contributors get started with an Eclipse project.
@@ -113,7 +113,7 @@
      - points to a web page on the project's site that describes how to
      - get started developing on, and contributing to, the project.
     -->
-  <contributing url="/modeling/development/guidelines.php"/>
+  <contributing url="/modeling/index.php"/>
   
   <!--
      - Each Eclipse project is required to maintain a current Project IP Log.
