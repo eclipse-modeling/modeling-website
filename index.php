@@ -35,6 +35,10 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	$Nav->addNavSeparator("Download Pages", "");
 	$Nav->addCustomNav("EMF", "/emf/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/index.php", "_self", 3);
+	$Nav->addCustomNav("EMFT", "/emft/downloads/", "_self", 3);
+	$Nav->addCustomNav("UML2", "http://download.eclipse.org/tools/uml2/scripts/downloads.php", "_self", 3);
+	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
+	$Nav->addCustomNav("MDDi", "/mddi/download.php", "_self", 3);
 
 	# End: page-specific settings
 	#
