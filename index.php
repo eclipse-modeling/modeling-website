@@ -49,7 +49,6 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h3>About Modeling (provisioning still in progress)...</h3>
 		<table>
 		<tr>
 		<td><p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
