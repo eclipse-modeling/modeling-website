@@ -47,10 +47,8 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<td><p>The Eclipse Modeling Project focuses on the evolution and promotion of model-based 
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
 		<p>The Modeling Project charter is posted <a href="http://www.eclipse.org/modeling/modeling-charter.php">here</a> and inherits from the <a href="http://www.eclipse.org/org/processes/Eclipse_Standard_TopLevel_Charter_v1.0.html">Eclipse Standard Top-Level Charter v1.0</a>.</p>
-		<p>Hate the logo to the right?  Love it?  Let us know and/or contribute one of your own design to the Modeling project <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154906">logo contest</a>!
 		</td>
-		<td align="right">
-			<img src="http://www.eclipse.org/modeling/images/modeling_logo_abstract.png" height="250"/>
+		<td align="right">New <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=51573&action=view">logo</a> coming soon!
 		</td>
 		</table>
 		<div class="homeitem3col">
@@ -75,7 +73,7 @@ development technologies within the Eclipse community by providing a unified set
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Model Development Tools</h3>
+			<h3><a href="http://www.eclipse.org/proposals/mdt/">Model Development Tools</a></h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/uml2">Unified Modeling Language 2</a> (UML2) : an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
 				<ul>
@@ -89,7 +87,7 @@ development technologies within the Eclipse community by providing a unified set
 			<h3>Model Transformation</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/proposals/m2m/">Model to Model Transformation</a> (M2M) : will deliver an extensible framework for model-to-model transformation languages, with an exemplary implementation of the <a href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm#MOF_QVT">QVT</a> Core language.</li>
-				<li><a href="">Model to Text Transformation</a> (M2T) : awaiting proposal</li>
+				<li><a href="http://www.eclipse.org/proposals/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
 					<li><a href="http://www.eclipse.org/emft/projects/jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/jeteditor/">JET Editor</a> : leverages Eclipse text editor framework to provide this capability via features like syntax coloring, error highlighting and code completion.</li>
@@ -145,8 +143,11 @@ development technologies within the Eclipse community by providing a unified set
 	
 	<div id="rightcolumn">
 		<div class="sideitem">
-			<h6>Events</h6>
+			<h6>News</h6>
 			<ul>
+				<li>Model-to-Text (M2T) proposal <a href="http://www.eclipse.org/proposals/m2t/">posted</a>!</li>
+				<li>Modeling project <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=51573&action=view">logo</a> selected. Thanks to Gen Nishimura!</li>
+				<li>MDT project passed its <a href="http://www.eclipse.org/proposals/mdt/">Creation Review</a>.</li>
 				<li>Modeling project <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154906">logo contest</a>.  Submit your ideas by September 30th!</li>
 				<li>Model Development Tools (MDT) project proposal <a href="http://www.eclipse.org/proposals/mdt/">posted</a>.</li>
 				<li>Callisto webinar <a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
