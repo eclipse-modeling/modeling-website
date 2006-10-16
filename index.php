@@ -31,6 +31,10 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
 	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
+	
+	$Nav->addNavSeparator("Download Pages", "");
+	$Nav->addCustomNav("EMF", "/emf/downloads/", "_self", 3);
+	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/index.php", "_self", 3);
 
 	# End: page-specific settings
 	#
@@ -145,12 +149,10 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>News</h6>
 			<ul>
-				<li>Model-to-Text (M2T) proposal <a href="http://www.eclipse.org/proposals/m2t/">posted</a>!</li>
+				<li>Model-to-Text (M2T) project proposal <a href="http://www.eclipse.org/proposals/m2t/">posted</a>!</li>
 				<li>Modeling project <a href="https://bugs.eclipse.org/bugs/attachment.cgi?id=51573&action=view">logo</a> selected. Thanks to Gen Nishimura!</li>
 				<li>MDT project passed its <a href="http://www.eclipse.org/proposals/mdt/">Creation Review</a>.</li>
 				<li>Modeling project <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154906">logo contest</a>.  Submit your ideas by September 30th!</li>
-				<li>Model Development Tools (MDT) project proposal <a href="http://www.eclipse.org/proposals/mdt/">posted</a>.</li>
-				<li>Callisto webinar <a href="http://adobedev.breezecentral.com/p17835008/">recording</a> - covering modeling frameworks EMF & GMF.</li>
 			</ul>
 		</div>
 	</div>
