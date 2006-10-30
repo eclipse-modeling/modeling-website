@@ -85,4 +85,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.2 2006/10/27 19:04:09 khussey Exp $ -->
+<!-- $Id: index.php,v 1.4 2006/10/30 18:12:15 nickb Exp $ -->
