@@ -179,7 +179,7 @@ print "<li><a href=\"http://www.eclipse.org/$PR/news/release-notes.php\">Release
 print "</ul>\n";
 print "</div>\n";
 
-if (is_array($NLpacks))
+if (isset($NLpacks) && is_array($NLpacks))
 {
 	print "<div class=\"sideitem\">\n";
 	print "<h6>Language Packs</h6>\n";
@@ -307,6 +307,7 @@ function loadOptionsFromFile($file)
 	return (is_readable($file) ? loadOptionsFromArray(file($file)) : array());
 }
 
+/* TODO: this function and it's partners in crime should really be cleaned up */
 function loadOptionsFromArray($sp)
 {
 	$doSection = null;
@@ -315,7 +316,7 @@ function loadOptionsFromArray($sp)
 		if (preg_match("/^[^#].{2,}/", $s))
 		{
 			$matches = null;
-			if (preg_match("/\[([a-zA-Z_]+)(\|reversed)?\]/", $s, $matches)) // section starts
+			if (preg_match("/\[([a-zA-Z_]+)((?:\|reversed)?)\]/", $s, $matches))
 			{
 				$doSection = $matches[1];
 
@@ -764,14 +765,7 @@ function showToggle($showAll, $showMax, $sortBy, $count)
 
 function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only the projects we have the files for
 {
-	# emf: /var/www/emft/
-	# emft: /var/www/html/emft/
-	# download: /home/data/httpd/download.eclipse.org/technology/emft/
-	/*$pwd = getPWD("");
-	if (preg_match("#/www/(?:html/)?emft/#", $pwd))
-	{*/
-		$pwd = getPWD($PR); //TODO: look at me later
-	//}
+	$pwd = getPWD();
 
 	$projs = loadDirSimple($pwd, ".*", "d"); // locally available
 	foreach ($nodownloads as $z)

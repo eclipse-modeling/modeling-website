@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.1 2006/10/27 18:42:11 emerks Exp $ 
+// $Id: scripts.php,v 1.2 2006/10/30 22:03:05 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -20,6 +20,7 @@ function PWD_check($PWD, $suf)
 
 function getPWD($suf = "")
 {
+	global $PR;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 
 	//dynamic assignments
@@ -191,7 +192,7 @@ function getNews($lim, $key)
 
 function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.0 everywhere
 {
-	if (function_exists(file_get_contents))
+	if (function_exists("file_get_contents"))
 	{
 		return file_get_contents($file);
 	}

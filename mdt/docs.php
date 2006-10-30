@@ -72,7 +72,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function javadoc($rels)
 {
-	global $projects, $proj;
+	global $projects, $proj, $PR;
 
 	$project = project_name($proj);
 
@@ -91,4 +91,4 @@ function anchor($str)
 	return preg_replace("/[^a-zA-Z]/", "", $str);
 }
 ?>
-<!-- $Id: docs.php,v 1.1 2006/10/27 19:04:09 khussey Exp $ -->
+<!-- $Id: docs.php,v 1.2 2006/10/30 22:03:05 nickb Exp $ -->

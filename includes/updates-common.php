@@ -3,12 +3,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 function update_manager($shortname, $longname)
 {
-	global $App, $Nav, $Menu;
+	global $App, $Nav, $Menu, $theme;
 
 	ob_start();
 	?>
 	<div id="midcolumn">
-		<h1>MDT Update Manager Site</h1>
+		<h1><?php print $shortname; ?> Update Manager Site</h1>
 		<p>To install these plugins, point your Eclipse Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/emf/docs.php?doc=docs/UsingUpdateManager/UsingUpdateManager.html">click here</a>. <a href="http://www.eclipse.org/downloads/download.php?file=/<?php print $PR; ?>/updates/site.xml&amp;format=xml">Mirrors available</a>.
 		</p>
 		<ul>
