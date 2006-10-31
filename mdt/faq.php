@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 if ($proj) { 
-	header("Location: http://wiki.eclipse.org/index.php/MDT-" . strtoupper($proj)); 
+	header("Location: http://wiki.eclipse.org/index.php/MDT-" . strtoupper($proj) . "-FAQ"); 
 	exit;
 }
 ob_start();
@@ -27,4 +27,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: faq.php,v 1.2 2006/10/31 22:49:13 nickb Exp $ -->
+<!-- $Id: faq.php,v 1.3 2006/10/31 22:50:29 nickb Exp $ -->
