@@ -15,6 +15,8 @@ ob_start();
 
 print doSelectProject($projects, $proj, $nomenclature);
 
+print "</div>\n";
+
 $html = ob_get_contents();
 ob_end_clean();
 
@@ -24,4 +26,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: docs.php,v 1.3 2006/11/01 02:59:43 nickb Exp $ -->
+<!-- $Id: docs.php,v 1.4 2006/11/01 03:02:06 nickb Exp $ -->
