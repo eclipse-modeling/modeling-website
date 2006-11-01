@@ -28,7 +28,7 @@ $showAll = (isset($_GET["showAll"]) && preg_match("/^(1)$/", $_GET["showAll"], $
 $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"], $regs) ? $regs[1] : ($sortBy == "date" ? "10" : "5"));
 $doRefreshPage = false;
 
-$PWD = getPWD("$PR$proj/downloads/drops"); // see scripts.php
+$PWD = getPWD("$proj/downloads/drops"); // see scripts.php
 $buildOptionsFile = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "build.options.txt"; // read only
 
 if (preg_match("/(?:emf|fullmoon)\./", $_SERVER["HTTP_HOST"])) //internal
@@ -612,7 +612,7 @@ function pretty_size($bytes)
 
 function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive = false)
 {
-	global $downloadScript, $downloadPre, $PR;
+	global $downloadScript, $downloadPre, $PR, $proj;
 
 	foreach ($packs as $name => $packPre)
 	{
@@ -623,7 +623,7 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 			foreach ($subcols as $alt2 => $packMid2)
 			{
 				$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org" : $downloadScript) .
-					"$downloadPre/$PR/downloads/drops/$folder$packPre$packMid-$packMid2$packSuf\">$alt2</a>";
+					"$downloadPre/$PR$proj/downloads/drops/$folder$packPre$packMid-$packMid2$packSuf\">$alt2</a>";
 			}
 			print join(", ", $ret);
 			print "</li>\n";
