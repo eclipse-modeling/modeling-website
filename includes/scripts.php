@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.4 2006/11/01 21:46:08 nickb Exp $ 
+// $Id: scripts.php,v 1.5 2006/11/01 22:15:05 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -78,7 +78,7 @@ function getPWD($suf = "")
 					if (!PWD_check($PWD, $suf))
 					{
 						PWD_debug($PWD, $suf, "<!-- Found[${y}def-$z]: PWD -->");
-						break;
+						break 2;
 					}
 				}
 			}
