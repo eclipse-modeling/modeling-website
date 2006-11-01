@@ -96,9 +96,7 @@ $suf = array(
 
 $rssfeed = "";
 
-$debug = -1;
-
-/* define showNotes(), showArchived(), doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
+/* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");

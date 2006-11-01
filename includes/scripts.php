@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.3 2006/11/01 21:15:23 nickb Exp $ 
+// $Id: scripts.php,v 1.4 2006/11/01 21:46:08 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -89,6 +89,8 @@ function getPWD($suf = "")
 	{ 
 		print "<!-- PWD not found! -->";
 	}
+
+	debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
 
 	return $PWD;
 }
@@ -244,5 +246,15 @@ function project_name($proj)
 	$tmp = array_flip($projects);
 	$proj = preg_replace("#^/#", "", $proj);
 	return $tmp[$proj];
+}
+
+function debug($str, $level = 0)
+{
+	global $debug;
+
+	if ($debug > $level)
+	{
+		print "<div class=\"debug\">$str</div>\n";
+	}
 }
 ?>
