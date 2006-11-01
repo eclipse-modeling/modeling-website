@@ -21,10 +21,10 @@ print doSelectProject($projects, $proj, $nomenclature);
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Eclipse Modeling - MDT - Project FAQ";
+$pageTitle = "Eclipse Modeling - MDT - FAQs";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: faq.php,v 1.3 2006/10/31 22:50:29 nickb Exp $ -->
+<!-- $Id: faq.php,v 1.4 2006/11/01 02:59:26 nickb Exp $ -->
