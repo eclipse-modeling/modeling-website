@@ -13,6 +13,7 @@ $Nav->setLinkList(null);
 $PR = "modeling/mdt";
 
 $isEMFserver = preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]);
+$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 
 $rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
 $downurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
