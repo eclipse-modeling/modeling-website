@@ -114,28 +114,13 @@ function doLanguagePacks()
 <?php
 }
 
-function showArchived()
-{
-	global $PR;
-	$oldrels = array(
-		"1.1.0" => "200507070914",
-		"1.0.3" => "200506221634",
-		"1.0.2" => "200503231914",
-		"1.0.1" => "200409171820",
-		"1.0.0" => "200406281334"
-	);
-
-	print "<div class=\"homeitem3col\">\n";
-	print "<h3>Archived Releases<a name=\"archives\"> </a></h3>\n";
-	print "<p>Older UML2 releases have been moved to archive.eclipse.org, and can be accessed here:</p>";
-	print "<ul id=\"archives\">\n";
-	foreach (array_keys($oldrels) as $z)
-	{
-		print "<li><a href=\"http://archive.eclipse.org/$PR/downloads/drops/$z/R$oldrels[$z]\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";
-	}
-	print "</ul>\n";
-	print "</div>\n";
-}
+$oldrels = array(
+	"1.1.0" => "200507070914",
+	"1.0.3" => "200506221634",
+	"1.0.2" => "200503231914",
+	"1.0.1" => "200409171820",
+	"1.0.0" => "200406281334"
+);
 
 function showNotes()
 {

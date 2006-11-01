@@ -155,7 +155,12 @@ if ($doRefreshPage)
 </script>
 <?php }
 
-$extras = array("showArchived", "doLanguagePacks", "showNotes");
+if (isset($oldrels) && is_array($oldrels) && sizeof($oldrels) > 0)
+{
+	showArchived($oldrels);
+}
+
+$extras = array("doLanguagePacks", "showNotes");
 
 foreach ($extras as $z)
 {
@@ -778,5 +783,21 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 	}
 
 	return array_intersect(array_merge($projects, $extraprojects), $projs);
+}
+
+function showArchived($oldrels)
+{
+	global $PR, $proj;
+
+	print "<div class=\"homeitem3col\">\n";
+	print "<h3><a name=\"archives\"></a>Archived Releases</h3>\n";
+	print "<p>Older " . project_name($proj) . " releases have been moved to archive.eclipse.org, and can be accessed here:</p>";
+	print "<ul id=\"archives\">\n";
+	foreach (array_keys($oldrels) as $z)
+	{
+		print "<li><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";
+	}
+	print "</ul>\n";
+	print "</div>\n";
 }
 ?>

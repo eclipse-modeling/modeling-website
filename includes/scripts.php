@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.2 2006/10/30 22:03:05 nickb Exp $ 
+// $Id: scripts.php,v 1.3 2006/11/01 21:15:23 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -242,6 +242,7 @@ function project_name($proj)
 	global $projects;
 
 	$tmp = array_flip($projects);
+	$proj = preg_replace("#^/#", "", $proj);
 	return $tmp[$proj];
 }
 ?>
