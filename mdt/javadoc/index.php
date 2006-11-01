@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		$PWD = "../../modeling/mdt/javadoc/";
+		$PWD = "../../../modeling/mdt/javadoc/";
 		$jdPWD = $PWD;
 	}
 	$subprojs = loadDirSimple($PWD,"(.+)","d");
