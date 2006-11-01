@@ -222,7 +222,7 @@ style='font-size:10.0pt;font-family:Arial'><o:p></o:p></span></p>
 
 </div>
 
-<h1><img width=120 height=86 id="_x0000_i1025" src="../../../images/Idea.jpg"
+<h1><img width=120 height=86 id="_x0000_i1025" src="../../../../images/Idea.jpg"
 align=CENTER></h1>
 
 <p>&nbsp;</p>
@@ -339,33 +339,33 @@ assume you’ve defined the following utility methods to give the user
 information on the program’s status:</p>
 
 <pre style='margin-left:9.0pt'><img border=0 width=24 height=14
-id="_x0000_i1029" src="../../../images/tag_1.gif" align=CENTER><span
+id="_x0000_i1029" src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-tab-count:1'>  </span><span class=GramE>public</span> static boolean DEBUG = true;</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:1'>     </span><span class=GramE>protected</span> static void out(String output) {</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:2'>            </span><span class=GramE>if</span> (DEBUG) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1030"
-src="../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
+src="../../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
 class=GramE>System.out.println(</span>output);</pre><pre style='margin-left:
 9.0pt'><span style='mso-tab-count:2'>            </span>}</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:1'>     </span><span class=GramE>protected</span> static void err(String error) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1031"
-src="../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
+src="../../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
 class=GramE>System.err.println(</span>error);</pre><pre style='margin-left:
 9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>A
 static debug flag <img border=0 width=24 height=14 id="_x0000_i1032"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>can be used to enable or disable verbose
 information printed to the system’s output <span class=GramE>stream </span><img
-border=0 width=24 height=14 id="_x0000_i1033" src="../../../images/tag_2.gif"
+border=0 width=24 height=14 id="_x0000_i1033" src="../../../../images/tag_2.gif"
 align=CENTER>. Errors will always be printed to the system’s error <span
 class=GramE>stream </span><img border=0 width=24 height=14 id="_x0000_i1034"
-src="../../../images/tag_3.gif" align=CENTER>.</p>
+src="../../../../images/tag_3.gif" align=CENTER>.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>All
 righty then! In each of the following subsections, we’ll look at how to create
@@ -423,36 +423,36 @@ specified name.</p>
 <pre style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span><span
 class=GramE>protected</span> static Model createModel(String name) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1036"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Model model = <span
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Model model = <span
 class=GramE>UMLFactory.eINSTANCE.createModel(</span>);</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1037"
-src="../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
+src="../../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
 class=GramE>model.setName(</span>name);</pre><pre style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1038"
-src="../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
+src="../../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
 class=GramE>out(</span>&quot;Model '&quot; + model.getQualifiedName() + &quot;' created.&quot;);</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><img
-border=0 width=24 height=14 id="_x0000_i1039" src="../../../images/tag_4.gif"
+border=0 width=24 height=14 id="_x0000_i1039" src="../../../../images/tag_4.gif"
 align=CENTER><span style='mso-tab-count:2'>         </span><span class=GramE>return</span> model;</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>First,
 we ask the UML factory singleton <img border=0 width=24 height=14
-id="_x0000_i1040" src="../../../images/tag_1.gif" align=CENTER><span
+id="_x0000_i1040" src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to create a model, and we set its <span
 class=GramE>name </span><img border=0 width=24 height=14 id="_x0000_i1041"
-src="../../../images/tag_2.gif" align=CENTER>. Then, we output information <img
-border=0 width=24 height=14 id="_x0000_i1042" src="../../../images/tag_3.gif"
+src="../../../../images/tag_2.gif" align=CENTER>. Then, we output information <img
+border=0 width=24 height=14 id="_x0000_i1042" src="../../../../images/tag_3.gif"
 align=CENTER><span style='mso-spacerun:yes'> </span>to the user to let them
 know that the model has been successfully created. Finally, we return <img
-border=0 width=24 height=14 id="_x0000_i1043" src="../../../images/tag_4.gif"
+border=0 width=24 height=14 id="_x0000_i1043" src="../../../../images/tag_4.gif"
 align=CENTER><span style='mso-spacerun:yes'> </span>the model. You’ll notice
 most, if not all, of the code snippets in this article will follow this pattern
 – create the element (and set some properties on it), inform the user, and
 return it.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=63 height=14 id="_x0000_i1044" src="../../../images/tip.gif"><span
+border=0 width=63 height=14 id="_x0000_i1044" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>All named elements (a model is a type of named
 element) have a “simple” name and a qualified name. The qualified name is the
 “simple” name prefixed with the “simple” names of <span class=GramE>all of the</span>
@@ -502,7 +502,7 @@ class=GramE>protected</span> static org.eclipse.uml2.uml.Package createPackage(<
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span><span
 class=GramE>org.eclipse.uml2.uml.Package</span> nestingPackage, String name) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=14 id="_x0000_i1045"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>org.eclipse.uml2.uml.Package package_ = nestingPackage</pre><pre
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>org.eclipse.uml2.uml.Package package_ = nestingPackage</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>.<span
 class=GramE>createNestedPackage(</span>name);</pre><pre style='margin-left:
 9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
@@ -514,11 +514,11 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here,
 instead of asking the factory to create the package for us, we’re making use of
 one of the factory methods <img border=0 width=24 height=14 id="_x0000_i1046"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>in the UML2 API.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=63 height=14 id="_x0000_i1047" src="../../../images/tip.gif"><span
+border=0 width=63 height=14 id="_x0000_i1047" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>In UML2, a factory method exists for every
 feature that can contain other elements (i.e. every containment feature). In
 addition, more convenient factory methods exist for commonly created types
@@ -561,7 +561,7 @@ Enter a value (i.e. “int”) for the <b>Name</b> property in the <b>Properties</b>
 view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1048" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1048" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining primitive types from the
 ExtendedPO2 model using the UML editor.</p>
 
@@ -583,7 +583,7 @@ a specified name in a specified package.</p>
 class=GramE>protected</span> static PrimitiveType createPrimitiveType(</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>org.eclipse.uml2.uml.Package package_, String name) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1050"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>PrimitiveType primitiveType = (PrimitiveType) package_</pre><pre
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>PrimitiveType primitiveType = (PrimitiveType) package_</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>.<span
 class=GramE>createOwnedPrimitiveType(</span>name);</pre><pre style='margin-left:
 9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
@@ -596,7 +596,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call the <span class=GramE><code>createOwnedPrimitiveType(</code></span><code>String)</code>
 convenience factory method <img border=0 width=24 height=13 id="_x0000_i1051"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to ask the package to create a primitive type
 with the specified name as one of its packaged elements.</p>
 
@@ -608,7 +608,7 @@ named ‘int’ in model ‘epo2’ as follows:</p>
 class=GramE>createPrimitiveType(</span>epo2Model, &quot;int&quot;);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1052" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1052" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining primitive types from the ExtendedPO2 model.</p>
 
@@ -649,7 +649,7 @@ specified name in a specified package.</p>
 class=GramE>protected</span> static Enumeration createEnumeration(</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>org.eclipse.uml2.uml.Package package_, String name) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1054"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Enumeration enumeration = (Enumeration) package_</pre><pre
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Enumeration enumeration = (Enumeration) package_</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>.<span
 class=GramE>createOwnedEnumeraton(</span>name);</pre><pre style='margin-left:
 9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
@@ -661,7 +661,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call the <span class=GramE><code>createOwnedEnumeration(</code></span><code>String)</code>
 convenience factory method <img border=0 width=24 height=13 id="_x0000_i1055"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to ask the package to create a primitive type
 with the specified name as one of its packaged elements.</p>
 
@@ -693,7 +693,7 @@ Enter a value (i.e. “Pending”) for the <b>Name</b> property in the <b>Properties
 view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1056" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1056" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining enumeration literals from
 the ExtendedPO2 model using the UML editor.</p>
 
@@ -715,7 +715,7 @@ with a specified name in a specified enumeration.</p>
 class=GramE>protected</span> static EnumerationLiteral createEnumerationLiteral(</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>Enumeration enumeration, String name) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1058"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>EnumerationLiteral enumerationLiteral = enumeration</pre><pre
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>EnumerationLiteral enumerationLiteral = enumeration</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>.<span
 class=GramE>createOwnedLiteral(</span>name);</pre><pre style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:2'>            </span><span
@@ -728,7 +728,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call a <span class=GramE><code>createOwnedLiteral(</code></span><code>String)</code>
 convenience factory method <img border=0 width=24 height=13 id="_x0000_i1059"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to ask the enumeration to create an
 enumeration literal with the specified name as one of its owned literals.</p>
 
@@ -740,7 +740,7 @@ literal named ‘Pending’ in enumeration ‘OrderStatus’ as follows:</p>
 class=GramE>createEnumerationLiteral(</span>orderStatusEnumeration, &quot;Pending&quot;);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1060" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1060" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining enumeration literals from the ExtendedPO2 model.</p>
 
@@ -764,7 +764,7 @@ Enter a value (i.e. “Supplier”) for the <b>Name</b> property in the <b>Propertie
 view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1061" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1061" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining classes from the
 ExtendedPO2 model using the UML editor.</p>
 
@@ -786,7 +786,7 @@ shows a method that programmatically creates and returns <span class=GramE>a(</s
 class=GramE>protected</span> static org.eclipse.uml2.uml.Class createClass(</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>org.eclipse.uml2.uml.Package package_, String name, <span
 class=GramE>boolean</span> isAbstract) {</pre><pre style='margin-left:9.0pt'><img
-border=0 width=24 height=13 id="_x0000_i1063" src="../../../images/tag_1.gif"
+border=0 width=24 height=13 id="_x0000_i1063" src="../../../../images/tag_1.gif"
 align=CENTER><span style='mso-tab-count:2'>         </span>org.eclipse.uml2.uml.Class class_ = package_.<span
 class=GramE>createOwnedClass(</span>name,</pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:3'>                    </span><span class=GramE>isAbstract</span>);</pre><pre
@@ -799,13 +799,13 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call the <span class=GramE><code>createOwnedClass(</code></span><code>String,
 boolean)</code> convenience factory method <img border=0 width=24 height=13
-id="_x0000_i1064" src="../../../images/tag_1.gif" align=CENTER><span
+id="_x0000_i1064" src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to ask the package to create a class with the
 specified name as one of its packaged elements, and set the <code>isAbstract</code>
 attribute of the class based on the specified <code>boolean</code> argument.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1065" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1065" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>You may have noticed that we have been fully
 qualifying references to the <code>Package</code> and <code>Class</code>
 interfaces. This is recommended so that these types are not confused with <code>java.lang.Class</code>
@@ -820,7 +820,7 @@ class=GramE>org.eclipse.uml2.uml.Class</span> supplierClass = createClass(epo2Mo
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>&quot;Supplier&quot;, false);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1066" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1066" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining classes from the ExtendedPO2 model.</p>
 
@@ -846,7 +846,7 @@ Select a value (i.e. <b>epo2::Address</b>) for the <b>General</b> property in
 the <b>Properties</b> view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1067" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1067" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining generalizations from the
 ExtendedPO2 model using the UML editor.</p>
 
@@ -869,7 +869,7 @@ class=GramE>protected</span> static Generalization createGeneralization(</pre><p
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>Classifier specificClassifier, Classifier generalClassifier) {</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:2'>            </span>Generalization generalization = specificClassifier</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1069"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:3'>                 </span>.<span
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:3'>                 </span>.<span
 class=GramE>createGeneralization(</span>generalClassifier);</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:2'>            </span><span class=GramE>out(</span>&quot;Generalization &quot; + specificClassifier.getQualifiedName() + &quot; -&gt;&gt; &quot;</pre><pre
@@ -882,7 +882,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call a convenience factory method on the specific classifier that creates a
 generalization <img border=0 width=24 height=13 id="_x0000_i1070"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>as one of its children and sets the general
 classifier to the specified argument.</p>
 
@@ -894,7 +894,7 @@ between specific class ‘USAddress’ and general class ‘Address’ as follows:</p>
 class=GramE>createGeneralization(</span>usAddressClass, addressClass);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1071" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1071" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining generalizations from the ExtendedPO2 model.</p>
 
@@ -907,7 +907,7 @@ relates an instance of the classifier to a value or set of values of the type
 of the attribute.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1072" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1072" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>The types of <code>Classifier</code> that can
 own attributes in UML2 include <code>Artifact</code>, <code>DataType</code>, <code>Interface</code>,
 <code>Signal</code>, and <code>StructuredClassifier</code> (and their
@@ -936,7 +936,7 @@ Enter a value (i.e. 0) for the <b style='mso-bidi-font-weight:normal'>Lower</b>
 property in the <b style='mso-bidi-font-weight:normal'>Properties</b> view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1073" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1073" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>Lower and upper values for multiplicity
 elements (like properties) are represented as value specifications (first-class
 objects) in UML™ 2.x. The default value for lower and upper bounds is 1, unless
@@ -947,7 +947,7 @@ bound, the lower value must be an integer and the upper value must be an
 unlimited natural. </p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1074" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1074" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining attributes from the
 ExtendedPO2 model using the UML editor.</p>
 
@@ -969,7 +969,7 @@ specified upper bound, lower bound, type, and name in a specified class.</p>
 class=GramE>protected</span> static Property createAttribute(org.eclipse.uml2.uml.Class class_,</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>String name, Type type, int lowerBound, int upperBound) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1076"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Property attribute = class_.<span
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Property attribute = class_.<span
 class=GramE>createOwnedAttribute(</span>name, type,</pre><pre style='margin-left:
 9.0pt'><span style='mso-tab-count:3'>                    </span><span
 class=GramE>lowerBound</span>, upperBound);</pre><pre style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre
@@ -1005,7 +1005,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call a <code>createOwnedAttribute(String, Type, int, int)</code> convenience
 factory method <img border=0 width=24 height=13 id="_x0000_i1077"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>to ask the class to create a property as one
 of its owned attributes, set the type of the attribute to the specified type,
 and set the lower and upper bounds of the attribute (the factory method indirectly
@@ -1013,7 +1013,7 @@ creates a literal integer and literal unlimited natural, respectively, and sets
 their values to the specified integer values).</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1078" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1078" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>The <code>LiteralUnlimitedNatural.UNLIMITED</code>
 constant represents the unlimited value for upper bounds (-1), as it does in
 EMF; when setting this value in the <b style='mso-bidi-font-weight:normal'>Properties</b>
@@ -1028,7 +1028,7 @@ class ‘Supplier’ as follows:</p>
 class=GramE>createAttribute(</span>supplierClass, &quot;name&quot;, stringPrimitiveType, 0, 1);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1079" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1079" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining attributes from the ExtendedPO2 model.</p>
 
@@ -1043,7 +1043,7 @@ represents a non-navigable end of the association, in which case the type of
 the property is the type of the association end.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1080" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1080" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>The notion of association end navigability was
 separated from that of ownership in the UML™ 2.0 <span class=GramE>specification</span>,
 so a property that is owned by an association isn’t necessarily non-navigable
@@ -1108,7 +1108,7 @@ Enter a value (i.e. *) for the <b style='mso-bidi-font-weight:normal'>Upper</b>
 property in the <b style='mso-bidi-font-weight:normal'>Properties</b> view.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1081" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1081" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Create the remaining associations from the
 ExtendedPO2 model using the UML editor.</p>
 
@@ -1139,7 +1139,7 @@ style='mso-tab-count:3'>                    </span>AggregationKind end2Aggregati
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span><span
 class=GramE>int</span> end2LowerBound, int end2UpperBound) {</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><img
-border=0 width=24 height=13 id="_x0000_i1083" src="../../../images/tag_1.gif"
+border=0 width=24 height=13 id="_x0000_i1083" src="../../../../images/tag_1.gif"
 align=CENTER><span style='mso-tab-count:2'>         </span>Association association = <span
 class=GramE>type1.createAssociation(</span>end1IsNavigable,</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>end1Aggregation, end1Name, end1LowerBound, end1UpperBound, type2,</pre><pre
@@ -1229,7 +1229,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span>}</pre>
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we call a convenience factory method on the first end type that creates an
 association (and its ends) between it and another type <img border=0 width=24
-height=13 id="_x0000_i1084" src="../../../images/tag_1.gif" align=CENTER><span
+height=13 id="_x0000_i1084" src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>as one of its siblings (i.e. as a child of its
 package namespace) and with the specified upper bounds, lower bounds, role
 names, aggregation kinds, and navigabilities. The owners of the association
@@ -1238,7 +1238,7 @@ are owned by the end type if allowed, otherwise they are owned by the
 association; non-navigable ends are owned by the association.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1085" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1085" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>The <code>NamedElement.SEPARATOR</code> constant
 represents the standard separator (<b>::</b>) used in qualified names.</p>
 
@@ -1254,7 +1254,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </sp
 style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </span>false, AggregationKind.NONE_LITERAL, &quot;&quot;, 1, 1);</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=61 height=13 id="_x0000_i1086" src="../../../images/tryit.gif"><span
+border=0 width=61 height=13 id="_x0000_i1086" src="../../../../images/tryit.gif"><span
 style='mso-spacerun:yes'> </span>Write code to programmatically create the
 remaining associations from the ExtendedPO2 model.</p>
 
@@ -1280,35 +1280,35 @@ resource with a specified URI.</p>
 <pre style='margin-left:9.0pt'><span style='mso-tab-count:1'>     </span><span
 class=GramE>protected</span> static void save(org.eclipse.uml2.uml.Package package_, URI uri) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1087"
-src="../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Resource resource = new <span
+src="../../../../images/tag_1.gif" align=CENTER><span style='mso-tab-count:2'>         </span>Resource resource = new <span
 class=GramE>ResourceSetImpl(</span>).createResource(uri);</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1088"
-src="../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
+src="../../../../images/tag_2.gif" align=CENTER><span style='mso-tab-count:2'>         </span><span
 class=GramE>resource.getContents(</span>).add(package_);</pre><pre
 style='margin-left:9.0pt'><o:p>&nbsp;</o:p></pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:2'>            </span><span class=GramE>try</span> {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1089"
-src="../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
+src="../../../../images/tag_3.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
 class=GramE>resource.save(</span>null);</pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:3'>                    </span><span class=GramE>out(</span>&quot;Done.&quot;);</pre><pre
 style='margin-left:9.0pt'><span style='mso-tab-count:2'>            </span>} catch (IOException ioe) {</pre><pre
 style='margin-left:9.0pt'><img border=0 width=24 height=13 id="_x0000_i1090"
-src="../../../images/tag_4.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
+src="../../../../images/tag_4.gif" align=CENTER><span style='mso-tab-count:3'>                 </span><span
 class=GramE>err(</span>ioe.getMessage());</pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:2'>            </span>}</pre><pre style='margin-left:9.0pt'><span
 style='mso-tab-count:1'>     </span>}</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Here
 we create a resource set <img border=0 width=24 height=13 id="_x0000_i1091"
-src="../../../images/tag_1.gif" align=CENTER><span
+src="../../../../images/tag_1.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>and a resource with the specified URI, add the
 package to the resource’s contents <img border=0 width=24 height=13
-id="_x0000_i1092" src="../../../images/tag_2.gif" align=CENTER>, and ask the
+id="_x0000_i1092" src="../../../../images/tag_2.gif" align=CENTER>, and ask the
 resource to save itself <img border=0 width=24 height=13 id="_x0000_i1093"
-src="../../../images/tag_3.gif" align=CENTER><span
+src="../../../../images/tag_3.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>using the default options. If an exception
 occurs, we notify the user <img border=0 width=24 height=13 id="_x0000_i1094"
-src="../../../images/tag_4.gif" align=CENTER><span
+src="../../../../images/tag_4.gif" align=CENTER><span
 style='mso-spacerun:yes'> </span>via our handy utility method.</p>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>OK,
@@ -1322,7 +1322,7 @@ style='margin-left:9.0pt'><span style='mso-tab-count:3'>                    </sp
 class=GramE>appendFileExtension(</span>UMLResource.FILE_EXTENSION));</pre>
 
 <p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
-border=0 width=62 height=13 id="_x0000_i1095" src="../../../images/tip.gif"><span
+border=0 width=62 height=13 id="_x0000_i1095" src="../../../../images/tip.gif"><span
 style='mso-spacerun:yes'> </span>The <code>UMLResource.FILE_EXTENSION</code>
 constant represents the file extension for UML resources (<code>.uml</code>).
 Note that the <code>UMLResource</code> interface contains a number of constants
