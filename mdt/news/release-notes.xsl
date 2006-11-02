@@ -15,17 +15,7 @@
 <xsl:template name="show_notes" match="/">
 <xsl:for-each select="data">
 	<div id="midcolumn">
-		<div class="homeitem3col">
-			<h3>Filters</h3>
-			<img style="float: right; padding: 3px;" src="http://www.eclipse.org/emf/images/misc/bug.gif" alt="I've been looking closely at bugs." title="I've been looking closely at bugs."/>
-			<form action="http://www.eclipse.org/emf/searchcvs.php" method="get" name="bugform" target="_blank">
-				<p>
-				<label for="bug">CVS Delta for Bug ID: </label><input size="7" type="text" name="q" id="q"/>
-				<input type="submit" value="Go!"/>
-				</p>
-			</form>
-		</div>
-  
+
 	<!-- nav header table (release/milestone list) -->
 	<xsl:for-each select="project-def">
 		<xsl:if test="((count(key('entryProj',@project)) != 0 and $project = @project) or $project = '')">
@@ -153,8 +143,29 @@
 		</xsl:if>
 	</xsl:for-each>
 	</div>
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Search CVS</h6>
+			<form action="http://www.eclipse.org/emf/searchcvs.php" method="get" name="bugform" target="_blank">
+				<p>
+				<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
+				<input type="submit" value="Go!"/>
+				</p>
+			</form>
+		</div>
+		<xsl:if test="count(oldreleasenotes) != 0">
+			<div class="sideitem">
+				<h6>Older Releases</h6>
+				<ul>
+					<xsl:for-each select="oldreleasenotes">
+						<li><a href="{@href}"><xsl:value-of select="@label"/></a></li>
+					</xsl:for-each>
+				</ul>
+			</div>
+	  </xsl:if>
+	</div>
 </xsl:for-each>
 </xsl:template>
 
 </xsl:stylesheet>
-<!-- $Id: release-notes.xsl,v 1.2 2006/11/02 03:03:42 nickb Exp $ -->
+<!-- $Id: release-notes.xsl,v 1.3 2006/11/02 20:52:52 nickb Exp $ -->
