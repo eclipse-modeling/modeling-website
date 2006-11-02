@@ -60,7 +60,7 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 $Nav->addNavSeparator("Documentation", "$rooturl/docs.php?project=$proj");
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Plan", "http://www.eclipse.org/mdt/docs/plans/mdt_project_plan_1_0.html", "_self", 2);
-$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/release-notes.php", "_self", 2);
+$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/release-notes.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/emf/searchcvs.php?q=project%3A+org.eclipse.mdt+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
