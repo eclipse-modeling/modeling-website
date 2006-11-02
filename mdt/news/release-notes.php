@@ -32,7 +32,6 @@ else
 }
 
 $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
-$html = '<div id="rightcolumn">' . doSelectProject($projectArray, $proj, $nomenclature, "sideitem") . '</div>'. "\n";
 
 /*
  * To work, this script must be run with a version of PHP4 which
@@ -50,29 +49,34 @@ if ($params["project"])
 	$ver = $params["version"];
 	$XMLfile = "release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
 	$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes-{$params["project"]}.xml");
-	$XSLfile = "release-notes.xsl";
-	
-	$processor = xslt_create();
-	$fileBase = 'file://' . getcwd() . '/';
-	xslt_set_base($processor, $fileBase);
-	$result = xslt_process($processor, $fileBase . $XMLfile, $fileBase . $XSLfile, NULL, array(), $params);
-	
-	if (!$result)
+	if (!is_file($XMLfile))
 	{
-		print "Trying to parse $XMLfile with $XSLfile...<br/>";
-		print "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
-	}
-	
-	print $result; 
+		doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
+	} 
+	else
+	{
+		$XSLfile = "release-notes.xsl";
+		
+		$processor = xslt_create();
+		$fileBase = 'file://' . getcwd() . '/';
+		xslt_set_base($processor, $fileBase);
+		$result = xslt_process($processor, $fileBase . $XMLfile, $fileBase . $XSLfile, NULL, array(), $params);
+		
+		if (!$result)
+		{
+			print "Trying to parse $XMLfile with $XSLfile...<br/>";
+			print "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
+		}
+		
+		print $result;
+	} 
 }
 else
 {
-	print '<div id="midcolumn"><h1>Release Notes</h1>';
-	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
-	print "</div>\n";	
+	doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
 }
 
-$html = ob_get_contents() . $html;
+$html = doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature) . ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
@@ -84,5 +88,6 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+
 ?>
-<!-- $Id: release-notes.php,v 1.6 2006/11/02 03:18:40 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.7 2006/11/02 19:39:23 nickb Exp $ -->
