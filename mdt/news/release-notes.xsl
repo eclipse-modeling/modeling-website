@@ -16,7 +16,7 @@
 <xsl:for-each select="data">
 	<div id="midcolumn">
 	
-	<!-- INSERT doSelectProject() HERE -->
+	<div id="doSelectProject"/>
 
 	<!-- nav header table (release/milestone list) -->
 	<xsl:for-each select="project-def">
@@ -171,4 +171,4 @@
 </xsl:template>
 
 </xsl:stylesheet>
-<!-- $Id: release-notes.xsl,v 1.4 2006/11/02 21:02:48 nickb Exp $ -->
+<!-- $Id: release-notes.xsl,v 1.5 2006/11/02 21:15:26 nickb Exp $ -->

@@ -66,7 +66,7 @@ if ($params["project"])
 		}
 		
 		// insert project selector
-		print preg_replace("/\t\<\!-- INSERT doSelectProject\(\) HERE --\>\n/", 
+		print preg_replace("/\t\<div id=\"doSelectProject\"\/>\n/", 
 			doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col"),$result);
 	} 
 	else
@@ -96,4 +96,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.12 2006/11/02 21:09:53 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.13 2006/11/02 21:15:26 nickb Exp $ -->
