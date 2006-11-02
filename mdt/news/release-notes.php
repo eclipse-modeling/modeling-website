@@ -42,6 +42,10 @@ $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
  * 	<xsl:param name="version"></xsl:param>
  */
 
+print '<div id="midcolumn"><h1>Release Notes</h1>'."\n";
+print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
+print "</div>\n";	
+
 if ($params["project"])
 {
 	// define XML and XSL sources 
@@ -57,31 +61,16 @@ if ($params["project"])
 		xslt_set_base($processor, $fileBase);
 		$result = xslt_process($processor, $fileBase . $XMLfile, $fileBase . $XSLfile, NULL, array(), $params);
 		
-		print '<div id="midcolumn"><h1>Release Notes</h1></div>'."\n";
-
 		if (!$result)
 		{
 			print "Trying to parse $XMLfile with $XSLfile...<br/>";
 			print "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
 		}
 		
-		// insert project selector
-		print preg_replace("/\t\<div id=\"doSelectProject\"\/>\n/", 
-			doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col"),$result);
+		print $result;
 	} 
-	else
-	{
-		print '<div id="midcolumn"><h1>Release Notes</h1>'."\n";
-		doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
-		print "</div>\n";
-	}
 }
-else
-{
-	print '<div id="midcolumn"><h1>Release Notes</h1>'."\n";
-	doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
-	print "</div>\n";	
-}
+
 $html = ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
@@ -96,4 +85,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.13 2006/11/02 21:15:26 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.14 2006/11/02 21:26:45 nickb Exp $ -->
