@@ -31,7 +31,8 @@ else
 	$params["project"] = "";
 }
 
-$html = '<div id="rightcolumn">' . doSelectProject($projects, $proj, $nomenclature, "sideitem") . '</div>'. "\n";
+$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
+$html = '<div id="rightcolumn">' . doSelectProject($projectArray, $proj, $nomenclature, "sideitem") . '</div>'. "\n";
 
 /*
  * To work, this script must be run with a version of PHP4 which
@@ -67,9 +68,8 @@ if ($params["project"])
 else
 {
 	print '<div id="midcolumn"><h1>Release Notes</h1>';
-	print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
-	print "</div>\n";
-	
+	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
+	print "</div>\n";	
 }
 
 $html = ob_get_contents() . $html;
@@ -85,4 +85,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes.php,v 1.5 2006/11/02 02:58:32 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.6 2006/11/02 03:18:40 nickb Exp $ -->
