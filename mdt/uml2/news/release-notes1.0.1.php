@@ -187,7 +187,7 @@ $pageTitle = "Eclipse Tools - UML2 - Release Notes";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/uml2/includes/relnotes.css"/>' . "\n");
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes1.0.1.php,v 1.1 2006/10/27 19:04:10 khussey Exp $ -->
+<!-- $Id: release-notes1.0.1.php,v 1.2 2006/11/02 22:36:21 nickb Exp $ -->
