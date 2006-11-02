@@ -39,7 +39,7 @@ $level = array(
 );
  
 $extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("uml2"); //projects with only information, no downloads, "projectkey"
+$nodownloads = array("uml2", "uml2-tools"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
