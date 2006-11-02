@@ -15,9 +15,17 @@
 <xsl:template name="show_notes" match="/">
 <xsl:for-each select="data">
 	<div id="midcolumn">
-	<!-- form controls -->
-	<xsl:copy-of select="document('release-notes-form-controls.xml')/div/node()"/>
-
+		<div class="homeitem3col">
+			<h3>Filters</h3>
+			<img style="float: right; padding: 3px;" src="http://www.eclipse.org/emf/images/misc/bug.gif" alt="I've been looking closely at bugs." title="I've been looking closely at bugs."/>
+			<form action="http://www.eclipse.org/emf/searchcvs.php" method="get" name="bugform" target="_blank">
+				<p>
+				<label for="bug">CVS Delta for Bug ID: </label><input size="7" type="text" name="q" id="q"/>
+				<input type="submit" value="Go!"/>
+				</p>
+			</form>
+		</div>
+  
 	<!-- nav header table (release/milestone list) -->
 	<xsl:for-each select="project-def">
 		<xsl:if test="((count(key('entryProj',@project)) != 0 and $project = @project) or $project = '')">
@@ -127,15 +135,6 @@
 						<xsl:for-each select="bug">
 						<xsl:sort select="@id" data-type="number" order="descending"/>
 							<li>
-							<!-- uml2 doesn't have an icon (yet)
-							<div class="fr">
-							<xsl:choose>
-								<xsl:when test="@sub = 'emf,sdo'"><img src="../images/icon-emf.gif" alt="EMF"/><xsl:text disable-output-escaping="yes">&#038;#160;</xsl:text><img src="../images/icon-sdo.gif" alt="SDO"/></xsl:when>
-								<xsl:when test="@sub = 'sdo'"><img src="../images/icon-sdo.gif" alt="SDO"/></xsl:when>
-								<xsl:otherwise><img src="../images/icon-{../@project}.gif" alt="{../@project}"/></xsl:otherwise>
-							</xsl:choose>
-							</div>
-							-->
 							<a href="http://www.eclipse.org/emf/searchcvs.php?q={@id}"><img src="http://www.eclipse.org/emf/images/delta.gif" alt="CVS Delta"/></a><xsl:text disable-output-escaping="yes">&#038;#160;</xsl:text>
 							<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id={@id}" target="_bugz"><xsl:value-of select="@id"/></a><xsl:text disable-output-escaping="yes">&#038;#160;</xsl:text>
 							<xsl:value-of select="."/>
@@ -158,4 +157,4 @@
 </xsl:template>
 
 </xsl:stylesheet>
-<!-- $Id: release-notes.xsl,v 1.1 2006/10/27 19:04:08 khussey Exp $ -->
+<!-- $Id: release-notes.xsl,v 1.2 2006/11/02 03:03:42 nickb Exp $ -->
