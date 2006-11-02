@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.6 2006/11/02 02:31:04 nickb Exp $ 
+// $Id: scripts.php,v 1.7 2006/11/02 03:18:11 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -202,6 +202,23 @@ function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.
 	{
 		return join("", file($file));
 	}
+}
+
+function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only the projects we have the files for
+{
+	$pwd = getPWD();
+
+	$projs = loadDirSimple($pwd, ".*", "d"); // locally available
+	foreach ($nodownloads as $z)
+	{
+		/* php <4.2.0 returns NULL on array_search() failure, but php >=4.2.0 returns FALSE on array_search() failure, so don't check that */
+		if (is_numeric($s = array_search($z, $projs)))
+		{
+			unset($projs[$s]);
+		}
+	}
+
+	return array_intersect(array_merge($projects, $extraprojects), $projs);
 }
 
 function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem3col", $showAll = "", $showMax = "", $sortBy = "")
