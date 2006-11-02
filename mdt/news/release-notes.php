@@ -42,7 +42,8 @@ $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
  * 	<xsl:param name="version"></xsl:param>
  */
 
-print doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
+print '<div id="midcolumn"><h1>Release Notes</h1>'."\n";
+print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
 
 if ($params["project"])
 {
@@ -69,6 +70,8 @@ if ($params["project"])
 	} 
 }
 
+print "</div>\n";	
+
 $html = ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
@@ -76,11 +79,11 @@ $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
  
 $pageTitle = "Eclipse Modeling - MDT - Release Notes";
 $pageKeywords = ""; // TODO: add something here
-$pageAuthor = "Neil Skrypuch";
+$pageAuthor = "Neil Skrypuch, Nick Boldt";
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.8 2006/11/02 20:16:37 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.9 2006/11/02 20:56:59 nickb Exp $ -->

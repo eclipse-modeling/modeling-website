@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.8 2006/11/02 19:39:23 nickb Exp $ 
+// $Id: scripts.php,v 1.9 2006/11/02 20:56:59 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -219,14 +219,6 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 	}
 
 	return array_intersect(array_merge($projects, $extraprojects), $projs);
-}
-
-function doSelectProjectDiv($title, $projectArray, $proj, $nomenclature)
-{
-	print '<div id="midcolumn"><h1>' . $title . '</h1>';
-	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
-	print "</div>\n";	
-	
 }
 
 function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem3col", $showAll = "", $showMax = "", $sortBy = "")
