@@ -31,7 +31,7 @@ else
 	$params["project"] = "";
 }
 
-$html = doSelectProject($projects, $proj, $nomenclature, "sideitem");
+$html = '<div id="rightcolumn">' . doSelectProject($projects, $proj, $nomenclature, "sideitem") . '</div>'. "\n";
 
 /*
  * To work, this script must be run with a version of PHP4 which
@@ -58,15 +58,18 @@ if ($params["project"])
 	
 	if (!$result)
 	{
-		echo "Trying to parse $XMLfile with $XSLfile...<br/>";
-		echo "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
+		print "Trying to parse $XMLfile with $XSLfile...<br/>";
+		print "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
 	}
 	
-	echo $result; 
+	print $result; 
 }
 else
 {
+	print '<div id="midcolumn"><h1>Release Notes</h1>';
 	print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
+	print "</div>\n";
+	
 }
 
 $html = ob_get_contents() . $html;
@@ -82,4 +85,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes.php,v 1.4 2006/11/02 02:31:04 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.5 2006/11/02 02:58:32 nickb Exp $ -->
