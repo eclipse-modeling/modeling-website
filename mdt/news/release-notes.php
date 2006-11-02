@@ -3,8 +3,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 ob_start();
 
-$pre = "../";
-
 // Process query string
 $params = array();
 if (preg_match("/^(\d\.\d(?:\.\d)?)$/", $_GET["version"], $regs))
@@ -16,6 +14,7 @@ else
 	$params["version"] = "";
 }
 
+// if available, bounce to a static file rather than the xslt'd xml
 if ($params["version"] && is_file("release-notes" . $params["version"] . ".php"))
 {
 	header("Location: http://www.eclipse.org/$PR/news/release-notes" . $params["version"] . ".php");
@@ -43,17 +42,15 @@ $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
  * 	<xsl:param name="version"></xsl:param>
  */
 
+print doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
+
 if ($params["project"])
 {
 	// define XML and XSL sources 
 	$ver = $params["version"];
 	$XMLfile = "release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
 	$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes-{$params["project"]}.xml");
-	if (!is_file($XMLfile))
-	{
-		doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
-	} 
-	else
+	if (is_file($XMLfile))
 	{
 		$XSLfile = "release-notes.xsl";
 		
@@ -71,16 +68,12 @@ if ($params["project"])
 		print $result;
 	} 
 }
-else
-{
-	doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature);
-}
 
-$html = doSelectProjectDiv("Release Notes", $projectArray, $proj, $nomenclature) . ob_get_contents();
+$html = ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
-
+ 
 $pageTitle = "Eclipse Modeling - MDT - Release Notes";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
@@ -90,4 +83,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.7 2006/11/02 19:39:23 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.8 2006/11/02 20:16:37 nickb Exp $ -->
