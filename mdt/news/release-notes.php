@@ -42,8 +42,7 @@ $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
  * 	<xsl:param name="version"></xsl:param>
  */
 
-print '<div id="midcolumn"><h1>Release Notes</h1>'."\n";
-print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
+print '<div id="midcolumn"><h1>Release Notes</h1></div>'."\n";
 
 if ($params["project"])
 {
@@ -70,12 +69,12 @@ if ($params["project"])
 	} 
 }
 
-print "</div>\n";	
-
 $html = ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
+$html = preg_replace("/\t<!-- INSERT doSelectProject() HERE -->\n/", 
+	doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col"));
  
 $pageTitle = "Eclipse Modeling - MDT - Release Notes";
 $pageKeywords = ""; // TODO: add something here
@@ -86,4 +85,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.9 2006/11/02 20:56:59 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.10 2006/11/02 21:02:48 nickb Exp $ -->

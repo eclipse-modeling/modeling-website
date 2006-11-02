@@ -15,6 +15,8 @@
 <xsl:template name="show_notes" match="/">
 <xsl:for-each select="data">
 	<div id="midcolumn">
+	
+	<!-- INSERT doSelectProject() HERE -->
 
 	<!-- nav header table (release/milestone list) -->
 	<xsl:for-each select="project-def">
@@ -143,6 +145,7 @@
 		</xsl:if>
 	</xsl:for-each>
 	</div>
+
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Search CVS</h6>
@@ -168,4 +171,4 @@
 </xsl:template>
 
 </xsl:stylesheet>
-<!-- $Id: release-notes.xsl,v 1.3 2006/11/02 20:52:52 nickb Exp $ -->
+<!-- $Id: release-notes.xsl,v 1.4 2006/11/02 21:02:48 nickb Exp $ -->
