@@ -58,7 +58,7 @@ print "<h1>Downloads</h1>\n";
 
 if (is_array($projects))
 {
-	print doSelectProject($projectArray, $proj, $nomenclature, $showAll, $showMax, $sortBy);
+	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
 }
 
 if (function_exists("requirementsNote"))

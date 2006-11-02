@@ -30,6 +30,9 @@ else
 {
 	$params["project"] = "";
 }
+
+$html = doSelectProject($projects, $proj, $nomenclature, "sideitem");
+
 /*
  * To work, this script must be run with a version of PHP4 which
  * includes the Sablotron XSLT extension compiled into it
@@ -58,14 +61,15 @@ if ($params["project"])
 		echo "Trying to parse $XMLfile with $XSLfile...<br/>";
 		echo "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
 	}
+	
 	echo $result; 
 }
 else
 {
-	print doSelectProject($projects, $proj, $nomenclature);
+	print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
 }
 
-$html = ob_get_contents();
+$html = ob_get_contents() . $html;
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
@@ -78,4 +82,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes.php,v 1.3 2006/11/02 01:52:22 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.4 2006/11/02 02:31:04 nickb Exp $ -->

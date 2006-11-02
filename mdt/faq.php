@@ -16,7 +16,7 @@ ob_start();
 
 <?php
 
-print doSelectProject($projects, $proj, $nomenclature);
+print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
 
 print "</div>\n";
 
@@ -29,4 +29,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: faq.php,v 1.5 2006/11/01 03:02:06 nickb Exp $ -->
+<!-- $Id: faq.php,v 1.6 2006/11/02 02:31:04 nickb Exp $ -->

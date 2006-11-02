@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.5 2006/11/01 22:15:05 nickb Exp $ 
+// $Id: scripts.php,v 1.6 2006/11/02 02:31:04 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -204,14 +204,14 @@ function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.
 	}
 }
 
-function doSelectProject($projectArray, $proj, $nomenclature, $showAll = "", $showMax = "", $sortBy = "")
+function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem3col", $showAll = "", $showMax = "", $sortBy = "")
 {
 	$vars = array("showAll", "showMax", "sortBy", "hlbuild");
 
 	$hlbuild = (isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
 
-	$out = "<div class=\"homeitem3col\">\n";
-	$out .= "<h3>$nomenclature selection</h3>\n";
+	$out = "<div class=\"" . ($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
+	$out .= "<" . ($style == "sideitem" ? "h6" : "h3") . ">$nomenclature selection</" . ($style == "sideitem" ? "h6" : "h3") . ">\n";
 	$out .= "<form action=\"" . $_SERVER["SCRIPT_NAME"] . "\" method=\"get\" id=\"subproject_form\">\n";
 	$out .= "<p>\n";
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
@@ -219,7 +219,7 @@ function doSelectProject($projectArray, $proj, $nomenclature, $showAll = "", $sh
 
 	foreach ($projectArray as $k => $v) 
 	{
-		$out .= "<option value=\"$v\">$k</option>\n";
+		$out .= "<option value=\"$v\"" . ("") . ">$k</option>\n";
 	}
 	$out .= "</select>\n";
 	foreach ($vars as $z)
