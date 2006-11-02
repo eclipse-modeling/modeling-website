@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="release-notes.xsl"?>
+<data>
+<blockquote><b>If this page is unreadable, please go to: <a href="http://www.eclipse.org/emft/news/release-notes.php">http://www.eclipse.org/modeling/mdt/news/release-notes.php</a>.</b></blockquote>
+
+<version-def label="1.0.1" version="1.0.1"/>
+<version-def label="1.0.0" version="1.0.0"/>
+<version-def label="1.0.x" version="1.0"/>
+
+<entry build="1.0.1" project="uml2-ocl" version="1.0.1" buildID="R200609250830"/>
+<entry build="1.0.1RC2b" project="uml2-ocl" version="1.0.1" buildID="S200609250830"/>
+<entry build="1.0.1RC2a" project="uml2-ocl" version="1.0.1" buildID="S200609221313"/>
+<entry build="1.0.1RC2" project="uml2-ocl" version="1.0.1" buildID="S200609210937"/>
+<entry build="1.0.1RC1" project="uml2-ocl" version="1.0.1" buildID="S200609141915">
+<bug id="157363">Proper use of the org.eclipse.pde.core.javadoc extension point</bug>
+</entry>
+
+<entry build="M200609141024" project="uml2-ocl" version="1.0.1">
+<bug id="154575">Fix OCLMessage.properties ElementTypeConformanceClosure_ERROR_</bug>
+<bug id="154695">Closure Inheritance error</bug>
+</entry>
+
+<entry build="M200609071146" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200608311108" project="uml2-ocl" version="1.0.1">
+<bug id="155461">Doc plug-ins should be JARred for OCL, Query, Transaction, Validation</bug>
+</entry>
+
+<entry build="M200608241447" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200608171938" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200608100853" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200608100853" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200608030927" project="uml2-ocl" version="1.0.1">
+<bug id="151234">EcoreEnvironment performs incorrect implicit source lookup if env. variable is defined</bug>
+<bug id="152208">CollectionRange is not supported by the OCL parser</bug>
+<bug id="152632">New Example Wizard plug-ins are directly included in the SDK features for EMFT-OQTV</bug>
+</entry>
+
+<entry build="M200607271021" project="uml2-ocl" version="1.0.1"/>
+<entry build="M200607201135" project="uml2-ocl" version="1.0.1">
+<bug id="144652">OCL, Query, Transaction, Validation examples wizards missing text and icons</bug>
+</entry>
+
+<entry build="M200607131524" project="uml2-ocl" version="1.0.1">
+<bug id="144652">OCL, Query, Transaction, Validation examples wizards missing text and icons</bug>
+<bug id="146378">o.e.emf.ocl.query.QueryImpl should create LazyExtentMap to handle .allInstances() correctly</bug>
+<bug id="149011">Source features appear in second product button in About dialog</bug>
+<bug id="150251">Non-conformant copyright date ranges in EMFT Sources</bug>
+</entry>
+
+<entry build="1.0.0" project="uml2-ocl" version="1.0.0" buildID="R200606261119"/>
+<entry build="1.0.0RC7" project="uml2-ocl" version="1.0.0"/>
+<entry build="1.0.0RC6" project="uml2-ocl" version="1.0.0"/>
+<entry build="1.0.0RC5" project="uml2-ocl" version="1.0.0">
+<bug id="147498">Validation visitor rejects operations that parsed successfully</bug>
+</entry>
+
+<entry build="I200606151627" project="uml2-ocl" version="1.0.0">
+<bug id="146163">Projects &quot;update site&quot; names are inconsistent and repeated</bug>
+</entry>
+
+<entry build="I200606081101" project="uml2-ocl" version="1.0.0">
+<bug id="144640">OCL, Query, Transaction, Validation help TOC inconsistencies</bug>
+<bug id="144652">OCL, Query, Transaction, Validation examples wizards missing text and icons</bug>
+<bug id="144669">OCL, Query, Transaction, Validation Javadocs include internal packages</bug>
+</entry>
+
+<entry build="1.0.0RC4" project="uml2-ocl" version="1.0.0">
+<bug id="143730">Cannot resolve qualified EClassifier names in OCL Console</bug>
+<bug id="143882">RobustToStringVisitorImpl required</bug>
+<bug id="143996">Applying iterator on undefined collection variable results in NPE</bug>
+<bug id="144209">Some EDataTypes in OCL.ecore should not be serializable</bug>
+</entry>
+
+<entry build="I200605250918" project="uml2-ocl" version="1.0.0">
+<bug id="142518">IterationTemplateForAll cause ClassCastException if body == OclInvalid</bug>
+<bug id="142572">OCL root package is registered without a resource</bug>
+<bug id="143386">ToStringVisitorImpl.toString returning null</bug>
+</entry>
+
+<entry build="1.0.0RC3" project="uml2-ocl" version="1.0.0">
+<bug id="135321">Bidi3.2 [HCG] OCL Query problem in interpreting single quote character on Lunux platform (not BiDi related)</bug>
+<bug id="135745">Bidi3.2 [HCG]  EMFT OCL, Incorrect orientation of &apos;Query with Context&apos; dialog  and &apos;Interactive OCL console&apos;  when starting eclipse PDE in &apos;right-to-left&apos; orientation.</bug>
+<bug id="135951">Some project downloads contain epl_v10.html and notice.html while others don&apos;t</bug>
+<bug id="141413">literals of MessageExpKind enum in OCLCST.ecore have the same value</bug>
+<bug id="141641">OclInvalid as method argument</bug>
+<bug id="141992">unable to use unqualified names to access elements in enclosing packages</bug>
+</entry>
+
+<entry build="I200605111218" project="uml2-ocl" version="1.0.0">
+<bug id="140008">New Junit Failures in uml.validation.tests</bug>
+<bug id="140347">Parser confused by property names that coincide with type names</bug>
+<bug id="140455">EMFT projects reference EMF &amp; Eclipse update sites instead of EMFT update site</bug>
+</entry>
+
+<entry build="1.0RC2" project="uml2-ocl" version="1.0.0">
+<bug id="126278">EcoreEnvironment.getOclTypeFor returns orphans</bug>
+<bug id="131091">Sweep Code for EReference.isMany() Calls</bug>
+</entry>
+
+<entry build="I200604270931" project="uml2-ocl" version="1.0.0">
+<bug id="132018">Create a example zipper plugin to be included with the SDK for EMFT components</bug>
+<bug id="133337">BiDi3.2: OCL Interpreter Console should not be mirrored</bug>
+<bug id="137158">Incorrect return type for user operations</bug>
+<bug id="137798">Dead duplicate variable VariableImpl.type</bug>
+<bug id="137803">NPE generating type match error</bug>
+</entry>
+
+<entry build="1.0.0RC1" project="uml2-ocl" version="1.0.0">
+<bug id="125628">Unhelpful statics in OclEnginePlugin</bug>
+<bug id="127311">Difficult to translate OCL messages</bug>
+<bug id="136768">After M6, javacSource and javaTarget must be specified</bug>
+<bug id="136778">Validation visitor needs the Environment in order to validate completely</bug>
+<bug id="137487">Logical operators applied on Boolean results of operation calls work incorrectly</bug>
+<bug id="137546">&apos;=&apos; operation on attribute of EEnum type and enum literal works incorrectly</bug>
+</entry>
+
+<entry build="1.0.0M6a" project="uml2-ocl" version="1.0.0">
+<bug id="125628">Unhelpful statics in OclEnginePlugin</bug>
+<bug id="126145">To use of  equals(Object) in typeCompare function instead of &quot;==&quot;</bug>
+<bug id="133429">Infix arithmetic and relational operators not supported</bug>
+<bug id="133435">Qualified association navigation produces a collection value</bug>
+<bug id="133537">[refactoring] Wrong preview in Extract Local</bug>
+<bug id="134189">OCL Interpreter Console Should Work with Any EMF Editor</bug>
+<bug id="135577">OCL 7.0.0 or OCL 1.0.0</bug>
+<bug id="135601">Multiple inheritance of ENamedElement does not share name</bug>
+<bug id="135690">plus no longer valid for integers</bug>
+<bug id="135691">Dead varName in VariableImpl</bug>
+</entry>
+
+<entry build="1.0.0M6" project="uml2-ocl" version="1.0.0"/>
+<entry build="I200603301237" project="uml2-ocl" version="1.0.0">
+<bug id="129769">Query on multipackages metamodel</bug>
+</entry>
+
+<entry build="I200603230819" project="uml2-ocl" version="1.0.0">
+<bug id="131170">Tutorials and Howtos Should be Moved from GMF</bug>
+</entry>
+
+<entry build="I200603161111" project="uml2-ocl" version="1.0.0"/>
+<entry build="I200603091004" project="uml2-ocl" version="1.0.0">
+<bug id="110649">Eroneous references to xtools</bug>
+<bug id="125458">Use proper camel case for acronyms: Ocl -&gt; OCL and Uml -&gt; UML</bug>
+<bug id="127509">No Javadocs for EMFT OCL, Query, Transaction, Validation, EODM, JET</bug>
+<bug id="127915">No source plug-ins in OCL, Query, Validation, Transaction SDKs</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+<bug id="129868">eclipse.idReplacer can get confused by a copyright</bug>
+<bug id="129984">Still have occurrences of Ocl in the API</bug>
+<bug id="130239">Cannot use dot to navigate two or more collection references</bug>
+</entry>
+
+<entry build="1.0.0M5a" project="uml2-ocl" version="1.0.0">
+<bug id="110649">Eroneous references to xtools</bug>
+<bug id="125458">Use proper camel case for acronyms: Ocl -&gt; OCL and Uml -&gt; UML</bug>
+<bug id="127915">No source plug-ins in OCL, Query, Validation, Transaction SDKs</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+<bug id="129868">eclipse.idReplacer can get confused by a copyright</bug>
+<bug id="129984">Still have occurrences of Ocl in the API</bug>
+</entry>
+
+<entry build="1.0.0M5a" project="uml2-ocl" version="1.0.0">
+<bug id="110649">Eroneous references to xtools</bug>
+<bug id="125458">Use proper camel case for acronyms: Ocl -&gt; OCL and Uml -&gt; UML</bug>
+<bug id="127915">No source plug-ins in OCL, Query, Validation, Transaction SDKs</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+<bug id="129868">eclipse.idReplacer can get confused by a copyright</bug>
+<bug id="129984">Still have occurrences of Ocl in the API</bug>
+</entry>
+
+<entry build="1.0.0M5" project="uml2-ocl" version="1.0.0">
+<bug id="110649">Eroneous references to xtools</bug>
+<bug id="125458">Use proper camel case for acronyms: Ocl -&gt; OCL and Uml -&gt; UML</bug>
+<bug id="127915">No source plug-ins in OCL, Query, Validation, Transaction SDKs</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+</entry>
+
+<entry build="I200602161029" project="uml2-ocl" version="1.0.0">
+<bug id="124809">NPE in EcoreEnvironment.findPackage on null nsPrefix</bug>
+<bug id="125458">Use proper camel case for acronyms: Ocl -&gt; OCL and Uml -&gt; UML</bug>
+<bug id="125684">Support creation of query expression in IOclHelper</bug>
+<bug id="126144">Fixing code to add using EClass.getEStructuralFeatures() instead of EClass.getEReferences()</bug>
+<bug id="126336">Coercing DataTypes to a Set type automatically in product  expression</bug>
+<bug id="126694">Query object select/reject methods bad impl</bug>
+<bug id="126722">insertAt() and other collection operations do not work</bug>
+<bug id="126861">'isUnique()' operation always results in true only....</bug>
+<bug id="127509">No Javadocs for EMFT OCL, Query, Transaction, Validation</bug>
+</entry>
+
+<entry build="I200602090846" project="uml2-ocl" version="1.0.0">
+<bug id="113355">OCL parser does does not prefer inner scope when resolving features</bug>
+<bug id="113900">Migration of the EMFT plugins from GMF to EMFT</bug>
+<bug id="114105">Adoption of ICU4J requirements - OCL, Query and Validation Components</bug>
+<bug id="114921">IOclHelper should evaluate OclExpressions (pre-parsed)</bug>
+<bug id="116251">Operation bodyCondition has to have a boolean value</bug>
+<bug id="116664">The oclIsNew method should be included in the list of choices only for post-condition constraints</bug>
+<bug id="121614">Recursive association end navigation causes NPE</bug>
+<bug id="122333">Compiler warning count should be 0 - OCL, Query, Validation components</bug>
+<bug id="125079">NPE for null VariableDeclaration.type in ToStringVisitor</bug>
+</entry>
+
+<project-def label="EMFT OCL Release Notes" project="uml2-ocl"/>
+
+</data>

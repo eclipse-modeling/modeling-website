@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="release-notes.xsl"?>
+<data>
+
+<version-def label="2.0.2" version="2.0.2"/>
+<version-def label="2.0.1" version="2.0.1"/>
+<version-def label="2.0.x" version="2.0"/>
+
+<version-def label="1.1.1" version="1.1.1"/>
+<version-def label="1.1.x" version="1.1"/>
+
+<entry build="M200610120858" project="uml2-uml" version="2.0.2">
+<bug id="157714">Component.getRequireds() and getProvideds() should consider inherited required and provided interfaces</bug>
+<bug id="160013">Problem with migration of Lifeline::selector</bug>
+<bug id="160299">UML2 Editor fails to reload model after restarting Eclipse</bug>
+</entry>
+
+<entry build="M200610051112" project="uml2-uml" version="2.0.2">
+<bug id="158099">Converters need to be more tolerant of unresolvable proxies</bug>
+<bug id="158769">Duplicate creation of a GuardConstraint into a Transition.</bug>
+<bug id="158804">Inefficient handling of unspecified system property</bug>
+<bug id="158965">Can&apos;t set Operation type, lower, or upper via Properties view</bug>
+<bug id="159210">Doclet not working after 2006/09/28</bug>
+<bug id="159302">Profile migration duplicates references</bug>
+</entry>
+
+<entry build="2.0.1" project="uml2-uml" version="2.0.1" buildID="R200609210850"/>
+<entry build="M200609210850" project="uml2-uml" version="2.0.1">
+<bug id="157714">Component.getRequireds() and getProvideds() should consider inherited required and provided interfaces</bug>
+<bug id="157715">Incorrect validation rule : ConnectorOperations::validateAssemblyConnector()</bug>
+<bug id="157833">Need a way to override static cache adapter</bug>
+<bug id="157909">UML model editor shows stereotype instead of element name</bug>
+<bug id="157976">org.eclipse.uml2.uml.internal.operations.PropertyOperations.getOpposite(Property property) should also return navigable opposite ends owned by binary associations.</bug>
+<bug id="158099">Converters need to be more tolerant of unresolvable proxies</bug>
+</entry>
+
+<entry build="M200609141745" project="uml2-uml" version="2.0.1">
+<bug id="156732">Problem with stereotype properties typed by &quot;metaclasses&quot;</bug>
+<bug id="156906">CacheAdapter leaks unloaded resources</bug>
+<bug id="157176">UMLUtil.UML2EcoreConverter should regard user-specified values for EEnumLiterals</bug>
+<bug id="157390">EnumerationLiteral icon needs to be changed</bug>
+</entry>
+
+<entry build="M200609071509" project="uml2-uml" version="2.0.1">
+<bug id="156191">CacheAdapter caches value of Property::class</bug>
+<bug id="156425">Performance problems in Element.validateNotOwnSelf</bug>
+<bug id="156432">Element checks for unapplicable stereotypes before the resource assigns a GUID</bug>
+</entry>
+
+<entry build="M200608241455" project="uml2-uml" version="2.0.1">
+<bug id="152592">string for connector validation should be clearer</bug>
+<bug id="152643">Bodies of Opaque Elements should not be unique</bug>
+<bug id="154096">NPE when re-run some actions</bug>
+<bug id="154663">Load/Save XMI: memberEnd serialisation</bug>
+<bug id="154664">UML Editor: save xmi:Type Information</bug>
+<bug id="154709">XMI-Import: handling of &apos;negligently&apos; encoded MultiplicityElements</bug>
+<bug id="155073">Stereotype applications lost when model saved as .xmi</bug>
+</entry>
+
+<entry build="M200608171632" project="uml2-uml" version="2.0.1">
+<bug id="153750">UMLUtil.setBaseElement(EObject stereotypeApplication, Element element) should throw exception if no structural feature can be found for Stereotype with Extension.METACLASS_ROLE_PREFIX</bug>
+<bug id="153806">Notification is anonymous inner class of DerivedEObjectEList</bug>
+<bug id="153968">Avoid Switch in ProfileOperations.getDefinition(Profile,NamedElement,EPackage)</bug>
+<bug id="154092">Component::realizedInterfaces does not properly return all realized interfaces of the component</bug>
+<bug id="154096">NPE when re-run some actions</bug>
+</entry>
+
+<entry build="M200608030300" project="uml2-uml" version="2.0.1">
+<bug id="151998">Some operations in UMLUtil are non-deterministic</bug>
+<bug id="152025">Bogus characters in Javadoc</bug>
+<bug id="152339">Javadoc includes template packages, which should be internal</bug>
+<bug id="152600">Stereotype properties with enumeration collection types are broken</bug>
+</entry>
+
+<entry build="M200607270400" project="uml2-uml" version="2.0.1">
+<bug id="151701">Missing mapping for resource migration</bug>
+</entry>
+
+<entry build="M200607131314" project="uml2-uml" version="2.0.1">
+<bug id="149888">UML22UMLResourceHandler modifies referencing resources</bug>
+<bug id="149924">ArrayIndexOutOfBoundsException in UML Model Editor on export from library.genmodel</bug>
+<bug id="149972">getTargetDirectedRelationships(EClass eClass) does not return correct values on repeated calls due to cache effects</bug>
+<bug id="149985">The &quot;redefined&quot; property doesn&apos;t work very well at various level.</bug>
+<bug id="150406">Update feature update license properties</bug>
+</entry>
+
+<entry build="2.0.0" project="uml2-uml" version="2.0.0" buildID="R200606221411"/>
+<entry build="2.0RC9a" project="uml2-uml" version="2.0.0" buildID="S200606221411">
+<bug id="77413">[Plan Item] Improved Documentation</bug>
+</entry>
+
+<entry build="2.0RC9" project="uml2-uml" version="2.0.0" buildID="S200606211238">
+<bug id="80308">[Plan Item] Unit Tests</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="147796">org.eclipse.uml2.uml plug-in not being imported correctly</bug>
+<bug id="147923">Abstract stereotypes returned by getApplicableStereotypes</bug>
+</entry>
+
+<entry build="2.0RC8a" project="uml2-uml" version="2.0.0" buildID="S200606191759">
+<bug id="80308">[Plan Item] Unit Tests</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="146569">StructuredActivityNode#setActivity(Activity) throws exception</bug>
+<bug id="146842">Merged visibility should only be set to public if previously set</bug>
+<bug id="146846">Properties should not be navigable if not owned</bug>
+<bug id="147126">Performance of allOwnedElements(), allNamespaces()</bug>
+<bug id="147288">'Capabilities' annotation not used</bug>
+</entry>
+
+<entry build="2.0RC7" project="uml2-uml" version="2.0.0">
+<bug id="77413">[Plan Item] Improved Documentation</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="145075">Memory Leak: CacheAdapter causes memory leaks for some clients</bug>
+<bug id="145319">NullPointerException in property.isConsistentWith(redefinee)</bug>
+<bug id="145636">Type information saved unnecessarily</bug>
+<bug id="145674">Potential ClassCastException in UML2EcoreConverter</bug>
+</entry>
+
+<entry build="2.0RC6" project="uml2-uml" version="2.0.0">
+<bug id="80308">[Plan Item] Unit Tests</bug>
+<bug id="80315">[Plan Item] Javadoc</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="144311">validateMetaclassReferenceNotSpecialized not checking recursively</bug>
+<bug id="144312">NPE getting applied profile if some profiles are unresolved</bug>
+<bug id="144438">Migrated gaurds not contained</bug>
+<bug id="144910">Unrecognized content remains for profile applications</bug>
+</entry>
+
+<entry build="2.0RC5" project="uml2-uml" version="2.0.0">
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="142768">URL stereotype not available</bug>
+<bug id="143204">include relationship between use case</bug>
+<bug id="143570">StackOverflowError during validation of model</bug>
+<bug id="143746">Transform the uml2 model to the new uml format when imported to create EMF model</bug>
+</entry>
+
+<entry build="2.0RC4" project="uml2-uml" version="2.0.0">
+<bug id="80315">[Plan Item] Javadoc</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="140003">Stop Metatype not being migrated properly.</bug>
+<bug id="140024">Containment proxies resolved during automatic stereotype (un)application</bug>
+<bug id="140590">potential NPE for end conformance check</bug>
+<bug id="140600">Eventing in factory methods</bug>
+<bug id="140808">Visibility Limitations of Profile2EPackageConverter</bug>
+<bug id="141183">Expressions not migrated properly</bug>
+<bug id="141575">validation rule on propertyOperations incorrect.</bug>
+<bug id="141615">Migration issue: exit and entry type of state should be mapped to uml:Activity</bug>
+<bug id="141632">ProfileOperations.validateMetaclassReferenceNotSpecialized was optimized a bit too good.</bug>
+<bug id="141657">Conversion of constraints to Ecore</bug>
+<bug id="141857">Action inputs/outputs</bug>
+<bug id="141870">Missing operations on MultiplicityElement</bug>
+<bug id="141872">Constraints missing on Pin specializations</bug>
+<bug id="142196">TVT3.2:TCT510: HUN: UML2 - Not enough space in the panel for the content</bug>
+<bug id="142254">UMLEditor &gt; Profile &gt; Reference Metamodel us eincorrect title</bug>
+<bug id="142536">Package imports on profiles not migrated properly</bug>
+</entry>
+
+<entry build="2.0RC3a" project="uml2-uml" version="2.0.0">
+<bug id="80315">[Plan Item] Javadoc</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="140003">Stop Metatype not being migrated properly.</bug>
+<bug id="140590">potential NPE for end conformance check</bug>
+<bug id="140600">Eventing in factory methods</bug>
+<bug id="140808">Visibility Limitations of Profile2EPackageConverter</bug>
+<bug id="141183">Expressions not migrated properly</bug>
+<bug id="141479">More migration problems</bug>
+</entry>
+
+<entry build="2.0RC2a" project="uml2-uml" version="2.0.0">
+<bug id="80315">[Plan Item] Javadoc</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="139683">Extension creation constraints</bug>
+<bug id="139765">ConnectorOperations.validateTypes() should take end order into account</bug>
+<bug id="140024">Containment proxies resolved during automatic stereotype (un)application</bug>
+<bug id="140193">NPE in UML22UMLResourceHandler</bug>
+<bug id="140207">Concurrent modification in UMLEditor</bug>
+<bug id="140215">Package merger should use safeEquals(...)</bug>
+</entry>
+
+<entry build="2.0RC1a" project="uml2-uml" version="2.0.0">
+<bug id="80306">[Plan Item] UML 2.1 Interchange</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="137305">Applying profile to a package when it is already applied to its children should be handled gracefully</bug>
+<bug id="137907">Restore Covert To Ecore command to editor</bug>
+<bug id="138209">Mock 3.2 Creating UML Model Failure</bug>
+<bug id="138258">Primitive Types defined in both type library and metamodel</bug>
+<bug id="138514">Migration issues</bug>
+<bug id="139299">UML22UMLResourceHandler should not resolve all proxies</bug>
+</entry>
+
+<entry build="I200604211313" project="uml2-uml" version="2.0.0">
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="137377">Issue with forward data migration.</bug>
+<bug id="137555">Null pointer from CreateExtensionAction</bug>
+<bug id="137779">Migration issue with Message::signature</bug>
+<bug id="137785">Migration problem with Stop elements</bug>
+</entry>
+
+<entry build="2.0M4" project="uml2-uml" version="2.0.0">
+<bug id="85176">[Plan Item] Reduced Memory Footprint / Improved Performance</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="105191">[Plan Item] UML2 2.0 Migration</bug>
+</entry>
+
+<entry build="I200604061309" project="uml2-uml" version="2.0.0">
+<bug id="80307">[Plan Item] Validation Rules</bug>
+<bug id="105191">[Plan Item] UML2 2.0 Migration</bug>
+<bug id="122863">[Plan Item] UML Ecore Importer/Exporter</bug>
+<bug id="134610">Properties from UML metamodel should be in 'UML' category</bug>
+<bug id="134621">Component realizations not saved</bug>
+</entry>
+
+<entry build="I200603300400" project="uml2-uml" version="2.0.0">
+<bug id="80307">[Plan Item] Validation Rules</bug>
+<bug id="85176">[Plan Item] Reduced Memory Footprint / Improved Performance</bug>
+<bug id="85177">[Plan Item] Enhanced Icons</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="105191">[Plan Item] UML2 2.0 Migration</bug>
+<bug id="133974">ClassCastException when adding superclass</bug>
+</entry>
+
+<entry build="I200603160300" project="uml2-uml" version="2.0.0">
+<bug id="80307">[Plan Item] Validation Rules</bug>
+<bug id="85176">[Plan Item] Reduced Memory Footprint / Improved Performance</bug>
+<bug id="131180">Model fails to open after a ClassNotFoundException</bug>
+<bug id="131759">Container proxies in UML</bug>
+</entry>
+
+<entry build="I200603091723" project="uml2-uml" version="2.0.0">
+<bug id="85176">[Plan Item] Reduced Memory Footprint</bug>
+<bug id="85179">[Plan Item] Improved Convenience Methods</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="105191">[Plan Item] UML2 2.0 Migration</bug>
+<bug id="129964">Enforcement of subset/superset constraints</bug>
+<bug id="130218">Generation of factory method implementations</bug>
+</entry>
+
+<entry build="2.0M3" project="uml2-uml" version="2.0.0">
+<bug id="85176">[Plan Item] Reduced Memory Footprint</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="129964">Enforcement of subset/superset constraints</bug>
+</entry>
+
+<entry build="I200602241438" project="uml2-uml" version="2.0.0">
+<bug id="80307">[Plan Item] Validation Rules</bug>
+<bug id="80308">[Plan Item] Unit Tests</bug>
+<bug id="80318">[Plan Item] Tools</bug>
+<bug id="85176">[Plan Item] Reduced Memory Footprint</bug>
+<bug id="85179">[Plan Item] Improved Convenience Methods</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="128551">ProtocolTransition#getReferreds() returns wrong list</bug>
+<bug id="128634">Enable containment proxies for more features</bug>
+<bug id="128733">Classifier::ownedSignature should be renamed</bug>
+</entry>
+
+<entry build="I200602161101" project="uml2-uml" version="2.0.0">
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="127082">NPE in Property#setOpposite(Property)</bug>
+</entry>
+
+<entry build="I200602090400" project="uml2-uml" version="2.0.0">
+<bug id="85179">[Plan Item] Improved Convenience Methods</bug>
+<bug id="87260">[Plan Item] Eclipse 3.2 / EMF 2.2 Compatibility</bug>
+<bug id="122683">[CommonNavigator] The registry readers for consolidated ext pts should be refactored</bug>
+<bug id="122863">[Plan Item] UML Ecore Importer/Exporter</bug>
+<bug id="126123">Performance of Package#applyProfile(Profile)</bug>
+<bug id="126285">Default values for attributes in new API not correct</bug>
+<bug id="126739">Activity::partition should be multivalued</bug>
+<bug id="126784">Definition of stereotype properties</bug>
+<bug id="126935">Wrong list type returned by Classifier#getGenerals()</bug>
+</entry>
+
+<entry build="I200602020400" project="uml2-uml" version="2.0.0">
+<bug id="85176">[Plan Item] Reduced Memory Footprint</bug>
+<bug id="85179">[Plan Item] Improved Convenience Methods</bug>
+<bug id="125696">EncapsulatedClassifier#getOwnedPorts() filters wrong type</bug>
+<bug id="125778">Reverse of redefining generator features</bug>
+<bug id="125875">Redefined type constraints not enforced</bug>
+<bug id="125909">Stereotype applications not destroyed</bug>
+<bug id="125945">Message#getSignature() returns wrong result</bug>
+<bug id="126047">Namespace URI for profile definitions</bug>
+<bug id="126099">Error in ValueSpecificationOperations</bug>
+</entry>
+
+<entry build="I200601261425" project="uml2-uml" version="2.0.0">
+<bug id="124705">Pin should be a specialization of MultiplicityElement</bug>
+<bug id="125031">Required stereotypes not autmatically applied</bug>
+<bug id="125081">Problem with association creation convenience method</bug>
+<bug id="125195">Problem with required extension creation</bug>
+</entry>
+
+<entry build="I200601192211" project="uml2-uml" version="2.0.0">
+<bug id="124030">New UML resource names</bug>
+</entry>
+
+<entry build="I200601122022" project="uml2-uml" version="2.0.0">
+<bug id="123092">Loading XMI containing Message, NullPointerException is arised</bug>
+<bug id="123252">Defined profile's classifier names need not be qualified</bug>
+<bug id="123255">Profile application undo/redo not working correctly</bug>
+<bug id="123410">stereotype owned by aPackage createExtension</bug>
+<bug id="123439">Action should be abstract</bug>
+<bug id="123537">Properties on Behavior missing</bug>
+<bug id="123607">Stereotype::icon should be a containment reference</bug>
+</entry>
+
+<entry build="2.0M2" project="uml2-uml" version="2.0.0">
+<bug id="80305">[Plan Item] UML 2.1 Conformance</bug>
+<bug id="80313">[Plan Item] Derived Features</bug>
+</entry>
+
+<entry build="I200512230222" project="uml2-uml" version="2.0.0">
+<bug id="80311">[Plan Item] Supressed EMF Types</bug>
+<bug id="80312">[Plan Item] Resource Fragments</bug>
+</entry>
+
+<entry build="I200512152318" project="uml2-uml" version="2.0.0">
+<bug id="121037">Generation of body in ecore operations</bug>
+</entry>
+
+<entry build="I200512081038" project="uml2-uml" version="2.0.0">
+</entry>
+
+<entry build="I200512011527" project="uml2-uml" version="2.0.0">
+</entry>
+
+<entry build="I200511241216" project="uml2-uml" version="2.0.0">
+</entry>
+
+<entry build="I200511171005" project="uml2-uml" version="2.0.0">
+</entry>
+
+<entry build="2.0M1" project="uml2-uml" version="2.0.0">
+<bug id="115713">Unnecessary calls to eDerivedStructuralFeatureID(int, Class)</bug>
+<bug id="115717">Error in Namespace#getNamesOfMember(Namespace, NamedElement)</bug>
+</entry>
+
+<entry build="I200510270942" project="uml2-uml" version="2.0.0">
+<bug id="113894">Performance of UML2Operations#getResourceBundle(EObject, Locale)</bug>
+</entry>
+
+<entry build="I200510200846" project="uml2-uml" version="2.0.0">
+<bug id="112942">Stack overflow in Namespace::getNamesOfMember(Element)</bug>
+<bug id="113140">Performance of NamedElement#isDistinguishableFrom(...)</bug>
+</entry>
+
+<entry build="I200510061138" project="uml2-uml" version="2.0.0">
+<bug id="111204">Add 'Ignore All', 'Process All' buttons to UML2 importer</bug>
+<bug id="111538">Some features need not be resolved</bug>
+</entry>
+
+<entry build="I200509291411" project="uml2-uml" version="2.0.0">
+<bug id="106138">UML2 stereotypes inheritance is not taken into account</bug>
+<bug id="107024">Edit labels should include keywords</bug>
+<bug id="107751">Assign EList values to steretype attributes</bug>
+<bug id="108244">Methods for getting all (inherited and owned) attributes and operations</bug>
+<bug id="108603">Constraints should be converted as operations on the context</bug>
+<bug id="108605">Ecore stereotypes should always be applied in Ecore2UML2</bug>
+<bug id="108606">UML22EcoreConverter should not report info in error dialog</bug>
+<bug id="108607">Refactor the processing of Ecore tags in UML22EcoreConverter</bug>
+<bug id="108608">Consider adding Property.getOtherEnd() accessor method</bug>
+<bug id="110365">Unions and proxy resolution</bug>
+<bug id="110592">Adding single-valued features to unions</bug>
+<bug id="111108">UML22Ecore converter should provide an option to sort superclasses</bug>
+</entry>
+
+<entry build="I200509151529" project="uml2-uml" version="2.0.0">
+<bug id="108024">org.eclipse.platform.doc.isv changed to jarred plugin, build failing</bug>
+</entry>
+
+<entry build="1.1.1" project="uml2-uml" version="1.1.1"/>
+<entry build="M200509282050" project="uml2-uml" version="1.1.1"/>
+<entry build="M200509221052" project="uml2-uml" version="1.1.1">
+<bug id="110058">Update Manager attempts to load a plugin that doesn't exist on filesytem</bug>
+</entry>
+
+<entry build="M200509151108" project="uml2-uml" version="1.1.1">
+<bug id="109172">UnionEList iterator does not resolve proxies</bug>
+<bug id="109397">Unable to define profile containing a stereotype which generalizes an external element</bug>
+</entry>
+
+<entry build="M200509011003" project="uml2-uml" version="1.1.1">
+<bug id="108171">stereotype generalization across profiles does not work</bug>
+<bug id="108366">[NLS] Unused type property strings should be removed</bug>
+</entry>
+
+<entry build="M200508251101" project="uml2-uml" version="1.1.1">
+<bug id="107981">Multiplicity not set for operations, parameters in Ecore converter</bug>
+<bug id="107665">NPE in UML22Ecore converter if (duplicate) type is null</bug>
+</entry>
+
+<entry build="M200508251101" project="uml2-uml" version="1.1.1">
+<bug id="107981">Multiplicity not set for operations, parameters in Ecore converter</bug>
+</entry>
+
+<entry build="M200508181122" project="uml2-uml" version="1.1.1">
+<bug id="104385">Literal nulls as default values for String properties</bug>
+<bug id="107065">Operation::isMultivalued() returns wrong result</bug>
+<bug id="107258">Stack overflow in Classifier::inheritableMembers(Classifier)</bug>
+</entry>
+
+<entry build="M200508041014" project="uml2-uml" version="1.1.1">
+<bug id="104385">Literal nulls as default values for String properties</bug>
+<bug id="104392">Derived properties of operations should be read-only if no return result</bug>
+<bug id="104537">Port::provided does not consider generalizations</bug>
+<bug id="105481">Bad cast in StateMachineImpl#getStateMachine_redefinitionContext()</bug>
+</entry>
+
+<project-def label="UML2 UML" project="uml2-uml"/>
+
+</data>
+<!-- $Id: release-notes-uml2-uml.xml,v 1.1 2006/11/02 01:42:40 nickb Exp $ -->

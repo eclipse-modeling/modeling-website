@@ -22,6 +22,29 @@ if ($params["version"] && is_file("release-notes" . $params["version"] . ".php")
 	exit;
 }
 
+$html .= <<<EOHTML
+<div id="rightcolumn">
+	<div class="sideitem">
+		<h6>Subproject:</h6>
+		<form action="release-notes.php" method="get" id="subproject_form">
+		<p>
+			<select name="project" onchange="javascript:document.getElementById('subproject_form').submit()">
+				<option value="">Subproject:</option>
+EOHTML;
+
+        foreach ($projects as $label => $projname) { 
+				  $html .= "<option ".($params["project"]==$projname?"selected ":"")."value=\"$projname\">$label</option>\n";
+        }
+$html .= <<<EOHTML
+			</select>
+			<br/>
+			<input type="submit" value="Go!"/>
+		</p>
+		</form>
+	</div>
+</div>
+EOHTML;
+
 /*
  * To work, this script must be run with a version of PHP4 which
  * includes the Sablotron XSLT extension compiled into it
@@ -32,24 +55,31 @@ if ($params["version"] && is_file("release-notes" . $params["version"] . ".php")
  * 	<xsl:param name="version"></xsl:param>
  */
 
-$ver = $params["version"];
-$XMLfile = "release-notes" .  ($ver == "" ? "" : "-$ver") . ".xml";
-$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes.xml");
-$XSLfile = "release-notes.xsl";
-
-$processor = xslt_create();
-$fileBase = 'file://' . getcwd() . '/';
-xslt_set_base($processor, $fileBase);
-$result = xslt_process($processor, $fileBase . $XMLfile, $fileBase . $XSLfile, NULL, array(), $params);
-
-if (!$result)
+if ($params["project"])
 {
-	echo "Trying to parse $XMLfile with $XSLfile...<br/>";
-	echo "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
+	$ver = $params["version"];
+	$XMLfile = "release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
+	$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes-{$params["project"]}.xml");
+	$XSLfile = "release-notes.xsl";
+	
+	$processor = xslt_create();
+	$fileBase = 'file://' . getcwd() . '/';
+	xslt_set_base($processor, $fileBase);
+	$result = xslt_process($processor, $fileBase . $XMLfile, $fileBase . $XSLfile, NULL, array(), $params);
+	
+	if (!$result)
+	{
+		echo "Trying to parse $XMLfile with $XSLfile...<br/>";
+		echo "ERROR #" . xslt_errno($processor) . " : " . xslt_error($processor);
+	}
+	echo $result; 
 }
-echo $result; 
+else
+{
+	print doSelectProject($projects, $proj, $nomenclature);
+}
 
-$html = ob_get_contents();
+$html = ob_get_contents() . $html;
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
@@ -62,4 +92,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes.php,v 1.1 2006/10/27 19:04:09 khussey Exp $ -->
+<!-- $Id: release-notes.php,v 1.2 2006/11/02 01:42:40 nickb Exp $ -->

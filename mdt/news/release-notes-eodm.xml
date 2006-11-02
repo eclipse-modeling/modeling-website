@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="release-notes.xsl"?>
+<data>
+<blockquote><b>If this page is unreadable, please go to: <a href="http://www.eclipse.org/emft/news/release-notes.php">http://www.eclipse.org/emft/news/release-notes.php</a>.</b></blockquote>
+<version-def label="1.0.0" version="1.0.0"/>
+<version-def label="1.0.x" version="1.0"/>
+
+<entry build="1.0.0RC1" project="eodm" version="1.0.0"/>
+<entry build="1.0.0M6a" project="eodm" version="1.0.0"/>
+<entry build="I200603112354" project="eodm" version="1.0.0">
+<bug id="127509">No Javadocs for EMFT OCL, Query, Transaction, Validation, EODM, JET</bug>
+</entry>
+
+<entry build="1.0.0M5a" project="eodm" version="1.0.0">
+<bug id="127521">Create EODM Build Harness (releng)</bug>
+<bug id="129067">EODM SDK contains both src.zip and unpacked *.java source files</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+<bug id="129583">1.0.0M5 SDK Features Not Installable via Update Manager</bug>
+<bug id="129868">eclipse.idReplacer can get confused by a copyright</bug>
+</entry>
+
+<entry build="1.0.0M5" project="eodm" version="1.0.0">
+<bug id="127521">Create EODM Build Harness (releng)</bug>
+<bug id="129067">EODM SDK contains both src.zip and unpacked *.java source files</bug>
+<bug id="129231">Add 4th qualifier field to build IDs</bug>
+</entry>
+
+<entry build="I200602161715" project="eodm" version="1.0.0">
+<bug id="127521">Create EODM Build Harness (releng)</bug>
+</entry>
+
+<project-def label="EMFT EODM Release Notes" project="eodm"/>
+
+</data>
