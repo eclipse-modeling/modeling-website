@@ -2,7 +2,11 @@
 
 /* used for sidebar entry */
 $NLpacks = array(
-	"1.0.x" => "NL10x"
+	"1.0.x" => "NLS1.0.x"
+);
+
+$oldrels = array(
+	//"1.0.0" => "200606261119"
 );
 
 function doLanguagePacks()
@@ -18,7 +22,7 @@ function doLanguagePacks()
 	<p>IBM is pleased to contribute translations for the Eclipse Tools UML2 Project.</p>
 	<ul>
 		<li>
-			<a href="javascript:toggle('lang1_0')">1.0.x Language Packs</a><a name="NL10x"></a>
+			<a href="javascript:toggle('lang1_0')">1.0.x Language Packs</a><a name="NLS1.0.x"></a>
 			<ul id="lang1_0">
 					<?php
 					$packs = array(
@@ -28,12 +32,12 @@ function doLanguagePacks()
 						"UML2 OCL" => "ocl"
 					);
 					$subcols = array(
-						"SDK" => "SDK-",
-						"Runtime" => "runtime-"
+						"SDK" => "SDK-1.0.0",
+						"Runtime" => "runtime-1.0.0"
 					);
-					$packSuf = "1.0.0.zip";
-					$folder = "NLS/";
-					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, true); ?>
+					$packSuf = ".zip";
+					$folder = "NLS/1.0/";
+					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, false); ?>
 				<li>
 
 					<p>The language packs contain NL fragments and features for:</p>
@@ -54,14 +58,6 @@ function doLanguagePacks()
 <?php
 }
 
-$oldrels = array(
-	"1.1.0" => "200507070914",
-	"1.0.3" => "200506221634",
-	"1.0.2" => "200503231914",
-	"1.0.1" => "200409171820",
-	"1.0.0" => "200406281334"
-);
-
 function showNotes()
 {
 ?>
@@ -71,7 +67,7 @@ function showNotes()
 		<p>These are the minimum required downloads for using EMF, SDO and XSD:</p>
 		<ul>
 			<li>To use <b class="uml2">UML2 OCL</b> alone, you require both the UML2 OCL &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
-			<li>To use <b class="uml2">UML2 OCL</b> w/ XSD models, you require three Runtimes: UML2 OCL, <a href="/emf/downloads/">EMF</a> &amp; <a href="/emf/downloads/">XSD</a>.</li>
+			<li>To use <b class="uml2">UML2 OCL</b> w/ XSD models, you require three Runtimes: UML2 OCL, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
 		</ul>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 	</div>

@@ -2,18 +2,23 @@
 
 /* used for sidebar entry */
 $NLpacks = array(
-	"2.0.x" => "NLS2.0.x",
-	"1.1.x" => "NLS1.1.x",
-	"1.0.x" => "NLS1.0.x"
+	"2.2.x" => "NLS2.2.x",
+	"2.1.x" => "NLS2.1.x",
+	"2.0.x" => "NLS2.0.x"
 );
 
 $oldrels = array(
-	"1.1.0" => "200507070914",
-	"1.0.3" => "200506221634",
-	"1.0.2" => "200503231914",
-	"1.0.1" => "200409171820",
-	"1.0.0" => "200406281334"
+	"2.1.1" => "200509281310",
+	"2.1.0" => "200507070200",
+	"2.0.5" => "200511291418",
+	"2.0.4" => "200509300951",
+	"2.0.3" => "200506091052",
+	"2.0.2" => "200503151315",
+	"2.0.1" => "200409171617",
+	"2.0.0" => "200406280827",
+	"1.x" => array("2003","http://www.eclipse.org/emf/downloads/dl-emf1x.html")
 );
+
 
 function doLanguagePacks()
 {
@@ -28,24 +33,24 @@ function doLanguagePacks()
 	<p>IBM is pleased to contribute translations for the Eclipse Tools UML2 Project.</p>
 	<ul>
 		<li>
-			<a href="javascript:toggle('lang2_0')">2.0.x Language Packs</a><a name="NLS2.0.x"></a>
-			<ul id="lang2_0">
+			<a href="javascript:toggle('lang2_2')">2.2.x Language Packs</a><a name="NLS2.2.x"></a>
+			<ul id="lang2_2">
 				<?php 
-					$packs = array(
-						"2.0.x NLS Translation Packs" => "NLpacks-",
+					$packs = array (
+						"2.2.x NLS Translation Packs" => "NLpacks-"
 					);
-					$cols = array(
-						"UML2 UML" => "uml2"
+					$cols = array (
+						"XSD" => "xsd"
 					);
-					$subcols = array(
-         				"2.0.1 SDK" => "SDK-2.0.1",
-         				"2.0.1 Runtime" => "runtime-2.0.1",
-         				"2.0.0 SDK" => "SDK-2.0.0",
-         				"2.0.0 Runtime" => "runtime-2.0.0"
+					$subcols = array (
+						"2.2.1 SDK" => "SDK-2.2.1",
+						"2.2.1 Runtime" => "runtime-2.2.1",
+						"2.2.0 SDK" => "SDK-2.2",
+						"2.2.0 Runtime" => "runtime-2.2"
 					);
 					$packSuf = ".zip";
-				    $folder = "NLS/2.0/";
-				doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder); ?>
+					$folder = "NLS/2.2/";
+					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder); ?>
 				<li>
 					<p>The language packs contain the following translations:</p>
 					<ul>
@@ -61,21 +66,21 @@ function doLanguagePacks()
 		</li>
 
 		<li>
-			<a href="javascript:toggle('lang1_1')">1.1.x Language Packs</a><a name="NLS1.1.x"></a>
-			<ul id="lang1_1" style="display: none">
+			<a href="javascript:toggle('lang2_1')">2.1.x Language Packs</a><a name="NLS2.1.x"></a>
+			<ul id="lang2_1" style="display: none">
 					<?php
-					$packs = array(
-						"1.1.x NLS Translation Packs" => "NLpacks-"
+					$packs = array (
+						"2.1.x NLS Translation Packs" => "NLpacks-"
 					);
-					$cols = array(
-						"UML2 UML" => "uml2"
+					$cols = array (
+						"XSD" => "xsd"
 					);
-					$subcols = array(
-						"SDK" => "SDK-1.1.1",
-						"Runtime" => "runtime-1.1.1"
+					$subcols = array (
+						"SDK" => "SDK-",
+						"Runtime" => "runtime-"
 					);
-					$packSuf = ".zip";
-        			$folder = "NLS/1.1/";
+					$packSuf = "2.1.zip";
+					$folder = "NLS/2.1/";
 					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, true); ?>
 				<li>
 					<p>The language packs contain the following translations:</p>
@@ -91,21 +96,21 @@ function doLanguagePacks()
 		</li>
 
 		<li>
-			<a href="javascript:toggle('lang1_0')">1.0.x Language Packs</a><a name="NLS1.0.x"></a>
-			<ul id="lang1_0" style="display: none">
+			<a href="javascript:toggle('lang2_0')">2.0.x Language Packs</a><a name="NLS2.0.x"></a>
+			<ul id="lang2_0" style="display: none">
 					<?php
-					$packs = array(
-						"1.0.x NLS Translation Packs" => "NLpacks-",
+					$packs = array (
+						"2.0.x NLS Translation Packs" => "NLpacks-",
 					);
-					$cols = array(
-						"UML2 UML" => "uml2"
+					$cols = array (
+						"XSD" => "xsd"
 					);
-					$subcols = array(
-						"SDK" => "SDK-1.0.2",
-						"Runtime" => "runtime-1.0.2"
+					$subcols = array (
+						"SDK" => "SDK-",
+						"Runtime" => "runtime-"
 					);
-					$packSuf = ".zip";
-        			$folder = "NLS/1.0/";
+					$packSuf = "2.0.zip";
+					$folder = "NLS/2.0/";
 					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, true); ?>
 				<li>
 					<p>The language packs contain the following translations:</p>

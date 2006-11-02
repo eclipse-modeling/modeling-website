@@ -625,12 +625,36 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 		{
 			print "<li><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/dl-$packMid.gif\" alt=\"$alt\"/> $alt: ";
 			$ret = array();
-			foreach ($subcols as $alt2 => $packMid2)
+			if (sizeof($subcols)>2) 
 			{
-				$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org" : $downloadScript) .
+			  print "<ul>\n";
+			  $cnt=0;
+  			foreach ($subcols as $alt2 => $packMid2)
+  			{
+  			  if ($cnt > 0 && $cnt % 2 == 0) 
+  			  {
+      			print "<li>".join(", ", $ret)."</li>\n";
+      			$ret = array();
+          }
+ 	  			$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org/" : $downloadScript) .
 					"$downloadPre/$PR$proj/downloads/drops/$folder$packPre$packMid-$packMid2$packSuf\">$alt2</a>";
+ 					$cnt++;
+				}
+				if (sizeof($ret)>0) 
+				{
+      			print "<li>".join(", ", $ret)."</li>\n";
+				}
+			  print "</ul>\n";
 			}
+			else
+			{
+  			foreach ($subcols as $alt2 => $packMid2)
+  			{
+  				$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org/" : $downloadScript) .
+					"$downloadPre/$PR$proj/downloads/drops/$folder$packPre$packMid-$packMid2$packSuf\">$alt2</a>";
+				}
 			print join(", ", $ret);
+			}
 			print "</li>\n";
 		}
 	}
@@ -795,7 +819,14 @@ function showArchived($oldrels)
 	print "<ul id=\"archives\">\n";
 	foreach (array_keys($oldrels) as $z)
 	{
-		print "<li><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";
+		if (!is_array($oldrels[$z]))
+		{
+			print "<li><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]/\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";			
+		}
+		else // optional syntax with hardcoded datestamp and URL, like for old EMF/SDO/XSD 1.x builds
+		{
+			print "<li><a href=\"".$oldrels[$z][1]."\">$z</a> (" . $oldrels[$z][0] . ")</li>\n";
+		}
 	}
 	print "</ul>\n";
 	print "</div>\n";

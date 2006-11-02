@@ -42,9 +42,9 @@ $dls = array(
 	"/xsd" => array(
 		"XSD" => array(
 			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
+			"Runtime" => "runtime" //,
+			//"Examples" => "examples",
+			//"Automated Tests" => "automated-tests"
 		)
 	)
 );
