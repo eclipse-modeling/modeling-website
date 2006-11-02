@@ -22,41 +22,27 @@ if ($params["version"] && is_file("release-notes" . $params["version"] . ".php")
 	exit;
 }
 
-$html .= <<<EOHTML
-<div id="rightcolumn">
-	<div class="sideitem">
-		<h6>Subproject:</h6>
-		<form action="release-notes.php" method="get" id="subproject_form">
-		<p>
-			<select name="project" onchange="javascript:document.getElementById('subproject_form').submit()">
-				<option value="">Subproject:</option>
-EOHTML;
-
-        foreach ($projects as $label => $projname) { 
-				  $html .= "<option ".($params["project"]==$projname?"selected ":"")."value=\"$projname\">$label</option>\n";
-        }
-$html .= <<<EOHTML
-			</select>
-			<br/>
-			<input type="submit" value="Go!"/>
-		</p>
-		</form>
-	</div>
-</div>
-EOHTML;
-
+if (preg_match("/^(" . join($projects, "|") . ")$/", $_GET["project"], $regs))
+{
+	$params["project"] = $regs[1];
+}
+else
+{
+	$params["project"] = "";
+}
 /*
  * To work, this script must be run with a version of PHP4 which
  * includes the Sablotron XSLT extension compiled into it
  * 
  * Params in stylesheet:
  *  
- * 	<xsl:param name="project"></xsl:param>
+ * 	<xsl:param name="project"></xsl:param> <!-- this is used for multiple projects in the same file -->
  * 	<xsl:param name="version"></xsl:param>
  */
 
 if ($params["project"])
 {
+	// define XML and XSL sources 
 	$ver = $params["version"];
 	$XMLfile = "release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
 	$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes-{$params["project"]}.xml");
@@ -79,7 +65,7 @@ else
 	print doSelectProject($projects, $proj, $nomenclature);
 }
 
-$html = ob_get_contents() . $html;
+$html = ob_get_contents();
 ob_end_clean();
 $html = preg_replace('/^\Q<?xml version="1.0" encoding="ISO-8859-1"?>\E/', "", $html);
 $html = preg_replace("/<(link|div) xmlns:\S+/", "<$1", $html);
@@ -92,4 +78,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: release-notes.php,v 1.2 2006/11/02 01:42:40 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.3 2006/11/02 01:52:22 nickb Exp $ -->
