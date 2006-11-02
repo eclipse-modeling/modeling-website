@@ -1,30 +1,10 @@
-<div>
-	<div class="homeitem3col">
+<div class="homeitem3col">
 	<h3>Filters</h3>
-	<p>
-	Older release notes: 
-	<a href="release-notes1.1.0.php">1.1</a> ::
-	<a href="release-notes1.0.3.php">1.0.3</a> ::
-	<a href="release-notes1.0.2.php">1.0.2</a> ::
-	<a href="release-notes1.0.1.php">1.0.1</a>
-	</p>
-	<form action="/uml2/news/release-notes.php" method="get" name="mainform">
-	<p>
-	<select name="version" size="1">
-	<option value=""> Choose... </option>
-	<option value="2.0.1">2.0.1</option>
-	<option value="2.0">2.0.x</option>
-	<option value="1.1.1">1.1.1</option>
-	<!-- "2.0.1", "2.0", "1.1.1", "1.1", "1.0.3", "1.0.2", "1.0.1", "1.0" -->
-	</select>
-	<input type="submit" value="Go!"/>
-	</p>
-	</form>
+	<img style="float: right; padding: 3px;" src="http://www.eclipse.org/emf/images/misc/bug.gif" alt="I've been looking closely at bugs." title="I've been looking closely at bugs."/>
 	<form action="http://www.eclipse.org/emf/searchcvs.php" method="get" name="bugform" target="_blank">
-	<p>
-	<label for="q">CVS Delta for Bug ID: </label><input size="7" type="text" name="q" id="q"/>
-	<input type="submit" value="Go!"/>
-	</p>
+		<p>
+		<label for="bug">CVS Delta for Bug ID: </label><input size="7" type="text" name="q" id="q"/>
+		<input type="submit" value="Go!"/>
+		</p>
 	</form>
-	</div>
 </div>
