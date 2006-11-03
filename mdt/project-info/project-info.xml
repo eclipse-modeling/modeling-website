@@ -174,7 +174,7 @@
      - community and ecosystem to understand what will be delivered and when
      - it will be delivered.
     -->
-  <project-plan url="/mdt/docs/plans/mdt_project_plan_1_0.html"/>
+  <project-plan url="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
 
   <!--
      - Each Eclipse project creates (optional) nightly builds and milestone builds,
@@ -197,6 +197,6 @@
        name="1.0"
        status="tentative"
        date="06/29/2007"
-       plan="/mdt/docs/plans/mdt_project_plan_1_0.html"/>
+       plan="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
   </releases>
 </project>
