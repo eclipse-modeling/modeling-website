@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="November 02, 2006" showOn="whatsnew">
+	<!-- R200610251409 -->
+	UML2 UML <a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Release build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">2.0.2</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="October 25, 2006" showOn="whatsnew">
+	<!-- M200610251409 -->
+	UML2 UML <a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Maintenance build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">M200610251409</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="October 20, 2006" showOn="whatsnew">
+	<!-- M200610201804 -->
+	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Maintenance build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">M200610201804</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="October 19, 2006" showOn="whatsnew">
+	<!-- M200610191453 -->
+	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Maintenance build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">M200610191453</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="October 12, 2006" showOn="whatsnew">
+	<!-- M200610120858 -->
+	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Maintenance build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">M200610120858</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="October 05, 2006" showOn="whatsnew">
+	<!-- M200610051112 -->
+	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">Version 2.0.2</a> Maintenance build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.2">M200610051112</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
+<news date="September 27, 2006" showOn="whatsnew">
+	<!-- R200609210850 -->
+	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.1">Version 2.0.1</a> Release build
+	(<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.1">2.0.1</a>) is available 
+	for <a href="http://www.eclipse.org/uml2/downloads/">download</a>.
+</news>
 <news date="September 21, 2006" showOn="whatsnew">
 	<!-- M200609210850 -->
 	<a href="http://www.eclipse.org/uml2/news/release-notes.php?version=2.0.1">Version 2.0.1</a> Maintenance build
@@ -741,6 +783,6 @@
 	Release Version <b>1.0.0</b> is available for <a href="downloads.php">download</a>.
 </news>
 
-<!-- $Id: news.xml,v 1.1 2006/10/27 19:04:09 khussey Exp $ -->
+<!-- $Id: news.xml,v 1.2 2006/11/03 04:13:18 khussey Exp $ -->
 
 </doc>
