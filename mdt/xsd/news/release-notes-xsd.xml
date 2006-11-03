@@ -76,10 +76,10 @@
 
 <project-def label="XSD Release Notes" project="xsd"/>
 
-<oldreleasenotes href="../xsd/news/release-notes2.2.php" label="2.2"/>
-<oldreleasenotes href="../xsd/news/release-notes2.1.php" label="2.1"/>
-<oldreleasenotes href="../xsd/news/release-notes2.0.php" label="2.0"/>
-<oldreleasenotes href="../xsd/news/release-notes-1.x.php" label="1.x"/>
+<oldreleasenotes href="release-notes2.2.php" label="2.2"/>
+<oldreleasenotes href="release-notes2.1.php" label="2.1"/>
+<oldreleasenotes href="release-notes2.0.php" label="2.0"/>
+<oldreleasenotes href="release-notes-1.x.php" label="1.x"/>
 
 </data>
-<!-- $Id: release-notes-xsd.xml,v 1.2 2006/11/02 21:32:24 nickb Exp $ -->
+<!-- $Id: release-notes-xsd.xml,v 1.1 2006/11/03 04:36:00 khussey Exp $ -->

@@ -50,7 +50,7 @@ if ($params["project"])
 {
 	// define XML and XSL sources 
 	$ver = $params["version"];
-	$XMLfile = "release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
+	$XMLfile = "../{$params["project"]}/news/release-notes-{$params["project"]}" .  ($ver == "" ? "" : "-$ver") . ".xml";
 	$XMLfile = (is_file($XMLfile) ? $XMLfile : "release-notes-{$params["project"]}.xml");
 	if (is_file($XMLfile))
 	{
@@ -85,4 +85,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.14 2006/11/02 21:26:45 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.15 2006/11/03 04:36:00 khussey Exp $ -->
