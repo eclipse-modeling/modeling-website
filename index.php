@@ -120,6 +120,9 @@ development technologies within the Eclipse community by providing a unified set
 					<li><a href="http://www.eclipse.org/gmt/oaw/">openArchitecture Ware (oAW)</a> : a suite of tools and components assisting with model driven software development built upon a modular MDA/MDD generator framework implemented in Java(TM) supporting arbitrary import (design) formats, meta models, and output (code) formats.</li>
 					<li><a href="http://www.eclipse.org/gmt">UMLX</a> : concrete graphical syntax to complement the OMG QVT model transformation language.</li>
 					<li><a href="http://www.eclipse.org/gmt">VIATRA2</a> : aims to provide a general-purpose support for the entire life-cycle of engineering model transformations including the specification, design, execution, validation and maintenance of transformations within and between various modeling languages and domains.</li>
+					<li><a href="http://www.eclipse.org/gmt/epsilon/">Epsilon</a> : a metamodel-agnostic component for supporting model navigation, creation, and modification operations.</li>
+					<li><a href="http://www.eclipse.org/gmt/gems">GEMS</a> : aims to bridge the gap between the communities experienced with visual metamodeling tools, such as the Generic Modeling Environment (GME), and those built around the Eclipse modeling technologies, such as the Eclipse Modeling Framework (EMF) and Graphical Modeling Framework (GMF).</li>
+					<li><a href="http://www.eclipse.org/gmt/modisco">MoDisco</a> : an Eclipse GMT component for model-driven reverse engineering. The objective is to allow practical extractions of models from legacy systems. As a GMT component, MoDisco will make good use of other GMT components or solutions available in the Eclipse Modeling Project (EMF, M2M, GMF, TMF, etc), and more generally of any plugin available in the Eclipse environment.</li>
 				</ul>
 			</ul>
 		</div>
