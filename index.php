@@ -36,7 +36,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	$Nav->addCustomNav("EMF", "/emf/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("EMFT", "/emft/downloads/", "_self", 3);
-	$Nav->addCustomNav("UML2", "http://download.eclipse.org/tools/uml2/scripts/downloads.php", "_self", 3);
+	$Nav->addCustomNav("MDT", "/modeling/mdt/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
 	$Nav->addCustomNav("MDDi", "/mddi/download.php", "_self", 3);
 
@@ -80,14 +80,25 @@ development technologies within the Eclipse community by providing a unified set
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3><a href="http://www.eclipse.org/proposals/mdt/">Model Development Tools</a></h3>
+			<h3><a href="http://www.eclipse.org/modeling/mdt/" style="color:white">Model Development Tools</a></h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/uml2">Unified Modeling Language 2</a> (UML2) : an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">EMF Ontology Definition Metamodel</a> (EODM) : 
+					an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using 
+					EMF with additional parsing, inference, model transformation and editing functions.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML2</a> : 
+					an implementation of the UML 2 umbrella of standards defined by the OMG and tools 
+					to manipulate models based on those standards.</li>
 				<ul>
-					<li><a href="http://www.eclipse.org/emft/projects/ocl">Object Constraint Language</a> (OCL) : defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+					<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2-ocl#uml2-ocl">Object Constraint Language</a> (OCL) : 
+						defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+					<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2-uml#uml2-uml">Unified Modeling Language 2</a> (UML2) : 
+						an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
+					<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2-tools#uml2-tools">UML2 Tools</a> : 
+						a set of GMF-based editors for viewing and editing UML models.</li>
 				</ul>
-				<li><a href="http://www.eclipse.org/xsd">XML Schema Infoset Model</a> (XSD) : a reference library that provides an <a href="http://download.eclipse.org/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
-				<li><a href="http://www.eclipse.org/emft/projects/eodm">EMF Ontology Definition Metamodel</a> (EODM) : is an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using EMF with additional parsing, inference, model transformation and editing functions.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD) : 
+						a reference library that provides an <a href="http://download.eclipse.org/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> 
+						for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
