@@ -51,6 +51,8 @@ foreach (array_keys($projects) as $z)
 	$Nav->addCustomNav(preg_replace("/^UML2 /", "", $z), "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
+$newsgroupSuffix = $proj ? "." . str_replace("-",".",$proj) : ""; // eg., .uml2.uml
+
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
@@ -65,7 +67,7 @@ $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/emf/searchcvs.php?q=pro
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Model_Development_Tools_%28MDT%29", "_self", 2);
-$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.mdt", "_self", 2);
+$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.mdt" . $newsgroupSuffix, "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
 $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
