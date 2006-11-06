@@ -40,6 +40,7 @@ $level = array(
  
 $extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("uml2", "uml2-tools"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array("uml2"); //projects without newsgroups
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
@@ -51,7 +52,7 @@ foreach (array_keys($projects) as $z)
 	$Nav->addCustomNav(preg_replace("/^UML2 /", "", $z), "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
-$newsgroupSuffix = $proj ? "." . str_replace("-",".",$proj) : ""; // eg., .uml2.uml
+$newsgroupSuffix = $proj && !in_array($proj,$nonewsgroup)? "." . str_replace("-",".",$proj) : ""; // eg., .uml2.uml
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
