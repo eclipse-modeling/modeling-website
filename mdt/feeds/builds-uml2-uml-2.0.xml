@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>UML2 Builds</title>
+  <link href="http://www.eclipse.org/uml2/feeds/builds.xml" rel="self" type="application/atom+xml"/>
+  <updated>2006-11-02T20:21:41Z</updated>
+  <author>
+    <name>UML2 Build Team</name>
+  </author>
+  <id>http://www.eclipse.org/uml2/feeds/builds.xml</id>
+  <entry>
+    <title>[announce] UML2 2.0.2 (R200610251409) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/R200610251409"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/R200610251409</id>
+    <updated>2006-11-02T20:21:41Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610251409" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/R200610251409" type="R">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0.2.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/R200610251409/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610251409 (2.0.2.M200610251409) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610251409"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610251409</id>
+    <updated>2006-10-25T18:32:03Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610251409" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610251409" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610251409.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610251409/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610201804 (2.0.2.M200610201804) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804</id>
+    <updated>2006-10-20T22:59:42Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610201804" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610201804.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610201804/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610201804 (2.0.2.M200610201804) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804</id>
+    <updated>2006-10-20T22:51:28Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610201804" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610201804" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610201804.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610201804/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610191453 (2.0.2.M200610191453) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610191453"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610191453</id>
+    <updated>2006-10-19T19:40:12Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610191453" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610191453" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610191453.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610191453/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610120858 (2.0.2.M200610120858) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610120858"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610120858</id>
+    <updated>2006-10-12T13:55:00Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610120858" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610120858" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610120858.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610120858/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200610051112 (2.0.2.M200610051112) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051112"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051112</id>
+    <updated>2006-10-05T15:28:31Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610051112" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051112" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200610051112.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610051112/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0.2 M200610051024 is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051024"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051024</id>
+    <updated>2006-10-05T14:47:24Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="2.0.2" cvsbranch="${cvsbranch}" datetime="200610051024" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.2/M200610051024" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.2/M200610051024/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0.1 (R200609210850) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850</id>
+    <updated>2006-09-29T18:44:18Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850" jars="" type="R">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0.1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/R200609210850/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0.1 (R200609210850) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850</id>
+    <updated>2006-09-27T17:02:28Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/R200609210850" jars="" type="R">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0.1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/R200609210850/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200609210850 (2.0.1.M200609210850) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609210850"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609210850</id>
+    <updated>2006-09-21T13:22:19Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609210850" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200609210850.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200609210850/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060919-1045/eclipse-SDK-M20060919-1045-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200609141745 (2.0.1.M200609141745) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609141745"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609141745</id>
+    <updated>2006-09-14T21:59:04Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609141745" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200609141745.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200609141745/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060912-1730/eclipse-SDK-M20060912-1730-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/S200609141116/emf-sdo-xsd-SDK-2.2.1RC1.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200609071509 (2.0.1.M200609071509) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609071509"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609071509</id>
+    <updated>2006-09-07T19:39:20Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200609071509" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200609071509.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200609071509/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060906-1737/eclipse-SDK-M20060906-1737-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200608241455 (2.0.1.M200608241455) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608241455"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608241455</id>
+    <updated>2006-08-24T19:14:47Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608241455" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200608241455.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200608241455/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060823-1200/eclipse-SDK-M20060823-1200-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200608241248/emf-sdo-xsd-SDK-M200608241248.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200608171632 (2.0.1.M200608171632) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608171632"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608171632</id>
+    <updated>2006-08-17T20:58:54Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608171632" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200608171632.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200608171632/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060810-0800/eclipse-SDK-M20060802-0800-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200608170000/emf-sdo-xsd-SDK-M200608170000.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200608030300 (2.0.1.M200608030300) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608030300"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608030300</id>
+    <updated>2006-08-03T14:18:36Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200608030300" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200608030300.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200608030300/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060802-0800/eclipse-SDK-M20060802-0800-linux-gtk.tar.gz</dependency>
+          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/2.2.1/M200608030000/emf-sdo-xsd-SDK-M200608030000.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200607270400 (2.0.1.M200607270400) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607270400"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607270400</id>
+    <updated>2006-07-27T13:51:15Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607270400" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200607270400.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200607270400/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060726-0800/eclipse-SDK-M20060726-0800-linux-gtk.tar.gz</dependency>
+          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/2.2.1/M200607270021/emf-sdo-xsd-SDK-M200607270021.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 M200607131314 (2.0.1.M200607131314) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607131314"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607131314</id>
+    <updated>2006-07-13T17:52:19Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.1/M200607131314" jars="" type="M">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200607131314.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.1/M200607131314/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20060712-0922/eclipse-SDK-M20060712-0922-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200607131143/emf-sdo-xsd-SDK-M200607131143.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0.0 (R200606221411) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/R200606221411"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/R200606221411</id>
+    <updated>2006-06-29T14:37:27Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/R200606221411" jars="" type="R">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0.0.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/R200606221411/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2-200606291905/eclipse-SDK-3.2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/R200606271057/emf-sdo-xsd-SDK-2.2.0.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC9a (2.0.0.S200606221411) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606221411"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606221411</id>
+    <updated>2006-06-22T23:38:46Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606221411" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC9a.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200606221411/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/S200606221156/emf-sdo-xsd-SDK-2.2.0RC9.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC9 (2.0.0.S200606211238) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606211238"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606211238</id>
+    <updated>2006-06-21T19:20:35Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606211238" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC9.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200606211238/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/S200606201609/emf-sdo-xsd-SDK-2.2.0RC8.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC8 (2.0.0.S200606151203) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606151203"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606151203</id>
+    <updated>2006-06-17T02:12:16Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606151203" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC8.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200606151203/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/I200606150000/emf-sdo-xsd-SDK-I200606150000.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC7 (2.0.0.S200606081519) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606081519"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606081519</id>
+    <updated>2006-06-17T02:12:12Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606081519" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC7.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200606081519/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/S-3.2RC7-200606021317/eclipse-SDK-3.2RC7-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/I200606080000/emf-sdo-xsd-SDK-I200606080000.zip</dependency>
+        </dependencies>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC6 (2.0.0.S200606011428) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606011428"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606011428</id>
+    <updated>2006-06-17T02:12:08Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200606011428" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC6.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200606011428/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC5 (2.0.0.S200605251244) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605251244"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605251244</id>
+    <updated>2006-06-17T02:12:04Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605251244" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC5.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200605251244/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] UML2 2.0RC4 (2.0.0.S200605181537) is available</title>
+    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605181537"/>
+    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605181537</id>
+    <updated>2006-06-17T02:12:00Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" callisto="" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/uml2/downloads/drops/2.0.0/S200605181537" jars="" type="S">
+        <update>http://download.eclipse.org/tools/uml2/updates/</update>
+        <downloads>http://download.eclipse.org/tools/uml2/scripts/downloads.php</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-2.0RC4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://download.eclipse.org/tools/uml2/downloads/drops/2.0.0/S200605181537/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+      </build>
+    </summary>
+  </entry>
+</feed>
