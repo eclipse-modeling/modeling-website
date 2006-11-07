@@ -86,9 +86,9 @@ if (sizeof($builds) == 0)
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3>${rssfeed}Builds</h3>\n";
 	print "<ul class=\"releases\">\n";
-	if (isset($nodownloads) && is_array($nodownloads) && in_array($proj,$nodownloads))
+	if (!$proj)
 	{
-		print "<li><i><b>There are no builds yet available for this component.</li>";
+		print "<li><i><b>Sorry!</b></i> There are no builds yet available for this component.</li>";
 	}
 	else 
 	{
