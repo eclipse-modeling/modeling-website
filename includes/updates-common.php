@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 function update_manager($shortname, $longname)
 {
-	global $App, $Nav, $Menu, $theme;
+	global $App, $Nav, $Menu, $theme, $PR;
 
 	ob_start();
 	?>
