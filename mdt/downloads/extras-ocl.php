@@ -19,7 +19,7 @@ function doLanguagePacks()
 	
 	<h3>Language Packs</h3>
 
-	<p>IBM is pleased to contribute translations for the Eclipse Tools UML2 Project.</p>
+	<p>IBM is pleased to contribute translations for the Eclipse Modeling Development Tools subcomponent UML2 OCL.</p>
 	<ul>
 		<li>
 			<a href="javascript:toggle('lang1_0')">1.0.x Language Packs</a><a name="NLS1.0.x"></a>

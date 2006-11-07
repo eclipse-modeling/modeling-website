@@ -25,7 +25,7 @@ function doLanguagePacks()
 	
 	<h3>Language Packs</h3>
 
-	<p>IBM is pleased to contribute translations for the Eclipse Tools UML2 Project.</p>
+	<p>IBM is pleased to contribute translations for the Eclipse Modeling Development Tools subcomponent UML2 UML.</p>
 	<ul>
 		<li>
 			<a href="javascript:toggle('lang2_0')">2.0.x Language Packs</a><a name="NLS2.0.x"></a>
@@ -55,7 +55,7 @@ function doLanguagePacks()
 						<li>NLpackBidi - Arabic, Hebrew (EMF runtime only)</li>
 					</ul>
 					<p>Each language pack zip contains 4 other zips (one for each of the language groups above). Unpack these zips into your Eclipse directory before starting Eclipse.</p>
-					<p> These translations are based on UML2 2.0.1 and 2.0.0, respectively. The NLS translation fragment packs should work with all subsequent 2.0.x maintenance releases, with any new strings remaining untranslated.</p>
+					<p> These translations are based on UML2 UML 2.0.1 and 2.0.0, respectively. The NLS translation fragment packs should work with all subsequent 2.0.x maintenance releases, with any new strings remaining untranslated.</p>
 				</li>
 			</ul>
 		</li>
@@ -85,7 +85,7 @@ function doLanguagePacks()
 						<li>NLpackBidi - Arabic</li>
 					</ul>
 					<p>Each language pack zip contains 6 other zips (two for each of the language groups above: an NLS translation fragment pack and a feature overlay). Unpack both these zips (for every language group you need) into your Eclipse directory before starting Eclipse. In particular, the feature overlay must actually write into the existing feature directories.</p>
-					<p>These translations are based on UML2 1.1.1. The NLS translation fragment packs should work with all subsequent 1.1 maintenance releases, with any new strings remaining untranslated. The feature overlays will need to be reissued for each subsequent release.</p>
+					<p>These translations are based on UML2 UML 1.1.1. The NLS translation fragment packs should work with all subsequent 1.1 maintenance releases, with any new strings remaining untranslated. The feature overlays will need to be reissued for each subsequent release.</p>
 				</li>
 			</ul>
 		</li>
@@ -114,7 +114,7 @@ function doLanguagePacks()
 						<li>NLpack2 - Czech, Hungarian, Polish, Russian</li>
 					</ul>
 					<p>Each language pack zip contains 2 zips (one for each of the language groups above). Each language pack is distributed as a feature which you can install by downloading the zip file, unzipping it into your Eclipse directory and restarting Eclipse.</p>
-					<p>These translations are based on UML2 1.0.2 but should work with all subsequent 1.0 maintenance releases. If new strings are added to UML2 after 1.0.2, they will not show up as translated in the 1.0.x stream when you install this language pack.</p>
+					<p>These translations are based on UML2 UML 1.0.2 but should work with all subsequent 1.0 maintenance releases. If new strings are added to UML2 UML after 1.0.2, they will not show up as translated in the 1.0.x stream when you install this language pack.</p>
 				</li>
 			</ul>
 		</li>
@@ -130,10 +130,10 @@ function showNotes()
 	<div class="homeitem3col">
 		<h3>Questions?</h3>
 		<p>If you have problems downloading the drops, contact the <a href="mailto:webmaster@eclipse.org">webmaster</a>.</p>
-		<p>These are the minimum required downloads for using EMF, SDO and XSD:</p>
+		<p>These are the minimum required downloads for using UML2 UML:</p>
 		<ul>
-			<li>To use <b class="uml2">UML2</b> alone, you require both the UML2 &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
-			<li>To use <b class="uml2">UML2</b> w/ XSD models, you require three Runtimes: UML2, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
+			<li>To use <b class="uml2">UML2 UML</b> alone, you require both the UML2 UML &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
+			<li>To use <b class="uml2">UML2 UML</b> w/ XSD models, you require three Runtimes: UML2 UML, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
 		</ul>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 	</div>
