@@ -86,7 +86,7 @@ if (sizeof($builds) == 0)
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3>${rssfeed}Builds</h3>\n";
 	print "<ul class=\"releases\">\n";
-	if (!$proj)
+	if (is_array($projectArray) && !in_array($_GET["project"],$projectArray))
 	{
 		print "<li><i><b>Sorry!</b></i> There are no builds yet available for this component.</li>";
 	}
