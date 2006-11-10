@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.10 2006/11/09 21:37:42 nickb Exp $ 
+// $Id: scripts.php,v 1.11 2006/11/10 22:19:17 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -317,7 +317,7 @@ function internalUseOnly ()
 		$html = ob_get_contents();
 		ob_end_clean();
 		
-		$pageTitle = "EMF";
+		$pageTitle = "For Internal Use Only";
 		$pageKeywords = "";
 		$pageAuthor = "Nick Boldt";
 		
