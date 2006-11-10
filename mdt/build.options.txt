@@ -6,7 +6,8 @@ r321_v20060830
 [BranchAndJDK]
 #used in build.php for selecting build branch
 2.3.0=HEAD,/opt/sun-java2-5.0
-2.1.0=HEAD,/opt/sun-java2-1.4
+2.1.0=HEAD,/opt/sun-java2-5.0
+1.1.0=HEAD,/opt/sun-java2-5.0
 1.1.0=HEAD,/opt/sun-java2-1.4
 1.0.0=HEAD,/opt/sun-java2-1.4
 0.8.0=HEAD,/opt/sun-java2-5.0
