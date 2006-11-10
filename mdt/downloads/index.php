@@ -49,49 +49,14 @@ $dls = array(
 	)
 );
 
-/* file prefixes - also defines the DL image to use, and image alt tag */
+/* list of valid file prefixes for projects who have been renamed  */
 /* keys have leading / to match $proj */
-/* for flat projects, use a key of "" (yes, that works) */
 $filePre = array(
-	"/eodm" => array(
-		"emft-eodm",
-		"emft-eodm",
-		"emft-eodm",
-		"emft-eodm"
-	),
-	"/uml2-uml" => array(
-		"uml2",
-		"uml2",
-		"uml2",
-		"uml2"
-	),
-	"/uml2-ocl" => array(
-		"emft-ocl",
-		"emft-ocl",
-		"emft-ocl",
-		"emft-ocl"
-	),
-	"/uml2-tools" => array(
-		"uml2-tools",
-		"uml2-tools",
-		"uml2-tools",
-		"uml2-tools"
-	),
-	"/xsd" => array(
-		"xsd",
-		"xsd",
-		"xsd",
-		"xsd"
-	)
-);
-
-/* these keys must match the values in $filePre */
-$suf = array(
-	"emft-eodm" => "eodm",
-	"uml2" => "uml2",
-	"emft-ocl" => "ocl",
-	"uml2-tools" => "uml2-tools",
-	"xsd" => "xsd"
+	"/eodm" => array("emft-eodm","mdt-eodm"),
+	"/uml2-uml" => array("uml2","mdt-uml2-uml"),
+	"/uml2-ocl" => array("emft-ocl","mdt-uml2-ocl"),
+	"/uml2-tools" => array("uml2-tools"),
+	"/xsd" => array("xsd","mdt-xsd")
 );
 
 $rssfeed = "";
@@ -99,6 +64,7 @@ $rssfeed = "";
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
+if ($isEMFserver) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/mdt/build/sideitems-common.php"; }
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();
@@ -113,33 +79,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
-/************************** METHODS *****************************************/
-
-/* extra sidebar stuff appended at the bottom */
-function sidebar()
-{
-	global $PR, $isEMFserver;
-
-	if ($isEMFserver)
-	{
-	?>
-	<div class="sideitem">
-		<h6>Actions</h6>
-		<ul>
-			<li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/build.php">New Build</a></li>
-			<li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/secure/patch.php">New Test</a></li>
-			<li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/secure/promo.php">Promote</a></li>
-		</ul>
-	</div>
-
-	<div class="sideitem">
-		<h6>Info</h6>
-		<ul>
-			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=MDT&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
-			<li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/downloads/downloads.php">Download Stats</a></li>
-		</ul>
-	</div>
-	<?php
-	}
-}
 ?>

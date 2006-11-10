@@ -1,4 +1,7 @@
 <?php
+
+/* TODO: remove dependency on build.options.txt */
+
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -9,6 +12,8 @@ else
 {
 	$proj = "";
 }
+
+$projct = preg_replace("#^/#", "", $proj);
 
 $numzips = 0;
 foreach (array_keys($dls[$proj]) as $z)
@@ -360,7 +365,7 @@ function IDtoDateStamp($ID, $style) // given N200402121441, return date("D, j M 
 	return "";
 }
 
-function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
+function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
 {
 	global $PR, $suf, $proj;
 	$uu = 0;
@@ -377,7 +382,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre, $ziplabel = 
 
 	foreach (array_keys($dls[$proj]) as $z)
 	{
-		$echo_out .= "<li><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/dl-" . $suf[$filePre[$uu]] . ".gif\" alt=\"" . $suf[$filePre[$uu]] . "\"/> $z\n<ul>\n";
+		$echo_out .= "<li><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/dl-mdt.gif\" alt=\"Download\"/> $z\n<ul>\n";
 		foreach ($dls[$proj][$z] as $label => $u)
 		{
 			$echo_out .= "<li>\n";
@@ -386,11 +391,13 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre, $ziplabel = 
 				$u = "-$u";
 			}
 
-			$tries = array(
-				"$branch/$ID/$pre2$filePre[$uu]$u-$ziplabel.zip", // for compatibilty with uml2, where there's no "RT" value in $u
-				"$branch/$ID/$filePre[$uu]$u-$ziplabel.zip" // for compatibilty with uml2, where there's no "RT" value in $u
-			);
-
+			$tries = array();
+			foreach ($filePreProj as $filePre)
+			{
+				$tries[] = "$branch/$ID/$pre2$filePre$u-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $u
+				$tries[] = "$branch/$ID/$filePre$u-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $u
+			}
+			
 			$out = "...";
 			foreach ($tries as $z)
 			{
@@ -413,8 +420,8 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre, $ziplabel = 
 
 function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isEMFserver, $numzips, $PR;
-	$mid = "../../../$PR/downloads/drops/"; // this is a symlink on the filesystem!
+	global $pre, $isEMFserver, $numzips, $PR, $projct;
+	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
 	$warnings = 0;
 	$errors = 0;
@@ -506,6 +513,12 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 
 		}
+		else 
+		{
+			// should we report this status? or is this problematic when mirrors are propagating?
+			// $icon = "not";
+			// $result = "MISSING FILES?";
+		}
 
 		// parse out the check/fail icons in index.html, if we haven't failed already
 		if ($icon != "not")
@@ -517,8 +530,8 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 			else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
 			{
-				$result = "FAILED";
 				$icon = "not";
+				$result = "FAILED";
 			}
 			else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
 			{
@@ -569,7 +582,6 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 			else if ($result != "FAILED" && !$mightHavePassed)
 			{
-				$result = "FAILED";
 				$icon = "not";
 			}
 		}
@@ -577,7 +589,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isEMFserver ? "/$PR/build/log-viewer.php?build=$path" : "http://download.eclipse.org/"."$mid${path}buildlog.txt");
+		$link = ($isEMFserver ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : "http://download.eclipse.org/"."$mid${path}buildlog.txt");
 	}
 
 	if (!$link2) // link to console log in progress if it exists
