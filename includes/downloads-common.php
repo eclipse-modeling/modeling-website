@@ -1,6 +1,8 @@
 <?php
 
-/* TODO: remove dependency on build.options.txt */
+/* TODO: remove dependency on build.options.txt: 
+ * 	branch can be all dirs available, then rsorted(); 
+ * 	buildType can be hardcoded in _projectCommon.php */
 
 if (is_array($projects))
 {
