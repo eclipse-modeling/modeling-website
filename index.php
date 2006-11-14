@@ -32,6 +32,8 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
 	
+	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/Modeling#Documentation");
+	
 	$Nav->addNavSeparator("Download Pages", "");
 	$Nav->addCustomNav("EMF", "/emf/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/index.php", "_self", 3);
@@ -157,6 +159,7 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>Related links</h6>
 			<ul>
+				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Modeling Corner</a></li>
 				<li><a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
 			</ul>
 		</div>
