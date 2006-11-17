@@ -5,7 +5,7 @@ ob_start();
 
 // Process query string
 $params = array();
-if (preg_match("/^(\d\.\d(?:\.\d)?)$/", $_GET["version"], $regs))
+if (isset($_GET["version"]) && preg_match("/^(\d\.\d(?:\.\d)?)$/", $_GET["version"], $regs))
 {
 	$params["version"] = $regs[1];
 }
@@ -21,7 +21,7 @@ if ($params["version"] && is_file("release-notes" . $params["version"] . ".php")
 	exit;
 }
 
-if (preg_match("/^(" . join($projects, "|") . ")$/", $_GET["project"], $regs))
+if (isset($_GET["project"]) && preg_match("/^(" . join($projects, "|") . ")$/", $_GET["project"], $regs))
 {
 	$params["project"] = $regs[1];
 }
@@ -125,4 +125,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.17 2006/11/17 06:14:45 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.18 2006/11/17 06:48:20 nickb Exp $ -->
