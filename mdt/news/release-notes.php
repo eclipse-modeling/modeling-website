@@ -33,8 +33,7 @@ else
 $projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 
 /*
- * To work, this script must be run with a version of PHP4 which
- * includes the Sablotron XSLT extension compiled into it
+ * To work, this script must be run with a version of PHP4 with Sablotron XSLT or PHP 5 with XSL
  * 
  * Params in stylesheet:
  *  
@@ -125,4 +124,4 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/toggle.js" type="text/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
-<!-- $Id: release-notes.php,v 1.19 2006/11/17 07:17:40 nickb Exp $ -->
+<!-- $Id: release-notes.php,v 1.20 2006/11/17 21:19:45 nickb Exp $ -->
