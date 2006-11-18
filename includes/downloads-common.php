@@ -93,7 +93,7 @@ if (sizeof($builds) == 0)
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3>${rssfeed}Builds</h3>\n";
 	print "<ul class=\"releases\">\n";
-	if (is_array($projectArray) && !in_array($_GET["project"],$projectArray))
+	if (is_array($projectArray) && !in_array($projct,$projectArray))
 	{
 		print "<li><i><b>Sorry!</b></i> There are no builds yet available for this component.</li>";
 	}
@@ -644,7 +644,7 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 	{
 		foreach ($cols as $alt => $packMid)
 		{
-			print "<li><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/dl-$packMid.gif\" alt=\"$alt\"/> $alt: ";
+			print "<li><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/dl-mdt.gif\" alt=\"$alt\"/> $alt: ";
 			$ret = array();
 			if (sizeof($subcols)>2) 
 			{
