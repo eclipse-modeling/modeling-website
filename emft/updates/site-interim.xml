@@ -7807,6 +7807,61 @@
 		<category name="emft transaction SDK 1.1M3a S200611171621"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.transaction.doc_1.0.2.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction.doc" version="1.0.2.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.sdk_1.0.100.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction.sdk" version="1.0.100.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.source_1.0.100.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction.source" version="1.0.100.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction_1.0.100.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction" version="1.0.100.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.doc_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.workspace.doc" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.source_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.workspace.source" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.workspace" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples.source_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction.examples.source" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.transaction.examples" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples.source_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.workspace.examples.source" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples_1.0.1.v200611171621.jar" patch="false" id="org.eclipse.emf.workspace.examples" version="1.0.1.v200611171621">
+		<category name="emft transaction SDK 1.1M3a S200611171621"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -9138,6 +9193,12 @@ This category contains the features of the 1.0.3 M200611161636 build of emft tra
 	<category-def label="emft validation SDK 1.0.2 M200611161604" name="emft validation SDK 1.0.2 M200611161604">
 		<description>
 This category contains the features of the 1.0.2 M200611161604 build of emft validation SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft transaction SDK 1.1M3a S200611171621" name="emft transaction SDK 1.1M3a S200611171621">
+		<description>
+This category contains the features of the 1.1M3a S200611171621 build of emft transaction SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 
