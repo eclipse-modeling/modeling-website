@@ -30,15 +30,17 @@ if (sizeof($subprojs) > 0) {
 		if (in_array($subproj, $projects)) {
 			$trans = array_flip($projects);
 			print '<li><b> ' . $trans[$subproj] . '</b>' . "\n";
-			$vers = loadDirSimple("$PWD$subproj/javadoc/", "(\d\.\d|\d\.\d\.\d+)", "d");
+			$vers = loadDirSimple("$PWD$subproj/javadoc/", "", "d");
 			rsort($vers);
 			reset($vers);
+			$didprint=0;
 			foreach ($vers as $ver) {
 				if (preg_match("/[^0-9.]/", $ver) > 0) {
 					$vers2 = loadDirSimple("$PWD$subproj/javadoc/" . $ver, "", "d");
 					rsort($vers2);
 					reset($vers2);
 					if (sizeof($vers2) > 0) {
+						$didprint=1;
 						print "<ul>\n";
 					}
 					foreach ($vers2 as $ver2) {
@@ -48,8 +50,13 @@ if (sizeof($subprojs) > 0) {
 						print "</ul>\n";
 					}
 				} else {
+					$didprint=1;
 					print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
 				}
+			}
+			if ($didprint==0)
+			{
+				print "<ul><li><i>None available.</i></li></ul>";
 			}
 			print '</li>' . "\n";
 		}
