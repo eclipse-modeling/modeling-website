@@ -17,12 +17,13 @@ if ($isWWWserver) {
 }
 $subprojs = loadDirSimple($PWD, "(.+)", "d");
 
-if (sizeof($subprojs) > 0) {
-	print '<div id="midcolumn">
+print '<div id="midcolumn">
 <div class="homeitem3col">
 <h3>Javadoc</h3>
 <ul>
 ';
+
+if (sizeof($subprojs) > 0) {
 	sort($subprojs);
 	reset($subprojs);
 	foreach ($subprojs as $subproj) {
