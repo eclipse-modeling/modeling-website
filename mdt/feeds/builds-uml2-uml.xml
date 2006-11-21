@@ -283,33 +283,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] UML2 2.0.2 M200610051024 is available</title>
-    <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.2/M200610051024"/>
-    <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.2/M200610051024</id>
-    <updated>2006-10-05T14:47:24Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_0_maintenance" datetime="200610051024" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.2/M200610051024" type="M" version="2.0.2">
-        <update>http://download.eclipse.org/modeling/mdt/updates/?project=uml2-uml</update>
-        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml#uml2-uml</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.2
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-.zip</release>
-        </releases>
-        <tests>
-          <test href="http://download.eclipse.org/modeling/mdt/uml2-uml/downloads/drops/2.0.2/M200610051024/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] UML2 2.0.1 (R200609210850) is available</title>
     <link href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.1/R200609210850"/>
     <id>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.1/R200609210850</id>
