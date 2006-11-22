@@ -52,7 +52,7 @@ foreach (array_keys($projects) as $z)
 	$Nav->addCustomNav(preg_replace("/^UML2 /", "", $z), "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
-$newsgroupSuffix = $proj && !in_array($proj,$nonewsgroup)? "." . str_replace("-",".",$proj) : ""; // eg., .uml2.uml
+$newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace("-", ".", $proj) : ""); // eg., .uml2.uml
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
@@ -63,8 +63,8 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 $Nav->addNavSeparator("Documentation", "$rooturl/docs.php?project=$proj");
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Plan", "http://www.eclipse.org/modeling/mdt/docs/plans/mdt_project_plan_1_0.html", "_self", 2);
-$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/release-notes.php?project=$proj", "_self", 2);
-$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/emf/searchcvs.php?q=project%3A+org.eclipse.mdt+days%3A+7", "_self", 2);
+$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/relnotes.php?project=$proj", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=project%3A+org.eclipse.mdt+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Model_Development_Tools_%28MDT%29", "_self", 2);
