@@ -425,6 +425,8 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	global $pre, $isEMFserver, $numzips, $PR, $projct;
 	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
+	$out = "";
+	
 	$warnings = 0;
 	$errors = 0;
 
@@ -619,7 +621,8 @@ function fileFound($PWD, $url, $label) //only used once
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/"; // new for www.eclipse.org centralized download.php script
 
-	return (is_file("$PWD$url.md5") ? "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isEMFserver ? "" : "http://download.eclipse.org") . "$mid$url.md5\">md5</a>)</div>" : "") . "<a href=\"$downloadScript$pre$mid$url\">$label</a>";
+	return (is_file("$PWD$url.md5") ? "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isEMFserver ? "" : "http://download.eclipse.org") . 
+"$mid$url.md5\">md5</a>)</div>" : "") . "<a href=\"$downloadScript$mid$url\">$label</a>";
 }
 
 function pretty_size($bytes)
@@ -714,12 +717,15 @@ function outputBuild($branch, $ID, $c)
 
 	$ret = "<li>\n";
 	$ret .= "<div>" . showBuildResults("$PWD/", "$branch/$ID/") . "</div>";
-	$ret .= "<a href=\"javascript:toggle('r$ID')\"><i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> (" . IDtoDateStamp($ID, ($isEMFserver ? 0 : 1)) . ")</a><a name=\"$ID\"> </a> <a href=\"?showAll=1&amp;hlbuild=$ID" . ($_GET["sortBy"] == "date" ? "&amp;sortBy=date" : "") . ($proj ? "&amp;project=" . preg_replace("#^/#", "", $proj) : "") . "#$ID\"><img alt=\"Link to this build\" src=\"../images/link.png\"/></a>";
+	$ret .= "<a href=\"javascript:toggle('r$ID')\"><i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . 
+		"$IDlabel</i> (" . IDtoDateStamp($ID, ($isEMFserver ? 0 : 1)) . ")</a><a name=\"$ID\"> </a> <a href=\"?showAll=1&amp;hlbuild=$ID" . 
+		($sortBy == "date" ? "&amp;sortBy=date" : "") . ($proj ? "&amp;project=" . 
+		preg_replace("#^/#", "", $proj) : "") . "#$ID\"><img alt=\"Link to this build\" src=\"../images/link.png\"/></a>";
 
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
-	$ret .= $tests;
+	//$ret .= $tests;
 	$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
 	$ret .= "</ul>\n";
 	$ret .= "</li>\n";
@@ -752,11 +758,11 @@ function getBuildArtifacts($dir, $branchID)
 
 	foreach (array_keys($havedeps) as $z)
 	{
-		$builddir[$z] = $opts["${z}DownloadURL"] . $opts["${z}BuildURL"];
+		$builddir[$z] = (isset($opts["${z}DownloadURL"]) ? $opts["${z}DownloadURL"] : ""). (isset($opts["${z}BuildURL"]) ? $opts["${z}BuildURL"] : "");
 		# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
 		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
-		$buildID[$z] = str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}BuildURL"]));
-		$buildfile[$z] = $builddir[$z] . "/" . $opts["${z}File"];
+		$buildID[$z] = isset($opts["${z}BuildURL"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}BuildURL"])) : "";
+		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}File"]) ? $opts["${z}File"] : "");
 		$builddir[$z] = (!preg_match("/^http/", $builddir[$z]) ? "http://www.eclipse.org/downloads/download.php?file=$builddir[$z]" : $builddir[$z]);
 		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? "http://www.eclipse.org/downloads/download.php?file=$buildfile[$z]" : $buildfile[$z]);
 	}
@@ -778,7 +784,7 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<ul>\n";
 		if (sizeof($opts) > 0)
 		{
-			$ret .= ($opts["javaHome"] ? "<li>{$opts["javaHome"]}</li>" : "");
+			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>{$opts["javaHome"]}</li>" : "");
 			foreach (array_keys($havedeps) as $z)
 			{
 				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$buildID[$z]</a></li>\n";
