@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="November 23, 2006" showOn="whatsnew">
+	<!-- M200611221657 -->
+	UML2 UML <a href="http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.3">Version 2.0.3</a> Maintenance build
+	(<a href="http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.3">M200611221657</a>) is available 
+	for <a href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml">download</a>.
+</news>
 <news date="November 16, 2006" showOn="whatsnew">
 	<!-- M200611162216 -->
 	UML2 UML <a href="http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=uml2-uml&amp;version=2.0.3">Version 2.0.3</a> Maintenance build
@@ -794,6 +800,6 @@
 	Release Version <b>1.0.0</b> is available for <a href="downloads.php">download</a>.
 </news>
 
-<!-- $Id: news.xml,v 1.4 2006/11/17 03:45:01 khussey Exp $ -->
+<!-- $Id: news.xml,v 1.5 2006/11/23 16:14:46 khussey Exp $ -->
 
 </doc>
