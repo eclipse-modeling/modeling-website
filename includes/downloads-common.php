@@ -449,9 +449,9 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 		}
 	}
 
-	if (is_file("$PWD${path}index.html"))
+	if (is_file("$PWD${path}index.html") || is_file("$PWD${path}index.php"))
 	{
-		$indexHTML = file_contents("$PWD${path}index.html");
+		$indexHTML = is_file("$PWD${path}index.html") ? file_contents("$PWD${path}index.html") : "";
 		$zips = loadDirSimple($PWD . $path, ".zip", "f"); // get files count
 		$md5s = loadDirSimple($PWD . $path, ".zip.md5", "f"); // get files count
 
