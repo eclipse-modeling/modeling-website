@@ -11,6 +11,10 @@
 <version-def label="1.1.1" version="1.1.1"/>
 <version-def label="1.1.x" version="1.1"/>
 
+<entry build="I200611231810" project="uml2-uml" version="2.1.0">
+<bug id="159855">Profiles for extended metamodels</bug>
+</entry>
+
 <entry build="M200611221657" project="uml2-uml" version="2.0.3">
 <bug id="162103">Migrating model from 1.x to 2.x format does not create stereotype applications for required stereotypes</bug>
 <bug id="164973">Serialized container references not handled</bug>
@@ -452,4 +456,4 @@
 <oldreleasenotes href="../uml2-uml/news/release-notes1.0.1.php" label="1.0.1"/>
 
 </data>
-<!-- $Id: release-notes-uml2-uml.xml,v 1.5 2006/11/23 16:14:46 khussey Exp $ -->
+<!-- $Id: release-notes-uml2-uml.xml,v 1.6 2006/11/24 01:59:12 khussey Exp $ -->
