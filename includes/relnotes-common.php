@@ -6,6 +6,18 @@ require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $projectsf = array_flip($projects);
 $components = array();
 
+if (isset($cvscoms) && is_array($cvscoms))
+{
+	foreach (array_keys($cvscoms) as $z)
+	{
+		foreach (array_keys($cvscoms[$z]) as $y)
+		{
+			/* $proj = array($cvsproj, $cvscom) */
+			$components[$y] = array($z, $cvscoms[$z][$y]);
+		}
+	}
+}
+
 $cvscom = "%";
 $tmp = array_keys($cvsprojs);
 $proj = $tmp[0];
@@ -23,23 +35,11 @@ if (isset($_GET["project"]))
 		$proj = $_GET["project"];
 		$cvsproj = $cvsprojs[$proj];
 	}
-	else if (isset($cvscoms) && is_array($cvscoms))
+	else if (preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
 	{
-		foreach (array_keys($cvscoms) as $z)
-		{
-			foreach (array_keys($cvscoms[$z]) as $y)
-			{
-				/* $proj = array($cvsproj, $cvscom) */
-				$components[$y] = array($z, $cvscoms[$z][$y]);
-			}
-		}
-
-		if (preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
-		{
-			$proj = $_GET["project"];
-			$cvsproj = $components[$proj][0];
-			$cvscom = $components[$proj][1];
-		}
+		$proj = $_GET["project"];
+		$cvsproj = $components[$proj][0];
+		$cvscom = $components[$proj][1];
 	}
 }
 
