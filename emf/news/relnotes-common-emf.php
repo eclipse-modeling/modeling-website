@@ -5,8 +5,8 @@ $extraSideItems = <<<XML
 		<p>
 			<ul>
 				<li><a href="http://www.eclipse.org/modeling/emf/news/relnotes.php">2.x</a></li>
-				<li><a href="http://www.eclipse.org/modeling/emf/news/release-notes2.0.php">2.0.0</a></li>
-				<li><a href="http://www.eclipse.org/modeling/emf/news/release-notes-1.x.php">1.x</a></li>
+				<li><a href="http://www.eclipse.org/modeling/emf/news/relnotes2.0.php">2.0.0</a></li>
+				<li><a href="http://www.eclipse.org/modeling/emf/news/relnotes1.x.php">1.x</a></li>
 			</ul>
 		</p>
 	</div>
