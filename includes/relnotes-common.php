@@ -218,15 +218,27 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 				$rbuild = false;
 				$extra_build = true;
 			}
-			else
+			else if (isset($vpicker[0]))
 			{
 				$version = $vpicker[0];
 			}
+			else
+			{
+				$version = "HEAD";
+				$rbuild = false;
+				$extra_build = true;
+			}
 		}
+	}
+	else if (isset($vpicker[0]))
+	{
+		$version = $vpicker[0];
 	}
 	else
 	{
-		$version = $vpicker[0];
+		$version = "HEAD";
+		$rbuild = false;
+		$extra_build = true;
 	}
 
 	return $version;
