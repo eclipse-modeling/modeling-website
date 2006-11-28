@@ -5,6 +5,7 @@ ob_start();
 
 include_once "relnotes-common-emf.php"; doSideItems(); ?>
 <div id="midcolumn">
+<h1>Release Notes</h1>
 <div class="homeitem3col">
 <h3>EMF &amp; SDO Release Notes :: <a style="color:white;text-decoration:underline" href="#xsd">XSD Release Notes</a><a name="emf">&nbsp;</a></h3>
 <ul>
@@ -519,7 +520,11 @@ Tuned method BasicEObjectImpl.eDerivedStructuralFeatureID(EStructuralFeature). S
 <li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=54201" target="_bugz">54201</a>&#160;Change EMF templates to be able to use JETNature for build</li>
 <li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=53776" target="_bugz">53776</a>&#160;Cannot generate XSD for model</li>
 <li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=53421" target="_bugz">53421</a>&#160;Problems not removed after fixing</li></ul></li><li class="outerli">2.0.0&#160;I200403081633</li><li class="outerli">2.0.0&#160;I200402251234SL (2 Bugs)<ul><li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=50222" target="_bugz">50222</a>&#160;The getPropertyDescriptors() method of some of the XSD facet item providers was using the wrong "Value" property.</li>
-<li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=49692" target="_bugz">49692</a>&#160;Changed XSD2GenModel to initialize GenModel.modelName to avoid exception when viewing .genmodel file in the IDE.</li></ul></li><li class="outerli">2.0.0&#160;I200401271738SL</li><li class="outerli">2.0.0&#160;I200312190637VL</li><li class="outerli">2.0.0&#160;I200312101532XL</li></ul></div></div>
+<li><div class="fr"><img src="../images/icon-xsd.gif" alt="xsd"/></div><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=49692" target="_bugz">49692</a>&#160;Changed XSD2GenModel to initialize GenModel.modelName to avoid exception when viewing .genmodel file in the IDE.</li></ul></li><li class="outerli">2.0.0&#160;I200401271738SL</li><li class="outerli">2.0.0&#160;I200312190637VL</li><li class="outerli">2.0.0&#160;I200312101532XL</li>
+
+</ul>
+
+</div></div>
 <?php
 $html = ob_get_contents();
 ob_end_clean();

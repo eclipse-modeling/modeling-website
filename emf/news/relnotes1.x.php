@@ -5,6 +5,7 @@ ob_start();
 
 include_once "relnotes-common-emf.php"; doSideItems(); ?>
 <div id="midcolumn">
+<h1>Release Notes</h1>
 <div class="homeitem3col">
 
 <h3>What's new in EMF 1.1.1?</h3>
@@ -1268,6 +1269,7 @@ to reflect this build (i.e., the latest release).</li>
           
         </li>
       </ol>
+</div>
 </div>
 
 <?php
