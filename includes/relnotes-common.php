@@ -3,6 +3,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
+if (!isset($cvsprojs) || !is_array($cvsprojs))
+{
+	$cvsprojs = array();
+}
+
 $projectsf = array_flip($projects);
 $components = array();
 
@@ -20,8 +25,20 @@ if (isset($cvscoms) && is_array($cvscoms))
 
 $cvscom = "%";
 $tmp = array_keys($cvsprojs);
-$proj = $tmp[0];
-$cvsproj = $cvsprojs[$tmp[0]];
+if (sizeof($tmp) > 0)
+{
+	$proj = $tmp[0];
+	$cvsproj = $cvsprojs[$tmp[0]];
+}
+else
+{
+	$tmp = array_keys($cvscoms);
+	$tmp2 = array_keys($cvscoms[$tmp[0]]);
+	$proj = $tmp2[0];
+	$cvsproj = $tmp[0];
+	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
+}
+
 if (isset($cvscoms) && is_array($cvscoms) && isset($cvscoms[$proj]) && is_array($cvscoms[$proj]))
 {
 	$tmp = array_keys($cvscoms[$proj]);
