@@ -138,7 +138,7 @@ if ($result)
 		$rels[] = $row;
 	}
 }
-if (!$rbuild && $rels[0][2] == "R")
+if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 {
 	array_shift($rels);
 }
