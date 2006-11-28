@@ -1,7 +1,7 @@
 <?php
-$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
-if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -20,7 +20,7 @@ $baseurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.or
 $rooturl = "$baseurl/emf";
 $bugurl = "https://bugs.eclipse.org";
 
-$projects = array(
+$projects = array (
 	"EMF, SDO & XSD" => "",
 	"EMF &amp; SDO" => "emf",
 	"XSD" => "xsd"
@@ -29,7 +29,7 @@ $projects = array(
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
-$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");		
+$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
 $PR = "modeling/emf";
 
 // this isn't quite the same as EMFT or MDT... yet
@@ -44,10 +44,11 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
 $Nav->addCustomNav("FAQ", "$rooturl/faq/faq.php", "_self", 2);
-$Nav->addCustomNav("Release Notes", "$baseurl/modeling/emf/relnotes.php", "_self", 2);
+$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&version=HEAD", "_self", 2);
 $Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Eclipse_Modeling_Framework", "_self", 2);
 $Nav->addCustomNav("Newsgroup", "$rooturl/newsgroup-mailing-list.php", "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
