@@ -171,7 +171,7 @@ if (sizeof($rels))
 }
 else
 {
-	print $connect ? "<h3>There are no builds in $projectsf[$proj] $version yet</h3>\n" : "<h3>Error: could not connect to database!</h3>\n"; 
+	print $connect ? "<h4>There are no builds in $projectsf[$proj] $version yet</h4>\n" : "<h4>Error: could not connect to database!</h4>\n"; 
 }
 print "</div>\n";
 
@@ -227,6 +227,10 @@ function builds($version, $preversion, $cvsproj, $cvscom)
 
 function pick_version($vpicker, & $rbuild, $cvsproj, $cvscom, $connect, & $extra_build)
 {
+	if (!$connect)
+	{
+		return "HEAD";
+	}
 	if (isset ($_GET["version"]))
 	{
 		if (preg_match("/^(?:" . join("|", $vpicker) . ")$/", $_GET["version"]))
