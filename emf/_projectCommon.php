@@ -45,7 +45,7 @@ $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
 $Nav->addCustomNav("FAQ", "$rooturl/faq/faq.php", "_self", 2);
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&version=HEAD", "_self", 2);
-$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emf/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Eclipse_Modeling_Framework", "_self", 2);

@@ -53,7 +53,7 @@
 	
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/EMFT");
 	$Nav->addCustomNav("Release Notes", "$rooturl/../modeling/emft/news/relnotes.php?project=" . $PR, "_self", 2);
-	$Nav->addCustomNav("Search CVS", "$rooturl/../modeling/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . $PR . "+days%3A+7", "_self", 2);
+	$Nav->addCustomNav("Search CVS", "$rooturl/../modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . $PR . "+days%3A+7", "_self", 2);
 
 	$Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/EMFT", "_self", 2);
