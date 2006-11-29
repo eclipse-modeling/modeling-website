@@ -19,7 +19,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/eodm/downloads/drops/0.7.5/S200611162108/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/?project=eodm</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm#eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=eodm&amp;amp;version=0.7.5
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;amp;version=0.7.5
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-0.7.5.zip</release>
@@ -47,7 +47,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/eodm/downloads/drops/0.7.0/R200610160717/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/?project=eodm</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm#eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/release-notes.php?project=eodm&amp;amp;version=0.7.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;amp;version=0.7.0
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-0.7.0.zip</release>
