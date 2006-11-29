@@ -1,33 +1,24 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
-$App = new App();
-$Nav = new Nav();
-$Menu = new Menu();
-include ($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-require ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-if (!isset ($cvsprojs) || !is_array($cvsprojs))
+if (!isset($cvsprojs) || !is_array($cvsprojs))
 {
-	$cvsprojs = array ();
+	$cvsprojs = array();
 }
 
 $projectsf = array_flip($projects);
-$components = array ();
+$components = array();
 
-if (isset ($cvscoms) && is_array($cvscoms))
+if (isset($cvscoms) && is_array($cvscoms))
 {
 	foreach (array_keys($cvscoms) as $z)
 	{
 		foreach (array_keys($cvscoms[$z]) as $y)
 		{
 			/* $proj = array($cvsproj, $cvscom) */
-			$components[$y] = array (
-				$z,
-				$cvscoms[$z][$y]
-			);
+			$components[$y] = array($z, $cvscoms[$z][$y]);
 		}
 	}
 }
@@ -48,26 +39,25 @@ else
 	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
 }
 
-if (isset ($cvscoms) && is_array($cvscoms) && isset ($cvscoms[$proj]) && is_array($cvscoms[$proj]))
+if (isset($cvscoms) && is_array($cvscoms) && isset($cvscoms[$proj]) && is_array($cvscoms[$proj]))
 {
 	$tmp = array_keys($cvscoms[$proj]);
 	$cvscom = $cvscoms[$proj][$tmp[0]];
 }
 
-if (isset ($_GET["project"]) && $_GET["project"])
+if (isset($_GET["project"]))
 {
-	if (preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
+	if (sizeof($cvsprojs) > 0 && preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
 	{
 		$proj = $_GET["project"];
 		$cvsproj = $cvsprojs[$proj];
 	}
-	else
-		if (preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
-		{
-			$proj = $_GET["project"];
-			$cvsproj = $components[$proj][0];
-			$cvscom = $components[$proj][1];
-		}
+	else if (sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
+	{
+		$proj = $_GET["project"];
+		$cvsproj = $components[$proj][0];
+		$cvscom = $components[$proj][1];
+	}
 }
 
 ob_start();
@@ -75,11 +65,10 @@ ob_start();
 /*** side items ***/
 print<<<XML
 <div id="rightcolumn">
-
 	<div class="sideitem">
 	<h6>Search CVS</h6>
 XML;
-print '	<form action="http://www.eclipse.org/' . (isset ($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
+print '	<form action="http://www.eclipse.org/' . (isset($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
 print<<<XML
 	<p>
 		<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
@@ -88,19 +77,17 @@ print<<<XML
 	</form>
 	</div>
 XML;
-if (isset ($extraSideItems) && $extraSideItems)
+if (isset($extraSideItems) && $extraSideItems)
 {
 	print $extraSideItems;
 }
-print<<<XML
-</div>
-XML;
+print "</div>\n";
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>Release Notes</h1>\n";
 
 $result = wmysql_query("SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' ORDER BY `vanityname` DESC");
-$vpicker = array ();
+$vpicker = array();
 if ($result)
 {
 	while ($row = mysql_fetch_row($result))
@@ -109,7 +96,7 @@ if ($result)
 	}
 	if (sizeof($vpicker) > 0)
 	{
-		unset ($vpicker[sizeof($vpicker) - 1]);
+		unset($vpicker[sizeof($vpicker) - 1]);
 	}
 }
 $rbuild = true;
@@ -130,7 +117,7 @@ else
 	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 }
 $result = wmysql_query($sql);
-$rels = array ();
+$rels = array();
 if ($result)
 {
 	while ($row = mysql_fetch_row($result))
@@ -149,7 +136,7 @@ if (sizeof($rels))
 	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . "</h3>\n";
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
-		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i +1][0] . "' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = $branch GROUP BY `bugid` DESC";
+		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = $branch GROUP BY `bugid` DESC";
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 
@@ -171,7 +158,7 @@ if (sizeof($rels))
 }
 else
 {
-	print $connect ? "<h4>There are no builds in $projectsf[$proj] $version yet</h4>\n" : "<h4>Error: could not connect to database!</h4>\n"; 
+	print "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet" : "Error: could not connect to database!") . "</h4>\n";
 }
 print "</div>\n";
 
@@ -192,7 +179,7 @@ function relminus($version, $cvsproj, $cvscom, $rbuild = true)
 	$whr = "`project` = '$cvsproj' AND `component` LIKE '$cvscom'";
 	if ($rbuild) //$rbuild implies !$extra_build
 	{
-		$tries = array (
+		$tries = array(
 			"SELECT `vanityname` FROM `releases` WHERE `branch` = (SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND `buildtime` < (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND `type` = 'R' AND $whr ORDER BY `buildtime` DESC LIMIT 1",
 			"SELECT `vanityname` FROM `releases` WHERE `branch` = 'HEAD' AND `buildtime` < (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND `type` = 'R' AND $whr ORDER BY `buildtime` DESC LIMIT 1"
 		);
@@ -201,7 +188,7 @@ function relminus($version, $cvsproj, $cvscom, $rbuild = true)
 	}
 	else
 	{
-		$tries = array (
+		$tries = array(
 			"SELECT `vanityname` FROM `releases` WHERE `buildtime` < (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND `branch` = (SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND $whr ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N') LIMIT 1",
 			"SELECT `vanityname` FROM `releases` WHERE `buildtime` < (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND $whr) AND $whr ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N') LIMIT 1",
 			"SELECT `vanityname` FROM `releases` WHERE `branch` = '$version' AND `type` = 'R' AND $whr ORDER BY `buildtime` DESC LIMIT 1",
@@ -214,24 +201,24 @@ function relminus($version, $cvsproj, $cvscom, $rbuild = true)
 
 function builds($version, $preversion, $cvsproj, $cvscom)
 {
-	$builds = array ();
+	$builds = array();
 	$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = (SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')");
 	while ($row = mysql_fetch_row($result))
 	{
 		$builds[] = "<option value=\"$row[0]\">&nbsp;&nbsp;&nbsp;$row[0]</option>\n";
 	}
-	unset ($builds[0]); //the release build
+	unset($builds[0]); //the release build
 
 	return $builds;
 }
 
-function pick_version($vpicker, & $rbuild, $cvsproj, $cvscom, $connect, & $extra_build)
+function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_build)
 {
 	if (!$connect)
 	{
 		return "HEAD";
 	}
-	if (isset ($_GET["version"]))
+	if (isset($_GET["version"]))
 	{
 		if (preg_match("/^(?:" . join("|", $vpicker) . ")$/", $_GET["version"]))
 		{
@@ -249,7 +236,7 @@ function pick_version($vpicker, & $rbuild, $cvsproj, $cvscom, $connect, & $extra
 			}
 		}
 
-		if (!isset ($version))
+		if (!isset($version))
 		{
 			$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' GROUP BY `branch`");
 			while ($row = mysql_fetch_row($result))
@@ -361,8 +348,8 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 /* HEAD and Rx_y_maintenance builds that don't have an R build yet */
 function extra_builds($version, $cvsproj, $cvscom, $showinner = true)
 {
-	$extra = array ();
-	$items = array ();
+	$extra = array();
+	$items = array();
 	$branches = array("HEAD");
 
 	$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` != 'HEAD' GROUP BY `branch` DESC");
