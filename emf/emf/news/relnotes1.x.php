@@ -906,7 +906,7 @@ to reflect this build (i.e., the latest release).</li>
 
 <div class="homeitem3col">
 
-<h3>What's new in XSD 1.1.1?</h3>
+<h3>What's new in XSD 1.1.1?<a name="xsd">&nbsp;</a></h3>
 
       <ol>        
         <li>
