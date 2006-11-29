@@ -54,7 +54,7 @@ if (isset ($cvscoms) && is_array($cvscoms) && isset ($cvscoms[$proj]) && is_arra
 	$cvscom = $cvscoms[$proj][$tmp[0]];
 }
 
-if (isset ($_GET["project"]))
+if (isset ($_GET["project"]) && $_GET["project"])
 {
 	if (preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
 	{
