@@ -1,9 +1,18 @@
-<?php 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+<?php
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
+$App = new App();
+$Nav = new Nav();
+$Menu = new Menu();
+include ($App->getProjectCommon());
 
 ob_start();
 
-include_once "relnotes-common-emf.php"; doSideItems(); ?>
+include_once $_SERVER['DOCUMENT_ROOT'] . "/modeling/emf/emf/news/relnotes-common-emf.php";
+
+doSideItems();
+?>
 <div id="midcolumn">
 <h1>Release Notes</h1>
 <div class="homeitem3col">
@@ -1273,6 +1282,7 @@ to reflect this build (i.e., the latest release).</li>
 </div>
 
 <?php
+
 $html = ob_get_contents();
 ob_end_clean();
 
