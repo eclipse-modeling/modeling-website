@@ -1,1 +1,1 @@
-<?php header("Location: release-notes.php"); ?>
+<?php header("Location: relnotes.php"); ?>
