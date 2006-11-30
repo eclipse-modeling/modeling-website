@@ -55,7 +55,6 @@ $projct = preg_replace("#^/#", "", $proj);
 	/** done customizing, shouldn't have to change anything below here **/
 
 	$options = loadOptionsFromRemoteFiles($buildOptionsFile,$dependenciesURLsFile); 
-	
 	$options["BuildType"] = array(
 			"Release=R",
 			"Stable=S",

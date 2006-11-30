@@ -54,13 +54,6 @@ r321_v20060830
 -=0.7.1
 -=0.7.0
 
-[BuildType]
-Release=R
-Stable=S
-Integration=I
-Maintenance=M
-Nightly=N|selected
-
 [TagBuild]
 Yes
 No|selected

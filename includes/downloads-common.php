@@ -73,7 +73,16 @@ if (function_exists("requirementsNote"))
 	requirementsNote();
 }
 
-if (($options = loadOptionsFromFile($buildOptionsFile)) && is_array($options["Branch"]))
+$options = loadOptionsFromFile($buildOptionsFile);
+$options["BuildType"] = array(
+		"Release=R",
+		"Stable=S",
+		"Integration=I",
+		"Maintenance=M",
+		"Nightly=N|selected"
+);
+
+if (is_array($options["Branch"]))
 {
 	$buildTypes = getBuildTypes($options);
 }
