@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "Eclipse Modeling - EMFT - Release Notes";
+
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(

@@ -1,5 +1,7 @@
 <?php
 
+$pageTitle = "Eclipse Modeling - MDT - Release Notes";
+
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
 $cvsprojs = array (

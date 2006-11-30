@@ -166,7 +166,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Eclipse Modeling - MDT - Release Notes";
+$pageTitle = isset($pageTitle) ? $pageTitle : "Eclipse Modeling - Release Notes";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
