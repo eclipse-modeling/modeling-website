@@ -150,34 +150,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] UML2 M200611161634 (2.0.3.M200611161634) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml&amp;showAll=1&amp;hlbuild=M200611161634#M200611161634"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml&amp;showAll=1&amp;hlbuild=M200611161634#M200611161634</id>
-    <updated>2006-11-17T02:19:18Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_0_maintenance" datetime="200611161634" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml&amp;showAll=1&amp;hlbuild=M200611161634#M200611161634" type="M" version="2.0.3">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.3/M200611161634/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/?project=uml2-uml</update>
-        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml#uml2-uml</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2-uml&amp;amp;version=2.0.3
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">uml2-SDK-M200611161634.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2-uml/downloads/drops/2.0.3/M200611161634/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] UML2 2.1M3 (2.1.0.S200611161552) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml&amp;showAll=1&amp;hlbuild=S200611161552#S200611161552"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2-uml&amp;showAll=1&amp;hlbuild=S200611161552#S200611161552</id>
