@@ -38,9 +38,8 @@
 	$proj = (isset($_POST["build_Project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_POST["build_Project"], $regs)) ? $regs[1] :
 			(isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] :
 			"");
-	
-	// these appear to be the same value
-	$PR = $proj;
+
+	$PR = "modeling/emft";
 	
 	$Nav->addNavSeparator("EMFT", "$rooturl/");
 	foreach (array_keys($projects) as $z)
@@ -48,12 +47,12 @@
 		$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/?project=$projects[$z]#$projects[$z]", "_self", 2);
 	}
 
-	$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $PR);
+	$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $proj);
 	$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 	
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/EMFT");
-	$Nav->addCustomNav("Release Notes", "$rooturl/../modeling/emft/news/relnotes.php?project=" . $PR, "_self", 2);
-	$Nav->addCustomNav("Search CVS", "$rooturl/../modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . $PR . "+days%3A+7", "_self", 2);
+	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . $proj, "_self", 2);
+	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . $proj . "+days%3A+7", "_self", 2);
 
 	$Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/EMFT", "_self", 2);
