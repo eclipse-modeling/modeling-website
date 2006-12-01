@@ -1,5 +1,7 @@
 <?php
 
+$numzips = $numzips - 1; // the stand-alone zip is new, so don't require it
+
 /* used for sidebar entry */
 $NLpacks = array(
 	"1.0.x" => "NLS1.0.x"
