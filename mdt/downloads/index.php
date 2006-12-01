@@ -28,7 +28,8 @@ $dls = array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
+			"Automated Tests" => "automated-tests",
+			"Stand-alone" => "standalone"
 		)
 	),
 	"/uml2-tools" => array(
