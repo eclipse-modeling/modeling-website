@@ -16,9 +16,9 @@ function allnews($project)
 	ob_end_clean();
 
 	$pageTitle = "Eclipse Tools - $project - All News";
-	$pageKeywords = ""; // TODO: add something here
+	$pageKeywords = "";
 	$pageAuthor = "Neil Skrypuch";
-
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	
+	$App->generatePage(isset($theme) ? $theme : "", $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 }
 ?>
