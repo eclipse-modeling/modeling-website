@@ -51,6 +51,7 @@ $cvsroots = array(
 	"datatools" => "Datatools_Project",
 	"dsdp" => "DSDP_Project",
 	"eclipse" => "Eclipse_Project",
+	"modeling" => "Modeling_Project",
 	"org.eclipse" => "Eclipse_Website",
 	"stp" => "STP_Project",
 	"technology" => "Technology_Project",

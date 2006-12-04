@@ -62,27 +62,6 @@ if (isset($_GET["project"]))
 
 ob_start();
 
-/*** side items ***/
-print<<<XML
-<div id="rightcolumn">
-	<div class="sideitem">
-	<h6>Search CVS</h6>
-XML;
-print '	<form action="http://www.eclipse.org/' . (isset($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
-print<<<XML
-	<p>
-		<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
-		<input type="submit" value="Go!"/>
-	</p>
-	</form>
-	</div>
-XML;
-if (isset($extraSideItems) && $extraSideItems)
-{
-	print $extraSideItems;
-}
-print "</div>\n";
-
 print "<div id=\"midcolumn\">\n";
 print "<h1>Release Notes</h1>\n";
 
@@ -163,6 +142,34 @@ else
 print "</div>\n";
 
 print "</div>\n";
+
+/*** side items ***/
+print <<<XML
+<div id="rightcolumn">
+	<div class="sideitem">
+	<h6>Search CVS</h6>
+XML;
+print '	<form action="http://www.eclipse.org/' . (isset($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
+print <<<XML
+	<p>
+		<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
+		<input type="submit" value="Go!"/>
+	</p>
+	</form>
+	</div>
+XML;
+
+$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/$proj/news/relnotes-extras.php";
+if (file_exists($f))
+{
+	include($f);
+}
+if (function_exists("sideitems"))
+{
+	print sideitems();
+}
+print "</div>\n";
+
 $html = ob_get_contents();
 ob_end_clean();
 
