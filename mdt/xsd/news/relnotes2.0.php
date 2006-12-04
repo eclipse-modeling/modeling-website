@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 ob_start();
 
-$xsdimg = '<div><img src="../../images/icon-xsd.gif" alt="xsd"/></div>'."\n";
+$xsdimg = '';
 ?>
 <div id="midcolumn">
 
@@ -43,6 +43,19 @@ $xsdimg = '<div><img src="../../images/icon-xsd.gif" alt="xsd"/></div>'."\n";
 
 include_once($_SERVER['DOCUMENT_ROOT'] . "/$PR/xsd/news/relnotes-extras.php");
 print "<div id=\"rightcolumn\">\n";
+print <<<XML
+	<div class="sideitem">
+	<h6>Search CVS</h6>
+XML;
+print '	<form action="http://www.eclipse.org/' . (isset($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
+print <<<XML
+	<p>
+		<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
+		<input type="submit" value="Go!"/>
+	</p>
+	</form>
+	</div>
+XML;
 print sideitems();
 print "</div>\n";
 
