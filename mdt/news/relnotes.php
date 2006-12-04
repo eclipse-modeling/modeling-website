@@ -18,10 +18,5 @@ $cvscoms = array (
 	)
 );
 
-if (isset ($_GET["project"]) && $_GET["project"] == "xsd")
-{
-	include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/mdt/xsd/news/relnotes-common-xsd.php";
-}
-
 require ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-common.php");
 ?>
