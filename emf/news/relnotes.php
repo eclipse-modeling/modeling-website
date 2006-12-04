@@ -6,5 +6,11 @@ $cvsprojs = array(
 	"xsd" => "org.eclipse.xsd"
 );
 
+if (isset($_GET["project"]) && $_GET["project"] == "xsd")
+{
+	header("Location: http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=xsd");
+	exit;
+}
+
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-common.php");
 ?>
