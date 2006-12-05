@@ -30,6 +30,23 @@
 		"Validation" => "validation"
 	);
 
+	$cvsprojs = array();
+
+	/* sub-projects/components in cvs for projects/components above (if any) */
+	/* "cvsname" => array("shortname" => "cvsname") */
+	$cvscoms = array(
+		"org.eclipse.emft" => array(
+			"cdo" => "cdo",
+			"jet" => "jet",
+			"jeteditor" => "jeteditor",
+			"net4j" => "net4j",
+			"query" => "query",
+			"teneo" => "teneo",
+			"transaction" => "transaction",
+			"validation" => "validation"
+		)
+	);
+
 	$extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
 	$nodownloads = array(); //projects with only information, no downloads, or no builds available yet, "projectkey"
 	$nomenclature = "Component"; //are we dealing with "components" or "projects"?
@@ -63,5 +80,5 @@
 	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
 	$Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-	include_once $_SERVER["DOCUMENT_ROOT"] . "/emft/includes/scripts.php"; 
+	include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php"; 
 ?>

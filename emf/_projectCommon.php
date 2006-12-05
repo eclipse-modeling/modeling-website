@@ -1,7 +1,7 @@
 <?php
-$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
-if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -20,11 +20,18 @@ $baseurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.or
 $rooturl = "$baseurl/emf";
 $bugurl = "https://bugs.eclipse.org";
 
-$projects = array (
-	"EMF, SDO & XSD" => "",
+$projects = array(
+	"EMF, SDO &amp; XSD" => "",
 	"EMF &amp; SDO" => "emf",
 	"XSD" => "xsd"
 );
+
+$cvsprojs = array(
+	"emf" => "org.eclipse.emf",
+	"xsd" => "org.eclipse.xsd"
+);
+
+$cvscoms = array();
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
@@ -56,5 +63,5 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=prod
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMF", "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php"; 
+include_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php"); 
 ?>

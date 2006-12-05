@@ -20,6 +20,22 @@ $rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
 $downurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
 $bugurl = "https://bugs.eclipse.org";
 
+/* projects/components in cvs */
+/* "proj" => "cvsname" */
+$cvsprojs = array(
+	"uml2-uml" => "org.eclipse.uml2",
+	"xsd" => "org.eclipse.xsd"
+);
+
+/* sub-projects/components in cvs for projects/components above (if any) */
+/* "cvsname" => array("shortname" => "cvsname") */
+$cvscoms = array(
+	"org.eclipse.emft" => array(
+		"uml2-ocl" => "ocl",
+		"eodm" => "eodm"
+	)
+);
+
 $projects = array(
 	"EODM" => "eodm",
 	"UML2" => "uml2",
