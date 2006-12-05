@@ -8,7 +8,7 @@ $cvsprojs = array(
 
 if (isset($_GET["project"]) && $_GET["project"] == "xsd")
 {
-	header("Location: http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=xsd");
+	header("Location: http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=xsd&version=HEAD");
 	exit;
 }
 
