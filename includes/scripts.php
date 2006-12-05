@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.11 2006/11/10 22:19:17 nickb Exp $ 
+// $Id: scripts.php,v 1.12 2006/12/05 23:41:52 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -181,7 +181,7 @@ function getNews($lim, $key)
 			print "<p>\n";
 			if (strtotime($regs[1][$i]) > strtotime("-3 weeks"))
 			{
-				print '<img src="http://www.eclipse.org/emf/images/new.gif" alt="New!" width="31" height="14"/>';
+				print '<img src="/modeling/images/new.gif" alt="New!" width="31" height="14"/>';
 			}
 			$app = (date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");
 			print '<b>' . date(($key == "whatsnew" ? "M" : "F") . '\&\n\b\s\p\;j\<\s\u\p\>S\<\/\s\u\p\>' . $app, strtotime($regs[1][$i])) . '</b> - ' . "\n";
@@ -190,7 +190,41 @@ function getNews($lim, $key)
 		}
 	}
 }
-	
+
+function build_news($cvsprojs, $cvscoms, $proj, $limit = 3)
+{
+	$q = array();
+
+	foreach (array_keys($cvsprojs) as $z)
+	{
+		$q[$z] = "('$cvsprojs[$z]', '')";
+	}
+
+	foreach (array_keys($cvscoms) as $z)
+	{
+		foreach (array_keys($cvscoms[$z]) as $y)
+		{
+			$q[$y] = "('$z', '{$cvscoms[$z][$y]}')";
+		}
+	}
+
+	$tmp = array_keys($q);
+	$proj = (isset($q[$proj]) ? $proj : $tmp[0]);
+	if ($proj && isset($q[$proj]))
+	{
+		$where = $q[$proj];
+	}
+	else
+	{
+		$where = join(",", $q);
+	}
+
+	$result = wmysql_query("SELECT `project`, `vanityname`, `branch`, `buildtime`, `type` FROM `releases` WHERE (`project`, `component`) IN($where) ORDER BY `buildtime` DESC LIMIT $limit");
+	while ($row = mysql_fetch_row($result))
+	{
+		print "<p>$row[0] $row[1] $row[4] build ($row[2]) available</p>";
+	}
+}
 
 function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.0 everywhere
 {
@@ -228,15 +262,16 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$hlbuild = (isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
 
 	$out = "<div class=\"" . ($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
-	$out .= "<" . ($style == "sideitem" ? "h6" : "h3") . ">$nomenclature selection</" . ($style == "sideitem" ? "h6" : "h3") . ">\n";
+	$tag = ($style == "sideitem" ? "h6" : "h3");
+	$out .= "<$tag>$nomenclature selection</$tag>\n";
 	$out .= "<form action=\"" . $_SERVER["SCRIPT_NAME"] . "\" method=\"get\" id=\"subproject_form\">\n";
 	$out .= "<p>\n";
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
-	$out .= "<select id=\"project\" name=\"project\" onchange=\"javascript:document.getElementById('subproject_form').submit()\">\n";
 
+	$out .= "<select id=\"project\" name=\"project\" onchange=\"javascript:document.getElementById('subproject_form').submit()\">\n";
 	foreach ($projectArray as $k => $v) 
 	{
-		$out .= "<option value=\"$v\"" . ("") . ">$k</option>\n";
+		$out .= "<option value=\"$v\">$k</option>\n";
 	}
 	$out .= "</select>\n";
 	foreach ($vars as $z)
@@ -275,9 +310,9 @@ function debug($str, $level = 0)
 	}
 }
 
-function isAuthorized () 
+function isAuthorized()
 {
-	global $theme, $isEMFserver;
+	global $isEMFserver;
 	
 	// must be on a build server and must not be on www.eclipse.org
 	if ($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html") 
@@ -296,24 +331,25 @@ function isAuthorized ()
 
 function domainSuffix($domain)
 {
-	return preg_replace("/.*([^\.]+\.[^\.]+)$/","$1",$domain);
+	return preg_replace("/.*([^\.]+\.[^\.]+)$/", "$1", $domain);
 }
 
-function internalUseOnly () 
+function internalUseOnly()
 {
 	global $theme;
-	if (!isAuthorized()) {
+	if (!isAuthorized())
+	{
 		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 		ob_start(); ?>
 	
-	<div id="midcolumn">
-	
-	<div class="homeitem3col">
-	<h3>For Internal Use Only</h3>
-	<p>Sorry, this script must be run from a sanctioned build server. Contact Nick Boldt (codeslave[at]ca[dot]ibm[dot]com) for details.</p>
-	</div>
-	</div>	
-	<?php 			
+		<div id="midcolumn">
+		
+		<div class="homeitem3col">
+		<h3>For Internal Use Only</h3>
+		<p>Sorry, this script must be run from a sanctioned build server. Contact Nick Boldt (codeslave[at]ca[dot]ibm[dot]com) for details.</p>
+		</div>
+		</div>	
+		<?php 			
 		$html = ob_get_contents();
 		ob_end_clean();
 		
@@ -324,5 +360,43 @@ function internalUseOnly ()
 		$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 		exit; 
 	}
+}
+
+function pick_project(&$proj, &$cvsproj, $cvsprojs, &$cvscom, $cvscoms, $components)
+{
+	if (isset($_GET["project"]))
+	{
+		if (sizeof($cvsprojs) > 0 && preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
+		{
+			$proj = $_GET["project"];
+			$cvsproj = $cvsprojs[$proj];
+		}
+		else if (sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
+		{
+			$proj = $_GET["project"];
+			$cvsproj = $components[$proj][0];
+			$cvscom = $components[$proj][1];
+		}
+	}
+}
+
+/* rearrange $cvscoms into a more convenient form */
+function components($cvscoms)
+{
+	$components = array();
+
+	if (isset($cvscoms) && is_array($cvscoms))
+	{
+		foreach (array_keys($cvscoms) as $z)
+		{
+			foreach (array_keys($cvscoms[$z]) as $y)
+			{
+				/* $proj = array($cvsproj, $cvscom) */
+				$components[$y] = array($z, $cvscoms[$z][$y]);
+			}
+		}
+	}
+
+	return $components;
 }
 ?>
