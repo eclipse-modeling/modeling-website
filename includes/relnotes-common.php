@@ -9,20 +9,9 @@ if (!isset($cvsprojs) || !is_array($cvsprojs))
 }
 
 $projectsf = array_flip($projects);
-$components = array();
+$components = components($cvscoms);
 
-if (isset($cvscoms) && is_array($cvscoms))
-{
-	foreach (array_keys($cvscoms) as $z)
-	{
-		foreach (array_keys($cvscoms[$z]) as $y)
-		{
-			/* $proj = array($cvsproj, $cvscom) */
-			$components[$y] = array($z, $cvscoms[$z][$y]);
-		}
-	}
-}
-
+/* set defaults */
 $cvscom = "%";
 $tmp = array_keys($cvsprojs);
 if (sizeof($tmp) > 0)
@@ -39,26 +28,7 @@ else
 	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
 }
 
-if (isset($cvscoms) && is_array($cvscoms) && isset($cvscoms[$proj]) && is_array($cvscoms[$proj]))
-{
-	$tmp = array_keys($cvscoms[$proj]);
-	$cvscom = $cvscoms[$proj][$tmp[0]];
-}
-
-if (isset($_GET["project"]))
-{
-	if (sizeof($cvsprojs) > 0 && preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
-	{
-		$proj = $_GET["project"];
-		$cvsproj = $cvsprojs[$proj];
-	}
-	else if (sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
-	{
-		$proj = $_GET["project"];
-		$cvsproj = $components[$proj][0];
-		$cvscom = $components[$proj][1];
-	}
-}
+pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
 ob_start();
 
