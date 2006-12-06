@@ -26,7 +26,7 @@ pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
 $version = (isset ($_GET["version"]) ? $_GET["version"] : "");
 
-if ($cvsproj && $cvscom && $version)
+if ($version && ($cvsproj || $cvscom))
 {
 	header("Content-type: text/plain");
 	$version = (get_magic_quotes_gpc() ? $version : addslashes($version));
