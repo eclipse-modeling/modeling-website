@@ -1,10 +1,6 @@
 <?php
-
-
 # use this script to kick parsecvs.sh for a given set of project folders
 # should be usable as web and commandline api
-
-$previewOnly = isset ($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0;
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
@@ -15,6 +11,8 @@ $Menu = new Menu();
 include ($App->getProjectCommon());
 
 include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
+
+$previewOnly = isset ($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0;
 
 ob_start();
 
@@ -125,10 +123,9 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = isset ($pageTitle) ? $pageTitle : "Eclipse Modeling - Release Notes";
-$pageKeywords = ""; // TODO: add something here
-$pageAuthor = "Neil Skrypuch";
+$pageTitle = isset ($pageTitle) ? $pageTitle : "Eclipse Modeling - Query Tools";
+$pageKeywords = "";
+$pageAuthor = "Nick Boldt";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
