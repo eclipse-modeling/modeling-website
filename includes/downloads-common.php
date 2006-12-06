@@ -307,6 +307,26 @@ function getBuildsFromDirs() // massage the builds into more useful structures
 	return $builds_temp;
 }
 
+function getTestResultsJUnitXML($file)
+{
+	$results = null;
+	$data = file($file);
+	foreach ($data as $line)
+	{
+		// <testsuite errors="0" failures="0" ...>
+		preg_match("/<testsuite errors=\"(\d+)\" failures=\"(\d+).+\"/", $line, $matches);
+		if (isset ($matches) && is_array($matches) && sizeof($matches) >= 3)
+		{
+			$results = $matches[0] === "0" && $matches[2] === "0" ? null : array (
+				$matches[1],
+				$matches[2]
+			); // Errors, Failures
+			return $results;
+		}
+	}
+	return $results;
+}
+
 function getBuildTypes($options)
 {
 	$arr = array();
@@ -477,6 +497,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 		if ((sizeof($zips) >= $numzips && sizeof($md5s) >= $numzips))
 		{
+			//check testresults/chkpii/ for results
 			if (is_file("$PWD${path}testresults/chkpii/org.eclipse.nls.summary.txt"))
 			{
 				$chkpiiResults = file_contents("$PWD${path}testresults/chkpii/org.eclipse.nls.summary.txt");
@@ -496,66 +517,68 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 				}
 			}
 
-			//check testResults.php for results
-			if ($icon != "not")
+			// check JUnit results
+			$files = loadDirSimple("$PWD${path}testresults/xml/", ".xml", "f");
+			$out = "";
+			$noProblems = true;
+			foreach ($files as $file)
 			{
-				//check compilelogs/summary.txt for results
-				if (is_file("$PWD${path}compilelogs/summary.txt"))
+				$results = getTestResultsJUnitXML("$PWD${path}testresults/xml/" . $file);
+				if ($results && is_array($results))
 				{
-					$compilelogSummary = file_contents("$PWD${path}compilelogs/summary.txt");
-					$link2 = "$pre$mid${path}testResults.php";
-					if ($compilelogSummary)
+					$errors += $results[0];
+					$failures += $results[1];
+					$icon = "not";
+					$results = null;
+				}
+			}
+
+			//check compilelogs/summary.txt for results
+			if (is_file("$PWD${path}compilelogs/summary.txt"))
+			{
+				$compilelogSummary = file_contents("$PWD${path}compilelogs/summary.txt");
+				$link2 = "$pre$mid${path}testResults.php";
+				if ($compilelogSummary)
+				{
+					$m = null;
+					if (preg_match("/(\d+)P, (\d+)W, (\d+)E, (\d+)F/", $compilelogSummary, $m))
 					{
-						$m = null;
-						if (preg_match("/(\d+)P, (\d+)W, (\d+)E, (\d+)F/", $compilelogSummary, $m))
-						{
-							$warnings += $m[2];
-							$errors += $m[3];
-							$failures += $m[4];
-						}
+						$warnings += $m[2];
+						$errors += $m[3];
+						$failures += $m[4];
 					}
 				}
 			}
 
-			if ($icon == "")
-			{
-				if ($errors)
-				{
-					$icon = "not";
-					$result = "COMPILER ERROR";
-				}
-				else
-				{
-					$icon = ($warnings ? "check-maybe" : "check");
-					$result = "";
-				}
-			}
-
-		}
-		else 
-		{
-			// should we report this status? or is this problematic when mirrors are propagating?
-			// $icon = "not";
-			// $result = "MISSING FILES?";
-		}
-
-		// parse out the check/fail icons in index.html, if we haven't failed already
-		if ($icon != "not")
-		{
-			if (preg_match("/<font size=\"-1\" color=\"#FF0000\">skipped<\/font>/", $indexHTML))
-			{
-				$result = "Skipped";
-				$icon = "check-maybe";
-			}
-			else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
+			if ($errors)
 			{
 				$icon = "not";
-				$result = "FAILED";
-			}
-			else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
+				$result = "COMPILER ERROR";
+			} else
 			{
-				$result = "TESTS FAILED";
-				$icon = "check-tests-failed";
+				$icon = ($warnings ? "check-maybe" : "check");
+				$result = "";
+			}
+
+			//parse out the check/fail icons in index.html, if we haven't failed already
+			if ($icon != "not")
+			{
+				if (preg_match("/<font size=\"-1\" color=\"#FF0000\">skipped<\/font>/", $indexHTML))
+				{
+					$result = "Skipped";
+					$icon = "check-maybe";
+				} else
+					if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
+					{
+						$result = "FAILED";
+						$icon = "not";
+					} else
+						if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
+						{
+							$result = "TESTS FAILED";
+							$icon = "check-tests-failed";
+						}
+
 			}
 		}
 	}
@@ -601,6 +624,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 			else if ($result != "FAILED" && !$mightHavePassed)
 			{
+					$result = "FAILED";
 				$icon = "not";
 			}
 		}
@@ -621,10 +645,19 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	}
 	$link2 = ($isEMFserver ? "" : "http://download.eclipse.org/") . $link2;
 	
-	$out .= "<a href=\"$link2\">$result";
-	$out .= ($errors == 0 && $warnings == 0) && !$result ? "Success" : "";
-	$out .= ($errors > 0 || $warnings > 0) && $result ? ": " : "";
-	$out .= ($errors > 0 ? "$errors E, $warnings W" : ($warnings > 0 ? "$warnings W" : ""));
+	$out .= "<a href=\"$link2\">";
+	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
+	{
+		$out .= "Success";
+	} else
+	{
+		$out  .= $result ? $result . ": " : "";
+		$out2  = "";
+		$out2 .= ($errors > 0 ? "$errors E, " : "");
+		$out2 .= ($failures > 0 ? "$failures F, " : "");
+		$out2 .= ($warnings > 0 ? "$warnings W" : "");
+		$out  .= preg_replace("/^(.+), $/","$1",$out2);
+	}
 	$out .= "</a> <a href=\"$link\"><img src=\"http://" . $_SERVER["HTTP_HOST"] . "/$PR/images/$icon.gif\" alt=\"$icon\"/></a>";
 
 	return $out;
