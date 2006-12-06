@@ -1,4 +1,5 @@
 <?php
+
 # use this script to kick parsecvs.sh for a given set of project folders
 # should be usable as web and commandline api
 
@@ -17,7 +18,22 @@ $previewOnly = isset ($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0;
 ob_start();
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>Update Search CVS, Release Notes, Release News</h1>\n";
+if (!isset ($_GET["projects"]) || !$_GET["projects"] || !is_array($_GET["projects"]) || sizeof($_GET["projects"]) == 0)
+{
+	print "<h1>Update Search CVS - API Reference</h1>\n";
+
+	print '<div class="homeitem3col">' . "\n";
+
+	print "<h3>INPUT</h3>\n<ul><li>" . $script . "?projects[]=<i style=\"color:blue\">{cvs project 1}</i>&amp;projects[]=<i style=\"color:blue\">{cvs project 2}</i>&amp;...</li></ul><br/>\n";
+	print "<h3>EXAMPLE</h3>\n<ul><li>" . $script . "?projects[]=org.eclipse.uml2&amp;projects[]=org.eclipse.uml2.releng</li></ul><br/>\n";
+	print '<h3>OUTPUT</h3>' . "\n" . '<ul><li>starts a headless process; can run <a href="http://www.eclipse.org/modeling/mdt/news/checkReleaseExists.php">checkReleaseExists.php</a> task to see if done</li></ul><br/>' . "\n";
+
+	print "</div>\n";
+
+}
+print "<h1>Update Search CVS - Web UI</h1>\n";
+print '<div class="homeitem3col">' . "\n";
+print '<h3>Choose project(s) to update</h3>' . "\n";
 
 # given $_GET["projects"], pass to parsecvs.sh as headless exec task
 if (isset ($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"]))
@@ -61,13 +77,12 @@ if (isset ($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"]
 		if (!$addedTarget)
 		{
 			print "<li>Error: no valid projects added! Click back and try again.</li>";
-		}
-		else
+		} else
 		{
 			print "<li>$cmd</li>\n";
 			if (!$previewOnly)
 			{
-				print "<pre>"; 
+				print "<pre>";
 				exec($cmd);
 				print "</pre>";
 			}
@@ -79,53 +94,50 @@ if (isset ($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"]
 		}
 	}
 } else # if no $_GET["projects"] value, present UI to multi-select targets.
-	{
+{
 ?>
 
-	<h3>Choose project(s) to update:</h3>
-	<div id="searchdiv">
+	<blockquote>
 		<form action="" method="get" name="runUpdate">
 			<select size="10" multiple="multiple" id="project" name="projects[]">
 			<?php
 
 
-	$result = wmysql_query("SELECT `project` FROM `cvsfiles` GROUP BY `project`");
-	if ($result)
-	{
-		print '<option selected="selected" value="0">-- Select a project --</option>' . "\n";
-		while ($row = mysql_fetch_row($result))
+		$result = wmysql_query("SELECT `project` FROM `cvsfiles` GROUP BY `project`");
+		if ($result)
 		{
-			if (isset ($row[0]) && $row[0] && false !== strpos($row[0], "org.eclipse."))
+			print '<option selected="selected" value="0">-- Select a project --</option>' . "\n";
+			while ($row = mysql_fetch_row($result))
 			{
-				print "<option value=\"" . $row[0] . "\">$row[0]</option>\n";
+				if (isset ($row[0]) && $row[0] && false !== strpos($row[0], "org.eclipse."))
+				{
+					print "<option value=\"" . $row[0] . "\">$row[0]</option>\n";
+				}
 			}
+		} else
+		{
+			print '<option selected="selected" value="0">Error: cannot connect to database.</option>' . "\n";
 		}
-	} else
-	{
-		print '<option selected="selected" value="0">Error: cannot connect to database.</option>' . "\n";
-	}
 ?>
 			</select>
-			<br/>
-			<br/>
 			<input type="hidden" name="previewOnly" value="<?php echo $previewOnly; ?>"
 			<input type="submit" value="<?php echo $previewOnly ? "Preview" : "Go!"; ?>"/>
 		</form>
-	</div>
+	</blockquote>
 
 <?php
 
 
-}
-print "</div>\n";
-print "</div>\n";
+	}
+	print "</div>\n";
+	print "</div>\n";
 
-$html = ob_get_contents();
-ob_end_clean();
+	$html = ob_get_contents();
+	ob_end_clean();
 
-$pageTitle = isset ($pageTitle) ? $pageTitle : "Eclipse Modeling - Query Tools";
-$pageKeywords = "";
-$pageAuthor = "Nick Boldt";
+	$pageTitle = isset ($pageTitle) ? $pageTitle : "Eclipse Modeling - Update Search CVS";
+	$pageKeywords = "";
+	$pageAuthor = "Nick Boldt";
 
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
