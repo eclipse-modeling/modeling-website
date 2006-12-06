@@ -1,6 +1,11 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/scripts.php");
+$isBuildServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
+$isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+internalUseOnly(); 
+
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 # use this script to kick parsecvs.sh for a given set of project folders

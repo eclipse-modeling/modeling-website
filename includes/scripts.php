@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.12 2006/12/05 23:41:52 nickb Exp $ 
+// $Id: scripts.php,v 1.13 2006/12/06 21:38:18 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -312,8 +312,11 @@ function debug($str, $level = 0)
 
 function isAuthorized()
 {
-	global $isEMFserver;
+	global $isEMFserver, $isBuildServer;
 	
+	if ($isBuildServer) {
+		return true;
+	}
 	// must be on a build server and must not be on www.eclipse.org
 	if ($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html") 
 	{
