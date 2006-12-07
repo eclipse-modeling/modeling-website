@@ -234,7 +234,7 @@ print "<div class=\"sideitem\">\n";
 print "<h6>Sort</h6>\n";
 $newsort = ($sortBy == "date" ? "type" : "date");
 print "<ul>\n";
-print "<li><a href=\"?showAll=$showAll&amp;showMax=$showMax&amp;sortBy=$newsort\">By " . ucfirst($newsort) . "</a></li>\n";
+print "<li><a href=\"?project=$projct&amp;showAll=$showAll&amp;showMax=$showMax&amp;sortBy=$newsort\">By " . ucfirst($newsort) . "</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
