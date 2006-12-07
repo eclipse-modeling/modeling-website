@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.13 2006/12/06 21:38:18 nickb Exp $ 
+// $Id: scripts.php,v 1.14 2006/12/07 22:56:07 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -181,18 +181,31 @@ function getNews($lim, $key)
 			print "<p>\n";
 			if (strtotime($regs[1][$i]) > strtotime("-3 weeks"))
 			{
-				print '<img src="/modeling/images/new.gif" alt="New!" width="31" height="14"/>';
+				print '<img src="/modeling/images/new.gif" alt="New!"/> ';
 			}
 			$app = (date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");
-			print '<b>' . date(($key == "whatsnew" ? "M" : "F") . '\&\n\b\s\p\;j\<\s\u\p\>S\<\/\s\u\p\>' . $app, strtotime($regs[1][$i])) . '</b> - ' . "\n";
+			print date(($key == "whatsnew" ? "M" : "F") . '\&\n\b\s\p\;jS' . $app, strtotime($regs[1][$i])) . ' - ' . "\n";
 			print $regs[3][$i];
 			print "</p>\n";
 		}
 	}
 }
 
-function build_news($cvsprojs, $cvscoms, $proj, $limit = 3)
+function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 {
+	global $projects, $PR;
+
+	$types = array(
+		"I" => "integration",
+		"M" => "maintenance",
+		"N" => "nightly",
+		"R" => "release",
+		"S" => "stable"
+	);
+
+	$limit = ($limit >= 0 ? "LIMIT $limit" : "");
+
+	$projectsf = array_flip($cvsprojs);
 	$q = array();
 
 	foreach (array_keys($cvsprojs) as $z)
@@ -219,10 +232,22 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 3)
 		$where = join(",", $q);
 	}
 
-	$result = wmysql_query("SELECT `project`, `vanityname`, `branch`, `buildtime`, `type` FROM `releases` WHERE (`project`, `component`) IN($where) ORDER BY `buildtime` DESC LIMIT $limit");
+	$result = wmysql_query("SELECT `project`, `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) ORDER BY `buildtime` DESC $limit");
 	while ($row = mysql_fetch_row($result))
 	{
-		print "<p>$row[0] $row[1] $row[4] build ($row[2]) available</p>";
+		$img = ($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");
+		$notes = "<a href=\"/$PR/news/relnotes.php?project=" . $projectsf[$row[0]] . "&amp;version=$row[1]\">";
+		$link = "<a href=\"/$PR/downloads/?showAll=1&amp;project=" . $projectsf[$row[0]] . "&amp;hlbuild=$row[6]#$row[6]\">";
+		$branch = ($row[2] == "HEAD" ? "" : "<i>$row[2]</i> ");
+		$type = (preg_match("/maintenance$/", $row[2]) ? "" : $types[$row[4]] . " ");
+		if ($row[4] == "R")
+		{
+			print "<p>$img $row[3] - $notes" . strtoupper($projectsf[$row[0]]) . " $row[1]</a> has been released! Get it ${link}here</a>.</p>";
+		}
+		else
+		{
+			print "<p>$img $row[3] - " . strtoupper($projectsf[$row[0]]) . " $branch${type}build $notes$row[1]</a> is available for ${link}download</a>.</p>";
+		}
 	}
 }
 
