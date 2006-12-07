@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -13,8 +13,10 @@ $Nav->setLinkList(null);
 $PR = "modeling/mdt";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
 $rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
 $downurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
@@ -22,21 +24,21 @@ $bugurl = "https://bugs.eclipse.org";
 
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
-$cvsprojs = array(
+$cvsprojs = array (
 	"uml2-uml" => "org.eclipse.uml2",
 	"xsd" => "org.eclipse.xsd"
 );
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
-$cvscoms = array(
-	"org.eclipse.emft" => array(
+$cvscoms = array (
+	"org.eclipse.emft" => array (
 		"uml2-ocl" => "ocl",
 		"eodm" => "eodm"
 	)
 );
 
-$projects = array(
+$projects = array (
 	"EODM" => "eodm",
 	"UML2" => "uml2",
 	"UML2 OCL" => "uml2-ocl",
@@ -45,7 +47,7 @@ $projects = array(
 	"XSD" => "xsd"
 );
 
-$level = array(
+$level = array (
 	"eodm" => 2,
 	"uml2" => 2,
 	"uml2-ocl" => 3,
@@ -53,14 +55,19 @@ $level = array(
 	"uml2-uml" => 3,
 	"xsd" => 2
 );
- 
-$extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("uml2", "uml2-tools"); //projects with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array("uml2"); //projects without newsgroups
+
+$extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
+$nodownloads = array (
+	"uml2",
+	"uml2-tools"
+); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array (
+	"uml2"
+); //projects without newsgroups
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
-$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
 
 $Nav->addNavSeparator("MDT", "$rooturl/");
 foreach (array_keys($projects) as $z)
@@ -87,11 +94,11 @@ $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Model_Development_
 $Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.mdt" . $newsgroupSuffix, "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
-$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
-$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=MDT" . (isset($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
+$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset ($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
+$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=MDT" . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-unset($bugcoms);
+unset ($bugcoms);
 
-include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php"; 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 ?>

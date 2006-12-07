@@ -1,7 +1,5 @@
 <?php
-$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
-
-if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -13,25 +11,27 @@ else
 $Nav->setLinkList(null);
 
 $isEMFserver = (preg_match("/emf(?:\.torolab\.ibm\.com)?/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
 $baseurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
 $rooturl = "$baseurl/emf";
 $bugurl = "https://bugs.eclipse.org";
 
-$projects = array(
+$projects = array (
 	"EMF, SDO &amp; XSD" => "",
 	"EMF &amp; SDO" => "emf",
 	"XSD" => "xsd"
 );
 
-$cvsprojs = array(
+$cvsprojs = array (
 	"emf" => "org.eclipse.emf",
 	"xsd" => "org.eclipse.xsd"
 );
 
-$cvscoms = array();
+$cvscoms = array ();
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
@@ -63,5 +63,5 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=prod
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMF", "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-include_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php"); 
+include_once ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
 ?>
