@@ -1,9 +1,15 @@
 <?php
-if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php"))
+if (is_file($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/parsecvs-dbaccess.php") && preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
+{
+	require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/parsecvs-dbaccess.php");
+	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
+	mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
+}
+else if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php"))
 {
 	require_once $_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php";
 	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
-	mysql_select_db(isset ($db) && $db ? $db : "modeling", $connect) or die(mysql_error());
+	mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
 }
 else
 {
