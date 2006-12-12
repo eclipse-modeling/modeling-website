@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.14 2006/12/07 22:56:07 nickb Exp $ 
+// $Id: scripts.php,v 1.15 2006/12/12 21:25:17 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -206,23 +206,25 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 	$limit = ($limit >= 0 ? "LIMIT $limit" : "");
 
 	$projectsf = array_flip($cvsprojs);
+	foreach ($cvscoms as $z)
+	{
+		$projectsf = array_merge($projectsf, array_flip($z));
+	}
 	$q = array();
 
 	foreach (array_keys($cvsprojs) as $z)
 	{
-		$q[$z] = "('$cvsprojs[$z]', '')";
+		$q[$z] = "(CONVERT('$cvsprojs[$z]' USING utf8), CONVERT('' USING utf8))";
 	}
 
 	foreach (array_keys($cvscoms) as $z)
 	{
 		foreach (array_keys($cvscoms[$z]) as $y)
 		{
-			$q[$y] = "('$z', '{$cvscoms[$z][$y]}')";
+			$q[$y] = "(CONVERT('$z' USING utf8), CONVERT('{$cvscoms[$z][$y]}' USING utf8))";
 		}
 	}
 
-	$tmp = array_keys($q);
-	$proj = (isset($q[$proj]) ? $proj : $tmp[0]);
 	if ($proj && isset($q[$proj]))
 	{
 		$where = $q[$proj];
@@ -232,7 +234,7 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 		$where = join(",", $q);
 	}
 
-	$result = wmysql_query("SELECT `project`, `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) ORDER BY `buildtime` DESC $limit");
+	$result = wmysql_query("SELECT IF(`component` != '', `component`, `project`), `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) AND `vanityname` != '0.0.0' ORDER BY `buildtime` DESC $limit");
 	while ($row = mysql_fetch_row($result))
 	{
 		$img = ($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");

@@ -1,6 +1,7 @@
 <?php
-
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
 
@@ -56,9 +57,17 @@ foreach ($projects as $z)
 <div id="rightcolumn">
 	<div class="sideitem">
 		<h6>News</h6>
-		<?php getNews(3, "whatsnew", "vert"); ?>
+		<?php getNews(4, "whatsnew", "vert"); ?>
 		<ul>
 			<li><a href="/<?php print $PR; ?>/news-whatsnew.php">Older news</a></li>
+		</ul>
+	</div>
+
+	<div class="sideitem">
+		<h6>Build News</h6>
+		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
+		<ul>
+			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Older build news</a></li>
 		</ul>
 	</div>
 
@@ -85,4 +94,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.7 2006/10/30 19:08:02 nickb Exp $ -->
+<!-- $Id: index.php,v 1.8 2006/12/12 21:25:17 nickb Exp $ -->
