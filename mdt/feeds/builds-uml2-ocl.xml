@@ -4,11 +4,68 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ocl Builds</title>
   <link href="http://download.eclipse.org/technology/emft/feeds/builds-ocl.xml" rel="self" type="application/atom+xml"/>
-  <updated>2006-11-21T21:22:07Z</updated>
+  <updated>2006-12-13T03:54:45Z</updated>
   <author>
     <name>ocl Build Team</name>
   </author>
   <id>http://download.eclipse.org/technology/emft/feeds/builds-ocl.xml</id>
+  <entry>
+    <title>[announce] ocl I200612071439 (1.1.0.I200612071439) is available</title>
+    <link href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612071439#I200612071439"/>
+    <id>http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612071439#I200612071439</id>
+    <updated>2006-12-13T03:54:45Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612071439" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612071439#I200612071439" type="I" version="1.1.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612071439/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/technology/emft/updates/</update>
+        <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?proj=ocl&amp;version=1.1.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-I200612071439.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/I200612071439/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20061205-1200/eclipse-SDK-I20061205-1200-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.3.0/I200612071030/emf-sdo-xsd-SDK-I200612071030.zip</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/orbit/downloads/drops/1.0.0/I200612060942/orbit-lpgjavaruntime-1.0.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] ocl I200612051208 (1.1.0.I200612051208) is available</title>
+    <link href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612051208#I200612051208"/>
+    <id>http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612051208#I200612051208</id>
+    <updated>2006-12-13T03:54:33Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612051208" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612051208#I200612051208" type="I" version="1.1.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612051208/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/technology/emft/updates/</update>
+        <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?proj=ocl&amp;version=1.1.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-I200612051208.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/I200612051208/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200611300000/emf-sdo-xsd-SDK-I200611300000.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] ocl 1.1M3 (1.1.0.S200611160858) is available</title>
     <link href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200611160858#S200611160858"/>
