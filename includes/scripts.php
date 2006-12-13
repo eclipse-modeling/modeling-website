@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.15 2006/12/12 21:25:17 nickb Exp $ 
+// $Id: scripts.php,v 1.16 2006/12/13 23:33:46 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -369,7 +369,7 @@ function internalUseOnly()
 	global $theme;
 	if (!isAuthorized())
 	{
-		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include_once($App->getProjectCommon());
 		ob_start(); ?>
 	
 		<div id="midcolumn">
