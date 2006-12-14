@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.18 2006/12/14 03:57:33 nickb Exp $ 
+// $Id: scripts.php,v 1.19 2006/12/14 04:09:12 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -237,21 +237,29 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 	}
 
 	$result = wmysql_query("SELECT IF(`component` != '', `component`, `project`), `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) AND `vanityname` != '0.0.0' ORDER BY `buildtime` DESC $limit");
-	while ($row = mysql_fetch_row($result))
+	
+	if ($result)
 	{
-		$img = ($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");
-		$notes = "<a href=\"/$PR/news/relnotes.php?project=" . $projectsf[$row[0]] . "&amp;version=$row[1]\">";
-		$link = "<a href=\"/$PR/downloads/?showAll=1&amp;project=" . $projectsf[$row[0]] . "&amp;hlbuild=$row[6]#$row[6]\">";
-		$branch = ($row[2] == "HEAD" ? "" : "<i>$row[2]</i> ");
-		$type = (preg_match("/maintenance$/", $row[2]) ? "" : $types[$row[4]] . " ");
-		if ($row[4] == "R")
+		while ($row = mysql_fetch_row($result))
 		{
-			print "<p>$img $row[3] - $notes" . strtoupper($projectsf[$row[0]]) . " $row[1]</a> has been released! Get it ${link}here</a>.</p>";
+			$img = ($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");
+			$notes = "<a href=\"/$PR/news/relnotes.php?project=" . $projectsf[$row[0]] . "&amp;version=$row[1]\">";
+			$link = "<a href=\"/$PR/downloads/?showAll=1&amp;project=" . $projectsf[$row[0]] . "&amp;hlbuild=$row[6]#$row[6]\">";
+			$branch = ($row[2] == "HEAD" ? "" : "<i>$row[2]</i> ");
+			$type = (preg_match("/maintenance$/", $row[2]) ? "" : $types[$row[4]] . " ");
+			if ($row[4] == "R")
+			{
+				print "<p>$img $row[3] - $notes" . strtoupper($projectsf[$row[0]]) . " $row[1]</a> has been released! Get it ${link}here</a>.</p>";
+			}
+			else
+			{
+				print "<p>$img $row[3] - " . strtoupper($projectsf[$row[0]]) . " $branch${type}build $notes$row[1]</a> is available for ${link}download</a>.</p>";
+			}
 		}
-		else
-		{
-			print "<p>$img $row[3] - " . strtoupper($projectsf[$row[0]]) . " $branch${type}build $notes$row[1]</a> is available for ${link}download</a>.</p>";
-		}
+	}
+	else
+	{
+		print "<p>Sorry, can't access database.</p>";
 	}
 }
 
