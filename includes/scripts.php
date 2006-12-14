@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.19 2006/12/14 04:09:12 nickb Exp $ 
+// $Id: scripts.php,v 1.20 2006/12/14 21:16:48 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -152,11 +152,11 @@ function w($s, $br = "") // shortcut for echo() with second parameter: "add brea
 	print $s . $br; 
 }
 
-function getNews($lim, $key)
+function getNews($lim, $key, $xml = "") // allow overriding in case the file's not in /$PR/
 {
 	global $PR;
 
-	$xml = file_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"); 
+	$xml = $xml ? $xml : file_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"); 
 	$news_regex = "%
 		^<news\ date=\"([^\"]+)\"(?:\ showOn=\"([^\"]+)\")?>$\\n
 		((?:^[^<].+$\\n)+)
