@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.17 2006/12/14 03:55:30 nickb Exp $ 
+// $Id: scripts.php,v 1.18 2006/12/14 03:57:33 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -272,7 +272,6 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 	$pwd = getPWD();
 
 	$projs = loadDirSimple($pwd, ".*", "d"); // locally available
-	print_r($projs);
 	foreach ($nodownloads as $z)
 	{
 		/* php <4.2.0 returns NULL on array_search() failure, but php >=4.2.0 returns FALSE on array_search() failure, so don't check that */
