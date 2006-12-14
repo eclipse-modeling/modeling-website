@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.16 2006/12/13 23:33:46 nickb Exp $ 
+// $Id: scripts.php,v 1.17 2006/12/14 03:55:30 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -18,16 +18,18 @@ function PWD_check($PWD, $suf)
 	return (!is_dir($PWD) || !is_readable($PWD) || ($suf == "logs" && !is_writable($PWD)));
 }
 
-function getPWD($suf = "")
+function getPWD($suf = "", $doDynCheck = true)
 {
 	global $PR;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 
-	//dynamic assignments
-	$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
-
-	PWD_debug($PWD, $suf, "<!-- Found[1dyn]: PWD -->");
-
+	if ($doDynCheck) 
+	{
+		//dynamic assignments
+		$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
+		PWD_debug($PWD, $suf, "<!-- Found[1dyn]: PWD -->");
+	}
+	
 	//static assignments
 	if (PWD_check($PWD, $suf))
 	{
@@ -270,6 +272,7 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 	$pwd = getPWD();
 
 	$projs = loadDirSimple($pwd, ".*", "d"); // locally available
+	print_r($projs);
 	foreach ($nodownloads as $z)
 	{
 		/* php <4.2.0 returns NULL on array_search() failure, but php >=4.2.0 returns FALSE on array_search() failure, so don't check that */
@@ -278,7 +281,7 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 			unset($projs[$s]);
 		}
 	}
-
+	
 	return array_intersect(array_merge($projects, $extraprojects), $projs);
 }
 
