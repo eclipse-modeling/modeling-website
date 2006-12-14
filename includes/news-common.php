@@ -14,8 +14,8 @@ function allnews($project, $cvsprojs, $cvscoms, $proj)
 	getNews(-1, "all", "vert");
 	print "</div>\n";
 
-	print "<div class=\"homeitem3col\">\n";
-	print "<h3>All Build News<a name=\"build\"></a></h3>\n";
+	print "<a name=\"build\"></a><div class=\"homeitem3col\">\n";
+	print "<h3>All Build News</h3>\n";
 	build_news($cvsprojs, $cvscoms, $proj, -1);
 	print "</div>\n";
 
