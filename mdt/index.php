@@ -57,7 +57,7 @@ foreach ($projects as $z)
 <div id="rightcolumn">
 	<div class="sideitem">
 		<h6>News</h6>
-		<?php getNews(4, "whatsnew", "vert"); ?>
+		<?php getNews(4, "whatsnew"); ?>
 		<ul>
 			<li><a href="/<?php print $PR; ?>/news-whatsnew.php">Older news</a></li>
 		</ul>
@@ -94,4 +94,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.8 2006/12/12 21:25:17 nickb Exp $ -->
+<!-- $Id: index.php,v 1.9 2006/12/15 23:33:09 nickb Exp $ -->

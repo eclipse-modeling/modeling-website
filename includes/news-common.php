@@ -11,7 +11,7 @@ function allnews($project, $cvsprojs, $cvscoms, $proj)
 
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3>All News</h3>\n";
-	getNews(-1, "all", "vert");
+	getNews(-1, "all");
 	print "</div>\n";
 
 	print "<a name=\"build\"></a><div class=\"homeitem3col\">\n";
