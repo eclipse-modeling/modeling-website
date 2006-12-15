@@ -40,7 +40,6 @@ $cvscoms = array (
 
 $projects = array (
 	"EODM" => "eodm",
-	"UML2" => "uml2",
 	"UML2 OCL" => "uml2-ocl",
 	"UML2 UML" => "uml2-uml",
 	"UML2 Tools" => "uml2-tools",
@@ -49,20 +48,17 @@ $projects = array (
 
 $level = array (
 	"eodm" => 2,
-	"uml2" => 2,
-	"uml2-ocl" => 3,
-	"uml2-tools" => 3,
-	"uml2-uml" => 3,
+	"uml2-ocl" => 2,
+	"uml2-tools" => 2,
+	"uml2-uml" => 2,
 	"xsd" => 2
 );
 
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array (
-	"uml2",
 	"uml2-tools"
 ); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (
-	"uml2"
 ); //projects without newsgroups
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
@@ -72,7 +68,7 @@ $proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . "
 $Nav->addNavSeparator("MDT", "$rooturl/");
 foreach (array_keys($projects) as $z)
 {
-	$Nav->addCustomNav(preg_replace("/^UML2 /", "", $z), "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
 $newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace("-", ".", $proj) : ""); // eg., .uml2.uml
