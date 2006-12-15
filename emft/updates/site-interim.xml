@@ -8372,6 +8372,31 @@
 		<category name="emft jet SDK 0.7.2 M200612150928"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.100.v200612150914.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.100.v200612150914">
+		<category name="emft jet SDK 0.8.0 I200612150914"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.100.v200612150914.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.100.v200612150914">
+		<category name="emft jet SDK 0.8.0 I200612150914"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.100.v200612150914.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.100.v200612150914">
+		<category name="emft jet SDK 0.8.0 I200612150914"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.100.v200612150914.jar" patch="false" id="org.eclipse.jet.source" version="0.7.100.v200612150914">
+		<category name="emft jet SDK 0.8.0 I200612150914"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.100.v200612150914.jar" patch="false" id="org.eclipse.jet" version="0.7.100.v200612150914">
+		<category name="emft jet SDK 0.8.0 I200612150914"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -9805,6 +9830,12 @@ This category contains the features of the 1.1.0 I200612141744 build of emft tra
 	<category-def label="emft jet SDK 0.7.2 M200612150928" name="emft jet SDK 0.7.2 M200612150928">
 		<description>
 This category contains the features of the 0.7.2 M200612150928 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.8.0 I200612150914" name="emft jet SDK 0.8.0 I200612150914">
+		<description>
+This category contains the features of the 0.8.0 I200612150914 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
