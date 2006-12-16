@@ -71,6 +71,17 @@ foreach ($projects as $z)
 		</ul>
 	</div>
 
+	<div class="sideitem">
+		<h6>Related links</h6>
+		<ul>
+			<li><a href="http://www.eclipse.org/modeling">Eclipse Modeling</a></li>
+			<li><a href="http://www.eclipse.org/emf">EMF</a>, <a href="http://www.eclipse.org/emft">EMF Tech (EMFT)</a></li>
+			<li><a href="http://www.eclipse.org/emf/docs.php?doc=docs/UsingUpdateManager/UsingUpdateManager.html">Using Update Manager</a></li>
+			<li><a href="http://www.eclipse.org/newsgroups">Eclipse newsgroups</a></li>
+			<li><a href="http://wiki.eclipse.org/index.php/EMFT_Procedures">MDT Build &amp; Promote Procedures</a></li>
+		</ul>
+	</div>
+	
 	<?php
 	if ($isEMFserver)
 	{
@@ -94,4 +105,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.9 2006/12/15 23:33:09 nickb Exp $ -->
+<!-- $Id: index.php,v 1.10 2006/12/16 01:18:44 nickb Exp $ -->
