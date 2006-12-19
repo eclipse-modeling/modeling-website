@@ -76,6 +76,14 @@ $newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace(
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
+$buildtypes = array(
+	"R" => "Release",
+	"S" => "Stable",
+	"I" => "Integration",
+	"M" => "Maintenance",
+	"N" => "Nightly"
+);
+
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 

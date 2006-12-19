@@ -1,9 +1,15 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-function update_manager($shortname, $longname)
+function update_manager($shortname, $longname, $extra_PRS = array())
 {
 	global $App, $Nav, $Menu, $theme, $PR;
+
+	$PRS = array(
+		$shortname => $PR,
+	); 
+
+	$PRS = array_merge($PRS, $extra_PRS);
 
 	ob_start();
 	?>
@@ -13,8 +19,12 @@ function update_manager($shortname, $longname)
 		
 		</p>
 		
-		<p><i style="color:red"><b>NOTE:</b> not all MDT projects have migrated to the MDT Update Manager site yet, so 
-		you'll have to use the older sites until that time.</i></p>
+		<?php
+		if (function_exists("notes"))
+		{
+			notes();
+		}
+		?>
 		
 		<ul>
 			<li>
@@ -29,20 +39,19 @@ function update_manager($shortname, $longname)
 									<li>
 										Search for new features to install
 										<ul>
-										<?php $PRS = array (
-												$shortname => $PR,
-												"Tools/UML2 (UML2 UML)" => "tools/uml2",
-												"Tools/EMF (XSD)" => "tools/emf",
-												"Technology/EMFT (EODM, UML2-OCL)" => "technology/emft"
-											); 
-											foreach ($PRS as $label => $thisPR) { ?> 
+										<?php
+										foreach ($PRS as $label => $thisPR)
+										{
+										?> 
 											<li>
 											Add Update Site...<br/>
 											* Name: <b><?php print $label; ?> Update Manager Site</b><br/>
 											* URL: <b><a href="http://download.eclipse.org/<?php print $thisPR; ?>/updates/site.xml" target="_um">http://download.eclipse.org/<?php print $thisPR; ?>/updates/site.xml</a></b> (Releases)<br/>
 											(or): <b><a href="http://download.eclipse.org/<?php print $thisPR; ?>/updates/site-interim.xml" target="_um">http://download.eclipse.org/<?php print $thisPR; ?>/updates/site-interim.xml</a></b> (I, M and S Builds)
 											</li>
-										<?php } ?>
+										<?php
+										}
+										?>
 										</ul>
 									</li>
 								</ul>

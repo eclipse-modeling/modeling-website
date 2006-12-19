@@ -1,5 +1,5 @@
 <?php
-if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -14,35 +14,41 @@ $isEMFserver = (preg_match("/emf(?:\.torolab\.ibm\.com)?/", $_SERVER["SERVER_NAM
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
 $baseurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
-$rooturl = "$baseurl/emf";
+$rooturl = "$baseurl/modeling/emf";
 $bugurl = "https://bugs.eclipse.org";
 
-$projects = array (
-	"EMF, SDO &amp; XSD" => "",
-	"EMF &amp; SDO" => "emf",
-	"XSD" => "xsd"
+$projects = array(
+	"EMF &amp; SDO" => "emf"
 );
 
-$cvsprojs = array (
-	"emf" => "org.eclipse.emf",
-	"xsd" => "org.eclipse.xsd"
+$cvsprojs = array(
+	"emf" => "org.eclipse.emf"
 );
 
-$cvscoms = array ();
+$cvscoms = array();
 
+$extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
+$nodownloads = array(); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
-$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
 $PR = "modeling/emf";
 
+$buildtypes = array(
+	"R" => "Release",
+	"S" => "Stable",
+	"I" => "Integration",
+	"M" => "Maintenance",
+	"N" => "Nightly"
+);
+
 // this isn't quite the same as EMFT or MDT... yet
-$Nav->addNavSeparator("EMF", "$rooturl/emf.php");
-$Nav->addCustomNav("SDO", "$rooturl/sdo.php", "_self", 2);
-$Nav->addCustomNav("XSD", "$rooturl/xsd.php", "_self", 2);
+$Nav->addNavSeparator("EMF", "$rooturl/?project=emf");
+$Nav->addCustomNav("SDO", "$rooturl/?project=sdo", "_self", 2);
 
 $Nav->addNavSeparator("Downloads", "$rooturl/downloads/");
 $Nav->addCustomNav("Installation", "$rooturl/downloads/install.php", "_self", 2);
@@ -50,9 +56,9 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
-$Nav->addCustomNav("FAQ", "$rooturl/faq/faq.php", "_self", 2);
-$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&version=HEAD", "_self", 2);
-$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emf/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
+$Nav->addCustomNav("FAQ", "$rooturl/faq/", "_self", 2);
+$Nav->addCustomNav("Release Notes", "$rooturl/news/relnotes.php?project=emf&version=HEAD", "_self", 2);
+$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Eclipse_Modeling_Framework", "_self", 2);
@@ -63,5 +69,5 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=prod
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMF", "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-include_once ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
+include_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
 ?>

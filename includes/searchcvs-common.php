@@ -35,6 +35,14 @@ if (!isset($_GET["q"]))
 	$_GET["q"] = "";
 }
 $q = (get_magic_quotes_gpc() ? $_GET["q"] : addslashes($_GET["q"]));
+
+/* needs db write access
+$ip = $_SERVER["REMOTE_ADDR"];
+$referer = (isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "");
+$pagename = $_SERVER["PHP_SELF"];
+wmysql_query("INSERT INTO `stats` SET `q` = '$q', `ip` = '$ip', `referer` = '$referer', `time` = NOW(), `page` = '$pagename', `pagenum` = '$page'");
+*/
+
 $extra = array("where" => array(), "having" => array());
 foreach ($extraf as $z)
 {
