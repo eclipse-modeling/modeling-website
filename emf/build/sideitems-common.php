@@ -1,11 +1,11 @@
 <?php 
-if ($isEMFserver)
+if ($isEMFserver && ($proj == "/emf" || $proj == "emf" || !$proj))
 { ?>
 <div class="sideitem">
 	<h6>Actions</h6>
 	<ul>
 		<li><a href="http://emf.torolab.ibm.com/emf/build/?project=<?php print $proj; ?>">New Build</a></li>
-		<?php if ($proj == "emf") { ?><li><a href="http://emf.torolab.ibm.com/emf/build/patch.php">New Test</a></li><?php } ?>
+		<li><a href="http://emf.torolab.ibm.com/emf/build/patch.php">New Test</a></li>
 		<li><a href="http://emf.torolab.ibm.com/emf/build/promo.php?project=<?php print $proj; ?>">Promote</a></li>
 	</ul>
 </div>
@@ -20,7 +20,7 @@ if ($isEMFserver)
 <?php 
 } 
 
-if ($isEMFserver && $proj == "emf")
+if ($isEMFserver && ($proj == "/emf" || $proj == "emf" || !$proj))
 { ?>
 <div class="sideitem">
 	<h6>Tests</h6>

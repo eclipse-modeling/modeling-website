@@ -10,7 +10,7 @@ else
 
 $Nav->setLinkList(null);
 
-$isEMFserver = (preg_match("/emf(?:\.torolab\.ibm\.com)?/", $_SERVER["SERVER_NAME"]));
+$isEMFserver = (preg_match("/emf(?:\.torolab\.ibm\.com)?$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
