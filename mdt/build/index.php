@@ -48,8 +48,6 @@ $projct = preg_replace("#^/#", "", $proj);
 		$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt" : 
 		$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . "/" . "build.options.txt"; // read only
 	
-
-	$buildRequestsFileTXT = "/home/www-data/build"."/requests/build.requests.txt";	// set filename to "" to disable tabbed TXT file
 	$dependenciesURLsFile = "/home/www-data/build"."/requests/dependencies.urls.txt"; // read-write, one shared file
 
 	/** done customizing, shouldn't have to change anything below here **/
@@ -435,10 +433,6 @@ setTimeout('doOnLoadDefaults()',1000);
 
 	<?php 
 		print "<ul>\n";
-		if ($buildRequestsFileTXT) {
-			$txtH = "ID\tDate\tTime";
-			$txt = $ID."\t".date("Y/m/d\tH:i"); 
-		}
 		$i=2;
 		foreach ($_POST as $k => $v) {
 			if (strstr($k,"build_") && trim($v)!="" && !strstr($k,"_Sel") ) { 
@@ -449,26 +443,13 @@ setTimeout('doOnLoadDefaults()',1000);
 					"<b>".$lab.":</b>" . "<ul>\n<li><small>".join("</small></li>\n<li><small>",$val)."</small></li>\n</ul>\n" : 
 					"<div>".$val."</div>" . "<b>".$lab.":</b>");
 				print "</li>\n";
-				if ($buildRequestsFileTXT) { $txtH.= ($i>0?"\t":"") . $lab; $txt .= ($i>0?"\t":"") . (is_array($val)? join(",",$val):$val); }
 				$i++;
 			}
 		} 
 
 		print "<li><div>".$_SERVER["REMOTE_ADDR"]."</div><b>Your IP:</b></li>\n"; 
 		print "</ul>\n";
-		if ($buildRequestsFileTXT) { $txtH.="\tUser IP\n"; $txt .="\t".$_SERVER["REMOTE_ADDR"]."\n"; }
-		
 		print "</ul>\n";
-
-		// then dump this data to a tabbed-text file for tracking/reporting
-		if ($buildRequestsFileTXT) {
-			if (!file_exists($buildRequestsFileTXT) || filesize($buildRequestsFileTXT)<5) { $txt = $txtH.$txt;	} // new file? do header
-			$f = fopen($buildRequestsFileTXT,"a");
-			fputs($f,$txt);
-			fclose($f);
-		}
-
-		// push this file to cvs - can't be done automatically cuz of file perms. (www-data doesn't have access to CVS) - isntead, add instructions on email & output page
 
 		$branches = getBranches($options);
 
