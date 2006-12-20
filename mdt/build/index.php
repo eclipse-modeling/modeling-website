@@ -463,7 +463,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		$preCmd = 'mkdir -p '.$workDir.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
 		# TODO: this only works with UML2 UML; eventually, will use a common start.sh for all projects
-		$cmd = ('bash -c "exec nohup setsid '.$workDir.$proj.'/scripts/start.sh'.
+		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.$proj.'/scripts/start.sh'.
 			' -proj '.$projct.
 			' -branch '.($_POST["build_CVS_Branch"]!=""?$_POST["build_CVS_Branch"]:$_POST["build_CVS_Branch"]).
 			' -version '.$BR.

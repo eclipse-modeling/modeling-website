@@ -49,7 +49,7 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 		print "<ul>\n";
 
 		# running as user wwwrun
-		$cmd = '/bin/bash -c "exec nohup setsid /shared/modeling/searchcvs/parsecvs_web.sh';
+		$cmd = '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid /shared/modeling/searchcvs/parsecvs_web.sh';
 		$addedTarget = false;
 		foreach ($_GET["projects"] as $targ)
 		{
