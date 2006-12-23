@@ -356,6 +356,280 @@
 		<category name="UML2 UML SDK 2.0.2 M200610251409"/>
 	</feature>
 
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200611161552.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200611161552">
+		<category name="UML2 SDK 2.1M3 S200611161552"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200611161552.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200611161552">
+		<category name="UML2 SDK 2.1M3 S200611161552"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200611161552.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200611161552">
+		<category name="UML2 SDK 2.1M3 S200611161552"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200611161552.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200611161552">
+		<category name="UML2 SDK 2.1M3 S200611161552"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200611161552.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200611161552">
+		<category name="UML2 SDK 2.1M3 S200611161552"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.0.2.v200611162216.jar" patch="false" id="org.eclipse.uml2.doc" version="2.0.2.v200611162216">
+		<category name="UML2 SDK 2.0.3 M200611162216"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.0.2.v200611162216.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.0.2.v200611162216">
+		<category name="UML2 SDK 2.0.3 M200611162216"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.0.2.v200611162216.jar" patch="false" id="org.eclipse.uml2.examples" version="2.0.2.v200611162216">
+		<category name="UML2 SDK 2.0.3 M200611162216"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.0.3.v200611162216.jar" patch="false" id="org.eclipse.uml2.source" version="2.0.3.v200611162216">
+		<category name="UML2 SDK 2.0.3 M200611162216"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.0.3.v200611162216.jar" patch="false" id="org.eclipse.uml2" version="2.0.3.v200611162216">
+		<category name="UML2 SDK 2.0.3 M200611162216"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.0.2.v200611221657.jar" patch="false" id="org.eclipse.uml2.doc" version="2.0.2.v200611221657">
+		<category name="UML2 SDK 2.0.3 M200611221657"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.0.2.v200611221657.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.0.2.v200611221657">
+		<category name="UML2 SDK 2.0.3 M200611221657"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.0.2.v200611221657.jar" patch="false" id="org.eclipse.uml2.examples" version="2.0.2.v200611221657">
+		<category name="UML2 SDK 2.0.3 M200611221657"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.0.3.v200611221657.jar" patch="false" id="org.eclipse.uml2.source" version="2.0.3.v200611221657">
+		<category name="UML2 SDK 2.0.3 M200611221657"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.0.3.v200611221657.jar" patch="false" id="org.eclipse.uml2" version="2.0.3.v200611221657">
+		<category name="UML2 SDK 2.0.3 M200611221657"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200611231310.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200611231310">
+		<category name="UML2 SDK 2.1M3 S200611231310"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200611231310.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200611231310">
+		<category name="UML2 SDK 2.1M3 S200611231310"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200611231310.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200611231310">
+		<category name="UML2 SDK 2.1M3 S200611231310"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200611231310.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200611231310">
+		<category name="UML2 SDK 2.1M3 S200611231310"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200611231310.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200611231310">
+		<category name="UML2 SDK 2.1M3 S200611231310"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200611231810.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200611231810">
+		<category name="UML2 SDK 2.1.0 I200611231810"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200611231810.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200611231810">
+		<category name="UML2 SDK 2.1.0 I200611231810"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200611231810.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200611231810">
+		<category name="UML2 SDK 2.1.0 I200611231810"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200611231810.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200611231810">
+		<category name="UML2 SDK 2.1.0 I200611231810"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200611231810.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200611231810">
+		<category name="UML2 SDK 2.1.0 I200611231810"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.0.2.v200611301201.jar" patch="false" id="org.eclipse.uml2.doc" version="2.0.2.v200611301201">
+		<category name="UML2 SDK 2.0.3 M200611301201"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.0.2.v200611301201.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.0.2.v200611301201">
+		<category name="UML2 SDK 2.0.3 M200611301201"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.0.2.v200611301201.jar" patch="false" id="org.eclipse.uml2.examples" version="2.0.2.v200611301201">
+		<category name="UML2 SDK 2.0.3 M200611301201"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.0.3.v200611301201.jar" patch="false" id="org.eclipse.uml2.source" version="2.0.3.v200611301201">
+		<category name="UML2 SDK 2.0.3 M200611301201"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.0.3.v200611301201.jar" patch="false" id="org.eclipse.uml2" version="2.0.3.v200611301201">
+		<category name="UML2 SDK 2.0.3 M200611301201"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200611301324.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200611301324">
+		<category name="UML2 SDK 2.1.0 I200611301324"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200611301324.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200611301324">
+		<category name="UML2 SDK 2.1.0 I200611301324"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200611301324.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200611301324">
+		<category name="UML2 SDK 2.1.0 I200611301324"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200611301324.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200611301324">
+		<category name="UML2 SDK 2.1.0 I200611301324"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200611301324.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200611301324">
+		<category name="UML2 SDK 2.1.0 I200611301324"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200612071943.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200612071943">
+		<category name="UML2 SDK 2.1.0 I200612071943"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200612071943.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200612071943">
+		<category name="UML2 SDK 2.1.0 I200612071943"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200612071943.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200612071943">
+		<category name="UML2 SDK 2.1.0 I200612071943"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200612071943.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200612071943">
+		<category name="UML2 SDK 2.1.0 I200612071943"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200612071943.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200612071943">
+		<category name="UML2 SDK 2.1.0 I200612071943"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200612141618.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200612141618">
+		<category name="UML2 SDK 2.1.0 I200612141618"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200612141618.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200612141618">
+		<category name="UML2 SDK 2.1.0 I200612141618"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200612141618.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200612141618">
+		<category name="UML2 SDK 2.1.0 I200612141618"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200612141618.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200612141618">
+		<category name="UML2 SDK 2.1.0 I200612141618"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200612141618.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200612141618">
+		<category name="UML2 SDK 2.1.0 I200612141618"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200612211526.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200612211526">
+		<category name="UML2 SDK 2.1.0 I200612211526"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200612211526.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200612211526">
+		<category name="UML2 SDK 2.1.0 I200612211526"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200612211526.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200612211526">
+		<category name="UML2 SDK 2.1.0 I200612211526"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200612211526.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200612211526">
+		<category name="UML2 SDK 2.1.0 I200612211526"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200612211526.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200612211526">
+		<category name="UML2 SDK 2.1.0 I200612211526"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.doc_2.0.2.v200612211621.jar" patch="false" id="org.eclipse.uml2.doc" version="2.0.2.v200612211621">
+		<category name="UML2 SDK 2.0.3 M200612211621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.0.2.v200612211621.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.0.2.v200612211621">
+		<category name="UML2 SDK 2.0.3 M200612211621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.0.2.v200612211621.jar" patch="false" id="org.eclipse.uml2.examples" version="2.0.2.v200612211621">
+		<category name="UML2 SDK 2.0.3 M200612211621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.0.3.v200612211621.jar" patch="false" id="org.eclipse.uml2.source" version="2.0.3.v200612211621">
+		<category name="UML2 SDK 2.0.3 M200612211621"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.0.3.v200612211621.jar" patch="false" id="org.eclipse.uml2" version="2.0.3.v200612211621">
+		<category name="UML2 SDK 2.0.3 M200612211621"/>
+	</feature>
+
 <category-def label="UML2 UML SDK 2.0.1 M200607131314" name="UML2 UML SDK 2.0.1 M200607131314">
 		<description>
 This category contains the various features of the 2.0.1 M200607131314 build of UML2 UML SDK, which includes UML2 UML source, plugins, and documentation.
@@ -437,6 +711,72 @@ This category contains the various features of the 2.0.2 M200610201804 build of 
 	<category-def label="UML2 UML SDK 2.0.2 M200610251409" name="UML2 UML SDK 2.0.2 M200610251409">
 		<description>
 This category contains the various features of the 2.0.2 M200610251409 build of UML2 UML SDK, which includes UML2 UML source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1M3 S200611161552" name="UML2 SDK 2.1M3 S200611161552">
+		<description>
+This category contains the various features of the 2.1M3 S200611161552 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.0.3 M200611162216" name="UML2 SDK 2.0.3 M200611162216">
+		<description>
+This category contains the various features of the 2.0.3 M200611162216 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.0.3 M200611221657" name="UML2 SDK 2.0.3 M200611221657">
+		<description>
+This category contains the various features of the 2.0.3 M200611221657 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1M3 S200611231310" name="UML2 SDK 2.1M3 S200611231310">
+		<description>
+This category contains the various features of the 2.1M3 S200611231310 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200611231810" name="UML2 SDK 2.1.0 I200611231810">
+		<description>
+This category contains the various features of the 2.1.0 I200611231810 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.0.3 M200611301201" name="UML2 SDK 2.0.3 M200611301201">
+		<description>
+This category contains the various features of the 2.0.3 M200611301201 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200611301324" name="UML2 SDK 2.1.0 I200611301324">
+		<description>
+This category contains the various features of the 2.1.0 I200611301324 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200612071943" name="UML2 SDK 2.1.0 I200612071943">
+		<description>
+This category contains the various features of the 2.1.0 I200612071943 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200612141618" name="UML2 SDK 2.1.0 I200612141618">
+		<description>
+This category contains the various features of the 2.1.0 I200612141618 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200612211526" name="UML2 SDK 2.1.0 I200612211526">
+		<description>
+This category contains the various features of the 2.1.0 I200612211526 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.0.3 M200612211621" name="UML2 SDK 2.0.3 M200612211621">
+		<description>
+This category contains the various features of the 2.0.3 M200612211621 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
