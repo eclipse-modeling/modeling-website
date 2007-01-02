@@ -52,8 +52,13 @@ $deps = array(
 	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2-ocl#uml2-ocl\">OCL</a>",
+	"orbit" => "<a href=\"http://www.eclipse.org/orbit\">Orbit</a>", # should this be included?
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2-uml#uml2-uml/\">UML2</a>",
-	"validation" => "<a href=\"http://www.eclipse.org/emft/projects/validation/#validation\">Validation</a>"
+	"query" => "<a href=\"http://www.eclipse.org/emft/projects/query/#query\">Query</a>",
+	"transaction" => "<a href=\"http://www.eclipse.org/emft/projects/transaction/#transaction\">Transaction</a>",
+	"validation" => "<a href=\"http://www.eclipse.org/emft/projects/validation/#validation\">Validation</a>",
+	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
+	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>"
 );
 
 /* shortname => array("product", "component") */
@@ -404,7 +409,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isEMFserver, $numzips, $PR, $projct;
+	global $pre, $isEMFserver, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct;
 	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
 	$out = "";
@@ -533,11 +538,10 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 		$icon = "question";
 	}
 
-	global $doRefreshPage;
 	clearstatcache();
-	if ($isEMFserver && $icon == "question" && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024))
+	if ($isBuildServer && $icon == "question" && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024))
 	{
-		if ($isEMFserver && grep("/\[start\] start\.sh finished on: /", "$PWD${path}buildlog.txt"))
+		if ($isBuildServer && grep("/\[start\] start\.sh finished on: /", "$PWD${path}buildlog.txt"))
 		{
 			$icon = "not"; //display failed icon - not in progress anymore!
 			$result = "FAILED"; // BUILD
@@ -575,7 +579,8 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isEMFserver ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : "http://download.eclipse.org/"."$mid${path}buildlog.txt");
+		$link = ($isEMFserver ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
+				($isBuildServer ? "" : "http://download.eclipse.org") . $mid.$path."buildlog.txt");
 	}
 
 	if (!$link2) // link to console log in progress if it exists
@@ -586,7 +591,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 		$link2 = (is_file("$PWD$conlog") ? "$mid$conlog" : (is_file("$PWD$testlog") ? "$mid$testlog" : $link));
 		$result = (is_file("$PWD$conlog") ? "Testing..." : $result);
 	}
-	$link2 = ($isEMFserver ? "" : "http://download.eclipse.org/") . $link2;
+	$link2 = ($isBuildServer ? "" : "http://download.eclipse.org/") . $link2;
 
 	$out .= "<a href=\"$link2\">$result";
 	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
@@ -609,11 +614,11 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 function fileFound($PWD, $url, $label) //only used once
 {
-	global $isEMFserver, $downloadScript, $downloadPre, $PR, $proj;
+	global $isBuildServer, $downloadScript, $downloadPre, $PR, $proj;
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/"; // new for www.eclipse.org centralized download.php script
 
-	return (is_file("$PWD$url.md5") ? "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isEMFserver ? "" : "http://download.eclipse.org") .
+	return (is_file("$PWD$url.md5") ? "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isBuildServer ? "" : "http://download.eclipse.org") .
 "$mid$url.md5\">md5</a>)</div>" : "") . "<a href=\"$downloadScript$mid$url\">$label</a>";
 }
 
@@ -747,7 +752,7 @@ function outputBuild($branch, $ID, $c)
 
 function getBuildArtifacts($dir, $branchID)
 {
-	global $isEMFserver, $downloadPre, $PR, $deps, $proj;
+	global $isEMFserver, $isBuildServer, $downloadPre, $PR, $deps, $proj;
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
@@ -791,7 +796,7 @@ function getBuildArtifacts($dir, $branchID)
 			"Build Log" => "buildlog.txt"
 		);
 
-		$link = ($isEMFserver ? "" : "http://download.eclipse.org");
+		$link = ($isBuildServer ? "" : "http://download.eclipse.org");
 
 		$ret .= "<li>\n";
 		$ret .= "<img src=\"/modeling/images/dl-deps.gif\" alt=\"Upstream dependencies used to build this driver\"/> Build Dependencies\n";
