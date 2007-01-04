@@ -12,6 +12,10 @@ $App = new App();
 $Nav = new Nav();
 $Menu = new Menu();
 include ($App->getProjectCommon());
+
+// temporarily suppress unsupported projects
+$nodownloads = array ("xsd", "eodm", "uml2-ocl");  
+
 internalUseOnly();
 ob_start();
 
@@ -113,7 +117,6 @@ foreach ($options["BranchAndJDK"] as $br)
 	$BR = $bits[0];
 	// define which build types to show:
 	$dir = "$workDir$PR/$projct/downloads/drops/$BR";
-	print "# $br = " . $dir . " #<br>";
 	if (is_dir($dir))
 	{
 		$buildIDs = loadDirSimple($dir, "([MISR]+\d{12})", "d"); // include N builds
