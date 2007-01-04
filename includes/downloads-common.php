@@ -248,7 +248,7 @@ print "</div>\n";
 $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
 if ($isEMFserver && file_exists($f))
 {
-	include($f);
+	include_once($f);
 }
 
 if (function_exists("sidebar"))

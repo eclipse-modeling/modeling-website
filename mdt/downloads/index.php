@@ -66,7 +66,7 @@ $rssfeed = "";
 /* end config */
 
 if ($isEMFserver) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/mdt/build/sideitems-common.php"; }
-require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();
 ob_end_clean();
