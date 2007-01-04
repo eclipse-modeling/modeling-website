@@ -62,12 +62,9 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 	/** done customizing, shouldn't have to change anything below here **/
 
-	if (!isset($options)) { // OLD WAY
-		$buildOptionsFile = 
-			is_file($_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt") ? 
-			$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt" : 
-			$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . "/" . "build.options.txt"; // read only
-		$options = loadOptionsFromRemoteFiles($buildOptionsFile,$dependenciesURLsFile);	
+	if (!isset($options)) 
+	{ 
+		$options = array(); 	
 	} 
 	else
 	{
@@ -528,7 +525,16 @@ print "<li><a href=\"?project=$projct\">normal build</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
-if ($isBuildServer && is_file($_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php")) { include_once $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php"; sidebar(); }
+$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
+if ($isBuildServer && file_exists($f))
+{
+	include_once($f);
+}
+
+if ($isBuildServer && function_exists("sidebar"))
+{
+	sidebar();
+}
 
 print "</div>\n";
 

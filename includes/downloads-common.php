@@ -32,7 +32,6 @@ $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"],
 $doRefreshPage = false;
 
 $PWD = getPWD("$proj/downloads/drops"); // see scripts.php
-$buildOptionsFile = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "build.options.txt"; // read only
 
 if (preg_match("/(?:emf|fullmoon)\./", $_SERVER["HTTP_HOST"])) //internal
 {
@@ -246,12 +245,12 @@ print "</ul>\n";
 print "</div>\n";
 
 $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
-if ($isEMFserver && file_exists($f))
+if ($isBuildServer && file_exists($f))
 {
 	include_once($f);
 }
 
-if (function_exists("sidebar"))
+if ($isBuildServer && function_exists("sidebar"))
 {
 	sidebar();
 }

@@ -1,0 +1,1 @@
+<?php header("Location: /modeling/mdt/downloads/"); ?>

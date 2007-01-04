@@ -2,19 +2,19 @@
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
-	global $PR, $projct, $isEMFserver;
+	global $PR, $projct, $isBuildServer;
 
-	if ($isEMFserver)
+	if ($isBuildServer)
 	{
 	?>
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/build/?project=<?php print $projct; ?>">New Build</a> (MDT)</li>
+			<li><a href="/<?php print $PR."/".$projct; ?>/build/">New Build</a> (MDT)</li>
 			<li><a href="http://emf.torolab.ibm.com/emft/build/?project=<?php print $projct; ?>">Old Build</a> (EMFT)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=uml2">Old Build</a> (UML2)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=emf">Old Build</a> (XSD)</li>
-			<?php if ($projct=="uml2-uml") { ?><li><a href="http://emf.torolab.ibm.com/<?php print $PR; ?>/build/promo.php?project=<?php print $projct; ?>">Promote</a></li><?php } ?>
+			<?php if ($projct=="uml2-uml") { ?><li><a href="/<?php print $PR."/".$projct; ?>/build/promo.php">Promote</a></li><?php } ?>
 		</ul>
 	</div>
 
