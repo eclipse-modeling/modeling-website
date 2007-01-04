@@ -32,7 +32,7 @@ $dls = array(
 			"Stand-alone" => "standalone"
 		)
 	),
-	"/uml2-tools" => array(
+	"/uml2tools" => array(
 		"UML2 Tools" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
@@ -56,7 +56,7 @@ $filePre = array(
 	"/eodm" => array("emft-eodm","mdt-eodm"),
 	"/uml2-uml" => array("uml2","mdt-uml2-uml"),
 	"/uml2-ocl" => array("emft-ocl","mdt-uml2-ocl"),
-	"/uml2-tools" => array("uml2-tools"),
+	"/uml2tools" => array("uml2tools"),
 	"/xsd" => array("xsd","mdt-xsd")
 );
 

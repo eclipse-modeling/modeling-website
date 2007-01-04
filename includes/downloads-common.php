@@ -68,7 +68,7 @@ $bugzilla_pairs = array(
 	"uml2-ocl" => array("MDT", "UML2%20OCL"),
 	"eodm" => array("MDT", "EODM"),
 	"uml2-uml" => array("MDT", "UML2%20UML"),
-	"uml2-tools" => array("MDT", "UML2%20Tools")
+	"uml2tools" => array("MDT", "UML2%20Tools")
 );
 
 print "<div id=\"midcolumn\">\n";

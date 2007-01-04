@@ -75,7 +75,7 @@ $projectsAll = array (
 		"EODM" => "eodm",
 		"UML2 OCL" => "uml2-ocl",
 		"UML2 UML" => "uml2-uml",
-		"UML2 Tools" => "uml2-tools",
+		"UML2 Tools" => "uml2tools",
 		"XSD" => "xsd"
 	)
 );

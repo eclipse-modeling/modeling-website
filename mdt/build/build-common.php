@@ -54,7 +54,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 	}
 
 	$downloadsDir = "/home/www-data/build/downloads";
-	$workDir = "/home/www-data/build/".$PR;
+	$workDir = "/home/www-data/build/";
 
 	/** customization options here - try subcomponent file first, then fall back to parent file **/
 	
@@ -435,7 +435,7 @@ setTimeout('doOnLoadDefaults()',1000);
 
 	if (!$previewOnly) { 
 ?>
-	<p>Logfile is <a href="/<?php print $PR.$proj.$logfile; ?>"><?php print $workDir.$proj.$logfile; ?></a></p>
+	<p>Logfile is <a href="/<?php print $PR.$proj.$logfile; ?>"><?php print $workDir.$PR.$proj.$logfile; ?></a></p>
 	
 <?php } ?>
 
@@ -472,10 +472,10 @@ setTimeout('doOnLoadDefaults()',1000);
 		/** see http://ca3.php.net/manual/en/function.exec.php **/
 
 		// create the log dir before trying to log to it
-		$preCmd = 'mkdir -p '.$workDir.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
+		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
 		# TODO: this only works with UML2 UML; eventually, will use a common start.sh for all projects
-		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.$proj.'/scripts/start.sh'.
+		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh'.
 			' -proj mdt -sub '.$projct.
 			' -version '.$BR.
 			' -branch '.($_POST["build_CVS_Branch"]!=""?$_POST["build_CVS_Branch"]:$_POST["build_CVS_Branch"]).
@@ -486,7 +486,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			' -buildType '.$_POST["build_Build_Type"].
 			' -javaHome '.$_POST["build_Java_Home"].
 			' -downloadsDir '.$downloadsDir. // use central location: /home/www-data/build/downloads
-			' -buildDir '.$workDir.$proj.'/downloads/drops/'.$BR.'/'.$ID.
+			' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
 			' -buildTimestamp '.$buildTimestamp.
 			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 			
@@ -496,7 +496,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
 			($_POST["build_noclean"]=="Y"?' -noclean':'').
 
-			' >> '.$workDir.$proj.$logfile.' 2>&1 &"');	// logging to unique files
+			' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
 
 			if ($previewOnly) { 
 				print '</div><div class="homeitem3col">'."\n";
