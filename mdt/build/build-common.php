@@ -11,11 +11,13 @@ ob_start();
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
 $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0; 
 
+$projctFromPath = getProjectFromPath();
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 	$tmp = array_keys($projectArray);
-	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : "uml2-uml"); // or default to first entry: $projectArray[$tmp[0]]
+	
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projctFromPath);
 }
 else
 {
@@ -23,12 +25,24 @@ else
 }
 
 $projct = preg_replace("#^/#", "", $proj);
+
+if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR . $proj . "/build/"))
+{
+	header("Location: /" . $PR . $proj . "/build/");
+}
+
+print "<div id=\"midcolumn\">\n";
+print "<h1>Building MDT</h1>\n";
+
+if (is_array($projects) && sizeof($projects) > 1)
+{
+	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
+}
+
 ?>
 
-<div id="midcolumn">
-
 <div class="homeitem3col">
-<h3>Building MDT</h3>
+<h3>Run A Build</h3>
 
 <?php	
 
@@ -43,23 +57,26 @@ $projct = preg_replace("#^/#", "", $proj);
 	$workDir = "/home/www-data/build/".$PR;
 
 	/** customization options here - try subcomponent file first, then fall back to parent file **/
-	$buildOptionsFile = 
-		is_file($_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt") ? 
-		$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt" : 
-		$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . "/" . "build.options.txt"; // read only
 	
 	$dependenciesURLsFile = "/home/www-data/build"."/requests/dependencies.urls.txt"; // read-write, one shared file
 
 	/** done customizing, shouldn't have to change anything below here **/
 
-	$options = loadOptionsFromRemoteFiles($buildOptionsFile,$dependenciesURLsFile); 
-	$options["BuildType"] = array(
-			"Release=R",
-			"Stable=S",
-			"Integration=I",
-			"Maintenance=M",
-			"Nightly=N|selected"
-	);
+	if (!isset($options)) { // OLD WAY
+		$buildOptionsFile = 
+			is_file($_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt") ? 
+			$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . $proj . "/" . "build.options.txt" : 
+			$_SERVER["DOCUMENT_ROOT"] . "/" . $PR . "/" . "build.options.txt"; // read only
+		$options = loadOptionsFromRemoteFiles($buildOptionsFile,$dependenciesURLsFile);	
+	} 
+	else
+	{
+		$options = array_merge($options,loadOptionsFromRemoteFile($dependenciesURLsFile));	
+		$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
+		$options["TagBuild"] = array ("Yes","No|selected");
+		$options["RunTests"] = array ("JUnit Tests=JUnit");
+	}	
+	$options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
 	if (!$_POST["process"]=="build") { // page one, the form
 
@@ -84,23 +101,7 @@ $projct = preg_replace("#^/#", "", $proj);
 				<input name="build_Java_Home" type="hidden" size="20"/>
 				<td colspan=3><select name="build_CVS_Branch" onchange="doBranchSelected(this)">
 				<?php displayOptionsTriplet($options["BranchAndJDK"]); ?>
-				</select> <br/>
-				<select name="build_Project" onchange="document.location.href='?project='+this.options[this.selectedIndex].value+'<?php 
-					print ($debugb?"&amp;debugb=1":"").($previewOnly?"&amp;previewOnly=1":""); ?>'">
-					<option value="">Choose...</option>
-					<option <?php print $projct == "uml2-uml" ? "selected " : ""; ?>value="uml2-uml">UML2 UML</option>
-<?php 
-	/* not yet working */
-	/*
-	foreach ($projectArray as $project) { 
-		if (is_dir($workDir."/".$project) && in_array($project,$projects)) {
-			$flip = array_flip($projects);
-			print "<option ".($projct == $projct?"selected ":"")."value=\"".$project."\">".$flip[$project]."</option>\n";
-		}
-	}
-	*/
-?>
-				</select> &nbsp;
+				</select> 
 				<select name="build_Build_Type" onchange="pickDefaults(this.options[this.selectedIndex].value)">
 				<?php displayOptions($options["BuildType"]); ?>
 				</select></td>
@@ -133,8 +134,20 @@ $projct = preg_replace("#^/#", "", $proj);
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
 						</tr>						
 						<tr>						
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2-uml&amp;sortBy=date&amp;hlbuild=0#latest">UML2 UML</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2-uml&amp;sortBy=date&amp;hlbuild=0#latest">UML2 UML</a></td>
+						</tr>						
+						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2-ocl&amp;sortBy=date&amp;hlbuild=0#latest">UML2 OCL</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2-ocl&amp;sortBy=date&amp;hlbuild=0#latest">UML2 OCL</a></td>
+						</tr>						
+						<tr>						
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+						</tr>						
+						<tr>						
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
@@ -143,6 +156,14 @@ $projct = preg_replace("#^/#", "", $proj);
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
+						</tr>						
+						<tr>						
+							<td> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a></td>
+							<td> &#149; <a href="http://fullmoon/tools/gef/downloads/">GEF</a></td>
+						</tr>						
+						<tr>						
+							<td> &#149; <a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a></td>
+							<td> &#149; <a href="http://fullmoon/modeling/gmf/downloads/">GMF</a></td>
 						</tr>						
 					</table>							
             <p><small>&#160;&#160;-- AND/OR --</small></p>
@@ -364,17 +385,10 @@ function toggleDetails()
 function doSubmit() {
   answer = true;
   with (document.forms.buildForm) { 
-	if (build_Project.selectedIndex<1)
-	{
-		alert("Choose a subproject!");
-		note.value="Choose a subproject!";
-		answer=false;
-		tofocus="build_Project";
-	} else {
-  	  tofocus="build_Run_Tests_JUnit";
+	  tofocus="build_Run_Tests_JUnit";
 	  if (!elements[tofocus]){
-  	    tofocus="build_Run_Tests_JUnit";
- 	  }
+	    tofocus="build_Run_Tests_JUnit";
+	  }
 	  if (elements[tofocus] && elements[tofocus].checked==false // if not running JUnit tests
 			&& build_Build_Type.options[build_Build_Type.selectedIndex].value!='N' // and not a Nightly
 		) {
@@ -384,7 +398,6 @@ function doSubmit() {
 	  } else {
 	    tofocus=null;
 	  }
-	}
   }
   if (answer) { 
 	document.forms.buildForm.submit();
@@ -397,7 +410,6 @@ function doOnLoadDefaults() {
   doBranchSelected(document.forms.buildForm.build_CVS_Branch);
   field=document.forms.buildForm.build_Build_Type;
   pickDefaults(field.options[field.selectedIndex].value);
-  //field=document.forms.buildForm.build_Project;
   //setNote(field.options[field.selectedIndex].text)
 }
 
@@ -464,9 +476,9 @@ setTimeout('doOnLoadDefaults()',1000);
 
 		# TODO: this only works with UML2 UML; eventually, will use a common start.sh for all projects
 		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.$proj.'/scripts/start.sh'.
-			' -proj '.$projct.
-			' -branch '.($_POST["build_CVS_Branch"]!=""?$_POST["build_CVS_Branch"]:$_POST["build_CVS_Branch"]).
+			' -proj mdt -sub '.$projct.
 			' -version '.$BR.
+			' -branch '.($_POST["build_CVS_Branch"]!=""?$_POST["build_CVS_Branch"]:$_POST["build_CVS_Branch"]).
 			$dependencyURLs.
 			($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
 			($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
@@ -516,7 +528,7 @@ print "<li><a href=\"?project=$projct\">normal build</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
-if ($isEMFserver) { include_once $_SERVER["DOCUMENT_ROOT"] . "/" . $PR . "/build/sideitems-common.php"; sidebar(); }
+if ($isBuildServer && is_file($_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php")) { include_once $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php"; sidebar(); }
 
 print "</div>\n";
 
@@ -593,9 +605,17 @@ function getDependencyURLs($chosen, $entered, $file) {
 
 function findCatg($url) {
 	$matches = array(
-		"2emf" => "emf-sdo-xsd-",
-		"1eclipse" => "eclipse-",
-		"9other" => "/"
+		"10gmf" => "GMF-",
+		"09gef" => "GEF-",
+		"08net4j" => "emft-net4j-",
+		"07validation" => "emft-validation-",
+		"06transaction" => "emft-transaction-",
+		"05query" => "emft-query-",
+		"04ocl" => "emft-ocl-",
+		"03uml2" => "uml2-",
+		"02emf" => "emf-sdo-xsd-",
+		"01eclipse" => "eclipse-",
+		"99other" => "/"
 	);
 	foreach ($matches as $catg => $match) { 
 		if (false!==strpos($url,$match)) {
@@ -752,7 +772,7 @@ function trimmed_read($file) {
 	return $lines;
 }
 
-function loadOptionsFromFile($file1) { // fn not used
+function loadOptionsFromRemoteFile($file1) {
 	$sp = array();	if (is_file($file1)) { $sp = file($file1); }
 	$options = loadOptionsFromArray($sp);
 	return $options;
@@ -821,5 +841,10 @@ function loadOptionsFromArray($sp) {
 		return $opt;
 	}
 
+	function getProjectFromPath()
+	{
+		return preg_replace("#/modeling/mdt/([^/]+)/build/.+#","$1",$_SERVER["PHP_SELF"]);
+		
+	}
 
 ?>
