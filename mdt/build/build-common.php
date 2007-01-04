@@ -58,7 +58,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 	/** customization options here - try subcomponent file first, then fall back to parent file **/
 	
-	$dependenciesURLsFile = "/home/www-data/build"."/requests/dependencies.urls.txt"; // read-write, one shared file
+	$dependenciesURLsFile = "/home/www-data/build/requests/dependencies.urls.txt"; // read-write, one shared file
 
 	/** done customizing, shouldn't have to change anything below here **/
 
@@ -605,13 +605,14 @@ function getDependencyURLs($chosen, $entered, $file) {
 
 function findCatg($url) {
 	$matches = array(
-		"10gmf" => "GMF-",
-		"09gef" => "GEF-",
-		"08net4j" => "emft-net4j-",
-		"07validation" => "emft-validation-",
-		"06transaction" => "emft-transaction-",
-		"05query" => "emft-query-",
-		"04ocl" => "emft-ocl-",
+		"11gmf" => "GMF-",
+		"10gef" => "GEF-",
+		"09net4j" => "emft-net4j-",
+		"08validation" => "emft-validation-",
+		"07transaction" => "emft-transaction-",
+		"06query" => "emft-query-",
+		"05ocl" => "emft-ocl-",
+		"04orbit" => "orbit-",
 		"03uml2" => "uml2-",
 		"02emf" => "emf-sdo-xsd-",
 		"01eclipse" => "eclipse-",
