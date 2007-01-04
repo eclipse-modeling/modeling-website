@@ -19,7 +19,7 @@ $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/",
 $debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
 
 $rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
-$downurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
+$downurl = ($isBuildServer ? "" : "http://www.eclipse.org");
 $bugurl = "https://bugs.eclipse.org";
 
 /* projects/components in cvs */
