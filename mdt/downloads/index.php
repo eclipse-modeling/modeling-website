@@ -54,9 +54,9 @@ $dls = array(
 /* keys have leading / to match $proj */
 $filePre = array(
 	"/eodm" => array("emft-eodm","mdt-eodm"),
-	"/uml2-uml" => array("uml2","mdt-uml2-uml"),
-	"/uml2-ocl" => array("emft-ocl","mdt-uml2-ocl"),
-	"/uml2tools" => array("uml2tools"),
+	"/uml2-uml" => array("uml2","mdt-uml2"),
+	"/uml2-ocl" => array("emft-ocl","mdt-ocl"),
+	"/uml2tools" => array("mdt-uml2tools"),
 	"/xsd" => array("xsd","mdt-xsd")
 );
 
