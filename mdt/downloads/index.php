@@ -60,12 +60,10 @@ $filePre = array(
 	"/xsd" => array("xsd","mdt-xsd")
 );
 
-$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$proj.xml\"><img style=\"float:right\" alt=\"EMFT Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
-
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
-if ($isEMFserver) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/mdt/build/sideitems-common.php"; }
+if ($isBuildServer) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/mdt/build/sideitems-common.php"; }
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();

@@ -114,6 +114,8 @@ if (sizeof($builds) == 0)
 	print "</div>\n";
 }
 
+$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
+
 if ($sortBy != "date")
 {
 	$c = 0;
