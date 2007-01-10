@@ -60,7 +60,7 @@ $filePre = array(
 	"/xsd" => array("xsd","mdt-xsd")
 );
 
-$rssfeed = "";
+$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$proj.xml\"><img style=\"float:right\" alt=\"EMFT Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
