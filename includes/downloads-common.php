@@ -33,7 +33,7 @@ $doRefreshPage = false;
 
 $PWD = getPWD("$proj/downloads/drops"); // see scripts.php
 
-if (preg_match("/(?:emf|fullmoon)\./", $_SERVER["HTTP_HOST"])) //internal
+if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //internal
 {
 	$downloadScript = "../../../";
 	$downloadPre = "../../..";
@@ -408,7 +408,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isEMFserver, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct;
+	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct;
 	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
 	$out = "";
@@ -427,7 +427,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	$link2 = "";
 
 	clearstatcache();
-	if ($isEMFserver && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024)) // if the log's too big, don't open it!
+	if ($isBuildServer && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024)) // if the log's too big, don't open it!
 	{
 		if (grep("/BUILD FAILED/", "$PWD${path}buildlog.txt"))
 		{
@@ -578,7 +578,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isEMFserver ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
+		$link = ($isBuildServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
 				($isBuildServer ? "" : "http://download.eclipse.org") . $mid.$path."buildlog.txt");
 	}
 
@@ -699,7 +699,7 @@ function grep($pattern, $file)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isEMFserver, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -712,7 +712,7 @@ function outputBuild($branch, $ID, $c)
 	$IDlabel = $ziplabel;
 
 	$tests = ""; 
-	if ($isEMFserver && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
+	if ($isBuildServer && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
 	{
 	  	$summary = "";
 		$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
@@ -728,7 +728,7 @@ function outputBuild($branch, $ID, $c)
 	$ret .= "<div>" . showBuildResults("$PWD/", "$branch/$ID/") . "$summary</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
 		"<i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> " .
-		"(" . IDtoDateStamp($ID, !$isEMFserver) . ")" .
+		"(" . IDtoDateStamp($ID, !$isBuildServer) . ")" .
 		"</a>" .
 		"<a name=\"$ID\"></a> " .
 		"<a href=\"?showAll=1&amp;hlbuild=$ID" .
@@ -751,7 +751,7 @@ function outputBuild($branch, $ID, $c)
 
 function getBuildArtifacts($dir, $branchID)
 {
-	global $isEMFserver, $isBuildServer, $downloadPre, $PR, $deps, $proj;
+	global $isBuildServer, $downloadPre, $PR, $deps, $proj;
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
@@ -805,7 +805,12 @@ function getBuildArtifacts($dir, $branchID)
 			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>{$opts["javaHome"]}</li>" : "");
 			foreach (array_keys($havedeps) as $z)
 			{
-				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$buildID[$z]</a></li>\n";
+				$vanity = $buildID[$z];
+				preg_match("/.+-SDK-(.+).zip/",$buildfile[$z],$reg);
+				if ($reg && is_array($reg) && sizeof($reg) >0 ) {
+					$vanity = $reg[1] . " " . preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);	
+				}
+				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
 			}
 		}
 		else
