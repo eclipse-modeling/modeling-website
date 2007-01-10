@@ -50,7 +50,7 @@ foreach (array_keys($params) as $z)
 			$args[] = "$z=" . $_GET[$z];
 			if (!is_file($f) || !is_readable($f))
 			{
-				print "<b>Error:</b> $f is not a file or is not readable.\n";
+				print "<b>Error:</b> " . preg_replace("#.+/$PR/(.+)#","$1",$f) . " is not a file or is not readable.\n";
 				exit;
 			}
 		}
