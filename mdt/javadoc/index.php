@@ -24,7 +24,7 @@ $subprojs = loadSubDirs($PWD, "(.+)");
 
 $projDetails = array (
 	/* path => project's downloads path, downloads page path, includes path, and vanity name */
-	"/modeling/emf/emf" => array (
+	"/modeling/emf" => array (
 		"/modeling/emf/downloads",
 		"/modeling",
 		"EMF"

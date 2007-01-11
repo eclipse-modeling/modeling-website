@@ -32,8 +32,6 @@ $filePre = array(
 	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd")
 );
 
-$rssfeed = "";
-
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 

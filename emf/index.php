@@ -23,11 +23,10 @@ ob_start();
 <div id="midcolumn">
 <?php
 // default for no page selected
-$proj = (isset($_GET["project"]) && $_GET["project"] == "sdo" ? "sdo" : $proj); //sdo is special
-$page = ($proj ? $proj : "emf");
+$projct = (isset($_GET["project"]) && $_GET["project"] == "sdo" ? "sdo" : "emf"); //sdo is special
 
 include($_SERVER["DOCUMENT_ROOT"] . "/$PR/index-contents.php");
-displayIntro($page);
+displayIntro($projct);
 ?>
 </div>
 
@@ -42,7 +41,7 @@ displayIntro($page);
 
 	<div class="sideitem">
 		<h6><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/feeds/builds-emf.xml"><img style="float:right" alt="EMF Build Feed" src="/modeling/images/rss-atom10.gif"/></a>Build news</h6>
-		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
+		<?php build_news($cvsprojs, $cvscoms, $projct); ?>
 		<ul>
 			<li><a href="/modeling/emf/news/news-whatsnew.php#build">Older build news</a></li>
 		</ul>
@@ -97,11 +96,12 @@ displayIntro($page);
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Eclipse Modeling - " . strtoupper($page) . " Home";
+$pageTitle = "Eclipse Modeling - " . strtoupper($projct) . " Home";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/$PR/includes/index.css\"/>\n");
-$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/feeds/builds-emf.xml"/>' . "\n");
+$trans = array_flip($projects);
+$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF '.$trans[$projct].' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>

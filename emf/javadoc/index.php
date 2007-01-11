@@ -3,27 +3,24 @@ $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]))
 
 if ($isWWWserver)
 {
-	$PWD = "/home/data/httpd/download.eclipse.org/modeling/emf/emf/";
-	$jdPWD = "/downloads/download.php?file=/modeling/emf/emf/";
+	$PWD = "/home/data/httpd/download.eclipse.org/modeling/emf/";
+	$jdPWD = "/downloads/download.php?file=/modeling/emf/";
 }
 else
 {
-	if (is_dir("../../../../modeling/emf/emf/"))
+	if (is_dir("../../../../modeling/emf/"))
 	{
-		$PWD = "../../../../modeling/emf/emf/"; // in a javadoc folder in the /modeling/emf/emf area
+		$PWD = "../../../../modeling/emf/"; // in a javadoc folder in the /modeling/mdt area
 	}
 	else
-		if (is_dir("../../modeling/emf/emf/"))
+		if (is_dir("../../../modeling/emf/"))
 		{
-			$PWD = "../../modeling/emf/emf/"; // in the web folder in /emf/
+			$PWD = "../../../modeling/emf/"; // in the web folder in /modeling/mdt/
 		}
 	$jdPWD = $PWD;
 }
 
-$subprojs = array (
-	"EMF" => "emf",
-	"SDO" => "sdo"
-);
+$subprojs = loadSubDirs($PWD, "(.+)");
 
 // REDIRECT to latest version of javadoc for the specified path
 if ($_SERVER["QUERY_STRING"])
@@ -48,7 +45,7 @@ if ($_SERVER["QUERY_STRING"])
 	}
 	else
 	{
-		$redirect = "Location: http://www.eclipse.org/emf/javadoc/";
+		$redirect = "Location: http://www.eclipse.org/modeling/emf/javadoc/";
 	}
 	//print $redirect;
 	header($redirect);
@@ -57,7 +54,7 @@ if ($_SERVER["QUERY_STRING"])
 
 $projDetails = array (
 	/* path => project's downloads path, downloads page path, includes path, and vanity name */
-	"/modeling/emf/emf" => array (
+	"/modeling/emf" => array (
 		"/modeling/emf/downloads",
 		"/modeling",
 		"EMF"
@@ -85,6 +82,33 @@ foreach ($projDetails as $searchPath => $details)
 		break;
 	}
 }
+
+$projectsAll = array (
+	"EMF" => array (
+		"EMF" => "emf",
+		"SDO" => "sdo",
+		"XSD" => "xsd"
+	),
+	"EMFT" => array (
+		"CDO" => "cdo",
+		"EODM" => "eodm",
+		"JET" => "jet",
+		"JET Editor" => "jeteditor",
+		"Net4j" => "net4j",
+		"OCL" => "ocl",
+		"Query" => "query",
+		"Teneo" => "teneo",
+		"Transaction" => "transaction",
+		"Validation" => "validation"
+	),
+	"MDT" => array (
+		"EODM" => "eodm",
+		"UML2 OCL" => "uml2-ocl",
+		"UML2 UML" => "uml2-uml",
+		"UML2 Tools" => "uml2tools",
+		"XSD" => "xsd"
+	)
+);
 
 $doPhoenix = false;
 if (is_file($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"))
@@ -126,19 +150,69 @@ print '<div id="midcolumn">
 <ul>
 ';
 
-foreach ($subprojs as $label => $subproj)
+if (sizeof($subprojs) > 0)
 {
-	print '<li><b> ' . $label . '</b>' . "\n";
-	$vers = loadSubDirs("$PWD$subproj/javadoc", "(\d\.\d|\d\.\d\.\d+)");
-	rsort($vers);
-	reset($vers);
-	foreach ($vers as $ver)
+	sort($subprojs);
+	reset($subprojs);
+	if (isset ($projects) && is_array($projects))
 	{
-		print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
+		$trans = array_flip($projects);
 	}
-	print '</li>' . "\n";
-}
+	else
+	{
+		$projects = $projectsAll[$projectName];
+		$trans = array_flip($projects);
+	}
+	foreach ($subprojs as $subproj)
+	{
+		if (in_array($subproj, $projects))
+		{
+			$label = $trans[$subproj];
 
+			print '<li><b> ' . $label . '</b>' . "\n";
+			$vers = loadSubDirs("$PWD$subproj/javadoc", "");
+			rsort($vers);
+			reset($vers);
+			$didprint = 0;
+			foreach ($vers as $ver)
+			{
+				if (preg_match("/[^0-9.]+/", $ver))
+				{
+					$vers2 = loadSubDirs("$PWD$subproj/javadoc/" . $ver, "");
+					rsort($vers2);
+					reset($vers2);
+					if (sizeof($vers2) > 0)
+					{
+						$didprint = 1;
+						print "<ul>\n";
+					}
+					foreach ($vers2 as $ver2)
+					{
+						print '<li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/' . $ver2 . '/">' . $ver . ' ' . $ver2 . '</a></li>' . "\n";
+					}
+					if (sizeof($vers2) > 0)
+					{
+						print "</ul>\n";
+					}
+				}
+				else
+				{
+					$didprint = 1;
+					print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
+				}
+			}
+			if ($didprint == 0)
+			{
+				print "<ul><li><i>None available.</i></li></ul>";
+			}
+			print '</li>' . "\n";
+		}
+	}
+}
+else
+{
+	print "<li>No javadoc found!</li>";
+}
 print "</ul>\n";
 print "</div></div>\n";
 
@@ -147,7 +221,7 @@ if ($doPhoenix)
 	$html = ob_get_contents();
 	ob_end_clean();
 
-	$pageTitle = "EMF - Javadoc";
+	$pageTitle = "Modeling - EMF - Javadoc";
 	$pageKeywords = "";
 	$pageAuthor = "Nick Boldt";
 
