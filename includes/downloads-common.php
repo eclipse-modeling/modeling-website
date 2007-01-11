@@ -97,6 +97,8 @@ if (function_exists("doRequirements"))
 	call_user_func("doRequirements");
 }
 
+$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
+
 if (sizeof($builds) == 0)
 {
 	print "<div class=\"homeitem3col\">\n";
@@ -113,8 +115,6 @@ if (sizeof($builds) == 0)
 	print "</ul>\n";
 	print "</div>\n";
 }
-
-$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
 
 if ($sortBy != "date")
 {
