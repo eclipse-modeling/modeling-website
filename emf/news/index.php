@@ -1,1 +1,1 @@
-<?php header("Location: relnotes.php"); ?>
+<?php header("Location: relnotes.php?project=emf&version=HEAD"); ?>
