@@ -78,7 +78,7 @@ foreach ($projects as $z)
 			<li><a href="http://www.eclipse.org/modeling">Eclipse Modeling</a></li>
 			<li>Web: <a href="http://www.eclipse.org/emf">EMF</a>, <a href="http://www.eclipse.org/emft">EMFT</a></li>
 			<li>Wiki: <a href="http://wiki.eclipse.org/index.php/Category:EMF">EMF</a>, <a href="http://wiki.eclipse.org/index.php/EMFT">EMFT</a></li>
-			<li><a href="http://www.eclipse.org/emf/docs.php?doc=docs/UsingUpdateManager/UsingUpdateManager.html">Using Update Manager</a></li>
+			<li><a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">Using Update Manager</a></li>
 			<li><a href="http://www.eclipse.org/newsgroups">Eclipse newsgroups</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/EMFT_Procedures">MDT Build &amp; Promote</a></li>
 		</ul>
@@ -107,4 +107,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.11 2006/12/16 01:36:21 nickb Exp $ -->
+<!-- $Id: index.php,v 1.12 2007/01/11 01:56:51 nickb Exp $ -->
