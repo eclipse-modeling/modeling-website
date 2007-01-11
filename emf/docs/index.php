@@ -7,6 +7,17 @@ echo "<div id=\"midcolumn\">\n";
 include_once("docs.xml");
 echo "</div>\n";
 
+print "<div id=\"rightcolumn\">\n";
+
+print '<div class="sideitem">'."\n". '<h6>Documentation News</h6>';
+getNews(4, "docs");
+print ' <ul>
+			<li><a href="/emf/news-whatsnew.php">Older news</a></li>
+		</ul>
+	</div>
+';
+print "</div>\n";
+
 $html = ob_get_contents();
 ob_end_clean();
 
@@ -18,4 +29,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.1 2006/12/19 21:43:09 nickb Exp $ -->
+<!-- $Id: index.php,v 1.2 2007/01/11 00:21:21 nickb Exp $ -->
