@@ -6,7 +6,7 @@ ob_start();
 <div id="midcolumn">
 	<div class="homeitem3col">
 		<h3>Download &amp; Installation Requirements - <b style="color:#eeff00">PLEASE READ!</b></h3>
-		<p><b>First-time users</b> can get started quickly by simply downloading the combined <b style="color:#B51464">ALL</b> SDK bundle (includes Source, Runtime and Docs for <b style="color:#BF5FBF">EMF</b>, <b style="color:#18187D">XSD</b>, and <b style="color:#C7568E">SDO</b>). <a href="http://www.eclipse.org/emf/downloads/build-types.php">What Build Type do I want?</a></p>
+		<p><b>First-time users</b> can get started quickly by simply downloading the combined <b style="color:#B51464">ALL</b> SDK bundle (includes Source, Runtime and Docs for <b style="color:#BF5FBF">EMF</b>, <b style="color:#18187D">XSD</b>, and <b style="color:#C7568E">SDO</b>). <a href="http://www.eclipse.org/modeling/emf/downloads/build-types.php">What Build Type do I want?</a></p>
 		<p>EMF, SDO and XSD 2.x require <a href="http://www.eclipse.org/downloads/" target="_eclipse">Eclipse 3.x</a> and <b>JDK 1.4</b>. As of Eclipse 3.2, you can also use a <b>JDK 1.5 / 5.0</b>, since this bug only exists in the <b>Sun JDK 1.4</b>.</p>
 		<p>Note that the full Eclipse SDK is only required <i>if you intend to use the EMF, SDO or XSD graphical interfaces</i>, (ie., views, wizards, extensions) which are built for Eclipse. For <i>runtime-only applications</i>, only a JDK is required.</p>
 		<p>EMF, SDO and XSD are built against the latest Eclipse SDKs, eg., EMF 2.1.0 with Eclipse 3.1.0, and is thus as compatible with Eclipse 3.0 as Eclipse 3.1 is with 3.0.</p>
@@ -38,9 +38,9 @@ ob_start();
 
 			<li>For your convenience, here are some links to XML4J and Xerces2-J, for anyone wishing to use Eclipse 3.0M8 or later.
 				<ul>
-				<li><a target="_xml" href="http://alphaworks.ibm.com/tech/xml4j"><img border="0" alt="Other Download" src="http://www.eclipse.org/emf/images/dl-other.gif"/></a>
+				<li><a target="_xml" href="http://alphaworks.ibm.com/tech/xml4j"><img border="0" alt="Other Download" src="http://www.eclipse.org/modeling/emf/images/dl-other.gif"/></a>
 				<a target="_xml" href="http://alphaworks.ibm.com/tech/xml4j">Download XML4J from IBM alphaWorks</a></li>
-				<li><a target="_xml" href="http://xml.apache.org/xerces2-j/download.cgi"><img border="0" alt="Other Download" src="http://www.eclipse.org/emf/images/dl-other.gif"/></a>
+				<li><a target="_xml" href="http://xml.apache.org/xerces2-j/download.cgi"><img border="0" alt="Other Download" src="http://www.eclipse.org/modeling/emf/images/dl-other.gif"/></a>
 				<a target="_xml" href="http://xml.apache.org/xerces2-j/download.cgi">Download Xerces2-J from apache.org</a></li>
 				</ul>
 			</li>

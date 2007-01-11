@@ -59,11 +59,11 @@ ob_start();
       href="http://wiki.eclipse.org/index.php/Searching_Eclipse_Newsgroups_With_Firefox">search capabilities</a>.
 	Offline, here's two options:
       <a
-      href="http://www.eclipse.org/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsMozilla.html">
+      href="http://www.eclipse.org/modeling/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsMozilla.html">
       with Mozilla</a>
       or
       <a
-      href="http://www.eclipse.org/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsOutlook.html">
+      href="http://www.eclipse.org/modeling/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsOutlook.html">
       with Outlook Express</a>.
       </p>
 </div>

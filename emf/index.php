@@ -57,7 +57,7 @@ displayIntro($projct);
 	<div class="sideitem">
 		<h6>Modeling Corner</h6>
 		<p>Want to <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">contribute</a> models, projects, files, ideas, utilities, or code to 
-		<a href="http://www.eclipse.org/emf/emf.php">EMF</a> or any other part of the <a href="http://www.eclipse.org/modeling/">Modeling Project</a>? 
+		<a href="http://www.eclipse.org/modeling/emf/">EMF</a> or any other part of the <a href="http://www.eclipse.org/modeling/">Modeling Project</a>? 
 		Now you can!</p>
 		<p>Have a look, post your comments, submit a link, or just read what others have written. <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Details here</a>.</p>
 	</div>
@@ -68,7 +68,7 @@ displayIntro($projct);
 			<li><a href="http://wiki.eclipse.org/index.php/Callisto_Coordinated_Maintenance">Callisto 3.2.x Maintenance</a></li>
 			<li><a href="http://wiki.eclipse.org/index.php/Europa_Simultaneous_Release">Europa 3.3 Plan</a></li>
 			<li><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_3.html">Eclipse 3.3 Plan</a></li>
-			<li><a href="http://www.eclipse.org/emf/docs/dev-plans/emf_project_plan_2.3.html">EMF 2.3 Plan</a></li>
+			<li><a href="http://www.eclipse.org/modeling/emf/docs/dev-plans/emf_project_plan_2.3.html">EMF 2.3 Plan</a></li>
 		</ul>
 	</div>
 

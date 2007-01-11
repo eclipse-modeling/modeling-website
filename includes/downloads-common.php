@@ -47,7 +47,7 @@ else // all others
 /* these are possible deps, the actual deps must be a subset of these and are read from build.cfg */
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
-	"emf" => "<a href=\"http://www.eclipse.org/emf/\">EMF</a>",
+	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/\">EMF</a>",
 	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2-ocl#uml2-ocl\">OCL</a>",
@@ -229,7 +229,7 @@ print "</div>\n";
 print "<div class=\"sideitem\">\n";
 print "<h6>Getting Sources</h6>\n";
 print "<ul>\n";
-print "<li><a href=\"http://www.eclipse.org/emf/docs/misc/cvsdoc/emfcvsug.html\">CVS + Eclipse</a></li>\n";
+print "<li><a href=\"http://www.eclipse.org/modeling/emf/docs/misc/cvsdoc/emfcvsug.html\">CVS + Eclipse</a></li>\n";
 print "<li><a href=\"http://wiki.eclipse.org/index.php/CVS_Source_From_Mapfile\">CVS + Map File + Script</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/$PR/downloads/?project=$projct\">SDK zip</a> or <a href=\"http://www.eclipse.org/$PR/updates/\">Update Manager</a> (org.*.source_x.y.z.*/*src.zip)</li>\n";
 print "</ul>\n";

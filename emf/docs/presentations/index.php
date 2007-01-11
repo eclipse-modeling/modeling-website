@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] ."/emf/includes/header.php");
 
 if (!$isWWWserver) 
 { 
-	header("Location: http://www.eclipse.org/emf/docs.php");
+	header("Location: http://www.eclipse.org/modeling/emf/docs/");
 	exit;
 }
 

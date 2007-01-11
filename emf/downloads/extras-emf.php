@@ -24,7 +24,7 @@ $oldrels = array(
 	"2.0.2" => "200503151315",
 	"2.0.1" => "200409171617",
 	"2.0.0" => "200406280827",
-	"1.x" => array("2003","http://www.eclipse.org/emf/downloads/dl-xsd1x.html")
+	"1.x" => array("2003","http://www.eclipse.org/modeling/emf/downloads/dl-emf1x.html")
 );
 
 function doBleedingEdge ()
@@ -69,7 +69,7 @@ function doRequirements()
 				<tr valign="top">
 					<td><img src="/modeling/images/new.gif" border="0" align="left" valign="top"/></td>
 					<td><table style="border:0px" cellspacing="0" cellpadding="2"><tr><td>EMF 2.3.0 contains significant, though binary  
-			compatible, changes from previous releases. See <a href="http://www.eclipse.org/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).</td></tr></table></td>
+			compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).</td></tr></table></td>
 				</tr>
 			</table>
 			</div>

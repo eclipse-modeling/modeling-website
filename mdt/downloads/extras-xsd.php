@@ -16,7 +16,7 @@ $oldrels = array(
 	"2.0.2" => "200503151315",
 	"2.0.1" => "200409171617",
 	"2.0.0" => "200406280827",
-	"1.x" => array("2003","http://www.eclipse.org/emf/downloads/dl-xsd1x.html")
+	"1.x" => array("2003","http://www.eclipse.org/modeling/emf/downloads/dl-xsd1x.html")
 );
 
 
