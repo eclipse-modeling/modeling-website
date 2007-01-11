@@ -27,6 +27,17 @@ $oldrels = array(
 	"1.x" => array("2003","http://www.eclipse.org/emf/downloads/dl-xsd1x.html")
 );
 
+function doBleedingEdge ()
+{
+	print '<div class="sideitem">'."\n". '<h6>The Bleeding Edge</h6>';
+	getNews(4, "bleedingedge", null, true);
+	print ' <ul>
+				<li><a href="../docs/#whatsnew">More from the Edge</a></li>
+			</ul>
+		</div>
+	';	
+}
+
 function requirementsNote()
 { ?>
 <div class="homeitem3col">
@@ -53,10 +64,14 @@ function doRequirements()
 	
 	<ul id="requirements">
 		<li>
-			<div>
-
-			<a href="http://wiki.eclipse.org/index.php/EMF_2.3_Generics"><img src="/modeling/images/new.gif"/> Support for JDK 5.0 generics has changed as of 2.3.0.I200612071030</a>.<br/>
-			<a href="http://www.eclipse.org/emf/docs/2.x/whatsnew/merge2.3.html"><img src="/modeling/images/new.gif"/> Code merge behaviour has changed as of 2.3.0.I200611161558</a>.
+			<div align="right">
+			<table width="310" border="0" cellspacing="1" cellpadding="1">
+				<tr valign="top">
+					<td><img src="/modeling/images/new.gif" border="0" align="left" valign="top"/></td>
+					<td><table style="border:0px" cellspacing="0" cellpadding="2"><tr><td>EMF 2.3.0 contains significant, though binary  
+			compatible, changes from previous releases. See <a href="http://www.eclipse.org/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).</td></tr></table></td>
+				</tr>
+			</table>
 			</div>
 			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0</a>
 			<ul id="req2_3_0">

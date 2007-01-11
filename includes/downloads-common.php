@@ -204,13 +204,23 @@ print "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
 
+$extras = array("doBleedingEdge");
+
+foreach ($extras as $z)
+{
+	if (function_exists($z))
+	{
+		call_user_func($z);
+	}
+}
+
 print "<div class=\"sideitem\">\n";
 print "<h6>Additional Info</h6>\n";
 print "<ul>\n";
 print "<li><a href=\"http://www.eclipse.org/$PR/faq.php\">FAQs</a></li>\n";
 print "<li><a href=\"#archives\">Archived Releases</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/emf/downloads/build-types.php\">About Build Types</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/emf/downloads/verifyMD5.php\">Using md5 Files</a></li>\n";
+print "<li><a href=\"http://www.eclipse.org/modeling/downloads/build-types.php\">About Build Types</a></li>\n";
+print "<li><a href=\"http://www.eclipse.org/modeling/downloads/verifyMD5.php\">Using md5 Files</a></li>\n";
 print "<li><a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?product={$bugzilla_pairs[$projct][0]}&amp;component={$bugzilla_pairs[$projct][1]}&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED\">Open Bugs</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/$PR/news/relnotes.php?project=$projct&amp;version=HEAD\">Release Notes</a></li>\n";
 print "</ul>\n";
