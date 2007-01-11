@@ -14,14 +14,9 @@ $content["emf"] = <<<HTML
 	interoperability with other EMF-based tools and applications. For more detailed 
 	information see the <a href="http://www.eclipse.org/$PR/docs.php#overviews">EMF Overviews</a> and <a href="http://www.eclipse.org/$PR/docs.php#plandocs">Project Plan</a>.</p>
 
-	<p>EMF includes the <a href="http://www.eclipse.org/modeling/mdt/?project=xsd">XML Schema Infoset Model (XSD) project</a> and an <a href="http://www.eclipse.org/$PR/?project=sdo">EMF-based implementation of Service Data Objects (SDO)</a>.</p>
+	<p>EMF builds include <a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD), now a component of the <a href="http://www.eclipse.org/modeling/mdt/?project=xsd">Model Development Tools</a> (MDT) project, and an EMF-based implementation of <a href="http://www.eclipse.org/$PR/?project=sdo">Service Data Objects</a> (SDO).</p>
 </div>
 
-<div class="homeitem3col">
-	<h3><b>Service Data Objects (SDO)</b></h3>
-
-	<p>Service Data Objects (SDO) is a framework that simplifies and unifies data application development in a service oriented architecture (SOA). It supports and integrates XML and incorporates J2EE patterns and best practices. [<a href="http://www.eclipse.org/$PR/?project=sdo">more</a>]</p>
-</div>
 HTML;
 
 $content["emf2"] = <<<HTML
@@ -81,7 +76,7 @@ $content["emf2"] = <<<HTML
 	<p>Want to learn more about how easy it is to use this exciting new
 	technology to help you boost your Java programming productivity,
 	application compatibility and integration? Start by reading the <a
-	href="http://www.eclipse.org/$PR/docs.php">overview documents and the tutorial</a>,
+	href="http://www.eclipse.org/$PR/docs/">overview documents and the tutorial</a>,
 	followed by <a href="http://www.eclipse.org/$PR/downloads/">downloading the driver</a>,
 	and then sit back and watch your applications write themselves!
 	Well, not completely, but this wouldn't be a sales pitch if there
@@ -103,8 +98,7 @@ $content["sdo2"] = <<<HTML
 	<p>Put simply, Service Data Objects is a framework for data application development, which includes an architecture and API. Service Data Objects simplify the J2EE data programming model and abstract data in a service oriented architecture (SOA). SDO unifies data application development, supports, and integrates XML. Service Data Objects incorporate J2EE patterns and best practices.</p>
 	<p>Also see:</p>
 	<ul class="sdo">
-		<li><a href="http://www.eclipse.org/$PR/docs.php#overviews">Overview</a></li>
-		<li><a href="http://www.eclipse.org/$PR/docs.php">Documentation</a></li>
+		<li><a href="http://www.eclipse.org/$PR/docs/#sdo">Documentation</a></li>
 		<li><a href="http://www.eclipse.org/$PR/javadoc/">Javadoc</a></li>
 		<li><a href="http://www.eclipse.org/$PR/downloads/">Downloads</a></li>
 	</ul>
