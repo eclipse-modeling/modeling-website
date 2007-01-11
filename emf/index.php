@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-if ($isWWWserver && class_exists("Poll"))
+/*if ($isWWWserver && class_exists("Poll"))
 {
 	# Enable polls on this page: Polls are good for 3 months!
 	$App->usePolls();
@@ -15,8 +15,8 @@ if ($isWWWserver && class_exists("Poll"))
 	$Poll->addOption(4, "Meh.");
 	# $Poll->noGraph();  # uncomment to disable bar graph
 	$pollHTML = $Poll->getHTML();
-}
-   
+} */   
+
 ob_start();
 ?>
 
