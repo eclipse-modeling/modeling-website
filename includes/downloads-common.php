@@ -374,9 +374,6 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 	if (!$ziplabel)
 	{
 		$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
-		// for testing, you can find a list of files like this:
-		// `find /home/www-data/emf-build/tools/emf/downloads/drops/2.0.1 -type f -maxdepth 2 -name *.zip -name *emf-sdo-xsd-SDK*`
-
 		$ziplabel = preg_replace("/(.+)\-([^\-]+)(\.zip)/", "$2", $zips_in_folder[0]); // grab first entry
 	}
 
@@ -715,8 +712,6 @@ function outputBuild($branch, $ID, $c)
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
-	// for testing, you can find a list of files like this:
-	// `find /home/www-data/emf-build/tools/emf/downloads/drops/2.0.1 -type f -maxdepth 2 -name *.zip -name *emf-sdo-xsd-SDK*`
 	$ziplabel = (sizeof($zips_in_folder) < 1) ? $ID :
 		preg_replace("/(.+)\-([^\-]+)(\.zip)/", "$2", $zips_in_folder[0]); // grab first entry
 

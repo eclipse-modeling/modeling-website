@@ -3,19 +3,19 @@ $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]))
 
 if ($isWWWserver)
 {
-	$PWD = "/home/data/httpd/download.eclipse.org/tools/emf/";
-	$jdPWD = "/downloads/download.php?file=/tools/emf/";
+	$PWD = "/home/data/httpd/download.eclipse.org/modeling/emf/emf/";
+	$jdPWD = "/downloads/download.php?file=/modeling/emf/emf/";
 }
 else
 {
-	if (is_dir("../../../../tools/emf/"))
+	if (is_dir("../../../../modeling/emf/emf/"))
 	{
-		$PWD = "../../../../tools/emf/"; // in a javadoc folder in the /tools/emf area
+		$PWD = "../../../../modeling/emf/emf/"; // in a javadoc folder in the /modeling/emf/emf area
 	}
 	else
-		if (is_dir("../../tools/emf/"))
+		if (is_dir("../../modeling/emf/emf/"))
 		{
-			$PWD = "../../tools/emf/"; // in the web folder in /emf/
+			$PWD = "../../modeling/emf/emf/"; // in the web folder in /emf/
 		}
 	$jdPWD = $PWD;
 }
@@ -28,9 +28,9 @@ $subprojs = array (
 // REDIRECT to latest version of javadoc for the specified path
 if ($_SERVER["QUERY_STRING"])
 {
-	// given       http://emf.torolab.ibm.com/tools/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details
+	// given       http://emf.torolab.ibm.com/modeling/emf/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details
 	// or                    http://emf.torolab.ibm.com/emf/javadoc?org/eclipse/xsd/package-summary.html#details
-	// serve http://emf.torolab.ibm.com/tools/emf/xsd/javadoc/2.1.0/org/eclipse/xsd/package-summary.html#details (latest version)
+	// serve http://emf.torolab.ibm.com/modeling/emf/emf/xsd/javadoc/2.1.0/org/eclipse/xsd/package-summary.html#details (latest version)
 	$subprojsR = array_reverse($subprojs, true);
 	$vers = array ();
 	foreach ($subprojsR as $label => $projct)
@@ -57,9 +57,9 @@ if ($_SERVER["QUERY_STRING"])
 
 $projDetails = array (
 	/* path => project's downloads path, downloads page path, includes path, and vanity name */
-	"/tools/emf" => array (
-		"/emf/downloads",
-		"/emf",
+	"/modeling/emf/emf" => array (
+		"/modeling/emf/downloads",
+		"/modeling",
 		"EMF"
 	),
 	"/technology/emft" => array (

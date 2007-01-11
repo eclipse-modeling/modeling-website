@@ -41,7 +41,7 @@ displayIntro($page);
 	</div>
 
 	<div class="sideitem">
-		<h6><a href="http://www.eclipse.org/downloads/download.php?file=/tools/emf/feeds/builds-emf.xml"><img style="float:right" alt="EMF Build Feed" src="/modeling/images/rss-atom10.gif"/></a>Build news</h6>
+		<h6><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/feeds/builds-emf.xml"><img style="float:right" alt="EMF Build Feed" src="/modeling/images/rss-atom10.gif"/></a>Build news</h6>
 		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
 		<ul>
 			<li><a href="/modeling/emf/news/news-whatsnew.php#build">Older build news</a></li>
@@ -102,6 +102,6 @@ $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/$PR/includes/index.css\"/>\n");
-$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/tools/emf/feeds/builds-emf.xml"/>' . "\n");
+$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/feeds/builds-emf.xml"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
