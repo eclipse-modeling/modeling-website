@@ -367,7 +367,7 @@ function IDtoDateStamp($ID, $style) // given N200402121441, return date("D, j M 
 
 function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
 {
-	global $PR, $suf, $proj, $projct;
+	global $PR, $suf, $proj, $projct, $filePreStatic;
 	$uu = 0;
 	$echo_out = "";
 
@@ -377,15 +377,24 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 		$ziplabel = preg_replace("/(.+)\-([^\-]+)(\.zip)/", "$2", $zips_in_folder[0]); // grab first entry
 	}
 
+	$cnt=-1; // for use with static prefix list
 	foreach (array_keys($dls[$proj]) as $z)
 	{
 		$echo_out .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n";
 		foreach ($dls[$proj][$z] as $label => $u)
 		{
+			$cnt++;
 			$echo_out .= "<li>\n";
 			if ($u) // for compatibilty with uml2, where there's no "RT" value in $u
 			{
 				$u = "-$u";
+			}
+			
+			// support EMF page with three different valid prefixes which can 
+			// overlap when searched using dynamic check below
+			if ($filePreStatic) 
+			{
+				$filePreProj = array($filePreStatic[$cnt]); // just one value to check
 			}
 
 			$tries = array();

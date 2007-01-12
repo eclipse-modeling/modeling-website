@@ -16,7 +16,7 @@ $dls = array(
 			"Examples" => "Examples"
 		),
 		"EMF and SDO" => array(
-			"SDK" => "SDK",
+			"SDK (runtime, source, docs)" => "SDK",
 			"Runtimes" => "runtime"
 		),
 		"XSD" => array(
@@ -31,6 +31,19 @@ $dls = array(
 $filePre = array(
 	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd")
 );
+/* alternate method for specifying prefixes - static list */
+$filePreStatic = array( 
+	"emf-sdo-xsd",
+	"emf-sdo-xsd",
+	"emf-sdo-xsd",
+	"emf-sdo-xsd",
+	"emf-sdo-xsd",
+	"emf-sdo",
+	"emf-sdo",
+	"xsd",
+	"xsd"
+);
+
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
