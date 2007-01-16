@@ -518,7 +518,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			if ($errors)
 			{
 				$icon = "not";
-				$result = "COMPILER ERROR";
+				$result = "ERROR";
 			} else
 			{
 				$icon = ($warnings ? "check-maybe" : "check");
