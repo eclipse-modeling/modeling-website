@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 $PRS = array(
 	"Tools/UML2 (UML2 UML)" => "tools/uml2",
 	"Tools/EMF (XSD)" => "tools/emf",
-	"Technology/EMFT (EODM, UML2-OCL)" => "technology/emft"
+	"Technology/EMFT (EODM, OCL)" => "technology/emft"
 );
 
 function notes()
