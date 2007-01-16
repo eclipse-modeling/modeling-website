@@ -25,7 +25,7 @@ $bugurl = "https://bugs.eclipse.org";
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
 $cvsprojs = array (
-	"uml2-uml" => "org.eclipse.uml2",
+	"uml2" => "org.eclipse.uml2",
 	"xsd" => "org.eclipse.xsd"
 );
 
