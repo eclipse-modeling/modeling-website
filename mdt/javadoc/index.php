@@ -73,8 +73,8 @@ $projectsAll = array (
 	),
 	"MDT" => array (
 		"EODM" => "eodm",
-		"UML2 OCL" => "ocl",
-		"UML2 UML" => "uml2",
+		"OCL" => "ocl",
+		"UML2" => "uml2",
 		"UML2 Tools" => "uml2tools",
 		"XSD" => "xsd"
 	)

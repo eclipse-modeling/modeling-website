@@ -135,12 +135,12 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2-uml&amp;sortBy=date&amp;hlbuild=0#latest">UML2 UML</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2-uml&amp;sortBy=date&amp;hlbuild=0#latest">UML2 UML</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a></td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2-ocl&amp;sortBy=date&amp;hlbuild=0#latest">UML2 OCL</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2-ocl&amp;sortBy=date&amp;hlbuild=0#latest">UML2 OCL</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
@@ -304,10 +304,10 @@ function showfullURL(val)
 function setNote(val) 
 {
   note = document.getElementById('note');
-	if (val == "UML2 OCL" || val == "EODM")
+	if (val == "OCL" || val == "EODM")
 		note.innerHTML = val + " requires 2 SDKs: Eclipse & EMF"
-	else if (val == "UML2 UML" || val == "XSD")
-		note.innerHTML = "Query requires 3 SDKs: Eclipse, EMF & OCL"
+	else if (val == "UML2" || val == "XSD")
+		note.innerHTML = val + " requires 3 SDKs: Eclipse, EMF & OCL"
 	else
 		note.innerHTML = "Requires at least 1 or 2 SDKs: Eclipse, EMF..."
 }
@@ -475,7 +475,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		// create the log dir before trying to log to it
 		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
-		# TODO: this only works with UML2 UML; eventually, will use a common start.sh for all projects
+		# TODO: this only works with UML2; eventually, will use a common start.sh for all projects
 		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh'.
 			' -proj mdt -sub '.$projct.
 			' -version '.$BR.

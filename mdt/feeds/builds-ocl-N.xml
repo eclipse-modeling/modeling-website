@@ -3,12 +3,12 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ocl Builds</title>
-  <link href="http://www.eclipse.org/modeling/mdt/feeds/builds-uml2-ocl-N.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://www.eclipse.org/modeling/mdt/feeds/builds-ocl-N.xml" rel="self" type="application/atom+xml"/>
   <updated>2006-09-26T17:08:01Z</updated>
   <author>
     <name>ocl Build Team</name>
   </author>
-  <id>http://www.eclipse.org/modeling/mdt/feeds/builds-uml2-ocl-N.xml</id>
+  <id>http://www.eclipse.org/modeling/mdt/feeds/builds-ocl-N.xml</id>
   <entry>
     <title>[announce] ocl N200609261300 (1.0.1.N200609261300) is available</title>
     <link href="http://emf.torolab.ibm.com/tools/emf/downloads/drops/1.0.1/N200609261300"/>

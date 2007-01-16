@@ -15,16 +15,16 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
-	"/uml2-uml" => array(
-		"UML2 UML" => array(
+	"/uml2" => array(
+		"UML2" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
 	),
-	"/uml2-ocl" => array(
-		"UML2 OCL" => array(
+	"/ocl" => array(
+		"OCL" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
@@ -54,8 +54,8 @@ $dls = array(
 /* keys have leading / to match $proj */
 $filePre = array(
 	"/eodm" => array("emft-eodm","mdt-eodm"),
-	"/uml2-uml" => array("uml2","mdt-uml2"),
-	"/uml2-ocl" => array("emft-ocl","mdt-ocl"),
+	"/uml2" => array("uml2","mdt-uml2"),
+	"/ocl" => array("emft-ocl","mdt-ocl"),
 	"/uml2tools" => array("mdt-uml2tools"),
 	"/xsd" => array("xsd","mdt-xsd")
 );
