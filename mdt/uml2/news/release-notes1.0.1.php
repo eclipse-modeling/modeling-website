@@ -1,1 +1,1 @@
-<?php header("Location: http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2-uml&version=1.0.1"); ?>
+<?php header("Location: http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2&version=1.0.1"); ?>
