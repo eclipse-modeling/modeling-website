@@ -108,7 +108,7 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://www.eclipse.org/m2m/">Model to Model Transformation</a> (M2M) : will deliver an extensible framework for model-to-model transformation languages, with an exemplary implementation of the <a href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm#MOF_QVT">QVT</a> Core language.</li>
 				<ul>
-					<li><a href="http://www.eclipse.org/gmt/atl/">Atlas Transformation Language (ATL)</a> : a model transformation language and toolkit.</li>
+					<li><a href="http://www.eclipse.org/m2m/atl/">Atlas Transformation Language (ATL)</a> : a model transformation language and toolkit.</li>
 				</ul>
 				<li><a href="http://www.eclipse.org/proposals/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
