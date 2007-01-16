@@ -4,9 +4,9 @@ $jdk14testsPWD = "";
 $jdk50testsPWD = "";
 if ($isEMFserver)
 {
-	$testsPWD = "/home/www-data/tests/$PR/tests"; // path on emf.torolab.ibm.com ONLY
-	$jdk14testsPWD = "/home/www-data/jdk14tests"; // path on emf.torolab.ibm.com ONLY
-	$jdk50testsPWD = "/home/www-data/jdk50tests"; // path on emf.torolab.ibm.com ONLY
+	$testsPWD 	   = "/home/www-data/oldtests";   // path on emf.torolab ONLY
+	$jdk14testsPWD = "/home/www-data/jdk14tests"; // path on emf.torolab ONLY
+	$jdk50testsPWD = "/home/www-data/jdk50tests"; // path on emf.torolab ONLY
 }
 
 $NLpacks = array(
