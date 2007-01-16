@@ -21,7 +21,7 @@ function doLanguagePacks()
 	
 	<h3>Language Packs</h3>
 
-	<p>IBM is pleased to contribute translations for the Eclipse Modeling Development Tools subcomponent UML2 OCL.</p>
+	<p>IBM is pleased to contribute translations for the Eclipse Modeling Development Tools subcomponent OCL.</p>
 	<ul>
 		<li>
 			<a href="javascript:toggle('lang1_0')">1.0.x Language Packs</a><a name="NLS1.0.x"></a>
@@ -31,7 +31,7 @@ function doLanguagePacks()
 						"1.0.x NLS Translation Packs" => "NLpacks-",
 					);
 					$cols = array(
-						"UML2 OCL" => "ocl"
+						"OCL" => "ocl"
 					);
 					$subcols = array(
 						"SDK" => "SDK-1.0.0",
@@ -50,7 +50,7 @@ function doLanguagePacks()
 						<li>NLpackBidi - Arabic</li>
 					</ul>
 					<p>Each language pack zip contains 4 other zips (one for each of the language groups above). Unpack these zips into your Eclipse directory before starting Eclipse.</p>
-					<p>These translations are based on UML2 OCL 1.0.0. The NLS translation fragment packs should work with all subsequent 1.0.x maintenance releases, with any new strings remaining untranslated.</p>
+					<p>These translations are based on OCL 1.0.0. The NLS translation fragment packs should work with all subsequent 1.0.x maintenance releases, with any new strings remaining untranslated.</p>
 				</li>
 			</ul>
 		</li>
@@ -68,8 +68,8 @@ function showNotes()
 		<p>If you have problems downloading the drops, contact the <a href="mailto:webmaster@eclipse.org">webmaster</a>.</p>
 		<p>These are the minimum required downloads for using EMF, SDO and XSD:</p>
 		<ul>
-			<li>To use <b class="uml2">UML2 OCL</b> alone, you require both the UML2 OCL &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
-			<li>To use <b class="uml2">UML2 OCL</b> w/ XSD models, you require three Runtimes: UML2 OCL, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
+			<li>To use <b class="uml2">OCL</b> alone, you require both the OCL &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
+			<li>To use <b class="uml2">OCL</b> w/ XSD models, you require three Runtimes: OCL, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
 		</ul>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 	</div>

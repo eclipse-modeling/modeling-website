@@ -33,30 +33,30 @@ $cvsprojs = array (
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
 	"org.eclipse.emft" => array (
-		"uml2-ocl" => "ocl",
+		"ocl" => "ocl",
 		"eodm" => "eodm"
 	)
 );
 
 $projects = array (
 	"EODM" => "eodm",
-	"UML2 OCL" => "uml2-ocl",
-	"UML2 UML" => "uml2-uml",
+	"OCL" => "ocl",
+	"UML2" => "uml2",
 	"UML2 Tools" => "uml2tools",
 	"XSD" => "xsd"
 );
 
 $level = array (
 	"eodm" => 2,
-	"uml2-ocl" => 2,
+	"ocl" => 2,
 	"uml2tools" => 2,
-	"uml2-uml" => 2,
+	"uml2" => 2,
 	"xsd" => 2
 );
 
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array (
-	"uml2tools"
+//	"uml2tools"
 ); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (
 ); //projects without newsgroups
