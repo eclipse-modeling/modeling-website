@@ -52,7 +52,7 @@ if ($version && ($cvsproj || $cvscom))
 
 <div class="homeitem3col">'."\n";
 	print "<h3>INPUT</h3>\n<ul><li>" . $script . "?project=<i style=\"color:blue\">{project or component}</i>&amp;version=<i style=\"color:blue\">{buildID or buildAlias}</i></li></ul><br/>\n";
-	print "<h3>EXAMPLE</h3>\n<ul><li>" . $script . "?project=uml2-uml&amp;version=2.1M3</li></ul><br/>\n";
+	print "<h3>EXAMPLE</h3>\n<ul><li>" . $script . "?project=uml2&amp;version=2.1M3</li></ul><br/>\n";
 	print '<h3>OUTPUT</h3>'."\n".'<ul><li><b style="color:red">0</b> (not found)</li><li><b style="color:green">1</b> (found)</li></ul><br/>' . "\n";
 
 	print "</div>\n";
