@@ -50,9 +50,9 @@ $deps = array(
 	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/\">EMF</a>",
 	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
-	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2-ocl#uml2-ocl\">OCL</a>",
+	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
 	"orbit" => "<a href=\"http://www.eclipse.org/orbit\">Orbit</a>", # should this be included?
-	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2-uml#uml2-uml/\">UML2</a>",
+	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"query" => "<a href=\"http://www.eclipse.org/emft/projects/query/#query\">Query</a>",
 	"transaction" => "<a href=\"http://www.eclipse.org/emft/projects/transaction/#transaction\">Transaction</a>",
 	"validation" => "<a href=\"http://www.eclipse.org/emft/projects/validation/#validation\">Validation</a>",
@@ -64,9 +64,9 @@ $deps = array(
 $bugzilla_pairs = array(
 	"emf" => array("EMF", ""),
 	"xsd" => array("MDT", "XSD"),
-	"uml2-ocl" => array("MDT", "UML2%20OCL"),
+	"ocl" => array("MDT", "OCL"),
 	"eodm" => array("MDT", "EODM"),
-	"uml2-uml" => array("MDT", "UML2%20UML"),
+	"uml2" => array("MDT", "UML2"),
 	"uml2tools" => array("MDT", "UML2%20Tools")
 );
 
