@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<project>
+	<name>Graphical Modeling Framework</name>
+	<short-name>GMF</short-name>
+	<summary paragraph-url="/gmf/project-info/executive-summary.html"/>
+	<description url="/gmf/index.php" paragraph-url="/gmf/project-info/project-page-paragraph.html"/>
+	<bugzilla>
+		<product name="GMF"/>
+	</bugzilla>
+	<team url="/gmf/development/contributors.php"></team>
+	<contributing url="/gmf/development/index.php"></contributing>
+	<cvs repository="/cvsroot/technology/" path="org.eclipse.gmf"/>
+	<getting-started url="http://wiki.eclipse.org/index.php/GMF_Documentation"/>
+	<ip-log url="/gmf/development/ipquery.php"></ip-log>
+	<articles>
+		<article url="http://www.eclipse.org/articles/Article-Introducing-GMF/article.html"/>
+		<article url="http://www.eclipse.org/articles/Article-FromFrontendToCode-MDSDInPractice/article.html"/>
+	</articles>
+	<newsgroups>
+        <newsgroup name="eclipse.modeling.gmf"/>
+        <newsgroup name="eclipse.technology.gmf"/>
+    </newsgroups>
+    <blogs>
+    	<blog rss="http://eclipse-modeling.blogspot.com/atom.xml"/>
+  	</blogs>
+	<mailing-lists url="http://dev.eclipse.org/mailman/listinfo/gmf-dev">
+		<list name="gmf-dev"/>
+		<list name="gmf-releng"/>
+	</mailing-lists>
+	<project-plan url="http://wiki.eclipse.org/index.php/GMF_Project_Plan"/>
+	
+	<releases>
+		<release
+			status="completed"
+			name="1.0.0"
+			date="30/06/2006"
+			download="/modeling/gmf/downloads/drops/R-1.0-200606271200/index.php"
+		/>
+		<release
+			status="completed"
+			name="1.0.1"
+      		date="30/09/2006"
+      		plan="http://wiki.eclipse.org/index.php/GMF_Project_Plan"
+    	/>
+    	<release
+			status="scheduled"
+			name="1.0.2"
+      		date="27/10/2006"
+      		plan="http://wiki.eclipse.org/index.php/GMF_Project_Plan"
+    	/>
+		<release
+			status="scheduled"
+			name="1.0.3"
+      		date="02/2007"
+      		plan="http://wiki.eclipse.org/index.php/GMF_Project_Plan"
+    	/>
+    	<release
+			status="scheduled"
+			name="2.0.0"
+      		date="06/2007"
+      		plan="http://wiki.eclipse.org/index.php/GMF_Project_Plan"
+    	/>
+	</releases>
+
+</project>
