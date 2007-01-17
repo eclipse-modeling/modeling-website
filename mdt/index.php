@@ -44,10 +44,7 @@ foreach ($projects as $z)
 		{
 			print "<li><a href=\"?project=$projects[$z]#$projects[$z]\">More...</a></li>\n";
 		}
-		if ($z != "UML2")
-		{
-			print "<li><a href=\"/$PR/downloads/?project=$projects[$z]\">Downloads</a></li>\n";
-		}
+		print "<li><a href=\"/$PR/downloads/?project=$projects[$z]\">Downloads</a></li>\n";
 		print "</ul>\n";
 		print "</div>\n";
 	}
@@ -107,4 +104,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.12 2007/01/11 01:56:51 nickb Exp $ -->
+<!-- $Id: index.php,v 1.13 2007/01/17 23:47:55 nickb Exp $ -->
