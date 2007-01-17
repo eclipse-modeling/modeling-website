@@ -104,7 +104,7 @@
      - points to a web page on the project's site that describes how to
      - get started using and extending the project's tools and frameworks.
     -->
-  <getting-started url="/modeling/index.php"/>
+  <getting-started url="http://wiki.eclipse.org/index.php/Modeling#Documentation"/>
   
   <!--
      - It is also important to help new contributors get started with an Eclipse project.
@@ -189,7 +189,7 @@
      - community and ecosystem to understand what will be delivered and when
      - it will be delivered.
     -->
-  <project-plan url=""/>
+  <project-plan url="http://wiki.eclipse.org/index.php/Modeling_Project_Plan"/>
 
   <!--
      - Each Eclipse project creates (optional) nightly builds and milestone builds,
@@ -209,11 +209,11 @@
     -->
   <releases>
     <release 
-       status="scheduled"
+       status="completed"
        name="Callisto"
        date="06/2006" />
     <release 
-       status="tentative"
+       status="scheduled"
        name="Europa"
        date="06/2007" />
   </releases>
