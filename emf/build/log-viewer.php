@@ -1,9 +1,21 @@
 <?php 
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getprojectCommon());
 
 internalUseOnly(); 
-$debug = $_GET["debug"];
+
+if (is_array($projects))
+{
+	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
+	$tmp = array_keys($projectArray);
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projectArray[$tmp[0]]);
+}
+else
+{
+	$proj = "";
+}
+
+$projct = preg_replace("#^/#", "", $proj);
 
 /* from $_GET */
 $params = array(
@@ -16,22 +28,22 @@ $params = array(
 
 /* check these files, %s replaced with param from above */
 $files = array(
-	"build" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${proj}/downloads/drops/%sbuildlog.txt"),
-	"test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${proj}/oldtests/%stestlog.txt"),
-	"jdk13test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${proj}/jdk13tests/%stestlog.txt"),
-	"jdk14test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${proj}/jdk14tests/%stestlog.txt"),
-	"jdk50test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${proj}/jdk50tests/%stestlog.txt")
+	"build" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/downloads/drops/%sbuildlog.txt"),
+	"test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/oldtests/%stestlog.txt"),
+	"jdk13test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk13tests/%stestlog.txt"),
+	"jdk14test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk14tests/%stestlog.txt"),
+	"jdk50test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk50tests/%stestlog.txt")
 );
 
 /* replace these values with key */
 $reps = array(
-	"o.e.$proj" => "org.eclipse.$proj",
-	"o.e.e.$proj" => "org.eclipse.emf.$proj",
+	"o.e.$projct" => "org.eclipse.$projct",
+	"o.e.e.$projct" => "org.eclipse.emf.$projct",
 	"o.e.mdt" => "org.eclipse.mdt",
-	"o.e.e.r.build" => "org.eclipse.$proj.releng.build",
+	"o.e.e.r.build" => "org.eclipse.$projct.releng.build",
 	"o.e.m.c.r" => "org.eclipse.modeling.common.releng",
 	"o.e.r" => "org.eclipse.releng",
-	"dd" => "/home/www-data/build/$PR/${proj}/downloads/drops",
+	"dd" => "/home/www-data/build/$PR/${projct}/downloads/drops",
 	"dte" => "download.eclipse.org/technology",
 	"dto" => "download.eclipse.org/tools",
 	"dm" => "download.eclipse.org/modeling",
@@ -136,33 +148,33 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function options($args, $f)
 {
-	global $offset,$step,$maxlines,$proj;
+	global $offset,$step,$maxlines,$projct;
 	print "<div class=\"options\">\n";
-	print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;step=$step\">&lt;&lt; 0 - $step</a>";
+	print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;step=$step\">&lt;&lt; 0 - $step</a>";
 	if ($offset - $step >= 0) 
 	{	
-		print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset - $step) . "&amp;step=$step\">&lt; " . ($offset - $step) . " to ". ($offset). "</a>";
+		print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset - $step) . "&amp;step=$step\">&lt; " . ($offset - $step) . " to ". ($offset). "</a>";
 	}
 	else
 	{
-		print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;step=$step\">&lt; 0 - $step</a>";
+		print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;step=$step\">&lt; 0 - $step</a>";
 		
 	}
 
 	$step2 = $maxlines - $offset - $step;
 	if ($offset + $step + $step <= $maxlines)
 	{
-		print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset + $step) . "&amp;step=$step\">" . ($offset + $step) . " to ". ($offset + $step + $step). " &gt;</a>";
+		print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset + $step) . "&amp;step=$step\">" . ($offset + $step) . " to ". ($offset + $step + $step). " &gt;</a>";
 	}
 	else if ($offset + $step <= $maxlines && $step2 > 0)
 	{
-		print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset + $step) . "&amp;step=$step2\">" . ($offset + $step) . " to ". ($maxlines). " &gt;</a>";
+		print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($offset + $step) . "&amp;step=$step2\">" . ($offset + $step) . " to ". ($maxlines). " &gt;</a>";
 	}
 	else
 	{
-		print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;</a>";
+		print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;</a>";
 	}
-	print "<a href=\"?project=$proj&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;&gt;</a>";
+	print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;&gt;</a>";
 	print "<a href=\"" . preg_replace("#^".$_SERVER['DOCUMENT_ROOT']."#", "", $f) . "\">unformatted log (" . trim(pretty_size(filesize("$f"))) . ")</a>";
 	print "</div>\n";
 }
