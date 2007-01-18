@@ -123,7 +123,7 @@ if (!$result)
 	print "</p>\n";
 
 	print "</form>\n";
-
+	
 }
 else
 {
@@ -132,6 +132,8 @@ else
 	print $result;
 
 }
+	print "<ul><b>Remember, you must manually remove any releases from your RSS feed(s) or they will reappear with the next database refresh.</b></ul>";
+
 print "</div>\n";
 
 print "</div>\n";
