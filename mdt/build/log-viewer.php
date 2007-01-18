@@ -1,6 +1,6 @@
 <?php 
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getprojectCommon());
 
 internalUseOnly(); 
 
@@ -50,7 +50,7 @@ foreach (array_keys($params) as $z)
 			$args[] = "$z=" . $_GET[$z];
 			if (!is_file($f) || !is_readable($f))
 			{
-				print "<b>Error:</b> " . preg_replace("#.+/$PR/(.+)#","$1",$f) . " is not a file or is not readable.\n";
+				print "<b>Error:</b> " . (is_numeric($debug) && $debug > 0 ? $f : preg_replace("#.+/$PR/(.+)#","$1",$f)) . " is not a file or is not readable.\n";
 				exit;
 			}
 		}
