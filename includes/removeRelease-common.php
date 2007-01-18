@@ -12,19 +12,23 @@ internalUseOnly();
 require ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 $previewOnly = (isset ($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0);
+$debug = (isset ($_GET["debug"]) && $_GET["debug"] && is_numeric($_GET["debug"]) ? $_GET["debug"] : 0);
 
 ob_start();
 
-$opts = array ();
-foreach ($cvsprojs as $z)
+if (!isset($opts))
 {
-	$opts[] = "$z/";
-}
-
-$components = components($cvscoms);
-foreach ($components as $z)
-{
-	$opts[] = "$z[0]/$z[1]";
+	$opts = array ();
+	foreach ($cvsprojs as $z)
+	{
+		$opts[] = "$z/";
+	}
+	
+	$components = components($cvscoms);
+	foreach ($components as $z)
+	{
+		$opts[] = "$z[0]/$z[1]";
+	}
 }
 
 print "<div id=\"midcolumn\">\n";
@@ -35,7 +39,15 @@ $cvsproj = (isset ($_GET["cvsproject"]) ? $_GET["cvsproject"] : "");
 $rel = (isset ($_GET["release"]) ? $_GET["release"] : "");
 $rels = array ();
 
-$result = wmysql_query("SELECT `project`, `component`, `vanityname` FROM `releases` WHERE `buildtime` >= NOW() - INTERVAL 1 MONTH AND (`project`, `component`) IN(" . join(",", preg_replace("@^(.+)/(.*)$@", "('$1', '$2')", $opts)) . ") ORDER BY `project`, `component`, `buildtime` DESC");
+$query = 	"SELECT `project`, `component`, `vanityname` FROM `releases` WHERE `buildtime` >= NOW() - INTERVAL 1 MONTH " .
+			"AND (`project`, `component`) IN (" . join(",", preg_replace("@^(.+)/(.*)$@", "('$1', '$2')", $opts)) . ") " .
+			"ORDER BY `project`, `component`, `buildtime` DESC";
+if (is_numeric($debug) && $debug>0)
+{
+	print "Query 1: $query<br/>";
+}
+
+$result = wmysql_query($query);
 if ($result)
 {
 	while ($row = mysql_fetch_row($result))
@@ -50,7 +62,12 @@ if ($cvsproj && $rel && isset ($rels[$cvsproj]) && is_numeric($item = array_sear
 	$regs = null;
 	if (preg_match("@^(.+)/(.*)$@", $cvsproj, $regs))
 	{
-		$query = "DELETE FROM `releases` WHERE `project` = '$regs[1]' AND `component` = '$regs[2]' AND `vanityname` = '$rel' AND `buildtime` >= NOW() - INTERVAL 1 MONTH";
+		$query = "DELETE FROM `releases` WHERE `project` = '$regs[1]' AND `component` = '$regs[2]' AND `vanityname` = '$rel' AND " .
+				"`buildtime` >= NOW() - INTERVAL 1 MONTH";
+		if (is_numeric($debug) && $debug>0)
+		{
+			print "Query 2: $query<br/>";
+		}
 		$rel = $regs[1] . ($regs[2] ? "/" . $regs[2] : "") . "/" . $rel;
 		if ($previewOnly)
 		{
