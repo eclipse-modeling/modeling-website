@@ -2,7 +2,6 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 
 $PRS = array(
-	"Tools/UML2" => "tools/uml2",
 	"Tools/EMF (XSD)" => "tools/emf",
 	"Technology/EMFT (EODM, OCL)" => "technology/emft"
 );
