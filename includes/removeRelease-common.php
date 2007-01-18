@@ -19,16 +19,16 @@ ob_start();
 if (!isset($opts))
 {
 	$opts = array ();
-	foreach ($cvsprojs as $z)
-	{
-		$opts[] = "$z/";
-	}
-	
-	$components = components($cvscoms);
-	foreach ($components as $z)
-	{
-		$opts[] = "$z[0]/$z[1]";
-	}
+}
+foreach ($cvsprojs as $z)
+{
+	$opts[] = "$z/";
+}
+
+$components = components($cvscoms);
+foreach ($components as $z)
+{
+	$opts[] = "$z[0]/$z[1]";
 }
 
 print "<div id=\"midcolumn\">\n";
