@@ -1,13 +1,16 @@
 <?php
-if (is_file($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/parsecvs-dbaccess.php") && preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
+
+
+
+if (is_file($writableRoot . "parsecvs-dbaccess.php") && preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
 {
-	require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/parsecvs-dbaccess.php");
+	require_once($writableRoot . "parsecvs-dbaccess.php");
 	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
 }
-else if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php"))
+else if (is_file($writableRoot . "searchcvs-dbaccess.php"))
 {
-	require_once $_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php";
+	require_once $writableRoot . "searchcvs-dbaccess.php";
 	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
 }
@@ -19,7 +22,7 @@ else
 function wmysql_query($sql)
 {
 	$res = null;
-	if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/searchcvs-dbaccess.php"))
+	if (is_file($writableRoot . "searchcvs-dbaccess.php"))
 	{
 		#print $sql . "\n";
 		$res = mysql_query($sql) or die("$sql\n" . mysql_error());
