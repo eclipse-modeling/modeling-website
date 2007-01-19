@@ -21,6 +21,7 @@ else
 
 function wmysql_query($sql)
 {
+	global $writableRoot;
 	$res = null;
 	if (is_file($writableRoot . "searchcvs-dbaccess.php"))
 	{
