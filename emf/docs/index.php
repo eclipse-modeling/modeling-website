@@ -12,7 +12,7 @@ print "<div id=\"rightcolumn\">\n";
 print '<div class="sideitem">'."\n". '<h6>Documentation News</h6>';
 getNews(4, "docs");
 print ' <ul>
-			<li><a href="/emf/news-whatsnew.php">Older news</a></li>
+			<li><a href="/' . $PR . '/news-whatsnew.php">Older news</a></li>
 		</ul>
 	</div>
 ';
@@ -29,4 +29,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.2 2007/01/11 00:21:21 nickb Exp $ -->
+<!-- $Id: index.php,v 1.3 2007/01/19 20:30:37 nickb Exp $ -->

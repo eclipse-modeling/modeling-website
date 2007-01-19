@@ -35,7 +35,7 @@ displayIntro($projct);
 		<h6>News</h6>
 		<?php getNews(4, "whatsnew"); ?>
 		<ul>
-			<li><a href="/modeling/emf/news-whatsnew.php">Older news</a></li>
+			<li><a href="/<?php print $PR; ?>/news-whatsnew.php">Older news</a></li>
 		</ul>
 	</div>
 
@@ -43,7 +43,7 @@ displayIntro($projct);
 		<h6><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/feeds/builds-emf.xml"><img style="float:right" alt="EMF Build Feed" src="/modeling/images/rss-atom10.gif"/></a>Build news</h6>
 		<?php build_news($cvsprojs, $cvscoms, $projct); ?>
 		<ul>
-			<li><a href="/modeling/emf/news/news-whatsnew.php#build">Older build news</a></li>
+			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Older build news</a></li>
 		</ul>
 	</div>
 
