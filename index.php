@@ -34,7 +34,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	
 	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/downloads/index_project.php");
 	$Nav->addCustomNav("EMF", "/emf/downloads/", "_self", 3);
-	$Nav->addCustomNav("GMF", "/modeling/gmf/downloads/", "_self", 3);
+	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("EMFT", "/emft/downloads/", "_self", 3);
 	$Nav->addCustomNav("MDT", "/modeling/mdt/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
