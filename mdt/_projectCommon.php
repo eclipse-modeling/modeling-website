@@ -57,7 +57,6 @@ $level = array (
 
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array (
-//	"uml2tools"
 ); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (
 ); //projects without newsgroups
