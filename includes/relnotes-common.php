@@ -79,6 +79,11 @@ if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 	array_shift($rels);
 }
 
+if ($debug)
+{
+	print_r($rels);
+}
+
 print "<div class=\"homeitem3col\">\n";
 if (sizeof($rels))
 {
