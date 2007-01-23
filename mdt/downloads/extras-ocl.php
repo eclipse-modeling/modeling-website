@@ -66,7 +66,7 @@ function showNotes()
 	<div class="homeitem3col">
 		<h3>Questions?</h3>
 		<p>If you have problems downloading the drops, contact the <a href="mailto:webmaster@eclipse.org">webmaster</a>.</p>
-		<p>These are the minimum required downloads for using EMF, SDO and XSD:</p>
+		<p>These are the minimum required downloads for using OCL:</p>
 		<ul>
 			<li>To use <b class="uml2">OCL</b> alone, you require both the OCL &amp; <a href="/emf/downloads/">EMF</a> Runtimes.</li>
 			<li>To use <b class="uml2">OCL</b> w/ XSD models, you require three Runtimes: OCL, <a href="/emf/downloads/">EMF</a> &amp; <a href="/modeling/mdt/downloads/?project=xsd">XSD</a>.</li>
