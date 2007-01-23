@@ -30,17 +30,29 @@ else
 
 if ($debug)
 {
-	print "#######<br>";
-	print_r ($cvsprojs);
-	print "#######<br>";
-	print_r ($cvscoms);
-	print "#######<br>";
-	print_r ($components);
-	print "#######<br>";
+	print "<b>BEFORE</b><hr/>";
+	print_r ("<pre>".$cvsprojs."</pre>");
+	print "<hr/>";
+	print_r ("<pre>".$cvscoms."</pre>");
+	print "<hr/>";
+	print_r ("<pre>".$components."</pre>");
+	print "<hr/>";
 	print "# $proj, $cvsproj, $cvscom #";
-	print "#######<br>";
+	print "<hr/>";
 }
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
+if ($debug)
+{
+	print "<b>AFTER</b><hr/>";
+	print_r ("<pre>".$cvsprojs."</pre>");
+	print "<hr/>";
+	print_r ("<pre>".$cvscoms."</pre>");
+	print "<hr/>";
+	print_r ("<pre>".$components."</pre>");
+	print "<hr/>";
+	print "# $proj, $cvsproj, $cvscom #";
+	print "<hr/>";
+}
 
 ob_start();
 
@@ -137,7 +149,7 @@ if (sizeof($rels))
 }
 else
 {
-	print "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file:$proj\">Search CVS</a> instead." : "Error: could not connect to database!") . "</h4>\n";
+	print "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead." : "Error: could not connect to database!") . "</h4>\n";
 }
 print "</div>\n";
 
