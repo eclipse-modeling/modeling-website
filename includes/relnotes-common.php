@@ -28,6 +28,18 @@ else
 	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
 }
 
+if ($debug)
+{
+	print "#######<br>";
+	print_r ($cvsprojs);
+	print "#######<br>";
+	print_r ($cvscoms);
+	print "#######<br>";
+	print_r ($components);
+	print "#######<br>";
+	print "# $proj, $cvsproj, $cvscom #";
+	print "#######<br>";
+}
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
 ob_start();
@@ -35,7 +47,12 @@ ob_start();
 print "<div id=\"midcolumn\">\n";
 print "<h1>Release Notes</h1>\n";
 
-$result = wmysql_query("SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' ORDER BY `vanityname` DESC");
+$sql = "SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' ORDER BY `vanityname` DESC";
+if (debug)
+{
+	print "Q1: $sql<br/>";
+}
+$result = wmysql_query($sql);
 $vpicker = array();
 if ($result)
 {
@@ -65,6 +82,10 @@ else
 	$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom')";
 	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 }
+if (debug)
+{
+	print "Q2: $sql<br/>";
+}
 $result = wmysql_query($sql);
 $rels = array();
 if ($result)
@@ -91,6 +112,10 @@ if (sizeof($rels))
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
 		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = $branch GROUP BY `bugid` DESC";
+		if (debug)
+		{
+			print "Q3: $query<br/>";
+		}
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 
@@ -112,7 +137,7 @@ if (sizeof($rels))
 }
 else
 {
-	print "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet" : "Error: could not connect to database!") . "</h4>\n";
+	print "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file:$proj\">Search CVS</a> instead." : "Error: could not connect to database!") . "</h4>\n";
 }
 print "</div>\n";
 
