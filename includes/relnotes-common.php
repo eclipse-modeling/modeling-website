@@ -1,4 +1,8 @@
 <?php
+/* REMINDER: 
+ * When adding new projects to the database, you must insert a 0.0.0 
+ * release as a basis from which to compare, or you won't get anything returned from your query.
+ */
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
@@ -28,27 +32,15 @@ else
 	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
 }
 
-if ($debug)
-{
-	print "<b>BEFORE</b><hr/>";
-	print_r ("<pre>".$cvsprojs."</pre>");
-	print "<hr/>";
-	print_r ("<pre>".$cvscoms."</pre>");
-	print "<hr/>";
-	print_r ("<pre>".$components."</pre>");
-	print "<hr/>";
-	print "# $proj, $cvsproj, $cvscom #";
-	print "<hr/>";
-}
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 if ($debug)
 {
 	print "<b>AFTER</b><hr/>";
-	print_r ("<pre>".$cvsprojs."</pre>");
+	print ("<pre>"); print_r($cvsprojs); print_r("</pre>");
 	print "<hr/>";
-	print_r ("<pre>".$cvscoms."</pre>");
+	print ("<pre>"); print_r($cvscoms); print_r("</pre>");
 	print "<hr/>";
-	print_r ("<pre>".$components."</pre>");
+	print ("<pre>"); print_r($components); print_r("</pre>");
 	print "<hr/>";
 	print "# $proj, $cvsproj, $cvscom #";
 	print "<hr/>";
@@ -77,6 +69,17 @@ if ($result)
 		unset($vpicker[sizeof($vpicker) - 1]);
 	}
 }
+
+if (debug)
+{
+	print "<hr>"; print ("<pre>"); print_r($vpicker); print_r("</pre>"); print "<hr>";
+	
+}
+if (!sizeof($vpicker))
+{
+	$vpicker[] = "0.0.0";
+}
+
 $rbuild = true;
 $extra_build = false;
 $version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build);
