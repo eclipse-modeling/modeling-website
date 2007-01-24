@@ -57,11 +57,6 @@ if ($result)
 	}
 }
 
-if (!sizeof($vpicker))
-{
-	$vpicker[] = "0.0.0";
-}
-
 $rbuild = true;
 $extra_build = false;
 $version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build);
