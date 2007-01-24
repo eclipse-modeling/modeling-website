@@ -1,7 +1,10 @@
 <?php
 /* REMINDER: 
- * When adding new projects to the database, you must insert a 0.0.0 
- * release as a basis from which to compare, or you won't get anything returned from your query.
+   When adding new projects to the database, you must insert a 0.0.0 release as a basis from which 
+   to compare, or you won't get anything returned from your query.
+
+  	INSERT INTO `releases` SET `project` = 'org.eclipse.mdt', `component` = 'org.eclipse.uml2tools', `vanityname` = '0.0.0', `buildtime` = DATE_SUB(NOW(), INTERVAL 1 YEAR), `branch` = 'HEAD', `type` = 'R';
+  	
  */
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
@@ -33,18 +36,6 @@ else
 }
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
-if ($debug)
-{
-	print "<b>AFTER</b><hr/>";
-	print ("<pre>"); print_r($cvsprojs); print_r("</pre>");
-	print "<hr/>";
-	print ("<pre>"); print_r($cvscoms); print_r("</pre>");
-	print "<hr/>";
-	print ("<pre>"); print_r($components); print_r("</pre>");
-	print "<hr/>";
-	print "# $proj, $cvsproj, $cvscom #";
-	print "<hr/>";
-}
 
 ob_start();
 
@@ -52,10 +43,6 @@ print "<div id=\"midcolumn\">\n";
 print "<h1>Release Notes</h1>\n";
 
 $sql = "SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' ORDER BY `vanityname` DESC";
-if (debug)
-{
-	print "Q1: $sql<br/>";
-}
 $result = wmysql_query($sql);
 $vpicker = array();
 if ($result)
@@ -70,11 +57,6 @@ if ($result)
 	}
 }
 
-if (debug)
-{
-	print "<hr>"; print ("<pre>"); print_r($vpicker); print_r("</pre>"); print "<hr>";
-	
-}
 if (!sizeof($vpicker))
 {
 	$vpicker[] = "0.0.0";
@@ -97,10 +79,6 @@ else
 	$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom')";
 	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 }
-if (debug)
-{
-	print "Q2: $sql<br/>";
-}
 $result = wmysql_query($sql);
 $rels = array();
 if ($result)
@@ -115,11 +93,6 @@ if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 	array_shift($rels);
 }
 
-if ($debug)
-{
-	print_r($rels);
-}
-
 print "<div class=\"homeitem3col\">\n";
 if (sizeof($rels))
 {
@@ -127,10 +100,6 @@ if (sizeof($rels))
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
 		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = $branch GROUP BY `bugid` DESC";
-		if (debug)
-		{
-			print "Q3: $query<br/>";
-		}
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 
