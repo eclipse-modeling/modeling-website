@@ -258,7 +258,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 					<tr>
 						<td colspan=1>org.eclipse.releng.basebuilder branch:<br><small>-basebuilderBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"][0]; ?>"><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., HEAD, R3_2_maintenance, M3_33, r322_v20061115a :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"][0]; ?>"><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., HEAD, R3_2_maintenance, M4_33, r322_v20070104 :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
