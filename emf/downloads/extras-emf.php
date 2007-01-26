@@ -55,10 +55,11 @@ function doRequirements()
 <div class="homeitem3col">
 	<h3>Requirements</h3>
 	<p><b>First-time users</b> can get started quickly by simply downloading the
-	combined <b class="all">ALL</b> SDK bundle (includes source, runtime and docs
+	combined SDK bundle (includes source, runtime and docs
 	for <b class="emf">EMF</b>, <b class="xsd">XSD</b>, and <b class="sdo">SDO</b>).
-	Specific Eclipse and JDK requirements are below - to know which Eclipse driver was used to build a given EMF release,
-	check below under <b>Build Dependencies</b>. </p>
+	Specific build dependencies and JDK version used for a given release are shown
+	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> - 
+	under <b>Build Dependencies</b>. </p>
 	<p>Note that Eclipse is only required if you intend to use the UI - for runtime-only use, only a JDK is required.</p>
 
 	
@@ -84,7 +85,7 @@ function doRequirements()
 			<a href="javascript:toggle('req2_2_0')">EMF 2.2.2, 2.2.1, 2.2.0</a>
 			<ul id="req2_2_0" style="display: none">
 				<li>Eclipse 3.2.2, 3.2.1 or 3.2.0</li>
-				<li>Java 1.4.2 or 5.0</li>
+				<li>Java 1.4.2 or 5.0 - if Sun 1.4.2, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
 			</ul>
 		</li>
 
@@ -92,7 +93,7 @@ function doRequirements()
 			<a href="javascript:toggle('req2_1_0')">EMF 2.1.2, 2.1.1, 2.1.0</a>
 			<ul id="req2_1_0" style="display: none">
 				<li>Eclipse 3.1.2, 3.1.1, 3.1.0, respectively</li>
-				<li>Java 1.4.2</li>
+				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
 			</ul>
 		</li>
 
@@ -100,7 +101,7 @@ function doRequirements()
 			<a href="javascript:toggle('req2_0_0')">EMF 2.0.5-2.0.2, 2.0.1, 2.0.0</a>
 			<ul id="req2_0_0" style="display: none">
 				<li>Eclipse 3.0.2, 3.0.1, 3.0.0, respectively</li>
-				<li>Java 1.4.2</li>
+				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
 			</ul>
 		</li>
 
