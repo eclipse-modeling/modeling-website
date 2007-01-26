@@ -98,7 +98,7 @@ $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.ph
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=project%3A+org.eclipse.mdt+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
-$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/Model_Development_Tools_%28MDT%29", "_self", 2);
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/".($proj?"MDT-" . strtoupper($proj):"Model_Development_Tools_%28MDT%29"), "_self", 2);
 $Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.mdt" . $newsgroupSuffix, "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
