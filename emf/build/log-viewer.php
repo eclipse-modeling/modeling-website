@@ -15,8 +15,6 @@ else
 }
 $projct= preg_replace("#^/#", "", $proj);
 
-print "/$PR/${projct}/downloads";
-
 /* from $_GET */
 $params = array(
 	"build" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/$#",
