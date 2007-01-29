@@ -75,7 +75,7 @@ foreach (array_keys($projects) as $z)
 	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
-$newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace("-", ".", $proj) : ""); // eg., .uml2.uml
+$newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace("-", ".", $proj) : "");
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
