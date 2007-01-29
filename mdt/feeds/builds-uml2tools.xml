@@ -32,8 +32,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M4-200612141445/eclipse-SDK-3.3M4-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/gmf/downloads/drops/S-2.0M4-200701030300/GMF-sdk-2.0M4.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/mdt/uml2-ocl/downloads/drops/1.1.0/S200612211659/emft-ocl-SDK-1.1M4.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/mdt/uml2-uml/downloads/drops/2.1.0/S200701040816/uml2-SDK-2.1M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/1.1.0/S200612211659/emft-ocl-SDK-1.1M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200701040816/uml2-SDK-2.1M4.zip</dependency>
           <dependency>http://download.eclipse.org/technology/emft/query/downloads/drops/1.1.0/S200612211745/emft-query-SDK-1.1M4.zip</dependency>
           <dependency>http://download.eclipse.org/technology/emft/transaction/downloads/drops/1.1.0/S200612220820/emft-transaction-SDK-1.1M4.zip</dependency>
           <dependency>http://download.eclipse.org/technology/emft/validation/downloads/drops/1.1.0/S200612211746/emft-validation-SDK-1.1M4.zip</dependency>
