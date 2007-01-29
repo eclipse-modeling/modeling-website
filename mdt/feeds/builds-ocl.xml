@@ -3,12 +3,12 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ocl Builds</title>
-  <link href="http://download.eclipse.org/technology/emft/feeds/builds-ocl.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml" rel="self" type="application/atom+xml"/>
   <updated>2007-01-30T00:07:43Z</updated>
   <author>
     <name>ocl Build Team</name>
   </author>
-  <id>http://download.eclipse.org/technology/emft/feeds/builds-ocl.xml</id>
+  <id>http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml</id>
   <entry>
     <title>[announce] ocl I200701291654 (1.1.0.I200701291654) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200701291654#I200701291654"/>
@@ -19,36 +19,6 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/I200701291654/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=ocl</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=ocl&amp;version=1.1.0
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-ocl-SDK-I200701291654.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/I200701291654/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20070123-1715/eclipse-SDK-I20070123-1715-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200701250200/emf-sdo-xsd-SDK-I200701250200.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200701182158/uml2-SDK-I200701182158.zip</dependency>
-          <dependency>http://emft.eclipse.org/downloads/orbit-lpgjavaruntime-1.0.0.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
-    <title>[announce] ocl I200701291654 (1.1.0.I200701291654) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200701291654#I200701291654"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200701291654#I200701291654</id>
-    <updated>2007-01-30T00:00:30Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701291654" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200701291654#I200701291654" type="I" version="1.1.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200701291654/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
-        <downloads>http://org/modeling/mdt/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=ocl&amp;version=1.1.0
           </releasenotes>
         <releases>
