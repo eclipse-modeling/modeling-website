@@ -714,6 +714,41 @@
 		<category name="mdt ocl SDK 1.1.0 I200701291654"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.uml2tools.doc_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2tools.doc" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.diagram.source_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2.diagram.source" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.diagram_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2.diagram" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.sdk_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2tools.sdk" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.source_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2tools.source" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2tools" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.examples_1.0.0.v200701301242.jar" patch="false" id="org.eclipse.uml2tools.examples" version="1.0.0.v200701301242">
+		<category name="mdt uml2tools SDK 1.0.0M4a S200701301242"/>
+	</feature>
+
 <category-def label="UML2 SDK 2.0.1 M200607131314" name="UML2 SDK 2.0.1 M200607131314">
 		<description>
 This category contains the various features of the 2.0.1 M200607131314 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
@@ -873,6 +908,12 @@ This category contains the features of the 1.0.0M4 S200701221749 build of mdt um
 	<category-def label="mdt ocl SDK 1.1.0 I200701291654" name="mdt ocl SDK 1.1.0 I200701291654">
 		<description>
 This category contains the features of the 1.1.0 I200701291654 build of mdt ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt uml2tools SDK 1.0.0M4a S200701301242" name="mdt uml2tools SDK 1.0.0M4a S200701301242">
+		<description>
+This category contains the features of the 1.0.0M4a S200701301242 build of mdt uml2tools SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
