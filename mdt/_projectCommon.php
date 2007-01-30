@@ -38,6 +38,7 @@ $cvscoms = array (
 		"eodm" => "eodm"
 	),
 	"org.eclipse.mdt" => array (
+		"ocl" => "org.eclipse.ocl",
 		"uml2tools" => "org.eclipse.uml2tools"
 		/* add more here */
 	)
