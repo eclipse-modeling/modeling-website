@@ -434,6 +434,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	$warnings = 0;
 	$errors = 0;
 	$failures = 0;
+	$didnotruns = 0;
 
 	$result = "";
 	$icon = "";
@@ -493,6 +494,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 				{
 					$errors += $results[0];
 					$failures += $results[1];
+					$didnotruns += $results[2];
 					$icon = "not";
 					$results = null;
 				}
@@ -515,10 +517,15 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 				}
 			}
 
+			
 			if ($errors)
 			{
 				$icon = "not";
 				$result = "ERROR";
+			} else if ($didnotruns)
+			{
+				$icon = "not";
+				$result = "CAUTION";
 			} else
 			{
 				$icon = ($warnings ? "check-maybe" : "check");
@@ -619,6 +626,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	{
 		$out  .= ($result && $result != "..." ? ": " : "");
 		$out2  = "";
+		$out2 .= ($didnotruns > 0 ? "$didnotruns DNR, " : "");
 		$out2 .= ($errors > 0 ? "$errors E, " : "");
 		$out2 .= ($failures > 0 ? "$failures F, " : "");
 		$out2 .= ($warnings > 0 ? "$warnings W" : "");
@@ -890,9 +898,13 @@ function getTestResultsJUnitXML($file)
 		$matches = null;
 		if (preg_match("/<testsuite errors=\"(\d+)\" failures=\"(\d+).+\"/", $line, $matches))
 		{
-			return array($matches[1], $matches[2]);
+			return array($matches[1], $matches[2], 0);
+		}
+		else if (false!==strpos($line,"<testsuites></testsuites>")) // no tests run!
+		{
+			return array(0, 0, 1);
 		}
 	}
-	return array(0, 0);
+	return array(0, 0, 0);
 }
 ?>
