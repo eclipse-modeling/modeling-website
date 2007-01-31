@@ -12,7 +12,7 @@ $content["emf"] = <<<HTML
 	annotated Java, XML documents, or modeling tools like Rational Rose, then
 	imported into EMF. Most important of all, EMF provides the foundation for
 	interoperability with other EMF-based tools and applications. For more detailed 
-	information see the <a href="http://www.eclipse.org/$PR/docs.php#overviews">EMF Overviews</a> and <a href="http://www.eclipse.org/$PR/docs.php#plandocs">Project Plan</a>.</p>
+	information see the <a href="http://www.eclipse.org/$PR/docs/#overviews">EMF Overviews</a> and <a href="http://www.eclipse.org/$PR/docs.php#plandocs">Project Plan</a>.</p>
 
 	<p>EMF builds include <a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD), now a component of the <a href="http://www.eclipse.org/modeling/mdt/?project=xsd">Model Development Tools</a> (MDT) project, and an EMF-based implementation of <a href="http://www.eclipse.org/$PR/?project=sdo">Service Data Objects</a> (SDO).</p>
 </div>
