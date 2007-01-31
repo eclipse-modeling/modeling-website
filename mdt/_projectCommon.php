@@ -34,11 +34,11 @@ $cvsprojs = array (
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
 	"org.eclipse.emft" => array (
-		"ocl" => "ocl",
+		//"ocl" => "ocl",
 		"eodm" => "eodm"
 	),
 	"org.eclipse.mdt" => array (
-		//"ocl" => "org.eclipse.ocl",
+		"ocl" => "org.eclipse.ocl",
 		"uml2tools" => "org.eclipse.uml2tools"
 		/* add more here */
 	)
