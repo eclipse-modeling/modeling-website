@@ -15,7 +15,7 @@ $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
-$writableRoot = "/home/data/httpd/writable/www.eclipse.org/";
+$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
 
 $rooturl = "http://www.eclipse.org/emft";
 $downurl = (preg_match("/^(emf\.torolab\.ibm\.com|emft.eclipse.org)$/", $_SERVER["SERVER_NAME"], $regs) ? "http://$regs[1]/emft" : "http://www.eclipse.org/emft");
