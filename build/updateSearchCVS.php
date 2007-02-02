@@ -4,6 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/scripts.php");
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
+$writableRoot = $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/";
 internalUseOnly(); 
 
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
