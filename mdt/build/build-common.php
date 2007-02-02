@@ -621,7 +621,7 @@ function findCatg($url) {
 		"08validation" => "emft-validation-",
 		"07transaction" => "emft-transaction-",
 		"06query" => "emft-query-",
-		"05ocl" => "emft-ocl-",
+		"05ocl" => "mdt-ocl-|emft-ocl-",
 		"04orbit" => "orbit-",
 		"03uml2" => "uml2-",
 		"02emf" => "emf-sdo-xsd-",
@@ -629,7 +629,7 @@ function findCatg($url) {
 		"99other" => "/"
 	);
 	foreach ($matches as $catg => $match) { 
-		if (false!==strpos($url,$match)) {
+		if (false!==strpos($url,$match) || preg_match("#(".$match.")#",$url)) {
 			return $catg;
 		}
 	}
