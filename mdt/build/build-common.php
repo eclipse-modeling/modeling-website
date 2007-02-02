@@ -7,7 +7,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 // temporarily suppress unsupported projects
-$nodownloads = array ("xsd", "eodm", "uml2");  
+$nodownloads = array ("xsd", "eodm");  
 
 internalUseOnly(); 
 ob_start();
@@ -190,8 +190,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 			<tr><td colspan="6">&#160;</td></tr>
 
 			<tr>
-				<td rowspan="2" valign="top"><img src="/modeling/images/numbers/3.gif" /></td>
-				<td rowspan="2">&#160;</td>
+				<td rowspan="1" valign="top"><img src="/modeling/images/numbers/3.gif" /></td>
+				<td rowspan="1">&#160;</td>
 				<td><b>Build Alias</b><br><small>optional</small></td>
 				<td>&#160;</td>
 				<td><input name="build_Build_Alias" size=8></td>
@@ -201,18 +201,19 @@ if (is_array($projects) && sizeof($projects) > 1)
 			</tr>
 
 			<tr valign="top">
-				<td><b>Mapfile &amp; Tagging</b><br><small>
-				optional</small></td>
+				<td rowspan="1"><img src="/modeling/images/numbers/4.gif" /></td>
+				<td rowspan="1">&#160;</td>
+				<td valign="middle"><b>Mapfile &amp; Tagging</b></td>
 				<td>&#160;</td>
-				<td><select name="build_Mapfile_Rule" size=1>
-				<?php 	$options["MapfileRule"] = array ("Use Map, No Tagging=use-false","Generate Map, Tag Files=gen-true","Generate Map, No Tagging=gen-false");
+				<td><select name="build_Mapfile_Rule" size="1" onchange="doMapfileRuleSelected(this)">
+				<?php 	$options["MapfileRule"] = array ("Use Map, No Tagging=use-false","Generate Map, Tag Files=gen-true","Generate Map, No Tagging=gen-false|selected");
 						displayOptions($options["MapfileRule"]); ?>
 				</select><br/>
-				<input name="build_Mapfile_Tag" size="8">
+				<input disabled="disabled" name="build_Mapfile_Tag" size="8" onkeydown="checkdisabled(this)">
 				</td>
 				<td><small><a id="divMapfileRuleToggle" name="divMapfileRuleToggle" href="javascript:toggleDetails('divMapfileRule')">More Info</a></small>
 				<div id="divMapfileRuleDetail" name="divMapfileRuleDetail" style="display:none;border:0">
-				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.</small></td></tr>
+				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.<br/>Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
 						<tr valign="top"><td><small>Generate Map, Tag Files</small></td><td><small> : </small></td><td><small>Using given tag (if blank, use "build_YYYYMMDDhhmm"),<br/>generate a mapfile and use that tag.</small></td></tr>
 						<tr valign="top"><td><small>Generate Map, No Tagging</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
 				</table>
@@ -267,7 +268,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 					<tr>
 						<td colspan=1>org.eclipse.releng.basebuilder branch:<br><small>-basebuilderBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"][0]; ?>"><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., HEAD, R3_2_maintenance, M4_33, r322_v20070104 :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>"><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., HEAD, R3_2_maintenance, M4_33, r322_v20070104 :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
@@ -327,7 +328,7 @@ function branchToDivNum()
 }
 
 function pickDefaults(val) {
-	//document.forms.buildForm.build_Mapfile_Rule.selectedIndex=(val=='N'?1:0); // Nightly = No; others = Yes
+	document.forms.buildForm.build_Mapfile_Rule.selectedIndex=(val=='N'?2:<?php echo isset($options["Mapfile_Rule_Default"])?$options["Mapfile_Rule_Default"]:1;?>); // Nightly = No; others = Yes
 	divNum=branchToDivNum();
 	if (val=='N') {
 		setCheckbox("build_Run_Tests_JUnit",true,divNum);
@@ -363,6 +364,16 @@ function pickDefaultBranch(val) {
 			build_Branch.value=val; // since the text label shown in the select box is not available for POST, store it here
 		}
 	}
+}
+
+function doMapfileRuleSelected(field) {
+  val=field.options[field.selectedIndex].value;
+  document.forms.buildForm.build_Mapfile_Tag.disabled = (val != "gen-true");	
+}
+
+function checkdisabled(obj) 
+{
+	return !obj.disabled;
 }
 
 function pickDefaultJavaHome(val) {
@@ -418,6 +429,7 @@ function doSubmit() {
 
 function doOnLoadDefaults() {
   doBranchSelected(document.forms.buildForm.build_CVS_Branch);
+  doMapfileRuleSelected(document.forms.buildForm.build_Mapfile_Rule);
   field=document.forms.buildForm.build_Build_Type;
   pickDefaults(field.options[field.selectedIndex].value);
   //setNote(field.options[field.selectedIndex].text)
@@ -503,7 +515,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			' -buildTimestamp '.$buildTimestamp.
 			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 			
-			' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"][0]).
+			' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
 					($_POST["build_debug_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_debug_common_releng_branch"]:'').
 			($_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
 			($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
