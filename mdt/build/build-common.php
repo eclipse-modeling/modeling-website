@@ -7,7 +7,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 // temporarily suppress unsupported projects
-$nodownloads = array ("xsd", "eodm");  
+$nodownloads = array ("xsd", "eodm", "uml2");  
 
 internalUseOnly(); 
 ob_start();
@@ -74,7 +74,6 @@ if (is_array($projects) && sizeof($projects) > 1)
 	{
 		$options = array_merge($options,loadOptionsFromRemoteFile($dependenciesURLsFile));	
 		$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
-		$options["TagBuild"] = array ("Yes","No|selected");
 		$options["RunTests"] = array ("JUnit Tests=JUnit");
 	}	
 	$options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
@@ -201,14 +200,24 @@ if (is_array($projects) && sizeof($projects) > 1)
 					instead of "R200408081212"</small></td>
 			</tr>
 
-			<tr>
-				<td><b>Tag Build</b><br><small>
+			<tr valign="top">
+				<td><b>Mapfile &amp; Tagging</b><br><small>
 				optional</small></td>
 				<td>&#160;</td>
-				<td><select name="build_Tag_Build" size=1>
-				<?php displayOptions($options["TagBuild"]); ?>
-				</select></td>
-				<td><small>If Yes, this tag will appear in CVS as "build_200405061234". If No, CVS will NOT be tagged with this build's ID</small></td>
+				<td><select name="build_Mapfile_Rule" size=1>
+				<?php 	$options["MapfileRule"] = array ("Use Map, No Tagging=use-false","Generate Map, Tag Files=gen-true","Generate Map, No Tagging=gen-false");
+						displayOptions($options["MapfileRule"]); ?>
+				</select><br/>
+				<input name="build_Mapfile_Tag" size="8">
+				</td>
+				<td><small><a id="divMapfileRuleToggle" name="divMapfileRuleToggle" href="javascript:toggleDetails('divMapfileRule')">More Info</a></small>
+				<div id="divMapfileRuleDetail" name="divMapfileRuleDetail" style="display:none;border:0">
+				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.</small></td></tr>
+						<tr valign="top"><td><small>Generate Map, Tag Files</small></td><td><small> : </small></td><td><small>Using given tag (if blank, use "build_YYYYMMDDhhmm"),<br/>generate a mapfile and use that tag.</small></td></tr>
+						<tr valign="top"><td><small>Generate Map, No Tagging</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
+				</table>
+				</div>
+				</td>
 			</tr> 
 
 			<tr><td colspan="6">&#160;</td></tr>
@@ -224,7 +233,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td colspan="1">
 				<?php displayCheckboxes("build_Run_Tests",$options["RunTests"]); ?>
 				</td>
-				<td><small><a id="divRunTestsToggle" name="divRunTestsToggle" href="javascript:toggleDetails()">More Info</a></small>
+				<td><small><a id="divRunTestsToggle" name="divRunTestsToggle" href="javascript:toggleDetails('divRunTests')">More Info</a></small>
 				<div id="divRunTestsDetail" name="divRunTestsDetail" style="display:none;border:0">
 				<small>
 				If yes to JUnit Tests, tests will be performed during build
@@ -318,7 +327,7 @@ function branchToDivNum()
 }
 
 function pickDefaults(val) {
-	document.forms.buildForm.build_Tag_Build.selectedIndex=(val=='N'?1:0); // Nightly = No; others = Yes
+	//document.forms.buildForm.build_Mapfile_Rule.selectedIndex=(val=='N'?1:0); // Nightly = No; others = Yes
 	divNum=branchToDivNum();
 	if (val=='N') {
 		setCheckbox("build_Run_Tests_JUnit",true,divNum);
@@ -367,10 +376,10 @@ function pickDefaultJavaHome(val) {
 	}
 }
 
-function toggleDetails()
+function toggleDetails(id)
 {
-  toggle=document.getElementById("divRunTestsToggle");
-  detail=document.getElementById("divRunTestsDetail");
+  toggle=document.getElementById(id + "Toggle");
+  detail=document.getElementById(id + "Detail");
   if (toggle.innerHTML=="More Info") 
   {
     toggle.innerHTML="Hide Info";
@@ -479,11 +488,14 @@ setTimeout('doOnLoadDefaults()',1000);
 		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh'.
 			' -proj mdt -sub '.$projct.
 			' -version '.$BR.
-			' -branch '.($_POST["build_CVS_Branch"]!=""?$_POST["build_CVS_Branch"]:$_POST["build_CVS_Branch"]).
+			' -branch '.$_POST["build_CVS_Branch"].
 			$dependencyURLs.
 			($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
 			($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
-			' -tagBuild '.($_POST["build_Tag_Build"]=="Yes"?"true":"false").		// new, 04/07/12
+
+			' -mapfileRule '.$_POST["build_Mapfile_Rule"]. // pass in use-false, gen-true, gen-false
+			($_POST["build_Mapfile_Rule"]=="gen-true" && $_POST["build_Mapfile_Tag"] ? ' -mapfileTag '.$_POST["build_Mapfile_Tag"]:''). // use specified tag?
+
 			' -buildType '.$_POST["build_Build_Type"].
 			' -javaHome '.$_POST["build_Java_Home"].
 			' -downloadsDir '.$downloadsDir. // use central location: /home/www-data/build/downloads
