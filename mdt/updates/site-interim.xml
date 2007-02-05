@@ -630,6 +630,36 @@
 	</feature>
 
 
+	<feature url="features/org.eclipse.emf.ocl.doc_1.0.1.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.1.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.sdk_1.1.0.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.1.0.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.source_1.1.0.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl.source" version="1.1.0.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl_1.1.0.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl" version="1.1.0.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples.source_1.0.1.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl.examples.source" version="1.0.1.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples_1.0.1.v200612211659.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.1.v200612211659">
+		<category name="emft ocl SDK 1.1M4 S200612211659"/>
+	</feature>
+
+
 	<feature url="features/org.eclipse.uml2tools.doc_1.0.0.v200701221749.jar" patch="false" id="org.eclipse.uml2tools.doc" version="1.0.0.v200701221749">
 		<category name="mdt uml2tools SDK 1.0.0M4 S200701221749"/>
 	</feature>
@@ -1011,6 +1041,12 @@ This category contains the features of the 1.0.0M4b S200701301715 build of mdt u
 	<category-def label="mdt ocl SDK 1.1.0 I200702011837" name="mdt ocl SDK 1.1.0 I200702011837">
 		<description>
 This category contains the features of the 1.1.0 I200702011837 build of mdt ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+	
+	<category-def label="emft ocl SDK 1.1M4 S200612211659" name="emft ocl SDK 1.1M4 S200612211659">
+		<description>
+This category contains the features of the 1.1M4 S200612211659 build of emft ocl SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
