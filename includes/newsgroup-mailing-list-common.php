@@ -74,8 +74,7 @@ ob_start();
 	<div class="homeitem">
 		<h3>Newsgroup Search</h3>
 		<ul>
-<?php 
-foreach ($newsgroups as $label => $ngs)
+<?php foreach ($newsgroups as $label => $ngs)
 {
 	print '<li>' . $label. ": ";
 	foreach ($ngs as $i => $ng) 
@@ -84,16 +83,14 @@ foreach ($newsgroups as $label => $ngs)
 		print '<a href="http://www.eclipse.org/search/search.cgi?cmd=Search%21&amp;form=extended&amp;wf=574a74&amp;ps=10&amp;m=all&amp;t=5&amp;ul=%2Fnewslists%2Fnews.eclipse.'.$ng.'&amp;wm=wrd&amp;t=News&amp;t=Mail">eclipse.'.$ng.'</a>'; 
 	}
 	print "</li>\n"; 
-} ?>
-					
+} ?>		
 		</ul>
 	</div>
 
 	<div class="homeitem">
 		<h3>Newsgroup Browse (<a style="color:white;text-decoration:underline" href="http://www.eclipse.org/newsgroups/">Password Required</a>)</h3>
-				<ul>
-<?php 
-foreach ($newsgroups as $label => $ngs)
+		<ul>
+<?php foreach ($newsgroups as $label => $ngs)
 {
 	print '<li>' . $label. ": ";
 	foreach ($ngs as $i => $ng) 
@@ -103,17 +100,13 @@ foreach ($newsgroups as $label => $ngs)
 	}
 	print "</li>\n"; 
 } ?>
-					
-				</ul>
-			</li>
 		</ul>
 	</div>
 
 	<div class="homeitem">
 		<h3>NNTP (news://)</h3>
-				<ul>
-<?php 
-foreach ($newsgroups as $label => $ngs)
+		<ul>
+<?php foreach ($newsgroups as $label => $ngs)
 {
 	print '<li>' . $label. ": ";
 	foreach ($ngs as $i => $ng) 
@@ -123,17 +116,13 @@ foreach ($newsgroups as $label => $ngs)
 	}
 	print "</li>\n"; 
 } ?>
-					
-				</ul>
-			</li>
 		</ul>
 	</div>
 
 	<div class="homeitem">
 		<h3>Mailing Lists (for developers only)</h3>
-				<ul>
-<?php 
-foreach ($mailinglists as $label => $mls)
+		<ul>
+<?php foreach ($mailinglists as $label => $mls)
 {
 	print '<li>' . $label. ": ";
 	foreach ($mls as $i => $ml) 
@@ -143,15 +132,53 @@ foreach ($mailinglists as $label => $mls)
 	}
 	print "</li>\n"; 
 } ?>
-					
-				</ul>
-			</li>
 		</ul>
 	</div>
 
 </div>
 
 <?php
+
+// http://www.eclipse.org/search/search.cgi?q=something
+
+/*** side items ***/
+print <<<XML
+<div id="rightcolumn">
+	<div class="sideitem">
+	<h6>Search Newsgroup</h6>
+XML;
+print '	<form method="get" action="http://www.eclipse.org/search/search.cgi" name="searchngform" target="_blank">' . "\n";
+print "<p>\n";
+print '<label for="bug">Query: </label><input size="7" type="text" name="q" id="q"/> <input type="submit" value="Go!"/><br/>'."\n";
+print 'In: <select name="ul">';
+$shown_ngs = array();
+foreach ($newsgroups as $label => $ngs)
+{
+	foreach ($ngs as $i => $ng) 
+	{
+		if (!in_array($ng,$shown_ngs)) 
+		{
+			$shown_ngs[] = $ng;
+			print '<option value="/newslists/news.eclipse.'.$ng.'">'.$ng.'</option>'."\n"; 
+		} 
+	}
+}
+print "</select><br/>\n"; 
+print <<<XML
+	<input type="hidden" name="cmd" value="Search!"/>
+	<input type="hidden" name="form" value="extended"/>
+	<input type="hidden" name="wf" value="574a74"/>
+	<input type="hidden" name="ps" value="10"/>
+	<input type="hidden" name="m" value="all"/>
+	<input type="hidden" name="t" value="5"/>
+	<input type="hidden" name="wm" value="wrd"/>
+	<input type="hidden" name="t" value="News"/>
+	<input type="hidden" name="t" value="Mail"/>
+	</p>
+	</form>
+	</div>
+XML;
+
 $html = ob_get_contents();
 ob_end_clean();
 
@@ -159,7 +186,6 @@ $pageTitle = "Eclipse Modeling - $PR - Newsgroups &amp; Mailing Lists";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Nick Boldt";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/includes/newsgroups.css"/>' . "\n");
-
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/newsgroups.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
