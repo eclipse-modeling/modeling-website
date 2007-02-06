@@ -8,6 +8,7 @@ foreach ($projects as $name => $suf) {
 		$newsgroups[$name] = array("modeling.mdt.".$suf);
 	}
 }
+$newsgroups["UML2"][] = "tools.uml2"; /* add old one */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
 
 $mailinglists = array("MDT (main)" => array("mdt.dev"));
