@@ -64,7 +64,9 @@ $extraprojects = array (); //projects with only downloads, no info yet, "prettyn
 $nodownloads = array (
 ); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (
-); //projects without newsgroups
+); //projects without newsgroup
+$nomailinglist = array (
+); //projects without mailinglist
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
@@ -75,8 +77,6 @@ foreach (array_keys($projects) as $z)
 {
 	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
 }
-
-$newsgroupSuffix = ($proj && !in_array($proj, $nonewsgroup) ? "." . str_replace("-", ".", $proj) : "");
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
@@ -100,7 +100,7 @@ $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=pro
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/".($proj?"MDT-" . strtoupper($proj):"Model_Development_Tools_%28MDT%29"), "_self", 2);
-$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.mdt" . $newsgroupSuffix, "_self", 2);
+$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/$PR/newsgroup-mailing-list.php", "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
 $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset ($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
