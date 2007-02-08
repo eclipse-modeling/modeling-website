@@ -9022,6 +9022,31 @@
 		<category name="emft jet SDK 0.7.2 M200702081115"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.100.v200702081113.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.100.v200702081113">
+		<category name="emft jet SDK 0.8.0 I200702081113"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.100.v200702081113.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.100.v200702081113">
+		<category name="emft jet SDK 0.8.0 I200702081113"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.100.v200702081113.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.100.v200702081113">
+		<category name="emft jet SDK 0.8.0 I200702081113"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.100.v200702081113.jar" patch="false" id="org.eclipse.jet.source" version="0.7.100.v200702081113">
+		<category name="emft jet SDK 0.8.0 I200702081113"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.100.v200702081113.jar" patch="false" id="org.eclipse.jet" version="0.7.100.v200702081113">
+		<category name="emft jet SDK 0.8.0 I200702081113"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -10581,6 +10606,12 @@ This category contains the features of the 0.8.0 I200702080522 build of emft eod
 	<category-def label="emft jet SDK 0.7.2 M200702081115" name="emft jet SDK 0.7.2 M200702081115">
 		<description>
 This category contains the features of the 0.7.2 M200702081115 build of emft jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.8.0 I200702081113" name="emft jet SDK 0.8.0 I200702081113">
+		<description>
+This category contains the features of the 0.8.0 I200702081113 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
