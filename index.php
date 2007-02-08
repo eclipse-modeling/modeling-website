@@ -85,17 +85,12 @@ development technologies within the Eclipse community by providing a unified set
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">EMF Ontology Definition Metamodel</a> (EODM) : 
 					an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using 
 					EMF with additional parsing, inference, model transformation and editing functions.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML2</a> : 
-					an implementation of the UML 2 umbrella of standards defined by the OMG and tools 
-					to manipulate models based on those standards.</li>
-				<ul>
-					<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Object Constraint Language</a> (OCL) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Object Constraint Language</a> (OCL) : 
 						defines APIs for OCL expression syntax for implementing queries and contraints.</li>
-					<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">Unified Modeling Language 2</a> (UML2) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">Unified Modeling Language 2</a> (UML2) : 
 						an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
-					<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools">UML2 Tools</a> : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools">UML2 Tools</a> : 
 						a set of GMF-based editors for viewing and editing UML models.</li>
-				</ul>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD) : 
 						a reference library that provides an <a href="http://www.eclipse.org/modeling/emf/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> 
 						for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
