@@ -87,7 +87,7 @@ development technologies within the Eclipse community by providing a unified set
 					EMF with additional parsing, inference, model transformation and editing functions.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Object Constraint Language</a> (OCL) : 
 						defines APIs for OCL expression syntax for implementing queries and contraints.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">Unified Modeling Language 2</a> (UML2) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">Unified Modeling Language 2.x</a> (UML2) : 
 						an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools">UML2 Tools</a> : 
 						a set of GMF-based editors for viewing and editing UML models.</li>
