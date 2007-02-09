@@ -91,6 +91,36 @@
 		<category name="mdt ocl SDK 1.0.2"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.ocl.doc_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl.doc" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.sdk_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl.sdk" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.source_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl.source" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples.source_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl.examples.source" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.ocl.examples_1.0.1.v200611161546.jar" patch="false" id="org.eclipse.emf.ocl.examples" version="1.0.1.v200611161546">
+		<category name="mdt ocl SDK 1.0.2"/>
+	</feature>
+
 <category-def label="UML2 SDK 1.1.0 " name="UML2 SDK 1.1.0">
 		<description>
 This category contains the various features of the 1.1.0 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
@@ -172,6 +202,12 @@ This category contains the various features of the 2.0.1 build of UML2 SDK, whic
 	<category-def label="UML2 SDK 2.0.2" name="UML2 SDK 2.0.2">
 		<description>
 This category contains the various features of the 2.0.2 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt ocl SDK 1.0.2" name="mdt ocl SDK 1.0.2">
+		<description>
+This category contains the features of the 1.0.2 build of mdt ocl SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 
