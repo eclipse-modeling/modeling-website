@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="February 12, 2007" showOn="docs,whatsnew">
+	<a href="http://wiki.eclipse.org/index.php/Dynamic_Browsing_and_Instantiation_Capabilites_in_EMF">Dynamic Browsing &amp; Instantiation Capabilites</a> added.
+</news>
+<news date="February 12, 2007" showOn="docs">
+	<a href="http://wiki.eclipse.org/index.php/Category:EMF">EMF Wiki Category</a> page added to <a href="#references">References</a>.
+</news>
 <news date="January 16, 2007" showOn="docs,whatsnew,bleedingedge">
 	<a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">EMF 2.3 JVM Requirements</a> updated.
 </news>
@@ -245,6 +251,6 @@
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
 
-<!-- $Id: news.xml,v 1.3 2007/01/17 21:34:10 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.4 2007/02/12 21:20:33 nickb Exp $ -->
 
 </doc>
