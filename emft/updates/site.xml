@@ -775,6 +775,31 @@
 		<category name="emft transaction SDK 1.0.3"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.7.2.v200702081115.jar" patch="false" id="org.eclipse.jet.doc" version="0.7.2.v200702081115">
+		<category name="emft jet SDK 0.7.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.7.0.v200702081115.jar" patch="false" id="org.eclipse.jet.examples" version="0.7.0.v200702081115">
+		<category name="emft jet SDK 0.7.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.7.2.v200702081115.jar" patch="false" id="org.eclipse.jet.sdk" version="0.7.2.v200702081115">
+		<category name="emft jet SDK 0.7.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.7.2.v200702081115.jar" patch="false" id="org.eclipse.jet.source" version="0.7.2.v200702081115">
+		<category name="emft jet SDK 0.7.2"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.7.2.v200702081115.jar" patch="false" id="org.eclipse.jet" version="0.7.2.v200702081115">
+		<category name="emft jet SDK 0.7.2"/>
+	</feature>
+
 <category-def label="emft jet SDK 0.7.0" name="emft jet SDK 0.7.0">
 		<description>
 This category contains the features of the 0.7.0 build of emft jet SDK, which includes source, plugins, and documentation.
@@ -892,6 +917,12 @@ This category contains the features of the 1.0.2 build of emft validation SDK, w
 	<category-def label="emft transaction SDK 1.0.3" name="emft transaction SDK 1.0.3">
 		<description>
 This category contains the features of the 1.0.3 build of emft transaction SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.7.2" name="emft jet SDK 0.7.2">
+		<description>
+This category contains the features of the 0.7.2 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
