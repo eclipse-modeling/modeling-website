@@ -1019,6 +1019,31 @@
 		<category name="UML2 SDK 2.1.0 I200702091416"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.uml2.doc_2.1.0.v200702151334.jar" patch="false" id="org.eclipse.uml2.doc" version="2.1.0.v200702151334">
+		<category name="UML2 SDK 2.1.0 I200702151334"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.1.0.v200702151334.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.1.0.v200702151334">
+		<category name="UML2 SDK 2.1.0 I200702151334"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.1.0.v200702151334.jar" patch="false" id="org.eclipse.uml2.examples" version="2.1.0.v200702151334">
+		<category name="UML2 SDK 2.1.0 I200702151334"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.1.0.v200702151334.jar" patch="false" id="org.eclipse.uml2.source" version="2.1.0.v200702151334">
+		<category name="UML2 SDK 2.1.0 I200702151334"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.1.0.v200702151334.jar" patch="false" id="org.eclipse.uml2" version="2.1.0.v200702151334">
+		<category name="UML2 SDK 2.1.0 I200702151334"/>
+	</feature>
+
 <category-def label="UML2 SDK 2.0.1 M200607131314" name="UML2 SDK 2.0.1 M200607131314">
 		<description>
 This category contains the various features of the 2.0.1 M200607131314 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
@@ -1232,6 +1257,12 @@ This category contains the features of the 1.1.0 I200702081544 build of mdt ocl 
 	<category-def label="UML2 SDK 2.1.0 I200702091416" name="UML2 SDK 2.1.0 I200702091416">
 		<description>
 This category contains the various features of the 2.1.0 I200702091416 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="UML2 SDK 2.1.0 I200702151334" name="UML2 SDK 2.1.0 I200702151334">
+		<description>
+This category contains the various features of the 2.1.0 I200702151334 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
