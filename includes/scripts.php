@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.22 2007/01/11 01:37:41 nickb Exp $ 
+// $Id: scripts.php,v 1.23 2007/02/15 23:53:47 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -36,7 +36,7 @@ function getPWD($suf = "", $doDynCheck = true)
 		$servers = array(
 			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build/$PR/$suf",
 			"/emft(?:\.eclipse\.org)?/" => "/home/www-data/build/$PR/$suf",
-			"/download1\.eclipse\.org/" => "/home/data/httpd/download.eclipse.org/$PR/$suf",
+			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 			"/fullmoon\.torolab\.ibm\.com/" => "/home/www/$PR/$suf"
 		);
 
@@ -55,9 +55,9 @@ function getPWD($suf = "", $doDynCheck = true)
 	{
 		$data = array(
 			3 => array(
-				"checkdir" => "/home/data/httpd/download.eclipse.org/",
+				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
-					"/home/data/httpd/download.eclipse.org/$PR/$suf",
+					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/www/eclipse/$PR/$suf"
 				)
 			),

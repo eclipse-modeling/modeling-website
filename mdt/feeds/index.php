@@ -9,7 +9,7 @@ $Menu = new Menu();
 include ($App->getProjectCommon());
 
 if ($isWWWserver) {
-	$PWD = "/home/data/httpd/download.eclipse.org/modeling/mdt/";
+	$PWD = "/home/local/data/httpd/download.eclipse.org/modeling/mdt/";
 	$jdPWD = "/downloads/download.php?file=/modeling/mdt/";
 } else {
 	$PWD = "../../../modeling/mdt/";

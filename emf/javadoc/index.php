@@ -3,7 +3,7 @@ $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]))
 
 if ($isWWWserver)
 {
-	$PWD = "/home/data/httpd/download.eclipse.org/modeling/emf/";
+	$PWD = "/home/local/data/httpd/download.eclipse.org/modeling/emf/";
 	$jdPWD = "/downloads/download.php?file=/modeling/emf/";
 }
 else
