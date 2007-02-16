@@ -128,6 +128,9 @@ else if (preg_match("/(\S)/", $q, $regs) || sizeof($extra["where"]) + sizeof($ex
 </div>
 <?php
 
+print "<div class=\"homeitem3col\">\n";
+print "<h3>$title</h3>\n";
+
 $sql = "SELECT SQL_CALC_FOUND_ROWS `cvsname`, `revision`, `date`, `author`, `message`, `keyword_subs`, `bugid`, `branch`$ec FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` $where GROUP BY `fid`, `revision`, `bugid` $having $order LIMIT $offset, $pagesize";
 $result = wmysql_query($sql);
 
@@ -137,9 +140,6 @@ $rows = $row[0];
 
 $title = "<span>$rows results total</span>Showing results " . ($offset + 1) . "-" . ($offset + $pagesize > $rows ? $rows : $offset + $pagesize) . " for " . ($_GET["q"] == "" ? "last $days days of commits" : "$et" . sanitize($_GET["q"], "text"));
 $title = ($rows == 0 ? "No results found for " . sanitize($_GET["q"], "text") . "" : $title);
-
-print "<div class=\"homeitem3col\">\n";
-print "<h3>$title</h3>\n";
 
 dopager($rows, $page, $pagesize);
 

@@ -64,6 +64,8 @@ $preversion = relminus($version, $cvsproj, $cvscom, $rbuild);
 
 $outerversion = version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $nomenclature, $projectsf, $proj);
 
+print "<div class=\"homeitem3col\">\n";
+
 if ($extra_build)
 {
 	$branch = "'$version'";
@@ -88,7 +90,6 @@ if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 	array_shift($rels);
 }
 
-print "<div class=\"homeitem3col\">\n";
 if (sizeof($rels))
 {
 	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . "</h3>\n";
