@@ -603,7 +603,6 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		print "### ".$mid. " ### ".$path."<br>";
 		$link = ($isBuildServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
 				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
 	}
