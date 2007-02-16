@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/technology/emft/updates/site-emf-qtv-all.xml&amp;format=xml">
+	<description url="http://download.eclipse.org/technology/emft/updates/site-emf-qtv-all.xml">
+	To install these plugins, point your Eclipse Update Manager at this site.
+	</description>
+	
+    <feature url="features/org.eclipse.emf.emfqtv.all.sdk_1.1.0.v200702141723.jar" patch="false" id="org.eclipse.emf.emfqtv.all.sdk" version="1.1.0.v200702141723">
+        <category name="emf-qtv-all 1.1M5 S200702141723"/>
+    </feature>
+ 
+ 
+    <feature url="features/org.eclipse.emf.emfqtv.all_1.1.0.v200702141723.jar" patch="false" id="org.eclipse.emf.emfqtv.all" version="1.1.0.v200702141723">
+        <category name="emf-qtv-all 1.1M5 S200702141723"/>
+    </feature>
+ 
+    <category-def label="EMF Data Integrity Frameworks 1.1M5" name="emf-qtv-all 1.1M5 S200702141723">
+        <description>
+This category contains the features of the 1.1M5 S200702141723 build of emft coordinated SDK, which includes source, plugins, and documentation.
+        </description>
+    </category-def>
+</site>	
