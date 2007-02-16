@@ -38,9 +38,9 @@ function wmysql_query($sql)
 	$res = null;
 	if (is_file($writableRoot . "searchcvs-dbaccess.php"))
 	{
-		if ($showsql)
+		if (isset($showsql) && $showsql)
 		{
-			print "<div class=\"homeitem\"><ul><li>$sql</li></ul></div>\n";	
+			print "<ul><li>$sql</li></ul>\n";	
 		}
 		$res = mysql_query($sql) or die("$sql\n" . mysql_error());
 	}
