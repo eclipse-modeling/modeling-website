@@ -34,10 +34,14 @@ else
 function wmysql_query($sql)
 {
 	global $writableRoot;
+	$showsql = (isset($_GET["showsql"]) && $_GET["showsql"] === "showsql" ? 1 : 0);
 	$res = null;
 	if (is_file($writableRoot . "searchcvs-dbaccess.php"))
 	{
-		#print $sql . "\n";
+		if ($showsql)
+		{
+			print "<div class=\"homeitem\"><ul><li>$sql</li></ul></div>\n";	
+		}
 		$res = mysql_query($sql) or die("$sql\n" . mysql_error());
 	}
 	return $res;
