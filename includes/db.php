@@ -42,7 +42,15 @@ function wmysql_query($sql)
 		{
 			print "<ul><li>$sql</li></ul>\n";	
 		}
-		$res = mysql_query($sql) or die("$sql\n" . mysql_error());
+		$res = mysql_query($sql);
+		if (!$res) { 
+			print 
+				"<ul>\n" .
+				"<li><small><i>$sql</i></small></li>\n" .
+				"<li><small><b>".mysql_error()."</li>\n" .
+				"</ul>\n";
+			$res = null;
+		}
 	}
 	return $res;
 }
