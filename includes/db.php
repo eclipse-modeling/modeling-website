@@ -46,8 +46,7 @@ function wmysql_query($sql)
 		if (!$res) { 
 			print 
 				"<ul>\n" .
-				"<li><small><i>$sql</i></small></li>\n" .
-				"<li><small><b>".mysql_error()."</li>\n" .
+				"<li><small><i>".mysql_error()."</i></small></li>\n" .
 				"</ul>\n";
 			$res = null;
 		}
