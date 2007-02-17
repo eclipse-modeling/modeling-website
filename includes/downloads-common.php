@@ -404,7 +404,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 				$tries[] = "$branch/$ID/$filePre$u-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $u
 			}
 
-			$out = "...";
+			$out = 	"<i><b>$pre2</b>$filePre$u-$ziplabel.zip ...</i>";
 			foreach ($tries as $z)
 			{
 				if (is_file("$PWD/$z"))
