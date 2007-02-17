@@ -1,5 +1,20 @@
 <?php
-
+/**
+ * MUST DEFINE ARRAYS IN ORDER TO INCLUDE THIS PAGE:
+ * 
+ * 	$emails = array (
+		"emf" => "codeslave@ca.ibm.com,emerks@ca.ibm.com,marcelop@ca.ibm.com,davidms@ca.ibm.com,khussey@ca.ibm.com,walkerp@us.ibm.com"
+	);
+	$users = array (// runs as, access IES map file repo as, ssh as
+		"emf" => array (
+			"nickb@emf.torolab.ibm.com",
+			"nickb",
+			"nboldt"
+		)
+	);
+ */
+ 
+ // TODO: migrate function in EMF/UML2 promo page to here
 
 # $PR = "modeling/mdt";
 # $proj = "/uml2"; 
@@ -41,24 +56,6 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 {
 	header("Location: /" . $PR . $proj . "/build/promo.php");
 }
-
-// TODO: pull these values from promoteToEclipse.*.properties instead
-$emails = array (
-	"emf" => "codeslave@ca.ibm.com,emerks@ca.ibm.com,marcelop@ca.ibm.com,davidms@ca.ibm.com,khussey@ca.ibm.com,walkerp@us.ibm.com",
-	"uml2" => "khussey@ca.ibm.com,jbruck@ca.ibm.com"
-);
-	$users = array (// runs as, access IES map file repo as, ssh as
-	"emf" => array (
-		"nickb@emf.torolab.ibm.com",
-		"nickb",
-		"nboldt"
-	),
-	"uml2" => array (
-		"khussey@emf.torolab.ibm.com",
-		"khussey",
-		"khussey"
-	)
-);
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>Promoting MDT</h1>\n";

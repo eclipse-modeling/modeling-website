@@ -10,4 +10,16 @@ $options = array (
 	
 	"Mapfile_Rule_Default" => 1 // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, Tag Files=gen-true"
 );
+
+$emails = array (
+	"uml2" => "khussey@ca.ibm.com,jbruck@ca.ibm.com"
+);
+
+$users = array (// runs as, access IES map file repo as, ssh as
+	"uml2" => array (
+		"khussey@emf.torolab.ibm.com",
+		"khussey",
+		"khussey"
+	)
+);
 ?>
