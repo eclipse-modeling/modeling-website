@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.23 2007/02/15 23:53:47 nickb Exp $ 
+// $Id: scripts.php,v 1.24 2007/02/19 21:29:19 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -324,6 +324,7 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 
 function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem3col", $showAll = "", $showMax = "", $sortBy = "")
 {
+	global $incubating;
 	$vars = array("showAll", "showMax", "sortBy", "hlbuild");
 
 	$hlbuild = (isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
@@ -331,6 +332,7 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out = "<div class=\"" . ($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
 	$tag = ($style == "sideitem" ? "h6" : "h3");
 	$out .= "<$tag>$nomenclature selection</$tag>\n";
+	$out .= ($style != "sideitem" ? '<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr valign="top"><td>'."\n" : '');
 	$out .= "<form action=\"" . $_SERVER["SCRIPT_NAME"] . "\" method=\"get\" id=\"subproject_form\">\n";
 	$out .= "<p>\n";
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
@@ -353,6 +355,12 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out .= "<input type=\"submit\" value=\"Go!\"/>\n";
 	$out .= "</p>\n";
 	$out .= "</form>\n";
+	$out .= ($style != "sideitem" ? '</td>' . 
+			(isset($incubating) && in_array($tmp, $incubating) ? 
+			'<td align="right"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
+	       	align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" width="70" 
+	       	border="0" /></a></td>' : '').
+			'</tr></table>'."\n" : '');
 	$out .= "</div>\n";
 
 	return $out;

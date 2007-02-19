@@ -33,6 +33,10 @@ $cvscoms = array();
 
 $extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array(); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array (); //projects without newsgroup
+$nomailinglist = array (); //projects without mailinglist
+$incubating = array(); // projects which are still incubating; TODO: add projects here as they are migrated from EMFT
+
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;

@@ -90,7 +90,17 @@ displayIntro($projct);
 		include_once($_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php");
 	}
 	?>
-	
+
+<?php if (isset($incubating) && sizeof($incubating)>0) { ?>
+	<div class="sideitem">
+	   <h6>Incubation</h6>
+	   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+	   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
+	        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
+	        border="0" /></a></div>
+	 </div>
+<?php } ?>
+
 </div>
 <?php
 $html = ob_get_contents();

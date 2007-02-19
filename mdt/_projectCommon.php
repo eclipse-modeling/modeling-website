@@ -62,12 +62,11 @@ $level = array (
 );
 
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array (
-); //projects with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array (
-); //projects without newsgroup
-$nomailinglist = array (
-); //projects without mailinglist
+$nodownloads = array (); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array (); //projects without newsgroup
+$nomailinglist = array (); //projects without mailinglist
+$incubating = array("eodm","uml2tools"); // projects which are still incubating
+
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
