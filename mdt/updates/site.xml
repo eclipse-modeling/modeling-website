@@ -183,4 +183,28 @@ This category contains the various features of the 2.0.3 build of UML2 SDK, whic
 	</feature>
 
 
+	<!-- 0.7.5 -->
+
+
+	<category-def label="emft eodm SDK 0.7.5" name="emft eodm SDK 0.7.5">
+		<description>
+This category contains the features of the 0.7.5 build of emft eodm SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+	<feature url="features/org.eclipse.eodm.doc_0.7.0.v200611162108.jar" patch="false" id="org.eclipse.eodm.doc" version="0.7.0.v200611162108">
+		<category name="emft eodm SDK 0.7.5"/>
+	</feature>
+	<feature url="features/org.eclipse.eodm.examples_0.7.0.v200611162108.jar" patch="false" id="org.eclipse.eodm.examples" version="0.7.0.v200611162108">
+		<category name="emft eodm SDK 0.7.5"/>
+	</feature>
+	<feature url="features/org.eclipse.eodm.sdk_0.7.0.v200611162108.jar" patch="false" id="org.eclipse.eodm.sdk" version="0.7.0.v200611162108">
+		<category name="emft eodm SDK 0.7.5"/>
+	</feature>
+	<feature url="features/org.eclipse.eodm.source_0.7.0.v200611162108.jar" patch="false" id="org.eclipse.eodm.source" version="0.7.0.v200611162108">
+		<category name="emft eodm SDK 0.7.5"/>
+	</feature>
+	<feature url="features/org.eclipse.eodm_0.7.0.v200611162108.jar" patch="false" id="org.eclipse.eodm" version="0.7.0.v200611162108">
+		<category name="emft eodm SDK 0.7.5"/>
+	</feature>
+
 </site>
