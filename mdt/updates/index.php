@@ -2,8 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 
 $PRS = array(
-	"Tools/EMF (XSD)" => "tools/emf",
-	"Technology/EMFT (OCL)" => "technology/emft"
+	"EMF (XSD)" => "modeling/emf",
+	"EMFT (OCL)" => "technology/emft"
 );
 
 function notes()
