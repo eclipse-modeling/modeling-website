@@ -8,6 +8,12 @@
  */
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
+if (isset($proj) && isset($hasmoved) && is_array($hasmoved) && in_array($proj,array_keys($hasmoved)))
+{
+	header("Location: http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/news/relnotes.php?project=" . $proj . "&version=HEAD");
+	exit;
+}
+
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 if (!isset($cvsprojs) || !is_array($cvsprojs))
