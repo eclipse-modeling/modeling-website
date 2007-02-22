@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="February 22, 2007" showOn="docs,whatsnew">
+	<a href="http://wiki.eclipse.org/index.php/Generating_Dynamic_Ecore_from_XML_Schema">Generating Dynamic Ecore from XML Schema (XSD)</a> added.
+</news>
 <news date="December 22, 2006" showOn="whatsnew">
     OCL 1.1 Milestone 4 is now available for
     <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=S200612211659&project=ocl#S200612211659">
@@ -181,6 +184,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.16 2007/01/16 22:11:54 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.17 2007/02/22 19:36:47 nickb Exp $ -->
 
 </doc>
