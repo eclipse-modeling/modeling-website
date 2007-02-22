@@ -1,5 +1,5 @@
 <?php
-if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -21,7 +21,7 @@ $rooturl = "http://www.eclipse.org/emft";
 $downurl = (preg_match("/^(emf\.torolab\.ibm\.com|emft.eclipse.org)$/", $_SERVER["SERVER_NAME"], $regs) ? "http://$regs[1]/emft" : "http://www.eclipse.org/emft");
 $bugurl = "https://bugs.eclipse.org";
 
-$projects = array (
+$projects = array(
 	"CDO" => "cdo",
 	"EODM" => "eodm",
 	"JET" => "jet",
@@ -35,12 +35,12 @@ $projects = array (
 	"Coordinated All-In-One" => "coordinated"
 );
 
-$cvsprojs = array ();
+$cvsprojs = array();
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
-$cvscoms = array (
-	"org.eclipse.emft" => array (
+$cvscoms = array(
+	"org.eclipse.emft" => array(
 		"cdo" => "cdo",
 		"jet" => "jet",
 		"jeteditor" => "jeteditor",
@@ -123,6 +123,7 @@ else
 }
 
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
+
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
 if (!in_array($proj,array_keys($hasmoved)))
 {
