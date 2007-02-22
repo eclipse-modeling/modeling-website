@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="February 22, 2007" showOn="docs,whatsnew">
+	<a href="http://wiki.eclipse.org/index.php/Generating_Dynamic_Ecore_from_XML_Schema">Generating Dynamic Ecore from XML Schema</a> added.
+</news>
 <news date="February 12, 2007" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/index.php/Dynamic_Browsing_and_Instantiation_Capabilites_in_EMF">Dynamic Browsing &amp; Instantiation Capabilites</a> added.
 </news>
@@ -251,6 +254,6 @@
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
 
-<!-- $Id: news.xml,v 1.5 2007/02/12 21:22:06 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.6 2007/02/22 19:27:33 nickb Exp $ -->
 
 </doc>
