@@ -88,13 +88,13 @@ foreach (array_keys($projects) as $z)
 if (!in_array($proj,array_keys($hasmoved)))
 {
 	$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $proj);
+	$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 }
 else
 {
 	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/downloads/?project=" . $proj);
+	$Nav->addCustomNav("Update Manager", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/updates/", "_self", 2);
 }
-
-$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 if (!in_array($proj,array_keys($hasmoved)))
 {
