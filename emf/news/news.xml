@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="February 23, 2007" showOn="docs,whatsnew">
+	<a href="http://www.eclipse.org/emf/docs/#presentations">Eclipse Podcast w/ Ed Merks</a> added.
+</news>
 <news date="February 22, 2007" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/index.php/Generating_Dynamic_Ecore_from_XML_Schema">Generating Dynamic Ecore from XML Schema</a> added.
 </news>
@@ -254,6 +257,6 @@
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
 
-<!-- $Id: news.xml,v 1.6 2007/02/22 19:27:33 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.7 2007/02/23 15:49:57 nickb Exp $ -->
 
 </doc>
