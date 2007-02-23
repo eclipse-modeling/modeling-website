@@ -724,7 +724,18 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 function grep($pattern, $file)
 {
 	global $maxfilesize;
-	$filec = (is_file($file) && is_readable($file) && filesize($file) < ($maxfilesize) ? file($file) : array());
+	$filec = array();
+	if (is_file($file) && is_readable($file))
+	{
+		if (filesize($file) < ($maxfilesize))
+		{
+			$filec =  file($file);
+		}
+		else
+		{
+			exec("tail -n2000 $file", $filec);
+		}
+	}
 
 	foreach ($filec as $z)
 	{
