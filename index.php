@@ -39,7 +39,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
 	
 	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/downloads/index_project.php");
-	$Nav->addCustomNav("EMF", "/emf/downloads/?project=emf", "_self", 3);
+	$Nav->addCustomNav("EMF", "/modeling/emf/downloads/", "_self", 3);
 	$Nav->addCustomNav("EMFT", "/emft/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
@@ -71,9 +71,9 @@ development technologies within the Eclipse community by providing a unified set
 				<ul>
 					<li><a href="http://www.eclipse.org/emft/projects/cdo/">CDO</a> : a technology for distributed shared EMF models and a fast server-based O/R mapping solution. With CDO you can easily enhance your existing models in such a way that saving a resource transparently commits the applied changes to a relational database.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/net4j/">Net4j</a> : an extensible client-server system based on the Eclipse Runtime and the Spring Framework. You can easily extend the protocol stack with Eclipse plugins that provide new transport or application protocols.</li>
+					<li><a href="http://www.eclipse.org/emft/projects/teneo/">Teneo</a> : a database persistency solution for EMF using Hibernate or JPOX/JDO 2.0. It supports automatic creation of EMF to Relational Mappings and the related database schemas.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/query/">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/transaction/">Model Transaction</a> (MT) : provides a model management layer built on top of EMF for managing EMF resources.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/teneo/">Teneo</a> : a database persistency solution for EMF using Hibernate or JPOX/JDO 2.0. It supports automatic creation of EMF to Relational Mappings and the related database schemas.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/validation/">Validation Framework</a> (VF) : provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
 				</ul>
 			</ul>
@@ -88,16 +88,16 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="homeitem3col">
 			<h3><a href="http://www.eclipse.org/modeling/mdt/" style="color:white">Model Development Tools</a></h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">EMF Ontology Definition Metamodel</a> (EODM) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=eodm">EMF Ontology Definition Metamodel</a> (EODM) : 
 					an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using 
 					EMF with additional parsing, inference, model transformation and editing functions.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Object Constraint Language</a> (OCL) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl">Object Constraint Language</a> (OCL) : 
 						defines APIs for OCL expression syntax for implementing queries and contraints.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">Unified Modeling Language 2.x</a> (UML2) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2">Unified Modeling Language 2.x</a> (UML2) : 
 						an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools">UML2 Tools</a> : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools">UML2 Tools</a> : 
 						a set of GMF-based editors for viewing and editing UML models.</li>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD) : 
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=xsd">XML Schema Infoset Model</a> (XSD) : 
 						a reference library that provides an <a href="http://www.eclipse.org/modeling/emf/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> 
 						for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
 			</ul>
