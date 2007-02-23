@@ -23,16 +23,17 @@ $bugurl = "https://bugs.eclipse.org";
 
 $projects = array(
 	"CDO" => "cdo",
-	"EODM" => "eodm",
 	"JET" => "jet",
 	"JET Editor" => "jeteditor",
 	"Net4j" => "net4j",
-	"OCL" => "ocl",
 	"Query" => "query",
 	"Teneo" => "teneo",
 	"Transaction" => "transaction",
 	"Validation" => "validation",
-	"Coordinated All-In-One" => "coordinated"
+	"Coordinated All-In-One" => "coordinated",
+	/* moved, shuffle to bottom */
+	"EODM" => "eodm",
+	"OCL" => "ocl"
 );
 
 $cvsprojs = array();
@@ -65,7 +66,10 @@ $hasmoved = array("eodm" => "mdt", "ocl" => "mdt"); // components which have mov
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
-$proj = (isset ($_POST["build_Project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_POST["build_Project"], $regs)) ? $regs[1] : (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset ($_POST["build_Project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_POST["build_Project"], $regs)) ? 
+	$regs[1] : (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? 
+		$regs[1] : (preg_match("#/emft/projects/(.+)/index.php#", $_SERVER["SCRIPT_NAME"], $regs) ? 
+			$regs[1] : ""));
 
 $PR = "modeling/emft";
 
@@ -74,7 +78,7 @@ foreach (array_keys($projects) as $z)
 {
 	if (!in_array($projects[$z],$extraprojects)) 
 	{
-		if (!in_array($projects[$z],array_keys($hasmoved)))
+		if (!array_key_exists($projects[$z],$hasmoved))
 		{
 			$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/?project=$projects[$z]#$projects[$z]", "_self", 2);				
 		} 
@@ -85,7 +89,7 @@ foreach (array_keys($projects) as $z)
 	}
 }
 
-if (!in_array($proj,array_keys($hasmoved)))
+if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $proj);
 	$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
@@ -96,7 +100,7 @@ else
 	$Nav->addCustomNav("Update Manager", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/updates/", "_self", 2);
 }
 
-if (!in_array($proj,array_keys($hasmoved)))
+if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/EMFT");
 	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . $proj . "&amp;version=HEAD", "_self", 2);
@@ -111,10 +115,10 @@ else
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
 
-if (!in_array($proj,array_keys($hasmoved)))
+if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/EMFT", "_self", 2);
-	$Nav->addCustomNav("Newsgroup", "news://news.eclipse.org/eclipse.technology.emft", "_self", 2);
+	$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/modeling/emft/newsgroup-mailing-list.php", "_self", 2);
 } 
 else
 {
@@ -125,7 +129,7 @@ else
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
 
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
-if (!in_array($proj,array_keys($hasmoved)))
+if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
 	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
