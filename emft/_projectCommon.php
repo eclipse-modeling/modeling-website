@@ -22,12 +22,12 @@ $downurl = (preg_match("/^(emf\.torolab\.ibm\.com|emft.eclipse.org)$/", $_SERVER
 $bugurl = "https://bugs.eclipse.org";
 
 $projects = array(
-	"CDO" => "cdo",
 	"JET" => "jet",
 	"JET Editor" => "jeteditor",
+	"CDO" => "cdo",
 	"Net4j" => "net4j",
-	"Query" => "query",
 	"Teneo" => "teneo",
+	"Query" => "query",
 	"Transaction" => "transaction",
 	"Validation" => "validation",
 	"Coordinated All-In-One" => "coordinated",
