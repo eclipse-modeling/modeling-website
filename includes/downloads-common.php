@@ -1,5 +1,7 @@
 <?php
 
+$maxfilesize = 2*1024*1024;
+
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -439,7 +441,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct;
+	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct, $maxfilesize;
 	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
 	$out = "";
@@ -459,7 +461,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	$link2 = "";
 
 	clearstatcache();
-	if ($isBuildServer && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024)) // if the log's too big, don't open it!
+	if ($isBuildServer && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < ($maxfilesize)) // if the log's too big, don't open it!
 	{
 		if (grep("/BUILD FAILED/", "$PWD${path}buildlog.txt"))
 		{
@@ -576,7 +578,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	}
 
 	clearstatcache();
-	if ($isBuildServer && $icon == "question" && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < (3*1024*1024))
+	if ($isBuildServer && $icon == "question" && is_file("$PWD${path}buildlog.txt") && filesize("$PWD${path}buildlog.txt") < ($maxfilesize))
 	{
 		if ($isBuildServer && grep("/\[start\] start\.sh finished on: /", "$PWD${path}buildlog.txt"))
 		{
@@ -721,7 +723,8 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 
 function grep($pattern, $file)
 {
-	$filec = (is_file($file) && is_readable($file) && filesize($file) < (3*1024*1024) ? file($file) : array());
+	global $maxfilesize;
+	$filec = (is_file($file) && is_readable($file) && filesize($file) < ($maxfilesize) ? file($file) : array());
 
 	foreach ($filec as $z)
 	{
