@@ -37,8 +37,14 @@ foreach ($projects as $z)
 	{
 		print "<div class=\"homeitem3col\">\n";
 		print "<a name=\"$projects[$z]\"></a>\n";
-		print "<h3>$z</h3>\n";
-		print '<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr valign="top"><td>'."\n";
+		print "<h3>";
+		if (isset($incubating) && in_array($projects[$z], $incubating))
+		{
+			print '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
+	    	   	src="http://www.eclipse.org/modeling/images/gazoo-icon.png" alt="Validation (Incubation) Phase"
+	        	border="0" /></a>';
+	    }
+	    print "$z</h3>\n";
 		print $descriptions[$projects[$z]][($proj == $projects[$z] ? "long" : "short")];
 		print "<ul class=\"extras\">\n";
 		if ($proj != $projects[$z])
@@ -47,20 +53,20 @@ foreach ($projects as $z)
 		}
 		print "<li><a href=\"/$PR/downloads/?project=$projects[$z]\">Downloads</a></li>\n";
 		print "</ul>\n";
-		print "</td>\n";
-		if (isset($incubating) && in_array($projects[$z], $incubating))
-		{
-			print '<td align="right"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
-	       	align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" width="70" 
-	       	border="0" /></a></td>';
-		} 
-		print "</tr></table>\n";
 		print "</div>\n";
 	}
 	?>
 </div>
 
 <div id="rightcolumn">
+	<div class="sideitem">
+	   <h6>Incubation</h6>
+	   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+	   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
+	        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
+	        border="0" /></a></div>
+	 </div>
+ 
 	<div class="sideitem">
 		<h6>News</h6>
 		<?php getNews(4, "whatsnew"); ?>
@@ -101,14 +107,6 @@ foreach ($projects as $z)
 	}
 	?>
 
-	<div class="sideitem">
-	   <h6>Incubation</h6>
-	   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
-	   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
-	        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
-	        border="0" /></a></div>
-	 </div>
- 
 </div>
 
 <?php
@@ -122,4 +120,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.14 2007/02/19 21:29:18 nickb Exp $ -->
+<!-- $Id: index.php,v 1.15 2007/02/23 00:34:16 nickb Exp $ -->

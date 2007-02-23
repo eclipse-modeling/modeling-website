@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.24 2007/02/19 21:29:19 nickb Exp $ 
+// $Id: scripts.php,v 1.25 2007/02/23 00:34:16 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -326,13 +326,20 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 {
 	global $incubating;
 	$vars = array("showAll", "showMax", "sortBy", "hlbuild");
+	$tmp = preg_replace("#^/#", "", $proj);
 
 	$hlbuild = (isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
 
 	$out = "<div class=\"" . ($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
 	$tag = ($style == "sideitem" ? "h6" : "h3");
-	$out .= "<$tag>$nomenclature selection</$tag>\n";
-	$out .= ($style != "sideitem" ? '<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr valign="top"><td>'."\n" : '');
+	$out .= "<$tag>";
+	if ($style != "sideitem" && isset($incubating) && in_array($tmp, $incubating))
+	{
+		$out .= '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
+		src="http://www.eclipse.org/modeling/images/gazoo-incubation-icon.png" alt="Validation (Incubation) Phase"
+		border="0" /></a>';
+	}
+	$out .= "$nomenclature selection</$tag>\n";
 	$out .= "<form action=\"" . $_SERVER["SCRIPT_NAME"] . "\" method=\"get\" id=\"subproject_form\">\n";
 	$out .= "<p>\n";
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
@@ -350,17 +357,10 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 			$out .= "<input type=\"hidden\" name=\"$z\" value=\"" . $$z . "\"/>\n";
 		}
 	}
-	$tmp = preg_replace("#^/#", "", $proj);
 	$out = preg_replace("#<option (value=\"$tmp\")>#", "<option selected=\"selected\" $1>", $out);
 	$out .= "<input type=\"submit\" value=\"Go!\"/>\n";
 	$out .= "</p>\n";
 	$out .= "</form>\n";
-	$out .= ($style != "sideitem" ? '</td>' . 
-			(isset($incubating) && in_array($tmp, $incubating) ? 
-			'<td align="right"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
-	       	align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" width="70" 
-	       	border="0" /></a></td>' : '').
-			'</tr></table>'."\n" : '');
 	$out .= "</div>\n";
 
 	return $out;
