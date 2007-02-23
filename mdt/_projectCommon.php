@@ -75,7 +75,7 @@ $proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . "
 $Nav->addNavSeparator("MDT", "$rooturl/");
 foreach (array_keys($projects) as $z)
 {
-	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", $level[$projects[$z]]);
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
 }
 
 $bugcoms = array_flip($projects);
