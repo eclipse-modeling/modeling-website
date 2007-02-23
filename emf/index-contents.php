@@ -1,8 +1,7 @@
 <?php 
 
 $content["emf"] = <<<HTML
-<div class="homeitem3col">
-	<h3>Eclipse Modeling Framework (EMF)</h3>
+	<h1>Eclipse Modeling Framework (EMF)</h1>
 	<p>EMF is a modeling framework and code generation facility for building
 	tools and other applications based on a structured data model. From a model
 	specification described in XMI, EMF provides tools and runtime support
@@ -15,8 +14,6 @@ $content["emf"] = <<<HTML
 	information see the <a href="http://www.eclipse.org/$PR/docs/#overviews">EMF Overviews</a> and <a href="http://www.eclipse.org/$PR/docs/#plandocs">Project Plan</a>.</p>
 
 	<p>EMF builds include <a href="http://www.eclipse.org/modeling/mdt/?project=xsd#xsd">XML Schema Infoset Model</a> (XSD), now a component of the <a href="http://www.eclipse.org/modeling/mdt/?project=xsd">Model Development Tools</a> (MDT) project, and an EMF-based implementation of <a href="http://www.eclipse.org/$PR/?project=sdo">Service Data Objects</a> (SDO).</p>
-</div>
-
 HTML;
 
 $content["emf2"] = <<<HTML
