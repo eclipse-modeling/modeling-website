@@ -33,27 +33,50 @@ foreach ($projects as $z)
 		}
 	}
 
-	foreach (array_keys($projects) as $z)
+	$tmp = array_flip($projects); // pop $proj to first position, reverse name/values so that we can have two projects w/ the same vanity name
+	$homepageProjects = $proj ? array("selected" => $tmp[$proj]) : array("selected" => "none"); 
+	foreach ($projects as $label => $z) 
 	{
-		print "<div class=\"homeitem3col\">\n";
-		print "<a name=\"$projects[$z]\"></a>\n";
-		print "<h3>";
-		if (isset($incubating) && in_array($projects[$z], $incubating))
-		{
-			print '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
-	    	   	src="http://www.eclipse.org/modeling/images/gazoo-icon.png" alt="Validation (Incubation) Phase"
-	        	border="0" /></a>';
-	    }
-	    print "$z</h3>\n";
-		print $descriptions[$projects[$z]][($proj == $projects[$z] ? "long" : "short")];
-		print "<ul class=\"extras\">\n";
-		if ($proj != $projects[$z])
-		{
-			print "<li><a href=\"?project=$projects[$z]#$projects[$z]\">More...</a></li>\n";
+		$homepageProjects[$z] = $label;
+	} 
+	$cnt = 0;
+	foreach ($homepageProjects as $y => $z) 
+	{
+		if ($z == "none") {
+			$cnt++;
 		}
-		print "<li><a href=\"/$PR/downloads/?project=$projects[$z]\">Downloads</a></li>\n";
-		print "</ul>\n";
-		print "</div>\n";
+		else
+		{
+			if ( (is_dir("../".$projects[$z]) || is_dir($projects[$z])) && !in_array($projects[$z],$extraprojects))
+			{
+				print "<div class=\"homeitem".($y == "selected" ? "3col" : "")."\">\n";
+				print "<a name=\"$projects[$z]\"></a>\n";
+				print "<h3>";
+				if (isset($incubating) && in_array($projects[$z], $incubating))
+				{
+					print '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
+			    		   	src="http://www.eclipse.org/modeling/images/gazoo-icon.png" alt="Validation (Incubation) Phase"
+			        		border="0" /></a>';
+				}
+				print "$z</h3>\n";
+				print $descriptions[$projects[$z]][($y == "selected" ? "long" : "short")];
+				print "<ul class=\"extras\">";
+				if (!isset($hasmoved) || !array_key_exists($y,$hasmoved))
+				{
+					if ($y != "selected" && $y != $proj)
+					{
+						print "<li><a href=\"?project=$projects[$z]#$projects[$z]\">More...</a></li>\n";
+					}
+					print "<li><a href=\"/$PR/downloads/?project=$projects[$z]\">Downloads</a></li>\n";
+				}
+				print "</ul>\n";
+				print "</div>\n";
+				$cnt++;
+			}
+			if ($cnt % 2){
+				print "<div class=\"homeitem3col\"></div>\n"; // "line breaks" to keep columns 2x2
+			}
+		} 
 	}
 	?>
 </div>
@@ -81,6 +104,14 @@ foreach ($projects as $z)
 		<ul>
 			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Older build news</a></li>
 		</ul>
+	</div>
+
+	<div class="sideitem">
+		<h6>Modeling Corner</h6>
+		<p>Want to <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">contribute</a> models, projects, files, ideas, utilities, or code to 
+		<a href="http://www.eclipse.org/modeling/mdt/">MDT</a> or any other part of the <a href="http://www.eclipse.org/modeling/">Modeling Project</a>? 
+		Now you can!</p>
+		<p>Have a look, post your comments, submit a link, or just read what others have written. <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Details here</a>.</p>
 	</div>
 
 	<a name="related"></a>
@@ -120,4 +151,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.15 2007/02/23 00:34:16 nickb Exp $ -->
+<!-- $Id: index.php,v 1.16 2007/02/23 22:01:19 nickb Exp $ -->
