@@ -721,7 +721,7 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 
 function grep($pattern, $file)
 {
-	$filec = (is_file($file) && is_readable($file) ? file($file) : array());
+	$filec = (is_file($file) && is_readable($file) && filesize($file) < (3*1024*1024) ? file($file) : array());
 
 	foreach ($filec as $z)
 	{
