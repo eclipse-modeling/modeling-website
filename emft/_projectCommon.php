@@ -80,11 +80,11 @@ foreach (array_keys($projects) as $z)
 	{
 		if (!array_key_exists($projects[$z],$hasmoved))
 		{
-			$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/?project=$projects[$z]#$projects[$z]", "_self", 2);				
+			$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/", "_self", 2);				
 		} 
 		else
 		{
-			$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z] . "#" . $projects[$z], "_self", 2);
+			$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
 		}
 	}
 }
