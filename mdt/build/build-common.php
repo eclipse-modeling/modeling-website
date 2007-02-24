@@ -206,7 +206,10 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td valign="middle"><b>Mapfile &amp; Tagging</b></td>
 				<td>&#160;</td>
 				<td><select name="build_Mapfile_Rule" size="1" onchange="doMapfileRuleSelected(this)">
-				<?php 	$options["MapfileRule"] = array ("Use Map, No Tagging=use-false","Generate Map, Tag Files=gen-true","Generate Map, No Tagging=gen-false|selected");
+				<?php 	$options["MapfileRule"] = array (
+							"Use Map, No Tagging=use-false",
+							//"Generate Map, Tag Files=gen-true", // disabled as per bug 172731
+							"Generate Map, No Tagging=gen-false|selected");
 						displayOptions($options["MapfileRule"]); ?>
 				</select><br/>
 				<input disabled="disabled" name="build_Mapfile_Tag" size="8" onkeydown="checkdisabled(this)">
@@ -214,7 +217,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td><small><a id="divMapfileRuleToggle" name="divMapfileRuleToggle" href="javascript:toggleDetails('divMapfileRule')">More Info</a></small>
 				<div id="divMapfileRuleDetail" name="divMapfileRuleDetail" style="display:none;border:0">
 				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.<br/>Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
-						<tr valign="top"><td><small>Generate Map, Tag Files</small></td><td><small> : </small></td><td><small>Using given tag (if blank, use "build_YYYYMMDDhhmm"),<br/>generate a mapfile and use that tag.</small></td></tr>
+						<!-- disabled as per bug 172731 --><!-- <tr valign="top"><td><small>Generate Map, Tag Files</small></td><td><small> : </small></td><td><small>Using given tag (if blank, use "build_YYYYMMDDhhmm"),<br/>generate a mapfile and use that tag.</small></td></tr> -->
 						<tr valign="top"><td><small>Generate Map, No Tagging</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
 				</table>
 				</div>
@@ -313,13 +316,15 @@ function showfullURL(val)
 
 function setNote(val) 
 {
-  note = document.getElementById('note');
-	if (val == "OCL" || val == "EODM")
-		note.innerHTML = val + " requires 2 SDKs: Eclipse & EMF"
-	else if (val == "UML2" || val == "XSD")
-		note.innerHTML = val + " requires 3 SDKs: Eclipse, EMF & OCL"
+    note = document.getElementById('note');
+	if (val == "ocl") 
+		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, UML2"
+	else if (val == "eodm" || val == "uml2" || val == "xsd")
+		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
+	else if (val == "uml2tools")
+		note.innerHTML = "Requires 9 SDKs: Eclipse, EMF, UML2, OCL, EMFT-QTV (3), GEF, GMF"
 	else
-		note.innerHTML = "Requires at least 1 or 2 SDKs: Eclipse, EMF..."
+		note.innerHTML = "Requires at least 2 SDKs: Eclipse, EMF..."
 }
 
 function branchToDivNum() 
@@ -428,11 +433,9 @@ function doSubmit() {
 }
 
 function doOnLoadDefaults() {
-  doBranchSelected(document.forms.buildForm.build_CVS_Branch);
-  doMapfileRuleSelected(document.forms.buildForm.build_Mapfile_Rule);
-  field=document.forms.buildForm.build_Build_Type;
-  pickDefaults(field.options[field.selectedIndex].value);
-  //setNote(field.options[field.selectedIndex].text)
+  field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
+  field=document.forms.buildForm.build_Mapfile_Rule; doMapfileRuleSelected(field);
+  setNote('<?php echo $projct; ?>');
 }
 
 setTimeout('doOnLoadDefaults()',1000);
