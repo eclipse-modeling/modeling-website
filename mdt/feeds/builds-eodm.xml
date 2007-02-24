@@ -10,7 +10,7 @@
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-eodm.xml</id>
   <entry>
-    <title>[announce] eodm 0.8.0 S200702161050 is available</title>
+    <title>[announce] eodm 0.8.0M5 (S200702161050) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050</id>
     <updated>2007-02-23T05:40:28Z</updated>
@@ -19,10 +19,10 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/S200702161050/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=eodm&amp;version=0.8.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=0.8.0M5
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-0.8.0M5.zip</release>
         </releases>
         <tests>
           <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/S200702161050/testResults.php" type="junit">
@@ -47,7 +47,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/0.8.0/I200702152134/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=eodm&amp;version=0.8.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=I200702152134
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-I200702152134.zip</release>
@@ -75,7 +75,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/0.8.0/I200702080522/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=eodm&amp;version=0.8.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=I200702080522
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-I200702080522.zip</release>
@@ -103,7 +103,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/S200701130125/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=eodm&amp;version=0.8.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=0.8.0M4
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-eodm-SDK-0.8.0M4.zip</release>
