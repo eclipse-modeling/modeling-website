@@ -19,7 +19,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200702231841/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M5.zip</release>
@@ -54,7 +54,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301715/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4b.zip</release>
@@ -89,7 +89,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301242/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4a.zip</release>
@@ -124,7 +124,7 @@
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.0.0/S200701221749/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?proj=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4.zip</release>
