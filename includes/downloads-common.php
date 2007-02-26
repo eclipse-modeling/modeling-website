@@ -862,7 +862,7 @@ function getBuildArtifacts($dir, $branchID)
 				if ($vanity == " downloads") {
 					$vanity="";
 				}
-				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
+				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":"")."$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
 			}
 		}
 		else
