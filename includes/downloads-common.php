@@ -51,7 +51,7 @@ $deps = array(
 	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
-	"orbit" => "<a href=\"http://www.eclipse.org/orbit\">Orbit</a>", # should this be included?
+	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG @ Orbit</a>", 
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"query" => "<a href=\"http://www.eclipse.org/emft/projects/query/#query\">Query</a>",
 	"transaction" => "<a href=\"http://www.eclipse.org/emft/projects/transaction/#transaction\">Transaction</a>",
