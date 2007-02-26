@@ -855,11 +855,11 @@ function getBuildArtifacts($dir, $branchID)
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
-				preg_match("/.+-SDK-(.+).zip/",$buildfile[$z],$reg);
-				if ($reg && is_array($reg) && sizeof($reg) >0 ) {
+				preg_match("/.+-SDK-(.+).zip/", $buildfile[$z], $reg);
+				if ($reg && is_array($reg) && sizeof($reg) > 0) {
 					$vanity = $reg[1] . " " . preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);	
 				}
-				if ($vanity == "downloads") {
+				if ($vanity == " downloads") {
 					$vanity="";
 				}
 				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
