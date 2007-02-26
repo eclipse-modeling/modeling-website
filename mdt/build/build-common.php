@@ -318,7 +318,7 @@ function setNote(val)
 {
     note = document.getElementById('note');
 	if (val == "ocl") 
-		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, UML2"
+		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, LPG"
 	else if (val == "eodm" || val == "uml2" || val == "xsd")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "uml2tools")
