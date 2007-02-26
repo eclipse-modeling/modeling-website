@@ -27,11 +27,11 @@ $App = new App();
 $Nav = new Nav();
 $Menu = new Menu();
 include ($App->getProjectCommon());
+internalUseOnly();
 
 // temporarily suppress unsupported projects
-$nodownloads = array ("xsd", "eodm", "ocl");  
+$nodownloads = array ("xsd");  
 
-internalUseOnly();
 ob_start();
 
 $debugb = isset ($_GET["debugb"]) ? 1 : 0;
@@ -79,7 +79,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 else
 {
 	print "<p>Your promotion is " . ($previewOnly ? "<b>NOT</b> " : "") . "in progress" . ($previewOnly ? ", but the command is displayed below for preview" : "") .
-	". <a href=\"?z" . ($debug ? "&amp;debug=1" : "") . ($previewOnly ? "&amp;previewOnly=1" : "") . "\">Promote another?</a></p>";
+	". <a href=\"?z" . ($debugb ? "&amp;debugb=1" : "") . ($previewOnly ? "&amp;previewOnly=1" : "") . "\">Promote another?</a></p>";
 }
 ?>
 
@@ -149,7 +149,7 @@ foreach ($options["BranchAndJDK"] as $br)
 			<input type="hidden" name="process" value="build" />
 			<tr>
 				<td>&#160;</td>
-				<td><b>Branch &amp; Build ID</b></td>
+				<td><b>Build Version, ID &amp; Branch</b></td>
 				<td>&#160;</td>
 				<td colspan=2>
 				<select style="font-size:9px" name="build_Version_Build_ID_And_Branch" size="8">
@@ -157,22 +157,29 @@ foreach ($options["BranchAndJDK"] as $br)
 				</select></td>
 			</tr>
 
-			<tr>
+			<tr valign="top">
 				<td>&#160;</td>
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
-				<td colspan="2"><input type="checkbox" name="build_Update_ISS_Map_File" value="Yes" checked="checked"> Update ISS Map File? 
+				<td colspan="2"><p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
 				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
 					<?php displayOptions($options["BranchIES"],false,0); ?>
-				</select></small><br/>
-				<input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</td>
+				</select></small></p>
+				<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
+				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
+				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
+					<?php displayOptions(array("europa","callisto"),false,0); ?>
+				</select></small></p>
+				<!-- TODO: implement this in promoteToEclipse.sh for MDT builds -->
+				<!-- <p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (-bugzonly)</p> -->
+				</td>
 			</tr>
 
 			<tr>
 				<td>&#160;</td>
 				<td><b>Email Address</b><br><small>optional</small></td>
 				<td>&#160;</td>
-				<td><input name="build_Email" size=25 value="<?php echo $emails[$PR]; ?>"></td>
+				<td><input name="build_Email" size=25 value="<?php echo $options["EmailDefault"]; ?>"></td>
 				<td><small>If you would like to be<br>notified when promotion done</small></td>
 			</tr>
 
@@ -212,6 +219,17 @@ function doSubmit() {
 	}
 }
 
+function doOnclickBugzonly(booln) {
+	with (document.forms.promoForm) {
+		build_Update_IES_MAP_File.disabled=booln;
+		build_IES_CVS_Branch.disabled=booln;
+		build_Announce_In_Newsgroup.disabled=booln;
+		build_Update_Coordinated_Update_Site.disabled=booln;
+		build_Coordinated_Site_Name.disabled=booln;
+		build_Email.disabled=booln;
+	} 
+}
+
 onload=loadSelects;
 
 function loadSelects() {
@@ -234,7 +252,7 @@ function loadSelects() {
 		// echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR<br/>";
 
 		$logdir = "/home/www-data/promo_logs/";
-		$logfile = "promo_log_" . $BR . "." . $ID . "_" . date("YmdHis") . ".txt";
+		$logfile = "promo_log_" . ($_POST["build_Close_Bugz_Only"] != "" ? 'bugzonly_' : '') . $BR . "." . $ID . "_" . date("YmdHis") . ".txt";
 
 		if (!$previewOnly)
 		{
@@ -277,19 +295,21 @@ function loadSelects() {
 			// create the log dir before trying to log to it
 			$preCmd = 'mkdir -p ' . $logdir . ';';
 
-			$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $users[$PR][0] .
+			$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] .
 			' \"cd ' .
-				$workDir . '/../emf/scripts; ./promoteToEclipse.sh' . // one script, not two.
-			' -sub ' . $PR .
+				$workDir . 'modeling/scripts; ./promoteToEclipse.sh' . // one script, not two.
+			' -sub ' . $projct .
 			' -Q' .
 			' -cvsbranch ' . $cvsbranch .
 			' -branch ' . $BR .
 			' -buildID ' . $ID .
-			' -user ' . $users[$PR][1] .
-			' -userIES ' . $users[$PR][2] .
-			' -branchIES ' . $_POST["build_IES_CVS_Branch"] .
-			 ($_POST["build_Update_ISS_Map_File"] != "" ? '' : ' -noies') .
+			' -user ' . $options["Users"][1] .
+			 ($_POST["build_Update_IES_MAP_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
+			 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
+			 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+			 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noies') .
 			 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
+			 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 			 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
 			' \"' .
 			' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
@@ -324,16 +344,21 @@ function loadSelects() {
 		print "<div class=\"sideitem\">\n";
 		print "<h6>Options</h6>\n";
 		print "<ul>\n";
-		print "<li><a href=\"?project=$PR&amp;debug=1\">debug promo</a></li>\n";
-		print "<li><a href=\"?project=$PR&amp;previewOnly=1\">preview promo</a></li>\n";
-		print "<li><a href=\"?project=$PR&amp;debug=1&previewOnly=1\">preview debug promo</a></li>\n";
-		print "<li><a href=\"?project=$PR\">normal promo</a></li>\n";
+		#print "<li><a href=\"?debugb=1\">debug promo</a></li>\n";
+		print "<li><a href=\"?previewOnly=1\">preview promo</a></li>\n";
+		#print "<li><a href=\"?debugb=1&previewOnly=1\">preview debug promo</a></li>\n";
+		print "<li><a href=\"?\">normal promo</a></li>\n";
 		print "</ul>\n";
 		print "</div>\n";
 
-		if ($isBuildServer)
+		
+		if ($isBuildServer && is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php"))
 		{
-			include_once $_SERVER['DOCUMENT_ROOT'] . "/modeling/mdt/build/sideitems-common.php";
+			include_once $_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php";
+			if (function_exists("sidebar"))
+			{
+				sidebar();
+			}
 		}
 
 		print "</div>\n";
@@ -345,7 +370,7 @@ function loadSelects() {
 		$pageKeywords = "";
 		$pageAuthor = "Nick Boldt";
 
-		$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $_SERVER['DOCUMENT_ROOT'] . '/modeling/includes/downloads.css"/>' . "\n");
+		$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 		$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 		/************************** METHODS *****************************************/
@@ -454,9 +479,9 @@ function loadSelects() {
 
 		function loadOptionsFromArray($sp)
 		{
+			global $debug; 
 			$options = array ();
 			$doSection = "";
-			$debug = isset ($debug) ? $debug : 0; // 1
 
 			foreach ($sp as $s)
 			{
