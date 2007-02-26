@@ -815,12 +815,12 @@ function getBuildArtifacts($dir, $branchID)
 			$opts[$regs[1]] = $regs[3];
 			$havedeps[$regs[2]] = true;
 		}
-		else if (preg_match("#^(javaHome)=.+/(.+)$#", $z, $regs))
-		{
-			$rp = realpath($regs[2]);
-			$rp = ($rp === $regs[2] && $rp ? $rp : $regs[2] . " (" . $rp . ")");
-			$opts[$regs[1]] = str_replace("/opt/", "", $rp);
-		}
+		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
+        {
+    		$rp = realpath($regs[2]);
+            $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
+            $opts[$regs[1]] = str_replace("/opt/", "", $rp);
+        }
 	}
 
 	foreach (array_keys($havedeps) as $z)
