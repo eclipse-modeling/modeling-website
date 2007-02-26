@@ -51,7 +51,7 @@ $deps = array(
 	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
-	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG @ Orbit</a>", 
+	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>", 
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"query" => "<a href=\"http://www.eclipse.org/emft/projects/query/#query\">Query</a>",
 	"transaction" => "<a href=\"http://www.eclipse.org/emft/projects/transaction/#transaction\">Transaction</a>",
@@ -818,7 +818,7 @@ function getBuildArtifacts($dir, $branchID)
 		else if (preg_match("#^(javaHome)=.+/(.+)$#", $z, $regs))
 		{
 			$rp = realpath($regs[2]);
-			$rp = ($rp == $regs[2] ? $rp : $regs[2] . " (" . $rp . ")");
+			$rp = ($rp === $regs[2] && $rp ? $rp : $regs[2] . " (" . $rp . ")");
 			$opts[$regs[1]] = str_replace("/opt/", "", $rp);
 		}
 	}
@@ -858,6 +858,9 @@ function getBuildArtifacts($dir, $branchID)
 				preg_match("/.+-SDK-(.+).zip/",$buildfile[$z],$reg);
 				if ($reg && is_array($reg) && sizeof($reg) >0 ) {
 					$vanity = $reg[1] . " " . preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);	
+				}
+				if ($vanity == "downloads") {
+					$vanity="";
 				}
 				$ret .= "<li><div><a href=\"$builddir[$z]\">Build Page</a></div>$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
 			}
