@@ -54,7 +54,7 @@ $html = ob_get_contents();
 ob_end_clean();
 
 $trans = array_flip($projects);
-$pageTitle = "Eclipse Modeling - EMF - $trans[$projct] - Downloads";
+$pageTitle = "Eclipse Modeling - ".(false===strpos($trans[$projct],"EMF")?"EMF ":"").$trans[$projct]." - Downloads";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch, Nick Boldt";
 
