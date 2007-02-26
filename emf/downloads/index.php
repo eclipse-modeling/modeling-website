@@ -61,7 +61,7 @@ $pageAuthor = "Neil Skrypuch, Nick Boldt";
 # Generate the web page
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
-$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="MDT '.$trans[$projct].' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
+$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="'.(false===strpos($trans[$projct],"EMF")?"EMF ":"").$trans[$projct].' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
