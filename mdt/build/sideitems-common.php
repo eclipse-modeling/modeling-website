@@ -18,7 +18,7 @@ function sidebar()
 			<li><a href="/emft/build/?project=<?php print $projct; ?>">Old Build</a> (EMFT)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=uml2">Old Build</a> (UML2)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=emf">Old Build</a> (XSD)</li>
-			<li><a href="/<?php print $PR."/".$projct; ?>/build/promo.php">Old Promote</a> (UML2)</li>
+			<li><a href="http://emf.torolab.ibm.com/emf/build/promo.php?project=uml2">Old Promote</a> (UML2)</li>
 		</ul>
 	</div>
 
