@@ -622,7 +622,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 		}
 	}
 	
-	if ($result != "FAILED" && $mightHavePassed && !is_dir("$PWD${path}testresults/xml/"))
+	if (!$result && !is_dir("$PWD${path}testresults/xml/"))
 	{
 		$result = "Skipped";
 		$icon = "check-maybe";
