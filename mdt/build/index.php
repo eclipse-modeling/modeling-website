@@ -1,1 +1,1 @@
-<?php header("Location: /modeling/mdt/downloads/"); ?>
+<?php header("Location: /modeling/mdt/uml2/build/"); ?>
