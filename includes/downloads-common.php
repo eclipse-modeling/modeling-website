@@ -867,7 +867,11 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = $buildID[$z];
 				preg_match("/.+-SDK-(.+).zip/", $buildfile[$z], $reg);
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
-					$vanity = $reg[1] . " " . preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);	
+					$vanity = preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);
+					if ($vanity != $reg[1])
+					{
+						$vanity = $reg[1] . " " . $vanity;
+					}	
 				}
 				if ($vanity == " downloads") {
 					$vanity="";
