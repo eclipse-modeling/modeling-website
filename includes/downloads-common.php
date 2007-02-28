@@ -540,7 +540,6 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 				}
 			}
 
-			
 			if ($errors)
 			{
 				$icon = "not";
@@ -556,24 +555,23 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 
 			//parse out the check/fail icons in index.html, if we haven't failed already
-			if ($icon != "not")
+			if ($icon != "not" && $indexHTML)
 			{
 				if (preg_match("/<font size=\"-1\" color=\"#FF0000\">skipped<\/font>/", $indexHTML))
 				{
 					$result = "Skipped";
 					$icon = "check-maybe";
-				} else
-					if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
-					{
-						$result = "FAILED";
-						$icon = "not";
-					} else
-						if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
-						{
-							$result = "TESTS FAILED";
-							$icon = "check-tests-failed";
-						}
-
+				} 
+				else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
+				{
+					$result = "FAILED";
+					$icon = "not";
+				} 
+				else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
+				{
+					$result = "TESTS FAILED";
+					$icon = "check-tests-failed";
+				}
 			}
 		}
 	}
@@ -618,10 +616,16 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 			else if ($result != "FAILED" && !$mightHavePassed)
 			{
-					$result = "FAILED";
+				$result = "FAILED";
 				$icon = "not";
 			}
 		}
+	}
+	
+	if ($result != "FAILED" && $mightHavePassed && !is_dir("$PWD${path}testresults/xml/"))
+	{
+		$result = "Skipped";
+		$icon = "check-maybe";
 	}
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
