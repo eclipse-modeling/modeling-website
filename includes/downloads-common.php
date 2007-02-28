@@ -398,9 +398,9 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 		{
 			$cnt++;
 			$echo_out .= "<li>\n";
-			if ($u) // for compatibilty with uml2, where there's no "RT" value in $u
+			if (!is_array($u)) // for compatibilty with uml2, where there's no "RT" value in $u
 			{
-				$u = "-$u";
+				$u = $u ? array("-$u") : array("");
 			}
 			
 			// support EMF page with three different valid prefixes which can 
@@ -411,13 +411,23 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			}
 
 			$tries = array();
-			foreach ($filePreProj as $filePre)
-			{
-				$tries[] = "$branch/$ID/$pre2$filePre$u-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $u
-				$tries[] = "$branch/$ID/$filePre$u-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $u
+			foreach ($u as $ux) 
+			{ 
+				foreach ($filePreProj as $filePre) 
+				{
+					$tries[] = "$branch/$ID/$pre2$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+					$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+				} 
 			}
-
-			$out = 	"<i><b>$pre2</b>$filePre$u-$ziplabel.zip ...</i>";
+			$out = "<i><b>$pre2</b>$filePre"; 
+			if (sizeof($u) > 1 ) { 
+				$out .= "</i>{"; foreach ($u as $ui => $ux) { $out .= ($ui>0 ? "," : "") . $ux; } $out .= "}<i>";
+			} 
+			else
+			{
+				$out .= $u[0];
+			} 
+			$out .= "-$ziplabel.zip ...</i>";
 			foreach ($tries as $z)
 			{
 				if (is_file("$PWD/$z"))

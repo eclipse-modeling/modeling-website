@@ -18,7 +18,7 @@ $dls = array(
 	"/uml2" => array(
 		"UML2" => array(
 			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "",
+			"Runtime" => array("-runtime",""), // multiple prefixes supported
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
