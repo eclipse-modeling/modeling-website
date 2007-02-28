@@ -102,7 +102,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td colspan=3><select name="build_CVS_Branch" onchange="doBranchSelected(this)">
 				<?php displayOptionsTriplet($options["BranchAndJDK"]); ?>
 				</select> 
-				<select name="build_Build_Type" onchange="pickDefaults(this.options[this.selectedIndex].value)">
+				<select name="build_Build_Type">
 				<?php displayOptions($options["BuildType"]); ?>
 				</select></td>
 			</tr>
@@ -332,26 +332,11 @@ function branchToDivNum()
   return document.forms.buildForm.build_Branch.value.substring(0,3).replace(".","");
 }
 
-function pickDefaults(val) {
-	document.forms.buildForm.build_Mapfile_Rule.selectedIndex=(val=='N'?2:<?php echo isset($options["Mapfile_Rule_Default"])?$options["Mapfile_Rule_Default"]:1;?>); // Nightly = No; others = Yes
-	divNum=branchToDivNum();
-	if (val=='N') {
-		setCheckbox("build_Run_Tests_JUnit",true,divNum);
-	} else {
-		setCheckbox("build_Run_Tests_JUnit",true,divNum);
-	}
-}
-
-function setCheckbox(field,bool,divNum) 
+function setCheckbox(field,bool) 
 {
 	if (document.forms.buildForm && document.forms.buildForm.elements[field] && document.forms.buildForm.elements[field].type=="checkbox")
 	{
 		document.forms.buildForm.elements[field].checked=bool;
-	} else {
-	  elem = document.getElementById(field+(divNum?"_"+divNum:""));
-	  if (elem && elem.style.display != "none") {
-	    elem.checked=bool;
-	  }
 	}
 }
 
@@ -436,6 +421,7 @@ function doOnLoadDefaults() {
   field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
   field=document.forms.buildForm.build_Mapfile_Rule; doMapfileRuleSelected(field);
   setNote('<?php echo $projct; ?>');
+  setCheckbox("build_Run_Tests_JUnit",true);
 }
 
 setTimeout('doOnLoadDefaults()',1000);
