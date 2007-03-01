@@ -8,7 +8,7 @@ $options = array (
 		#"1.1.2=R1_1_maintenance,/opt/sun-java2-1.4"
 	),
 	
-	"Mapfile_Rule_Default" => 1, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, Tag Files=gen-true"
+	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, Tag Files=gen-true"
 
 	"EmailDefault" => "khussey@ca.ibm.com,jbruck@ca.ibm.com", // prefil email contact box with comma-sep'd list
 	
