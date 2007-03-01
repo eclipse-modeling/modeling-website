@@ -123,24 +123,25 @@ foreach ($options["BranchAndJDK"] as $br)
 				$buildcfgs = getBuildConfig("$dir/$bid/");
 				if ($buildcfgs["branch"]) // looking in build.cfg for "branch=..."
 				{
-					$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid . " | " . $buildcfgs["branch"];
-				}
+					$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid . " | " . (isset($buildcfgs["branchCVS"]) ? $buildcfgs["branchCVS"] : $buildcfgs["branch"]);
 				}
 			}
 		}
 	}
-	$buildIDs = $buildIDs2;
-	if (sizeof($buildIDs) < 1)
-	{
-		$buildIDs = array (
-			"No builds found!"
-		);
-	}
-	krsort($buildIDs);
-	reset($buildIDs);
+}
 
-	if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
-	{ // page one, the form
+$buildIDs = $buildIDs2;
+if (sizeof($buildIDs) < 1)
+{
+	$buildIDs = array (
+		"No builds found!"
+	);
+}
+krsort($buildIDs);
+reset($buildIDs);
+
+if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
+{ // page one, the form
 ?>
 
 <table>
@@ -241,407 +242,403 @@ function loadSelects() {
 }
 </script>
 <?php
+}
+else
+{ // page two, form submission results
 
+	$BR = explode(" | ", $_POST["build_Version_Build_ID_And_Branch"]);
+	$cvsbranch = $BR[1];
+	$BR = explode("/", $BR[0]);
+	$ID = $BR[1];
+	$BR = $BR[0];
+	// echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR<br/>";
+
+	$logdir = "/home/www-data/promo_logs/";
+	$logfile = "promo_log_" . ($_POST["build_Close_Bugz_Only"] != "" ? 'bugzonly_' : '') . $BR . "." . $ID . "_" . date("YmdHis") . ".txt";
+
+	if (!$previewOnly)
+	{
+		print '<p>Logfile is '.$logdir.$logfile.'</p>';
 	}
-	else
-	{ // page two, form submission results
-
-		$BR = explode(" | ", $_POST["build_Version_Build_ID_And_Branch"]);
-		$cvsbranch = $BR[1];
-		$BR = explode("/", $BR[0]);
-		$ID = $BR[1];
-		$BR = $BR[0];
-		// echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR<br/>";
-
-		$logdir = "/home/www-data/promo_logs/";
-		$logfile = "promo_log_" . ($_POST["build_Close_Bugz_Only"] != "" ? 'bugzonly_' : '') . $BR . "." . $ID . "_" . date("YmdHis") . ".txt";
-
-		if (!$previewOnly)
-		{
 ?>
-	<p>Logfile is <?php print $logdir.$logfile; ?></p>
-<?php } ?>
-
 	<ul>
 		<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest">You can view, explore, or download your build here</a>.
 			Here's what you submitted:</li>
-	<?php
-
-			print "<ul>\n";
-			foreach ($_POST as $k => $v)
+<?php
+		print "<ul>\n";
+		foreach ($_POST as $k => $v)
+		{
+			if (strstr($k, "build_") && trim($v) != "" && !strstr($k, "_Sel"))
 			{
-				if (strstr($k, "build_") && trim($v) != "" && !strstr($k, "_Sel"))
-				{
-					$lab = str_replace("_", " ", substr($k, 6));
-					$val = false !== strpos($v, ",") ? explode(",", $v) : $v;
+				$lab = str_replace("_", " ", substr($k, 6));
+				$val = false !== strpos($v, ",") ? explode(",", $v) : $v;
 
-					print "<li>";
-					print (is_array($val) ? "<b>" .
-					$lab . ":</b>" . "<ul>\n<li>" . join("</li>\n<li>", $val) . "</li>\n</ul>\n" : "<div>" .
-					$val . "</div>" . "<b>" . $lab . ":</b>");
-					print "</li>\n";
-				}
+				print "<li>";
+				print (is_array($val) ? "<b>" .
+				$lab . ":</b>" . "<ul>\n<li>" . join("</li>\n<li>", $val) . "</li>\n</ul>\n" : "<div>" .
+				$val . "</div>" . "<b>" . $lab . ":</b>");
+				print "</li>\n";
 			}
-			print "<li><div>" . $_SERVER["REMOTE_ADDR"] . "</div><b>Your IP:</b>\n";
-			print "</ul>\n";
+		}
+		print "<li><div>" . $_SERVER["REMOTE_ADDR"] . "</div><b>Your IP:</b>\n";
+		print "</ul>\n";
 ?>
 	</ul>
 		
 	<p><b>NOTE:</b> If you are redirected to a fullmoon mirror, you may not see the new build for at least an hour.</p>
 
 <?php
+	// fire the shell script...
+	/** see http://ca3.php.net/manual/en/function.exec.php **/
 
-			// fire the shell script...
-			/** see http://ca3.php.net/manual/en/function.exec.php **/
+	// create the log dir before trying to log to it
+	$preCmd = 'mkdir -p ' . $logdir . ';';
 
-			// create the log dir before trying to log to it
-			$preCmd = 'mkdir -p ' . $logdir . ';';
+	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] .
+	' \"cd ' .
+		$workDir . 'modeling/scripts; ./promoteToEclipse.sh' . // one script, not two.
+	' -sub ' . $projct .
+	' -Q' .
+	' -cvsbranch ' . $cvsbranch .
+	' -branch ' . $BR .
+	' -buildID ' . $ID .
+	' -user ' . $options["Users"][1] .
+	 ($_POST["build_Update_IES_MAP_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
+	 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
+	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+	 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noies') .
+	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
+	 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
+	 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
+	' \"' .
+	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
 
-			$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] .
-			' \"cd ' .
-				$workDir . 'modeling/scripts; ./promoteToEclipse.sh' . // one script, not two.
-			' -sub ' . $projct .
-			' -Q' .
-			' -cvsbranch ' . $cvsbranch .
-			' -branch ' . $BR .
-			' -buildID ' . $ID .
-			' -user ' . $options["Users"][1] .
-			 ($_POST["build_Update_IES_MAP_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
-			 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
-			 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
-			 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noies') .
-			 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
-			 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
-			 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
-			' \"' .
-			' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
+	if ($previewOnly)
+	{
+		print '</div><div class="homeitem3col">' . "\n";
+		print "<h3>Build Command (Preview Only)</h3>\n";
+		print "<p><small><code>$preCmd</code></small></p>";
+	}
+	else
+	{
+		exec($preCmd);
+		$f = fopen($logdir . $logfile, "w");
+		fputs($f, preg_replace("/\ \-/", "\n  -", $cmd) . "\n\n");
+		fclose($f);
+	}
 
-			if ($previewOnly)
-			{
-				print '</div><div class="homeitem3col">' . "\n";
-				print "<h3>Build Command (Preview Only)</h3>\n";
-				print "<p><small><code>$preCmd</code></small></p>";
-			}
-			else
-			{
-				exec($preCmd);
-				$f = fopen($logdir . $logfile, "w");
-				fputs($f, preg_replace("/\ \-/", "\n  -", $cmd) . "\n\n");
-				fclose($f);
-			}
+	if ($previewOnly)
+	{
+		print "<p><small><code>" . preg_replace("/\ \-/", "<br> -", $cmd) . "</code></small></p>";
+	}
+	else
+	{
+		exec($cmd); // disable here to prevent operation
+	}
+}
 
-			if ($previewOnly)
-			{
-				print "<p><small><code>" . preg_replace("/\ \-/", "<br> -", $cmd) . "</code></small></p>";
-			}
-			else
-			{
-				exec($cmd); // disable here to prevent operation
-			}
-		}
+print "</div>\n</div>\n";
 
-		print "</div>\n</div>\n";
+print "<div id=\"rightcolumn\">\n";
+print "<div class=\"sideitem\">\n";
+print "<h6>Options</h6>\n";
+print "<ul>\n";
+#print "<li><a href=\"?debugb=1\">debug promo</a></li>\n";
+print "<li><a href=\"?previewOnly=1\">preview promo</a></li>\n";
+#print "<li><a href=\"?debugb=1&previewOnly=1\">preview debug promo</a></li>\n";
+print "<li><a href=\"?\">normal promo</a></li>\n";
+print "</ul>\n";
+print "</div>\n";
 
-		print "<div id=\"rightcolumn\">\n";
-		print "<div class=\"sideitem\">\n";
-		print "<h6>Options</h6>\n";
-		print "<ul>\n";
-		#print "<li><a href=\"?debugb=1\">debug promo</a></li>\n";
-		print "<li><a href=\"?previewOnly=1\">preview promo</a></li>\n";
-		#print "<li><a href=\"?debugb=1&previewOnly=1\">preview debug promo</a></li>\n";
-		print "<li><a href=\"?\">normal promo</a></li>\n";
-		print "</ul>\n";
-		print "</div>\n";
 
-		
-		if ($isBuildServer && is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php"))
+if ($isBuildServer && is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php"))
+{
+	include_once $_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php";
+	if (function_exists("sidebar"))
+	{
+		sidebar();
+	}
+}
+
+print "</div>\n";
+
+$html = ob_get_contents();
+ob_end_clean();
+
+$pageTitle = "EMF - Promote a Build";
+$pageKeywords = "";
+$pageAuthor = "Nick Boldt";
+
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+
+/************************** METHODS *****************************************/
+
+function displayCheckboxes($label, $options, $verbose = false, $checked = false)
+{
+	if ($options["reversed"])
+	{
+		// pop that item out
+		array_shift($options);
+		$options = array_reverse($options);
+	}
+
+	foreach ($options as $o => $option)
+	{
+		$opt = $option;
+		$isSelected = false;
+		if (!preg_match("/\-\=[\d\.]+/", $opt))
 		{
-			include_once $_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php";
-			if (function_exists("sidebar"))
-			{
-				sidebar();
-			}
-		}
-
-		print "</div>\n";
-
-		$html = ob_get_contents();
-		ob_end_clean();
-
-		$pageTitle = "EMF - Promote a Build";
-		$pageKeywords = "";
-		$pageAuthor = "Nick Boldt";
-
-		$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
-		$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
-
-		/************************** METHODS *****************************************/
-
-		function displayCheckboxes($label, $options, $verbose = false, $checked = false)
-		{
-			if ($options["reversed"])
-			{
-				// pop that item out
-				array_shift($options);
-				$options = array_reverse($options);
-			}
-
-			foreach ($options as $o => $option)
-			{
-				$opt = $option;
-				$isSelected = false;
-				if (!preg_match("/\-\=[\d\.]+/", $opt))
-				{
-					if (strstr($opt, "="))
-					{ // split line so that foo=bar becomes <input type="checkbox" name="bar" value="Y">foo
-						$matches = null;
-						preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
-						print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . trim($matches[2]) . "\" value=\"Y\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]);
-					}
-					else
-					{ // turn foo into <input type="checkbox" name="foo" value="Y">foo</option>
-						print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . $opt . "\" value=\"Y\">" . $opt;
-					}
-					print "<br/>\n";
-				}
-			}
-		}
-
-		function displayOptions($options, $verbose = false, $selected = -1)
-		{
-			if ($options["reversed"])
-			{
-				// pop that item out
-				array_shift($options);
-				$options = array_reverse($options);
-			}
-
-			foreach ($options as $o => $option)
-			{
-				$opt = $option;
-				$isSelected = false;
-				if (!preg_match("/\-\=[\d\.]+/", $opt))
-				{
-					if (strstr($opt, "|selected"))
-					{ // remove the |selected keyword
-						$isSelected = true;
-						$opt = substr($opt, 0, strpos($opt, "|selected"));
-					}
-					if (strstr($opt, "="))
-					{ // split line so that foo=bar becomes <option value="bar">foo</option>
-						$matches = null;
-						preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
-						print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . trim($matches[2]) . "\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]) . "</option>";
-					}
-					else
-					{ // turn foo into <option value="foo">foo</option>
-						print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . $opt . "\">" . $opt . "</option>";
-					}
-				}
-			}
-		}
-
-		function loadOptionsFromFile($file1)
-		{ // fn not used
-			$sp = array ();
-			if (is_file($file1))
-			{
-				$sp = file($file1);
-			}
-			$options = loadOptionsFromArray($sp);
-			return $options;
-		}
-
-		function loadOptionsFromRemoteFiles($file1, $file2)
-		{
-			$sp1 = file($file1);
-			if (!$sp1)
-			{
-				$sp1 = array ();
-			}
-			$sp2 = file($file2);
-			if (!$sp2)
-			{
-				$sp2 = array ();
-			}
-			$options = loadOptionsFromArray(array_merge($sp1, $sp2));
-			return $options;
-		}
-
-		function loadOptionsFromRemoteFile($file1)
-		{ // fn not used
-			$sp1 = file($file1);
-			if (!$sp1)
-			{
-				$sp1 = array ();
-			}
-			$options = loadOptionsFromArray($sp1);
-			return $options;
-		}
-
-		function loadOptionsFromArray($sp)
-		{
-			global $debug; 
-			$options = array ();
-			$doSection = "";
-
-			foreach ($sp as $s)
-			{
+			if (strstr($opt, "="))
+			{ // split line so that foo=bar becomes <input type="checkbox" name="bar" value="Y">foo
 				$matches = null;
-				if (strpos($s, "#") === 0)
-				{ // skip, comment line
-				}
-				else
-					if (preg_match("/\[([a-zA-Z\_\|]+)\]/", $s, $matches))
-					{ // section starts
-						if (strlen($s) > 2)
-						{
-							$isReversed = false;
-							if (strstr($s, "|reversed"))
-							{ // remove the |reversed keyword
-								$isReversed = true;
-								$doSection = trim($matches[1]);
-								$doSection = substr($doSection, 0, strpos($doSection, "|reversed"));
-							}
-							else
-							{
-								$doSection = trim($matches[1]);
-							}
-							if ($debug > 0)
-								print "Section: $s --> $doSection<br>";
-
-							$options[$doSection] = array ();
-							if ($isReversed)
-							{
-								$options[$doSection]["reversed"] = $isReversed;
-							}
-						}
-					}
-					else
-						if (!preg_match("/\[([a-zA-Z\_]+)\]/", $s, $matches))
-						{
-							if (strlen($s) > 2)
-							{
-								if ($debug > 0)
-									print "Loading: $s<br>";
-								$options[$doSection][] = trim($s);
-							}
-						}
+				preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
+				print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . trim($matches[2]) . "\" value=\"Y\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]);
 			}
-
-			return $options;
+			else
+			{ // turn foo into <input type="checkbox" name="foo" value="Y">foo</option>
+				print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . $opt . "\" value=\"Y\">" . $opt;
+			}
+			print "<br/>\n";
 		}
+	}
+}
 
-		function getBranches($options)
-		{
-			foreach ($options["Branch"] as $br => $branch)
-			{
-				$arr[getValueFromOptionsString($branch, "name")] = getValueFromOptionsString($branch, "value");
-			}
-			return $arr;
-		}
+function displayOptions($options, $verbose = false, $selected = -1)
+{
+	if ($options["reversed"])
+	{
+		// pop that item out
+		array_shift($options);
+		$options = array_reverse($options);
+	}
 
-		function getProperties($file = null)
-		{
-			$arr = array();
-			if (is_file($file))
-			{
-				$file = file($file);
-			}
-			if (is_array($file))
-			{
-				foreach ($file as $i => $line)
-				{
-					$arr[getValueFromOptionsString($line, "name")] = getValueFromOptionsString($line, "value");
-				}
-			}
-			return $arr;
-		}
-
-		function isIES()
-		{
-			global $workDir, $projct;
-			$propertiesFile = $workDir. "modeling/scripts/promoteToEclipse.$projct.properties";
-			$arr = getProperties($propertiesFile);
-			if (sizeof($arr) > 0 && array_key_exists("IES",$arr))
-			{
-				return ($arr["IES"]-0);
-			}
-			return false;
-		}
-
-		function getValueFromOptionsString($opt, $nameOrValue)
+	foreach ($options as $o => $option)
+	{
+		$opt = $option;
+		$isSelected = false;
+		if (!preg_match("/\-\=[\d\.]+/", $opt))
 		{
 			if (strstr($opt, "|selected"))
 			{ // remove the |selected keyword
+				$isSelected = true;
 				$opt = substr($opt, 0, strpos($opt, "|selected"));
 			}
 			if (strstr($opt, "="))
-			{ // split the name=value pairs, if present
-				if ($nameOrValue == "name" || $nameOrValue === 0)
-				{
-					$opt = substr($opt, 0, strpos($opt, "="));
-				}
-				else
-					if ($nameOrValue == "value" || $nameOrValue == 1)
-					{
-						$opt = substr($opt, strpos($opt, "=") + 1);
-					}
+			{ // split line so that foo=bar becomes <option value="bar">foo</option>
+				$matches = null;
+				preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
+				print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . trim($matches[2]) . "\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]) . "</option>";
 			}
-			return $opt;
+			else
+			{ // turn foo into <option value="foo">foo</option>
+				print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . $opt . "\">" . $opt . "</option>";
+			}
 		}
+	}
+}
 
-		function getprojRelengBranch($branches, $br_id)
-		{ // { 2.1.0=HEAD|selected, 2.0.3=R2_0_maintenance, ... }, 2.0.3/M200506021148
-			if (false === strpos($br_id, "/") || sizeof($branches) < 1)
-			{
-				return "HEAD";
-			}
-			$BR = explode("/", $br_id);
-			$BR = $BR[0]; // 2.0.3
-			foreach ($branches as $br)
-			{
-				if (false !== strpos($br, $BR) && false !== strpos($br, "=") && false === strpos($br, "-"))
+function loadOptionsFromFile($file1)
+{ // fn not used
+	$sp = array ();
+	if (is_file($file1))
+	{
+		$sp = file($file1);
+	}
+	$options = loadOptionsFromArray($sp);
+	return $options;
+}
+
+function loadOptionsFromRemoteFiles($file1, $file2)
+{
+	$sp1 = file($file1);
+	if (!$sp1)
+	{
+		$sp1 = array ();
+	}
+	$sp2 = file($file2);
+	if (!$sp2)
+	{
+		$sp2 = array ();
+	}
+	$options = loadOptionsFromArray(array_merge($sp1, $sp2));
+	return $options;
+}
+
+function loadOptionsFromRemoteFile($file1)
+{ // fn not used
+	$sp1 = file($file1);
+	if (!$sp1)
+	{
+		$sp1 = array ();
+	}
+	$options = loadOptionsFromArray($sp1);
+	return $options;
+}
+
+function loadOptionsFromArray($sp)
+{
+	global $debug; 
+	$options = array ();
+	$doSection = "";
+
+	foreach ($sp as $s)
+	{
+		$matches = null;
+		if (strpos($s, "#") === 0)
+		{ // skip, comment line
+		}
+		else
+			if (preg_match("/\[([a-zA-Z\_\|]+)\]/", $s, $matches))
+			{ // section starts
+				if (strlen($s) > 2)
 				{
-					$cvsBranch = explode("=", $br);
-					$cvsBranch = $cvsBranch[1]; // HEAD|selected, R2_0_maintenance
-					if (false === strpos($cvsBranch, "|"))
-					{
-						return $cvsBranch; // R2_0_maintenance
+					$isReversed = false;
+					if (strstr($s, "|reversed"))
+					{ // remove the |reversed keyword
+						$isReversed = true;
+						$doSection = trim($matches[1]);
+						$doSection = substr($doSection, 0, strpos($doSection, "|reversed"));
 					}
 					else
 					{
-						$cvsBranch = explode("|", $cvsBranch);
-						return $cvsBranch[0]; // HEAD
+						$doSection = trim($matches[1]);
+					}
+					if ($debug > 0)
+						print "Section: $s --> $doSection<br>";
+
+					$options[$doSection] = array ();
+					if ($isReversed)
+					{
+						$options[$doSection]["reversed"] = $isReversed;
 					}
 				}
 			}
-			return "HEAD";
-		}
-
-		function getBuildConfig($dir)
-		{
-			$results = array ();
-			// get data from build.cfg, turn into array of name/value pairs
-			if (!is_file($dir . "build.cfg"))
-			{
-				return $results;
-			}
-			$data = file($dir . "build.cfg");
-			foreach ($data as $line)
-			{
-				$bits = explode("=", $line);
-				if (sizeof($bits) == 2)
+			else
+				if (!preg_match("/\[([a-zA-Z\_]+)\]/", $s, $matches))
 				{
-					$results[$bits[0]] = $bits[1];
+					if (strlen($s) > 2)
+					{
+						if ($debug > 0)
+							print "Loading: $s<br>";
+						$options[$doSection][] = trim($s);
+					}
 				}
-			}
-			return $results;
-		}
+	}
 
-		function getProjectFromPath()
+	return $options;
+}
+
+function getBranches($options)
+{
+	foreach ($options["Branch"] as $br => $branch)
+	{
+		$arr[getValueFromOptionsString($branch, "name")] = getValueFromOptionsString($branch, "value");
+	}
+	return $arr;
+}
+
+function getProperties($file = null)
+{
+	$arr = array();
+	if (is_file($file))
+	{
+		$file = file($file);
+	}
+	if (is_array($file))
+	{
+		foreach ($file as $i => $line)
 		{
-			return preg_replace("#/modeling/mdt/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
-
+			$arr[getValueFromOptionsString($line, "name")] = getValueFromOptionsString($line, "value");
 		}
+	}
+	return $arr;
+}
+
+function isIES()
+{
+	global $workDir, $projct;
+	$propertiesFile = $workDir. "modeling/scripts/promoteToEclipse.$projct.properties";
+	$arr = getProperties($propertiesFile);
+	if (sizeof($arr) > 0 && array_key_exists("IES",$arr))
+	{
+		return ($arr["IES"]-0);
+	}
+	return false;
+}
+
+function getValueFromOptionsString($opt, $nameOrValue)
+{
+	if (strstr($opt, "|selected"))
+	{ // remove the |selected keyword
+		$opt = substr($opt, 0, strpos($opt, "|selected"));
+	}
+	if (strstr($opt, "="))
+	{ // split the name=value pairs, if present
+		if ($nameOrValue == "name" || $nameOrValue === 0)
+		{
+			$opt = substr($opt, 0, strpos($opt, "="));
+		}
+		else
+			if ($nameOrValue == "value" || $nameOrValue == 1)
+			{
+				$opt = substr($opt, strpos($opt, "=") + 1);
+			}
+	}
+	return $opt;
+}
+
+function getprojRelengBranch($branches, $br_id)
+{ // { 2.1.0=HEAD|selected, 2.0.3=R2_0_maintenance, ... }, 2.0.3/M200506021148
+	if (false === strpos($br_id, "/") || sizeof($branches) < 1)
+	{
+		return "HEAD";
+	}
+	$BR = explode("/", $br_id);
+	$BR = $BR[0]; // 2.0.3
+	foreach ($branches as $br)
+	{
+		if (false !== strpos($br, $BR) && false !== strpos($br, "=") && false === strpos($br, "-"))
+		{
+			$cvsBranch = explode("=", $br);
+			$cvsBranch = $cvsBranch[1]; // HEAD|selected, R2_0_maintenance
+			if (false === strpos($cvsBranch, "|"))
+			{
+				return $cvsBranch; // R2_0_maintenance
+			}
+			else
+			{
+				$cvsBranch = explode("|", $cvsBranch);
+				return $cvsBranch[0]; // HEAD
+			}
+		}
+	}
+	return "HEAD";
+}
+
+function getBuildConfig($dir)
+{
+	$results = array ();
+	// get data from build.cfg, turn into array of name/value pairs
+	if (!is_file($dir . "build.cfg"))
+	{
+		return $results;
+	}
+	$data = file($dir . "build.cfg");
+	foreach ($data as $line)
+	{
+		$bits = explode("=", $line);
+		if (sizeof($bits) == 2)
+		{
+			$results[$bits[0]] = $bits[1];
+		}
+	}
+	return $results;
+}
+
+function getProjectFromPath()
+	{
+		return preg_replace("#/modeling/mdt/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
+
+	}
 ?>
