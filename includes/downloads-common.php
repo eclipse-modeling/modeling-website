@@ -501,7 +501,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 					$errors += $regs[1][$i];
 					$warnings += $regs[2][$i];
 					$icon = "not";
-					$link = "$pre$mid${path}testresults/chkpii/org.eclipse.nls.summary.txt";
+					$link = "$pre$mid${path}testresults/chkpii/";
 					$link2 = "$pre$mid${path}testresults/chkpii/";
 				}
 			}
