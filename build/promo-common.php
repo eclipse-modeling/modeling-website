@@ -94,7 +94,6 @@ if (!isset ($options))
 }
 else
 {
-	#$options = array_merge($options, loadOptionsFromRemoteFile($dependenciesURLsFile));
 	$options["BranchIES"] = array (
 		"HEAD",
 		"R3_2_maintenance"
