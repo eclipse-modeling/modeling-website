@@ -263,7 +263,7 @@ function loadSelects() {
 <?php } ?>
 
 	<ul>
-		<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $PR; ?>&amp;sortBy=date&amp;hlbuild=0#latest">You can view, explore, or download your build here</a>.
+		<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest">You can view, explore, or download your build here</a>.
 			Here's what you submitted:</li>
 	<?php
 
