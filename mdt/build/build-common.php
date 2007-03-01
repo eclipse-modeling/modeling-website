@@ -419,7 +419,9 @@ function doSubmit() {
 
 function doOnLoadDefaults() {
   field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
-  field=document.forms.buildForm.build_Mapfile_Rule; doMapfileRuleSelected(field);
+  field=document.forms.buildForm.build_Mapfile_Rule; 
+  	field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?> 
+  	doMapfileRuleSelected(field);
   setNote('<?php echo $projct; ?>');
   setCheckbox("build_Run_Tests_JUnit",true);
 }
