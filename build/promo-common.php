@@ -188,8 +188,8 @@ foreach ($options["BranchAndJDK"] as $br)
 			<tr>
 				<td>&#160;</td>
 				<td colspan=5><p><b>Note</b>: Please ensure the build you intend to promote was done using the <br/>
-				<a target="_check" class="highlight" href="/emf/build/?project=<?php echo $PR; ?>">latest (or appropriate) driver(s)</a>, 
-				and that the <a target="_check" href="/<?php echo $PR; ?>/downloads/?project=<?php echo $PR; ?>&amp;sortBy=date&amp;hlbuild=0#latest" class="highlight">all tests have passed</a>.</p>
+				<a target="_check" class="highlight" href="/<?php echo $PR; ?>/<?php echo $projct; ?>/build/">latest (or appropriate) driver(s)</a>, 
+				and that the <a target="_check" href="/<?php echo $PR; ?>/downloads/?project=<?php echo $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest" class="highlight">all tests have passed</a>.</p>
 				
 				<p><b>When done, don't forget to change any ASSIGNED bugzillas to FIXED.</b></p>
 
