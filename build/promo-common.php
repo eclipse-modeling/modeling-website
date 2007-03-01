@@ -133,7 +133,7 @@ foreach ($options["BranchAndJDK"] as $br)
 	if (sizeof($buildIDs) < 1)
 	{
 		$buildIDs = array (
-			"ERROR: No builds found!"
+			"No builds found!"
 		);
 	}
 	krsort($buildIDs);
@@ -160,10 +160,13 @@ foreach ($options["BranchAndJDK"] as $br)
 				<td>&#160;</td>
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
-				<td colspan="2"><p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
+				<td colspan="2">
+				<?php if (isIES()) { ?>
+				<p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
 				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
 					<?php displayOptions($options["BranchIES"],false,0); ?>
 				</select></small></p>
+				<?php } ?>
 				<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
 				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
 				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
@@ -536,6 +539,35 @@ function loadSelects() {
 				$arr[getValueFromOptionsString($branch, "name")] = getValueFromOptionsString($branch, "value");
 			}
 			return $arr;
+		}
+
+		function getProperties($file = null)
+		{
+			$arr = array();
+			if (is_file($file))
+			{
+				$file = file($file);
+			}
+			if (is_array($file))
+			{
+				foreach ($file as $i => $line)
+				{
+					$arr[getValueFromOptionsString($line, "name")] = getValueFromOptionsString($line, "value");
+				}
+			}
+			return $arr;
+		}
+
+		function isIES()
+		{
+			global $workDir, $projct;
+			$propertiesFile = $workDir. "modeling/scripts/promoteToEclipse.$projct.properties";
+			$arr = getProperties($propertiesFile);
+			if (sizeof($arr) > 0 && array_key_exists("IES",$arr))
+			{
+				return ($arr["IES"]-0);
+			}
+			return false;
 		}
 
 		function getValueFromOptionsString($opt, $nameOrValue)
