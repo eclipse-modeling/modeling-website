@@ -814,7 +814,7 @@ function outputBuild($branch, $ID, $c)
 
 function getBuildArtifacts($dir, $branchID)
 {
-	global $isBuildServer, $downloadPre, $PR, $deps, $proj;
+	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct;
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
@@ -893,6 +893,10 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<li>\n";
 		$ret .= "<img src=\"/modeling/images/dl-more.gif\" alt=\"More info about this build\"/> Build Details\n";
 		$ret .= "<ul>\n";
+		
+		$version = false!==strpos($branchID,"/") ? explode("/",$branchID) : $branchID;
+		$version = is_array($version) ? $version[1] : $version;  
+		$ret .= "<li><a href=\"http://www.eclipse.org/${PR}/news/relnotes.php?project=${projct}&version=${version}\">Changes In This Build</a></li>\n";
 		$ret .= "<li><a href=\"$link$mid${branchID}/testResults.php\">Test Results &amp; Compile Logs</a></li>\n";
 		foreach (array_keys($details) as $label)
 		{
