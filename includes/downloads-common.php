@@ -764,7 +764,7 @@ function grep($pattern, $file)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -787,6 +787,8 @@ function outputBuild($branch, $ID, $c)
 		//print "--$summary--$tests--";
 	}
 
+	$opts = loadBuildConfig("$PWD/$branch/$ID/build.cfg", $deps);
+
 	$ret = "<li>\n";
 	$ret .= "<div>" . showBuildResults("$PWD/", "$branch/$ID/") . "$summary</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
@@ -799,7 +801,7 @@ function outputBuild($branch, $ID, $c)
 		"&amp;project=$projct#$ID\">" .
 		"<img alt=\"Link to this build\" src=\"/modeling/images/link.png\"/>" .
 		"</a>" .
-		(is_dir("$PWD/$branch/$ID/eclipse/$ID") ? " <span class=\"noclean\">noclean</span> <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>" : "");
+		($opts["noclean"] || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? " <b><i style=\"color:orange\">noclean</i></b> <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>" : "");
 
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
@@ -810,6 +812,31 @@ function outputBuild($branch, $ID, $c)
 	$ret .= "</li>\n";
 
 	return $ret;
+}
+
+function loadBuildConfig($file, $deps)
+{
+	$lines = (is_file($file) && is_readable($file) ? file($file) : array ());
+
+	foreach ($lines as $z)
+	{
+		$regs = null;
+		if (preg_match("/^((?:" . join("|", array_keys($deps)) . ")(?:DownloadURL|File|BuildURL))=(.{2,})$/", $z, $regs))
+		{
+			$opts[$regs[1]] = $regs[2];
+		}
+		else if (preg_match("#^(buildAlias|noclean)=(.+)$#", $z, $regs))
+        {
+            $opts[$regs[1]] = trim($regs[2]);
+        }
+		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
+		{
+    		$rp = realpath($regs[2]);
+            $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
+            $opts[$regs[1]] = str_replace("/opt/", "", $rp);
+		}
+	}
+	return $opts;
 }
 
 function getBuildArtifacts($dir, $branchID)
@@ -829,7 +856,7 @@ function getBuildArtifacts($dir, $branchID)
 			$opts[$regs[1]] = $regs[3];
 			$havedeps[$regs[2]] = true;
 		}
-		else if (preg_match("#^(buildAlias)=(.+)$#", $z, $regs))
+		else if (preg_match("#^(buildAlias|noclean)=(.+)$#", $z, $regs))
         {
             $opts[$regs[1]] = trim($regs[2]);
         }
