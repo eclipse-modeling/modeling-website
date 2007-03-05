@@ -829,6 +829,10 @@ function getBuildArtifacts($dir, $branchID)
 			$opts[$regs[1]] = $regs[3];
 			$havedeps[$regs[2]] = true;
 		}
+		else if (preg_match("#^(buildAlias)=(.+)$#", $z, $regs))
+        {
+            $opts[$regs[1]] = trim($regs[2]);
+        }
 		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
         {
     		$rp = realpath($regs[2]);
@@ -894,7 +898,7 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<img src=\"/modeling/images/dl-more.gif\" alt=\"More info about this build\"/> Build Details\n";
 		$ret .= "<ul>\n";
 		
-		$version = $opts["buildAlias"] ? $opts["buildAlias"] : (false!==strpos($branchID,"/") ? explode("/",$branchID) : $branchID); $version = is_array($version) ? $version[1] : $version;  
+		$version = $opts["buildAlias"] ? $opts["buildAlias"] : (preg_match("#(.+)/([IM]\d+)#", $branchID, $matches) ? $matches[2]: "HEAD");  
 		$ret .= "<li><a href=\"http://www.eclipse.org/${PR}/news/relnotes.php?project=${projct}&version=${version}\">Changes In This Build</a></li>\n";
 		$ret .= "<li><a href=\"$link$mid${branchID}/testResults.php\">Test Results &amp; Compile Logs</a></li>\n";
 		foreach (array_keys($details) as $label)
