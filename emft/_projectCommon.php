@@ -103,7 +103,7 @@ else
 if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/EMFT");
-	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . $proj . "&amp;version=HEAD", "_self", 2);
+	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . ($proj?$proj:"teneo") . "&amp;version=HEAD", "_self", 2);
 	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . $proj . "%2F+days%3A+7", "_self", 2);
 } 
 else
