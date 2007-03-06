@@ -10,8 +10,8 @@
 ob_start();
 ?>
 <div id="midcolumn">
-<div class="homeitem3col">
-<h3>Newsgroups &amp; Mailing Lists</h3>
+	<div class="homeitem3col">
+	<h3>Newsgroups &amp; Mailing Lists</h3>
 	
 	<ul>
 	<li>
@@ -69,7 +69,7 @@ ob_start();
       </li>
       </ul>
       
-</div>
+	</div>
 
 	<div class="homeitem">
 		<h3>Newsgroup Search</h3>
@@ -177,6 +177,7 @@ print <<<XML
 	</p>
 	</form>
 	</div>
+</div>
 XML;
 
 $html = ob_get_contents();
