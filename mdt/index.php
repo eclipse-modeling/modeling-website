@@ -74,7 +74,7 @@ foreach ($projects as $z)
 				$cnt++;
 			}
 			if ($cnt % 2){
-				print "<div class=\"homeitem3col\"></div>\n"; // "line breaks" to keep columns 2x2
+				print "<div class=\"homeitem3col\" style=\"display: hidden\"></div>\n"; // "line breaks" to keep columns 2x2
 			}
 		} 
 	}
@@ -151,4 +151,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.18 2007/03/06 21:27:01 nickb Exp $ -->
+<!-- $Id: index.php,v 1.19 2007/03/06 22:09:25 nickb Exp $ -->
