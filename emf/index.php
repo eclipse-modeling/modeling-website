@@ -100,7 +100,7 @@ $pageTitle = "Eclipse Modeling - " . strtoupper($projct) . " Home";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
-$App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/$PR/includes/index.css\"/>\n");
+$App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/index.css\"/>\n");
 $trans = array_flip($projects);
 $App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF '.$trans[$projct].' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);

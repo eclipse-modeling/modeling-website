@@ -149,7 +149,6 @@ $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
-$App->AddExtraHtmlHeader('<style type="text/css">.homeitem { clear: none; }</style>' . "\n"); //hack for ie, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=154356
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.17 2007/02/23 22:10:27 nickb Exp $ -->
+<!-- $Id: index.php,v 1.18 2007/03/06 21:27:01 nickb Exp $ -->
