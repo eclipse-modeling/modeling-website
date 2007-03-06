@@ -17,3 +17,9 @@
 	padding-bottom: 0;
 	list-style: url(http://www.eclipse.org/emf/images/c.gif); /* hack for ie, since it doesn't understand list-style: none here */
 }
+
+/* hack for ie, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=154356 */
+.homeitem 
+{ 
+	clear: none; 
+}

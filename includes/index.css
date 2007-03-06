@@ -3,3 +3,14 @@
 	border-style: none;
 	padding: 0;
 }
+
+/* hack for ie, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=154356 */
+.homeitem 
+{ 
+	clear: none; 
+}
+
+#midcolumn .homeitem3col ul .outerli
+{
+	border-style: none;
+}
