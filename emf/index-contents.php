@@ -94,7 +94,7 @@ $content["sdo2"] = <<<HTML
 	<p>Unlike some of the other data integration models, Service Data Objects don't stop at data abstraction. The Service Data Objects framework also incorporates a good number of J2EE patterns and best practices. SDO supports a disconnected programming model. The SDO programming model prescribes patterns of usage that allow clean separation of each of these concerns.</p>
 	<p>Put simply, Service Data Objects is a framework for data application development, which includes an architecture and API. Service Data Objects simplify the J2EE data programming model and abstract data in a service oriented architecture (SOA). SDO unifies data application development, supports, and integrates XML. Service Data Objects incorporate J2EE patterns and best practices.</p>
 	<p>Also see:</p>
-	<ul class="sdo">
+	<ul>
 		<li><a href="http://www.eclipse.org/$PR/docs/#sdo">Documentation</a></li>
 		<li><a href="http://www.eclipse.org/$PR/javadoc/">Javadoc</a></li>
 		<li><a href="http://www.eclipse.org/$PR/downloads/">Downloads</a></li>
