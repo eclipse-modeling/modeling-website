@@ -114,7 +114,9 @@ if (sizeof($rels))
 		}
 		if ($num == 0)
 		{
-			print "<li>No bugs fixed for this release.</li>\n";
+			print "<li>No bugs fixed for this release, " .
+					"or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
+					"Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead.</li>\n";
 		}
 		print "</ul>\n";
 		print "</li>\n";
