@@ -61,7 +61,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 development technologies within the Eclipse community by providing a unified set of modeling frameworks, tooling, and standards implementations.</p>
 		<p>The Modeling Project charter is posted <a href="http://www.eclipse.org/modeling/modeling-charter.php">here</a> and inherits from the <a href="http://www.eclipse.org/org/processes/Eclipse_Standard_TopLevel_Charter_v1.0.html">Eclipse Standard Top-Level Charter v1.0</a>.</p>
 		</td>
-		<td align="right"><img height="200" width="298" src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.png">
+		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
 		</td>
 		</table>
 		<div class="homeitem3col">
