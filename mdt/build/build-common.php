@@ -57,15 +57,10 @@ if (is_array($projects) && sizeof($projects) > 1)
 			". <a href=\"?project=$projct".($debugb?"&amp;debugb=1":"").($previewOnly?"&amp;previewOnly=1":"")."\">Build another?</a></p>";
 	}
 
-	$downloadsDir = "/home/www-data/build/downloads";
-	$workDir = "/home/www-data/build/";
-
-	/** customization options here - try subcomponent file first, then fall back to parent file **/
+	$downloadsDir = $writableBuildRoot . "/build/downloads";
+	$workDir = $writableBuildRoot . "/build/";		
+	$dependenciesURLsFile = $writableBuildRoot . "/build/requests/dependencies.urls.txt"; // read-write, one shared file
 	
-	$dependenciesURLsFile = $isBuildDotEclipseServer ? 
-		"/opt/public/modeling/build/requests/dependencies.urls.txt" :
-		"/home/www-data/build/requests/dependencies.urls.txt"; // read-write, one shared file
-
 	/** done customizing, shouldn't have to change anything below here **/
 
 	if (!isset($options)) 
@@ -502,7 +497,7 @@ setTimeout('doOnLoadDefaults()',1000);
 
 			' -buildType '.$_POST["build_Build_Type"].
 			' -javaHome '.$_POST["build_Java_Home"].
-			' -downloadsDir '.$downloadsDir. // use central location: /home/www-data/build/downloads
+			' -downloadsDir '.$downloadsDir. // use central location
 			' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
 			' -buildTimestamp '.$buildTimestamp.
 			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
