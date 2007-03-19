@@ -564,6 +564,10 @@ setTimeout('doOnLoadDefaults()',1000);
 						print "<h3>ERROR! Could not write to <u>$lockfile</u></h3>\n";
 						print "<p><small><code>$preCmd\n\n$cmd</code></small></p>";
   					}
+  					if (!chmod($lockfile, 0666))
+  					{
+  						print "<p><b style=\"color:red\">ERROR!</b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
+  					}
 				}
 			}
 		} // end else 
