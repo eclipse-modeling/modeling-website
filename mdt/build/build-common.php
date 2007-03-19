@@ -489,7 +489,6 @@ setTimeout('doOnLoadDefaults()',1000);
 		// create the log dir before trying to log to it
 		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
-		# TODO: this only works with UML2; eventually, will use a common start.sh for all projects
 		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh'.
 			' -proj mdt -sub '.$projct.
 			' -version '.$BR.
@@ -520,16 +519,53 @@ setTimeout('doOnLoadDefaults()',1000);
 				print '</div><div class="homeitem3col">'."\n";
 				print "<h3>Build Command (Preview Only)</h3>\n";
 				print "<p><small><code>$preCmd</code></small></p>";
-			} else {
+			} else if (!$isBuildDotEclipseServer){
 				exec($preCmd);
 			}
 
 			if ($previewOnly) { 
 				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
-			} else {
+			} else if (!$isBuildDotEclipseServer){
 				exec($cmd);
 			}
-
+			
+			if (!$previewOnly && $isBuildDotEclipseServer)
+			{
+				$lockfile = "/opt/public/modeling/tmp/" . "mdt-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
+				// check if lock file exists for this build type
+				if (is_file($lockfile))
+				{
+					print '</div><div class="homeitem3col">'."\n";
+					print "<h3>Another build is already in progress.</h3>\n";
+					print "<p><small><code>";
+					foreach (file($lockfile) as $line) 
+					{ 
+						print "$line\n"; 
+					}
+					print "</code></small></p>";
+					
+				}
+				else // create lockfile
+				{
+					print '</div><div class="homeitem3col">'."\n";
+					$fp = fopen($lockfile, "w");
+  					fputs($fp, $preCmd . "\n"); 
+  					fputs($fp, $cmd . "\n");
+  					fclose($fp);
+  					$fp = null;
+  					$fp = file($lockfile);
+  					if (is_array($fp) && sizeof($fp)>0)
+  					{
+						print "<h3>Build command written to <u>$lockfile</u></h3>\n";
+						print "<p><small><code>$preCmd\n$cmd</code></small></p>";
+  					}
+  					else
+  					{
+						print "<h3>ERROR! Could not write to <u>$lockfile</u></h3>\n";
+						print "<p><small><code>$preCmd\n\n$cmd</code></small></p>";
+  					}
+				}
+			}
 		} // end else 
 
 print "</div>\n</div>\n";
