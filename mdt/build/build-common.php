@@ -536,7 +536,7 @@ setTimeout('doOnLoadDefaults()',1000);
 				if (is_file($lockfile))
 				{
 					print '</div><div class="homeitem3col">'."\n";
-					print "<h3>Another build is already in progress.</h3>\n";
+					print "<h3><b style=\"color:orange\">WARNING!</b> Another build is already in progress.</h3>\n";
 					print "<p><small><code>";
 					foreach (file($lockfile) as $line) 
 					{ 
@@ -561,7 +561,7 @@ setTimeout('doOnLoadDefaults()',1000);
   					}
   					else
   					{
-						print "<h3>ERROR! Could not write to <u>$lockfile</u></h3>\n";
+						print "<h3><b style=\"color:red\">ERROR!</b> Could not write to <u>$lockfile</u></h3>\n";
 						print "<p><small><code>$preCmd\n\n$cmd</code></small></p>";
   					}
   					if (!chmod($lockfile, 0666))
