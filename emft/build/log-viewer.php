@@ -1,1 +1,2 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/log-viewer-common.php"); ?>
+<?php $_SERVER['DOCUMENT_ROOT'] = $_SERVER["SERVER_NAME"] == "build.eclipse.org" ? "/opt/public/modeling" : $_SERVER['DOCUMENT_ROOT'];
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/log-viewer-common.php"); ?>
