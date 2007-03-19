@@ -62,7 +62,9 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 	/** customization options here - try subcomponent file first, then fall back to parent file **/
 	
-	$dependenciesURLsFile = "/home/www-data/build/requests/dependencies.urls.txt"; // read-write, one shared file
+	$dependenciesURLsFile = $isBuildDotEclipseServer ? 
+		"/opt/public/modeling/build/requests/dependencies.urls.txt" :
+		"/home/www-data/build/requests/dependencies.urls.txt"; // read-write, one shared file
 
 	/** done customizing, shouldn't have to change anything below here **/
 
