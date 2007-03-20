@@ -23,7 +23,7 @@ if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Laza
 }
 else
 {
-	$theme = $isBuildDotEclipseServer ? "PlainText" : "Phoenix";
+	$theme = "Phoenix";
 }
 
 /* projects/components in cvs */
