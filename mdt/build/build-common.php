@@ -553,13 +553,13 @@ setTimeout('doOnLoadDefaults()',1000);
   					{
 						print "<h3>Build started <b style=\"color:green\">OK</b>.</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>$preCmd\n$cmd</code></small></p>";
+						print "<p><small><code>$cmd</code></small></p>";
   					}
   					else
   					{
 						print "<h3><b style=\"color:red\">ERROR!</b> Could not write to lockfile!</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>$preCmd\n\n$cmd</code></small></p>";
+						print "<p><small><code>$cmd</code></small></p>";
   					}
 				}
 				if (is_file($lockfile))
