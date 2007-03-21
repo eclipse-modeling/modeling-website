@@ -484,7 +484,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		// create the log dir before trying to log to it
 		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
-		$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh'.
+		$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
 			' -proj mdt -sub '.$projct.
 			' -version '.$BR.
 			' -branch '.$_POST["build_CVS_Branch"].
@@ -508,7 +508,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
 			($_POST["build_noclean"]=="Y"?' -noclean':'').
 
-			' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
+			($isBuildDotEclipseServer ? '' : ' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
 
 			if ($previewOnly) { 
 				print '</div><div class="homeitem3col">'."\n";
@@ -545,7 +545,6 @@ setTimeout('doOnLoadDefaults()',1000);
 				{
 					print '</div><div class="homeitem3col">'."\n";
 					$fp = fopen($lockfile, "w");
-  					fputs($fp, $preCmd . "\n"); 
   					fputs($fp, $cmd . "\n");
   					fclose($fp);
   					$fp = null;
