@@ -9677,6 +9677,31 @@
 		<category name="emft teneo SDK 0.7.5 M200703091332"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.teneo.doc_0.7.5.v200703211214.jar" patch="false" id="org.eclipse.emf.teneo.doc" version="0.7.5.v200703211214">
+		<category name="emft teneo SDK 0.7.5 M200703211214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.teneo.sdk_0.7.5.v200703211214.jar" patch="false" id="org.eclipse.emf.teneo.sdk" version="0.7.5.v200703211214">
+		<category name="emft teneo SDK 0.7.5 M200703211214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.teneo.source_0.7.5.v200703211214.jar" patch="false" id="org.eclipse.emf.teneo.source" version="0.7.5.v200703211214">
+		<category name="emft teneo SDK 0.7.5 M200703211214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.teneo_0.7.5.v200703211214.jar" patch="false" id="org.eclipse.emf.teneo" version="0.7.5.v200703211214">
+		<category name="emft teneo SDK 0.7.5 M200703211214"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.teneo.examples_0.7.5.v200703211214.jar" patch="false" id="org.eclipse.emf.teneo.examples" version="0.7.5.v200703211214">
+		<category name="emft teneo SDK 0.7.5 M200703211214"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -11350,6 +11375,12 @@ This category contains the features of the 0.8.0 I200703081604 build of emft ten
 	<category-def label="emft teneo SDK 0.7.5 M200703091332" name="emft teneo SDK 0.7.5 M200703091332">
 		<description>
 This category contains the features of the 0.7.5 M200703091332 build of emft teneo SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft teneo SDK 0.7.5 M200703211214" name="emft teneo SDK 0.7.5 M200703211214">
+		<description>
+This category contains the features of the 0.7.5 M200703211214 build of emft teneo SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
