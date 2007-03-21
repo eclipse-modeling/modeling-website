@@ -12,20 +12,28 @@ foreach ($contents as $line) {
 		$collecting = false;
 
 		ini_set("error_reporting", 2147483647); ini_set("display_errors","1");
+		$wiki_contents = null;
 
 		// insert wiki content
-		$wiki_contents = file("http://wiki.eclipse.org/index.php/Category:EMF");
+		#$wiki_contents = file("http://wiki.eclipse.org/index.php/Category:EMF");
 		if (!$wiki_contents) // try another method
 		{ 
-			$fp = fsockopen("wiki.eclipse.org/index.php/Category:EMF", 80, $errno, $errstr, 30);
+			$host = "wiki.eclipse.org";
+			$url = "/index.php";
+			$vars = "title=Category:EMF";
+
+ 			$header = "Host: $host\r\n";
+ 			$header .= "User-Agent: PHP Script\r\n";
+ 			$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+ 			$header .= "Content-Length: ".strlen($vars)."\r\n";
+ 			$header .= "Connection: close\r\n\r\n";
+
+			$fp = fsockopen($host, 80, $errno, $errstr, 30);
  			if (!$fp) {
     				echo "$errstr ($errno)<br />\n";
  			} else {
-    				$out = "GET / HTTP/1.1\r\n";
-    				$out .= "Host: wiki.eclipse.org/index.php/Category:EMF\r\n";
-    				$out .= "Connection: Close\r\n\r\n";
- 
-				fwrite($fp, $out);
+   				fputs($fp, "GET $url"."?"."$vars  HTTP/1.1\r\n");
+    				fputs($fp, $header.$vars);
     				while (!feof($fp)) {
         				$wiki_contents .= fgets($fp, 128);
     				}
@@ -89,4 +97,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.5 2007/03/21 18:39:40 nickb Exp $ -->
+<!-- $Id: index.php,v 1.6 2007/03/21 18:56:45 nickb Exp $ -->
