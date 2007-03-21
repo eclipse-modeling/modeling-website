@@ -499,6 +499,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			' -javaHome '.$_POST["build_Java_Home"].
 			' -downloadsDir '.$downloadsDir. // use central location
 			' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
+			' -writableBuildRoot '.$writableBuildRoot.
 			' -buildTimestamp '.$buildTimestamp.
 			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 			
