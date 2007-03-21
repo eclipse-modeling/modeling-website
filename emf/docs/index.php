@@ -9,64 +9,7 @@ $matches = null;
 foreach ($contents as $line) { 
 	if (false !== strpos($line, "<!-- DO NOT REMOVE: placeholder for wiki content -->"))
 	{
-		$collecting = false;
-
-		ini_set("error_reporting", 2147483647); ini_set("display_errors","1");
-		$wiki_contents = null;
-
-		// insert wiki content
-		#$wiki_contents = file("http://wiki.eclipse.org/index.php/Category:EMF");
-		if (!$wiki_contents) // try another method
-		{ 
-			$host = "wiki.eclipse.org";
-			$url = "/index.php";
-			$vars = "title=Category:EMF";
-
- 			$header = "Host: $host\r\n";
- 			$header .= "User-Agent: PHP Script\r\n";
- 			$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
- 			$header .= "Content-Length: ".strlen($vars)."\r\n";
- 			$header .= "Connection: close\r\n\r\n";
-
-			$fp = fsockopen($host, 80, $errno, $errstr, 30);
- 			if (!$fp) {
-    				echo "$errstr ($errno)<br />\n";
- 			} else {
-   				fputs($fp, "GET $url"."?"."$vars  HTTP/1.1\r\n");
-    				fputs($fp, $header.$vars);
-    				while (!feof($fp)) {
-        				$wiki_contents .= fgets($fp, 128);
-    				}
-    				fclose($fp);
-				$wiki_contents = explode("\n",$wiki_contents);
- 			}
-		}
-		if ($wiki_contents && is_array($wiki_contents))
-		{
-			foreach ($wiki_contents as $wline)
-			{
-				$matches = null;
-				if (false !== strpos($wline, "printfooter"))
-				{
-					break;
-				}
-				if ($collecting && preg_match_all("#<a href=\"/index.php/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
-				{
-					if (is_array($matches) && sizeof($matches)>0)
-					{
-						foreach ($matches as $match)
-						{
-							print "<li><a href=\"http://wiki.eclipse.org/index.php/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
-						}
-					}
-				}
-				// find start line
-				if (false !== strpos($wline, "Articles in category \"EMF\""))
-				{ 
-					$collecting = true;
-				}
-			}
-		}
+		print wikiCategoryToListItems("EMF");
 	} 
 	else
 	{
@@ -97,4 +40,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.6 2007/03/21 18:56:45 nickb Exp $ -->
+<!-- $Id: index.php,v 1.7 2007/03/21 19:09:21 nickb Exp $ -->

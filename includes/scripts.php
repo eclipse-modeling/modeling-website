@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.25 2007/02/23 00:34:16 nickb Exp $ 
+// $Id: scripts.php,v 1.26 2007/03/21 19:09:21 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -477,4 +477,68 @@ function components($cvscoms)
 
 	return $components;
 }
+
+/* convert a wiki category page into a series of <li> items */
+function wikiCategoryToListItems($category)
+{
+	$collecting = false;
+
+	// insert wiki content
+	$host = "wiki.eclipse.org";
+	$url = "/index.php";
+	$vars = "title=Category:" . $category;
+
+	$header = "Host: $host\r\n";
+	$header .= "User-Agent: PHP Script\r\n";
+	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+	$header .= "Content-Length: ".strlen($vars)."\r\n";
+	$header .= "Connection: close\r\n\r\n";
+
+	$fp = fsockopen($host, 80, $errno, $errstr, 30);
+	if (!$fp) {
+			$out .=  "<li><i>$errstr ($errno)</i></li>\n";
+	} else {
+		fputs($fp, "GET $url"."?"."$vars  HTTP/1.1\r\n");
+			fputs($fp, $header.$vars);
+			while (!feof($fp)) {
+    			$wiki_contents .= fgets($fp, 128);
+			}
+			fclose($fp);
+		$wiki_contents = explode("\n",$wiki_contents);
+	}
+	if ($wiki_contents && is_array($wiki_contents))
+	{
+		foreach ($wiki_contents as $wline)
+		{
+			$matches = null;
+
+			// find stop line
+			if (false !== strpos($wline, "printfooter"))
+			{
+				$collecting = false;
+				break;
+			}
+			
+			// collect link(s)
+			if ($collecting && preg_match_all("#<a href=\"/index.php/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
+			{
+				if (is_array($matches) && sizeof($matches)>0)
+				{
+					foreach ($matches as $match)
+					{
+						$out .= "<li><a href=\"http://wiki.eclipse.org/index.php/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
+					}
+				}
+			}
+			
+			// find start line
+			if (false !== strpos($wline, "Articles in category \"". $category ."\""))
+			{ 
+				$collecting = true;
+			}
+		}
+	}
+	return $out;
+}
+
 ?>
