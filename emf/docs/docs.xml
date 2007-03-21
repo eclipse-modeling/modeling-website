@@ -122,7 +122,10 @@
 		</li>
 
 		<li>
-			<div><i><a href="http://wiki.eclipse.org/index.php?title=Category:EMF&action=history">history</a></i></div><a target="_out" href="http://wiki.eclipse.org/index.php/Category:EMF">EMF in Eclipsepedia</a> (Wiki)
+			<a target="_out" href="http://wiki.eclipse.org/index.php/Category:EMF">EMF in Eclipsepedia</a> (Wiki)
+			<ul>
+				<!-- DO NOT REMOVE: placeholder for wiki content -->
+			</ul>
 		</li>
 
 		<li>
@@ -138,7 +141,7 @@
 		</li>
 
 		<li>
-			<div>May 27 2004</div><a href="http://www.eclipse.org/modeling/emf/faq/faq.php">Frequently Asked Questions (FAQ)</a>
+			<div><i><a href="http://wiki.eclipse.org/index.php?title=EMF-FAQ&action=history">history</a></i></div><a href="http://wiki.eclipse.org/index.php/EMF-FAQ">Frequently Asked Questions (FAQ)</a>
 		</li>
 
 		<li>
@@ -518,4 +521,4 @@ and Animations of the internals of XSD models</a>
 	</ul>
 </div>
 
-<!-- $Id: docs.xml,v 1.6 2007/03/21 17:34:08 nickb Exp $ -->
+<!-- $Id: docs.xml,v 1.7 2007/03/21 18:27:09 nickb Exp $ -->

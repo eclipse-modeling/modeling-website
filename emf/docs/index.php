@@ -4,7 +4,43 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 ob_start();
 
 echo "<div id=\"midcolumn\">\n";
-include_once("docs.xml");
+$contents = file("docs.xml");
+$matches = null;
+foreach ($contents as $line) { 
+	if (false !== strpos($line, "<!-- DO NOT REMOVE: placeholder for wiki content -->"))
+	{
+		// insert wiki content
+		$wiki_contents = file("http://wiki.eclipse.org/index.php/Category:EMF");
+		$collecting = false;
+		foreach ($wiki_contents as $wline)
+		{
+			$matches = null;
+			if (false !== strpos($wline, "printfooter"))
+			{
+				break;
+			}
+			if ($collecting && preg_match_all("#<a href=\"/index.php/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
+			{
+				if (is_array($matches) && sizeof($matches)>0)
+				{
+					foreach ($matches as $match)
+					{
+						print "<li><a href=\"http://wiki.eclipse.org/index.php/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
+					}
+				}
+			}
+			// find start line
+			if (false !== strpos($wline, "Articles in category \"EMF\""))
+			{ 
+				$collecting = true;
+			}
+		}
+	} 
+	else
+	{
+		print $line;
+	}
+}
 echo "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
@@ -29,4 +65,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.3 2007/01/19 20:30:37 nickb Exp $ -->
+<!-- $Id: index.php,v 1.4 2007/03/21 18:27:09 nickb Exp $ -->
