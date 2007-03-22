@@ -552,7 +552,7 @@ setTimeout('doOnLoadDefaults()',1000);
   					$fp = file($lockfile);
   					if (is_array($fp) && sizeof($fp)>0)
   					{
-						print "<h3>Build started <b style=\"color:green;background-color:white\">&#160;OK&#160;</b>.</h3>\n";
+						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
 						print "<p><small><code>$cmd</code></small></p>";
   					}
