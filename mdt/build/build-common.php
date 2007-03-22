@@ -766,6 +766,7 @@ function displayOptionsTriplet($options) {
 		$options = array_reverse($options);
 	}
 
+	$showValues = true;
 	foreach ($options as $o => $option) {
 		$opt = $option;
 		$isSelected = false;
@@ -777,9 +778,15 @@ function displayOptionsTriplet($options) {
 			if (false!==substr($opt,"=")) {  // split line so that foo=bar becomes <option value="bar">foo</option>
 				$matches = null;
 				preg_match("/([^\=]+)\=([^\=]+)\,([^\,]+)/",$opt,$matches);
-				print "\n\t<option ".($isSelected?"selected ":"")."value=\"".trim($matches[2])."\">".
-				  trim($matches[2])." | ".trim($matches[1])." | ".trim($matches[3]).
-				  "</option>";
+				if (false !== strpos($matches[2],"--"))
+				{
+					$showValues =  ($matches[1] == $_SERVER["SERVER_NAME"]); 
+				}
+				else if ($showValues)
+				{
+					print "\n\t<option ".($isSelected?"selected ":"")."value=\"".trim($matches[2])."\">".
+				  			trim($matches[2])." | ".trim($matches[1])." | ".trim($matches[3])."</option>";
+				}
 			} else { // turn foo into <option value="foo">foo</option>
 				print "\n\t<option ".($isSelected?"selected ":"")."value=\"".$opt."\">".$opt."</option>";
 			}
