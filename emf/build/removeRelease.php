@@ -9,6 +9,7 @@ DELETE FROM releases WHERE (project = 'org.eclipse.emf' OR project = 'org.eclips
 
 */
 
+require_once ("../../includes/buildServer-common.php");
 $opts = array ("org.eclipse.emf.ecore.sdo/", "org.eclipse.xsd/");
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/removeRelease-common.php");
 ?>
