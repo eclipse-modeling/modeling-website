@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="March 22, 2007" showOn="docs,whatsnew,bleedingedge">
+	Details about <a href="http://wiki.eclipse.org/index.php/EMF_2.3_Edit_API_Source_Incompatibility">Edit API Source Incompatibility</a> are available.
+</news>
 <news date="March 21, 2007" showOn="docs">
 	<a href="/modeling/emf/docs/#references">References</a> updated to include <a href="http://wiki.eclipse.org/index.php/Category:EMF">links</a>. Please contribute!
 </news>
@@ -260,6 +263,6 @@
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
 
-<!-- $Id: news.xml,v 1.9 2007/03/21 19:37:42 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.10 2007/03/22 19:12:24 nickb Exp $ -->
 
 </doc>

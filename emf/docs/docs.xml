@@ -163,7 +163,11 @@
 
 	<ul>
 		<li>
-			<div>Jan 8 2007</div><a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements"><u>JVM Requirements</u>? (2.3.0.M3+)</a>
+			<div>Mar 22 2007</div><a href="http://wiki.eclipse.org/index.php/EMF_2.3_Edit_API_Source_Incompatibility"><u>Edit API Source Incompatibility</u> (2.3.0.I200703221305)</a>
+		</li>
+
+		<li>
+			<div>Jan 8 2007</div><a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements"><u>JVM Requirements</u> (2.3.0.M3+)</a>
 		</li>
 
 		<li>
@@ -521,4 +525,4 @@ and Animations of the internals of XSD models</a>
 	</ul>
 </div>
 
-<!-- $Id: docs.xml,v 1.7 2007/03/21 18:27:09 nickb Exp $ -->
+<!-- $Id: docs.xml,v 1.8 2007/03/22 19:12:24 nickb Exp $ -->
