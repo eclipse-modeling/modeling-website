@@ -532,7 +532,7 @@ setTimeout('doOnLoadDefaults()',1000);
 				if (is_file($lockfile))
 				{
 					print '</div><div class="homeitem3col">'."\n";
-					print "<h3><b style=\"color:orange;background-color:white\"> WARNING! </b> Another build is already in progress.</h3>\n";
+					print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another build is already in progress.</h3>\n";
 					print "<p>Lockfile: <u>$lockfile</u></p>";
 					print "<p><small><code>";
 					foreach (file($lockfile) as $line) 
@@ -552,13 +552,13 @@ setTimeout('doOnLoadDefaults()',1000);
   					$fp = file($lockfile);
   					if (is_array($fp) && sizeof($fp)>0)
   					{
-						print "<h3>Build started <b style=\"color:green;background-color:white\"> OK </b>.</h3>\n";
+						print "<h3>Build started <b style=\"color:green;background-color:white\">&#160;OK&#160;</b>.</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
 						print "<p><small><code>$cmd</code></small></p>";
   					}
   					else
   					{
-						print "<h3><b style=\"color:red;background-color:white\"> ERROR! </b> Could not write to lockfile!</h3>\n";
+						print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
 						print "<p><small><code>$cmd</code></small></p>";
   					}
@@ -567,7 +567,7 @@ setTimeout('doOnLoadDefaults()',1000);
 				{
   					if (!chmod($lockfile, 0666))
   					{
-  						print "<p><b style=\"color:red;background-color:white\"> ERROR! </b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
+  						print "<p><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
   					}
 				}
 			}
