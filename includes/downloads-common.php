@@ -449,7 +449,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct;
+	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct, $isBuildDotEclipseServer;
 	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
 
 	$out = "";
@@ -630,7 +630,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isBuildServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
+		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
 				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
 	}
 
