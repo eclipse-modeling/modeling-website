@@ -514,7 +514,9 @@ setTimeout('doOnLoadDefaults()',1000);
 			if ($previewOnly) { 
 				print '</div><div class="homeitem3col">'."\n";
 				print "<h3>Build Command (Preview Only)</h3>\n";
-				print "<p><small><code>$preCmd</code></small></p>";
+				if (!$isBuildDotEclipseServer){
+					print "<p><small><code>$preCmd</code></small></p>";
+				}
 			} else if (!$isBuildDotEclipseServer){
 				exec($preCmd);
 			}
@@ -554,13 +556,13 @@ setTimeout('doOnLoadDefaults()',1000);
   					{
 						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>$cmd</code></small></p>";
+						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
   					}
   					else
   					{
 						print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>$cmd</code></small></p>";
+						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
   					}
 				}
 				if (is_file($lockfile))
