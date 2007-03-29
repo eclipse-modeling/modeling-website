@@ -106,7 +106,7 @@ if (sizeof($rels))
 		$num = mysql_num_rows($result);
 
 		print "<ul>\n";
-		print "<li class=\"outerli\"><div>" . $rels[$i][0] . "</div>" . $rels[$i][1] . ($num > 1 ? " ($num bugs fixed)" : "") . "\n";
+		print "<li class=\"outerli\"><div><i>" . $rels[$i][0] . " GMT</i></div>" . $rels[$i][1] . ($num > 1 ? " ($num bugs fixed)" : "") . "\n";
 		print "<ul>\n";
 		while ($row = mysql_fetch_row($result))
 		{
