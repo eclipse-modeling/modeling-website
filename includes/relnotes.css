@@ -2,3 +2,9 @@
 {
 	border-style: none;
 }
+
+#midcolumn .homeitem3col ul li div,
+#midcolumn .homeitem3col ul li ul li ul li div
+{
+	float: right;
+}
