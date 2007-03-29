@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
 
+<news date="March 29, 2007" showOn="whatsnew">
+    Details about
+    <a href="http://wiki.eclipse.org/index.php/OCL_1.1_API_Changes">API Changes</a>
+    for metamodel-specific bindings of the OCL Expressions package are available.
+</news>
 <news date="February 23, 2007" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/index.php/MDT_1.0_New_and_Noteworthy">New & Noteworthy</a> added.
 </news>
@@ -188,6 +193,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.18 2007/02/23 21:24:02 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.19 2007/03/29 13:16:10 cdamus Exp $ -->
 
 </doc>
