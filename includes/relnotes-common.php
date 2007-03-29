@@ -114,9 +114,35 @@ if (sizeof($rels))
 		}
 		if ($num == 0)
 		{
+			/* temporary hack */
+			$bugzilla_queries = array(
+				"emf" => 		"classification=Tools&product=EMF",
+				"compare" => 	"classification=Technology&product=EMFT&component=Compare",
+
+				"xsd" => 		"classification=Modeling&product=MDT&product=XSD&classification=Tools&product=XSD",
+				"uml2" => 		"classification=Modeling&product=MDT&component=UML2&classification=Tools&product=UML2",
+				"uml2tools" => "classification=Modeling&product=MDT&component=UML2Tools",
+				"eodm" => "classification=Modeling&product=MDT&component=EODM&classification=Technology&product=EMFT&component=EODM",
+				"ocl" => "classification=Modeling&product=MDT&component=OCL&classification=Technology&product=EMFT&component=OCL",
+				
+				"jet" => "classification=Technology&product=EMFT&component=JET",
+				"jeteditor" => "classification=Technology&product=EMFT&component=JET+Editor",
+
+				"cdo" => "classification=Technology&product=EMFT&component=CDO",
+				"net4j" => "classification=Technology&product=EMFT&component=NET4J",
+				
+				"teneo" => "classification=Technology&product=EMFT&component=Teneo",
+				"query" => "classification=Technology&product=EMFT&component=Query",
+				"transaction" => "classification=Technology&product=EMFT&component=Transaction",
+				"validation" => "classification=Technology&product=EMFT&component=Validation",
+			);
 			print "<li>No bugs fixed for this release, " .
 					"or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
-					"Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead.</li>\n";
+					"Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> or " .
+						(array_key_exists($projct,$bugzilla_queries) ? 
+						"<a href\"https://bugs.eclipse.org/bugs/buglist.cgi?" . $bugzilla_queries[$projct]."&query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=ASSIGNED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=2007-03-01&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=\">query bugzilla for ".$projct."</a>" :
+						"<a href\"https://bugs.eclipse.org/bugs/query.cgi\">query bugzilla</a>") .
+					" instead.</li>\n";
 		}
 		print "</ul>\n";
 		print "</li>\n";
