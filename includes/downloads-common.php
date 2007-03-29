@@ -832,8 +832,7 @@ function loadBuildConfig($file, $deps)
 		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
 		{
     		$rp = realpath($regs[2]);
-            $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
-            $opts[$regs[1]] = preg_replace("#.+/([^/]+)#", "$1", $rp); # trim to the last path segment
+    		$opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
 		}
 	}
 	return $opts;
@@ -863,8 +862,7 @@ function getBuildArtifacts($dir, $branchID)
 		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
         {
     		$rp = realpath($regs[2]);
-            $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
-            $opts[$regs[1]] = preg_replace("#.+/([^/]+)#", "$1", $rp); # trim to the last path segment
+            $opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
         }
 	}
 
