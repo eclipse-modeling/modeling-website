@@ -833,7 +833,7 @@ function loadBuildConfig($file, $deps)
 		{
     		$rp = realpath($regs[2]);
             $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
-            $opts[$regs[1]] = str_replace("/opt/", "", $rp);
+            $opts[$regs[1]] = preg_replace("#.+/([^/]+)#", "$1", $rp); # trim to the last path segment
 		}
 	}
 	return $opts;
@@ -864,7 +864,7 @@ function getBuildArtifacts($dir, $branchID)
         {
     		$rp = realpath($regs[2]);
             $rp = ($rp && $rp != $regs[2] ? $regs[2] . " (" . $rp . ")" : $regs[2]);
-            $opts[$regs[1]] = str_replace("/opt/", "", $rp);
+            $opts[$regs[1]] = preg_replace("#.+/([^/]+)#", "$1", $rp); # trim to the last path segment
         }
 	}
 
