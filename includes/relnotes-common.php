@@ -125,8 +125,8 @@ if (sizeof($rels))
 				"eodm" => "classification=Modeling&product=MDT&component=EODM&classification=Technology&product=EMFT&component=EODM",
 				"ocl" => "classification=Modeling&product=MDT&component=OCL&classification=Technology&product=EMFT&component=OCL",
 				
-				"jet" => "classification=Technology&product=EMFT&component=JET",
-				"jeteditor" => "classification=Technology&product=EMFT&component=JET+Editor",
+				"jet" => "classification=Modeling&product=M2T&component=Jet&classification=Technology&product=EMFT&component=JET",
+				"jeteditor" => "classification=Modeling&product=M2T&component=Jet+Editor&classification=Technology&product=EMFT&component=JET+Editor",
 
 				"cdo" => "classification=Technology&product=EMFT&component=CDO",
 				"net4j" => "classification=Technology&product=EMFT&component=NET4J",
