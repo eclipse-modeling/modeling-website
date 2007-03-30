@@ -1,4 +1,5 @@
 <?php
+require_once ("../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 if ($proj) { 
@@ -26,4 +27,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: docs.php,v 1.5 2006/11/02 02:31:04 nickb Exp $ -->
+<!-- $Id: docs.php,v 1.6 2007/03/30 19:00:52 nickb Exp $ -->
