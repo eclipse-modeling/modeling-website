@@ -1,5 +1,22 @@
 <?php
-if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+$Nav->setLinkList(null);
+
+$PR = "modeling/emft";
+
+$isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
+$isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
+$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.|build.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
+$writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
+
+$rooturl = "http://www.eclipse.org/emft";
+$downurl = ($isBuildServer ? "" : "http://www.eclipse.org");
+$bugurl = "https://bugs.eclipse.org";
+
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -7,19 +24,6 @@ else
 {
 	$theme = "Phoenix";
 }
-
-$Nav->setLinkList(null);
-
-$isEMFserver = (preg_match("/emf/", $_SERVER["SERVER_NAME"])) || (preg_match("/emft\.eclipse\.org/", $_SERVER["SERVER_NAME"]));
-$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
-$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
-$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
-
-$rooturl = "http://www.eclipse.org/emft";
-$downurl = (preg_match("/^(emf\.torolab\.ibm\.com|emft.eclipse.org)$/", $_SERVER["SERVER_NAME"], $regs) ? "http://$regs[1]/emft" : "http://www.eclipse.org/emft");
-$bugurl = "https://bugs.eclipse.org";
 
 $projects = array(
 	"JET" => "jet",
@@ -71,7 +75,6 @@ $proj = (isset ($_POST["build_Project"]) && preg_match("/^(" . join("|", $projec
 		$regs[1] : (preg_match("#/emft/projects/(.+)/index.php#", $_SERVER["SCRIPT_NAME"], $regs) ? 
 			$regs[1] : ""));
 
-$PR = "modeling/emft";
 
 $Nav->addNavSeparator("EMFT", "$rooturl/");
 foreach (array_keys($projects) as $z)

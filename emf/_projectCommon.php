@@ -1,5 +1,23 @@
 <?php
-if (isset($_GET["skin"]) && preg_match("/^(Blue|EclipsStandard|Industrial|Lazarus|Miasma|OldStyle|Phoenix|PlainText)$/", $_GET["skin"], $regs))
+
+$Nav->setLinkList(null);
+
+$PR = "modeling/emf";
+
+$isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
+$isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
+$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.|build.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
+$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
+$writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
+
+$rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
+$downurl = ($isBuildServer ? "" : "http://www.eclipse.org");
+$bugurl = "https://bugs.eclipse.org";
+
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
@@ -8,40 +26,30 @@ else
 	$theme = "Phoenix";
 }
 
-$Nav->setLinkList(null);
+/* projects/components in cvs */
+/* "proj" => "cvsname" */
+$cvsprojs = array(
+	"emf" => "org.eclipse.emf"
+);
 
-$isEMFserver = (preg_match("/emf(?:\.torolab\.ibm\.com)?$/", $_SERVER["SERVER_NAME"]));
-$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
-$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
-$debug = (isset($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
-$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
-
-$baseurl = ($isEMFserver ? "http://emf.torolab.ibm.com" : "http://www.eclipse.org");
-$rooturl = "$baseurl/modeling/emf";
-$bugurl = "https://bugs.eclipse.org";
+/* sub-projects/components in cvs for projects/components above (if any) */
+/* "cvsname" => array("shortname" => "cvsname") */
+$cvscoms = array();
 
 $projects = array(
 	"EMF &amp; SDO" => "emf"
 );
 
-$cvsprojs = array(
-	"emf" => "org.eclipse.emf"
-);
-
-$cvscoms = array();
-
 $extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array(); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //projects without newsgroup
 $nomailinglist = array (); //projects without mailinglist
-$incubating = array(); // projects which are still incubating; TODO: add projects here as they are migrated from EMFT
+$incubating = array(); // projects which are incubating - EMF will never have incubating components!
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
-$PR = "modeling/emf";
 
 $buildtypes = array(
 	"R" => "Release",
@@ -55,7 +63,7 @@ $buildtypes = array(
 $Nav->addNavSeparator("EMF", "$rooturl/?project=emf");
 $Nav->addCustomNav("SDO", "$rooturl/?project=sdo", "_self", 2);
 
-$Nav->addNavSeparator("Downloads", "$rooturl/downloads/");
+$Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Installation", "$rooturl/downloads/install.php", "_self", 2);
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
@@ -74,5 +82,5 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=prod
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMF", "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
-include_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 ?>
