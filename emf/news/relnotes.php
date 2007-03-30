@@ -1,4 +1,6 @@
 <?php
+require_once ("../../includes/buildServer-common.php");
+
 $pageTitle = "Eclipse Modeling - EMF - Release Notes";
 
 if (isset($_GET["project"]) && $_GET["project"] == "xsd")
