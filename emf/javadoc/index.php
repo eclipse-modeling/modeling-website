@@ -1,4 +1,5 @@
 <?php
+require_once ("../../includes/buildServer-common.php");
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 
 if ($isWWWserver)

@@ -1,4 +1,5 @@
 <?php
+require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 ob_start();
@@ -40,4 +41,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/incl
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.7 2007/03/21 19:09:21 nickb Exp $ -->
+<!-- $Id: index.php,v 1.8 2007/03/30 19:29:58 nickb Exp $ -->

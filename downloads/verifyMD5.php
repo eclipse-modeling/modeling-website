@@ -1,6 +1,7 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
-$pre = "";
-	ob_start();
+require_once ("../includes/buildServer-common.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+ob_start();
 ?>
 <div id="midcolumn">
 	<div class="homeitem3col">
@@ -16,12 +17,12 @@ $pre = "";
 	</div>
 </div>
 <?php
-	$html = ob_get_contents();
-	ob_end_clean();
+$html = ob_get_contents();
+ob_end_clean();
 
-	$pageTitle = "Verifying Downloads with MD5 Checksum";
-	$pageKeywords = ""; //TODO: add something here
-	$pageAuthor = "Nick Boldt";
+$pageTitle = "Eclipse Modeling - Verifying Downloads with MD5 Checksum";
+$pageKeywords = ""; 
+$pageAuthor = "Nick Boldt";
 
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
