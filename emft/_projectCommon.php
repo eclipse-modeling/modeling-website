@@ -13,7 +13,7 @@ $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/include
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
 $rooturl = "http://www.eclipse.org/emft";
-$downurl = ($isBuildServer ? "" : "http://www.eclipse.org");
+$downurl = ($isBuildServer ? "" : "http://www.eclipse.org/emft");
 $bugurl = "https://bugs.eclipse.org";
 
 if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
