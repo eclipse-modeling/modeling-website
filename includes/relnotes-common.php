@@ -136,13 +136,16 @@ if (sizeof($rels))
 				"transaction" => "classification=Technology&product=EMFT&component=Transaction",
 				"validation" => "classification=Technology&product=EMFT&component=Validation",
 			);
-			print "<li>No bugs fixed for this release, " .
-					"or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
+			print "<li>No bugs fixed for this release" .
+					/*
+					", or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
 					"Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> or " .
 						(array_key_exists($proj,$bugzilla_queries) ? 
 						"<a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?" . $bugzilla_queries[$proj]."&query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=ASSIGNED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=2007-03-01&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=\">query bugzilla for ".$proj."</a>" :
 						"<a href=\"https://bugs.eclipse.org/bugs/query.cgi\">query bugzilla</a>") .
-					" instead.</li>\n";
+					" instead" . 
+					*/
+					".</li>\n";
 		}
 		print "</ul>\n";
 		print "</li>\n";
