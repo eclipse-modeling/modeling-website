@@ -145,60 +145,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] EMF I200703062300 (2.3.0.I200703062300) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703062300#I200703062300"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703062300#I200703062300</id>
-    <updated>2007-03-07T05:07:42Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200703062300" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703062300#I200703062300" type="I" version="2.3.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200703062300/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=I200703062300
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-I200703062300.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200703062300/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20070228-0930/eclipse-SDK-I20070228-0930-linux-gtk.tar.gz</dependency>
-        </dependencies>
-        <coordinated status="CALLISTOSITEREADY"/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
-    <title>[announce] EMF I200703052300 (2.3.0.I200703052300) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703052300#I200703052300"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703052300#I200703052300</id>
-    <updated>2007-03-06T05:08:49Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200703052300" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703052300#I200703052300" type="I" version="2.3.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200703052300/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=I200703052300
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-I200703052300.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200703052300/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20070228-0930/eclipse-SDK-I20070228-0930-linux-gtk.tar.gz</dependency>
-        </dependencies>
-        <coordinated status="CALLISTOSITEREADY"/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] EMF I200703042300 (2.3.0.I200703042300) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703042300#I200703042300"/>
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200703042300#I200703042300</id>
