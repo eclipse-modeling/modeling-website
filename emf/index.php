@@ -5,6 +5,7 @@ $emft_redirects = array("query","transaction","validation");
 if (isset($_GET["project"]) && in_array($_GET["project"],$emft_redirects))
 {
 	header("Location: http://www.eclipse.org/emft/projects/?project=" . $_GET["project"]);
+	exit;
 }
 
 require_once ("../includes/buildServer-common.php");
