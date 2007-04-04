@@ -115,7 +115,7 @@ if (sizeof($rels))
 		if ($num == 0)
 		{
 			/* temporary hack */
-			$bugzilla_queries = array(
+			/* $bugzilla_queries = array(
 				"emf" => 		"classification=Tools&product=EMF",
 				"compare" => 	"classification=Technology&product=EMFT&component=Compare",
 
@@ -135,7 +135,7 @@ if (sizeof($rels))
 				"query" => "classification=Technology&product=EMFT&component=Query",
 				"transaction" => "classification=Technology&product=EMFT&component=Transaction",
 				"validation" => "classification=Technology&product=EMFT&component=Validation",
-			);
+			); */
 			print "<li>No bugs fixed for this release" .
 					/*
 					", or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
