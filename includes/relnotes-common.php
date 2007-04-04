@@ -106,7 +106,7 @@ if (sizeof($rels))
 		$num = mysql_num_rows($result);
 
 		print "<ul>\n";
-		print "<li class=\"outerli\"><abbr title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</abbr>" . ($num > 1 ? " ($num bugs fixed)" : "") . "\n";
+		print "<li class=\"outerli\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym>" . ($num > 1 ? " ($num bugs fixed)" : "") . "\n";
 		print "<ul>\n";
 		while ($row = mysql_fetch_row($result))
 		{
