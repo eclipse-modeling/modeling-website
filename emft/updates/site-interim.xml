@@ -10162,6 +10162,31 @@
 		<category name="emft coordinated SDK 1.1M6 S200703301718"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.8.0.v200704041505.jar" patch="false" id="org.eclipse.jet.doc" version="0.8.0.v200704041505">
+		<category name="emft jet SDK 0.8.0M6 S200704041505"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.8.0.v200704041505.jar" patch="false" id="org.eclipse.jet.examples" version="0.8.0.v200704041505">
+		<category name="emft jet SDK 0.8.0M6 S200704041505"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.8.0.v200704041505.jar" patch="false" id="org.eclipse.jet.sdk" version="0.8.0.v200704041505">
+		<category name="emft jet SDK 0.8.0M6 S200704041505"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.8.0.v200704041505.jar" patch="false" id="org.eclipse.jet.source" version="0.8.0.v200704041505">
+		<category name="emft jet SDK 0.8.0M6 S200704041505"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.8.0.v200704041505.jar" patch="false" id="org.eclipse.jet" version="0.8.0.v200704041505">
+		<category name="emft jet SDK 0.8.0M6 S200704041505"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -11907,6 +11932,12 @@ This category contains the features of the 0.8.0 I200703301643 build of emft ten
 	<category-def label="emft coordinated SDK 1.1M6 S200703301718" name="emft coordinated SDK 1.1M6 S200703301718">
 		<description>
 This category contains the features of the 1.1M6 S200703301718 build of emft coordinated SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft jet SDK 0.8.0M6 S200704041505" name="emft jet SDK 0.8.0M6 S200704041505">
+		<description>
+This category contains the features of the 0.8.0M6 S200704041505 build of emft jet SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
