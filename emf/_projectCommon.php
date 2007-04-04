@@ -36,14 +36,26 @@ $cvsprojs = array(
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array();
 
+$emft_redirects = array("query","transaction","validation");
 $projects = array(
-	"EMF &amp; SDO" => "emf"
+	"EMF" => "emf",
+	"SDO" => "sdo",
+	/*"Query" => "query",
+	"Transaction" => "transaction",
+	"Validation" => "validation"*/
+);
+
+$level = array (
+	"sdo" => 2,
+	"query" => 2,
+	"transaction" => 2,
+	"validation" => 2
 );
 
 $extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array(); //projects with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array (); //projects without newsgroup
-$nomailinglist = array (); //projects without mailinglist
+$nodownloads = array("sdo","query","transaction","validation"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array ("sdo","query","transaction","validation"); //projects without newsgroup
+$nomailinglist = array ("sdo","query","transaction","validation"); //projects without mailinglist
 $incubating = array(); // projects which are incubating - EMF will never have incubating components!
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
@@ -59,9 +71,14 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
-// this isn't quite the same as EMFT or MDT... yet
-$Nav->addNavSeparator("EMF", "$rooturl/?project=emf");
-$Nav->addCustomNav("SDO", "$rooturl/?project=sdo", "_self", 2);
+$Nav->addNavSeparator("EMF", "$rooturl/");
+foreach (array_keys($projects) as $z)
+{
+	if ($projects[$z] != "emf")
+	{
+		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
+	}
+}
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Installation", "$rooturl/downloads/install.php", "_self", 2);

@@ -1,0 +1,13 @@
+<p>The query component facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner. Provides API support for the basic EObject based Condition objects that are used to formulate queries for EMF models.</p>
+<p>The query component provides the following classes/interfaces to support queries.</p>
+<p><ol>
+	<li>The IEObjectSource interface provides the search scope elements to be used in a query.</li>
+	<li>The SELECT class implements a template-function that does the iteration over model elements and applies the search condition on each; it collects the resulting elements into a QueryResultSet object and returns it to the caller.</li>
+	<li>The FROM class represents the elements to search. It is responsible of providing an appropriate iterator for the elements in the search space.</li>
+	<li>The WHERE class applies the search conditions over the elements in the search set.</li>
+	<li>The UPDATE class passes the elements who satisfy the search condition to a caller-supplied modification function. It collects the modified elements into a QueryResultSet object and returns it to the caller.</li>
+	<li>The QueryResultSet class represents the set of elements returned by a given query.</li>
+	<li>The EObjectCondition class is the abstract parent of all conditions that deal with model-elements (i.e., EObjects). It incorporates the services of a PruneHandler in order to answers whether or not to prune the element tree at a specific element and thus ignore its children.</li>
+	<li>The ConditionPolicy class is used to allow the user to decide how to apply a given condition on a collection of a model-element EAttributes or EReferences values. Supports both the: exists (ANY) and for-all (ALL) semantics.</li>
+	<li>The EObjectStructuralFeatureValueCondition class is the parent class for conditions that are responsible for checking the values held in model-elements attributes or references.</li>
+</ol></p>

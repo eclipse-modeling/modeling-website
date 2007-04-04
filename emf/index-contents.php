@@ -1,4 +1,4 @@
-<?php 
+<?php /* copied to /modeling/emf/{emf|sdo}/project-info/ */
 
 $content["emf"] = <<<HTML
 	<h1>Eclipse Modeling Framework (EMF)</h1>

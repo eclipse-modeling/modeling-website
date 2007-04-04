@@ -1,0 +1,10 @@
+<p>The transaction component provides the following capabilities.</p>
+<p><ol>
+	<li>Multi-threading - Supports a protocol for clients to read and write EMF models on multiple threads.</li>
+	<li>Model Integrity - Semantic integrity is ensured by automatic validation to detect invalid changes and semantic procedures to proactively maintain correctness of semantic dependencies.</li>
+	<li>Batched Events - Clients are notified of groups of related changes in batches, rather than as a stream of EMF notifications. In particular, this allows applications to analyze change sets in their entirety.</li>
+	<li>Undo/Redo -  For a simplified programming model, the API automatically tracks changes applied to models without the need for client code to use EMF edit Commands. These changes are encapsulated in transactions/operations that can undo and redo themselves.</li>
+	<li>Editing Domain - Support cooperative editing of models by multiple editors/applications. EMF resources can be shared amongst different editing domains.</li>
+	<li>Eclipse Workspace  - The API provides traceability between EMF resources and workspace resources. Multi-threaded access is coordinated via the Eclipse jobs API and its integration with the workspace.</li>
+	<li>Eclipse Operations - The API supports the Eclipse operation history as an undo stack for undo/redo of resource changes. The API provides a framework for undoable operations that automatically capture undo/redo information, which can be interleaved on the same history with dependent operations that do not modify the EMF model.</li>
+</ol></p>

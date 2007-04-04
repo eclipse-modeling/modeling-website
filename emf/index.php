@@ -1,15 +1,14 @@
 <?php
 
+require_once ("../includes/buildServer-common.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+
 /* temporary redirect for emft projects */
-$emft_redirects = array("query","transaction","validation");
 if (isset($_GET["project"]) && in_array($_GET["project"],$emft_redirects))
 {
 	header("Location: http://www.eclipse.org/emft/projects/?project=" . $_GET["project"]);
 	exit;
 }
-
-require_once ("../includes/buildServer-common.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
@@ -28,16 +27,79 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 } */   
 
 ob_start();
+
+foreach ($projects as $z)
+{
+	$descriptions[$z]["short"] = file_contents("$z/project-info/project-page-paragraph.html");
+	$descriptions[$z]["long"] = file_contents("$z/project-info/overview.html");
+}
 ?>
 
 <div id="midcolumn">
+	<h1>Eclipse Modeling Framework Project (EMF)</h1>
+	<img style="float:right" src="/modeling/emf/images/emf_logo.png" border=""/>
 <?php
 // default for no page selected
 $projct = (isset($_GET["project"]) && $_GET["project"] == "sdo" ? "sdo" : "emf"); //sdo is special
 
-include($_SERVER["DOCUMENT_ROOT"] . "/$PR/index-contents.php");
-displayIntro($projct);
-?>
+	$files = array(
+		"project-info/project-page-paragraph.html",
+		"project-info/overview.html"
+	);
+
+	foreach ($files as $z)
+	{
+		if (file_exists($z))
+		{
+			include($z);
+		}
+		else
+		{
+			print "<p>No $z found!.</p>";
+		}
+	}
+
+	$tmp = array_flip($projects); // pop $proj to first position, reverse name/values so that we can have two projects w/ the same vanity name
+	$homepageProjects = $proj ? array("selected" => $tmp[$proj]) : array("selected" => "none"); 
+	foreach ($projects as $label => $z) 
+	{
+		$homepageProjects[$z] = $label;
+	} 
+	$cnt = 0;
+	foreach ($homepageProjects as $y => $z) 
+	{
+		if ($z == "none") {
+			$cnt++;
+		}
+		else
+		{
+			if ( (is_dir("../".$projects[$z]) || is_dir($projects[$z])) && !in_array($projects[$z],$extraprojects))
+			{
+				print "<div class=\"homeitem".($y == "selected" ? "3col" : "")."\">\n";
+				print "<a name=\"$projects[$z]\"></a>\n";
+				print "<h3>";
+				print "$z</h3>\n";
+				print $descriptions[$projects[$z]][($y == "selected" ? "long" : "short")];
+				print "<ul class=\"extras\">";
+				if (!isset($hasmoved) || !array_key_exists($y,$hasmoved))
+				{
+					if ($y != "selected" && $y != $proj)
+					{
+						print "<li><a href=\"?project=$projects[$z]#$projects[$z]\">More...</a></li>\n";
+					}
+					$pz = $projects[$z] == "sdo" ? "emf" : $projects[$z]; /* special case */
+					print "<li><a href=\"/$PR/downloads/?project=$pz\">Downloads</a></li>\n";
+				}
+				print "</ul>\n";
+				print "</div>\n";
+				$cnt++;
+			}
+			if ($cnt % 2){
+				print "<div class=\"homeitem3col\" style=\"border: 0px\"></div>\n"; // "line breaks" to keep columns 2x2
+			}
+		} 
+	}
+	?>
 </div>
 
 <div id="rightcolumn">
