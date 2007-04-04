@@ -9,7 +9,7 @@
 	float: right;
 }
 
-abbr
+abbr, acronym
 {
 	border-bottom: 1px dotted gray;
 	/* removes konqueror's custom abbr style */
