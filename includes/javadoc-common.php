@@ -164,7 +164,7 @@ if ($tprojs && sizeof($tprojs) > 0)
 {
 	sort($tprojs); reset($tprojs);
 	print "<div id=\"rightcolumn\">\n";
-	print '<div class="sideitem">'."\n". "<h6>Other Javadoc</h6>";
+	print '<div class="sideitem">'."\n". "<h6>Online Javadoc</h6>";
 		
 	print '<ul>'."\n";
 	foreach ($tprojs as $tproj)
