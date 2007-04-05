@@ -48,8 +48,8 @@ if ($_SERVER["QUERY_STRING"])
 	{
 		rsort($vers);
 		$redirect = "Location: " . $jdPWD . $projct . "/javadoc/" . $vers[0] . "/" . str_replace("//", "/", str_replace("..", "", $_GET["page"]) . "#" . $_GET["anchor"]);
-		print $redirect;
-		//header($redirect);
+		//print $redirect;
+		header($redirect);
 		exit;
 	}
 }
