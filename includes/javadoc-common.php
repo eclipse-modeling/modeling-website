@@ -32,7 +32,7 @@ else
 $subprojs = loadSubDirs($PWD, "(.+)");
 
 // REDIRECT to latest version of javadoc for the specified path
-if ($_SERVER["QUERY_STRING"])
+if ($_GET["project"] && $_GET["page"])
 {
 	/* http://www.eclipse.org/modeling/emf/javadoc/?project=emf&page=org/eclipse/emf/ecore/package-summary.html&anchor=details
 	 * http://www.eclipse.org/modeling/mdt/javadoc/?project=xsd&page=org/eclipse/xsd/package-summary.html&anchor=details */
@@ -161,6 +161,36 @@ else
 }
 print "</ul>\n";
 print "</div></div>\n";
+
+$tprojs = loadSubDirs($PWD . "/../", ".*");
+if ($tprojs && sizeof($tprojs) > 0)
+{
+	sort($tprojs); reset($tprojs);
+	print "<div id=\"rightcolumn\">\n";
+	print '<div class="sideitem">'."\n". "<h6>Other Javadoc</h6>";
+		
+	print '<ul>'."\n";
+	foreach ($tprojs as $tproj)
+	{
+		print '<li><a href="/modeling/'.$tproj.'/javadoc/">' . strtoupper($tproj) . "</a></li>\n";
+		$sprojs = loadSubDirs($PWD . "/../" . $tproj, ".*");
+		if ($sprojs && sizeof($sprojs) > 0)
+		{
+			sort($sprojs); reset($sprojs);
+			print '<ul>'."\n";
+			foreach ($sprojs as $sproj)
+			{
+				if (is_dir($PWD . "/../" . $tproj . "/" . $sproj . "/javadoc"))
+				{
+					print '<li><a href="/modeling/'.$tproj.'/javadoc/?project=' . $sproj . '">' . $sproj . "</a></li>\n";
+				}
+			}
+			print '</ul>'."\n";
+		}
+	}
+	print "</ul>\n";
+	print "</div></div>\n";
+}
 
 if ($doPhoenix)
 {
