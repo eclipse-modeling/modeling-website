@@ -13,7 +13,7 @@ $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]))
 if ($isWWWserver)
 {
 	$PWD = "/home/local/data/httpd/download.eclipse.org/$PR/";
-	$jdPWD = "/downloads/download.php?file=/$PR/";
+	$jdPWD = "http://download.eclipse.org/$PR/";
 }
 else
 {
@@ -34,14 +34,11 @@ $subprojs = loadSubDirs($PWD, "(.+)");
 // REDIRECT to latest version of javadoc for the specified path
 if ($_SERVER["QUERY_STRING"])
 {
-	// given       http://emf.torolab.ibm.com/modeling/emf/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details
-	// or                    http://emf.torolab.ibm.com/emf/javadoc?org/eclipse/xsd/package-summary.html#details
-	// serve http://emf.torolab.ibm.com/modeling/emf/emf/xsd/javadoc/2.1.0/org/eclipse/xsd/package-summary.html#details (latest version)
-	$subprojsR = array_reverse($subprojs, true);
+	/* http://www.eclipse.org/modeling/mdt/javadoc/?project=xsd&page=org/eclipse/xsd/package-summary.html&anchor=details */
 	$vers = array ();
-	foreach ($subprojsR as $label => $projct)
+	foreach ($subprojs as $projct)
 	{
-		if (false !== strpos($_SERVER["QUERY_STRING"], $projct))
+		if ($_GET["project"]==$projct)
 		{
 			$vers = loadSubDirs($PWD . $projct . "/javadoc", "(\d\.\d|\d\.\d\.\d+)");
 			break;
@@ -50,15 +47,11 @@ if ($_SERVER["QUERY_STRING"])
 	if (sizeof($vers) > 0)
 	{
 		rsort($vers);
-		$redirect = "Location: " . $PWD . $projct . "/javadoc/" . $vers[0] . "/" . str_replace("//", "/", str_replace("..", "", $_SERVER["QUERY_STRING"]));
+		$redirect = "Location: " . $jdPWD . $projct . "/javadoc/" . $vers[0] . "/" . str_replace("//", "/", str_replace("..", "", $_GET["page"]) . "#" . $_GET["anchor"]);
+		print $redirect;
+		//header($redirect);
+		exit;
 	}
-	else
-	{
-		$redirect = "Location: http://www.eclipse.org/$PR/javadoc/";
-	}
-	//print $redirect;
-	header($redirect);
-	exit;
 }
 
 $doPhoenix = false;
