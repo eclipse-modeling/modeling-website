@@ -98,7 +98,7 @@ development technologies within the Eclipse community by providing a unified set
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools">UML2 Tools</a> : 
 						a set of GMF-based editors for viewing and editing UML models.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=xsd">XML Schema Infoset Model</a> (XSD) : 
-						a reference library that provides an <a href="http://www.eclipse.org/modeling/emf/emf/xsd/javadoc?org/eclipse/xsd/package-summary.html#details">API</a> 
+						a reference library that provides an <a href="http://www.eclipse.org/modeling/mdt/javadoc/?project=xsd&page=org/eclipse/xsd/package-summary.html&anchor=details">API</a> 
 						for use with any code that examines, creates or modifies <a href="http://www.w3.org/TR/XMLSchema-0">W3C XML Schema</a>.</li>
 			</ul>
 		</div>

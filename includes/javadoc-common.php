@@ -34,7 +34,8 @@ $subprojs = loadSubDirs($PWD, "(.+)");
 // REDIRECT to latest version of javadoc for the specified path
 if ($_SERVER["QUERY_STRING"])
 {
-	/* http://www.eclipse.org/modeling/mdt/javadoc/?project=xsd&page=org/eclipse/xsd/package-summary.html&anchor=details */
+	/* http://www.eclipse.org/modeling/emf/javadoc/?project=emf&page=org/eclipse/emf/ecore/package-summary.html&anchor=details
+	 * http://www.eclipse.org/modeling/mdt/javadoc/?project=xsd&page=org/eclipse/xsd/package-summary.html&anchor=details */
 	$vers = array ();
 	foreach ($subprojs as $projct)
 	{

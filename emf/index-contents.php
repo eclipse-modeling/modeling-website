@@ -22,7 +22,7 @@ $content["emf2"] = <<<HTML
 	<p>EMF consists of three fundamental pieces:</p>
 
 	<ul>
-		<li><b>EMF</b> - The core EMF framework includes a <a href="http://download.eclipse.org/modeling/emf/emf/javadoc?org/eclipse/emf/ecore/package-summary.html#details">meta
+		<li><b>EMF</b> - The core EMF framework includes a <a href="http://www.eclipse.org/modeling/emf/javadoc/?project=emf&page=org/eclipse/emf/ecore/package-summary.html&anchor=details">meta
 		model (Ecore)</a> for describing models and runtime support for the
 		models including change notification, persistence support with
 		default XMI serialization, and a very efficient reflective API for
