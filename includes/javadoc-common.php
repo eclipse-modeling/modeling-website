@@ -180,7 +180,7 @@ if ($tprojs && sizeof($tprojs) > 0)
 			print '<ul>'."\n";
 			foreach ($sprojs as $sproj)
 			{
-				if (is_dir($PWD . "/../../modeling/" . $tproj . "/" . $sproj . "/javadoc") && !is_link(is_dir($PWD . "/../../modeling/" . $tproj . "/" . $sproj)))
+				if (is_dir($PWD . "/../../modeling/" . $tproj . "/" . $sproj . "/javadoc") && !is_link($PWD . "/../../modeling/" . $tproj . "/" . $sproj))
 				{
 					print '<li><a href="/modeling/'.$tproj.'/javadoc/#' . $sproj . '">' . $sproj . "</a></li>\n";
 				}
