@@ -172,7 +172,7 @@ if ($tprojs && sizeof($tprojs) > 0)
 	print '<ul>'."\n";
 	foreach ($tprojs as $tproj)
 	{
-		$sprojs = loadSubDirs($PWD . "/../" . $tproj, ".*");
+		$sprojs = loadSubDirs($PWD . "/../../modeling/" . $tproj, ".*");
 		if ($sprojs && sizeof($sprojs) > 0)
 		{
 			print '<li><a href="/modeling/'.$tproj.'/javadoc/">' . strtoupper($tproj) . "</a></li>\n";
@@ -180,7 +180,7 @@ if ($tprojs && sizeof($tprojs) > 0)
 			print '<ul>'."\n";
 			foreach ($sprojs as $sproj)
 			{
-				if (is_dir($PWD . "/../" . $tproj . "/" . $sproj . "/javadoc") && !is_link(is_dir($PWD . "/../" . $tproj . "/" . $sproj)))
+				if (is_dir($PWD . "/../../modeling/" . $tproj . "/" . $sproj . "/javadoc") && !is_link(is_dir($PWD . "/../../modeling/" . $tproj . "/" . $sproj)))
 				{
 					print '<li><a href="/modeling/'.$tproj.'/javadoc/#' . $sproj . '">' . $sproj . "</a></li>\n";
 				}
