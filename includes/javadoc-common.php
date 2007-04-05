@@ -118,7 +118,7 @@ if (sizeof($subprojs) > 0)
 			$didprint = 0;
 			if (sizeof($vers)>0)
 			{
-				print '<li><b> ' . $label . '</b><a name="' . $label . '"></a>' . "\n";
+				print '<li><b> ' . $label . '</b><a name="' . $subproj . '"></a>' . "\n";
 				foreach ($vers as $ver)
 				{
 					if (preg_match("/[^0-9.]+/", $ver))
@@ -162,7 +162,7 @@ else
 print "</ul>\n";
 print "</div></div>\n";
 
-$tprojs = loadSubDirs($PWD . "/../", ".*");
+$tprojs = loadSubDirs("../../", ".*");
 if ($tprojs && sizeof($tprojs) > 0)
 {
 	sort($tprojs); reset($tprojs);
