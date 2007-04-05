@@ -16,7 +16,18 @@ ob_start();
 
 print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
 
-print "</div>\n";
+?>
+</div>
+<div id="rightcolumn">
+	<div class="sideitem">
+	<h6>See Also</h6>
+	<ul><li><a href="http://wiki.eclipse.org/index.php/MDT">MDT Wiki</a></li>
+	<li><a href="http://www.eclipse.org/modeling/mdt/javadoc/">Javadocs</a></li>
+	</ul>
+	</div>
+</div>
+
+<?php
 
 $html = ob_get_contents();
 ob_end_clean();
@@ -27,4 +38,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: docs.php,v 1.6 2007/03/30 19:00:52 nickb Exp $ -->
+<!-- $Id: docs.php,v 1.7 2007/04/05 19:13:25 nickb Exp $ -->
