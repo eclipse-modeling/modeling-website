@@ -118,7 +118,7 @@ if (sizeof($subprojs) > 0)
 			$didprint = 0;
 			if (sizeof($vers)>0)
 			{
-				print '<li><b> ' . $label . '</b>' . "\n";
+				print '<li><b> ' . $label . '</b><a name="' . $label . '"></a>' . "\n";
 				foreach ($vers as $ver)
 				{
 					if (preg_match("/[^0-9.]+/", $ver))
@@ -172,17 +172,17 @@ if ($tprojs && sizeof($tprojs) > 0)
 	print '<ul>'."\n";
 	foreach ($tprojs as $tproj)
 	{
-		print '<li><a href="/modeling/'.$tproj.'/javadoc/">' . strtoupper($tproj) . "</a></li>\n";
 		$sprojs = loadSubDirs($PWD . "/../" . $tproj, ".*");
 		if ($sprojs && sizeof($sprojs) > 0)
 		{
+			print '<li><a href="/modeling/'.$tproj.'/javadoc/">' . strtoupper($tproj) . "</a></li>\n";
 			sort($sprojs); reset($sprojs);
 			print '<ul>'."\n";
 			foreach ($sprojs as $sproj)
 			{
-				if (is_dir($PWD . "/../" . $tproj . "/" . $sproj . "/javadoc"))
+				if (is_dir($PWD . "/../" . $tproj . "/" . $sproj . "/javadoc") && !is_link(is_dir($PWD . "/../" . $tproj . "/" . $sproj)))
 				{
-					print '<li><a href="/modeling/'.$tproj.'/javadoc/?project=' . $sproj . '">' . $sproj . "</a></li>\n";
+					print '<li><a href="/modeling/'.$tproj.'/javadoc/#' . $sproj . '">' . $sproj . "</a></li>\n";
 				}
 			}
 			print '</ul>'."\n";
