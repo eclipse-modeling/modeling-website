@@ -173,7 +173,7 @@ if ($tprojs && sizeof($tprojs) > 0)
 	foreach ($tprojs as $tproj)
 	{
 		$sprojs = loadSubDirs($PWD . "/../../modeling/" . $tproj, ".*");
-		if ($sprojs && sizeof($sprojs) > 0)
+		if ($sprojs && sizeof($sprojs) > 0 && is_dir("../../$tproj/javadoc/"))
 		{
 			print '<li><a href="/modeling/'.$tproj.'/javadoc/">' . strtoupper($tproj) . "</a></li>\n";
 			sort($sprojs); reset($sprojs);
