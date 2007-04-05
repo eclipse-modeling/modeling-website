@@ -94,6 +94,7 @@ print '<div id="midcolumn">
 <ul>
 ';
 
+$trans = array(); // flipped $projects array
 if (sizeof($subprojs) > 0)
 {
 	sort($subprojs);
@@ -102,15 +103,11 @@ if (sizeof($subprojs) > 0)
 	{
 		$trans = array_flip($projects);
 	}
-	else
-	{
-		$trans = array_flip($projects);
-	}
 	foreach ($subprojs as $subproj)
 	{
 		if (in_array($subproj, $projects))
 		{
-			$label = $trans[$subproj];
+			$label = $trans ? $trans[$subproj] : $subproj;
 
 			$vers = loadSubDirs("$PWD$subproj/javadoc", "");
 			rsort($vers);
@@ -165,7 +162,6 @@ if ($tprojs && sizeof($tprojs) > 0)
 	sort($tprojs); reset($tprojs);
 	print "<div id=\"rightcolumn\">\n";
 	print '<div class="sideitem">'."\n". "<h6>Online Javadoc</h6>";
-		
 	print '<ul>'."\n";
 	foreach ($tprojs as $tproj)
 	{
