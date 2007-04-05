@@ -294,7 +294,7 @@ else
 	// create the log dir before trying to log to it
 	$preCmd = 'mkdir -p ' . $logdir . ';';
 
-	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] .
+	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() . 
 	' \"cd ' .
 		$workDir . 'modeling/scripts; ./promoteToEclipse.sh' . // one script, not two.
 	' -sub ' . $projct .
@@ -641,4 +641,11 @@ function getProjectFromPath()
 		return preg_replace("#/modeling/mdt/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
 
 	}
+	
+function getServerName() 
+{
+	$s = null;
+	exec("hostname -f",$s);
+	return is_array($s) && sizeof($s) > 0 ? $s[0] : "";
+}
 ?>
