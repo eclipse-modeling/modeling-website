@@ -116,15 +116,13 @@ if (sizeof($subprojs) > 0)
 			rsort($vers);
 			reset($vers);
 			$didprint = 0;
-			if (sizeof($vers)>0)
+			print '<li><b> ' . $label . '</b><a name="' . $subproj . '"></a>' . "\n";
+			foreach ($vers as $ver)
 			{
-				print '<li><b> ' . $label . '</b><a name="' . $subproj . '"></a>' . "\n";
-				foreach ($vers as $ver)
+				if (preg_match("/[^0-9.]+/", $ver))
 				{
-					if (preg_match("/[^0-9.]+/", $ver))
-					{
-						$vers2 = loadSubDirs("$PWD$subproj/javadoc/" . $ver, "");
-						rsort($vers2);
+					$vers2 = loadSubDirs("$PWD$subproj/javadoc/" . $ver, "");
+					rsort($vers2);
 					reset($vers2);
 					if (sizeof($vers2) > 0)
 					{
@@ -144,12 +142,11 @@ if (sizeof($subprojs) > 0)
 				{
 					$didprint = 1;
 					print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
-					}
 				}
-				if ($didprint == 0)
-				{
-					print "<ul><li><i>None available.</i></li></ul>";
-				}
+			}
+			if ($didprint == 0)
+			{
+				print "<ul><li><i>None available.</i></li></ul>";
 			}
 			print '</li>' . "\n";
 		}
