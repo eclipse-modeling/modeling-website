@@ -1,4 +1,5 @@
 <?php
+/* TODO: support situation when we have components in /technology/emft and /modeling/org.eclipse.emft/ */
 $projDetails = array(
 	"/technology/emft",
 	"/emft/downloads",
