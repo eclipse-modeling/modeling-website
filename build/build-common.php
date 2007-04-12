@@ -3,8 +3,11 @@
 # $PR = "modeling/mdt";
 # $proj = "/uml2"; 
 # $projct = "uml2";
+# $topProj = "mdt";
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+
+$topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
 // temporarily suppress unsupported projects
 $nodownloads = array ("xsd");  
@@ -36,7 +39,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 }
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>Building MDT</h1>\n";
+print "<h1>Building ". strtoupper($topProj) . "</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -127,8 +130,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
 						</tr>
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emf/downloads/?showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a></td>
@@ -139,8 +142,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
@@ -485,7 +488,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
 		$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
-			' -proj mdt -sub '.$projct.
+			' -proj '.$topProj.' -sub '.$projct.
 			' -version '.$BR.
 			' -branch '.$_POST["build_CVS_Branch"].
 			$dependencyURLs.
@@ -529,7 +532,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			
 			if (!$previewOnly && $isBuildDotEclipseServer)
 			{
-				$lockfile = "/opt/public/modeling/tmp/" . "mdt-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
+				$lockfile = "/opt/public/modeling/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
 				// check if lock file exists for this build type
 				if (is_file($lockfile))
 				{
@@ -605,7 +608,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "MDT - New Build";
+$pageTitle = strtoupper($topProj) . " - New Build";
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
@@ -678,12 +681,12 @@ function findCatg($url) {
 		"11gmf" => "GMF-",
 		"10gef" => "GEF-",
 		"09net4j" => "emft-net4j-",
-		"08validation" => "emft-validation-",
-		"07transaction" => "emft-transaction-",
-		"06query" => "emft-query-",
+		"08validation" => "emf-validation-|emft-validation-",
+		"07transaction" => "emf-transaction-|emft-transaction-",
+		"06query" => "emf-query-|emft-query-",
 		"05ocl" => "mdt-ocl-|emft-ocl-",
 		"04orbit" => "orbit-",
-		"03uml2" => "uml2-",
+		"03uml2" => "mdt-uml2-|uml2-",
 		"02emf" => "emf-sdo-xsd-",
 		"01eclipse" => "eclipse-",
 		"99other" => "/"
@@ -921,7 +924,8 @@ function loadOptionsFromArray($sp) {
 
 	function getProjectFromPath()
 	{
-		return preg_replace("#/modeling/mdt/([^/]+)/build/.+#","$1",$_SERVER["PHP_SELF"]);
+		global $topProj;
+		return preg_replace("#/modeling/".$topProj."/([^/]+)/build/.+#","$1",$_SERVER["PHP_SELF"]);
 		
 	}
 
