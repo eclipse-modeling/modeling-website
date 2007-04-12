@@ -36,13 +36,13 @@ $cvsprojs = array(
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array();
 
-$emft_redirects = array("query","transaction","validation");
+
 $projects = array(
 	"EMF" => "emf",
 	"SDO" => "sdo",
-	/*"Query" => "query",
+	"Query" => "query",
 	"Transaction" => "transaction",
-	"Validation" => "validation"*/
+	"Validation" => "validation"
 );
 
 $level = array (
@@ -52,8 +52,19 @@ $level = array (
 	"validation" => 2
 );
 
-$extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("sdo","query","transaction","validation"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+/* TODO: 
+ * 		remove from $emft_redirects (don't bounce to emft) 
+ * 		& from $extraprojects (show on homepage) 
+ * 		when builds are ready
+ * 
+ * 		when/if newsgroups move, remove from $nomailinglist and $nonewsgroup; 
+ * 		if don't move, will probably have to hack newsgroup-mailing-list.php to point to emft newsgroup(s)
+ * 
+ * 		also, update links in build-common.php
+ */
+$emft_redirects = $isBuildServer ? null : array("query", "transaction", "validation");
+$extraprojects = $isBuildServer ? array() : array("Query" => "query", "Transaction" => "transaction", "Validation" => "validation"); //projects with only downloads, no info yet, "prettyname" => "directory"
+$nodownloads = $isBuildServer ? array("sdo") : array("sdo", "query", "transaction","validation"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array ("sdo","query","transaction","validation"); //projects without newsgroup
 $nomailinglist = array ("sdo","query","transaction","validation"); //projects without mailinglist
 $incubating = array(); // projects which are incubating - EMF will never have incubating components!
@@ -74,7 +85,7 @@ $buildtypes = array(
 $Nav->addNavSeparator("EMF", "$rooturl/");
 foreach (array_keys($projects) as $z)
 {
-	if ($projects[$z] != "emf")
+	if ($projects[$z] != "emf" && !in_array($projects[$z],$extraprojects))
 	{
 		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
 	}

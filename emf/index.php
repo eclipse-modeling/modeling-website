@@ -4,7 +4,7 @@ require_once ("../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 /* temporary redirect for emft projects */
-if (isset($_GET["project"]) && in_array($_GET["project"],$emft_redirects))
+if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && in_array($_GET["project"],$emft_redirects))
 {
 	header("Location: http://www.eclipse.org/emft/projects/?project=" . $_GET["project"]);
 	exit;

@@ -3,8 +3,8 @@
 require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-/* temporary redirect for emft projects */
-if (isset($_GET["project"]) && in_array($_GET["project"],$emft_redirects))
+/* temporary redirect for emft projects, except on build servers if downloads folder exists */
+if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && in_array($_GET["project"],$emft_redirects))
 {
 	header("Location: http://www.eclipse.org/emft/downloads/?project=" . $_GET["project"]);
 	exit;
@@ -35,25 +35,54 @@ $dls = array(
 			"SDK (runtime, source, docs)" => "SDK",
 			"Runtime" => "runtime"
 		)
+	),
+	"/query" => array(
+		"Query" => array (
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		) 
+	),
+	"/validation" => array(
+		"Validation" => array (
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		) 
+	),
+	"/transaction" => array(
+		"Transaction" => array (
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		) 
 	)
 );
 
 /* list of valid file prefixes for projects who have been renamed  */
 /* keys have leading / to match $proj */
 $filePre = array(
-	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd")
+	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd"),
+	"/query" => array("emft-query", "emf-query"),
+	"/transaction" => array("emft-transaction", "emf-transaction"),
+	"/validation" => array("emft-validation", "emf-validation")
 );
 /* alternate method for specifying prefixes - static list */
-$filePreStatic = array( 
-	"emf-sdo-xsd",
-	"emf-sdo-xsd",
-	"emf-sdo-xsd",
-	"emf-sdo-xsd",
-	"emf-sdo-xsd",
-	"emf-sdo",
-	"emf-sdo",
-	"xsd",
-	"xsd"
+$filePreStatic = array(
+	"/emf" => array( 
+		"emf-sdo-xsd",
+		"emf-sdo-xsd",
+		"emf-sdo-xsd",
+		"emf-sdo-xsd",
+		"emf-sdo-xsd",
+		"emf-sdo",
+		"emf-sdo",
+		"xsd",
+		"xsd"
+	)
 );
 
 
