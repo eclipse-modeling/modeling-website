@@ -383,7 +383,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 	global $PR, $suf, $proj, $projct, $filePreStatic;
 	$uu = 0;
 	$echo_out = "";
-
+	
 	if (!$ziplabel)
 	{
 		$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -405,9 +405,9 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			
 			// support EMF page with three different valid prefixes which can 
 			// overlap when searched using dynamic check below
-			if ($filePreStatic) 
+			if ($filePreStatic && is_array($filePreStatic) && array_key_exists($proj,$filePreStatic)) 
 			{
-				$filePreProj = array($filePreStatic[$cnt]); // just one value to check
+				$filePreProj = array($filePreStatic[$proj][$cnt]); // just one value to check
 			}
 
 			$tries = array();
