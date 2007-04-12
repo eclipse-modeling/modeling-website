@@ -321,14 +321,16 @@ function showfullURL(val)
 function setNote(val) 
 {
     note = document.getElementById('note');
-	if (val == "ocl") 
+	if (val == "emf") 
+		note.innerHTML = "Requires 1 SDKs: Eclipse"
+	else if (val == "eodm" || val == "uml2" || val == "xsd")
+		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
+	else if (val == "ocl") 
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, LPG"
 	else if (val == "query" || val == "validation") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
 	else if (val == "transaction") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
-	else if (val == "eodm" || val == "uml2" || val == "xsd")
-		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "uml2tools")
 		note.innerHTML = "Requires 9 SDKs: Eclipse, EMF, UML2, OCL, EMFT-QTV (3), GEF, GMF"
 	else
