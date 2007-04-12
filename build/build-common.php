@@ -9,8 +9,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
-// temporarily suppress unsupported projects
-$nodownloads = array ("xsd");  
+// suppress projects which can't be built this way
+array_push($nodownloads,"xsd");  
 
 internalUseOnly(); 
 ob_start();
@@ -39,7 +39,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 }
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>Building ". strtoupper($topProj) . "</h1>\n";
+print "<h1>Building ". strtoupper($topProj) . " Components</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -141,9 +141,11 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 						</tr>						
+
+						<!-- TODO: move these from emft into modeling/emf -->
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
@@ -153,6 +155,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
 						</tr>						
+						<!-- TODO: move these from emft into modeling/emf -->
+
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
@@ -319,6 +323,10 @@ function setNote(val)
     note = document.getElementById('note');
 	if (val == "ocl") 
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, LPG"
+	else if (val == "query" || val == "validation") 
+		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
+	else if (val == "transaction") 
+		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
 	else if (val == "eodm" || val == "uml2" || val == "xsd")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "uml2tools")
