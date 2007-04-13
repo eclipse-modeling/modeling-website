@@ -10,14 +10,16 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li><a href="/<?php print $PR."/".$projct; ?>/build/">New Build</a> (MDT)</li>
-			<li><a href="/<?php print $PR."/".$projct; ?>/build/promo.php">New Promote</a> (MDT)</li>
+			<li>QTV: <a href="/modeling/emf/build/">Build</a>, 
+					 <a href="/modeling/emf/build/promo.php">Promote</a></li>
+			<li>MDT: <a href="/modeling/mdt/<?php print $projct; ?>/build/">Build</a>, 
+					 <a href="/modeling/mdt/<?php print $projct; ?>/build/promo.php">Promote</a></li>
 		</ul>
 		<hr noshade="noshade" size="1" width="80%"/>
 		<ul>
 			<li><a href="/emft/build/?project=<?php print $projct; ?>">Old Build</a> (EMFT)</li>
-			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=uml2">Old Build</a> (UML2)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=emf">Old Build</a> (XSD)</li>
+			<li><a href="http://emf.torolab.ibm.com/emf/build/?project=uml2">Old Build</a> (UML2)</li>
 			<li><a href="http://emf.torolab.ibm.com/emf/build/promo.php?project=uml2">Old Promote</a> (UML2)</li>
 		</ul>
 	</div>
