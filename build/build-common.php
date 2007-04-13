@@ -18,6 +18,8 @@ ob_start();
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
 $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0; 
 
+$trans = array_flip($projects);
+
 $projctFromPath = getProjectFromPath();
 if (is_array($projects))
 {
@@ -38,8 +40,10 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 	header("Location: /" . $PR . $proj . "/build/");
 }
 
+$componentName =  ($trans[$projct] != "EMF" ? $trans[$projct] : "");
+
 print "<div id=\"midcolumn\">\n";
-print "<h1>Building ". strtoupper($topProj) . " Components</h1>\n";
+print "<h1>New " . strtoupper($topProj) . " Component Build: ". $componentName . "</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -618,7 +622,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = strtoupper($topProj) . " - New Build";
+$pageTitle = $componentName . " - New Build";
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
