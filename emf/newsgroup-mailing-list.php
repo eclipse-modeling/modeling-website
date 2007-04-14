@@ -9,6 +9,7 @@ foreach ($projects as $name => $suf) {
 		$newsgroups[$name] = array("modeling.emf.".$suf);
 	}
 }
+if (array_key_exists("EMF", $newsgroups)) { unset($newsgroups["EMF"]); } /* override */ 
 $newsgroups["EMF &amp; SDO"] = array("tools.emf"); /* override */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
 
