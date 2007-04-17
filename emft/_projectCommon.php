@@ -1,7 +1,7 @@
 <?php
 $Nav->setLinkList(null);
 
-$PR = "modeling/emft";
+$PR = $PR == "technology/emft" ? $PR : "modeling/emft"; # override for when using old repo
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
@@ -28,6 +28,8 @@ else
 $projects = array(
 	"JET" => "jet",
 	"JET Editor" => "jeteditor",
+	"Compare" => "compare",
+	"JCR Management" => "jcrm",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
 	"Teneo" => "teneo",
@@ -46,26 +48,33 @@ $cvsprojs = array();
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.emft" => array(
-		"cdo" => "cdo",
 		"jet" => "jet",
 		"jeteditor" => "jeteditor",
+		"cdo" => "cdo",
 		"net4j" => "net4j",
-		"query" => "query",
 		"teneo" => "teneo",
+		"query" => "query",
 		"transaction" => "transaction",
 		"validation" => "validation",
 		"coordinated" => "coordinated"
+	),
+	"org.eclipse.emf" => array (
+		"compare" => "org.eclipse.emf.compare",
+		"jcrm" => "org.eclipse.emf.jcrm"
 	)
+	
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
-$extraprojects = array("Coordinated All-In-One" => "coordinated"); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated"); //components  with only information, no downloads, or no builds available yet, "projectkey"
+$extraprojects = array(
+	"JCR Management" => "jcrm",
+	"Coordinated All-In-One" => "coordinated"); //components with only downloads, no info yet, "prettyname" => "directory"
+$nodownloads = array("coordinated","jcrm","compare"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
-$incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo"); // components which are still incubating
+$incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare"); // components which are still incubating
 $hasmoved = array("eodm" => "mdt", "ocl" => "mdt"); // components which have moved, and to where
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
