@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 function allnews($project, $cvsprojs, $cvscoms, $proj)
 {
-	global $App, $Nav, $Menu;
+	global $App, $Nav, $Menu, $PR;
 
 	ob_start();
 
@@ -15,7 +15,7 @@ function allnews($project, $cvsprojs, $cvscoms, $proj)
 	print "</div>\n";
 
 	print "<a name=\"build\"></a><div class=\"homeitem3col\">\n";
-	print "<h3>All Build News</h3>\n";
+	print '<h3><a href="/'.($PR == 'technology/emft' ? 'emft' : $PR) . '/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>All Build News</h3>'."\n";
 	build_news($cvsprojs, $cvscoms, $proj, -1);
 	print "</div>\n";
 

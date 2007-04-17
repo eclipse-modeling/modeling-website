@@ -100,10 +100,11 @@ foreach ($projects as $z)
 	</div>
 
 	<div class="sideitem">
-		<h6>Build News</h6>
+		<h6><a href="/modeling/mdt/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
+		<?php echo $tmp && array_key_exists($proj,$tmp) && $tmp[$proj] ? $tmp[$proj] . " " : ""; ?>Build News</h6>
 		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
 		<ul>
-			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Older build news</a></li>
+			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
 	</div>
 
@@ -152,4 +153,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.22 2007/03/20 18:33:35 nickb Exp $ -->
+<!-- $Id: index.php,v 1.23 2007/04/17 21:30:50 nickb Exp $ -->
