@@ -29,7 +29,6 @@ else
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
 $cvsprojs = array (
-	"uml2" => "org.eclipse.uml2",
 	"xsd" => "org.eclipse.xsd"
 );
 
@@ -38,10 +37,11 @@ $cvsprojs = array (
 $cvscoms = array (
 	"org.eclipse.emft" => array (
 		//"ocl" => "ocl",
-		"eodm" => "eodm"
+		//"eodm" => "eodm"
 	),
 	"org.eclipse.mdt" => array (
 		"ocl" => "org.eclipse.ocl",
+		"uml2" => "org.eclipse.uml2",
 		"uml2tools" => "org.eclipse.uml2tools",
 		"eodm" => "org.eclipse.eodm"
 		/* add more here */
