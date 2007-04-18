@@ -12,8 +12,8 @@ function sidebar()
 		<ul>
 			<li>EMF: <a href="/emf/build/">Build</a>, 
 					 <a href="/emf/build/promo.php">Promote</a></li>
-			<li>QTV: <a href="/modeling/emf/<?php print $projct; ?>/build/">Build</a>, 
-					 <a href="/modeling/emf/<?php print $projct; ?>/build/promo.php">Promote</a></li>
+			<li>QTV: <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/">Build</a>, 
+					 <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/promo.php">Promote</a></li>
 		</ul>
 		<hr noshade="noshade" size="1" width="80%"/>
 		<ul>
