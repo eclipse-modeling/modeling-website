@@ -291,13 +291,11 @@ if (is_array($projects) && sizeof($projects) > 1)
 						<td>&#160;</td>
 						<td><input size="15" name="build_proj_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
-<!-- unused
 					<tr>
 						<td colspan=1>org.eclipse.* branch:<br><small>-branch</small></td>
 						<td>&#160;</td>
 						<td><input size="15" name="build_Branch_Override" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
--->
 					<tr>
 						<td colspan=1>Keep tempfiles?<br><small>-noclean</small></td>
 						<td>&#160;</td>
@@ -455,10 +453,10 @@ setTimeout('doOnLoadDefaults()',1000);
 		$buildTimestamp = date("YmdHi");
 
 		$ID = $_POST["build_Build_Type"].$buildTimestamp;
-		$BR = $_POST["build_Branch"]; 
+		$BR = $_POST["build_Branch_Override"] ? $_POST["build_Branch_Override"] : $_POST["build_Branch"]; 
 		
 		$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
-		$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]);
+		$_POST["build_Branch"] = $_POST["build_Branch_Override"] ? $_POST["build_Branch_Override"] : ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]);
 		
 		$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
 
