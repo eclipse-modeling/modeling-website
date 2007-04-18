@@ -284,18 +284,20 @@ if (is_array($projects) && sizeof($projects) > 1)
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_debug_common_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_common_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.releng branch:<br><small>-projRelengBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_debug_proj_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_proj_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
+<!-- unused
 					<tr>
 						<td colspan=1>org.eclipse.* branch:<br><small>-branch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_debug_emft_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_Branch_Override" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
+-->
 					<tr>
 						<td colspan=1>Keep tempfiles?<br><small>-noclean</small></td>
 						<td>&#160;</td>
@@ -456,7 +458,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		$BR = $_POST["build_Branch"]; 
 		
 		$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
-		$_POST["build_Branch"] = 	($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]);
+		$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]);
 		
 		$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
 
@@ -521,7 +523,7 @@ setTimeout('doOnLoadDefaults()',1000);
 			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 			
 			' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
-					($_POST["build_debug_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_debug_common_releng_branch"]:'').
+			($_POST["build_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_common_releng_branch"]:'').
 			($_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
 			($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
 			($_POST["build_noclean"]=="Y"?' -noclean':'').
