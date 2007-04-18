@@ -453,10 +453,10 @@ setTimeout('doOnLoadDefaults()',1000);
 		$buildTimestamp = date("YmdHi");
 
 		$ID = $_POST["build_Build_Type"].$buildTimestamp;
-		$BR = $_POST["build_Branch_Override"] ? $_POST["build_Branch_Override"] : $_POST["build_Branch"]; 
+		$BR = $_POST["build_Branch"]; # 2.1.0
 		
 		$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
-		$_POST["build_Branch"] = $_POST["build_Branch_Override"] ? $_POST["build_Branch_Override"] : ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]);
+		$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]); # 2.1.0 or HEAD?
 		
 		$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
 
@@ -504,7 +504,7 @@ setTimeout('doOnLoadDefaults()',1000);
 		$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
 			' -proj '.$topProj.' -sub '.$projct.
 			' -version '.$BR.
-			' -branch '.$_POST["build_CVS_Branch"].
+			' -branch '.($_POST["build_Branch_Override"]!=""?$_POST["build_Branch_Override"]:$_POST["build_CVS_Branch"]).
 			$dependencyURLs.
 			($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
 			($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
