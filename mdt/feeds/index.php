@@ -10,10 +10,10 @@ $Menu = new Menu();
 include ($App->getProjectCommon());
 
 if ($isWWWserver) {
-	$PWD = "/home/local/data/httpd/download.eclipse.org/modeling/mdt/";
-	$jdPWD = "/downloads/download.php?file=/modeling/mdt/";
+	$PWD = "/home/local/data/httpd/download.eclipse.org/$PR/";
+	$jdPWD = "/downloads/download.php?file=/$PR/";
 } else {
-	$PWD = "../../../modeling/mdt/";
+	$PWD = "../../../$PR/";
 	$jdPWD = $PWD;
 }
 
