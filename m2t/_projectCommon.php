@@ -28,9 +28,7 @@ else
 
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
-$cvsprojs = array (
-	"xsd" => "org.eclipse.xsd"
-);
+$cvsprojs = array (); /* should always be empty */
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
@@ -41,6 +39,10 @@ $cvscoms = array (
 	),
 	"org.eclipse.m2t" => array (
 		"jet" => "org.eclipse.jet",
+		"mtl" => "org.eclipse.mtl",
+		"xpand" => "org.eclipse.xpand",
+		"m2tcore" => "org.eclipse.m2t.core",
+		"m2tshared" => "org.eclipse.m2t.shared"
 		/* add more here */
 	)
 );
