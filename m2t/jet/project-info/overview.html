@@ -1,0 +1,19 @@
+<p>JET is typically used in the implementation of a "code generator". A code-generator is an important component of Model Driven Development (MDD).
+The goal of MDD is to describe a software system using abstract models (such as EMF/ECORE models or UML models), and then refine and
+transform these models into code. Although is possible to create abstract models, and manually transform them into code, the real power of MDD comes from automating this process.
+Such <b>transformations</b> accelerate the MDD process, and result in better code quality. The transformations can capture the "best practices" of experts, and can
+ensure that a project consistently employes these practices.</p>
+
+<p>However, transformations are not always perfect. Best practices are often dependent on context - what is optimal in one context may be
+suboptimal in another. Transformations can address this issue by including some mechanism for end-user modification of the code generator.
+This is frequently done by using "templates" to create artifacts, and allowing users to substitute their own implementations of these templates if necessary.
+This is the role of JET.</p>
+
+<p>This component provides:</p>
+<ol>
+	<li>Expand the JET language to support custom tags (which are distributed in "tag libraries"). (The language specification will be described in a separate document.)</li>
+	<li>Define Java interfaces and Eclipse Extension points for declaring custom tag libraries.</li>
+	<li>Provide Standard JET tag libraries that make it possible to create entire transformations without recourse to Java and the Eclipse APIs. (These tag libraries will be described in a separate document.)</li>
+	<li>Provide Eclipse API and UI for invoking such transformations.</li>
+	<li>Provide a JET template editor.</li>
+</ol>
