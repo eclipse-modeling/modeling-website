@@ -14,9 +14,12 @@ else
 $projct = preg_replace("#^/#", "", $proj);
 
 $numzips = 0;
-foreach (array_keys($dls[$proj]) as $z)
+if (isset($dls[$proj]) && is_array($dls[$proj]))
 {
-	$numzips += sizeof($dls[$proj][$z]);
+	foreach (array_keys($dls[$proj]) as $z)
+	{
+		$numzips += sizeof($dls[$proj][$z]);
+	}
 }
 
 $file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras" . preg_replace("#^/#", "-", $proj) . ".php";
