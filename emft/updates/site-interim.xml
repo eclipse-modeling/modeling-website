@@ -10427,6 +10427,46 @@
 		<category name="emft query SDK 1.1.0 I200704200841"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.validation.doc_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl.source_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.ocl.source" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.ocl" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.sdk_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.sdk" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.source_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.source" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation_1.1.0.v200704200843.jar" patch="false" id="org.eclipse.emf.validation" version="1.1.0.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples.source_1.0.100.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.examples.source" version="1.0.100.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples_1.0.100.v200704200843.jar" patch="false" id="org.eclipse.emf.validation.examples" version="1.0.100.v200704200843">
+		<category name="emft validation SDK 1.1.0 I200704200843"/>
+	</feature>
+
 <category-def label="emft validation SDK 1.0.0 I200601191249" name="emft validation SDK 1.0.0 I200601191249">
 		<description>
 This category contains the features of the 1.0.0 I200601191249 build of emft validation SDK, which includes source, plugins, and documentation.
@@ -12214,6 +12254,12 @@ This category contains the features of the 1.1.0 I200704171019 build of emft val
 	<category-def label="emft query SDK 1.1.0 I200704200841" name="emft query SDK 1.1.0 I200704200841">
 		<description>
 This category contains the features of the 1.1.0 I200704200841 build of emft query SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emft validation SDK 1.1.0 I200704200843" name="emft validation SDK 1.1.0 I200704200843">
+		<description>
+This category contains the features of the 1.1.0 I200704200843 build of emft validation SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>	
