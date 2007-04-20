@@ -73,7 +73,7 @@ $level = array (
  */
 $emft_redirects = $isBuildServer ? null : array("jet");
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array ("jet","mtl","xpand","m2tcore","m2tshared"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array ("mtl","xpand","m2tcore","m2tshared"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array ("jet","mtl","xpand","m2tcore","m2tshared"); //projects without newsgroup
 $nomailinglist = array ("jet","mtl","xpand","m2tcore","m2tshared"); //projects without mailinglist
 $incubating = array("jet","mtl","xpand","m2tcore","m2tshared"); // projects which are still incubating
