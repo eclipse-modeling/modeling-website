@@ -20,6 +20,7 @@ foreach ($projects as $name => $suf) {
 		$mailinglists[$name] = array("emf-".$suf.".dev");
 	}
 }
+if (array_key_exists("EMF", $mailinglists)) { unset($mailinglists["EMF"]); } /* override */ 
 $mailinglists["EMF &amp; SDO"] = array("emf-dev"); /* override */
 $mailinglists["XSD"] = array("emf-dev", "mdt-xsd.dev"); /* override */
 
