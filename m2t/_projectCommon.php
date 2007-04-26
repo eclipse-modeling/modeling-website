@@ -73,7 +73,7 @@ $level = array (
  * 
  * 		also, update links in build-common.php
  */
-$emft_redirects = $isBuildServer ? null : array("jet");
+$emft_redirects = null;
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array ("mtl","xpand","m2tcore","m2tshared"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array ("jet","mtl","xpand","m2tcore","m2tshared"); //projects without newsgroup
