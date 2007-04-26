@@ -58,7 +58,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 }
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>Promoting MDT</h1>\n";
+print "<h1>Promote a Build</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -365,7 +365,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "EMF - Promote a Build";
+$pageTitle = "Promote a Build";
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
