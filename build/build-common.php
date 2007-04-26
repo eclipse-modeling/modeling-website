@@ -146,18 +146,17 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 						</tr>						
 
-						<!-- TODO: move these from emft into modeling/emf -->
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/emft/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
 						</tr>						
 						<!-- TODO: move these from emft into modeling/emf -->
 
