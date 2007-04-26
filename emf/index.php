@@ -39,9 +39,6 @@ foreach ($projects as $z)
 	<h1>Eclipse Modeling Framework Project (EMF)</h1>
 	<img style="float:right" src="/modeling/emf/images/emf_logo.png" border=""/>
 <?php
-// default for no page selected
-$projct = (isset($_GET["project"]) && $_GET["project"] == "sdo" ? "sdo" : "emf"); //sdo is special
-
 	$files = array(
 		"project-info/project-page-paragraph.html",
 		"project-info/overview.html"
