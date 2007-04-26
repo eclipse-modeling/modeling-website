@@ -10,8 +10,8 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li><a href="/modeling/m2t/build/">Build</a>, 
-				<a href="/modeling/m2t/build/promo.php">Promote</a></li>
+			<li><a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/">Build</a>, 
+				<a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/promo.php">Promote</a></li>
 		</ul>
 		<hr noshade="noshade" size="1" width="80%"/>
 		<ul>
