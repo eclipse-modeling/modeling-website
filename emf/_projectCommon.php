@@ -40,7 +40,6 @@ $cvscoms = array(
 		"transaction" => "org.eclipse.emf.transaction",
 		"validation" => "org.eclipse.emf.validation",
 		"emfqtv" => "org.eclipse.emf.emfqtv"
-		
 	)
 );
 
@@ -73,9 +72,9 @@ $level = array (
  */
 $emft_redirects = null;
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("sdo"); //projects with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array ("sdo","query","transaction","validation"); //projects without newsgroup
-$nomailinglist = array ("sdo","query","transaction","validation"); //projects without mailinglist
+$nodownloads = array("sdo", "emfqtv"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array ("sdo","query","transaction","validation", "emfqtv"); //projects without newsgroup
+$nomailinglist = array ("sdo","query","transaction","validation", "emfqtv"); //projects without mailinglist
 $incubating = array(); // projects which are incubating - EMF will never have incubating components!
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?

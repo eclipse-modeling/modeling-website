@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.27 2007/03/22 18:34:39 nickb Exp $ 
+// $Id: scripts.php,v 1.28 2007/04/26 22:02:59 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -296,13 +296,20 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 
 function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.0 everywhere
 {
-	if (function_exists("file_get_contents"))
+	if (is_file($file))
 	{
-		return file_get_contents($file);
+		if (function_exists("file_get_contents"))
+		{
+			return file_get_contents($file);
+		}
+		else
+		{
+			return join("", file($file));
+		}
 	}
 	else
 	{
-		return join("", file($file));
+		return "";
 	}
 }
 
