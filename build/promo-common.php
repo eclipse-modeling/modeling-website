@@ -37,7 +37,7 @@ ob_start();
 $debugb = isset ($_GET["debugb"]) ? 1 : 0;
 $previewOnly = isset ($_GET["previewOnly"]) ? 1 : 0;
 
-$projctFromPath = getProjectFromPath();
+$projctFromPath = getProjectFromPath($PR);
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -636,9 +636,10 @@ function getBuildConfig($dir)
 	return $results;
 }
 
-function getProjectFromPath()
+function getProjectFromPath($PR)
 	{
-		return preg_replace("#/modeling/mdt/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
+		
+		return preg_replace("#/".$PR."/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
 
 	}
 	
