@@ -163,6 +163,19 @@ print "</div>\n";
 /*** side items ***/
 print <<<XML
 <div id="rightcolumn">
+XML;
+
+$extras = $extras ? $extras : array();
+
+foreach ($extras as $z)
+{
+	if (function_exists($z))
+	{
+		call_user_func($z);
+	}
+}
+
+print <<<XML
 	<div class="sideitem">
 	<h6>Search CVS</h6>
 XML;
