@@ -34,7 +34,13 @@ $cvsprojs = array(
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
-$cvscoms = array();
+$cvscoms = array(
+	"org.eclipse.emf" => array (
+		"query" => "org.eclipse.emf.query",
+		"transaction" => "org.eclipse.emf.transaction",
+		"validation" => "org.eclipse.emf.validation"
+	)
+);
 
 
 $projects = array(
