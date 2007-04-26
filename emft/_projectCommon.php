@@ -26,8 +26,6 @@ else
 }
 
 $projects = array(
-	"JET" => "jet",
-	"JET Editor" => "jeteditor",
 	"Compare" => "compare",
 	"JCR Management" => "jcrm",
 	"CDO" => "cdo",
@@ -37,7 +35,9 @@ $projects = array(
 	"Transaction" => "transaction",
 	"Validation" => "validation",
 	"Coordinated All-In-One" => "coordinated",
+	"JET Editor" => "jeteditor",
 	/* moved, shuffle to bottom */
+	"JET" => "jet",
 	"EODM" => "eodm",
 	"OCL" => "ocl"
 );
@@ -48,7 +48,6 @@ $cvsprojs = array();
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.emft" => array(
-		"jet" => "jet",
 		"jeteditor" => "jeteditor",
 		"cdo" => "cdo",
 		"net4j" => "net4j",
@@ -75,7 +74,7 @@ $nodownloads = array("coordinated","jcrm","compare"); //components  with only in
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
 $incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare"); // components which are still incubating
-$hasmoved = array("eodm" => "mdt", "ocl" => "mdt"); // components which have moved, and to where
+$hasmoved = array("eodm" => "mdt", "ocl" => "mdt", "jet" => "m2t"); // components which have moved, and to where
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
