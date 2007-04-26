@@ -38,7 +38,9 @@ $cvscoms = array(
 	"org.eclipse.emf" => array (
 		"query" => "org.eclipse.emf.query",
 		"transaction" => "org.eclipse.emf.transaction",
-		"validation" => "org.eclipse.emf.validation"
+		"validation" => "org.eclipse.emf.validation",
+		"emfqtv" => "org.eclipse.emf.emfqtv"
+		
 	)
 );
 
@@ -48,7 +50,8 @@ $projects = array(
 	"SDO" => "sdo",
 	"Query" => "query",
 	"Transaction" => "transaction",
-	"Validation" => "validation"
+	"Validation" => "validation",
+	"QTV All-In-One" => "emfqtv",
 );
 
 $level = array (
@@ -69,7 +72,7 @@ $level = array (
  * 		also, update links in build-common.php
  */
 $emft_redirects = null;
-$extraprojects = array(); //projects with only downloads, no info yet, "prettyname" => "directory"
+$extraprojects = array("QTV All-In-One" => "emfqtv"); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("sdo"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array ("sdo","query","transaction","validation"); //projects without newsgroup
 $nomailinglist = array ("sdo","query","transaction","validation"); //projects without mailinglist

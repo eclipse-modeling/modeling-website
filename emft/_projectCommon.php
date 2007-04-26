@@ -31,15 +31,7 @@ $projects = array(
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
 	"Teneo" => "teneo",
-	"Query" => "query",
-	"Transaction" => "transaction",
-	"Validation" => "validation",
-	"Coordinated All-In-One" => "coordinated",
-	"JET Editor" => "jeteditor",
-	/* moved, shuffle to bottom */
-	"JET" => "jet",
-	"EODM" => "eodm",
-	"OCL" => "ocl"
+	"JET Editor" => "jeteditor"
 );
 
 $cvsprojs = array();
@@ -51,11 +43,7 @@ $cvscoms = array(
 		"jeteditor" => "jeteditor",
 		"cdo" => "cdo",
 		"net4j" => "net4j",
-		"teneo" => "teneo",
-		"query" => "query",
-		"transaction" => "transaction",
-		"validation" => "validation",
-		"coordinated" => "coordinated"
+		"teneo" => "teneo"
 	),
 	"org.eclipse.emf" => array (
 		"compare" => "org.eclipse.emf.compare",
@@ -69,12 +57,15 @@ $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(
 	"JCR Management" => "jcrm",
-	"Coordinated All-In-One" => "coordinated"); //components with only downloads, no info yet, "prettyname" => "directory"
+	"Compare" => "compare"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("coordinated","jcrm","compare"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
 $incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare"); // components which are still incubating
-$hasmoved = array("eodm" => "mdt", "ocl" => "mdt", "jet" => "m2t"); // components which have moved, and to where
+$hasmoved = array(
+				"query" => "emf", "transaction" => "emf", "validation" => "emf", 
+				"eodm" => "mdt", "ocl" => "mdt", 
+				"jet" => "m2t"); // components which have moved, and to where
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
