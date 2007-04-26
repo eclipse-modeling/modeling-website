@@ -147,8 +147,12 @@ foreach ($projects as $z)
 		<h6>Related links</h6>
 		<ul>
 			<li><a href="http://www.eclipse.org/modeling">Eclipse Modeling</a></li>
-			<li>Web: <a href="http://www.eclipse.org/modeling/mdt/">MDT</a>, <a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML2</a>, <a href="http://www.eclipse.org/emft">EMFT</a></li>
-			<li>Wiki: <a href="http://wiki.eclipse.org/index.php/Category:MDT">MDT</a>, <a href="http://wiki.eclipse.org/index.php/MDT-UML2-UML">UML2</a>, <a href="http://wiki.eclipse.org/index.php/EMFT">EMFT</a></li>
+			<li>Web: <a href="http://www.eclipse.org/emft/">EMFT</a>, 
+			<a href="http://www.eclipse.org/modeling/mdt/">MDT</a>, 
+			<a href="http://www.eclipse.org/modeling/m2t/">M2T</a></li>
+			<li>Wiki: <a href="http://wiki.eclipse.org/index.php/Category:EMFT">EMFT</a>, 
+			<a href="http://wiki.eclipse.org/index.php/Category:MDT">MDT</a>, 
+			<a href="http://wiki.eclipse.org/index.php/Category:M2T">M2T</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">Using Update Manager</a></li>
 			<li><a href="http://www.eclipse.org/newsgroups">Eclipse newsgroups</a></li>
 		</ul>
