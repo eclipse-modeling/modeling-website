@@ -46,18 +46,18 @@ $cvscoms = array(
 
 $projects = array(
 	"EMF" => "emf",
-	"SDO" => "sdo",
 	"Query" => "query",
 	"Transaction" => "transaction",
 	"Validation" => "validation",
 	"QTV All-In-One" => "emfqtv",
+	"SDO" => "sdo"
 );
 
 $level = array (
-	"sdo" => 2,
 	"query" => 2,
 	"transaction" => 2,
-	"validation" => 2
+	"validation" => 2,
+	"sdo" => 2
 );
 
 /* TODO: 
@@ -81,6 +81,7 @@ $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$projct= preg_replace("#^/#", "", $proj);
 
 $buildtypes = array(
 	"R" => "Release",
@@ -105,7 +106,7 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
-$Nav->addCustomNav("FAQ", "$rooturl/faq/", "_self", 2);
+$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-FAQ", "_self", 2);
 $Nav->addCustomNav("Release Notes", "$rooturl/news/relnotes.php?project=$proj&version=HEAD", "_self", 2);
 if (!$proj || $proj == "emf")
 {
