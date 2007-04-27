@@ -56,8 +56,8 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(
-	"JCR Management" => "jcrm",
-	"Compare" => "compare"); //components with only downloads, no info yet, "prettyname" => "directory"
+	"JCR Management" => "jcrm"
+	); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("coordinated","jcrm","compare"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
