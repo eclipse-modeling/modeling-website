@@ -50,15 +50,15 @@ else // all others
 /* these are possible deps, the actual deps must be a subset of these and are read from build.cfg */
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
-	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/\">EMF</a>",
-	"jet" => "<a href=\"http://www.eclipse.org/emft/projects/jet/#jet\">Jet</a>",
+	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=emf#emf\">EMF</a>",
+	"jet" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
 	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>", 
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
-	"query" => "<a href=\"http://www.eclipse.org/emft/projects/query/#query\">Query</a>",
-	"transaction" => "<a href=\"http://www.eclipse.org/emft/projects/transaction/#transaction\">Transaction</a>",
-	"validation" => "<a href=\"http://www.eclipse.org/emft/projects/validation/#validation\">Validation</a>",
+	"query" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=query#query\">Query</a>",
+	"transaction" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=transaction#transaction\">Transaction</a>",
+	"validation" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=validation#validation\">Validation</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>"
 );
