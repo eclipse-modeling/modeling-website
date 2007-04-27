@@ -25,7 +25,7 @@ $projectsf = array_flip($projects);
 $components = components($cvscoms);
 
 /* set defaults */
-$cvscom = "";
+$cvscom = "%";
 $tmp = array_keys($cvsprojs);
 if (sizeof($tmp) > 0)
 {
@@ -43,12 +43,18 @@ else
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
+if ($proj=="emf")
+{
+	// hack to support emf while still in tools; once it moves we'll have `compoent` LIKE 'org.eclipse.emf' instead
+	$cvscom = "doc' OR `component` LIKE 'examples' OR `component` LIKE 'tests' OR `component` LIKE 'plugins";
+}
+
 ob_start();
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>Release Notes</h1>\n";
 
-$sql = "SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' ORDER BY `vanityname` DESC";
+$sql = "SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') ORDER BY `vanityname` DESC";
 $result = wmysql_query($sql);
 $vpicker = array();
 if ($result)
@@ -75,12 +81,12 @@ print "<div class=\"homeitem3col\">\n";
 if ($extra_build)
 {
 	$branch = "'$version'";
-	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 }
 else
 {
-	$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom')";
-	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+	$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom'))";
+	$sql = "SELECT CONVERT_TZ(`buildtime`, 'EST', 'GMT'), `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 }
 $result = wmysql_query($sql);
 $rels = array();
@@ -101,7 +107,7 @@ if (sizeof($rels))
 	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . "</h3>\n";
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
-		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = $branch GROUP BY `bugid` DESC";
+		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 
@@ -213,7 +219,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 /* find the previous release in the correct branch */
 function relminus($version, $cvsproj, $cvscom, $rbuild = true)
 {
-	$whr = "`project` = '$cvsproj' AND `component` LIKE '$cvscom'";
+	$whr = "`project` = '$cvsproj' AND (`component` LIKE '$cvscom')";
 	if ($rbuild) //$rbuild implies !$extra_build
 	{
 		$tries = array(
@@ -239,7 +245,7 @@ function relminus($version, $cvsproj, $cvscom, $rbuild = true)
 function builds($version, $preversion, $cvsproj, $cvscom)
 {
 	$builds = array();
-	$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') AND `branch` = (SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')");
+	$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = (SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')");
 	while ($row = mysql_fetch_row($result))
 	{
 		$builds[] = "<option value=\"$row[0]\">&nbsp;&nbsp;&nbsp;$row[0]</option>\n";
@@ -264,7 +270,7 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 		else
 		{
 			$tmp = mysql_real_escape_string($_GET["version"], $connect);
-			$result = wmysql_query("SELECT COUNT(*) FROM `releases` WHERE `vanityname` = '$tmp' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `type` != 'R'");
+			$result = wmysql_query("SELECT COUNT(*) FROM `releases` WHERE `vanityname` = '$tmp' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `type` != 'R'");
 			$row = mysql_fetch_row($result);
 			if ($row[0] > 0)
 			{
@@ -275,7 +281,7 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 
 		if (!isset($version))
 		{
-			$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' GROUP BY `branch`");
+			$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') GROUP BY `branch`");
 			while ($row = mysql_fetch_row($result))
 			{
 				$branches[] = $row[0];
@@ -353,7 +359,7 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	}
 	else
 	{
-		$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `type` = 'R' AND `buildtime` >= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom') ORDER BY `buildtime` LIMIT 1");
+		$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `type` = 'R' AND `buildtime` >= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) ORDER BY `buildtime` LIMIT 1");
 		$row = mysql_fetch_row($result);
 		$outerversion = $row[0];
 		if ($outerversion)
@@ -389,7 +395,7 @@ function extra_builds($version, $cvsproj, $cvscom, $showinner = true)
 	$items = array();
 	$branches = array("HEAD");
 
-	$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` != 'HEAD' GROUP BY `branch` DESC");
+	$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` != 'HEAD' GROUP BY `branch` DESC");
 	while ($row = mysql_fetch_row($result))
 	{
 		$branches[] = $row[0];
@@ -397,7 +403,7 @@ function extra_builds($version, $cvsproj, $cvscom, $showinner = true)
 
 	foreach ($branches as $z)
 	{
-		$result = wmysql_query("SELECT `branch`, `vanityname`, (SELECT MAX(`buildtime`) FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = '$z') AS `tmp`, `buildtime` FROM `releases` WHERE `project` = '$cvsproj' AND `component` LIKE '$cvscom' AND `branch` = '$z' HAVING `buildtime` > IF(`tmp` IS NOT NULL, `tmp`, '1000-01-01 00:00:00') ORDER BY `buildtime` DESC");
+		$result = wmysql_query("SELECT `branch`, `vanityname`, (SELECT MAX(`buildtime`) FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = '$z') AS `tmp`, `buildtime` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = '$z' HAVING `buildtime` > IF(`tmp` IS NOT NULL, `tmp`, '1000-01-01 00:00:00') ORDER BY `buildtime` DESC");
 		while ($row = mysql_fetch_row($result))
 		{
 			$extra[$row[0]][] = $row[1];
