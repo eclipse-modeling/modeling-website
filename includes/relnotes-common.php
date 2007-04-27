@@ -25,7 +25,7 @@ $projectsf = array_flip($projects);
 $components = components($cvscoms);
 
 /* set defaults */
-$cvscom = "%";
+$cvscom = "";
 $tmp = array_keys($cvsprojs);
 if (sizeof($tmp) > 0)
 {
