@@ -25,7 +25,7 @@ $projectsf = array_flip($projects);
 $components = components($cvscoms);
 
 /* set defaults */
-$cvscom = "%";
+$cvscom = "";
 $tmp = array_keys($cvsprojs);
 if (sizeof($tmp) > 0)
 {
@@ -46,7 +46,11 @@ pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 if ($proj=="emf")
 {
 	// hack to support emf while still in tools; once it moves we'll have `compoent` LIKE 'org.eclipse.emf' instead
-	$cvscom = "doc' OR `component` LIKE 'examples' OR `component` LIKE 'tests' OR `component` LIKE 'plugins";
+	$cvscom2 = "doc' OR `component` LIKE 'examples' OR `component` LIKE 'tests' OR `component` LIKE 'plugins";
+}
+else
+{
+	$cvscom2 = $cvscom;
 }
 
 ob_start();
@@ -107,7 +111,7 @@ if (sizeof($rels))
 	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . "</h3>\n";
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
-		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
+		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 
