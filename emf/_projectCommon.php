@@ -43,7 +43,6 @@ $cvscoms = array(
 	)
 );
 
-
 $projects = array(
 	"EMF" => "emf",
 	"Query" => "query",
@@ -52,6 +51,7 @@ $projects = array(
 	"QTV All-In-One" => "emfqtv",
 	"SDO" => "sdo"
 );
+$tmp = array_flip($projects);
 
 $level = array (
 	"query" => 2,
@@ -106,14 +106,16 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
-$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-FAQ", "_self", 2);
-$Nav->addCustomNav("Release Notes", "$rooturl/news/relnotes.php?project=$proj&version=HEAD", "_self", 2);
-if (!$proj || $proj == "emf")
+if (!$proj || $proj == "emf" || $proj == "sdo")
 {
-	$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=project%3A+org.eclipse.emf+days%3A+7", "_self", 2);
+	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-FAQ", "_self", 2);
+	$Nav->addCustomNav("Release Notes", "$rooturl/news/relnotes.php?project=emf&version=HEAD", "_self", 2);
+	$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=project%3A+org.eclipse.emf".($proj=="sdo"?".ecore.sdo":"")."+days%3A+7", "_self", 2);
 }
 else
 {
+	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-".$tmp[$proj]."-FAQ", "_self", 2);
+	$Nav->addCustomNav("Release Notes", "$rooturl/news/relnotes.php?project=$proj&version=HEAD", "_self", 2);
 	$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=file%3A+org.eclipse.emf%2F" . ($proj?"org.eclipse.emf.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 }
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
