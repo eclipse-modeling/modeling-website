@@ -34,58 +34,97 @@ if (!isset($_GET["projects"]) || !$_GET["projects"] || !is_array($_GET["projects
 	print "</div>\n";
 }
 print "<h1>Update Search CVS - Web UI</h1>\n";
-print '<div class="homeitem3col">' . "\n";
-print '<h3>Choose project(s) to update</h3>' . "\n";
 
-# given $_GET["projects"], pass to parsecvs.sh as headless exec task
+# given $_GET["projects"], pass to parsecvs.sh as headless exec task using lockfile
 if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"]))
 {
 	$validprojects = projects();
-
+	$projects = $_GET["projects"]; sort($projects); reset($projects);
+	
 	if (sizeof($validprojects) > 0)
 	{
-		print "<p>";
-		print $previewOnly ? "<b>PREVIEW ONLY</B>: " : "";
-		print "Spawning the following update:";
-		print "</p>\n";
-		print "<ul>\n";
-
 		# running as user wwwrun
-		$cmd = '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid /shared/modeling/searchcvs/parsecvs_web.sh';
+		$cmd = '';
+		$lockfile = '';
 		$addedTarget = false;
-		foreach ($_GET["projects"] as $targ)
+		foreach ($projects as $targ)
 		{
 			if ($targ && in_array($targ, $validprojects))
 			{
 				$cmd .= ' ' . escapeshellarg('cvssrc/' . $targ);
+				$lockfile .= ($lockfile ? "_" : "") . $targ;
 				$addedTarget = true;
 			}
 		}
-		$cmd .= ' 2>&1 >/dev/null &"';
 		if (!$addedTarget)
 		{
 			print "<li>Error: no valid projects added! Click back and try again.</li>";
 		}
 		else
 		{
-			print "<li>$cmd</li>\n";
-			if (!$previewOnly)
-			{
-				print "<pre>";
+			if ($previewOnly) { 
+				print '<div class="homeitem3col">'."\n";
+				print "<h3>Build Command (Preview Only)</h3>\n";
+				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+			} else if (!$isBuildDotEclipseServer){
 				exec($cmd);
-				print "</pre>";
 			}
-		}
-		print "</ul>\n";
-		if ($addedTarget)
-		{
-			print "<p><b>NOTE</b>: Do not reload this page or you will slow down your update!</p>";
+			
+			if (!$previewOnly && $isBuildDotEclipseServer)
+			{
+				$lockfile = "/opt/public/modeling/tmp/" . $lockfile . "_updateSearchCVS.lock.txt"; // org.eclipse.emf_org.eclipse.xsd_updateSearchCVS.lock.txt
+				// check if lock file exists for this build type
+				if (is_file($lockfile))
+				{
+					print '<div class="homeitem3col">'."\n";
+					print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another run is already in progress.</h3>\n";
+					print "<p>Lockfile: <u>$lockfile</u></p>";
+					print "<p><small><code>";
+					foreach (file($lockfile) as $line) 
+					{ 
+						print "$line\n"; 
+					}
+					print "</code></small></p>";
+					
+				}
+				else // create lockfile
+				{
+					print '<div class="homeitem3col">'."\n";
+					$fp = fopen($lockfile, "w");
+  					fputs($fp, $cmd . "\n");
+  					fclose($fp);
+  					$fp = null;
+  					$fp = file($lockfile);
+  					if (is_array($fp) && sizeof($fp)>0)
+  					{
+						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
+						print "<p>Lockfile: <u>$lockfile</u></p>";
+						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+  					}
+  					else
+  					{
+						print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
+						print "<p>Lockfile: <u>$lockfile</u></p>";
+						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+  					}
+				}
+				if (is_file($lockfile))
+				{
+  					if (!chmod($lockfile, 0666))
+  					{
+  						print "<p><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
+  					}
+				}
+			}
 		}
 	}
 }
 else # if no $_GET["projects"] value, present UI to multi-select targets.
 {
 ?>
+	<div class="homeitem3col">
+	<h3>Choose project(s) to update</h3>
+	
 	<blockquote>
 		<form action="" method="get" name="runUpdate">
 			<select size="10" multiple="multiple" id="project" name="projects[]">
