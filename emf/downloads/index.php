@@ -21,7 +21,7 @@ ob_start();
 $dls = array(
 	"/emf" => array(
 		"EMF, SDO, and XSD" => array(
-			"SDK (runtimes, source, docs)" => "SDK",
+			"<b style=\"color:green\">All-In-One SDK</b> (runtimes, source, docs)" => "SDK",
 			"Standalone" => "Standalone",
 			"Models" => "Models",
 			"Automated Tests" => "Automated-Tests",

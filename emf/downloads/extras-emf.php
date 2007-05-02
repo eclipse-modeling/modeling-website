@@ -57,7 +57,7 @@ function doRequirements()
 <div class="homeitem3col">
 	<h3>Requirements</h3>
 	<p><b>First-time users</b> can get started quickly by simply downloading the
-	combined SDK bundle (includes source, runtime and docs
+	<b style="color:green">All-In-One SDK</b> bundle (includes source, runtime and docs
 	for <b class="emf">EMF</b>, <b class="xsd">XSD</b>, and <b class="sdo">SDO</b>).
 	Specific build dependencies and JDK version used for a given release are shown
 	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> - 
