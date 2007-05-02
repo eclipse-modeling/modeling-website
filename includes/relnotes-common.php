@@ -261,6 +261,8 @@ function builds($version, $preversion, $cvsproj, $cvscom)
 
 function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_build)
 {
+	$strict = (isset($_GET["strict"]) ? 1 : 0);
+
 	if (!$connect)
 	{
 		return "HEAD";
@@ -276,7 +278,7 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 			$tmp = mysql_real_escape_string($_GET["version"], $connect);
 			$result = wmysql_query("SELECT COUNT(*) FROM `releases` WHERE `vanityname` = '$tmp' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `type` != 'R'");
 			$row = mysql_fetch_row($result);
-			if ($row[0] > 0)
+			if ($row[0] > 0 || $strict)
 			{
 				$version = $tmp;
 				$rbuild = false;
