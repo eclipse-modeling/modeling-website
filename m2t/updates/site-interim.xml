@@ -4,4 +4,35 @@
 	To install these plugins, point your Eclipse Update Manager at this site.
 	</description>
 
+
+	<feature url="features/org.eclipse.jet.doc_0.8.0.v20070423------0842292645.jar" patch="false" id="org.eclipse.jet.doc" version="0.8.0.v20070423------0842292645">
+		<category name="m2t jet SDK 0.8.0 I200705031530"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.examples_0.8.0.v20070423------0842292645.jar" patch="false" id="org.eclipse.jet.examples" version="0.8.0.v20070423------0842292645">
+		<category name="m2t jet SDK 0.8.0 I200705031530"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.sdk_0.8.0.v20070425-84229D-eRJyJm-e.jar" patch="false" id="org.eclipse.jet.sdk" version="0.8.0.v20070425-84229D-eRJyJm-e">
+		<category name="m2t jet SDK 0.8.0 I200705031530"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet.source_0.8.0.v20070425.jar" patch="false" id="org.eclipse.jet.source" version="0.8.0.v20070425">
+		<category name="m2t jet SDK 0.8.0 I200705031530"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.jet_0.8.0.v20070425------2PD88S8L_G.jar" patch="false" id="org.eclipse.jet" version="0.8.0.v20070425------2PD88S8L_G">
+		<category name="m2t jet SDK 0.8.0 I200705031530"/>
+	</feature>
+
+
+	<category-def label="m2t jet SDK 0.8.0 I200705031530" name="m2t jet SDK 0.8.0 I200705031530">
+		<description>
+This category contains the features of the 0.8.0 I200705031530 build of m2t jet SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 </site>
