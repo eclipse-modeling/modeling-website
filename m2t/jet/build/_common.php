@@ -7,11 +7,11 @@ $options = array (
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
 		"0.8.0=HEAD,/opt/sun-java2-5.0",
-		#"0.7.3=R0_7_maintenance,/opt/sun-java2-1.4",
+		"0.7.3=R0_7_maintenance,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
 		"0.8.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
-		#"0.7.3=R0_7_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
+		"0.7.3=R0_7_maintenance,/opt/public/common/ibm-java2-ppc-50"
 	),
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
