@@ -2309,6 +2309,31 @@
 		<category name="mdt eodm SDK 2.0.0 I200705022357"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.eodm.doc_2.0.0.v200705100924.jar" patch="false" id="org.eclipse.eodm.doc" version="2.0.0.v200705100924">
+		<category name="mdt eodm SDK 2.0.0 I200705100924"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.examples_2.0.0.v200705100924.jar" patch="false" id="org.eclipse.eodm.examples" version="2.0.0.v200705100924">
+		<category name="mdt eodm SDK 2.0.0 I200705100924"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.sdk_2.0.0.v200705100924.jar" patch="false" id="org.eclipse.eodm.sdk" version="2.0.0.v200705100924">
+		<category name="mdt eodm SDK 2.0.0 I200705100924"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.source_2.0.0.v200705100924.jar" patch="false" id="org.eclipse.eodm.source" version="2.0.0.v200705100924">
+		<category name="mdt eodm SDK 2.0.0 I200705100924"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm_2.0.0.v200705100924.jar" patch="false" id="org.eclipse.eodm" version="2.0.0.v200705100924">
+		<category name="mdt eodm SDK 2.0.0 I200705100924"/>
+	</feature>
+
 <category-def label="UML2 SDK 2.0.1 M200607131314" name="UML2 SDK 2.0.1 M200607131314">
 		<description>
 This category contains the various features of the 2.0.1 M200607131314 build of UML2 SDK, which includes UML2 source, plugins, and documentation.
@@ -2756,6 +2781,12 @@ This category contains the features of the 1.1.0 I200705031420 build of mdt ocl 
 	<category-def label="mdt eodm SDK 2.0.0 I200705022357" name="mdt eodm SDK 2.0.0 I200705022357">
 		<description>
 This category contains the features of the 2.0.0 I200705022357 build of mdt eodm SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt eodm SDK 2.0.0 I200705100924" name="mdt eodm SDK 2.0.0 I200705100924">
+		<description>
+This category contains the features of the 2.0.0 I200705100924 build of mdt eodm SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
