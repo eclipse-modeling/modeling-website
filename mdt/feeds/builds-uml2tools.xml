@@ -13,41 +13,6 @@
     <title>[announce] uml2tools 1.0.0M6b (S200704101450) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450</id>
-    <updated>2007-05-14T19:40:00Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
-        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=S200704101450
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M6b.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/S-3.3M6-200703231616/eclipse-SDK-3.3M6-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200703291501/emf-sdo-xsd-SDK-2.3.0M6.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/gmf/downloads/drops/S-2.0M6-200704052000/GMF-sdk-2.0M6.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.1.0/S200703301439/mdt-ocl-SDK-1.1M6.zip</dependency>
-          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200704051025/mdt-uml2-SDK-2.1M6.zip</dependency>
-          <dependency>http://download.eclipse.org/technology/emft/query/downloads/drops/1.1.0/S200703301543/emft-query-SDK-1.1M6.zip</dependency>
-          <dependency>http://download.eclipse.org/technology/emft/transaction/downloads/drops/1.1.0/S200703301538/emft-transaction-SDK-1.1M6.zip</dependency>
-          <dependency>http://download.eclipse.org/technology/emft/validation/downloads/drops/1.1.0/S200703301524/emft-validation-SDK-1.1M6.zip</dependency>
-          <dependency>http://download.eclipse.org/tools/gef/downloads/drops/S-3.3M6-200703300740/GEF-ALL-3.3M6.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
-    <title>[announce] uml2tools 1.0.0M6b (S200704101450) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450</id>
     <updated>2007-04-11T15:09:04Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="1.0.0">
