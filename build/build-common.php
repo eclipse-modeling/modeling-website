@@ -500,8 +500,26 @@ setTimeout('doOnLoadDefaults()',1000);
 		// create the log dir before trying to log to it
 		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 
+		// for the case where we're building EMFT but it's actually in EMF (or other) cvs repo
+		$topProjActual = "";
+		if ($topProj == "emft")
+		{
+			foreach ($cvscoms as $cvsTop => $components)
+			{
+				foreach ($components as $shortname => $cvspath)
+				{
+					if (array_key_exists($projct, $cvscoms[$cvsTop]))
+					{
+						$topProjActual = str_replace("org.eclipse.","",$cvsTop);
+						break;
+					}
+				}
+			}
+		}
+		if (!$topProjActual) { $topProjActual = $topProj; }
+
 		$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
-			' -proj '.$topProj.' -sub '.$projct.
+			' -proj ' . $topProjActual . ' -sub '.$projct.
 			' -version '.$BR.
 			' -branch '.($_POST["build_Branch_Override"]!=""?$_POST["build_Branch_Override"]:$_POST["build_CVS_Branch"]).
 			$dependencyURLs.
