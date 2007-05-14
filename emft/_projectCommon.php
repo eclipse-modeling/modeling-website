@@ -74,6 +74,13 @@ $proj = (isset ($_POST["build_Project"]) && preg_match("/^(" . join("|", $projec
 		$regs[1] : (preg_match("#/emft/projects/(.+)/index.php#", $_SERVER["SCRIPT_NAME"], $regs) ? 
 			$regs[1] : ""));
 
+$buildtypes = array(
+	"R" => "Release",
+	"S" => "Stable",
+	"I" => "Integration",
+	"M" => "Maintenance",
+	"N" => "Nightly"
+);
 
 $Nav->addNavSeparator("EMFT", "$rooturl/");
 foreach (array_keys($projects) as $z)
