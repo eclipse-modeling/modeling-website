@@ -506,13 +506,10 @@ setTimeout('doOnLoadDefaults()',1000);
 		{
 			foreach ($cvscoms as $cvsTop => $components)
 			{
-				foreach ($components as $shortname => $cvspath)
+				if (array_key_exists($projct, $components))
 				{
-					if (array_key_exists($projct, $cvscoms[$cvsTop]))
-					{
-						$topProjActual = str_replace("org.eclipse.","",$cvsTop);
-						break;
-					}
+					$topProjActual = str_replace("org.eclipse.","",$cvsTop);
+					break;
 				}
 			}
 		}
