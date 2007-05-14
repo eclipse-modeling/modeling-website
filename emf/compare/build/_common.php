@@ -6,11 +6,11 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/sun-java2-5.0",
+		"0.7.0=HEAD,/opt/sun-java2-5.0",
 		#"1.0.3=R1_0_maintenance,/opt/sun-java2-1.4",
 		
 		"build.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"0.7.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
 		#"1.0.3=R1_0_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
 	
