@@ -17,7 +17,11 @@ ob_start();
 
 <?php
 
-print doSelectProject($projects, $proj, $nomenclature, "homeitem3col");
+if (is_array($projects))
+{
+	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
+	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col");
+}
 
 print "</div>\n";
 
@@ -30,4 +34,4 @@ $pageAuthor = "Neil Skrypuch";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: faq.php,v 1.8 2007/04/20 20:30:58 nickb Exp $ -->
+<!-- $Id: faq.php,v 1.9 2007/05/14 23:17:23 nickb Exp $ -->
