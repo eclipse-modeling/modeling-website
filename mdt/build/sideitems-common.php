@@ -10,10 +10,10 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li>QTV: <a href="/modeling/emf/build/">Build</a>, 
-					 <a href="/modeling/emf/build/promo.php">Promote</a></li>
 			<li>MDT: <a href="/modeling/mdt/<?php print $projct; ?>/build/">Build</a>, 
 					 <a href="/modeling/mdt/<?php print $projct; ?>/build/promo.php">Promote</a></li>
+			<li>QTV: <a href="/modeling/emf/build/">Build</a>, 
+					 <a href="/modeling/emf/build/promo.php">Promote</a></li>
 		</ul>
 		<hr noshade="noshade" size="1" width="80%"/>
 		<ul>
