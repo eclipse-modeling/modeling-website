@@ -6,7 +6,7 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS= array ())
+function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubating = false)
 {
 	global $App, $Nav, $Menu, $theme, $PR;
 	$PRS= array (
@@ -80,6 +80,20 @@ function update_manager($shortname, $longname, $extra_PRS= array ())
 	<?php
 
 	print "<div id=\"rightcolumn\">\n";
+	
+	if ($isIncubating)
+	{
+	print '
+		<div class="sideitem">
+		   <h6>Incubation</h6>
+		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+		   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
+		        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
+		        border="0" /></a></div>
+		</div>
+		'; 
+	}
+	
 	$extras= array (
 		"doBleedingEdge"
 	);
