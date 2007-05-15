@@ -28,6 +28,7 @@ else
 $projects = array(
 	"Compare" => "compare",
 	"JCR Management" => "jcrm",
+	"Search" => "search",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
 	"Teneo" => "teneo",
@@ -47,7 +48,8 @@ $cvscoms = array(
 	),
 	"org.eclipse.emf" => array (
 		"compare" => "org.eclipse.emf.compare",
-		"jcrm" => "org.eclipse.emf.jcrm"
+		"jcrm" => "org.eclipse.emf.jcrm",
+		"search" => "org.eclipse.emf.search"
 	)
 	
 );
@@ -58,10 +60,10 @@ $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 $extraprojects = array(
 	"JCR Management" => "jcrm"
 	); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm","compare"); //components  with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm","search","compare"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
-$incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare"); // components which are still incubating
+$incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare","search"); // components which are still incubating
 $hasmoved = array(
 				"query" => "emf", "transaction" => "emf", "validation" => "emf", 
 				"eodm" => "mdt", "ocl" => "mdt", 
