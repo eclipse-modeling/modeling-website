@@ -89,7 +89,7 @@ $filePreStatic = array(
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
-require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();
 ob_end_clean();
