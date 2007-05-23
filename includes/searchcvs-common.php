@@ -12,6 +12,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
  */
 
 $pagesize = (isset($_GET["showbuglist"]) ? 10000 : 25); //results per page; need more than 25 for meaningful results if showing just list of bugs
+$fullpath = (isset($_GET["fullpath"]) ? 1 : 0); // show full path in listing? (useful when searching for changes across projects by author or date range)
 $scroll = 5; //+- pages to show in nav
 $days = 7;
 $page = (isset($_GET["p"]) && preg_match("/^\d+$/", $_GET["p"]) ? $_GET["p"] : 1);
@@ -158,7 +159,7 @@ while ($row = mysql_fetch_assoc($result))
 		$bugs[] = $row["bugid"]; 
 	}
 	print ($row["bugid"] ? "[<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id={$row['bugid']}\">{$row['bugid']}</a>] " : "");
-	print "<a href=\"" . cvsfile($cvsroot, $row["cvsname"]) . "\"><abbr title=\"{$row['cvsname']}\">$file</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
+	print "<a href=\"" . ($fullpath ? $row['cvsname'] : cvsfile($cvsroot, $row["cvsname"])) . "\"><abbr title=\"{$row['cvsname']}\">$file</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
 	print "<ul>\n";
 	print "<li><div>{$row['author']}</div>" . pretty_comment($row["message"], $q) . "</li>";
 	print "</ul>\n";
