@@ -1,6 +1,6 @@
 <?php
 
-$numzips = $numzips - 1; // the stand-alone zip is new, so don't require it
+$numzips = $numzips - 1; // the editor zip is new, so don't require it
 
 /* used for sidebar entry */
 $NLpacks = array(
