@@ -23,7 +23,7 @@ $dls = array(
 		"JET" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
-			/*"Editor" => "editor",*/
+			"Editor" => "editor",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
