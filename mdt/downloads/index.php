@@ -4,6 +4,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 ob_start();
 
+/* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
+$extraZips = array(
+	"-standalone"
+);
+	
 /* config */
 
 /* project => sections => (prettyname => filename) */

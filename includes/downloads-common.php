@@ -22,10 +22,11 @@ if (isset($dls[$proj]) && is_array($dls[$proj]))
 	}
 }
 
+// include extras-$proj.php
 $file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras" . preg_replace("#^/#", "-", $proj) . ".php";
 if (file_exists($file))
 {
-	include($file);
+	include_once($file);
 }
 
 $hadLoadDirSimpleError = 1; //have we echoed the loadDirSimple() error msg yet? if 1, omit error; if 0, echo at most 1 error
@@ -383,10 +384,10 @@ function IDtoDateStamp($ID, $style) // given N200402121441, return date("D, j M 
 
 function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
 {
-	global $PR, $suf, $proj, $projct, $filePreStatic;
+	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips;
 	$uu = 0;
 	$echo_out = "";
-	
+
 	if (!$ziplabel)
 	{
 		$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -400,7 +401,6 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 		foreach ($dls[$proj][$z] as $label => $u)
 		{
 			$cnt++;
-			$echo_out .= "<li>\n";
 			if (!is_array($u)) // for compatibilty with uml2, where there's no "RT" value in $u
 			{
 				$u = $u ? array("-$u") : array("");
@@ -422,15 +422,16 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 					$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 				} 
 			}
-			$out = "<i><b>$pre2</b>$filePre"; 
+			$outNotFound = "<i><b>$pre2</b>$filePre"; 
 			if (sizeof($u) > 1 ) { 
-				$out .= "</i>{"; foreach ($u as $ui => $ux) { $out .= ($ui>0 ? "," : "") . $ux; } $out .= "}<i>";
+				$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $out .= ($ui>0 ? "," : "") . $ux; } $out .= "}<i>";
 			} 
 			else
 			{
-				$out .= $u[0];
+				$outNotFound .= $u[0];
 			} 
-			$out .= "-$ziplabel.zip ...</i>";
+			$outNotFound .= "-$ziplabel.zip ...</i>";
+			$out = "";
 			foreach ($tries as $z)
 			{
 				if (is_file("$PWD/$z"))
@@ -439,9 +440,18 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 					break;
 				}
 			}
-			$echo_out .= $out;
-
-			$echo_out .= "</li>\n";
+			if ($out)
+			{
+				$echo_out .= "<li>\n";
+				$echo_out .= $out;
+				$echo_out .= "</li>\n";
+			} 
+			else if (!isset($extraZips) || !is_array($extraZips) || !in_array($u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
+			{
+				$echo_out .= "<li>\n";
+				$echo_out .= $outNotFound;
+				$echo_out .= "</li>\n";
+			}
 			$uu++;
 		}
 		$echo_out .= "</ul>\n</li>\n";
