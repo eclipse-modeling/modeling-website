@@ -1052,6 +1052,46 @@
 		<category name="emf query SDK 1.1RC1 S200705231638"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.validation.doc_1.1.0.v200704261832--1G955I5D8_7G_9.jar" patch="false" id="org.eclipse.emf.validation.doc" version="1.1.0.v200704261832--1G955I5D8_7G_9">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl.source_1.1.0.v200704261832--084229272A4255.jar" patch="false" id="org.eclipse.emf.validation.ocl.source" version="1.1.0.v200704261832--084229272A4255">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.ocl_1.1.0.v200704261832--084229272A4255.jar" patch="false" id="org.eclipse.emf.validation.ocl" version="1.1.0.v200704261832--084229272A4255">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.sdk_1.1.0.v200704261832-GLCkgTQXGhomGKm.jar" patch="false" id="org.eclipse.emf.validation.sdk" version="1.1.0.v200704261832-GLCkgTQXGhomGKm">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.source_1.1.0.v200704261832--2PD88S8LAEAUIK.jar" patch="false" id="org.eclipse.emf.validation.source" version="1.1.0.v200704261832--2PD88S8LAEAUIK">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation_1.1.0.v200704261832--2PD88S8LAEAUIK.jar" patch="false" id="org.eclipse.emf.validation" version="1.1.0.v200704261832--2PD88S8LAEAUIK">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples.source_1.0.100.v200704261832.jar" patch="false" id="org.eclipse.emf.validation.examples.source" version="1.0.100.v200704261832">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.validation.examples_1.0.100.v200704261832--4hNDDmDYMWIjTJ.jar" patch="false" id="org.eclipse.emf.validation.examples" version="1.0.100.v200704261832--4hNDDmDYMWIjTJ">
+		<category name="emf validation SDK 1.1RC1 S200705231642"/>
+	</feature>
+
 <category-def label="EMF SDK 2.3.0M5 S200702121527 (EMF + SDO + XSD)" name="EMF SDK 2.3.0M5 S200702121527">
 		<description>
 This category contains the various features of the 2.3.0M5 S200702121527 build of EMF SDK, which includes EMF, SDO, and XSD source, plugins, and documentation.
@@ -1111,6 +1151,12 @@ This category contains the various features of the 2.3.0RC1 S200705230200 build 
 	<category-def label="emf query SDK 1.1RC1 S200705231638" name="emf query SDK 1.1RC1 S200705231638">
 		<description>
 This category contains the features of the 1.1RC1 S200705231638 build of emf query SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emf validation SDK 1.1RC1 S200705231642" name="emf validation SDK 1.1RC1 S200705231642">
+		<description>
+This category contains the features of the 1.1RC1 S200705231642 build of emf validation SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
