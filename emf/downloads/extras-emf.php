@@ -85,7 +85,7 @@ function doRequirements()
 		</li>
 
 		<li>
-			<a href="javascript:toggle('req2_2_0')">EMF 2.2.3-2.2.2, 2.2.1, 2.2.0</a>
+			<a href="javascript:toggle('req2_2_0')">EMF 2.2.4-2.2.2, 2.2.1, 2.2.0</a>
 			<ul id="req2_2_0" style="display: none">
 				<li>Eclipse 3.2.2, 3.2.1 or 3.2.0</li>
 				<li>Java 1.4.2 or 5.0 - if Sun 1.4.2, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
