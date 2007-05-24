@@ -212,19 +212,16 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td rowspan="1">&#160;</td>
 				<td valign="middle"><b>Mapfile &amp; Tagging</b></td>
 				<td>&#160;</td>
-				<td><select name="build_Mapfile_Rule" size="1" onchange="doMapfileRuleSelected(this)">
+				<td><select name="build_Mapfile_Rule" size="1">
 				<?php 	$options["MapfileRule"] = array (
 							"Use Map, No Tagging=use-false",
-							//"Generate Map, Tag Files=gen-true", // disabled as per bug 172731
 							"Generate Map, No Tagging=gen-false|selected");
 						displayOptions($options["MapfileRule"]); ?>
-				</select><br/>
-				<input disabled="disabled" name="build_Mapfile_Tag" size="8" onkeydown="checkdisabled(this)">
+				</select> 
 				</td>
 				<td><small><a id="divMapfileRuleToggle" name="divMapfileRuleToggle" href="javascript:toggleDetails('divMapfileRule')">More Info</a></small>
 				<div id="divMapfileRuleDetail" name="divMapfileRuleDetail" style="display:none;border:0">
 				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.<br/>Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
-						<!-- disabled as per bug 172731 --><!-- <tr valign="top"><td><small>Generate Map, Tag Files</small></td><td><small> : </small></td><td><small>Using given tag (if blank, use "build_YYYYMMDDhhmm"),<br/>generate a mapfile and use that tag.</small></td></tr> -->
 						<tr valign="top"><td><small>Generate Map, No Tagging</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
 				</table>
 				</div>
@@ -369,11 +366,6 @@ function pickDefaultBranch(val) {
 	}
 }
 
-function doMapfileRuleSelected(field) {
-  val=field.options[field.selectedIndex].value;
-  document.forms.buildForm.build_Mapfile_Tag.disabled = (val != "gen-true");	
-}
-
 function checkdisabled(obj) 
 {
 	return !obj.disabled;
@@ -433,8 +425,7 @@ function doSubmit() {
 function doOnLoadDefaults() {
   field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
   field=document.forms.buildForm.build_Mapfile_Rule; 
-  	field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?> 
-  	doMapfileRuleSelected(field);
+  field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?> 
   setNote('<?php echo $projct; ?>');
   setCheckbox("build_Run_Tests_JUnit",true);
 }
@@ -524,7 +515,6 @@ setTimeout('doOnLoadDefaults()',1000);
 			($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
 
 			' -mapfileRule '.$_POST["build_Mapfile_Rule"]. // pass in use-false, gen-true, gen-false
-			($_POST["build_Mapfile_Rule"]=="gen-true" && $_POST["build_Mapfile_Tag"] ? ' -mapfileTag '.$_POST["build_Mapfile_Tag"]:''). // use specified tag?
 
 			' -buildType '.$_POST["build_Build_Type"].
 			' -javaHome '.$_POST["build_Java_Home"].
