@@ -33,6 +33,14 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
+	"/mwe" => array(
+		"Model Workflow Engine" => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),
 	"/search" => array(
 		"Search" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -46,7 +54,10 @@ $dls = array(
 /* list of valid file prefixes for projects who have been renamed  */
 /* keys have leading / to match $proj */
 $filePre = array(
-	"/compare" => array("emft-compare")
+	"/compare" => array("emft-compare", "emf-compare"),
+	"/jcrm" => array("emft-jcrm", "emf-jcrm"),
+	"/mwe" => array("emft-mwe", "emf-mwe"),
+	"/search" => array("emft-search", "emf-search")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
