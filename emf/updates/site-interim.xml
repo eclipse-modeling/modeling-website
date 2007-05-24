@@ -1092,6 +1092,71 @@
 		<category name="emf validation SDK 1.1RC1 S200705231642"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.transaction.doc_1.1.0.v200704261834--1G955I5D8_7H7F.jar" patch="false" id="org.eclipse.emf.transaction.doc" version="1.1.0.v200704261834--1G955I5D8_7H7F">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.sdk_1.1.0.v200704261834-GOTllYicVjjlilO.jar" patch="false" id="org.eclipse.emf.transaction.sdk" version="1.1.0.v200704261834-GOTllYicVjjlilO">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.source_1.1.0.v200704261834--1G955I5D7B7I9I.jar" patch="false" id="org.eclipse.emf.transaction.source" version="1.1.0.v200704261834--1G955I5D7B7I9I">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction_1.1.0.v200704261834--1G955I5D7B7I9I.jar" patch="false" id="org.eclipse.emf.transaction" version="1.1.0.v200704261834--1G955I5D7B7I9I">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.doc_1.1.0.v200704261834--08422927333928.jar" patch="false" id="org.eclipse.emf.workspace.doc" version="1.1.0.v200704261834--08422927333928">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.source_1.1.0.v200704261834--1G955I5D897JBG.jar" patch="false" id="org.eclipse.emf.workspace.source" version="1.1.0.v200704261834--1G955I5D897JBG">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace_1.1.0.v200704261834--1G955I5D897JBG.jar" patch="false" id="org.eclipse.emf.workspace" version="1.1.0.v200704261834--1G955I5D897JBG">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples.source_1.0.100.v200704261834.jar" patch="false" id="org.eclipse.emf.transaction.examples.source" version="1.0.100.v200704261834">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.transaction.examples_1.0.100.v200704261834-GDdRTFoJiSjTrPV.jar" patch="false" id="org.eclipse.emf.transaction.examples" version="1.0.100.v200704261834-GDdRTFoJiSjTrPV">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples.source_1.0.100.v200704261834.jar" patch="false" id="org.eclipse.emf.workspace.examples.source" version="1.0.100.v200704261834">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.workspace.examples_1.0.100.v200704261834--2PD88S8KCHAUHN.jar" patch="false" id="org.eclipse.emf.workspace.examples" version="1.0.100.v200704261834--2PD88S8KCHAUHN">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.emfqtv.all.sdk_1.1.0.v200705231807-pIyNY_xY3bai0tc.jar" patch="false" id="org.eclipse.emf.emfqtv.all.sdk" version="1.1.0.v200705231807-pIyNY_xY3bai0tc">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.emfqtv.all_1.1.0.v200704271724-YR-YsRIZGaBbLVq.jar" patch="false" id="org.eclipse.emf.emfqtv.all" version="1.1.0.v200704271724-YR-YsRIZGaBbLVq">
+		<category name="emf transaction SDK 1.1RC1 S200705231648"/>
+	</feature>
+
 <category-def label="EMF SDK 2.3.0M5 S200702121527 (EMF + SDO + XSD)" name="EMF SDK 2.3.0M5 S200702121527">
 		<description>
 This category contains the various features of the 2.3.0M5 S200702121527 build of EMF SDK, which includes EMF, SDO, and XSD source, plugins, and documentation.
@@ -1157,6 +1222,12 @@ This category contains the features of the 1.1RC1 S200705231638 build of emf que
 	<category-def label="emf validation SDK 1.1RC1 S200705231642" name="emf validation SDK 1.1RC1 S200705231642">
 		<description>
 This category contains the features of the 1.1RC1 S200705231642 build of emf validation SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emf transaction SDK 1.1RC1 S200705231648" name="emf transaction SDK 1.1RC1 S200705231648">
+		<description>
+This category contains the features of the 1.1RC1 S200705231648 build of emf transaction SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
