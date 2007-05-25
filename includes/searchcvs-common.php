@@ -159,7 +159,7 @@ while ($row = mysql_fetch_assoc($result))
 		$bugs[] = $row["bugid"]; 
 	}
 	print ($row["bugid"] ? "[<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id={$row['bugid']}\">{$row['bugid']}</a>] " : "");
-	print "<a href=\"" . ($fullpath ? $row['cvsname'] : cvsfile($cvsroot, $row["cvsname"])) . "\"><abbr title=\"{$row['cvsname']}\">$file</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
+	print "<a href=\"" . cvsfile($cvsroot, $row["cvsname"]) . "\"><abbr title=\"{$row['cvsname']}\">" . ($fullpath ? $row['cvsname'] : $file) . "</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
 	print "<ul>\n";
 	print "<li><div>{$row['author']}</div>" . pretty_comment($row["message"], $q) . "</li>";
 	print "</ul>\n";
