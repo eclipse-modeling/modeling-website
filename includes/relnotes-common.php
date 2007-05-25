@@ -108,12 +108,14 @@ if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 
 if (sizeof($rels))
 {
-	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . "</h3>\n";
+	$tnum = 0;
+	ob_start();
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
 		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
+		$tnum += $num;
 
 		print "<ul>\n";
 		print "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed)" : "") . "\n";
@@ -124,43 +126,16 @@ if (sizeof($rels))
 		}
 		if ($num == 0)
 		{
-			/* temporary hack */
-			/* $bugzilla_queries = array(
-				"emf" => 		"classification=Tools&product=EMF",
-				"compare" => 	"classification=Technology&product=EMFT&component=Compare",
-
-				"xsd" => 		"classification=Modeling&product=MDT&product=XSD&classification=Tools&product=XSD",
-				"uml2" => 		"classification=Modeling&product=MDT&component=UML2&classification=Tools&product=UML2",
-				"uml2tools" => "classification=Modeling&product=MDT&component=UML2Tools",
-				"eodm" => "classification=Modeling&product=MDT&component=EODM&classification=Technology&product=EMFT&component=EODM",
-				"ocl" => "classification=Modeling&product=MDT&component=OCL&classification=Technology&product=EMFT&component=OCL",
-				
-				"jet" => "classification=Modeling&product=M2T&component=Jet&classification=Technology&product=EMFT&component=JET",
-				"jeteditor" => "classification=Modeling&product=M2T&component=Jet+Editor&classification=Technology&product=EMFT&component=JET+Editor",
-
-				"cdo" => "classification=Technology&product=EMFT&component=CDO",
-				"net4j" => "classification=Technology&product=EMFT&component=NET4J",
-				
-				"teneo" => "classification=Technology&product=EMFT&component=Teneo",
-				"query" => "classification=Technology&product=EMFT&component=Query",
-				"transaction" => "classification=Technology&product=EMFT&component=Transaction",
-				"validation" => "classification=Technology&product=EMFT&component=Validation",
-			); */
-			print "<li>No bugs fixed for this release" .
-					/*
-					", or <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=176666\">data not found</a>. " .
-					"Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> or " .
-						(array_key_exists($proj,$bugzilla_queries) ? 
-						"<a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?" . $bugzilla_queries[$proj]."&query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=ASSIGNED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=2007-03-01&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=\">query bugzilla for ".$proj."</a>" :
-						"<a href=\"https://bugs.eclipse.org/bugs/query.cgi\">query bugzilla</a>") .
-					" instead" . 
-					*/
-					".</li>\n";
+			print "<li>No bugs fixed for this release.</li>";
 		}
 		print "</ul>\n";
 		print "</li>\n";
 		print "</ul>\n";
 	}
+	$html = ob_get_contents();
+	ob_end_clean();
+	print "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed)</h3>\n";
+	print $html;
 }
 else
 {
@@ -376,7 +351,7 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 			print join("", preg_replace("/(value=\"$row[0]\">.+<\/option>)/", "$1" . join("", $builds), $vpicker));
 		}
 		else //we're looking at builds with no R build above them
-			{
+		{
 			print extra_builds($version, $cvsproj, $cvscom);
 			print join("", $vpicker);
 		}
