@@ -636,13 +636,6 @@ function getBuildConfig($dir)
 	return $results;
 }
 
-function getProjectFromPath($PR)
-	{
-		
-		return preg_replace("#/".$PR."/([^/]+)/build/.+#", "$1", $_SERVER["PHP_SELF"]);
-
-	}
-	
 function getServerName() 
 {
 	$s = null;

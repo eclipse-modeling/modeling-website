@@ -82,8 +82,10 @@ $incubating = array("jet","mtl","xpand","m2tcore","m2tshared"); // projects whic
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+
 $regs = null;
-$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
 
 $Nav->addNavSeparator("M2T", "$rooturl/");
 foreach (array_keys($projects) as $z)
@@ -122,6 +124,4 @@ $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=M2T" . (i
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
 
 unset ($bugcoms);
-
-include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 ?>

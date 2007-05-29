@@ -4,6 +4,7 @@
 # $proj = "/uml2"; 
 # $projct = "uml2";
 # $topProj = "mdt";
+# $componentName = "UML2"; 
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
@@ -20,7 +21,7 @@ $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
 $trans = array_flip($projects);
 
-$projctFromPath = getProjectFromPath();
+$projctFromPath = getProjectFromPath($PR);
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -918,33 +919,26 @@ function loadOptionsFromArray($sp) {
 	return $options;
 }
 
-	function getBranches($options) { 
-		foreach ($options["BranchAndJDK"] as $br => $branch) { 
-				$arr[	getValueFromOptionsString($branch,"name")] = 
-						getValueFromOptionsString($branch,"value");
-		}
-		return $arr;
+function getBranches($options) { 
+	foreach ($options["BranchAndJDK"] as $br => $branch) { 
+			$arr[	getValueFromOptionsString($branch,"name")] = 
+					getValueFromOptionsString($branch,"value");
 	}
+	return $arr;
+}
 
-	function getValueFromOptionsString($opt,$nameOrValue) { 
-		if (strstr($opt,"|selected")) {  // remove the |selected keyword
-			$opt = substr($opt,0,strpos($opt,"|selected"));
-		}
-		if (strstr($opt,"=")) {  // split the name=value pairs, if present
-			if ($nameOrValue=="name" || $nameOrValue===0) { 
-				$opt = substr($opt,0,strpos($opt,"="));
-			} else if ($nameOrValue=="value" || $nameOrValue==1) { 
-				$opt = substr($opt,strpos($opt,"=")+1);
-			}
-		}
-		return $opt;
+function getValueFromOptionsString($opt,$nameOrValue) { 
+	if (strstr($opt,"|selected")) {  // remove the |selected keyword
+		$opt = substr($opt,0,strpos($opt,"|selected"));
 	}
-
-	function getProjectFromPath()
-	{
-		global $topProj;
-		return preg_replace("#/modeling/".$topProj."/([^/]+)/build/.+#","$1",$_SERVER["PHP_SELF"]);
-		
+	if (strstr($opt,"=")) {  // split the name=value pairs, if present
+		if ($nameOrValue=="name" || $nameOrValue===0) { 
+			$opt = substr($opt,0,strpos($opt,"="));
+		} else if ($nameOrValue=="value" || $nameOrValue==1) { 
+			$opt = substr($opt,strpos($opt,"=")+1);
+		}
 	}
+	return $opt;
+}
 
 ?>

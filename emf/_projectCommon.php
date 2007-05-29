@@ -79,8 +79,10 @@ $incubating = array(); // projects which are incubating - EMF will never have in
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+
 $regs = null;
-$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
 $projct= preg_replace("#^/#", "", $proj);
 
 $buildtypes = array(
@@ -126,6 +128,4 @@ $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_
 $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMF%2CXSD%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMF", "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self", 2);
-
-include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 ?>

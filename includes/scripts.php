@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.28 2007/04/26 22:02:59 nickb Exp $ 
+// $Id: scripts.php,v 1.29 2007/05/29 19:24:50 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -547,6 +547,12 @@ function wikiCategoryToListItems($category)
 		}
 	}
 	return $out;
+}
+
+function getProjectFromPath($PR)
+{
+	$m = null;
+	return preg_match("#/".$PR."/([^/]+)/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] : "";
 }
 
 ?>

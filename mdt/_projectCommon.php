@@ -72,8 +72,10 @@ $incubating = array("eodm","uml2tools"); // projects which are still incubating
 
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+
 $regs = null;
-$proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
+$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
 
 $Nav->addNavSeparator("MDT", "$rooturl/");
 foreach (array_keys($projects) as $z)
@@ -113,5 +115,4 @@ $Nav->addCustomNav("Contributors", "$rooturl/eclipse-project-ip-log.csv", "_self
 
 unset ($bugcoms);
 
-include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 ?>
