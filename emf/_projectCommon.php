@@ -29,7 +29,8 @@ else
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
 $cvsprojs = array(
-	"emf" => "org.eclipse.emf"
+	"emf" => "org.eclipse.emf",
+	"sdo" => "org.eclipse.emf.ecore.sdo"
 );
 
 /* sub-projects/components in cvs for projects/components above (if any) */
@@ -72,7 +73,7 @@ $level = array (
  */
 $emft_redirects = null;
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //projects with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("sdo", "emfqtv"); //projects with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("emfqtv"); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array ("sdo","query","transaction","validation", "emfqtv"); //projects without newsgroup
 $nomailinglist = array ("sdo","query","transaction","validation", "emfqtv"); //projects without mailinglist
 $incubating = array(); // projects which are incubating - EMF will never have incubating components!
