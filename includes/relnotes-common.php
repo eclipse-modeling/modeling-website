@@ -21,7 +21,7 @@ if (!isset($cvsprojs) || !is_array($cvsprojs))
 	$cvsprojs = array();
 }
 
-$projectsf = array_flip($projects);
+$projectsf = array_flip(array_diff($projects,$extraprojects,$nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
 
 /* set defaults */
