@@ -4,11 +4,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>EMF Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-05-30T14:54:45Z</updated>
+  <updated>2007-05-31T05:03:16Z</updated>
   <author>
     <name>EMF Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml</id>
+  <entry>
+    <title>[announce] EMF 2.2.4 M200705310000 is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200705310000#M200705310000"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200705310000#M200705310000</id>
+    <updated>2007-05-31T05:03:16Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_2_maintenance" datetime="200705310000" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200705310000#M200705310000" type="M" version="2.2.4">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.4/M200705310000/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=M200705310000
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.4/M200705310000/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC2-200705251350/eclipse-SDK-3.3RC2-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status="CALLISTOSITEREADY"/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] EMF 2.3.0RC2 (S200705300200) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=S200705300200#S200705300200"/>
@@ -85,6 +112,33 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC1-200705171700/eclipse-SDK-3.3RC1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status="CALLISTOSITEREADY"/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] EMF I200705230200 (2.3.0.I200705230200) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200705230200#I200705230200"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200705230200#I200705230200</id>
+    <updated>2007-05-23T07:28:53Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705230200" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200705230200#I200705230200" type="I" version="2.3.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200705230200/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=I200705230200
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-I200705230200.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.0/I200705230200/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/I20070517-1700/eclipse-SDK-I20070517-1700-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status="CALLISTOSITEREADY"/>
       </build>
