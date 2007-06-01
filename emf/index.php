@@ -112,7 +112,7 @@ foreach ($projects as $z)
 		<h6><a href="/modeling/emf/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
 		<?php echo $tmp && array_key_exists($proj,$tmp) && $tmp[$proj] ? $tmp[$proj] . " " : ""; ?>Build News</h6>
 		<?php /* suppress SDO events */
-			  build_news(array_diff($cvsprojs,array("sdo")), $cvscoms, $projct); ?>
+			  build_news(array_diff($cvsprojs,array("org.eclipse.emf.ecore.sdo")), $cvscoms, $projct); ?>
 		<ul>
 			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
