@@ -1,54 +1,44 @@
 <?php
 
-if (is_file($writableRoot . "parsecvs-dbaccess.php") && preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
+if (preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
 {
-	require_once($writableRoot . "parsecvs-dbaccess.php");
-	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
-	if ($connect)
-	{
-		mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
-	}
-	else
-	{
-		$connect = null;
-	}
+	$accessfiles[] = "parsecvs-dbaccess.php";
 }
-else if (is_file($writableRoot . "searchcvs-dbaccess.php"))
+$accessfiles[] = "searchcvs-dbaccess.php";
+
+$connect = null;
+foreach ($accessfiles as $z)
 {
-	require_once $writableRoot . "searchcvs-dbaccess.php";
-	$connect = mysql_connect($dbhost, $dbuser, $dbpass);
-	if ($connect)
+	if (is_file("$writableRoot$z"))
 	{
-		mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
+		require_once("$writableRoot$z");
+		if ($tmp = mysql_connect($dbhost, $dbuser, $dbpass))
+		{
+			$connect = $tmp;
+			mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
+			break;
+		}
+		else
+		{
+			print "<div class=\"qerror\">" . mysql_error() . "</div>";
+		}
 	}
-	else
-	{
-		$connect = null;
-	}
-}
-else
-{
-	$connect = null;
 }
 
 function wmysql_query($sql)
 {
-	global $writableRoot;
-	$showsql = (isset($_GET["showsql"]) && $_GET["showsql"] === "showsql" ? 1 : 0);
-	$res = null;
-	if (is_file($writableRoot . "searchcvs-dbaccess.php"))
+	global $connect;
+
+	if ($connect !== null)
 	{
-		if (isset($showsql) && $showsql)
+		if (isset($_GET["showsql"]) && $_GET["showsql"] == "showsql")
 		{
-			print "<ul><li>$sql</li></ul>\n";	
+			print "<ul><li>$sql</li></ul>\n";
 		}
-		$res = mysql_query($sql);
-		if (!$res) { 
-			print 
-				"<ul>\n" .
-				"<li><small><i>".mysql_error()."</i></small></li>\n" .
-				"</ul>\n";
-			$res = null;
+
+		if (!($res = mysql_query($sql, $connect)))
+		{
+			print "<div class=\"qerror\">" . mysql_error() . "</div>";
 		}
 	}
 	return $res;
