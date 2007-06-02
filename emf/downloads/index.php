@@ -15,6 +15,12 @@ else if (isset($_GET["project"]) && $_GET["project"]=="sdo")
 }
 ob_start();
 
+/* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
+$extraZips = array(
+	"-Standalone",
+	"-Models"
+);
+
 /* config */
 
 /* project => sections => (prettyname => filename) */

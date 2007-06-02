@@ -1,4 +1,7 @@
 <?php
+
+$numzips = $numzips - 2; // the stand-alone & models zips are new
+
 $testsPWD = "";
 $jdk14testsPWD = "";
 $jdk50testsPWD = "";
