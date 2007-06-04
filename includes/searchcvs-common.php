@@ -235,25 +235,6 @@ function pretty_comment($str, $hl)
 	return $str;
 }
 
-function cvsminus($rev)
-{
-	if (preg_match("/^1\.1$/", $rev)) // "1.10" == "1.1" returns true, curiously enough
-	{
-		return $rev;
-	}
-	else
-	{
-		if (preg_match("/\.1$/", $rev))
-		{
-			return preg_replace("/^(\d+\.\d+)\..+$/", "$1", $rev);
-		}
-		else
-		{
-			return preg_replace("/^(.+\.)(\d+)$/e", "\"$1\" . ($2 - 1);", $rev);
-		}
-	}
-}
-
 function showrev($cvsroot, $file, $rev)
 {
 	$link = "<a href=\"" . cvsfile($cvsroot, $file) . "\">$rev</a>";

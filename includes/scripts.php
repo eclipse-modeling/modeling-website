@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.29 2007/05/29 19:24:50 nickb Exp $ 
+// $Id: scripts.php,v 1.30 2007/06/04 16:39:59 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -555,4 +555,22 @@ function getProjectFromPath($PR)
 	return preg_match("#/".$PR."/([^/]+)/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] : "";
 }
 
+function cvsminus($rev)
+{
+	if (preg_match("/^1\.1$/", $rev)) // "1.10" == "1.1" returns true, curiously enough
+	{
+		return $rev;
+	}
+	else
+	{
+		if (preg_match("/\.1$/", $rev))
+		{
+			return preg_replace("/^(\d+\.\d+)\..+$/", "$1", $rev);
+		}
+		else
+		{
+			return preg_replace("/^(.+\.)(\d+)$/e", "\"$1\" . ($2 - 1);", $rev);
+		}
+	}
+}
 ?>
