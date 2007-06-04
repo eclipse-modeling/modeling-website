@@ -9,6 +9,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
  *   totalonly   - OPTIONAL; if set, display only a count of the # of deltas found; overrides showbuglist 
  *   showbuglist - OPTIONAL; if set, display csv list of bugs found                 
  *   bugfilter   - OPTIONAL; if set, filter results if `bugid` defined for each commit; values: "hasbug" or "nobug"
+ *   fullpath    - OPTIONAL; if set, show full file path rather than just the filename
  */
 
 $pagesize = (isset($_GET["showbuglist"]) ? 10000 : 25); //results per page; need more than 25 for meaningful results if showing just list of bugs
@@ -189,6 +190,7 @@ mysql_close($connect);
 		</ul>
 		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p> 
 	</div>
+<?php $printSideitemOnly = true; include_once ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/changeset-common.php"); changesetSideItem(); ?>
 </div>
 <?php
 $html = ob_get_contents();
