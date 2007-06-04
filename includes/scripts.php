@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.30 2007/06/04 16:39:59 nickb Exp $ 
+// $Id: scripts.php,v 1.31 2007/06/04 23:13:00 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -572,5 +572,28 @@ function cvsminus($rev)
 			return preg_replace("/^(.+\.)(\d+)$/e", "\"$1\" . ($2 - 1);", $rev);
 		}
 	}
+}
+
+function changesetForm($bugid = "")
+{
+	?>
+	<form action="http://www.eclipse.org/modeling/emf/news/changeset.php" method="get" target="_blank">
+	<p>
+		<label for="bugid">Bug ID: </label><input size="7" type="text" name="bugid" id="bugid" value="<?php print $bugid; ?>"/>
+		<input type="submit" value="Go!"/>
+	</p>
+	<p><a href="javascript:void(0)" onclick="javascript:this.style.display = 'none'; document.getElementById('changesetinfo').style.display = 'block';">How does this work?</a></p>
+	<div id="changesetinfo" style="display: none">
+		<p>
+			Use this form to generate a bash shell script which can be run against the projects and plugins in your workspace to produce a patch file
+			showing all changes for a given bug.
+		</p>
+		<p>
+			The requested bug must be indexed in the <a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=190525">Search CVS</a> database.
+			Download the generated script for more information. If the script is empty, then the bug was not found.
+		</p>
+	</div>
+	</form>
+<?php
 }
 ?>

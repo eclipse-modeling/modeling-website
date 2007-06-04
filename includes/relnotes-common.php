@@ -173,7 +173,11 @@ print <<<XML
 	</form>
 	</div>
 XML;
-$printSideitemOnly = true; include_once ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/changeset-common.php"); changesetSideItem();
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Generate Changeset</h6>\n";
+changesetForm();
+print "</div>\n";
 
 $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/$proj/news/relnotes-extras.php";
 if (file_exists($f))

@@ -74,12 +74,14 @@ $regs = array();
 $et = "";
 $having = "";
 $ec = "";
+$bugid = "";
 /* this *could* be put into $extraf, but it would change the semantics slightly, in that any number searched for would be treated as a bug #, which i think is undesirable */
 if (preg_match("/^\s*\[?(\d+)\]?\s*$/", $_GET["q"], $regs))
 {
 	$_GET["q"] = $regs[1]; 
 	$where = "WHERE `bugid` = $regs[1]";
 	$et = "Bug #";
+	$bugid = $regs[1];
 }
 else if (preg_match("/(\S)/", $q, $regs) || sizeof($extra["where"]) + sizeof($extra["having"]) > 0)
 {
@@ -190,7 +192,10 @@ mysql_close($connect);
 		</ul>
 		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p> 
 	</div>
-<?php $printSideitemOnly = true; include_once ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/changeset-common.php"); changesetSideItem(); ?>
+	<div class="sideitem">
+		<h6>Generate Changeset</h6>
+		<?php changesetForm($bugid); ?>
+	</div>
 </div>
 <?php
 $html = ob_get_contents();
