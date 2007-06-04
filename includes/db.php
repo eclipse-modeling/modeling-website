@@ -1,4 +1,5 @@
 <?php
+$writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
 
 if (preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]))
 {
