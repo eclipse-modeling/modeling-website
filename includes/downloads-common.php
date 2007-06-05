@@ -952,8 +952,8 @@ function getBuildArtifacts($dir, $branchID)
 
 function showToggle($showAll, $showMax, $sortBy, $count)
 {
-	$ret = "<li><a href=\"" . $_SERVER["PHP_SELF"] . "?showAll=" . ($showAll == "1" ? "" : "1") . "&amp;showMax=$showMax&amp;sortBy=$sortBy\">" . ($showAll != "1" ? "show all $count" : "show only $showMax") . "...</a></li>\n";
-
+	global $projct;
+	$ret = "<li><a href=\"" . $_SERVER["PHP_SELF"] . "?project=".$projct."&amp;showAll=" . ($showAll == "1" ? "" : "1") . "&amp;showMax=$showMax&amp;sortBy=$sortBy\">" . ($showAll != "1" ? "show all $count" : "show only $showMax") . "...</a></li>\n";
 	return $ret;
 }
 
