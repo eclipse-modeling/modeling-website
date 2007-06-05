@@ -10,7 +10,7 @@ foreach ($projects as $name => $suf) {
 	}
 }
 if (array_key_exists("EMF", $newsgroups)) { unset($newsgroups["EMF"]); } /* override */ 
-$newsgroups["EMF &amp; SDO"] = array("tools.emf"); /* override */
+$newsgroups["EMF (incl. Query, Transaction, Validation, SDO)"] = array("tools.emf"); /* override */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
 
 $mailinglists = array();
@@ -21,7 +21,7 @@ foreach ($projects as $name => $suf) {
 	}
 }
 if (array_key_exists("EMF", $mailinglists)) { unset($mailinglists["EMF"]); } /* override */ 
-$mailinglists["EMF &amp; SDO"] = array("emf-dev"); /* override */
+$mailinglists["EMF (incl. Query, Transaction, Validation, SDO)"] = array("emf-dev"); /* override */
 $mailinglists["XSD"] = array("emf-dev", "mdt-xsd.dev"); /* override */
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/newsgroup-mailing-list-common.php");
