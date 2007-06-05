@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.31 2007/06/04 23:13:00 nickb Exp $ 
+// $Id: scripts.php,v 1.32 2007/06/05 21:00:34 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -343,8 +343,8 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out .= "<$tag>";
 	if ($style != "sideitem" && isset($incubating) && in_array($tmp, $incubating))
 	{
-		$out .= '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
-		src="http://www.eclipse.org/modeling/images/gazoo-incubation-icon.png" alt="Validation (Incubation) Phase"
+		$out .= '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right" 
+		src="http://www.eclipse.org/modeling/images/egg-incubation-icon.png" alt="Validation (Incubation) Phase"
 		border="0" /></a>';
 	}
 	$out .= "$nomenclature selection</$tag>\n";

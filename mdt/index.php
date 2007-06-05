@@ -55,10 +55,10 @@ foreach ($projects as $z)
 				print "<h3>";
 				if (isset($incubating) && in_array($projects[$z], $incubating))
 				{
-					print '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
-			    		   	src="http://www.eclipse.org/modeling/images/gazoo-icon.png" alt="Validation (Incubation) Phase"
+					print '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right" 
+			    		   	src="/modeling/images/egg-icon.png" alt="Validation (Incubation) Phase"
 			        		border="0" /></a>';
-					/*print '<a href="http://www.eclipse.org/projects/gazoo.php"><img style="float:right" 
+					/*print '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right" 
 			    		   	src="http://www.eclipse.org/modeling/images/eclipse_incubation_icon_v2.png" alt="Validation (Incubation) Phase"
 			        		border="0" /></a>';*/
 				}
@@ -89,10 +89,10 @@ foreach ($projects as $z)
 	<div class="sideitem">
 	   <h6>Incubation</h6>
 	   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
-	   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
-	        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
+	   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
+	        align="center" src="http://www.eclipse.org/images/egg-incubation.png" 
 	        border="0" /></a></div>
-	   <!-- <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
+	   <!-- <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
 	        align="center" src="/modeling/images/eclipse_incubation_v2.png" 
 	        border="0" /></a><br/>&#160;</div> -->
 	 </div>
@@ -159,4 +159,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.24 2007/04/20 21:09:56 nickb Exp $ -->
+<!-- $Id: index.php,v 1.25 2007/06/05 21:00:34 nickb Exp $ -->

@@ -87,8 +87,8 @@ function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubati
 		<div class="sideitem">
 		   <h6>Incubation</h6>
 		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
-		   <div align="center"><a href="http://www.eclipse.org/projects/gazoo.php"><img 
-		        align="center" src="http://www.eclipse.org/images/gazoo-incubation.jpg" 
+		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
+		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" 
 		        border="0" /></a></div>
 		</div>
 		'; 
