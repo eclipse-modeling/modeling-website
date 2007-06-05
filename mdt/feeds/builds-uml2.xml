@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>UML2 Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-05-31T19:56:12Z</updated>
+  <updated>2007-06-05T16:32:53Z</updated>
   <author>
     <name>UML2 Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml</id>
+  <entry>
+    <title>[announce] uml2 2.1RC2 (2.1.0.S200706051155) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=S200706051155#S200706051155"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=S200706051155#S200706051155</id>
+    <updated>2007-06-05T16:32:53Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200706051155" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=S200706051155#S200706051155" type="S" version="2.1.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2&amp;version=S200706051155
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2-SDK-2.1RC2.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC2-200705251350/eclipse-SDK-3.3RC2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705300200/emf-sdo-xsd-SDK-2.3.0RC2.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] uml2 2.1RC1b (2.1.0.S200705311526) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=S200705311526#S200705311526"/>
