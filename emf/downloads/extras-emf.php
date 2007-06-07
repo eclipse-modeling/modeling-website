@@ -297,7 +297,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 		}
 		$ret .= "<li" . ($sty != "" ? " class=\"$sty\"" : "") . "><div>$stat</div>" . preg_replace("/^(.)/e", "chr(ord(\"$1\")-32)", $t) . "</li>\n";
 
-		$status .= $stat;
+		$status .= " ".$stat;
 	}
 
 	global $isEMFserver;
