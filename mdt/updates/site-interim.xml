@@ -724,6 +724,31 @@
 		<category name="mdt uml2 SDK 2.1RC2 S200706051155"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.eodm.doc_2.0.0.v200706071003.jar" patch="false" id="org.eclipse.eodm.doc" version="2.0.0.v200706071003">
+		<category name="mdt eodm SDK 2.0.0 I200706071003"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.examples_2.0.0.v200706071003.jar" patch="false" id="org.eclipse.eodm.examples" version="2.0.0.v200706071003">
+		<category name="mdt eodm SDK 2.0.0 I200706071003"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.sdk_2.0.0.v200706071003.jar" patch="false" id="org.eclipse.eodm.sdk" version="2.0.0.v200706071003">
+		<category name="mdt eodm SDK 2.0.0 I200706071003"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm.source_2.0.0.v200706071003.jar" patch="false" id="org.eclipse.eodm.source" version="2.0.0.v200706071003">
+		<category name="mdt eodm SDK 2.0.0 I200706071003"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.eodm_2.0.0.v200706071003.jar" patch="false" id="org.eclipse.eodm" version="2.0.0.v200706071003">
+		<category name="mdt eodm SDK 2.0.0 I200706071003"/>
+	</feature>
+
 <category-def label="mdt eodm SDK 0.8.0M5 S200702161050" name="mdt eodm SDK 0.8.0M5 S200702161050">
 		<description>
 This category contains the features of the 0.8.0M5 S200702161050 build of mdt eodm SDK, which includes source, plugins, and documentation.
@@ -849,6 +874,12 @@ This category contains the features of the 2.1RC1b S200705311526 build of mdt um
 	<category-def label="mdt uml2 SDK 2.1RC2 S200706051155" name="mdt uml2 SDK 2.1RC2 S200706051155">
 		<description>
 This category contains the features of the 2.1RC2 S200706051155 build of mdt uml2 SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt eodm SDK 2.0.0 I200706071003" name="mdt eodm SDK 2.0.0 I200706071003">
+		<description>
+This category contains the features of the 2.0.0 I200706071003 build of mdt eodm SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
