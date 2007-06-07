@@ -3,11 +3,13 @@
 $numzips = $numzips - 2; // the stand-alone & models zips are new
 
 $testsPWD = "";
+$jdk13testsPWD = "";
 $jdk14testsPWD = "";
 $jdk50testsPWD = "";
 if ($isEMFserver)
 {
 	$testsPWD 	   = "/home/www-data/oldtests";   // path on emf.torolab ONLY
+	$jdk13testsPWD = "/home/www-data/jdk13tests"; // path on emf.torolab ONLY
 	$jdk14testsPWD = "/home/www-data/jdk14tests"; // path on emf.torolab ONLY
 	$jdk50testsPWD = "/home/www-data/jdk50tests"; // path on emf.torolab ONLY
 }
@@ -239,7 +241,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 	// $testsPWD is path to root of tests; $path defines 2.0/I200405501234/ ... also need to then check subdirs
 
 	$ret = "";
-	$tests = ($type == "jdk50" ? array("build", "junit") : array("build", "junit", "standalone"));
+	$tests = ($type == "jdk50" || $type == "jdk13" ? array("build", "junit") : array("build", "junit", "standalone"));
 	$testDirs = array();
 	if (is_dir($testsPWD . $path) && is_readable($testsPWD . $path))
 	{
@@ -265,7 +267,8 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 		$testlog = ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt");
 		if ($cnt === 0 || preg_match("/^[^EFP]+$/", $cnt)) // nothing, or no E or F or P
 		{
-			$cnt = ($type == "jdk50" ? getJDK50TestResultsFailureCount($f, $t) : getJDK14TestResultsFailureCount($f, $t));
+			$cnt = ($type == "jdk50" ? getJDK50TestResultsFailureCount($f, $t) : 
+					($type == "jdk14" ? getJDK14TestResultsFailureCount($f, $t) : getJDK13TestResultsFailureCount($f, $t) ));
 			if ($cnt === "...") //not done (yet)
 			{
 				$stat = "<a href=\"$testlog\">...</a>";
@@ -376,6 +379,19 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 		$tmp = "<a href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
 	}
 	return "<li>$tmp<ul>$ret</ul></li>";
+}
+
+function getJDK13TestResultsFailureCount($f, $type = "")
+{
+	$issues = array("fail" => 0, "error" => 0, "note" => 0, "deprecate" => 0); //counts
+	$steps = array(1 => "/runJUnitTests:/"); //possible steps and delimiters
+	$parse = array(
+		0 => array("type" => "build", "regex" => array("/\[javac\] (\d+) (fail|error)/", "/\[javac\].+(deprecate)/")),
+		1 => array("type" => "junit", "regex" => array("/\[java\] There (?:was|were) (\d+) (fail|error)/")),
+		2 => array("type" => "standalone", "regex" => array("/\[java\] There (?:was|were) (\d+) (fail|error)/"))
+	);
+
+	return getGenericTestResultsFailureCount($f, $type, $issues, $steps, $parse);
 }
 
 function getJDK14TestResultsFailureCount($f, $type = "")

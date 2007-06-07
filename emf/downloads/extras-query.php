@@ -1,8 +1,4 @@
 <?php
-$testsPWD = "";
-$jdk14testsPWD = "";
-$jdk50testsPWD = "";
-
 /* used for sidebar entry */
 $NLpacks = array(
 	"1.0.x" => "NLS1.0.x"

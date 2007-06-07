@@ -777,7 +777,7 @@ function grep($pattern, $file)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk13testsPWD, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -791,12 +791,26 @@ function outputBuild($branch, $ID, $c)
 	if ($isBuildServer && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
 	{
 	  	$summary = "";
-		$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
-		$summary .= ($summary ? "</span><span>" : "");
-		$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
-		$summary .= ($summary ? "</span><span>" : "");
-		$tests .= getOldTestResults("$testsPWD/", "$branch/$ID/", $summary) . "\n";
-		$summary = ($summary ? "<span>$summary</span>" : "");
+	  	if (isset($jdk13testsPWD) && $jdk13testsPWD && is_dir($jdk13testsPWD))
+	  	{
+			$tests = getJDKTestResults("$jdk13testsPWD/", "$branch/$ID/", "jdk13", $summary) . "\n";
+			$summary .= ($summary ? "</span><span>" : "");
+	  	}
+	  	if (isset($jdk14testsPWD) && $jdk14testsPWD && is_dir($jdk14testsPWD))
+	  	{
+			$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
+			$summary .= ($summary ? "</span><span>" : "");
+	  	}
+	  	if (isset($jdk50testsPWD) && $jdk50testsPWD && is_dir($jdk50testsPWD))
+	  	{
+			$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
+			$summary .= ($summary ? "</span><span>" : "");
+	  	}
+	  	if (isset($testsPWD) && $testsPWD && is_dir($testsPWD))
+	  	{
+			$tests .= getOldTestResults("$testsPWD/", "$branch/$ID/", $summary) . "\n";
+			$summary = ($summary ? "<span>$summary</span>" : "");
+	  	}
 		//print "--$summary--$tests--";
 	}
 
