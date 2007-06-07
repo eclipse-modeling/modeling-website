@@ -32,18 +32,18 @@ org.eclipse.emf.transaction,177643,David Cummings,300 lines,cdamus
 org.eclipse.emf.validation,177645,David Cummings,1327 lines,cdamus
 org.eclipse.emf.transaction,178793,David Cummings,small,cdamus
 org.eclipse.emf.validation,178840,David Cummings,small,cdamus
-,147594,,,
-,149770,,,
-,161744,,,
-,165770,,,
-,166967,,,
-,166112,,,
-,170204,,,
-,156783,,,
-,170223,,,
-,136881,,,
-,179004,,,
-,185971,,,
+,147594,Chris Aniszczyk,,davidms
+,149770,Eric Norman,,merks
+,161744,Ian Bull,,merks
+,166967,Peter Nehrer,,merks
+,166112,Peter Nehrer,,merks
+,165770,Hallvard Traetteberg,,merks
+,170204,John Francis,,marcelop
+,170223,Boris Gruschko,,merks
+,156783,John Didion,,marcelop
+,179004,Paul Elder,,marcelop
+,136881,Patrick Sodre,,merks
+,185971,Richard Backhouse,,merks
 
 Section 3 (Third Party Software),,,,
 
@@ -51,3 +51,5 @@ Name,Location,License,Usage,
 Tomcat 3.2.4, org.eclipse.emf.codegen/codegen.jar,Apache Software License,derivative work,
 XML4J 4.3, org.eclipse.emf.ecore/ecore.jar,Apache Software License,derivative work,
 SDO 1.0 Specification Interfaces,org.eclipse.emf.ecore.commonj.sdo,Royalty-free license from IBM/BEA (see about.html),unmodified source,
+
+# see http://www.eclipse.org/emf/plan/contributors.php for partially generating contributor content from Bugzilla comments
