@@ -20,7 +20,6 @@ $projct= preg_replace("#^/#", "", $proj);
 $params = array(
 	"build" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/$#",
 	"test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
-	"jdk13test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
 	"jdk14test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
 	"jdk50test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#"
 );
@@ -29,7 +28,6 @@ $params = array(
 $files = array(
 	"build" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/downloads/drops/%sbuildlog.txt"),
 	"test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/oldtests/%stestlog.txt"),
-	"jdk13test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk13tests/%stestlog.txt"),
 	"jdk14test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk14tests/%stestlog.txt"),
 	"jdk50test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk50tests/%stestlog.txt")
 );
@@ -47,7 +45,6 @@ $reps = array(
 	"dto" => "download.eclipse.org/tools",
 	"dm" => "download.eclipse.org/modeling",
 	"tests" => "/home/www-data/oldtests", // new path
-	"jdk13tests" => "/home/www-data/jdk13tests",
 	"jdk14tests" => "/home/www-data/jdk14tests",
 	"jdk50tests" => "/home/www-data/jdk50tests"
 );
