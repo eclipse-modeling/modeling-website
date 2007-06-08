@@ -106,13 +106,15 @@ function changeset($bugid, $html = false)
 			$dirVar = dir2var($m[1]);
 			if (preg_match("/^1\.1$/", $row[1]))
 			{
-				$out .= "if [[ \$applyPatch -eq 1 ]]; then\n";
-				$out .= "  pushd \$$dirVar && cvs up -r1.1 $m[2]; popd;\n";
-				$out .= "fi\n";
 				$note .= "if [[ \$applyPatch -eq 1 ]]; then\n";
-				$note .= "  echo '[NOTE] \$$dirVar/$m[2] was added in this changeset. File has been checked out locally but is not in the patch.\n";
+				$note .= "  echo \"[NOTE] \$$dirVar/$m[2] was added in this changeset. File will be checked out locally but is not in the patch.\"\n";
+				$note .= "  if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
+				$note .= "    pushd \$$dirVar && cvs up -r1.1 " . cleanPath($m[2]) . "; popd;\n";
+				$note .= "  else\n";
+				$note .= "    pushd \$$dirVar && cvs up -r1.1 $m[2]; popd;\n";
+				$note .= "  fi\n";
 				$note .= "else\n";
-				$note .= "  echo '[NOTE] \$$dirVar/$m[2] was added in this changeset. You will have to check it out manually:'\n";
+				$note .= "  echo \"[NOTE] \$$dirVar/$m[2] was added in this changeset. You will have to check it out manually:\"\n";
 				$note .= "  echo '  pushd \$$dirVar && cvs up -r1.1 $m[2]; popd;'\n";
 				$note .= "fi\n";
 			}
