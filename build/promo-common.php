@@ -306,7 +306,7 @@ else
 	 ($_POST["build_Update_IES_MAP_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
 	 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
 	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
-	 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noies') .
+	 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noIES') .
 	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
