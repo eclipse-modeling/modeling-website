@@ -572,18 +572,18 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			{
 				if (preg_match("/<font size=\"-1\" color=\"#FF0000\">skipped<\/font>/", $indexHTML))
 				{
-					$result = "Skipped";
 					$icon = "check-maybe";
+					$result = "Skipped";
 				} 
 				else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
 				{
-					$result = "FAILED";
 					$icon = "not";
+					$result = "FAILED";
 				} 
 				else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
 				{
-					$result = "TESTS FAILED";
 					$icon = "check-tests-failed";
+					$result = "TESTS FAILED";
 				}
 			}
 		}
@@ -624,13 +624,13 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 			if ($result != "FAILED" && $mightHavePassed)
 			{
-				$result = "Stalled!";
 				$icon = "check-maybe";
+				$result = "Stalled!";
 			}
 			else if ($result != "FAILED" && !$mightHavePassed)
 			{
-				$result = "FAILED";
 				$icon = "not";
+				$result = "FAILED";
 			}
 		}
 	}
@@ -658,8 +658,8 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	$link2 = ($isBuildServer ? "" : "http://download.eclipse.org/") . $link2;
 
 	$out .= "<a " . 
-		(preg_match("/FAIL/",$result) || $didnotruns > 0 || $errors > 0 || $failures > 0 ? "style=\"font-weight:bold;color:red\" " :
-			($warnings > 0 ? "style=\"font-weight:bold;color:orange\" " : 
+		(preg_match("/FAIL|CAUTION|ERROR/",$result) || $didnotruns > 0 || $errors > 0 || $failures > 0 ? "style=\"font-weight:bold;color:red\" " :
+			(preg_match("/Testing|Stalled|Skipped/",$result) || $warnings > 0 ? "style=\"font-weight:bold;color:orange\" " : 
 				"style=\"font-weight:bold;color:darkgreen\" ") ) . 
 		"href=\"$link2\">$result";
 	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
