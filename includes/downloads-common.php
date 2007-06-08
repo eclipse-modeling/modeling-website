@@ -657,7 +657,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	}
 	$link2 = ($isBuildServer ? "" : "http://download.eclipse.org/") . $link2;
 
-	$out .= "<a href=\"$link2\">$result";
+	$out .= "<a " . ($didnotruns > 0 || $errors > 0 || $failures > 0 ? "style=\"font-weight:bold;color:red\" " : "") . "href=\"$link2\">$result";
 	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
 	{
 		$out .= "Success";

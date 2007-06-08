@@ -264,6 +264,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 	{
 		$stat = "";
 		$sty = "";
+		$linksty = "";
 		$testlog = ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt");
 		if ($cnt === 0 || preg_match("/^[^EFP]+$/", $cnt)) // nothing, or no E or F or P
 		{
@@ -288,12 +289,13 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 			else //something else
 			{
 				$sty = (preg_match("/[EF]/", $cnt) ? "errors" : "warnings");
-				$stat = "<a href=\"$testlog\">$cnt</a>";
+				$linksty = preg_match("/[EF]/", $cnt) ? "style=\"font-weight:bold;color:red\" " : "";
+				$stat = "<a " . $linksty . "href=\"$testlog\">$cnt</a>";
 			}
 		}
 		else // if we failed on the build, the JUnit stuff won't run (if javacFailOnError=true in runJDK14Tests.xml)
 		{
-			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/question.gif\" alt=\"Did Not Run - Previous Test Failed!\"/></a>";
+			$stat = "<a " . $linksty . "href=\"$testlog\"><img src=\"/modeling/images/question.gif\" alt=\"Did Not Run - Previous Test Failed!\"/></a>";
 		}
 		$ret .= "<li" . ($sty != "" ? " class=\"$sty\"" : "") . "><div>$stat</div>" . preg_replace("/^(.)/e", "chr(ord(\"$1\")-32)", $t) . "</li>\n";
 
@@ -304,7 +306,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 	$tmp = preg_replace("/^(.+?)(\d)(\d)$/e", "strtoupper(\"$1\") . \" $2.$3\"", $type) . " Tests";
 	if (is_file("$testsPWD$path$testDirs[0]/testlog.txt"))
 	{
-		$tmp = "<a href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
+		$tmp = "<a  " . $linksty . "href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
 	}
 
 	return "<li>$tmp<ul>$ret</ul></li>";
@@ -348,6 +350,7 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 	{
 		$stat = "";
 		$sty = "";
+		$linksty = "";
 		$cnt = getTestResultsFailureCount($testsPWD . $path, $testDirs, $log);
 		$testlog = "$pre$mid$path$testDirs[0]/$log";
 		if ($cnt === "")
@@ -365,7 +368,8 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 		else
 		{
 			$sty = "errors"; // it's always a failure here (see below)
-			$stat = " <a href=\"$testlog\">$cnt F</a> ";
+			$linksty = "style=\"font-weight:bold;color:red\" ";
+			$stat = " <a " . $linksty . "href=\"$testlog\">$cnt F</a> ";
 		}
 		$ret .= "<li" . ($sty != "" ? " class=\"$sty\"" : "") . "><div>$stat</div>" . strtoupper($t) . "</li>\n";
 
@@ -376,7 +380,7 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 	$tmp = "Old Tests";
 	if (is_file("$testsPWD$path$testDirs[0]/testlog.txt"))
 	{
-		$tmp = "<a href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
+		$tmp = "<a " . $linksty . "href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
 	}
 	return "<li>$tmp<ul>$ret</ul></li>";
 }
