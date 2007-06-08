@@ -289,7 +289,9 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 			else //something else
 			{
 				$sty = (preg_match("/[EF]/", $cnt) ? "errors" : "warnings");
-				$linksty = preg_match("/[EF]/", $cnt) ? "style=\"font-weight:bold;color:red\" " : "";
+				$linksty = preg_match("/[EF]/", $cnt) ? "style=\"font-weight:bold;color:red\" " : 
+					(preg_match("/[W]/", $cnt) ? "style=\"font-weight:bold;color:orange\" " : 
+						"style=\"font-weight:bold;color:darkgreen\" ");
 				$stat = "<a " . $linksty . "href=\"$testlog\">$cnt</a>";
 			}
 		}
