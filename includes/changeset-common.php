@@ -87,7 +87,11 @@ function changeset($bugid, $html = false)
 		$mid .= "rm -i \$$dirVar/changeset_$bugid.patch;\n";
 		
 		$end .= "if [[ \$applyPatch -eq 1 ]]; then\n";
-		$end .= "  pushd \$$dirVar && patch -p0 <changeset_$bugid.patch; popd;\n";
+		$end .= "  if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
+		$end .= "    patch -p0 <changeset_$bugid.patch;\n";
+		$end .= "  else\n";
+		$end .= "    pushd \$$dirVar && patch -p0 <changeset_$bugid.patch; popd;\n";
+		$end .= "  fi\n";
 		$end .= "fi\n";
 		$dirVar = null;
 	}
@@ -109,7 +113,7 @@ function changeset($bugid, $html = false)
 				$note .= "if [[ \$applyPatch -eq 1 ]]; then\n";
 				$note .= "  echo \"[NOTE] \$$dirVar/$m[2] was added in this changeset. File will be checked out locally but is not in the patch.\"\n";
 				$note .= "  if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
-				$note .= "    pushd . && cvs up -r1.1 " . cleanPath($m[2]) . "; popd;\n";
+				$note .= "    cvs up -r1.1 " . cleanPath($m[2]) . ";\n";
 				$note .= "  else\n";
 				$note .= "    pushd \$$dirVar && cvs up -r1.1 $m[2]; popd;\n";
 				$note .= "  fi\n";
@@ -121,7 +125,7 @@ function changeset($bugid, $html = false)
 			else
 			{
 				$out .= "if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
-				$out .= "  pushd . && cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] " . cleanPath($m[2]) . " >>changeset_$bugid.patch; popd; echo;\n";
+				$out .= "  cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] " . cleanPath($m[2]) . " >>changeset_$bugid.patch; echo;\n";
 				$out .= "else\n";
 				$out .= "  pushd \$$dirVar && cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] $m[2] >>changeset_$bugid.patch; popd; echo;\n";
 				$out .= "fi\n";
