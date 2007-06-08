@@ -48,20 +48,52 @@ else
 
 function changeset($bugid, $html = false)
 {
-	$out = "#!/bin/bash\n\n";
 	$end = "";
+	$mid = "";
 	$note = "";
+
+	$out = "#!/bin/bash\n\n";
 	$out .= "# This script can be used to generate a complete changeset patch file for bug #$bugid\n\n";
+	
 	$out .= "# If you do not have the appropriate plugins or projects checked out into ~/workspace,\n";
 	$out .= "# modify this script accordingly.\n\n";
+	
 	$out .= "# Make sure this file is executable (chmod 755).\n\n";
-	$out .= "cd ~/workspace/\n";
+	
+	$out .= "#### CONFIGURATION BEGIN ####\n\n";
+	
+	$out .= "# pluginsInWorkspace=0: you have an entire uber-project checked out (eg., org.eclipse.mdt)\n";
+	$out .= "# pluginsInWorkspace=1: you have individual plugins/features checked out (eg., org.eclipse.emf.codegen)\n";
+	$out .= "pluginsInWorkspace=0;\n\n";
+	
+	$out .= "# workspace; enter path to where your project/plugins/features are checked out\n";
+	$out .= "workspace=\"~/eclipse/workspace\";\n\n";
+	
+	$out .= "# applyPatch=0; generate patch but do NOT apply it\n";
+	$out .= "# applyPatch=1; generate patch and apply it\n";
+	$out .= "applyPatch=0;\n\n";
+	
 	$result = wmysql_query("SELECT `project` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `bugid` = $bugid GROUP BY `project` ORDER BY `date` DESC");
+	if ($result)
+	{
+		$out .= "# path aliases (eg., useful if you have renamed projects from org.eclipse.emf to org.eclipse.emf_R2_0m)\n";
+	}
 	while ($row = mysql_fetch_row($result))
 	{
-		$out .= "rm -i $row[0]/changeset.patch\n";
-		$end .= "pushd $row[0] && patch -p0 <changeset.patch; popd;\n";
+		$dirVar = dir2var($row[0]);
+		$out .= "# $dirVar; path alias for $row[0]\n";
+		$out .= "$dirVar=\"".$row[0]."\";\n\n";
+
+		$mid .= "rm -i $dirVar/changeset_$bugid.patch\n";
+		
+		$end .= "if [[ \$applyPatch -eq 1 ]]; then\n";
+		$end .= "  pushd $dirVar && patch -p0 <changeset_$bugid.patch; popd;\n";
+		$end .= "fi\n";
+		$dirVar = null;
 	}
+
+	$out .= "cd \$workspace/\n";
+	$out .= "\n".$mid;
 
 	$result = wmysql_query("SELECT `cvsname`, `revision` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `bugid` = $bugid GROUP BY `fid`, `revision`, `bugid` ORDER BY `date` DESC");
 	while ($row = mysql_fetch_row($result))
@@ -69,21 +101,36 @@ function changeset($bugid, $html = false)
 		$m = null;
 		if (preg_match("#^(?:/[^/]+){2}/([^/]+)/(.+),v$#", $row[0], $m))
 		{
+			$dirVar = dir2var($m[1]);
 			if (preg_match("/^1\.1$/", $row[1]))
 			{
-				$out .= "pushd $m[1] && cvs up -r1.1 $m[2]; popd;\n";
-				$note .= "echo '[NOTE] $m[1]/$m[2] was added in this changeset, the file has been changed in your working copy, but this is not reflected in the patch(es)!'\n";
+				$out .= "pushd $dirVar && cvs up -r1.1 $m[2]; popd;\n";
+				$note .= "echo '[NOTE] $dirVar/$m[2] was added in this changeset, the file has been changed in your working copy, but this is not reflected in the patch(es)!'\n";
 			}
 			else
 			{
-				$out .= "pushd $m[1] && cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] $m[2] >>changeset.patch; popd; echo;\n";
+				$out .= "if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
+				$out .= "  pushd $dirVar && cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] $m[2] >>changeset_$bugid.patch; popd; echo;\n";
+				$out .= "else\n";
+				$out .= "  pushd $dirVar && cvs diff -u -r" . cleanPath(cvsminus($row[1])) . " -r$row[1] $m[2] >>changeset_$bugid.patch; popd; echo;\n";
+				$out .= "fi\n";
 			}
 		}
 	}
 
-	$out .= $end;
-	$out .= $note;
+	$out .= "\n" . $end;
+	$out .= "\n" . $note;
 
 	return ($html ? htmlspecialchars($out) : $out);
+}
+
+function dir2var($in)
+{
+	return str_replace(".","_",$in);
+}
+
+function cleanPath($in)
+{
+	return preg_replace("#plugins/|tests/|features/|examples/|doc/#","",$in);
 }
 ?>
