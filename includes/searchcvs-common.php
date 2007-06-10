@@ -27,8 +27,8 @@ $extraf = array(
 	array("regex" => "/file: ?(\S+)/", "sql" => "`cvsname` LIKE '%%%s%%'", "sqlpart" => "where"),
 	array("regex" => "/days: ?(\d+)/", "sql" => "`date` >= DATE_SUB(CURDATE(), INTERVAL %d DAY)", "sqlpart" => "where"),
 	array("regex" => "/(?:project|module): ?(\S+)/", "sql" => "`project` LIKE '%s'", "sqlpart" => "where"),
-	array("regex" => "/startdate: ?(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)/", "sql" => "`date` >= STR_TO_DATE('%s', '%%Y-%%m-%%d %%T')", "sqlpart" => "where"),
-	array("regex" => "/enddate: ?(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)/", "sql" => "`date` <= STR_TO_DATE('%s', '%%Y-%%m-%%d %%T')", "sqlpart" => "where"),
+	array("regex" => "/startdate: ?(\d{4}-\d\d-\d\d(?: \d\d:\d\d(?::\d\d)?)?)/", "sql" => "`date` >= '%s'", "sqlpart" => "where"),
+	array("regex" => "/enddate: ?(\d{4}-\d\d-\d\d(?: \d\d:\d\d(?::\d\d)?)?)/", "sql" => "`date` <= '%s'", "sqlpart" => "where"),
 	array("regex" => "/branch: ?(\S+)/", "sql" => "`branch` LIKE '%%%s%%'", "sqlpart" => "where")
 );
 
