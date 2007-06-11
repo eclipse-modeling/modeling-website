@@ -84,7 +84,7 @@ function changeset($bugid, $html = false)
 		$out .= "# $dirVar; path alias for $row[0]\n";
 		$out .= "$dirVar=\"".$row[0]."\";\n\n";
 
-		$mid .= "rm -i \$$dirVar/changeset_$bugid.patch;\n";
+		$mid .= "if [[ -f \$$dirVar/changeset_$bugid.patch ]]; then rm -i \$$dirVar/changeset_$bugid.patch; fi\n";
 		
 		$end .= "if [[ \$applyPatch -eq 1 ]]; then\n";
 		$end .= "  if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
