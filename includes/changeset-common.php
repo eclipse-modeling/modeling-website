@@ -121,15 +121,15 @@ function changeset($bugid, $html = false)
 				$note .= "  fi\n";
 				$note .= "else\n";
 				$note .= "  echo \"[NOTE] \$$dirVar/$m[2] was added in this changeset. You will have to check it out manually:\"\n";
-				$note .= "  echo '  pushd \$$dirVar && cvs up -r1.1 $m[2]; popd;'\n";
+				$note .= "  echo '    cvs up -r1.1 $m[2];'\n";
 				$note .= "fi\n";
 			}
 			else
 			{
 				$out .= "if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
-				$out .= "  cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] " . cleanPath($m[2]) . " >>changeset_$bugid.patch; echo;\n";
+				$out .= "  cvs diff -u -w -r" . cvsminus($row[1]) . " -r$row[1] " . cleanPath($m[2]) . " >>changeset_$bugid.patch; echo;\n";
 				$out .= "else\n";
-				$out .= "  pushd \$$dirVar && cvs diff -u -r" . cvsminus($row[1]) . " -r$row[1] $m[2] >>changeset_$bugid.patch; popd; echo;\n";
+				$out .= "  pushd \$$dirVar && cvs diff -u -w -r" . cvsminus($row[1]) . " -r$row[1] $m[2] >>changeset_$bugid.patch; popd; echo;\n";
 				$out .= "fi\n";
 			}
 		}
