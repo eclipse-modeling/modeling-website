@@ -67,7 +67,7 @@ function changeset($bugid, $html = false)
 	$out .= "pluginsInWorkspace=0;\n\n";
 	
 	$out .= "# workspace; enter path to where your project/plugins/features are checked out\n";
-	$out .= "workspace=\"~/eclipse/workspace\";\n\n";
+	$out .= "workspace=~/eclipse/workspace;\n\n";
 	
 	$out .= "# applyPatch=0; generate patch but do NOT apply it\n";
 	$out .= "# applyPatch=1; generate patch and apply it\n";
