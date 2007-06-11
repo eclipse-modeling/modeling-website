@@ -100,6 +100,8 @@ function changeset($bugid, $html = false)
 	
 	$out .= "cd \$workspace;\n";
 	$out .= "\n# remove any existing versions of this patch\n".$mid."\n";
+	
+	$out .= "\nGenerating patch file: \$$dirVar/changeset_$bugid.patch ...\n";
 
 	$result = wmysql_query("SELECT `cvsname`, `revision` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `bugid` = $bugid GROUP BY `fid`, `revision`, `bugid` ORDER BY `date` DESC");
 	while ($row = mysql_fetch_row($result))
