@@ -50,6 +50,7 @@ function changeset($bugid, $html = false)
 {
 	$end = "";
 	$mid = "";
+	$mid2 = "";
 	$note = "";
 
 	$out = "#!/bin/bash\n\n";
@@ -85,7 +86,8 @@ function changeset($bugid, $html = false)
 		$out .= "$dirVar=\"".$row[0]."\";\n\n";
 
 		$mid .= "if [[ -f \$$dirVar/changeset_$bugid.patch ]]; then rm -i \$$dirVar/changeset_$bugid.patch; fi\n";
-		
+		$mid2 .= "echo \"Patch file to generate: \$$dirVar/changeset_$bugid.patch\";\n";
+
 		$end .= "if [[ \$applyPatch -eq 1 ]]; then\n";
 		$end .= "  if [[ \$pluginsInWorkspace -eq 1 ]]; then\n";
 		$end .= "    patch -p0 <changeset_$bugid.patch;\n";
@@ -99,10 +101,8 @@ function changeset($bugid, $html = false)
 	$out .= "#### CONFIGURATION DONE ####\n\n";
 	
 	$out .= "cd \$workspace;\n";
-	$out .= "\n# remove any existing versions of this patch\n".$mid."\n";
+	$out .= "\n# remove any existing versions of this patch\n".$mid."\n".$mid2;
 	
-	$out .= "\necho \"Generating patch file: \$$dirVar/changeset_$bugid.patch ...\";\n";
-
 	$result = wmysql_query("SELECT `cvsname`, `revision` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `bugid` = $bugid GROUP BY `fid`, `revision`, `bugid` ORDER BY `date` DESC");
 	while ($row = mysql_fetch_row($result))
 	{
