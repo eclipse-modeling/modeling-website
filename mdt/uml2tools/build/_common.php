@@ -2,7 +2,7 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "M4_33",
+	"BaseBuilderBranch" => "RC3_33",
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
