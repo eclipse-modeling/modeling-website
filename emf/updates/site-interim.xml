@@ -2222,6 +2222,46 @@
 		<category name="EMF SDK 2.1.3 M200706081150"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.emf.query.doc_1.1.0.v200706071712-21-8s733G3E4C5B76.jar" patch="false" id="org.eclipse.emf.query.doc" version="1.1.0.v200706071712-21-8s733G3E4C5B76">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl.source_1.1.0.v200706071712-10-7w311817182823.jar" patch="false" id="org.eclipse.emf.query.ocl.source" version="1.1.0.v200706071712-10-7w311817182823">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.ocl_1.1.0.v200706071712-10-7w311817182823.jar" patch="false" id="org.eclipse.emf.query.ocl" version="1.1.0.v200706071712-10-7w311817182823">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.sdk_1.1.0.v200706071712-54-91D6X1LPDtFpGfFcJIHt955I5.jar" patch="false" id="org.eclipse.emf.query.sdk" version="1.1.0.v200706071712-54-91D6X1LPDtFpGfFcJIHt955I5">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.source_1.1.0.v200706071712-10-7w311817182823.jar" patch="false" id="org.eclipse.emf.query.source" version="1.1.0.v200706071712-10-7w311817182823">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query_1.1.0.v200706071712-10-7w311817182823.jar" patch="false" id="org.eclipse.emf.query" version="1.1.0.v200706071712-10-7w311817182823">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples.source_1.1.0.v200706071712.jar" patch="false" id="org.eclipse.emf.query.examples.source" version="1.1.0.v200706071712">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.query.examples_1.1.0.v200706071712-428Y_kE77Y7U9QAOEC.jar" patch="false" id="org.eclipse.emf.query.examples" version="1.1.0.v200706071712-428Y_kE77Y7U9QAOEC">
+		<category name="emf query SDK 1.1RC3 S200706131122"/>
+	</feature>
+
 <category-def label="EMF SDK 2.3.0M5 S200702121527 (EMF + SDO + XSD)" name="EMF SDK 2.3.0M5 S200702121527">
 		<description>
 This category contains the various features of the 2.3.0M5 S200702121527 build of EMF SDK, which includes EMF, SDO, and XSD source, plugins, and documentation.
@@ -2371,6 +2411,12 @@ This category contains the features of the 1.1.0 I200706071501 build of emf tran
 	<category-def label="EMF SDK 2.1.3 M200706081150 (EMF + SDO + XSD)" name="EMF SDK 2.1.3 M200706081150">
 		<description>
 This category contains the various features of the 2.1.3 M200706081150 build of EMF SDK, which includes EMF, SDO, and XSD source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="emf query SDK 1.1RC3 S200706131122" name="emf query SDK 1.1RC3 S200706131122">
+		<description>
+This category contains the features of the 1.1RC3 S200706131122 build of emf query SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
