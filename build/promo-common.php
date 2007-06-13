@@ -304,7 +304,7 @@ else
 	' -buildID ' . $ID .
 	' -user ' . $options["Users"][1] .
 	 ($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
-	 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
+	 ($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
 	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
 	 ($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
