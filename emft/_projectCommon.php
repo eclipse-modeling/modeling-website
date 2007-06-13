@@ -31,8 +31,7 @@ $projects = array(
 	"Search" => "search",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
-	"Teneo" => "teneo",
-	"JET Editor" => "jeteditor"
+	"Teneo" => "teneo"
 );
 
 $cvsprojs = array();
@@ -41,7 +40,6 @@ $cvsprojs = array();
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.emft" => array(
-		"jeteditor" => "jeteditor",
 		"cdo" => "cdo",
 		"net4j" => "net4j",
 		"teneo" => "teneo"
@@ -63,11 +61,11 @@ $extraprojects = array(
 $nodownloads = array("coordinated","jcrm","search"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
-$incubating = array("cdo","eodm","jet","jeteditor","net4j","teneo","jcrm","compare","search"); // components which are still incubating
+$incubating = array("cdo","net4j","teneo","jcrm","compare","search"); // components which are still incubating
 $hasmoved = array(
 				"query" => "emf", "transaction" => "emf", "validation" => "emf", 
 				"eodm" => "mdt", "ocl" => "mdt", 
-				"jet" => "m2t"); // components which have moved, and to where
+				"jet" => "m2t", "jeteditor" => "m2t"); // components which have moved, and to where
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
