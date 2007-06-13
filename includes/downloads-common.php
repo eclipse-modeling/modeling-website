@@ -980,7 +980,11 @@ function showArchived($oldrels)
 	print "<ul id=\"archives\">\n";
 	foreach (array_keys($oldrels) as $z)
 	{
-		if (!is_array($oldrels[$z]))
+		if (!$z || $oldrels[$z] === null)
+		{
+			print "<br/>"; # spacer
+		}
+		else if (!is_array($oldrels[$z]))
 		{
 			print "<li><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]/\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";
 		}
