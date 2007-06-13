@@ -224,7 +224,7 @@ function doSubmit() {
 
 function doOnclickBugzonly(booln) {
 	with (document.forms.promoForm) {
-		build_Update_IES_MAP_File.disabled=booln;
+		build_Update_IES_Map_File.disabled=booln;
 		build_IES_CVS_Branch.disabled=booln;
 		build_Announce_In_Newsgroup.disabled=booln;
 		build_Update_Coordinated_Update_Site.disabled=booln;
@@ -303,10 +303,10 @@ else
 	' -branch ' . $BR .
 	' -buildID ' . $ID .
 	' -user ' . $options["Users"][1] .
-	 ($_POST["build_Update_IES_MAP_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
+	 ($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
 	 ($_POST["build_IES_CVS_Branch"]        != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
 	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
-	 ($_POST["build_Update_IES_MAP_File"]   != "" ? '' : ' -noIES') .
+	 ($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
