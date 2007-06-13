@@ -54,7 +54,32 @@
 		<category name="emft teneo SDK 0.8.0 I200704230019"/>
 	</feature>
 
-	<category-def label="emft teneo SDK 0.7.5 M200704222357" name="emft teneo SDK 0.7.5 M200704222357">
+	
+	<feature url="features/org.eclipse.emf.compare.doc_0.7.0.I200706130300.jar" patch="false" id="org.eclipse.emf.compare.doc" version="0.7.0.I200706130300">
+		<category name="emft compare SDK 0.7.0 I200706130300"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.compare.sdk_0.7.0.v200706130300.jar" patch="false" id="org.eclipse.emf.compare.sdk" version="0.7.0.v200706130300">
+		<category name="emft compare SDK 0.7.0 I200706130300"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.compare.source_0.7.0.v200706130300.jar" patch="false" id="org.eclipse.emf.compare.source" version="0.7.0.v200706130300">
+		<category name="emft compare SDK 0.7.0 I200706130300"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.compare_0.7.0.v200706130300.jar" patch="false" id="org.eclipse.emf.compare" version="0.7.0.v200706130300">
+		<category name="emft compare SDK 0.7.0 I200706130300"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.emf.compare.examples_0.7.0.I200706130300.jar" patch="false" id="org.eclipse.emf.compare.examples" version="0.7.0.I200706130300">
+		<category name="emft compare SDK 0.7.0 I200706130300"/>
+	</feature>
+
+<category-def label="emft teneo SDK 0.7.5 M200704222357" name="emft teneo SDK 0.7.5 M200704222357">
 		<description>
 This category contains the features of the 0.7.5 M200704222357 build of emft teneo SDK, which includes source, plugins, and documentation.
 		</description>
@@ -213,4 +238,10 @@ This category contains the features of the 0.8.0 I200703030036 build of emft jet
 		</description>
 	</category-def>
 
+
+	<category-def label="emft compare SDK 0.7.0 I200706130300" name="emft compare SDK 0.7.0 I200706130300">
+		<description>
+This category contains the features of the 0.7.0 I200706130300 build of emft compare SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
 </site>	
