@@ -41,7 +41,7 @@
 		<list name="xsd-dev"/>
 	</mailing-lists>
 
-	<newsgroups>
+	<newsgroups url="/modeling/emf/newsgroup-mailing-list.php">
 		<newsgroup name="eclipse.tools.emf"/>
 		<newsgroup name="eclipse.technology.xsd"/>
 	</newsgroups>
