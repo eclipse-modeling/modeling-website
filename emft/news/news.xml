@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="June 07, 2007" showOn="whatsnew">
+	JET Editor has been merged into <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">M2T-JET</a>.
+</news>
+<news date="April 26, 2007" showOn="whatsnew">
+	JET has moved to <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">Model To Text (M2T)</a>.
+</news>
+<news date="April 26, 2007" showOn="whatsnew">
+	Query, Transaction and Validation have moved to <a href="http://www.eclipse.org/modeling/emf/">Eclipse Modeling Framework (EMF)</a>.
+</news>
+<news date="February 16, 2007" showOn="whatsnew">
+	EODM has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">Model Development Tools (MDT)</a>.
+</news>
+<news date="January 29, 2007" showOn="whatsnew">
+	OCL has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Model Development Tools (MDT)</a>.
+</news>
 <news date="December 22, 2006" showOn="whatsnew">
     Query/Transaction/Validation 1.1 Milestone 4 is now available for
     <a href="http://www.eclipse.org/emft/downloads/">download</a>.
@@ -11,4 +26,4 @@
 	<a href="http://www.eclipse.org/modeling/mdt/eodm/docs/articles/EODM_Documentation/">EODM Initial Documentation</a> is available !
 </news>
 </doc>
-<!-- $Id: news.xml,v 1.2 2007/04/17 21:46:00 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.3 2007/06/13 19:45:39 nickb Exp $ -->
