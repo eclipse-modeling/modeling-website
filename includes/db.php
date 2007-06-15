@@ -16,12 +16,12 @@ foreach ($accessfiles as $z)
 		if ($tmp = mysql_connect($dbhost, $dbuser, $dbpass))
 		{
 			$connect = $tmp;
-			mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error());
+			mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error($connect));
 			break;
 		}
 		else
 		{
-			print "<div class=\"qerror\">" . mysql_error() . "</div>";
+			print "<div class=\"qerror\">" . mysql_error($connect) . "</div>";
 		}
 	}
 }
@@ -39,7 +39,7 @@ function wmysql_query($sql)
 
 		if (!($res = mysql_query($sql, $connect)))
 		{
-			print "<div class=\"qerror\">" . mysql_error() . "</div>";
+			print "<div class=\"qerror\">" . mysql_error($connect) . "</div>";
 		}
 	}
 	return $res;
