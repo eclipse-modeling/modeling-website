@@ -1,5 +1,14 @@
 <?php
-require_once("../includes/db.php");
+
+require_once ("../includes/buildServer-common.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/scripts.php");
+$isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
+internalUseOnly(); 
+
+include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 /* projects or components for which there are currently no stats stored (such as for new projects) need to have a placeholder entry before they will be accounted for
  * this placeholder entry must be one day before the first day for which you would like stats to be stored
