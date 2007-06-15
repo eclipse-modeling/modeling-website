@@ -1,0 +1,152 @@
+ul.stats li
+{
+	position: relative;
+	border-bottom-width: 0;
+}
+
+ul.stats li.sep
+{
+	border-bottom-width: 1px;
+}
+
+ul.stats li span.daterange
+{
+	display: none;
+}
+
+ul.stats li.sep span.daterange
+{
+	display: inline;
+}
+
+ul.stats li div.bar
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(/modeling/images/bar.png);
+	background-repeat: repeat-x;
+	z-index: 1;
+}
+
+ul.stats li div.name
+{
+	position: relative;
+	z-index: 2;
+}
+
+ul.stats li span
+{
+	float: right;
+	position: relative;
+	z-index: 2;
+}
+
+div#querybox
+{
+	margin: 1em 0 1em 0;
+	text-align: center;
+}
+
+div#querybox input[type="text"]
+{
+	margin: 0 0.5em 0 0.5em;
+}
+
+div#querybox input[type="checkbox"]
+{
+	margin-top: 0.5em;
+}
+
+div#querybox input,
+div#querybox select
+{
+	margin: 0.5em 0 0.5em 0;
+}
+
+div#midcolumn div.homeitem3col h3 a,
+div#midcolumn div.homeitem h3 a
+{
+	color: white;
+}
+
+body.ajax div#midcolumn div.homeitem3col:target,
+body.ajax div#midcolumn div.homeitem:target
+{
+	outline: 2px dashed orange;
+}
+
+body.ajax div#midcolumn div.homeitem3col.closed ul,
+body.ajax div#midcolumn div.homeitem3col.closed p,
+body.ajax div#midcolumn div.homeitem.closed ul,
+body.ajax div#midcolumn div.homeitem.closed p
+{
+	display: none;
+}
+
+body.ajax div#midcolumn div.homeitem3col h3 a[onclick="javascript:toggle(this, false)"],
+body.ajax div#midcolumn div.homeitem h3 a[onclick="javascript:toggle(this, false)"]
+{
+	padding-right: 12px;
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+
+body.ajax div#midcolumn div.homeitem3col.open h3 a[onclick="javascript:toggle(this, false)"],
+body.ajax div#midcolumn div.homeitem.open h3 a[onclick="javascript:toggle(this, false)"]
+{
+	background-image: url(/modeling/images/up.png);
+}
+
+body.ajax div#midcolumn div.homeitem3col.closed h3 a[onclick="javascript:toggle(this, false)"],
+body.ajax div#midcolumn div.homeitem.closed h3 a[onclick="javascript:toggle(this, false)"]
+{
+	background-image: url(/modeling/images/down.png);
+}
+
+div#midcolumn div.homeitem3col h3 a.close,
+div#midcolumn div.homeitem h3 a.close
+{
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 0 0.5em 0 0.5em;
+}
+
+body.noajax div#midcolumn div.homeitem3col h3 a.close
+{
+	display: none;
+}
+
+body.noajax div#rightcolumn
+{
+	display: none;
+}
+
+div#rightcolumn div.sideitem h6 a
+{
+	display: block;
+}
+
+div#rightcolumn div#viewopts form
+{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+div#rightcolumn div#viewopts form select
+{
+	margin: 1em 0 1em 0;
+}
+
+div#rightcolumn div#progressbox
+{
+	display: none;
+}
+
+div#placeholder
+{
+	display: none;
+}
