@@ -95,6 +95,7 @@ foreach (array_keys($files) as $project)
 {
 	foreach (array_keys($files[$project]) as $component)
 	{
+		print "[$project/$component]\n";
 		$result = mysql_query("SELECT `file_id` FROM `download_file_index` WHERE " . join(" OR ", preg_replace("/^(.+)$/", "`file_name` REGEXP('$1')", $files[$project][$component])), $dbh);
 		$fids = array();
 		while ($row = mysql_fetch_row($result))
@@ -104,23 +105,28 @@ foreach (array_keys($files) as $project)
 
 		foreach (array_keys($queries) as $query)
 		{
+			print ";";
 			$result = wmysql_query(sprintf($queries[$query]["timeslice"], $project, $component));
 			$row = mysql_fetch_row($result);
 
 			foreach (pending_timeslice($row[0]) as $day)
 			{
 				$itime = wmicrotime();
+				print ":";
 				foreach ($fids as $fid)
 				{
 					$result = mysql_query(sprintf($queries[$query]["stats"], $day, $fid), $dbh);
 					while ($row = mysql_fetch_row($result))
 					{
 						wmysql_query(sprintf($queries[$query]["insert"], $project, $component, $day, $row[1], $row[0]));
+						print ".";
 					}
 				}
+				print "\n";
 				print "added download stats for $project/$component, $day in " . (wmicrotime() - $itime) . "s\n";
 			}
 		}
+		print "\n";
 	}
 }
 print "ran for a total of " . (wmicrotime() - $otime) . "s\n";
