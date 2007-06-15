@@ -1,7 +1,7 @@
 <?php
 $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
 
-if (preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]) || preg_match("@^/modeling/emf/downloads/updatestats\.php$@", $_SERVER["PHP_SELF"]))
+if (preg_match("@^/$PR/build/@", $_SERVER["PHP_SELF"]) || preg_match("@^/modeling/build/updatestats\.php$@", $_SERVER["PHP_SELF"]))
 {
 	$accessfiles[] = "parsecvs-dbaccess.php";
 }
