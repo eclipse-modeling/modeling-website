@@ -1,5 +1,5 @@
 <?php
-require_once("includes/db.php");
+require_once("../includes/db.php");
 
 /* projects or components for which there are currently no stats stored (such as for new projects) need to have a placeholder entry before they will be accounted for
  * this placeholder entry must be one day before the first day for which you would like stats to be stored
