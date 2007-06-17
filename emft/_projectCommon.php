@@ -27,11 +27,11 @@ else
 
 $projects = array(
 	"Compare" => "compare",
-	"JCR Management" => "jcrm",
 	"Search" => "search",
+	"JCR Management" => "jcrm",
+	"Teneo" => "teneo",
 	"CDO" => "cdo",
-	"Net4j" => "net4j",
-	"Teneo" => "teneo"
+	"Net4j" => "net4j"
 );
 
 $cvsprojs = array();
@@ -55,9 +55,7 @@ $cvscoms = array(
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
-$extraprojects = array(
-	"JCR Management" => "jcrm"
-	); //components with only downloads, no info yet, "prettyname" => "directory"
+$extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("coordinated","jcrm","search"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
