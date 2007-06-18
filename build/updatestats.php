@@ -42,11 +42,11 @@ $files = array(
 		),
 		"org.eclipse.emf.transaction" => array(
 			"/emf-transaction-(SDK|runtime|examples)-.+\.zip$",
-			"/org\.eclipse\.emf\.transaction.+\.jar$"
+			"/org\.eclipse\.emf\.transaction_.+\.jar$"
 		),
 		"org.eclipse.emf.validation" => array(
 			"/emf-validation-(SDK|runtime|examples)-.+\.zip$",
-			"/org\.eclipse\.emf\.validation.+\.jar$"
+			"/org\.eclipse\.emf\.validation_.+\.jar$"
 		)
 	),
 	"org.eclipse.mdt" => array(
