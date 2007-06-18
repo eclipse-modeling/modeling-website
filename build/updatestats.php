@@ -138,7 +138,8 @@ foreach (array_keys($files) as $project)
 			foreach (pending_timeslice($row[0]) as $day)
 			{
 				$itime = wmicrotime();
-				print ":";
+				#print ":";
+				print "about to process " . sizeof($fids) . " files...\n";
 				foreach ($fids as $fid)
 				{
 					$result = wmysql_query(sprintf($queries[$query]["stats"], $day, $fid), $dbh);
