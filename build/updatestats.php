@@ -113,12 +113,12 @@ foreach (array_keys($files) as $project)
 			}
 			else if (preg_match("/^(.+)-(runtime|SDK|[Ss]tandalone|Models|[Aa]utomated-[Tt]ests|[Ee]xamples)-(.+)\.zip/", $row[1], $info))
 			{
-				$result = wmysql_query("SELECT `type` FROM `releases` WHERE `vanityname` = '$info[3]' AND `project` = '$project' AND `component` = '$component'");
-				$row = mysql_fetch_row($result);
+				$result2 = wmysql_query("SELECT `type` FROM `releases` WHERE `vanityname` = '$info[3]' AND `project` = '$project' AND `component` = '$component'");
+				$row2 = mysql_fetch_row($result2);
 
 				$props[] = "`projects` = '$info[1]'";
 				$props[] = "`bundle` = '$info[2]'";
-				$props[] = "`type` = '$row[0]'";
+				$props[] = "`type` = '$row2[0]'";
 				$props[] = "`releasename` = '$info[3]'";
 				$props[] = "`filetype` = 'zip'";
 			}
