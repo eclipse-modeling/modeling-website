@@ -96,11 +96,37 @@ foreach (array_keys($files) as $project)
 	foreach (array_keys($files[$project]) as $component)
 	{
 		print "[$project/$component]\n";
-		$result = mysql_query("SELECT `file_id` FROM `download_file_index` WHERE " . join(" OR ", preg_replace("/^(.+)$/", "`file_name` REGEXP('$1')", $files[$project][$component])), $dbh);
+		$result = mysql_query("SELECT `file_id`, `file_name` FROM `download_file_index` WHERE " . join(" OR ", preg_replace("/^(.+)$/", "`file_name` REGEXP('$1')", $files[$project][$component])), $dbh);
 		$fids = array();
 		while ($row = mysql_fetch_row($result))
 		{
 			$fids[] = $row[0];
+
+			/* uml2 is special, and doesn't like putting runtime in their runtimes, we fix that here */
+			$row[1] = preg_replace("/^(uml2-)([^-]+\.zip)$/", "$1runtime-$2", $row[1]);
+
+			$props = array("`filename` = '$row[1]'");
+			$info = null;
+			if (preg_match("/\.jar$/", $row[1]))
+			{
+				$props[] = "`filetype` = 'jar'";
+			}
+			else if (preg_match("/^(.+)-(runtime|SDK|[Ss]tandalone|Models|[Aa]utomated-[Tt]ests|[Ee]xamples)-(.+)\.zip/", $row[1], $info))
+			{
+				$result = wmysql_query("SELECT `type` FROM `releases` WHERE `vanityname` = '$info[3]' AND `project` = '$project' AND `component` = '$component'");
+				$row = mysql_fetch_row($result);
+
+				$props[] = "`projects` = '$info[1]'";
+				$props[] = "`bundle` = '$info[2]'";
+				$props[] = "`type` = '$row[0]'";
+				$props[] = "`releasename` = '$info[3]'";
+				$props[] = "`filetype` = 'zip'";
+			}
+			wmysql_query("INSERT INTO `distfiles` SET " . join(",", $props) . " ON DUPLICATE KEY UPDATE `fid` = `fid`");
+			if (mysql_affected_rows($connect) > 0)
+			{
+				print "added new file to `distfiles`: '$row[1]'\n";
+			}
 		}
 
 		foreach (array_keys($queries) as $query)
