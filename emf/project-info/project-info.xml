@@ -13,6 +13,8 @@
 	<!-- TODO: bug 182613: this should eventually point to a page listing the team -->
 	<team url="/modeling/emf/eclipse-project-ip-log.php"/>
 
+	<wiki url="http://wiki.eclipse.org/index.php/Eclipse_Modeling_Framework"/>
+
 	<cvs repository="/cvsroot/tools/">
 		<module path="org.eclipse.emf"/>
 		<module path="org.eclipse.emf.ecore.sdo"/>

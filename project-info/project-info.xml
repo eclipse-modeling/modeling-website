@@ -53,6 +53,13 @@
   <team url="/modeling/index.php"/>
   
   <!--
+     - Most projects have wiki pages with documentation or work in progress
+     - or discussions or whatever wikis are good for. The <wiki> element
+     - contains the URL of the 'root' of the project's wiki pages.
+    -->
+  <wiki url="http://wiki.eclipse.org/index.php/Modeling_Project"/>
+  
+  <!--
      - The source code of each Eclipse project is stored in CVS. Eclipse maintains
      - a number of CVS repositories, thus the <cvs> element specifies which
      - CVS repository and (if applicable) which root path stores this project's
