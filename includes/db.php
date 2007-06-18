@@ -26,20 +26,24 @@ foreach ($accessfiles as $z)
 	}
 }
 
-function wmysql_query($sql)
+function wmysql_query($sql, $c = -1)
 {
 	global $connect;
+	if ($c === -1)
+	{
+		$c = $connect;
+	}
 
-	if ($connect !== null)
+	if ($c !== null)
 	{
 		if (isset($_GET["showsql"]) && $_GET["showsql"] == "showsql")
 		{
 			print "<ul><li>$sql</li></ul>\n";
 		}
 
-		if (!($res = mysql_query($sql, $connect)))
+		if (!($res = mysql_query($sql, $c)))
 		{
-			print "<div class=\"qerror\">" . mysql_error($connect) . "</div>";
+			print "<div class=\"qerror\">" . mysql_error($c) . "</div>";
 		}
 	}
 	return $res;
