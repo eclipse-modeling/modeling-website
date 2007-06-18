@@ -96,7 +96,7 @@ foreach (array_keys($files) as $project)
 	foreach (array_keys($files[$project]) as $component)
 	{
 		print "[$project/$component]\n";
-		$result = mysql_query("SELECT `file_id`, `file_name` FROM `download_file_index` WHERE " . join(" OR ", preg_replace("/^(.+)$/", "`file_name` REGEXP('$1')", $files[$project][$component])), $dbh);
+		$result = mysql_query("SELECT `file_id`, SUBSTRING_INDEX(`file_name`, '/', -1) FROM `download_file_index` WHERE " . join(" OR ", preg_replace("/^(.+)$/", "`file_name` REGEXP('$1')", $files[$project][$component])), $dbh);
 		$fids = array();
 		while ($row = mysql_fetch_row($result))
 		{
