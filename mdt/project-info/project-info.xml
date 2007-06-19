@@ -44,15 +44,16 @@
 	</newsgroups>
 
 	<articles/>
+	
 	<blogs/>
 
 	<project-plan url="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
 
 	<releases>
 		<release
-       name="1.0"
-       status="tentative"
-       date="06/29/2007"
-       plan="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
+			name="1.0"
+			status="tentative"
+			date="06/29/2007"
+			plan="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
 	</releases>
 </project>
