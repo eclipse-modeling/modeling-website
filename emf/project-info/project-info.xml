@@ -1,15 +1,15 @@
 <project>
-	
+
 	<!-- see http://www.eclipse.org/projects/dev_process/project-status-infrastructure/project-info-xml.php -->
-		
+
 	<name>Eclipse Modeling Framework (EMF)</name>
 
 	<short-name>EMF</short-name>
 
 	<bugzilla>
-			<product name="EMF"/>
+		<product name="EMF"/>
 	</bugzilla>
-	
+
 	<!-- TODO: bug 182613: this should eventually point to a page listing the team -->
 	<team url="/modeling/emf/eclipse-project-ip-log.php"/>
 
@@ -35,9 +35,9 @@
 	<!-- TODO: create this page in the wiki? -->
 	<contributing url=""/>
 
-	<ip-log url="/modeling/emf/eclipse-project-ip-log.php"/> 
-	<!-- <legal url="/modeling/emf/eclipse-project-ip-log.php"/> --> 
-	
+	<ip-log url="/modeling/emf/eclipse-project-ip-log.php"/>
+	<!-- <legal url="/modeling/emf/eclipse-project-ip-log.php"/> -->
+
 	<mailing-lists url="/modeling/emf/newsgroup-mailing-list.php">
 		<list name="emf-dev"/>
 		<list name="xsd-dev"/>
@@ -47,16 +47,16 @@
 		<newsgroup name="eclipse.tools.emf"/>
 		<newsgroup name="eclipse.technology.xsd"/>
 	</newsgroups>
-	
+
 	<articles>
-	    <article url="/modeling/emf/docs/"/>
+		<article url="/modeling/emf/docs/"/>
 	</articles>
 
 	<blogs>
 		<blog rss="http://eclipse-modeling.blogspot.com/atom.xml"/>
 		<blog rss="http://divby0.blogspot.com/atom.xml"/>
 	</blogs>
-	
+
 	<project-plan url="/modeling/emf/docs/#plandocs"/>
 
 	<releases>
@@ -65,7 +65,7 @@
 			status="tentative"
 			date="2Q2008"
 			name="2.4"/>
-		
+
 		<!-- 2.3 -->
 		<release 
 			status="tentative"
@@ -127,7 +127,7 @@
 			date="07/07/2005"
 			name="2.1.0"
 			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf#archives" />
-		
+
 		<!-- 2.0 -->
 		<release 
 			status="tentative"
@@ -163,7 +163,7 @@
 			date="28/06/2004"
 			name="2.0.0" 
 			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf#archives"/>
-		
+
 		<!-- 1.x -->
 		<release 
 			status="completed"
@@ -186,13 +186,5 @@
 			download="http://www.eclipse.org/modeling/emf/downloads/dl-emf1x.html"
 			name="1.0.2" />
 	</releases>
-	
 
-	<!-- leftovers from an earlier time -->
-		
-	<committers />
-	<contributors />
-	<leaders />
-
-	<project-ip-log url="/modeling/emf/eclipse-project-ip-log.csv"/>
 </project>
