@@ -54,7 +54,7 @@ $rangefmt = 'CONCAT(DATE_FORMAT(\'%2$s\', \'%%Y-%%m-%%d\'), \' through \', DATE_
  * query indices may be arbitrary (although they aren't really user visible)
  * each query must contain a "name", "sql", and "trendsql" entry
  * "name" is the vanity name which is presented to the user
- * "sql" is the query which is executed for non-trending queries, sprintf("sql", $limit) is called before executing the query
+ * "sql" is the query which is executed for non-trending queries, sprintf("sql", $limit, $start, $end) is called before executing the query, you will want to use $dayrange (see below)
  * "trendsql" is the query which is executed for trending queries and must be suitable for repeated UNION with itself with various dateranges, you will want to use $dayrange and $rangefmt (see below), sprintf("trendsql", $limit, $start, $end) is called before executing the query
  *
  * both "sql" and "trendsql" must select two columns, the first of which is the label for that row of data, and the second of which is the value for that row, additional columns may be selected if necessary, but they will not be presented to the user
@@ -66,54 +66,54 @@ $rangefmt = 'CONCAT(DATE_FORMAT(\'%2$s\', \'%%Y-%%m-%%d\'), \' through \', DATE_
 $queries = array(
 	0 => array(
 		"name" => "Popular Files",
-		"sql" => "SELECT `filename`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $project GROUP BY `filename` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `filename`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $dayrange AND $project GROUP BY `filename` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`filename`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $dayrange AND $project GROUP BY `filename` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	1 => array(
 		"name" => "Downloads Page vs Update Manager",
-		"sql" => "SELECT IF(`filetype` = 'zip', 'Downloads Page', 'Update Manager'), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $project GROUP BY `filetype` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT IF(`filetype` = 'zip', 'Downloads Page', 'Update Manager'), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $dayrange AND $project GROUP BY `filetype` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(IF(`filetype` = 'zip', 'Downloads Page', 'Update Manager'), ' for ', $rangefmt) AS `desc`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE $dayrange AND $project GROUP BY `filetype` ORDER BY `desc` LIMIT 10)"
 	),
 	2 => array(
 		"name" => "Release Types",
-		"sql" => "SELECT CONCAT(`name`, ' builds'), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT CONCAT(`name`, ' builds'), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $dayrange AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(CONCAT(`name`, ' builds'), ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $dayrange AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	3 => array(
 		"name" => "Project Popularity",
-		"sql" => "SELECT `projects`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `projects`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $dayrange AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`projects`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $dayrange AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	4 => array(
 		"name" => "Bundle Popularity",
-		"sql" => "SELECT `bundle`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `bundle`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $dayrange AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`bundle`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $dayrange AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	5 => array(
 		"name" => "Release Popularity",
-		"sql" => "SELECT `releasename`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `releasename` != '' AND $project GROUP BY `releasename` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `releasename`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `releasename` != '' AND $dayrange AND $project GROUP BY `releasename` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`releasename`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `releasename` != '' AND $dayrange AND $project GROUP BY `releasename` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	6 => array(
 		"name" => "Downloads by Country",
-		"sql" => "SELECT `countryname`, SUM(`number`) AS `pop` FROM `country_downloads` NATURAL JOIN `populations` WHERE $project GROUP BY `country` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `countryname`, SUM(`number`) AS `pop` FROM `country_downloads` NATURAL JOIN `populations` WHERE $dayrange AND $project GROUP BY `country` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`countryname`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `country_downloads` NATURAL JOIN `populations` WHERE $dayrange AND $project GROUP BY `country` ORDER BY `pop` DESC LIMIT 10)"
 	),
 	7 => array(
 		"name" => "Downloads/1000 people, by Country",
-		"sql" => "SELECT `countryname`, SUM(`number`)/(`population`/1000) AS `pop` FROM `country_downloads` NATURAL JOIN `populations` WHERE $project GROUP BY `country` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT `countryname`, SUM(`number`)/(`population`/1000) AS `pop` FROM `country_downloads` NATURAL JOIN `populations` WHERE $dayrange AND $project GROUP BY `country` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(`countryname`, ' for ', $rangefmt), SUM(`number`)/(`population`/1000) AS `pop`, `day` FROM `country_downloads` NATURAL JOIN `populations` WHERE $dayrange AND $project GROUP BY `country` ORDER BY `pop` DESC LIMIT 10)",
 		"note" => "Countries with unknown populations are not shown. Country codes are wildy inconsistent, and sometimes do not even map 1-1 between different sources, as a result, some countries are not shown here and some may have incorrect populations stored.",
 		"showpercent" => false
 	),
 	8 => array(
 		"name" => "Downloads by Weekday",
-		"sql" => "SELECT DAYNAME(`day`) AS `weekday`, SUM(`number`) AS `pop` FROM `file_downloads` WHERE $project GROUP BY `weekday` ORDER BY `pop` DESC LIMIT %u",
+		"sql" => "SELECT DAYNAME(`day`) AS `weekday`, SUM(`number`) AS `pop` FROM `file_downloads` WHERE $dayrange AND $project GROUP BY `weekday` ORDER BY `pop` DESC LIMIT %u",
 		"trendsql" => "(SELECT CONCAT(DAYNAME(`day`), ' for ', $rangefmt), ROUND(SUM(`number`)) FROM `file_downloads` WHERE $dayrange AND $project GROUP BY DATE_FORMAT(`day`, '%%w'))"
 	),
 	9 => array(
 		"name" => "Downloads per Day",
-		"sql" => "SELECT '$start through $end', `pop`/DATEDIFF('$end', '$start') FROM (SELECT SUM(`number`) AS `pop` FROM `file_downloads` WHERE $project) AS `tmp` LIMIT %u",
+		"sql" => "SELECT '$start through $end', `pop`/DATEDIFF('$end', '$start') FROM (SELECT SUM(`number`) AS `pop` FROM `file_downloads` WHERE $dayrange AND $project) AS `tmp` LIMIT %u",
 		"trendsql" => "SELECT $rangefmt, ROUND(`pop`/$rangedays) FROM (SELECT SUM(`number`) AS `pop` FROM `file_downloads` WHERE $dayrange AND $project) AS `tmp`",
 		"showpercent" => false
 	)
@@ -242,7 +242,7 @@ $total = $row[0];
 
 if ($trend == -1)
 {
-	$result = wmysql_query(sprintf($queries[$query]["sql"], $limit));
+	$result = wmysql_query(sprintf($queries[$query]["sql"], $limit, $start, $end));
 }
 else
 {
