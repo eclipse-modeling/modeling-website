@@ -54,17 +54,17 @@ $files = array(
 			"/(mdt-)?uml2-.+\.zip$",
 			"/org\.eclipse\.uml2\.common_.+\.jar$"
 		),
-		"eodm" => array(
+		"org.eclipse.eodm" => array(
 			"/(emft|mdt)-eodm-(SDK|runtime|examples)-.+\.zip$",
 			"/org\.eclipse(\.emf)?.cdo_.+\.jar$",
 		),
-		"ocl" => array(
+		"org.eclipse.ocl" => array(
 			"/(emft|mdt)-ocl-(SDK|runtime|examples)-.+\.zip$",
 			"/org\.eclipse(\.emf)?.ocl_.+\.jar$",
 		)
 	),
 	"org.eclipse.m2t" => array(
-		"jet" => array(
+		"org.eclipse.jet" => array(
 			"/(emft|m2t)-jet-(SDK|runtime|examples)-.+\.zip$",
 			"/org\.eclipse(\.emf)?.jet_.+\.jar$",
 		)
