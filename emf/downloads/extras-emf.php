@@ -514,7 +514,7 @@ function getTestResultsFailureCount($path, $testDirs, $file)
 	{
 		if (is_file($file) && is_readable($file))
 		{
-			$f = file_contents($file);
+			$f = file_get_contents($file);
 			$regs = null;
 			$num = preg_match_all("/>failed</", $f, $regs);
 		}

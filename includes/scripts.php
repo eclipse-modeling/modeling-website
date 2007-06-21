@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.33 2007/06/05 23:26:22 nickb Exp $ 
+// $Id: scripts.php,v 1.34 2007/06/21 19:36:20 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -159,7 +159,7 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 {
 	global $PR;
 
-	$xml = $xml ? $xml : file_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"); 
+	$xml = ($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml")); 
 	$news_regex = "%
 		^<news\ date=\"([^\"]+)\"(?:\ showOn=\"([^\"]+)\")?>$\\n
 		((?:^[^<].+$\\n)+)
@@ -294,22 +294,12 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 	}
 }
 
-function file_contents($file) //TODO: remove this when we upgrade php to >= 4.3.0 everywhere
+/* TODO: remove this when we upgrade php to >= 4.3.0 everywhere */
+if (!function_exists("file_get_contents"))
 {
-	if (is_file($file))
+	function file_get_contents($file)
 	{
-		if (function_exists("file_get_contents"))
-		{
-			return file_get_contents($file);
-		}
-		else
-		{
-			return join("", file($file));
-		}
-	}
-	else
-	{
-		return "";
+		return (is_file($file) ? join("", file($file)) : "");
 	}
 }
 

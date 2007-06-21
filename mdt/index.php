@@ -8,8 +8,8 @@ ob_start();
 
 foreach ($projects as $z)
 {
-	$descriptions[$z]["short"] = file_contents("$z/project-info/project-page-paragraph.html");
-	$descriptions[$z]["long"] = file_contents("$z/project-info/overview.html");
+	$descriptions[$z]["short"] = file_get_contents("$z/project-info/project-page-paragraph.html");
+	$descriptions[$z]["long"] = file_get_contents("$z/project-info/overview.html");
 }
 ?>
 
@@ -159,4 +159,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.25 2007/06/05 21:00:34 nickb Exp $ -->
+<!-- $Id: index.php,v 1.26 2007/06/21 19:36:20 nickb Exp $ -->

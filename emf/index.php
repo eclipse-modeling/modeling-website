@@ -30,8 +30,8 @@ ob_start();
 
 foreach ($projects as $z)
 {
-	$descriptions[$z]["short"] = file_contents("$z/project-info/project-page-paragraph.html");
-	$descriptions[$z]["long"] = file_contents("$z/project-info/overview.html");
+	$descriptions[$z]["short"] = file_get_contents("$z/project-info/project-page-paragraph.html");
+	$descriptions[$z]["long"] = file_get_contents("$z/project-info/overview.html");
 }
 ?>
 

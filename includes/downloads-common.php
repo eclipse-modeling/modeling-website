@@ -493,7 +493,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (is_file("$PWD${path}index.html") || is_file("$PWD${path}index.php"))
 	{
-		$indexHTML = is_file("$PWD${path}index.html") ? file_contents("$PWD${path}index.html") : "";
+		$indexHTML = is_file("$PWD${path}index.html") ? file_get_contents("$PWD${path}index.html") : "";
 		$zips = loadDirSimple($PWD . $path, ".zip", "f"); // get files count
 		$md5s = loadDirSimple($PWD . $path, ".zip.md5", "f"); // get files count
 
@@ -502,7 +502,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			//check testresults/chkpii/ for results
 			if (is_file("$PWD${path}testresults/chkpii/org.eclipse.nls.summary.txt"))
 			{
-				$chkpiiResults = file_contents("$PWD${path}testresults/chkpii/org.eclipse.nls.summary.txt");
+				$chkpiiResults = file_get_contents("$PWD${path}testresults/chkpii/org.eclipse.nls.summary.txt");
 				// eg, file contains:
 				//htm: 6 E, 0 W
 				//xml: 1 E, 1 W
@@ -539,7 +539,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			//check compilelogs/summary.txt for results
 			if (is_file("$PWD${path}compilelogs/summary.txt"))
 			{
-				$compilelogSummary = file_contents("$PWD${path}compilelogs/summary.txt");
+				$compilelogSummary = file_get_contents("$PWD${path}compilelogs/summary.txt");
 				$link2 = "$pre$mid${path}testResults.php";
 				if ($compilelogSummary)
 				{
