@@ -152,8 +152,8 @@ $trends = array(
 );
 
 $views = array(
-	"homeitem3col" => "3 Columns",
-	"homeitem" => "4 Columns"
+	"homeitem3col" => "1 Column",
+	"homeitem" => "2 Columns"
 );
 
 $limit = 30;
