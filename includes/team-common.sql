@@ -122,5 +122,5 @@ INSERT INTO groups (project,component,groupname,path) VALUES
 
 	('org.eclipse.m2t','','m2t-home','/cvsroot/org.eclipse/www/m2t/'), 
 	('org.eclipse.m2t','','m2tadmin','/home/data/httpd/*.eclipse.org/modeling/m2t/'),
-	('org.eclipse.m2t','','m2t-dev','/cvsroot/modeling/org.eclipse.m2t/')
+	('org.eclipse.m2t','','m2t-dev','/cvsroot/modeling/org.eclipse.m2t/')									-- need more groups? https://bugs.eclipse.org/bugs/show_bug.cgi?id=192508
 ;
