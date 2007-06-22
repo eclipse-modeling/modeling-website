@@ -1,1 +1,1 @@
-<?php header("Location: /emft/eclipse-project-ip-log.csv"); ?>
+<?php include_once("../includes/eclipse-project-ip-log-common.php"); ?>
