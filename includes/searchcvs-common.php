@@ -29,7 +29,8 @@ $extraf = array(
 	array("regex" => "/(?:project|module): ?(\S+)/", "sql" => "`project` LIKE '%s'", "sqlpart" => "where"),
 	array("regex" => "/startdate: ?(\d{4}-\d\d-\d\d(?: \d\d:\d\d(?::\d\d)?)?)/", "sql" => "`date` >= '%s'", "sqlpart" => "where"),
 	array("regex" => "/enddate: ?(\d{4}-\d\d-\d\d(?: \d\d:\d\d(?::\d\d)?)?)/", "sql" => "`date` <= '%s'", "sqlpart" => "where"),
-	array("regex" => "/branch: ?(\S+)/", "sql" => "`branch` LIKE '%%%s%%'", "sqlpart" => "where")
+	array("regex" => "/branch: ?(\S+)/", "sql" => "`branch` LIKE '%%%s%%'", "sqlpart" => "where"),
+	array("regex" => "/bugid: ?(\d+)/", "sql" => "`bugid` = %d", "sqlpart" => "where")
 );
 
 if (!isset($_GET["q"]))
@@ -45,12 +46,17 @@ $pagename = $_SERVER["PHP_SELF"];
 wmysql_query("INSERT INTO `stats` SET `q` = '$q', `ip` = '$ip', `referer` = '$referer', `time` = NOW(), `page` = '$pagename', `pagenum` = '$page'");
 */
 
+$bugid = "";
 $extra = array("where" => array(), "having" => array());
 foreach ($extraf as $z)
 {
 	while (preg_match($z["regex"], $q, $regs))
 	{
 		$extra[$z["sqlpart"]][] = sprintf($z["sql"], $regs[1]);
+		if (preg_match("#^/bugid:#", $z["regex"]))
+		{
+			$bugid = $regs[1];
+		}
 		$q = preg_replace($z["regex"], "", $q);
 	}
 }
@@ -74,7 +80,6 @@ $regs = array();
 $et = "";
 $having = "";
 $ec = "";
-$bugid = "";
 /* this *could* be put into $extraf, but it would change the semantics slightly, in that any number searched for would be treated as a bug #, which i think is undesirable */
 if (preg_match("/^\s*\[?(\d+)\]?\s*$/", $_GET["q"], $regs))
 {
