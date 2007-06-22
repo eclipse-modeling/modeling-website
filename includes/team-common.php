@@ -11,39 +11,83 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.
 
 include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $projct= preg_replace("#.+/#", "", $PR); 
-$projectName = strtoupper($projct);
 
-$data1 = getDevelopers(true);
-$data2 = getDevelopers(false);
-
-ob_start();
-$pageTitle= "Meet The Team";
-print<<<EOHTML
+if (isset($_GET["export"]) && $_GET["export"] && $_GET["export"] == "project,component,committerid") // other formats TBD
+{
+	$query = "SELECT project,component,committerid FROM teams NATURAL JOIN developers NATURAL JOIN groups " .   
+		//"WHERE " . ($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct' ") . 
+		"ORDER BY project,component,SUBSTRING_INDEX(Name,' ',-1)"; // by last name 
+	
+	$result= wmysql_query($query);
+	$data = array();
+	if ($result && mysql_num_rows($result) > 0)
+	{
+		while ($row = mysql_fetch_row($result))
+		{
+			if (!isset($data[$row[0]."\t".$row[1]."\t"])) 
+			{
+				$data[$row[0]."\t".$row[1]."\t"] = array();
+			}
+			$data[$row[0]."\t".$row[1]."\t"][$row[2]] = $row[2];
+		}
+	}
+	print "<pre>\n";
+	foreach ($data as $a => $b)
+	{
+		print $a;
+		$cnt=0;
+		foreach ($b as $c)
+		{
+			if ($c)
+			{
+				if ($cnt > 0)
+				{ 
+					print ",";
+				}
+				print $c;
+				$cnt++;
+			}
+		}
+		print "\n";
+	}
+	print "</pre>\n";
+	exit;
+}
+else
+{
+	$projectName = strtoupper($projct);
+	
+	$data1 = getDevelopers(true);
+	$data2 = getDevelopers(false);
+	
+	ob_start();
+	$pageTitle= "Meet The Team";
+	print<<<EOHTML
 <div id="midcolumn">
 	<h1>Meet The $projectName Team</h1>
 
 EOHTML;
-if ($data1)
-{
-print<<<EOHTML
+	if ($data1)
+	{
+	print<<<EOHTML
 	<div class="homeitem3col">
 	<h3>Committers</h3>
 	$data1
 	</div>
 
 EOHTML;
-}
-if ($data2)
-{
-print<<<EOHTML
+	}
+	if ($data2)
+	{
+	print<<<EOHTML
 	<div class="homeitem3col">
 	<h3>Contributors</h3>
 	$data2
 	</div>
 
 EOHTML;
-}
-print<<<EOHTML
+	}
+	print<<<EOHTML
 </div>
 
 <div id="rightcolumn">
@@ -53,11 +97,12 @@ print<<<EOHTML
 	</div>
 	<div class="sideitem">
 		<h6>Export Data</h6>
-		<p>To export this data as CSV, click here (coming soon).</p>
+		<p>To export the Project, Component &amp; Committerid data as tabbed text, <a href="?export=project,component,committerid">click here</a>.</p>
 	</div>
 </div>
 
 EOHTML;
+}
 
 $html= ob_get_contents();
 ob_end_clean();
