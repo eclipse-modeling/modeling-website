@@ -1,22 +1,20 @@
 <?php
-/* See also /modeling/includes/team-common.sql for database schema
- * 
- * Bjorn has asked for data like this:
- * 
- * project   component   comma,separated,list,of,committer,login,names
- * 
- * => SELECT project, component, committerid FROM teams NATURAL JOIN developers;
- */
+/* See also /modeling/includes/team-common.sql for database schema */
+
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App= new App(); $Nav= new Nav(); $Menu= new Menu(); include ($App->getProjectCommon());
 
 include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $projct= preg_replace("#.+/#", "", $PR); 
 
-if (isset($_GET["export"]) && $_GET["export"] && $_GET["export"] == "project,component,committerid") // other formats TBD
+$exportFormats = array(
+	"project,component,committerid", # Bjorn's format preference
+	"project,component,groupname,path,committerid", # other options for auditing
+	"groupname,path,committerid",
+	"groupname,committerid"
+	);
+if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$exportFormats)) 
 {
-	$query = "SELECT project,component,committerid FROM teams NATURAL JOIN developers NATURAL JOIN groups " .   
-		//"WHERE " . ($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct' ") . 
-		"ORDER BY project,component,SUBSTRING_INDEX(Name,' ',-1)"; // by last name 
+	$query = "SELECT ".$_GET["export"]." FROM teams NATURAL JOIN developers NATURAL JOIN groups ORDER BY ".$_GET["export"]; 
 	
 	$result= wmysql_query($query);
 	$data = array();
@@ -24,11 +22,15 @@ if (isset($_GET["export"]) && $_GET["export"] && $_GET["export"] == "project,com
 	{
 		while ($row = mysql_fetch_row($result))
 		{
-			if (!isset($data[$row[0]."\t".$row[1]."\t"])) 
-			{
-				$data[$row[0]."\t".$row[1]."\t"] = array();
+			$key= "";
+			for ($i = 0; $i < sizeof($row) - 1; $i++) {
+				$key .= $row[$i]."\t";
 			}
-			$data[$row[0]."\t".$row[1]."\t"][$row[2]] = $row[2];
+			if (!isset($data[$key])) 
+			{
+				$data[$key] = array();
+			}
+			$data[$key][$row[sizeof($row) - 1]] = $row[sizeof($row) - 1];
 		}
 	}
 	print "<pre>\n";
@@ -62,6 +64,12 @@ else
 	
 	ob_start();
 	$pageTitle= "Meet The Team";
+	
+	$exportFormatsList = "";
+	foreach ($exportFormats as $ef)
+	{
+		$exportFormatsList .= "<li><a href=\"?export=$ef\">" . ucwords(str_replace(",", ", ",$ef)) . "</a></li>\n";
+	}
 	print<<<EOHTML
 <div id="midcolumn">
 	<h1>Meet The $projectName Team</h1>
@@ -97,7 +105,10 @@ EOHTML;
 	</div>
 	<div class="sideitem">
 		<h6>Export Data</h6>
-		<p>To export the Project, Component &amp; Committerid data as tabbed text, <a href="?export=project,component,committerid">click here</a>.</p>
+		<p>To export the data as tabbed text, choose your columns:</p>
+		<p><ul>
+		$exportFormatsList
+		</ul></p>
 	</div>
 </div>
 
