@@ -7,13 +7,8 @@
  * 
  * => SELECT project, component, committerid FROM teams NATURAL JOIN developers;
  */
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
-$App= new App();
-$Nav= new Nav();
-$Menu= new Menu();
-include ($App->getProjectCommon());
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App= new App(); $Nav= new Nav(); $Menu= new Menu(); include ($App->getProjectCommon());
+
 include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $projct= preg_replace("#.+/#", "", $PR); 
 $projectName = strtoupper($projct);
