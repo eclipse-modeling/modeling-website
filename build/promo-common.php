@@ -14,7 +14,7 @@
 	);
  */
  
- // TODO: migrate function in EMF/UML2 promo page to here
+ // TODO: migrate function in EMF promo page to here
 
 # $PR = "modeling/mdt";
 # $proj = "/uml2"; 
