@@ -245,7 +245,7 @@ else
 { // page two, form submission results
 
 	$BR = explode(" | ", $_POST["build_Version_Build_ID_And_Branch"]);
-	$cvsbranch = $BR[1];
+	$cvsbranch = explode(" ",$BR[1]); $cvsbranch = $cvsbranch[0];
 	$BR = explode("/", $BR[0]);
 	$ID = $BR[1];
 	$BR = $BR[0];
