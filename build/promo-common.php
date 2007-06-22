@@ -118,13 +118,11 @@ foreach ($options["BranchAndJDK"] as $br)
 		$buildIDs = loadDirSimple($dir, "([MISR]+\d{12})", "d"); // include N builds
 		foreach ($buildIDs as $k => $bid)
 		{
-			if (is_dir($dir . "/$bid/testresults/xml"))
-			{ // no point adding them to the list if there's no data available!
-				$buildcfgs = getBuildConfig("$dir/$bid/");
-				if ($buildcfgs["branch"]) // looking in build.cfg for "branch=..."
-				{
-					$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid . " | " . (isset($buildcfgs["branchCVS"]) ? $buildcfgs["branchCVS"] : $buildcfgs["branch"]);
-				}
+			$buildcfgs = getBuildConfig("$dir/$bid/");
+			if ($buildcfgs["branch"]) // looking in build.cfg for "branch=..."
+			{
+				$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid . " | " . (isset($buildcfgs["branchCVS"]) ? $buildcfgs["branchCVS"] : $buildcfgs["branch"])
+					. (is_dir($dir . "/$bid/testresults/xml") ? '' : ' ** NO TEST RESULTS **');
 			}
 		}
 	}
