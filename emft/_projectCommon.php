@@ -140,13 +140,13 @@ if (!array_key_exists($proj,$hasmoved))
 {
 	$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
 	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
-	$Nav->addCustomNav("Contributors", "/modeling/emft/eclipse-project-ip-log.php", "_self", 2);
+	$Nav->addCustomNav("Contributors", "/modeling/emft/project-info/team.php", "_self", 2);
 } 
 else
 {
 	$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset ($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
 	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=MDT" . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
-	$Nav->addCustomNav("Contributors", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/eclipse-project-ip-log.php", "_self", 2);
+	$Nav->addCustomNav("Contributors", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/project-info/team.php", "_self", 2);
 }
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";

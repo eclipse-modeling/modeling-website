@@ -73,7 +73,7 @@ else
 	print<<<EOHTML
 <div id="midcolumn">
 	<h1>Meet The $projectName Team</h1>
-
+	
 EOHTML;
 	if ($data1)
 	{
@@ -99,12 +99,30 @@ EOHTML;
 </div>
 
 <div id="rightcolumn">
+EOHTML;
+	if ($isIncubating)
+	{
+	print '
+		<div class="sideitem">
+		   <h6>Incubation</h6>
+		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
+		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" 
+		        border="0" /></a></div>
+		</div>
+		'; 
+	}
+	print<<<EOHTML
+	<div class="sideitem">
+		<h6>IP Log</h6>
+		<p>See committer/contributor <a href="/$PR/eclipse-project-ip-log.php">IP log</a>.</p>
+	</div>
 	<div class="sideitem">
 		<h6>Submit Yourself</h6>
 		<p>Not on this list? Information wrong or missing? Attach your details and a photo (or URL) to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=182613#c11">bug 182613</a>.</p>
 	</div>
 	<div class="sideitem">
-		<h6>Export Data</h6>
+		<h6><a name="export"></a>Export Data</h6>
 		<p>To export the data as tabbed text, choose your columns:</p>
 		<p><ul>
 		$exportFormatsList
