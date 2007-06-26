@@ -60,16 +60,6 @@ $level = array (
 	"sdo" => 2
 );
 
-/* TODO: 
- * 		remove from $emft_redirects (don't bounce to emft) 
- * 		& from $extraprojects (show on homepage) 
- * 		when builds are ready
- * 
- * 		when/if newsgroups move, remove from $nomailinglist and $nonewsgroup; 
- * 		if don't move, will probably have to hack newsgroup-mailing-list.php to point to emft newsgroup(s)
- * 
- * 		also, update links in build-common.php
- */
 $emft_redirects = null;
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("emfqtv"); //projects with only information, no downloads, or no builds available yet, "projectkey"
@@ -102,7 +92,7 @@ foreach (array_keys($projects) as $z)
 	}
 }
 
-$Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
+$Nav->addNavSeparator("Downloads", "$downurl/modeling/emf/downloads/?project=$proj");
 $Nav->addCustomNav("Installation", "$rooturl/downloads/install.php", "_self", 2);
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
