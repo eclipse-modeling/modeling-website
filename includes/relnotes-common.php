@@ -109,52 +109,54 @@ if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 	array_shift($rels);
 }
 
-if (sizeof($rels))
+if (isset($_GET["bugzonly"]))
 {
+	$out = "";
 	$tnum = 0;
-	ob_start();
-	if (isset($_GET["bugzonly"]))
+	if (sizeof($rels))
 	{
-		$out = "";
 		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 		{
 			$sql = "SELECT `bugid`,`title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
 			$result = wmysql_query($sql);
 			$num = mysql_num_rows($result);
 			$tnum += $num;
-
+	
 			while ($row = mysql_fetch_row($result))
 			{
 				$out .= ",".$row[0];
 			}
 		}
-		print $tnum . ";" . substr($out,1);
-		exit;
 	}
-	else
-	{	
-		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
+	print $tnum . ";" . substr($out,1);
+	exit;
+}
+
+if (sizeof($rels))
+{
+	$tnum = 0;
+	ob_start();
+	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
+	{
+		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
+		$result = wmysql_query($sql);
+		$num = mysql_num_rows($result);
+		$tnum += $num;
+
+		$header2 .= "<ul>\n";
+		$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$project&version=".$rels[$i][1]."&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+		$header2 .= "<ul>\n";
+		while ($row = mysql_fetch_row($result))
 		{
-			$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
-			$result = wmysql_query($sql);
-			$num = mysql_num_rows($result);
-			$tnum += $num;
-	
-			$header2 .= "<ul>\n";
-			$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$project&version=".$rels[$i][1]."&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
-			$header2 .= "<ul>\n";
-			while ($row = mysql_fetch_row($result))
-			{
-				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
-			}
-			if ($num == 0)
-			{
-				$header2 .= "<li>No bugs fixed for this release.</li>";
-			}
-			$header2 .= "</ul>\n";
-			$header2 .= "</li>\n";
-			$header2 .= "</ul>\n";
+			$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
 		}
+		if ($num == 0)
+		{
+			$header2 .= "<li>No bugs fixed for this release.</li>";
+		}
+		$header2 .= "</ul>\n";
+		$header2 .= "</li>\n";
+		$header2 .= "</ul>\n";
 	}
 	$html = ob_get_contents();
 	ob_end_clean();
