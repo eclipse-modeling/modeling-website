@@ -1,17 +1,15 @@
 <?php
 
-	# Set the theme for your project's web pages.
-	# See the Committer Tools "How Do I" for list of themes
-	# https://dev.eclipse.org/committers/
-	# Optional: defaults to system theme 
-	$theme = "";
+$PR = "modeling";
 
-	# Define your project-wide Nav bars here.
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	# these are optional
-	$Nav->addNavSeparator("Project Home", 	"");
-	#$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
-	#$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
-	#$Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
+$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"]));
+$isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
+$isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$isEclipseCluster = (preg_match("/^(?:www.||download.|download1.|build.)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
+
+include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+
+$Nav->addNavSeparator("Project Home", 	"");
 
 ?>
