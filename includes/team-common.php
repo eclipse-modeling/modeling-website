@@ -112,11 +112,16 @@ EOHTML;
 		</div>
 		'; 
 	}
+	if (is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/eclipse-project-ip-log.php"))
+	{
 	print<<<EOHTML
 	<div class="sideitem">
 		<h6>IP Log</h6>
 		<p>See committer/contributor <a href="/$PR/eclipse-project-ip-log.php">IP log</a>.</p>
 	</div>
+EOHTML;
+	}
+	print<<<EOHTML
 	<div class="sideitem">
 		<h6>Submit Yourself</h6>
 		<p>Not on this list? Information wrong or missing? Attach your details and a photo (or URL) to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=182613#c11">bug 182613</a>.</p>
