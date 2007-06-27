@@ -77,7 +77,7 @@ $queries = array(
 	2 => array(
 		"name" => "Release Types",
 		"sql" => "SELECT CONCAT(`name`, ' builds'), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $dayrange AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT %u",
-		"trendsql" => "(SELECT CONCAT(CONCAT(`name`, ' builds'), ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $dayrange AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT 10)"
+		"trendsql" => "(SELECT CONCAT(CONCAT(CONVERT(`name` USING utf8), ' builds'), ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` NATURAL JOIN `releasetypes` WHERE `type` IS NOT NULL AND $dayrange AND $project GROUP BY `type` ORDER BY `pop` DESC LIMIT 10)" //the CONVERT() is necessary to work around a bug in older versions of mysql (~5.0.18), it isn't necessary in 5.0.42, at least
 	),
 	3 => array(
 		"name" => "Project Popularity",
