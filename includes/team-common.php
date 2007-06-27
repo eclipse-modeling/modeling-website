@@ -57,7 +57,7 @@ if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$expor
 }
 else
 {
-	$projectName = strtoupper($projct);
+	$projectName = $projct != "modeling" ? strtoupper($projct) : "Modeling Project";
 	
 	$data1 = getDevelopers(true);
 	$data2 = getDevelopers(false);
@@ -79,8 +79,8 @@ EOHTML;
 	{
 	print<<<EOHTML
 	<div class="homeitem3col">
-	<h3>Committers</h3>
-	$data1
+	<h3>Committers ($data1[0])</h3>
+	$data1[1]
 	</div>
 
 EOHTML;
@@ -89,8 +89,8 @@ EOHTML;
 	{
 	print<<<EOHTML
 	<div class="homeitem3col">
-	<h3>Contributors</h3>
-	$data2
+	<h3>Contributors ($data2[0])</h3>
+	$data2[1]
 	</div>
 
 EOHTML;
@@ -145,16 +145,17 @@ function getDevelopers($isCommitter = true)
 {
 	global $projct;
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
-			"WHERE committer = " . ($isCommitter ? "1" : "0") . " AND " .
-			($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct' ") . 
-			"ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name 
+			"WHERE committer = " . ($isCommitter ? "1" : "0") . 
+			($projct != "modeling" ? " AND " . ($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct'") : "") . 
+			" ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name
 	$result= wmysql_query($query);
 	$groups= array ();
+	$total = 0;
 	$data = "";
 	if ($result && mysql_num_rows($result) > 0)
 	{
 		$data .= '<p><table border="0" width="100%"><tr >' . "\n";
-		$cnt= 0;
+		$cnt = 0;
 		while ($row = mysql_fetch_row($result))
 		{
 			# [did, CommitterID, Name, Email, Role, Company, Location, Website, PhotoURL]
@@ -173,6 +174,7 @@ function getDevelopers($isCommitter = true)
 				$data .= "</tr><tr>\n";
 			}
 		}
+		$total = $cnt;
 		while ($cnt %3 != 0)
 		{
 			$data .= '<td width="33%" height="200" align="center" valign="bottom">&#160;</td>' . "\n";
@@ -180,6 +182,6 @@ function getDevelopers($isCommitter = true)
 		}
 		$data .= "</tr></table>\n";
 	}
-	return $data;
+	return array($total,$data);
 }
 ?>

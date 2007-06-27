@@ -2,7 +2,7 @@
 /* see /modeling/includes/team-common.sql for database schema */
 
 # set this to false to allow this script to work on build.eclipse for database admin
-$disabled = true;
+$disabled = 0;# true;
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
@@ -58,9 +58,9 @@ else
 	$data .= "\nQuery was:\n\n$query</pre>\n";
 }
 
-$query = "SELECT groupname,path FROM groups where " .
-		($projct == "emft" ? "groupname like 'emft%' OR project like '%emft'" : "project LIKE '%$projct' ") . " OR " . 
-		"project like '%modeling' ORDER BY groupname,path";
+$query = "SELECT groupname,path FROM groups" .
+		($projct != "modeling" ? " WHERE " . ($projct == "emft" ? "groupname like 'emft%' OR project like '%emft'" : "project LIKE '%$projct' ") . " OR " . "project like '%modeling'" : "") .
+		" ORDER BY groupname,path";
 $result = wmysql_query($query);
 $groups = array();
 if ($result)
