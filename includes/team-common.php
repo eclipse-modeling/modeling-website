@@ -75,7 +75,7 @@ else
 	<h1>Meet The $projectName Team</h1>
 	
 EOHTML;
-	if ($data1)
+	if ($data1 && $data1[0])
 	{
 	print<<<EOHTML
 	<div class="homeitem3col">
@@ -85,7 +85,7 @@ EOHTML;
 
 EOHTML;
 	}
-	if ($data2)
+	if ($data2 && $data2[0])
 	{
 	print<<<EOHTML
 	<div class="homeitem3col">

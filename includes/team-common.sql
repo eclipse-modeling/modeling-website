@@ -9,14 +9,22 @@ DROP TABLE IF EXISTS groups; CREATE TABLE groups (
 	'org.eclipse.modeling',
 	'org.eclipse.emf',
 	'org.eclipse.emft',
+	'org.eclipse.gmf',
+	'org.eclipse.gmt',
+	'org.eclipse.mddi',
 	'org.eclipse.mdt',
+	'org.eclipse.m2m',
 	'org.eclipse.m2t'
-	) NOT NULL,
+) NOT NULL,
 `component` enum(
 	'',
 	'org.eclipse.emf','org.eclipse.emf.ecore.sdo','org.eclipse.emf.query','org.eclipse.emf.transaction','org.eclipse.emf.validation',
 	'org.eclipse.emf.cdo','org.eclipse.net4j','org.eclipse.emf.teneo','org.eclipse.emf.compare','org.eclipse.emf.search','org.eclipse.emf.jcrm',
+	'org.eclipse.gmf',
+	'org.eclipse.gmt',
+	'org.eclipse.mddi','org.eclipse.mddi.semanticbinding','org.eclipse.mddi.qvt','org.eclipse.mddi.modelbus''org.eclipse.mddi.modelbus.orchestration',
 	'org.eclipse.eodm','org.eclipse.ocl','org.eclipse.uml2','org.eclipse.uml2tools','org.eclipse.xsd',
+	'org.eclipse.m2m','org.eclipse.m2m.atl','org.eclipse.m2m.qvt','org.eclipse.m2m.infrastructure',
 	'org.eclipse.jet','org.eclipse.m2t.core','org.eclipse.m2t.shared','org.eclipse.mtl','org.eclipse.xpand'
 	) NOT NULL,
 `groupname` varchar(30) NOT NULL,
@@ -52,7 +60,7 @@ PRIMARY KEY (`groupname`,`did`)
 
 -----------
 
--- 60 rows to start, including deprecated entries and TBD entries
+-- 80 rows to start, including deprecated entries and TBD entries
 INSERT INTO groups (project,component,groupname,path) VALUES 
 	('org.eclipse.modeling','','modeling-home','/cvsroot/org.eclipse/www/modeling/'), 
 	('org.eclipse.modeling','','modelingadmin','/home/data/httpd/*.eclipse.org/modeling/'),
@@ -122,5 +130,29 @@ INSERT INTO groups (project,component,groupname,path) VALUES
 
 	('org.eclipse.m2t','','m2t-home','/cvsroot/org.eclipse/www/m2t/'), 
 	('org.eclipse.m2t','','m2tadmin','/home/data/httpd/*.eclipse.org/modeling/m2t/'),
-	('org.eclipse.m2t','','m2t-dev','/cvsroot/modeling/org.eclipse.m2t/')									-- need more groups? https://bugs.eclipse.org/bugs/show_bug.cgi?id=192508
+	('org.eclipse.m2t','','m2t-dev','/cvsroot/modeling/org.eclipse.m2t/'),									-- need more groups? https://bugs.eclipse.org/bugs/show_bug.cgi?id=192508
+
+	('org.eclipse.gmf','','gmf-dev','/cvsroot/modeling/org.eclipse.gmf'),
+	('org.eclipse.gmf','','gmf-home','/cvsroot/org.eclipse/www/gmf/'),
+	('org.eclipse.gmf','','gmfadmin','/home/data/httpd/*.eclipse.org/modeling/gmf/'),
+
+	('org.eclipse.gmt','','gmt-dev','/cvsroot/technology/org.eclipse.gmt'),
+	('org.eclipse.gmt','','gmt-home','/cvsroot/technology/gmt-home'),
+	('org.eclipse.gmt','','gmt-home','/cvsroot/org.eclipse/www/gmt/'),
+	('org.eclipse.gmt','','gmtadmin','/home/data/httpd/*.eclipse.org/modeling/gmt/'),
+	('org.eclipse.gmt','','gmtadmin','/home/data/httpd/*.eclipse.org/technology/gmt/'),
+
+	('org.eclipse.m2m','','m2m-home','/cvsroot/org.eclipse/www/m2m/'),
+	('org.eclipse.m2m','','m2madmin','/home/data/httpd/*.eclipse.org/modeling/m2m/'),
+	('org.eclipse.m2m','org.eclipse.m2m.atl','m2matl-dev','/cvsroot/modeling/org.eclipse.m2m/org.eclipse.m2m.atl/'),
+	('org.eclipse.m2m','org.eclipse.m2m.qvt','m2mqvt-dev','/cvsroot/modeling/org.eclipse.m2m/org.eclipse.m2m.qvt/'),
+	('org.eclipse.m2m','org.eclipse.m2m.infrastructure','m2minf-dev','/cvsroot/modeling/org.eclipse.m2m/org.eclipse.m2m.infrastructure/'),
+
+	('org.eclipse.mddi','','mddi-home','/cvsroot/org.eclipse/www/mddi/'),
+	('org.eclipse.mddi','','mddiadmin','/home/data/httpd/*.eclipse.org/modeling/mddi/'),
+	('org.eclipse.mddi','','mddi-dev','/cvsroot/technology/org.eclipse.mddi/'),
+	('org.eclipse.mddi','org.eclipse.mddi.semanticbinding','mddi-semanticbinding','/cvsroot/technology/org.eclipse.mddi/org.eclipse.mddi.semanticbinding/'), 
+	('org.eclipse.mddi','org.eclipse.mddi.qvt','mddi-dev','/cvsroot/technology/org.eclipse.mddi/org.eclipse.mddi.qvt/'), -- should this be in mddi-qvt?
+	('org.eclipse.mddi','org.eclipse.mddi.modelbus','mddi-modelbus','/cvsroot/technology/org.eclipse.mddi/org.eclipse.mddi.modelbus/'),
+	('org.eclipse.mddi','org.eclipse.mddi.modelbus.orchestration','mddi-dev','/cvsroot/technology/org.eclipse.mddi/org.eclipse.mddi.modelbus.orchestration/') -- should this be in mddi-dev or mddi-modelbus?
 ;
