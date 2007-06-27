@@ -82,12 +82,12 @@ $queries = array(
 	3 => array(
 		"name" => "Project Popularity",
 		"sql" => "SELECT `projects`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $dayrange AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT %u",
-		"trendsql" => "(SELECT CONCAT(`projects`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $dayrange AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT 10)"
+		"trendsql" => "(SELECT CONCAT(CONVERT(`projects` USING utf8), ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `projects` IS NOT NULL AND $dayrange AND $project GROUP BY `projects` ORDER BY `pop` DESC LIMIT 10)" //CONVERT() required as above
 	),
 	4 => array(
 		"name" => "Bundle Popularity",
 		"sql" => "SELECT `bundle`, SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $dayrange AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT %u",
-		"trendsql" => "(SELECT CONCAT(`bundle`, ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $dayrange AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT 10)"
+		"trendsql" => "(SELECT CONCAT(CONVERT(`bundle` USING utf8), ' for ', $rangefmt), SUM(`number`) AS `pop` FROM `file_downloads` NATURAL JOIN `distfiles` WHERE `bundle` IS NOT NULL AND $dayrange AND $project GROUP BY `bundle` ORDER BY `pop` DESC LIMIT 10)" //CONVERT() required as above
 	),
 	5 => array(
 		"name" => "Release Popularity",
