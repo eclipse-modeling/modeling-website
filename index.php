@@ -45,6 +45,8 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
 	$Nav->addCustomNav("MDDi", "/mddi/download.php", "_self", 3);
 	$Nav->addCustomNav("MDT", "/modeling/mdt/downloads/", "_self", 3);
+	$Nav->addCustomNav("M2M", "/m2m/", "_self", 3);
+	$Nav->addCustomNav("M2T", "/modeling/m2t/downloads/", "_self", 3);
 
 	# End: page-specific settings
 	#
