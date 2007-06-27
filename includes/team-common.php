@@ -141,11 +141,11 @@ $pageAuthor= "Nick Boldt";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
-function getDevelopers($hasCommitterID = true)
+function getDevelopers($isCommitter = true)
 {
 	global $projct;
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
-			"WHERE committerid IS " . ($hasCommitterID ? "NOT" : "") . " NULL AND " .
+			"WHERE committer = " . ($isCommitter ? "1" : "0") . " AND " .
 			($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct' ") . 
 			"ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name 
 	$result= wmysql_query($query);
