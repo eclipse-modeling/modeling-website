@@ -21,7 +21,7 @@ $projectDownloadsPagePath = $projectDownloadsPath."/downloads";
 
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
 $buildDirPrefix = ($isBuildServer ? "/home/www-data/build" : "/home/local/data/httpd/download.eclipse.org");
-$buildDir = (isset($_GET["tech"]) ? "/technology/emft" : "/$PR") . $proj . "/downloads/drops/" . $buildName;
+$buildDir = (isset($_GET["tech"]) ? ($isBuildServer ? "/emft" : "/technology/emft") : "/$PR") . $proj . "/downloads/drops/" . $buildName;
 $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
 $subprojName = array_flip($projects); $subprojName = $subprojName[$projct];
 $pageTitle = $projectName . ($subprojName && $projectName != $subprojName ? ' ' . $subprojName : '') . " Build " . $buildName . " - Test Results";
@@ -70,6 +70,10 @@ foreach ($catgs as $num => $dirBits)
 {
 	if ($num === 0)
 	{
+		if ($debug)
+		{
+			print "Searching ".$buildDirPrefix . $dirBits[1]."<br>";
+		}
 		$files = loadDir($buildDirPrefix . $dirBits[1], $dirBits[2]);
 		$out = "";
 		if (sizeof($files) > 0)
