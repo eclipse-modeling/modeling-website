@@ -70,10 +70,6 @@ foreach ($catgs as $num => $dirBits)
 {
 	if ($num === 0)
 	{
-		if ($debug)
-		{
-			print "Searching ".$buildDirPrefix . $dirBits[1]."<br>";
-		}
 		$files = loadDir($buildDirPrefix . $dirBits[1], $dirBits[2]);
 		$out = "";
 		if (sizeof($files) > 0)
