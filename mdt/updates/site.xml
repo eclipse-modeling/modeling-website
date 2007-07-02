@@ -38,6 +38,36 @@
 		<category name="mdt uml2 SDK 2.1.0"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.uml2.diagram.source_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2.diagram.source" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.diagram_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2.diagram" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.doc_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2tools.doc" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.sdk_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2tools.sdk" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2tools" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.examples_0.7.0.v200706291101.jar" patch="false" id="org.eclipse.uml2tools.examples" version="0.7.0.v200706291101">
+		<category name="mdt uml2tools SDK 0.7.0"/>
+	</feature>
+
 <category-def label="OCL SDK 1.0.2" name="OCL SDK 1.0.2">
 		<description>
 This category contains the features of the 1.0.2 build of mdt ocl SDK, which includes source, plugins, and documentation.
@@ -283,6 +313,12 @@ This category contains the features of the 2.1.0 build of mdt uml2 SDK, which in
 	<category-def label="mdt ocl SDK 1.1" name="mdt ocl SDK 1.1">
 		<description>
 This category contains the features of the 1.1 build of mdt ocl SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt uml2tools SDK 0.7.0" name="mdt uml2tools SDK 0.7.0">
+		<description>
+This category contains the features of the 0.7.0 build of mdt uml2tools SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
