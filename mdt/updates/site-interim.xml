@@ -1119,6 +1119,36 @@
 		<category name="mdt uml2 SDK 2.1RC4 S200706251652"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.uml2.diagram.source_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2.diagram.source" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.diagram_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2.diagram" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.doc_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.doc" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.sdk_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.sdk" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2tools.examples_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.examples" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
+	</feature>
+
 <category-def label="mdt eodm SDK 0.8.0M5 S200702161050" name="mdt eodm SDK 0.8.0M5 S200702161050">
 		<description>
 This category contains the features of the 0.8.0M5 S200702161050 build of mdt eodm SDK, which includes source, plugins, and documentation.
@@ -1310,6 +1340,12 @@ This category contains the features of the RC3fix S200706201055 build of mdt uml
 	<category-def label="mdt uml2 SDK 2.1RC4 S200706251652" name="mdt uml2 SDK 2.1RC4 S200706251652">
 		<description>
 This category contains the features of the 2.1RC4 S200706251652 build of mdt uml2 SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt uml2tools SDK 0.7.0b R200707030850" name="mdt uml2tools SDK 0.7.0b R200707030850">
+		<description>
+This category contains the features of the 0.7.0b R200707030850 build of mdt uml2tools SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
