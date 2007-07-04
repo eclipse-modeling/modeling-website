@@ -1149,6 +1149,31 @@
 		<category name="mdt uml2tools SDK 0.7.0b R200707030850"/>
 	</feature>
 
+
+	<feature url="features/org.eclipse.uml2.doc_2.0.4.v200707041607.jar" patch="false" id="org.eclipse.uml2.doc" version="2.0.4.v200707041607">
+		<category name="mdt uml2 SDK 2.0.4 M200707041607"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples.source_2.0.4.v200707041607.jar" patch="false" id="org.eclipse.uml2.examples.source" version="2.0.4.v200707041607">
+		<category name="mdt uml2 SDK 2.0.4 M200707041607"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.examples_2.0.4.v200707041607.jar" patch="false" id="org.eclipse.uml2.examples" version="2.0.4.v200707041607">
+		<category name="mdt uml2 SDK 2.0.4 M200707041607"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2.source_2.0.4.v200707041607.jar" patch="false" id="org.eclipse.uml2.source" version="2.0.4.v200707041607">
+		<category name="mdt uml2 SDK 2.0.4 M200707041607"/>
+	</feature>
+
+
+	<feature url="features/org.eclipse.uml2_2.0.4.v200707041607.jar" patch="false" id="org.eclipse.uml2" version="2.0.4.v200707041607">
+		<category name="mdt uml2 SDK 2.0.4 M200707041607"/>
+	</feature>
+
 <category-def label="mdt eodm SDK 0.8.0M5 S200702161050" name="mdt eodm SDK 0.8.0M5 S200702161050">
 		<description>
 This category contains the features of the 0.8.0M5 S200702161050 build of mdt eodm SDK, which includes source, plugins, and documentation.
@@ -1346,6 +1371,12 @@ This category contains the features of the 2.1RC4 S200706251652 build of mdt uml
 	<category-def label="mdt uml2tools SDK 0.7.0b R200707030850" name="mdt uml2tools SDK 0.7.0b R200707030850">
 		<description>
 This category contains the features of the 0.7.0b R200707030850 build of mdt uml2tools SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+
+	<category-def label="mdt uml2 SDK 2.0.4 M200707041607" name="mdt uml2 SDK 2.0.4 M200707041607">
+		<description>
+This category contains the features of the 2.0.4 M200707041607 build of mdt uml2 SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
 </site>
