@@ -352,4 +352,42 @@ This category contains the features of the 0.7.0 build of mdt uml2tools SDK, whi
 This category contains the features of the 0.9.0 build of mdt eodm SDK, which includes source, plugins, and documentation.
 		</description>
 	</category-def>
+
+	<feature url="features/org.eclipse.uml2.diagram.source_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2.diagram.source" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	
+	<feature url="features/org.eclipse.uml2.diagram_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2.diagram" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	
+	<feature url="features/org.eclipse.uml2tools.doc_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.doc" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	
+	<feature url="features/org.eclipse.uml2tools.sdk_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.sdk" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	
+	<feature url="features/org.eclipse.uml2tools_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	
+	<feature url="features/org.eclipse.uml2tools.examples_0.7.0.v200707030850.jar" patch="false" id="org.eclipse.uml2tools.examples" version="0.7.0.v200707030850">
+		<category name="mdt uml2tools SDK 0.7.0b"/>
+	</feature>
+	
+	<category-def label="mdt uml2tools SDK 0.7.0b" name="mdt uml2tools SDK 0.7.0b">
+		<description>
+			This category contains the features of the 0.7.0b build of mdt uml2tools SDK, which includes source, plugins, and documentation.
+		</description>
+	</category-def>
+	
+	
+
 </site>
