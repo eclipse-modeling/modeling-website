@@ -1,11 +1,3 @@
-abbr
-{
-	border-bottom: 1px dotted gray;
-	/* removes konqueror's custom abbr style */
-	font: inherit;
-	letter-spacing: inherit;
-}
-
 #midcolumn .homeitem3col h3 span
 {
 	float: right;

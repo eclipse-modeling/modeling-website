@@ -122,5 +122,7 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=prod
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=M2T" . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
 $Nav->addCustomNav("Contributors", "$rooturl/project-info/team.php", "_self", 2);
 
+$App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
+
 unset ($bugcoms);
 ?>

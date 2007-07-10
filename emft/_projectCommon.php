@@ -150,4 +150,6 @@ else
 }
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+
+$App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
 ?>
