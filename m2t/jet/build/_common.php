@@ -6,11 +6,11 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
-		"0.8.0=HEAD,/opt/sun-java2-5.0",
+		"0.8.1=HEAD,/opt/sun-java2-5.0",
 		"0.7.3=R0_7_maintenance,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"0.8.1=HEAD,/opt/public/common/ibm-java2-ppc-50",
 		"0.7.3=R0_7_maintenance,/opt/public/common/ibm-java2-ppc-50"
 	),
 	
