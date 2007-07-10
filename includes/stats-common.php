@@ -299,15 +299,14 @@ foreach ($dat as $row)
 	$liclass = (isset($row["sep"]) && $trend != -1 ? " class=\"sep\"" : "");
 	if (isset($queries[$query]["showpercent"]) && !$queries[$query]["showpercent"])
 	{
-		$percent = "";
 		$value = $row[1];
 	}
 	else
 	{
-		$percent = round($row[1]*100/$total, 2) . "% ";
-		$value = "($row[1])";
+		$percent = round($row[1]*100/$total, 2) . "%";
+		$value = "<abbr title=\"$percent\">$row[1]</abbr>";
 	}
-	print "<li$liclass><div class=\"bar\" style=\"width: " . round($row[1]*100/$max) . "%\">&#160;</div><span>$percent$value</span><div class=\"name\">$name</div></li>\n";
+	print "<li$liclass><div class=\"bar\" style=\"width: " . round($row[1]*100/$max) . "%\">&#160;</div><span>$value</span><div class=\"name\">$name</div></li>\n";
 }
 print "</ul>\n";
 
