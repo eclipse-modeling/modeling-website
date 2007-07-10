@@ -4,7 +4,8 @@
 	To install these plugins, point your Eclipse Update Manager at this site.
 	</description>
 
-
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/ ... -->
+   
 	<!-- 2.0.0 -->
    
 
@@ -134,7 +135,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.ecore.sdo_2.2.1.v200705141058.jar" patch="false" id="org.eclipse.emf.ecore.sdo" version="2.2.1.v200705141058">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.ecore.sdo_2.2.1.v200705141058.jar" patch="false" id="org.eclipse.emf.ecore.sdo" version="2.2.1.v200705141058">
 		<category name="EMF SDK 2.2.3"/>
 	</feature>
 
@@ -149,7 +150,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf_2.2.3.v200705141058.jar" patch="false" id="org.eclipse.emf" version="2.2.3.v200705141058">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf_2.2.3.v200705141058.jar" patch="false" id="org.eclipse.emf" version="2.2.3.v200705141058">
 		<category name="EMF SDK 2.2.3"/>
 	</feature>
 
@@ -164,12 +165,12 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.xsd_2.2.3.v200705141058.jar" patch="false" id="org.eclipse.xsd" version="2.2.3.v200705141058">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.xsd_2.2.3.v200705141058.jar" patch="false" id="org.eclipse.xsd" version="2.2.3.v200705141058">
 		<category name="EMF SDK 2.2.3"/>
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.examples_2.2.0.v200705141058.jar" patch="false" id="org.eclipse.emf.examples" version="2.2.0.v200705141058">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.examples_2.2.0.v200705141058.jar" patch="false" id="org.eclipse.emf.examples" version="2.2.0.v200705141058">
 		<category name="EMF SDK 2.2.3"/>
 	</feature>
 
@@ -179,7 +180,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.codegen.ecore_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.codegen.ecore" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.codegen.ecore_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.codegen.ecore" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
@@ -189,7 +190,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.codegen_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.codegen" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.codegen_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.codegen" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
@@ -199,7 +200,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.common_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.common" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.common_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.common" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
@@ -299,7 +300,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.ecore.sdo_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.ecore.sdo" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.ecore.sdo_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.ecore.sdo" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
@@ -344,7 +345,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.xsd_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.xsd" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.xsd_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.xsd" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
@@ -354,7 +355,7 @@
 	</feature>
 
 
-	<feature url="features/org.eclipse.emf.examples_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.examples" version="2.3.0.v200706262000">
+	<feature url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.examples_2.3.0.v200706262000.jar" patch="false" id="org.eclipse.emf.examples" version="2.3.0.v200706262000">
 		<category name="EMF SDK 2.3.0"/>
 	</feature>
 
