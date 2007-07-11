@@ -233,10 +233,9 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 
 			<tr>
-				<td><img src="/modeling/images/numbers/4.gif" /></td>
+				<td><img src="/modeling/images/numbers/5.gif" /></td>
 				<td>&#160;</td>
-				<td><b>Run Tests</b><br><small>
-				optional</small></td>
+				<td><b>Run Tests</b></td>
 				<td>&#160;</td>
 				
 				<td colspan="1">
@@ -253,7 +252,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 			</tr> 
 
 			<tr>
-				<td><img src="/modeling/images/numbers/5.gif" /></td>
+				<td><img src="/modeling/images/numbers/6.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Email Address</b><br><small>optional</small></td>
 				<td>&#160;</td>
