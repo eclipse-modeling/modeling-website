@@ -177,6 +177,10 @@ function getCompileResults($file)
 	if (is_file($file))
 	{
 		$results = exec("tail -1 $file");
+		if (!$results)
+		{
+			$results = file("$file"); $results = $results[sizeof($results)-1];
+		}
 	}
 	if (preg_match("/problem|error|warning/", $results))
 	{
