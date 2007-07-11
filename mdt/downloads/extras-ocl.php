@@ -8,7 +8,8 @@ $NLpacks = array(
 );
 
 $oldrels = array(
-	//"1.0.0" => "200606261119"
+	"1.0.1" => "200609250830",
+	"1.0.0" => "200606261119"
 );
 
 function doLanguagePacks()
