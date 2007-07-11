@@ -13,10 +13,6 @@ function sidebar()
 			<li><a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/">Build</a>, 
 				<a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/promo.php">Promote</a></li>
 		</ul>
-		<hr noshade="noshade" size="1" width="80%"/>
-		<ul>
-			<li><a href="/emft/build/?project=<?php print $projct; ?>">Old Build</a> (EMFT)</li>
-		</ul>
 	</div>
 
 	<div class="sideitem">
