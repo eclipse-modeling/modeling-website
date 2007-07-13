@@ -1,4 +1,5 @@
 <?php
+require_once ("../../includes/buildServer-common.php");
 
 $dirs = array(
 	"HEAD" => "/opt/public/modeling/searchcvs/cvssrc/org.eclipse.emf",
@@ -7,5 +8,5 @@ $dirs = array(
 	"R2_0_maintenance" => "/opt/public/modeling/searchcvs/cvssrc_branches/org.eclipse.emf-R2_0_maintenance"
 );
 
-include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/versionaudit-common.php");
+include_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/versionaudit-common.php");
 ?>

@@ -1,7 +1,4 @@
 <?php
-ini_set('error_reporting', "6143"); # error_reporting(E_ALL);
-ini_set('display_errors', "1");
-
 /*
  * A plugin/feature version checking auditor with support for cli and www mode.
  */
