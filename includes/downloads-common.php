@@ -540,7 +540,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			if (is_file("$PWD${path}compilelogs/summary.txt"))
 			{
 				$compilelogSummary = file_get_contents("$PWD${path}compilelogs/summary.txt");
-				$link2 = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?project=$projct&ID=".substr($path,0,strlen($path)-1);
+				$link2 = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=".substr($path,0,strlen($path)-1);
 				if ($compilelogSummary)
 				{
 					$m = null;
@@ -651,7 +651,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	{
 		$ID = substr($path, -14);
 		$conlog = "${path}testing/${ID}testing/linux.gtk_consolelog.txt";
-		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?project=$projct&ID=".substr($path,0,strlen($path)-1);
+		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=".substr($path,0,strlen($path)-1);
 		$link2 = (is_file("$PWD$conlog") ? "$mid$conlog" : (is_file("$PWD$testlog") ? "$testlog" : $link));
 		$result = (is_file("$PWD$conlog") ? "Testing..." : $result);
 	}
@@ -950,7 +950,7 @@ function getBuildArtifacts($dir, $branchID)
 		
 		$version = $opts["buildAlias"] ? $opts["buildAlias"] : (preg_match("#(.+)/([IM]\d+)#", $branchID, $matches) ? $matches[2]: "HEAD");  
 		$ret .= "<li><a href=\"http://www.eclipse.org/${PR}/news/relnotes.php?project=${projct}&version=${version}\">Changes In This Build</a></li>\n";
-		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?project=$projct&ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
+		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
 		foreach (array_keys($details) as $label)
 		{
 			$details[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
