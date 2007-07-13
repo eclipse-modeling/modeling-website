@@ -6,6 +6,8 @@ define("LOGGER_FAIL", 0);
 define("LOGGER_OK", 1);
 define("LOGGER_INFO", 2);
 
+require_once ("buildServer-common.php");
+
 $verbosity = 0;
 $cli = isset($argv); // $argv is only defined when running in cli mode
 
