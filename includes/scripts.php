@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.34 2007/06/21 19:36:20 nickb Exp $ 
+// $Id: scripts.php,v 1.35 2007/07/13 02:37:30 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -480,11 +480,12 @@ function components($cvscoms)
 function wikiCategoryToListItems($category)
 {
 	$collecting = false;
-
+	$wiki_contents = "";
+	
 	// insert wiki content
 	$host = "wiki.eclipse.org";
-	$url = "/index.php";
-	$vars = "title=Category:" . $category;
+	$url = "/Category:" . $category;
+	$vars = "";
 
 	$header = "Host: $host\r\n";
 	$header .= "User-Agent: PHP Script\r\n";
@@ -518,13 +519,13 @@ function wikiCategoryToListItems($category)
 			}
 			
 			// collect link(s)
-			if ($collecting && preg_match_all("#<a href=\"/index.php/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
+			if ($collecting && preg_match_all("#<a href=\"/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
 			{
 				if (is_array($matches) && sizeof($matches)>0)
 				{
 					foreach ($matches as $match)
 					{
-						$out .= "<li><a href=\"http://wiki.eclipse.org/index.php/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
+						$out .= "<li><a href=\"http://wiki.eclipse.org/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
 					}
 				}
 			}
