@@ -7,8 +7,6 @@ $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NA
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 internalUseOnly(); 
 
-include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
-
 # use this script to kick parsecvs.sh for a given set of project folders
 # should be usable as web and commandline api
 
@@ -153,13 +151,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function projects()
 {
-	$validprojects = array();
-	$result = wmysql_query("SELECT `project` FROM `cvsfiles` WHERE `project` LIKE 'org.eclipse.%' GROUP BY `project`");
-	while ($row = mysql_fetch_row($result))
-	{
-		$validprojects[] = $row[0];
-	}
-
+	$validprojects = loadDirSimple("/opt/public/modeling/searchcvs/cvssrc","","d"); sort($validprojects); reset($validprojects);
 	return $validprojects;
 }
 ?>
