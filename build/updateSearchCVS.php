@@ -127,7 +127,6 @@ else # if no $_GET["projects"] value, present UI to multi-select targets.
 			<select size="10" multiple="multiple" id="project" name="projects[]">
 			<?php
 			$validprojects = projects();
-			print "<option selected=\"selected\" value=\"0\">--Select a project --</option>\n";
 			print join("", preg_replace("/^(.+)$/", "<option value=\"$1\">$1</option>\n", $validprojects));
 			?>
 			</select>
@@ -151,7 +150,16 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function projects()
 {
-	$validprojects = loadDirSimple("/opt/public/modeling/searchcvs/cvssrc","","d"); sort($validprojects); reset($validprojects);
+	$vp = loadDirSimple("/opt/public/modeling/searchcvs/cvssrc","","d");
+	foreach ($vp as $pr)
+	{
+		if (!preg_match("/(CVS|OLD)/",$pr))
+		{
+			$validprojects[] = $pr;
+		}
+	} 
+	sort($validprojects); reset($validprojects);
 	return $validprojects;
 }
+
 ?>
