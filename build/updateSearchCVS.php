@@ -120,7 +120,7 @@ else # if no $_GET["projects"] value, present UI to multi-select targets.
 {
 ?>
 	<div class="homeitem3col">
-	<h3>Choose project(s) to update</h3>
+	<h3>Choose project(s) / component(s) to update</h3>
 	
 	<blockquote>
 		<form action="" method="get" name="runUpdate">
