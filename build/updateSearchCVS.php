@@ -75,6 +75,7 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 				{
 					print '<div class="homeitem3col">'."\n";
 					print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another run is already in progress.</h3>\n";
+					print "<p>Logfile: <u>/tmp/parsecvs_web.log.txt</u></p>";
 					print "<p>Lockfile: <u>$lockfile</u></p>";
 					print "<p><small><code>";
 					foreach (file($lockfile) as $line) 
@@ -95,6 +96,7 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
   					if (is_array($fp) && sizeof($fp)>0)
   					{
 						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
+						print "<p>Logfile: <u>/tmp/parsecvs_web.log.txt</u></p>";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
 						print "<p><small><code>".str_replace("' '","'<br/>'",preg_replace("/\ \-/","<br> -",$cmd))."</code></small></p>";
   					}
@@ -105,6 +107,7 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 						print "<p><small><code>".str_replace("' '","'<br/>'",preg_replace("/\ \-/","<br> -",$cmd))."</code></small></p>";
   					}
 				}
+  					
 				if (is_file($lockfile))
 				{
   					if (!chmod($lockfile, 0666))
