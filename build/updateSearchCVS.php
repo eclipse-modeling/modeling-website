@@ -24,8 +24,8 @@ if (!isset($_GET["projects"]) || !$_GET["projects"] || !is_array($_GET["projects
 	$regs = null;
 	preg_match("@/([^/]+)$@", $_SERVER["SCRIPT_NAME"], $regs);
 	$script = $regs[1];
-	print "<h3>INPUT</h3>\n<ul><li>$script?projects[]=<i style=\"color:blue\">{cvs project 1}</i>&amp;projects[]=<i style=\"color:blue\">{cvs project 2}</i>&amp;...</li></ul><br/>\n";
-	print "<h3>EXAMPLE</h3>\n<ul><li>$script?projects[]=org.eclipse.uml2&amp;projects[]=org.eclipse.uml2.releng</li></ul><br/>\n";
+	print "<h3>INPUT</h3>\n<ul><li>$script?projects[]=<i style=\"color:blue\">{cvs src folder 1}</i>&amp;projects[]=<i style=\"color:blue\">{cvs src folder 2}</i>&amp;...</li></ul><br/>\n";
+	print "<h3>EXAMPLE</h3>\n<ul><li>$script?projects[]=cvssrc/emf-org.eclipse.emf&amp;projects[]=cvssrc_branches/mdt-org.eclipse.xsd-R2_1_maintenance</li></ul><br/>\n";
 	print '<h3>OUTPUT</h3>' . "\n" . '<ul><li>starts a headless process; can run <a href="http://www.eclipse.org/modeling/mdt/news/checkReleaseExists.php">checkReleaseExists.php</a> task to see if done</li></ul><br/>' . "\n";
 
 	print "</div>\n";
@@ -35,10 +35,10 @@ print "<h1>Update Search CVS - Web UI</h1>\n";
 # given $_GET["projects"], pass to parsecvs.sh as headless exec task using lockfile
 if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"]))
 {
-	$validprojects = projects();
+	$validprojectKeys = projects(true);
 	$projects = $_GET["projects"]; sort($projects); reset($projects);
 	
-	if (sizeof($validprojects) > 0)
+	if (sizeof($validprojectKeys) > 0)
 	{
 		# running as user wwwrun
 		$cmd = '';
@@ -46,10 +46,10 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 		$addedTarget = false;
 		foreach ($projects as $targ)
 		{
-			if ($targ && in_array($targ, $validprojects))
+			if ($targ && in_array($targ, $validprojectKeys))
 			{
-				$cmd .= ' ' . escapeshellarg('cvssrc/' . $targ);
-				$lockfile .= ($lockfile ? "_" : "") . $targ;
+				$cmd .= ' ' . escapeshellarg($targ);
+				$lockfile .= ($lockfile ? "_" : "") . preg_replace("#^.+/#","",$targ);
 				$addedTarget = true;
 			}
 		}
@@ -96,13 +96,13 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
   					{
 						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+						print "<p><small><code>".str_replace("' '","'<br/>'",preg_replace("/\ \-/","<br> -",$cmd))."</code></small></p>";
   					}
   					else
   					{
 						print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
 						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+						print "<p><small><code>".str_replace("' '","'<br/>'",preg_replace("/\ \-/","<br> -",$cmd))."</code></small></p>";
   					}
 				}
 				if (is_file($lockfile))
@@ -126,8 +126,11 @@ else # if no $_GET["projects"] value, present UI to multi-select targets.
 		<form action="" method="get" name="runUpdate">
 			<select size="10" multiple="multiple" id="project" name="projects[]">
 			<?php
-			$validprojects = projects();
-			print join("", preg_replace("/^(.+)$/", "<option value=\"$1\">$1</option>\n", $validprojects));
+			$validprojects = projects(false);
+			foreach ($validprojects as $val => $label)
+			{
+				print "<option value=\"$val\">".str_replace("-"," | ",$label)."</option>\n"; # cvssrc_branches/emf-org.eclipse.emf.ecore.sdo-R2_1_maintenance => emf | org.eclipse.emf.ecore.sdo | R2_1_maintenance
+			}
 			?>
 			</select>
 			<input type="hidden" name="previewOnly" value="<?php echo $previewOnly; ?>"/>
@@ -148,17 +151,30 @@ $pageAuthor = "Nick Boldt";
 
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
-function projects()
+function projects($keysOnly = false)
 {
-	$vp = loadDirSimple("/opt/public/modeling/searchcvs/cvssrc","","d");
-	foreach ($vp as $pr)
+	$vps = array(
+		"cvssrc" => loadDirSimple("/opt/public/modeling/searchcvs/cvssrc","","d"),
+		"cvssrc_branches" => loadDirSimple("/opt/public/modeling/searchcvs/cvssrc_branches","","d")
+	);
+	foreach ($vps as $pre => $vp)
 	{
-		if (!preg_match("/(CVS|OLD)/",$pr))
+		foreach ($vp as $pr)
 		{
-			$validprojects[] = $pr;
+			if (!preg_match("/(CVS|OLD)/",$pr))
+			{
+				if ($keysOnly)
+				{
+					$validprojects[] = "$pre/$pr"; # 0 => cvssrc_branches/emf-org.eclipse.emf.ecore.sdo-R2_1_maintenance	
+				}
+				else
+				{
+					$validprojects["$pre/$pr"] = $pr; # cvssrc_branches/emf-org.eclipse.emf.ecore.sdo-R2_1_maintenance => emf-org.eclipse.emf.ecore.sdo-R2_1_maintenance 
+				}
+			}
 		}
 	} 
-	sort($validprojects); reset($validprojects);
+	ksort($validprojects); reset($validprojects);
 	return $validprojects;
 }
 
