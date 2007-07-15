@@ -14,7 +14,7 @@ $cli = isset($argv); // $argv is only defined when running in cli mode
 /* in cli mode, you'll need to have the includes directory (with db.php) in the current directory, then invoke this script directly, rather than one of the placeholders */
 if ($cli)
 {
-	require("includes/db.php");
+	$require_db = "includes/db.php";
 
 	$dirs = array();
 	for ($i = 1; $i < sizeof($argv); $i++)
@@ -37,10 +37,9 @@ if ($cli)
 }
 else
 {
-	header("Content-type: text/plain");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-	require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
+	$require_db = $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php";
 
 	if (isset($_GET["verbosity"]) && preg_match("/^\d+$/", $_GET["verbosity"]))
 	{
@@ -53,15 +52,21 @@ else
 		$b = $_GET["branch"];
 		if (isset($dirs[$b]))
 		{
+			header("Content-type: text/plain");
 			$dirs = array($dirs[$b]);
 		}
 		else
 		{
-			print "$b wasn't a valid branch, please try again with a valid branch, such as:\n";
-			print join("\n", preg_replace("/^(.+)$/", "- $1", array_keys($dirs))) . "\n";
+			header("Content-type: text/html");
+			print "<pre> $b wasn't a valid branch, please try again with a valid branch, such as:\n";
+			print join("\n", preg_replace("/^(.+)$/", "- <a href=\"?branch=$1\">$1</a>", array_keys($dirs))) . " </pre>\n";
 			exit(-5);
 		}
 	}
+	else
+	{
+		header("Content-type: text/plain");
+	}	
 	
 	foreach ($dirs as $dir)
 	{
@@ -120,6 +125,7 @@ foreach ($dirs as $dir)
 
 	$branchfails = 0;
 	$issues = array();
+	require_once($require_db);
 	foreach (glob("$dir/plugins/org.eclipse.*") as $plugdir)
 	{
 		$plugin = basename($plugdir);
