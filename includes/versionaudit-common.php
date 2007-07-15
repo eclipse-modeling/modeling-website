@@ -237,7 +237,7 @@ foreach ($dirs as $dir)
 	}
 	else
 	{
-		print "$branch: $branchfails failure(s) -- update CVS then run http://build.eclipse.org/modeling/build/updateSearchCVS.php to refresh database.\n";
+		print "$branch: $branchfails failure(s): commit plugin/feature fixes to CVS, then run http://build.eclipse.org/modeling/build/updateSearchCVS.php to refresh database.\n";
 		ksort($issues);
 		print join("\n", array_keys($issues)) . "\n\n";
 		$issues = array();
