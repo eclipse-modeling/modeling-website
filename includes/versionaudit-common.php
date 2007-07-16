@@ -135,10 +135,10 @@ foreach ($dirs as $dir)
 		$queue = array($plugin);
 		$versions = array();
 		$vcache = array();
+		$fails = 0;
 
 		if ($tmp = plugin_version($plugdir))
 		{
-			$fails = 0;
 			$vanityname = preg_replace("/\.qualifier$/", "", $tmp);
 			$version = convert_version($tmp);
 
