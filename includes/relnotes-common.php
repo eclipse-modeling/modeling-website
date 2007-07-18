@@ -43,7 +43,15 @@ else
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
-$cvscom2 = $cvscom;
+if ($proj=="emf" || $proj=="xsd" || $proj=="sdo")
+{
+	// hack to support emf/sdo/xsd while still in tools; once it moves we'll have `compoent` LIKE 'org.eclipse.emf' instead
+	$cvscom2 = "doc' OR `component` LIKE 'examples' OR `component` LIKE 'tests' OR `component` LIKE 'plugins";
+}
+else
+{
+	$cvscom2 = $cvscom;
+}
 
 ob_start();
 
