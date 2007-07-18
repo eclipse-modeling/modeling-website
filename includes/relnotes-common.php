@@ -43,16 +43,6 @@ else
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
-if ($proj=="emf" || $proj=="xsd" || $proj=="sdo")
-{
-	// hack to support emf/sdo/xsd while still in tools; once it moves we'll have `compoent` LIKE 'org.eclipse.emf' instead
-	$cvscom2 = "doc' OR `component` LIKE 'examples' OR `component` LIKE 'tests' OR `component` LIKE 'plugins";
-}
-else
-{
-	$cvscom2 = $cvscom;
-}
-
 ob_start();
 
 $header = "";
@@ -117,7 +107,7 @@ if (isset($_GET["bugzonly"]))
 	{
 		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 		{
-			$sql = "SELECT `bugid`,`title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
+			$sql = "SELECT `bugid`,`title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
 			$result = wmysql_query($sql);
 			$num = mysql_num_rows($result);
 			$tnum += $num;
@@ -138,7 +128,7 @@ if (sizeof($rels))
 	ob_start();
 	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 	{
-		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom2') AND `branch` = $branch GROUP BY `bugid` DESC";
+		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
 		$result = wmysql_query($sql);
 		$num = mysql_num_rows($result);
 		$tnum += $num;
