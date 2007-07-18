@@ -28,14 +28,14 @@ else
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
 $cvsprojs = array(
-	"emf" => "org.eclipse.emf",
-	"sdo" => "org.eclipse.emf.ecore.sdo"
 );
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.emf" => array (
+		"emf" => "org.eclipse.emf",
+		"sdo" => "org.eclipse.emf.ecore.sdo",
 		"query" => "org.eclipse.emf.query",
 		"transaction" => "org.eclipse.emf.transaction",
 		"validation" => "org.eclipse.emf.validation",
