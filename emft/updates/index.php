@@ -1,4 +1,7 @@
 <?php 
+if ($_SERVER["SERVER_NAME"] != "www.eclipse.org") {
+	header("Location: http://www.eclipse.org/modeling/emft/updates/");
+}
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 
 $PRS = array(
