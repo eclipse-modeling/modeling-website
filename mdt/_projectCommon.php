@@ -27,22 +27,17 @@ else
 
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
-$cvsprojs = array (
-	"xsd" => "org.eclipse.xsd"
-);
+$cvsprojs = array ();
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
-	"org.eclipse.emft" => array (
-		//"ocl" => "ocl",
-		//"eodm" => "eodm"
-	),
 	"org.eclipse.mdt" => array (
 		"ocl" => "org.eclipse.ocl",
 		"uml2" => "org.eclipse.uml2",
 		"uml2tools" => "org.eclipse.uml2tools",
-		"eodm" => "org.eclipse.eodm"
+		"eodm" => "org.eclipse.eodm",
+		"xsd" => "org.eclipse.xsd"
 		/* add more here */
 	)
 );
