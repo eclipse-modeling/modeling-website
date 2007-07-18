@@ -19,9 +19,9 @@ function sidebar()
 		<ul>
 			<li>Update: <a href="http://build.eclipse.org/modeling/build/updateSearchCVS.php">Search CVS Data</a></li>
 			<li>Audit: 
-					 <a href="http://build.eclipse.org/modeling/emf/emf/versionaudit.php">EMF</a>, 
-					 <a href="http://build.eclipse.org/modeling/mdt/xsd/versionaudit.php">XSD</a>, 
-					 <a href="http://build.eclipse.org/modeling/emf/sdo/versionaudit.php">SDO</a></li>
+					 <a href="http://build.eclipse.org/modeling/emf/emf/versionaudit.php?html">EMF</a>, 
+					 <a href="http://build.eclipse.org/modeling/mdt/xsd/versionaudit.php?html">XSD</a>, 
+					 <a href="http://build.eclipse.org/modeling/emf/sdo/versionaudit.php?html">SDO</a></li>
 		</ul>
 	</div>
 
