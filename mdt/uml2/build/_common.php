@@ -16,7 +16,7 @@ $options = array (
 		"2.0.4=R2_0_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
 	
-	"Mapfile_Rule_Default" => 1, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
+	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
 	"EmailDefault" => "khussey@ca.ibm.com,jbruck@ca.ibm.com", // prefil email contact box with comma-sep'd list
 	
