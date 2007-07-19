@@ -34,6 +34,8 @@ if ($cli)
 			exit(-4);
 		}
 	}
+
+	$html = false;
 }
 else
 {
@@ -52,21 +54,16 @@ else
 		$b = $_GET["branch"];
 		if (isset($dirs[$b]))
 		{
-			header("Content-type: text/plain");
 			$dirs = array($dirs[$b]);
 		}
 		else
 		{
 			header("Content-type: text/html");
-			print "<pre> $b wasn't a valid branch, please try again with a valid branch, such as:\n";
-			print join("\n", preg_replace("/^(.+)$/", "- <a href=\"?branch=$1\">$1</a>", array_keys($dirs))) . " </pre>\n";
+			print "<pre>$b wasn't a valid branch, please try again with a valid branch, such as:\n";
+			print join("\n", preg_replace("/^(.+)$/", "- <a href=\"?branch=$1\">$1</a>", array_keys($dirs))) . "</pre>\n";
 			exit(-5);
 		}
 	}
-	else
-	{
-		header("Content-type: text/plain");
-	}	
 	
 	foreach ($dirs as $dir)
 	{
@@ -75,6 +72,17 @@ else
 			print "$dir wasn't a directory, please amend the definition of \$dirs in {$_SERVER["PHP_SELF"]}\n";
 			exit(-4);
 		}
+	}
+
+	if (isset($_GET["html"]))
+	{
+		$html = true;
+		header("Content-type: text/html");
+	}
+	else
+	{
+		$html = false;
+		header("Content-type: text/plain");
 	}
 }
 
@@ -93,6 +101,8 @@ if (!isset($dirs) || !is_array($dirs) || sizeof($dirs) == 0)
 	}
 	exit(-1);
 }
+
+ob_start();
 
 foreach ($dirs as $dir)
 {
@@ -143,18 +153,47 @@ foreach ($dirs as $dir)
 			$version = convert_version($tmp);
 
 			$p = ($com == "" ? $proj : "$proj/$com");
-			$result = wmysql_query("SELECT COUNT(*) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/plugins/$plugin/' AND `date` >= (SELECT `buildtime` FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `vanityname` = '$vanityname' AND `branch` = '$branch')");
-			$row = mysql_fetch_row($result);
-			if ($row[0] == 0)
+
+			/* it's quite possible for us to end up with changes in a branch (say R2_1_maintenance) with the plugin only being versioned at 2.1.0, of course 2.1.0 wasn't released from the R2_1_maintenance branch, so we'll never find it there
+			 * keep trying to find the last build in progressively less picky ways... */
+			$lastbuild = array(
+				"(SELECT MAX(`buildtime`) FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `branch` = '$branch' AND `type` = 'R')",
+				"(SELECT `buildtime` FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `vanityname` = '$vanityname' AND `type` = 'R')",
+				"(SELECT MIN(`buildtime`) FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `type` = 'R')",
+				"'2000-01-01'"
+			);
+			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/plugins/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+			if (mysql_num_rows($result) == 0)
 			{
 				logger(LOGGER_OK, "no commits found >= $p/plugins/$plugin/ $vanityname\n");
 			}
 			else
 			{
-				$msg = "$row[0] commit(s) found >= $plugin $vanityname\n";
-				$msg .= "     --> $plugin must be > $vanityname\n";
-				logger(LOGGER_FAIL, $msg);
-				$fails++;
+				$lastdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $plugdir);
+				$lastversion = preg_replace("/\.qualifier$/", "", plugin_version($lastdir));
+				$msg = mysql_num_rows($result) . " commit(s) found >= $plugin $lastversion, currently at $vanityname\n";
+				while ($row = mysql_fetch_row($result))
+				{
+					$msg .= "     ref: http://www.eclipse.org/modeling/emf/searchcvs.php?q=";
+					if ($row[0])
+					{
+						$msg .= "$row[0]\n";
+					}
+					else
+					{
+						$msg .= urlencode("file: $row[1] startdate: $row[2] enddate: $row[2]") . "\n";
+					}
+				}
+				if ($version > convert_version($lastversion))
+				{
+					logger(LOGGER_OK, $msg);
+				}
+				else
+				{
+					$msg .= "     --> $plugin must be > $vanityname\n";
+					logger(LOGGER_FAIL, $msg);
+					$fails++;
+				}
 			}
 
 			while (sizeof($queue) > 0)
@@ -199,7 +238,7 @@ foreach ($dirs as $dir)
 				{
 					$v1 = $vcache[$versions[$z]];
 					$v2 = $vcache[$version];
-					logger(LOGGER_OK, "$z (" . preg_replace("/\.\d+$/", "", $v1) . ") >= $plugin (" . preg_replace("/\.\d+$/", "", $v2) . "), ignoring service versions (actual version were $v1 and $v2, respectively)\n");
+					logger(LOGGER_OK, "$z (" . preg_replace("/\.\d+$/", "", $v1) . ") >= $plugin (" . preg_replace("/\.\d+$/", "", $v2) . "), ignoring service versions (actual versions were $v1 and $v2, respectively)\n");
 				}
 				else if ($versions[$z] >= $version)
 				{
@@ -242,6 +281,20 @@ foreach ($dirs as $dir)
 		print join("\n", array_keys($issues)) . "\n\n";
 		$issues = array();
 	}
+}
+
+$content = ob_get_contents();
+ob_end_clean();
+
+if ($html)
+{
+	print "<pre>\n";
+	print preg_replace("#(https?://[^ \n\t]+)#", "<a href=\"$1\">$1</a>", $content);
+	print "</pre>\n";
+}
+else
+{
+	print $content;
 }
 
 /* find features which include or depend on the given plugin within the given directory */
@@ -296,6 +349,10 @@ function plugin_version($plugdir)
 		{
 			$ret = $m[1];
 		}
+	}
+	else
+	{
+		logger(LOGGER_FAIL, "couldn't find a MANIFEST.MF or plugin.xml for $plugdir!\n");
 	}
 
 	return $ret;
