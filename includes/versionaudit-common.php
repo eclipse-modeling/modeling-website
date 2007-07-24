@@ -144,6 +144,7 @@ foreach ($dirs as $dir)
 		$checked = array();
 		$queue = array($plugin);
 		$versions = array();
+		$lastversions = array();
 		$vcache = array();
 		$fails = 0;
 
@@ -151,6 +152,10 @@ foreach ($dirs as $dir)
 		{
 			$vanityname = preg_replace("/\.qualifier$/", "", $tmp);
 			$version = convert_version($tmp);
+
+			$lastdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $dir);
+			$lastplugdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $plugdir);
+			$lastversion = preg_replace("/\.qualifier$/", "", plugin_version($lastplugdir));
 
 			$p = ($com == "" ? $proj : "$proj/$com");
 
@@ -169,8 +174,6 @@ foreach ($dirs as $dir)
 			}
 			else
 			{
-				$lastdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $plugdir);
-				$lastversion = preg_replace("/\.qualifier$/", "", plugin_version($lastdir));
 				$msg = mysql_num_rows($result) . " commit(s) found >= $plugin $lastversion, currently at $vanityname\n";
 				while ($row = mysql_fetch_row($result))
 				{
@@ -219,6 +222,7 @@ foreach ($dirs as $dir)
 			foreach (array_keys($deps) as $z)
 			{
 				$versions[$z] = convert_version(feature_version($deps[$z]));
+				$lastversions[$z] = convert_version(feature_version(preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $deps[$z])));
 			}
 			//print_r($deps);
 
@@ -226,31 +230,39 @@ foreach ($dirs as $dir)
 			if (is_file("$dir/$f"))
 			{
 				$versions["$proj.doc"] = doc_version($dir, $proj);
+				$lastversions["$proj.doc"] = doc_version($lastdir, $proj);
 			}
 			else
 			{
 				logger(LOGGER_INFO, "couldn't find $f\n");
 			}
 
-			foreach (array_keys($versions) as $z)
+			if ($version > convert_version($lastversion))
 			{
-				if (preg_match("/\.doc(?:-feature)?$/", $z) && $version - $versions[$z] <= 999)
+				foreach (array_keys($versions) as $z)
 				{
-					$v1 = $vcache[$versions[$z]];
-					$v2 = $vcache[$version];
-					logger(LOGGER_OK, "$z (" . preg_replace("/\.\d+$/", "", $v1) . ") >= $plugin (" . preg_replace("/\.\d+$/", "", $v2) . "), ignoring service versions (actual versions were $v1 and $v2, respectively)\n");
+					if (preg_match("/\.doc(?:-feature)?$/", $z) && $version - $versions[$z] <= 999)
+					{
+						$v1 = $vcache[$versions[$z]];
+						$v2 = $vcache[$version];
+						logger(LOGGER_OK, "$z (" . preg_replace("/\.\d+$/", "", $v1) . ") >= $plugin (" . preg_replace("/\.\d+$/", "", $v2) . "), ignoring service versions (actual versions were $v1 and $v2, respectively)\n");
+					}
+					else if ($versions[$z] > $lastversions[$z])
+					{
+						logger(LOGGER_OK, "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n");
+					}
+					else
+					{
+						$msg = "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . ", but $plugin has been incremented\n";
+						$msg .= "     --> $z must be > " . $vcache[$versions[$z]] . "\n";
+						logger(LOGGER_FAIL, $msg);
+						$fails++;
+					}
 				}
-				else if ($versions[$z] >= $version)
-				{
-					logger(LOGGER_OK, "$z (" . $vcache[$versions[$z]] . ") >= $plugin ($vcache[$version])\n");
-				}
-				else
-				{
-					$msg = "$z (" . $vcache[$versions[$z]] . ") < $plugin ($vcache[$version])\n";
-					$msg .= "     --> $z must be >= $vcache[$version]\n";
-					logger(LOGGER_FAIL, $msg);
-					$fails++;
-				}
+			}
+			else
+			{
+				logger(LOGGER_OK, "$plugin last released at $lastversion, currently at $vcache[$version]\n");
 			}
 
 			if ($fails == 0)
