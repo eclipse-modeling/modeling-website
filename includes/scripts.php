@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.37 2007/07/24 16:37:52 nickb Exp $ 
+// $Id: scripts.php,v 1.38 2007/07/24 16:49:14 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -20,16 +20,23 @@ function PWD_check($PWD, $suf)
 
 function getPWD($suf = "", $doDynCheck = true)
 {
-	global $PR;
+	global $PR, $App;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 
 	if ($doDynCheck) 
 	{
 		//dynamic assignments
 		$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
-		PWD_debug($PWD, $suf, "<!-- Found[1dyn]: PWD -->");
+		PWD_debug($PWD, $suf, "<!-- Found[1dyn] -->");
 	}
 	
+	//second dynamic assignment
+	if (PWD_check($PWD, $suf))
+	{
+		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
+		PWD_debug($PWD, $suf, "<!-- Found[2gDBP] -->");
+		
+	}
 	//static assignments
 	if (PWD_check($PWD, $suf))
 	{
@@ -46,7 +53,7 @@ function getPWD($suf = "", $doDynCheck = true)
 			if (preg_match($z, $_SERVER["HTTP_HOST"]))
 			{
 				$PWD = $servers[$z];
-				PWD_debug($PWD, $suf, "<!-- Found[2stat]: PWD -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
 			}
 		}
 	}
@@ -55,14 +62,21 @@ function getPWD($suf = "", $doDynCheck = true)
 	if (PWD_check($PWD, $suf))
 	{
 		$data = array(
-			3 => array(
+			4 => array(
+				"checkdir" => "/home/data/httpd/download.eclipse.org/",
+				"tries" => array(
+					"/home/local/httpd/download.eclipse.org/$PR/$suf",
+					"/home/www/eclipse/$PR/$suf"
+				)
+			),
+			5 => array(
 				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/www/eclipse/$PR/$suf"
 				)
 			),
-			4 => array(
+			6 => array(
 				"checkdir" => "/var/www/",
 				"tries" => array(
 					"/var/www/$PR/$suf",
@@ -82,7 +96,7 @@ function getPWD($suf = "", $doDynCheck = true)
 					$PWD = $data[$y]["tries"][$z];
 					if (!PWD_check($PWD, $suf))
 					{
-						PWD_debug($PWD, $suf, "<!-- Found[${y}def-$z]: PWD -->");
+						PWD_debug($PWD, $suf, "<!-- Found[${y}def-$z] -->");
 						break 2;
 					}
 				}
