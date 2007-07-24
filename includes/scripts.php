@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.36 2007/07/24 16:31:06 nickb Exp $ 
+// $Id: scripts.php,v 1.37 2007/07/24 16:37:52 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -23,8 +23,6 @@ function getPWD($suf = "", $doDynCheck = true)
 	global $PR;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 
-	print "<!-- App.getDownloadBasePath = " . $App->getDownloadBasePath() . " -->\n";
-	
 	if ($doDynCheck) 
 	{
 		//dynamic assignments
@@ -57,27 +55,14 @@ function getPWD($suf = "", $doDynCheck = true)
 	if (PWD_check($PWD, $suf))
 	{
 		$data = array(
-			"3gDBP" => array(
-				"checkdir" => $App->getDownloadBasePath(),
-				"tries" => array(
-					$App->getDownloadBasePath() . "/$PR/$suf"
-				)
-			),
-			"4def" => array(
-				"checkdir" => "/home/data/httpd/download.eclipse.org/",
-				"tries" => array(
-					"/home/local/httpd/download.eclipse.org/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf"
-				)
-			),
-			"5def" => array(
+			3 => array(
 				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/www/eclipse/$PR/$suf"
 				)
 			),
-			"6def" => array(
+			4 => array(
 				"checkdir" => "/var/www/",
 				"tries" => array(
 					"/var/www/$PR/$suf",
@@ -97,7 +82,7 @@ function getPWD($suf = "", $doDynCheck = true)
 					$PWD = $data[$y]["tries"][$z];
 					if (!PWD_check($PWD, $suf))
 					{
-						PWD_debug($PWD, $suf, "<!-- Found[$y-$z]: PWD -->");
+						PWD_debug($PWD, $suf, "<!-- Found[${y}def-$z]: PWD -->");
 						break 2;
 					}
 				}
