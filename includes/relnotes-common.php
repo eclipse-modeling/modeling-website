@@ -134,7 +134,7 @@ if (sizeof($rels))
 		$tnum += $num;
 
 		$header2 .= "<ul>\n";
-		$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$project&version=".$rels[$i][1]."&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+		$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&version=".$rels[$i][1]."&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
 		$header2 .= "<ul>\n";
 		while ($row = mysql_fetch_row($result))
 		{
