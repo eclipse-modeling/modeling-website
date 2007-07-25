@@ -87,3 +87,16 @@ span.noclean
 {
 	padding-left: 2.5em;
 }
+
+#midcolumn .homeitem3col ul#requirements li div.bleedingedge
+{
+	float: right;
+	width: 40%;
+}
+
+#midcolumn .homeitem3col ul#requirements li img.bleedingedge
+{
+	float: right;
+	position: relative;
+	margin: -5px 3px 0 0;
+}

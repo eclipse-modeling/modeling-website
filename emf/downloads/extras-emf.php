@@ -71,15 +71,11 @@ function doRequirements()
 	
 	<ul id="requirements">
 		<li>
-			<div align="right">
-			<table width="310" border="0" cellspacing="1" cellpadding="1">
-				<tr valign="top">
-					<td><img src="/modeling/images/new.gif" border="0" align="left" valign="top"/></td>
-					<td><table style="border:0px" cellspacing="0" cellpadding="2"><tr><td>EMF 2.3.0 contains significant, though binary  
-			compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).</td></tr></table></td>
-				</tr>
-			</table>
+			<div class="bleedingedge">
+				EMF 2.3.0 contains significant, though binary  
+				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
+			<img class="bleedingedge" src="/modeling/images/new.gif"/>
 			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0</a>
 			<ul id="req2_3_0">
 				<li>Eclipse 3.3.0</li>
