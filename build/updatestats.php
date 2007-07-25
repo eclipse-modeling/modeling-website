@@ -123,7 +123,7 @@ foreach (array_keys($files) as $project)
 				$props[] = "`filetype` = 'zip'";
 			}
 			wmysql_query("INSERT INTO `distfiles` SET " . join(",", $props) . " ON DUPLICATE KEY UPDATE `fid` = `fid`");
-			if (mysql_affected_rows($connect) > 0)
+			if (mysql_affected_rows($connect) == 1) //1 for inserted, 2 for updated
 			{
 				print "added new file to `distfiles`: '$row[1]'\n";
 			}
@@ -143,6 +143,10 @@ foreach (array_keys($files) as $project)
 				foreach ($fids as $fid)
 				{
 					$result = wmysql_query(sprintf($queries[$query]["stats"], $day, $fid), $dbh);
+					if (!mysql_ping($connect))
+					{
+						print "oops, db connection to build.eclipse.org/modeling timed out, reconnecting...\n";
+					}
 					while ($row = mysql_fetch_row($result))
 					{
 						wmysql_query(sprintf($queries[$query]["insert"], $project, $component, $day, $row[1], $row[0]));
