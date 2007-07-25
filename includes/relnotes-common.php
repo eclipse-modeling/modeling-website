@@ -334,7 +334,10 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	$out .= "<select name=\"project\" id=\"project\" onchange=\"javascript:document.getElementById('vpicker').submit()\">\n";
 	foreach (array_keys(array_merge($cvsprojs, $components)) as $z)
 	{
-		$tmp[$z] = $projectsf[$z];
+		if (array_key_exists($z,$projectsf))
+		{
+			$tmp[$z] = $projectsf[$z];
+		}
 	}
 
 	/* fix the order */
