@@ -1,11 +1,11 @@
 <?php
 
-$numzips = $numzips - 2; // the stand-alone & models zips are new
+$numzips = isset($numzips) ? $numzips - 2 : 0; // the stand-alone & models zips are new
 
 $testsPWD = "";
 $jdk14testsPWD = "";
 $jdk50testsPWD = "";
-if ($isEMFserver)
+if (isset($isEMFserver) && $isEMFserver)
 {
 	$testsPWD 	   = "/home/www-data/oldtests";   // path on emf.torolab ONLY
 	$jdk14testsPWD = "/home/www-data/jdk14tests"; // path on emf.torolab ONLY

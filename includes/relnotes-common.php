@@ -150,7 +150,8 @@ if (sizeof($rels))
 	}
 	$html = ob_get_contents();
 	ob_end_clean();
-	$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed) <a href=\"?project=$project&version=$version&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
+	$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . 
+		" ($tnum bugs fixed) <a href=\"?project=$proj&version=$version&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
 }
 else
 {
