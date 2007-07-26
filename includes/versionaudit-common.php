@@ -136,9 +136,10 @@ foreach ($dirs as $dir)
 	$branchfails = 0;
 	$issues = array();
 	require_once($require_db);
-	foreach (glob("$dir/plugins/org.eclipse.*") as $plugdir)
+	foreach (glob("$dir/{plugins,tests,examples}/org.eclipse.*", GLOB_BRACE) as $plugdir)
 	{
 		$plugin = basename($plugdir);
+		$type = preg_replace("#^.+/([^/]+)/$plugin$#", "$1", $plugdir); //plugins, tests, or examples
 
 		$deps = array();
 		$checked = array();
@@ -147,6 +148,12 @@ foreach ($dirs as $dir)
 		$lastversions = array();
 		$vcache = array();
 		$fails = 0;
+
+		if (preg_match("/-feature$/", $plugin))
+		{
+			logger(LOGGER_INFO, "skipping $plugdir as it looks like a feature, not a plugin\n\n");
+			continue;
+		}
 
 		if ($tmp = plugin_version($plugdir))
 		{
@@ -167,14 +174,21 @@ foreach ($dirs as $dir)
 				"(SELECT MIN(`buildtime`) FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `type` = 'R')",
 				"'2000-01-01'"
 			);
-			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/plugins/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/$type/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
 			if (mysql_num_rows($result) == 0)
 			{
-				logger(LOGGER_OK, "no commits found >= $p/plugins/$plugin/ $vanityname\n");
+				logger(LOGGER_OK, "no commits found >= $p/$type/$plugin/ $vanityname\n");
 			}
 			else
 			{
-				$msg = mysql_num_rows($result) . " commit(s) found >= $plugin $lastversion, currently at $vanityname\n";
+				$plugtext = $plugin;
+				if ($html)
+				{
+					$result2 = wmysql_query("SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/$type/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+					$row2 = mysql_fetch_row($result2);
+					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
+				}
+				$msg = mysql_num_rows($result) . " commit(s) found >= $plugtext $lastversion, currently at $vanityname\n";
 				while ($row = mysql_fetch_row($result))
 				{
 					$msg .= "     ref: http://www.eclipse.org/modeling/emf/searchcvs.php?q=";
@@ -204,7 +218,7 @@ foreach ($dirs as $dir)
 				foreach (array_keys($queue) as $z)
 				{
 					$actual = preg_replace("/-feature$/", "", $queue[$z]);
-					depgrep($dir, $actual);
+					$fails += depgrep($dir, $actual, $vanityname, $plugin);
 					unset($queue[$z]);
 				}
 			}
@@ -301,7 +315,7 @@ ob_end_clean();
 if ($html)
 {
 	print "<pre>\n";
-	print preg_replace("#(https?://[^ \n\t]+)#", "<a href=\"$1\">$1</a>", $content);
+	print preg_replace("#(?<!href=\")(https?://[^ \n\t]+)#", "<a href=\"$1\">$1</a>", $content);
 	print "</pre>\n";
 }
 else
@@ -310,14 +324,29 @@ else
 }
 
 /* find features which include or depend on the given plugin within the given directory */
-function depgrep($dir, $plugin)
+function depgrep($dir, $plugin, $vanityname, $origplugin)
 {
 	global $deps, $checked, $queue;
 
-	foreach (glob("$dir/{plugins,features}/*-feature/{,org.eclipse.*.sdk/}feature.xml", GLOB_BRACE) as $z)
+	foreach (glob("$dir/{plugins,features,tests,examples}/*-feature/{,org.eclipse.*.sdk/}feature.xml", GLOB_BRACE) as $z)
 	{
-		if (preg_match("/<(?:includes|plugin)[^>]+id=\"\Q$plugin\E\"/s", file_get_contents($z)))
+		$regs = null;
+		if (preg_match("/<(?:includes|plugin)[^>]+id=\"\Q$plugin\E\"[^>]+version=\"([^\"]+)\"/s", file_get_contents($z), $regs))
 		{
+			if ($plugin === $origplugin)
+			{
+				if ($vanityname !== $regs[1] && $regs[1] !== "0.0.0")
+				{
+					$msg = "$plugin is at $vanityname, but $z wants $regs[1]\n";
+					$msg .= "     --> $plugin must be $vanityname in $z\n";
+					logger(LOGGER_FAIL, $msg);
+				}
+				else
+				{
+					logger(LOGGER_OK, "$z wants $regs[1]\n");
+				}
+			}
+
 			$m = null;
 			if (preg_match("#/([^/]+)/feature\.xml$#", $z, $m))
 			{
