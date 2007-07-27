@@ -9,9 +9,22 @@ $projectIncludesPath = $projDetails[2];
 $projectName = $projDetails[3];
 
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = preg_match("/^(build|emft).eclipse.org$/", $_SERVER["SERVER_NAME"]) || preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]);
+$doPhoenix = is_file($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 
-if ($isWWWserver)
+if ($isWWWserver || $doPhoenix)
 {
+	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
+	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
+	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
+
+	$App = new App();
+	$Nav = new Nav();
+	$Menu = new Menu();
+	if (is_file($App->getProjectCommon()))
+	{
+		include ($App->getProjectCommon());
+	}
 	$PWD = $App->getDownloadBasePath() . "/$PR/";
 	$jdPWD = "http://download.eclipse.org/$PR/";
 }
@@ -55,27 +68,8 @@ if ($_GET["project"] && $_GET["page"])
 	}
 }
 
-$doPhoenix = false;
-if (is_file($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"))
-{
-	$doPhoenix = true;
-}
-
-$isBuildServer = preg_match("/^(build|emft).eclipse.org$/", $_SERVER["SERVER_NAME"]) || preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]);
-
 if ($doPhoenix)
 {
-	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
-	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
-	require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
-
-	$App = new App();
-	$Nav = new Nav();
-	$Menu = new Menu();
-	if (is_file($App->getProjectCommon()))
-	{
-		include ($App->getProjectCommon());
-	}
 	ob_start();
 }
 else
