@@ -174,7 +174,7 @@ foreach ($dirs as $dir)
 				"(SELECT MIN(`buildtime`) FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `type` = 'R')",
 				"'2000-01-01'"
 			);
-			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/$type/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
 			if (mysql_num_rows($result) == 0)
 			{
 				logger(LOGGER_OK, "no commits found >= $p/$type/$plugin/ $vanityname\n");
@@ -184,7 +184,7 @@ foreach ($dirs as $dir)
 				$plugtext = $plugin;
 				if ($html)
 				{
-					$result2 = wmysql_query("SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` REGEXP '^/cvsroot/(tools|modeling)/$p/$type/$plugin/' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+					$result2 = wmysql_query("SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
 					$row2 = mysql_fetch_row($result2);
 					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
 				}
@@ -263,7 +263,16 @@ foreach ($dirs as $dir)
 					}
 					else if ($versions[$z] > $lastversions[$z])
 					{
-						logger(LOGGER_OK, "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n");
+						if ($versions[$z] - $lastversions[$z] == 1 || $versions[$z] - $lastversions[$z] == 1000)
+						{
+							logger(LOGGER_OK, "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n");
+						}
+						else
+						{
+							$msg = "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n";
+							$msg .= "     --> $z must be incremented only once per release cycle (last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . ")\n";
+							logger(LOGGER_FAIL, $msg);
+						}
 					}
 					else
 					{
