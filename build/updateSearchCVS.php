@@ -164,7 +164,7 @@ function projects($keysOnly = false)
 	{
 		foreach ($vp as $pr)
 		{
-			if (!preg_match("/(CVS|OLD)/",$pr))
+			if (!preg_match("/(CVS|OLD|-latest$)/",$pr))
 			{
 				if ($keysOnly)
 				{
