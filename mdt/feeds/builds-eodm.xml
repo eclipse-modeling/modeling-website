@@ -10,34 +10,6 @@
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-eodm.xml</id>
   <entry>
-    <title>[announce] eodm 0.8.0 (R200707260741) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741</id>
-    <updated>2007-07-26T11:53:24Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200707260741" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741" type="R" version="0.8.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/R200707260741/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
-        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=R200707260741
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-0.8.0.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/R200707260741/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/R200706262000/emf-sdo-xsd-SDK-2.3.0.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] eodm 0.9.0 (R200707052236) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707052236#R200707052236"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707052236#R200707052236</id>
@@ -150,13 +122,13 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm I200706071003 (2.0.0.I200706071003) is available</title>
+    <title>[announce] eodm I200706071003 (0.9.0.I200706071003) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200706071003#I200706071003"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200706071003#I200706071003</id>
     <updated>2007-06-07T14:31:19Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200706071003" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200706071003#I200706071003" type="I" version="2.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200706071003/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200706071003" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200706071003#I200706071003" type="I" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200706071003/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=I200706071003
@@ -165,7 +137,7 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-I200706071003.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200706071003/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200706071003/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -178,22 +150,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm 2.0.0M7 (S200705180639) is available</title>
+    <title>[announce] eodm 0.9.0M7 (S200705180639) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200705180639#S200705180639"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200705180639#S200705180639</id>
     <updated>2007-05-18T10:51:00Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705180639" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200705180639#S200705180639" type="S" version="2.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/S200705180639/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705180639" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200705180639#S200705180639" type="S" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/S200705180639/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=S200705180639
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-2.0.0M7.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-0.9.0M7.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/S200705180639/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/S200705180639/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -206,13 +178,13 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm I200705100924 (2.0.0.I200705100924) is available</title>
+    <title>[announce] eodm I200705100924 (0.9.0.I200705100924) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705100924#I200705100924"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705100924#I200705100924</id>
     <updated>2007-05-10T13:47:09Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705100924" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705100924#I200705100924" type="I" version="2.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200705100924/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705100924" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705100924#I200705100924" type="I" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200705100924/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=I200705100924
@@ -221,7 +193,7 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-I200705100924.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200705100924/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200705100924/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -234,13 +206,13 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm I200705022357 (2.0.0.I200705022357) is available</title>
+    <title>[announce] eodm I200705022357 (0.9.0.I200705022357) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705022357#I200705022357"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705022357#I200705022357</id>
     <updated>2007-05-04T02:36:41Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705022357" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705022357#I200705022357" type="I" version="2.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200705022357/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705022357" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=I200705022357#I200705022357" type="I" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200705022357/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=I200705022357
@@ -249,7 +221,7 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-I200705022357.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/I200705022357/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/I200705022357/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -262,22 +234,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm 2.0.0M6 (S200704060951) is available</title>
+    <title>[announce] eodm 0.9.0M6 (S200704060951) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200704060951#S200704060951"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200704060951#S200704060951</id>
     <updated>2007-04-09T03:06:30Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704060951" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200704060951#S200704060951" type="S" version="2.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/S200704060951/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704060951" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200704060951#S200704060951" type="S" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/S200704060951/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=S200704060951
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-2.0.0M6.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-0.9.0M6.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/2.0.0/S200704060951/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.0/S200704060951/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -290,12 +262,40 @@
     </summary>
   </entry>
   <entry>
+    <title>[announce] eodm 0.8.0 (R200707260741) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741</id>
+    <updated>2007-07-26T11:53:24Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200707260741" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200707260741#R200707260741" type="R" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/R200707260741/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=R200707260741
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-0.8.0.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/R200707260741/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/R200706262000/emf-sdo-xsd-SDK-2.3.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
     <title>[announce] eodm 0.8.0M5 (S200702161050) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050</id>
     <updated>2007-02-24T04:18:13Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702161050" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050" type="S" version="0.8.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200702161050" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200702161050#S200702161050" type="S" version="0.8.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/S200702161050/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
@@ -323,7 +323,7 @@
     <id>http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702152134#I200702152134</id>
     <updated>2007-02-16T04:42:31Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702152134" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702152134#I200702152134" type="I" version="0.8.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200702152134" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702152134#I200702152134" type="I" version="0.8.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/0.8.0/I200702152134/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
@@ -351,7 +351,7 @@
     <id>http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702080522#I200702080522</id>
     <updated>2007-02-08T10:52:43Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702080522" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702080522#I200702080522" type="I" version="0.8.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200702080522" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702080522#I200702080522" type="I" version="0.8.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/0.8.0/I200702080522/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
@@ -379,7 +379,7 @@
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200701130125#S200701130125</id>
     <updated>2007-01-17T15:14:41Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701130125" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200701130125#S200701130125" type="S" version="0.8.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_8_maintenance" datetime="200701130125" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200701130125#S200701130125" type="S" version="0.8.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.8.0/S200701130125/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
@@ -407,7 +407,7 @@
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108</id>
     <updated>2006-11-21T21:01:02Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200611162108" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108" type="S" version="0.7.5">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200611162108" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108" type="S" version="0.7.5">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=modeling/mdt/eodm/downloads/drops/0.7.5/S200611162108/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/?project=eodm</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm#eodm</downloads>
