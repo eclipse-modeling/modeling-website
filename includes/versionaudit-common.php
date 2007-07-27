@@ -272,6 +272,7 @@ foreach ($dirs as $dir)
 							$msg = "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n";
 							$msg .= "     --> $z must be incremented only once per release cycle (last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . ")\n";
 							logger(LOGGER_FAIL, $msg);
+							$fails++;
 						}
 					}
 					else
