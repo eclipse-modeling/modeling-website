@@ -20,7 +20,7 @@ $projectDownloadsPath = isset($_GET["tech"]) ? "/emft" : "/$PR";
 $projectDownloadsPagePath = $projectDownloadsPath."/downloads"; 
 
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
-$buildDirPrefix = ($isBuildServer ? "/home/www-data/build" : "/home/local/data/httpd/download.eclipse.org");
+$buildDirPrefix = ($isBuildServer ? "/home/www-data/build" : $App->getDownloadBasePath());
 $buildDir = (isset($_GET["tech"]) ? ($isBuildServer ? "/emft" : "/technology/emft") : "/$PR") . $proj . "/downloads/drops/" . $buildName;
 $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
 $subprojName = array_flip($projects); $subprojName = $subprojName[$projct];
