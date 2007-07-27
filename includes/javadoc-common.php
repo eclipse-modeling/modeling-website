@@ -12,7 +12,7 @@ $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]))
 
 if ($isWWWserver)
 {
-	$PWD = "/home/local/data/httpd/download.eclipse.org/$PR/";
+	$PWD = $App->getDownloadBasePath() . "/$PR/";
 	$jdPWD = "http://download.eclipse.org/$PR/";
 }
 else

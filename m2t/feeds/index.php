@@ -10,7 +10,7 @@ $Menu = new Menu();
 include ($App->getProjectCommon());
 
 if ($isWWWserver) {
-	$PWD = "/home/local/data/httpd/download.eclipse.org/$PR/";
+	$PWD = $App->getDownloadBasePath() . "/$PR/";
 	$jdPWD = "/downloads/download.php?file=/$PR/";
 } else {
 	$PWD = "../../../$PR/";
