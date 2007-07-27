@@ -402,12 +402,12 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm 0.7.5S (S200611162108) is available</title>
+    <title>[announce] eodm 0.7.5 (S200611162108) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108</id>
     <updated>2006-11-21T21:01:02Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200611162108" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108" type="S" version="0.7.5">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200611162108" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=S200611162108#S200611162108" type="R" version="0.7.5">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=modeling/mdt/eodm/downloads/drops/0.7.5/S200611162108/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/?project=eodm</update>
         <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm#eodm</downloads>
