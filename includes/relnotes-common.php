@@ -155,7 +155,7 @@ if (sizeof($rels))
 }
 else
 {
-	$header .= "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead." : "Error: could not connect to database!") . "</h4>\n";
+	$header .= "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</h4>\n";
 }
 print $header;
 print "</div>\n";
