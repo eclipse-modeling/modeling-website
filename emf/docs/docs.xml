@@ -194,6 +194,13 @@
 	<h3>developerWorks</h3>
 
 	<ul>
+
+
+		<li>
+			<div>Aug 30 2007</div><a target="_dw" href="http://www-128.ibm.com/developerworks/library/x-mdcdd/">Model-driven compound document development</a><br/>
+			First published by <a href="http://www.ibm.com/developerWorks" target="_dw">IBM developerWorks</a>, July 22 2005
+		</li>
+
 		<li>
 			<div>May 7 2004</div><a target="_dw" href="http://www.eclipse.org/modeling/emf/docs/xsd/dW/os-schema1/index.html">XML Schema Infoset Model, Part 1</a><br/>
 			First published by <a href="http://www.ibm.com/developerWorks" target="_dw">IBM developerWorks</a>, Nov 4 2003
@@ -547,4 +554,4 @@ and Animations of the internals of XSD models</a>
 	</ul>
 </div>
 
-<!-- $Id: docs.xml,v 1.14 2007/07/25 20:01:11 nickb Exp $ -->
+<!-- $Id: docs.xml,v 1.15 2007/07/30 19:40:02 nickb Exp $ -->
