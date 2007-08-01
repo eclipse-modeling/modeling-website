@@ -35,7 +35,7 @@ $showAll = (isset($_GET["showAll"]) && preg_match("/^(1)$/", $_GET["showAll"], $
 $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"], $regs) ? $regs[1] : ($sortBy == "date" ? "10" : "5"));
 $doRefreshPage = false;
 
-$PWD = getPWD("$proj/downloads/drops"); // see scripts.php
+$PWD = getPWD("$projct/downloads/drops",false); // see scripts.php
 
 if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //internal
 {
@@ -424,7 +424,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			}
 			$outNotFound = "<i><b>$pre2</b>$filePre"; 
 			if (sizeof($u) > 1 ) { 
-				$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $out .= ($ui>0 ? "," : "") . $ux; } $out .= "}<i>";
+				$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $outNotFound .= ($ui>0 ? "," : "") . $ux; } $outNotFound .= "}<i>";
 			} 
 			else
 			{
