@@ -1,5 +1,5 @@
 <?php 
-// $Id: scripts.php,v 1.38 2007/07/24 16:49:14 nickb Exp $ 
+// $Id: scripts.php,v 1.39 2007/08/01 14:49:00 nickb Exp $ 
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -26,17 +26,17 @@ function getPWD($suf = "", $doDynCheck = true)
 	if ($doDynCheck) 
 	{
 		//dynamic assignments
-		$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
-		PWD_debug($PWD, $suf, "<!-- Found[1dyn] -->");
+   		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
+   		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
+		
+    	//second dynamic assignment
+    	if (PWD_check($PWD, $suf))
+    	{
+    	    $PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
+		    PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
+    	}
 	}
 	
-	//second dynamic assignment
-	if (PWD_check($PWD, $suf))
-	{
-		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
-		PWD_debug($PWD, $suf, "<!-- Found[2gDBP] -->");
-		
-	}
 	//static assignments
 	if (PWD_check($PWD, $suf))
 	{

@@ -35,7 +35,7 @@ $showAll = (isset($_GET["showAll"]) && preg_match("/^(1)$/", $_GET["showAll"], $
 $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"], $regs) ? $regs[1] : ($sortBy == "date" ? "10" : "5"));
 $doRefreshPage = false;
 
-$PWD = getPWD("$projct/downloads/drops",false); // see scripts.php
+$PWD = getPWD("$projct/downloads/drops"); // see scripts.php
 
 if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //internal
 {
