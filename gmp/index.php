@@ -103,7 +103,7 @@ $html =<<<EOHTML
 					target="_self">Tutorial</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines">Development Guidelines</a></li>
 				<li><a href="http://www.eclipse.org/gmf/development/index.php">Developer Resources</a></li>
-				<li><a href="http://help.eclipse.org/help31/index.jsp">Online Documentation</a></li>
+				<li><a href="http://help.eclipse.org/help33/index.jsp">Online Documentation</a></li>
 				<li><a href="http://download.eclipse.org/modeling/gmf/downloads/index.php">Downloads</a></li>
 			</ul>
 		</div>
