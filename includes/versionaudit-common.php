@@ -328,7 +328,7 @@ if ($html)
 	print preg_replace("#(?<!href=\")(https?://[^ \n\t]+)#", "<a href=\"$1\">$1</a>", $content);
 	print "</pre>\n";
 	print "<p>&nbsp;</p>\n";
-	print '<p align="right"><i><small><a href="http://wiki.eclipse.org/Plugin_Version_Auditing">about this tool</a></p>'."\n";
+	print '<p align="right"><i><small><a href="http://wiki.eclipse.org/Plugin_Version_Auditing">about this tool</a></small></i></p>'."\n";
 }
 else
 {
