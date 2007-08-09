@@ -1,0 +1,3180 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="article_files/filelist.xml">
+<link rel=Edit-Time-Data href="article_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Customizing UML</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>jbruck, khussey</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>jbruck</o:LastAuthor>
+  <o:Revision>545</o:Revision>
+  <o:TotalTime>21095</o:TotalTime>
+  <o:LastPrinted>2006-09-12T15:08:00Z</o:LastPrinted>
+  <o:Created>2004-07-06T14:17:00Z</o:Created>
+  <o:LastSaved>2007-08-09T15:09:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>4404</o:Words>
+  <o:Characters>23434</o:Characters>
+  <o:Company>Rational Software</o:Company>
+  <o:Lines>937</o:Lines>
+  <o:Paragraphs>434</o:Paragraphs>
+  <o:CharactersWithSpaces>27404</o:CharactersWithSpaces>
+  <o:Version>10.6830</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:ApplyBreakingRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<link rel=Stylesheet type="text/css" media=all href="default_style.css">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-believe-normal-left:yes;}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:21.0pt;
+	mso-fareast-font-family:"MS Mincho";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-line-height-alt:10.5pt;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	mso-fareast-font-family:"MS Mincho";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-fareast-font-family:"MS Mincho";
+	font-weight:bold;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-fareast-font-family:"Times New Roman";}
+code
+	{mso-fareast-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	mso-fareast-font-family:"Times New Roman";}
+p.indextop, li.indextop, div.indextop
+	{mso-style-name:indextop;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:24.0pt;
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.indexsub, li.indexsub, div.indexsub
+	{mso-style-name:indexsub;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:7.5pt;
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	padding:24.0pt 24.0pt 24.0pt 24.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:211189446;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1491013846 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:695892135;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-263828172 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:756362853;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-728201684 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:950938636;
+	mso-list-type:hybrid;
+	mso-list-template-ids:412381172 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:63.5pt;
+	mso-level-number-position:left;
+	margin-left:63.5pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:99.5pt;
+	mso-level-number-position:left;
+	margin-left:99.5pt;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1282343649;
+	mso-list-type:hybrid;
+	mso-list-template-ids:979125586 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:45.5pt;
+	mso-level-number-position:left;
+	margin-left:45.5pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1308970861;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1233458412 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6
+	{mso-list-id:1362973705;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1430556884 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:1369716536;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1485593570 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:1406103847;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1689801974 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:45.5pt;
+	mso-level-number-position:left;
+	margin-left:45.5pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l8:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:1635671166;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1137615490 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l9:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10
+	{mso-list-id:1804927766;
+	mso-list-type:hybrid;
+	mso-list-template-ids:680169446 67698689 67698691 67698689 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:1903441882;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-946060420 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:2032606992;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1617510778 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableSimple2
+	{mso-style-name:"Table Simple 2";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableSimple2FirstRow
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:first-row;
+	mso-tstyle-border-bottom:1.5pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableSimple2LastRow
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:last-row;
+	mso-tstyle-border-top:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableSimple2FirstCol
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:first-column;
+	mso-tstyle-border-right:1.5pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableSimple2LastCol
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:last-column;
+	mso-tstyle-border-left:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableSimple2NECell
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:ne-cell;
+	mso-tstyle-border-left:0in none windowtext;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableSimple2SWCell
+	{mso-style-name:"Table Simple 2";
+	mso-table-condition:sw-cell;
+	mso-tstyle-border-top:0in none windowtext;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableClassic1
+	{mso-style-name:"Table Classic 1";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border-top:solid black 1.5pt;
+	border-left:none;
+	border-bottom:solid black 1.5pt;
+	border-right:none;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableClassic1FirstRow
+	{mso-style-name:"Table Classic 1";
+	mso-table-condition:first-row;
+	mso-tstyle-border-bottom:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-style:italic;
+	mso-bidi-font-style:italic;}
+table.MsoTableClassic1LastRow
+	{mso-style-name:"Table Classic 1";
+	mso-table-condition:last-row;
+	mso-tstyle-border-top:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+table.MsoTableClassic1FirstCol
+	{mso-style-name:"Table Classic 1";
+	mso-table-condition:first-column;
+	mso-tstyle-border-right:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;}
+table.MsoTableClassic1NECell
+	{mso-style-name:"Table Classic 1";
+	mso-table-condition:ne-cell;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:normal;
+	mso-bidi-font-style:normal;}
+table.MsoTableClassic1SWCell
+	{mso-style-name:"Table Classic 1";
+	mso-table-condition:sw-cell;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableList1
+	{mso-style-name:"Table List 1";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:0;
+	border-top:1.5pt;
+	border-left:1.0pt;
+	border-bottom:1.5pt;
+	border-right:1.0pt;
+	border-color:teal;
+	border-style:solid;
+	mso-border-top-alt:1.5pt;
+	mso-border-left-alt:.75pt;
+	mso-border-bottom-alt:1.5pt;
+	mso-border-right-alt:.75pt;
+	mso-border-color-alt:teal;
+	mso-border-style-alt:solid;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableList1FirstRow
+	{mso-style-name:"Table List 1";
+	mso-table-condition:first-row;
+	mso-tstyle-shading:white;
+	mso-tstyle-pattern:solid silver;
+	mso-tstyle-border-bottom:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:maroon;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;
+	mso-ansi-font-style:italic;
+	mso-bidi-font-style:italic;}
+table.MsoTableList1LastRow
+	{mso-style-name:"Table List 1";
+	mso-table-condition:last-row;
+	mso-tstyle-border-top:.75pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;}
+table.MsoTableList1OddRow
+	{mso-style-name:"Table List 1";
+	mso-table-condition:odd-row;
+	mso-tstyle-shading:white;
+	mso-tstyle-pattern:solid silver;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+table.MsoTableList1EvenRow
+	{mso-style-name:"Table List 1";
+	mso-table-condition:even-row;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:windowtext;}
+table.MsoTableList1SWCell
+	{mso-style-name:"Table List 1";
+	mso-table-condition:sw-cell;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableList4
+	{mso-style-name:"Table List 4";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid black 1.5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.75pt solid black;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableList4FirstRow
+	{mso-style-name:"Table List 4";
+	mso-table-condition:first-row;
+	mso-tstyle-shading:white;
+	mso-tstyle-pattern:solid gray;
+	mso-tstyle-border-bottom:1.5pt solid black;
+	mso-tstyle-diagonal-down:0in none windowtext;
+	mso-tstyle-diagonal-up:0in none windowtext;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:white;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+</style>
+<![endif]--><![if mso 9]>
+<style>
+p.MsoNormal
+	{margin-left:8.5pt;}
+</style>
+<![endif]><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="49154"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in;margin-left:
+8.5pt;margin-top:14.2pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=right style='text-align:right'><span style='font-size:
+10.0pt'>Copyright © 2007 International Business Machines Corp.</span><span
+style='font-size:10.0pt;font-family:Arial'><o:p></o:p></span></p>
+
+<div align=right>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:0in;mso-padding-alt:1.5pt 1.5pt 1.5pt 1.5pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td valign=top style='background:#0080C0;padding:1.5pt 1.5pt 1.5pt 1.5pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Arial;
+  color:white'>&nbsp;</span></b><span style='font-size:10.0pt;font-family:Arial'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h1><img width=120 height=86 id="_x0000_i1025" src="../../../../images/Idea.jpg"
+align=CENTER></h1>
+
+<p>&nbsp;</p>
+
+<h1 align=center style='text-align:center'>Customizing UML: </h1>
+
+<h1 align=center style='text-align:center'>Which Technique is Right for You?</h1>
+
+<blockquote style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Arial'>Summary</span></b><span
+style='font-size:10.0pt;font-family:Arial'><br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p>Extending or restricting UML to suit a domain is not a simple task.<span
+style='mso-spacerun:yes'>  </span>Before you embark on this journey, you need
+to understand all the options available to you decide on a reasonable
+approach.<span style='mso-spacerun:yes'>   </span>Each approach has its own pros
+and cons.<span style='mso-spacerun:yes'>  </span>This article is the first in a
+series of three articles that walks you through the decision making process of
+deciding which technique to use when extending UML.<span
+style='mso-spacerun:yes'>   </span>The mechanics of actually extending UML to
+suit your domain will be handled in future articles.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p><b>By James Bruck and Kenn Hussey, IBM</b><br>
+July 19, 2007 </p>
+
+</blockquote>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Arial'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2>Glossary</h2>
+
+<p>A few terms and abbreviations will be used throughout this document.</p>
+
+<table class=MsoTableList4 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid black 1.5pt;
+ mso-yfti-tbllook:160;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .75pt solid black'>
+ <tr style='mso-yfti-irow:-1'>
+  <td width=168 valign=top style='width:125.75pt;border:solid black 1.5pt;
+  border-right:none;background:gray;mso-shading:white;mso-pattern:solid gray;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:1'><b><span style='color:white'>Term<o:p></o:p></span></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border:solid black 1.5pt;
+  border-left:none;background:gray;mso-shading:white;mso-pattern:solid gray;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:1'><b><span style='color:white'>Definition<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width=168 valign=top style='width:125.75pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.0pt;border-right:none;
+  mso-border-top-alt:solid black .75pt;mso-border-top-alt:solid black .75pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b style='mso-bidi-font-weight:normal'>DSL <o:p></o:p></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-top-alt:solid black .75pt;
+  mso-border-bottom-alt:solid black .75pt;mso-border-right-alt:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p>Domain Specific Language.<span style='mso-spacerun:yes'>   </span>A
+  language designed to be useful for a specific set of tasks.<span
+  style='mso-spacerun:yes'>  </span>This is in contrast to a general-purpose
+  modeling language such as UML.<span style='mso-spacerun:yes'>  </span>A DSL
+  is created specifically to solve problems in a particular domain and is not
+  intended to be able to solve problems outside of it.<span
+  style='mso-spacerun:yes'>  </span>DSL’s are usually small, more declarative
+  and less expressive than general-purpose language.</p>
+  <p><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=168 valign=top style='width:125.75pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.0pt;border-right:none;
+  mso-border-top-alt:solid black .75pt;mso-border-top-alt:solid black .75pt;
+  mso-border-left-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b style='mso-bidi-font-weight:normal'>MOF<o:p></o:p></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;mso-border-top-alt:solid black .75pt;
+  mso-border-bottom-alt:solid black .75pt;mso-border-right-alt:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><st1:place>Meta</st1:place> Object Facility.<span
+  style='mso-spacerun:yes'>  </span>Is an OMG standard for Model Driven Engineering?<span
+  style='mso-spacerun:yes'>  </span>MOF is designed as a four level
+  architecture.<span style='mso-spacerun:yes'>   </span>UML is considered a
+  layer 2 MOF model.<span style='mso-spacerun:yes'>  </span>M3 is the language
+  used by MOF to build <span class=SpellE>metamodels</span>.</p>
+  <p><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=168 valign=top style='width:125.75pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:none;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p><b style='mso-bidi-font-weight:normal'>OMG<o:p></o:p></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p>Object Management Group.<span style='mso-spacerun:yes'>  </span>A
+  consortium that promotes the adoptions of standards.</p>
+  <p><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=168 valign=top style='width:125.75pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:none;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p><b style='mso-bidi-font-weight:normal'>UML Testing Profile<o:p></o:p></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p>The UML testing profile can be found at: <a
+  href="http://www.omg.org/technology/documents/formal/test_profile.htm">http://www.omg.org/technology/documents/formal/test_profile.htm</a>.<span
+  style='mso-spacerun:yes'>  </span>It is one demonstration of creating a DSL
+  with a profile and with a strictly MOF based version.</p>
+  <p><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=168 valign=top style='width:125.75pt;border-top:none;border-left:
+  solid black 1.5pt;border-bottom:solid black 1.5pt;border-right:none;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p><b style='mso-bidi-font-weight:normal'>UML<o:p></o:p></b></p>
+  </td>
+  <td width=684 valign=top style='width:513.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.5pt;border-right:solid black 1.5pt;
+  mso-border-top-alt:solid black .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p>UML2 2.1. This refers to the latest version of the UML API which is based
+  on the UML 2.1.1 specification defined by OMG</p>
+  <p>The latest draft of the UML Superstructure Specification can be found at: <a
+  href="http://www.omg.org/technology/documents/formal/uml.htm">http://www.omg.org/technology/documents/formal/uml.htm</a></p>
+  <p><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2>Introduction</h2>
+
+<p>The ability to customize UML to a specific domain is one of the great
+features of UML.<span style='mso-spacerun:yes'>  </span>Creating customizations
+allows one to leverage existing modeling tools and conventions defined by the
+UML specification while making modeling easier for the end user (and possibly
+less abstract).<span style='mso-spacerun:yes'>   </span>The type of
+customizations a user wishes to create depends on the nature of the domain and
+how a user expects to use his extension.<span style='mso-spacerun:yes'> 
+</span>If you wish to make simple customizations by extending the static nature
+of UML by adding new properties or simply by adding new iconic representations
+to existing UML meta-classes, then a light-weight extension involving creating
+profiles is the way to go.<span style='mso-spacerun:yes'>  </span>However, if
+you wish to extend the behavior of UML add restrictions on certain collections
+or take advantage of the more complex features of UML such as redefinition then
+a heavy weight extension is the way to go.<span style='mso-spacerun:yes'> 
+</span>As the <a href="http://www.omg.org/technology/documents/formal/uml.htm">superstructure
+specification</a> further points out, there are several reasons why you may
+want to customize a meta-model: </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Give a terminology that is adapted to a
+particular domain.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Give <span class=GramE>a syntax</span> for
+constructs that do not have a notation.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Give a different notation for already existing
+symbols</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Add semantics that is left unspecified in the
+meta-model.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Add semantics that do not exist in the
+meta-model.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Add constraints that restrict the way you use
+the meta-model.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo2;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Add information that can be used when
+transforming a model to another model or code.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2>Decisions, Decisions …</h2>
+
+<p>Creating your own Domain Specific Language has several advantages:<span
+style='mso-spacerun:yes'>    </span></p>
+
+<p style='margin-left:45.5pt;text-indent:-.25in;mso-list:l4 level1 lfo4;
+tab-stops:list 45.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>DSL’s allow solutions to be expressed at the
+level of abstraction of the problem domain.<span style='mso-spacerun:yes'> 
+</span>Therefore domain experts can understand, validate and modify them
+easily.</p>
+
+<p style='margin-left:45.5pt;text-indent:-.25in;mso-list:l4 level1 lfo4;
+tab-stops:list 45.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>DSL’s enhance quality, productivity,
+maintainability, reusability.</p>
+
+<p>And some disadvantages…</p>
+
+<p style='margin-left:45.5pt;text-indent:-.25in;mso-list:l8 level1 lfo6;
+tab-stops:list 45.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Cost of designing, implementing and maintaining
+DSL.</p>
+
+<p style='margin-left:45.5pt;text-indent:-.25in;mso-list:l8 level1 lfo6;
+tab-stops:list 45.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Difficulty in balancing between domain-specific
+and general-purpose language constructs.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h3>Where do you go from here?</h3>
+
+<p>The first decision that you have to make will be to decide if you should
+extend or restrict existing concepts from UML or to simply create you own MOF
+based meta-model that does not extend UML.<span style='mso-spacerun:yes'> 
+</span>This can be answered by analyzing the domain space of your DSL.<span
+style='mso-spacerun:yes'>   </span>Simply put, if there is much overlap between
+UML concepts and concepts within your DSL then favor extending UML.<span
+style='mso-spacerun:yes'>  </span>If there is little overlap then favor a MOF
+based solution.<span style='mso-spacerun:yes'>  </span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p style='margin-left:8.5pt;page-break-after:avoid'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1027" type="#_x0000_t75" style='width:448.5pt;
+ height:137.25pt' o:bordertopcolor="this" o:borderleftcolor="this"
+ o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="article_files/image001.jpg" o:title="venndiagram"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=598 height=183
+src="article_files/image001.jpg" v:shapes="_x0000_i1027"><![endif]></p>
+
+<p class=MsoCaption>Figure <!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC
+<span style='mso-element:field-separator'></span><![endif]--><span
+style='mso-no-proof:yes'>1</span><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->:<span style='mso-spacerun:yes'>  </span>UML
+Extension vs. MOF based</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>An excellent example of MOF based vs. profile based approaches to developing
+a DSL is demonstrated with the UML <a
+href="http://www.omg.org/docs/formal/05-07-07.pdf">testing profile</a>.<span
+style='mso-spacerun:yes'>   </span>In that specification, the same DSL is
+developed using two different techniques.<span style='mso-spacerun:yes'> 
+</span></p>
+
+<p><!--[if gte vml 1]><v:shape id="_x0000_i1028" type="#_x0000_t75" style='width:45.75pt;
+ height:9.75pt'>
+ <v:imagedata src="article_files/image006.gif" o:title="tryit"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=61 height=13
+src="article_files/image006.gif" v:shapes="_x0000_i1028"><![endif]><span
+style='mso-spacerun:yes'> </span>Have a look at the UML <a
+href="http://www.omg.org/docs/formal/05-07-07.pdf">testing profile</a>.</p>
+
+<p>You have several options when it comes to extending/constraining UML in your
+quest to create a DSL.<span style='mso-spacerun:yes'>  </span>Choosing the
+correct method is critical for the success of your project because you will
+have to commit to your decision and invest time and effort addressing the
+issues associated with each.<span style='mso-spacerun:yes'>  </span>To that
+end, a general description of each technique will be provided in the following
+section, and then a table summarizing the features of each approach will be
+provided. </p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2>Techniques for extending UML</h2>
+
+<p><img border=0 width=63 height=14 id="_x0000_i1029" src="../../../../images/tip.gif"><span
+style='mso-spacerun:yes'> </span>As you continue to read about the techniques
+for extending UML, you should keep the following in mind:<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo8;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>As much as possible, you should be favoring the
+“lightweight approach” or the use of profiles.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo8;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>As much as possible, you should be leaning away
+from the use of “middleweight” extensions.</p>
+
+<p style='margin-left:.25in'><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Featherweight_extension"></a>Featherweight extension</h3>
+
+<p>Featherweight extensions involve the use of adding keywords.<span
+style='mso-spacerun:yes'>    </span>Keywords are reserved words that normally
+appear as text annotations attached to a UML element.<span
+style='mso-spacerun:yes'>   </span>The superstructure specification describes
+the use of keywords and predefined keywords that already exist (see <a
+href="http://www.omg.org/technology/documents/formal/uml.htm">Superstructure
+Specification</a> Annex B).<span style='mso-spacerun:yes'>   </span>Keywords
+are always enclosed in guillemots which serve as visual cues to more readily
+distinguish when a keyword is being used.<span style='mso-spacerun:yes'> 
+</span></p>
+
+<p><img border=0 width=63 height=14 id="_x0000_i1030" src="../../../../images/tip.gif"><span
+style='mso-spacerun:yes'> </span>Keywords are case sensitive.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Keywords are used for four different purposes:</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To distinguish a particular UML concept (metaclass)
+from others sharing the same general graphical form.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To distinguish a particular kind of relationship
+between UML concepts from other relationships sharing the same graphical form. </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To specify the value of some modifier attached to
+a UML concept (meta-attribute value).<span style='mso-spacerun:yes'>  
+</span>Thus the keyword &lt;&lt;<span class=SpellE>singleExecution</span>&gt;&gt;
+appearing within an Activity signifies that the <span class=SpellE>isSingleExecution</span>
+attribute of the Activity is true.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo10;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To indicate standard stereotype.<span
+style='mso-spacerun:yes'>  </span>For example the &lt;&lt;<span class=SpellE>modelLibrary</span>&gt;&gt;
+keyword attached to a package identify that the package contains a set of model
+elements intended to be shared by multiple models.</p>
+
+<p>The use of keywords is a non-standard way of extending UML and therefore
+creating such keywords is not directly supported by the open-source UML editor,
+however there are utility methods by the API:</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>Element#addKeyword</span>(), </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>Element#getKeyword</span>(),</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo12;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>Element#<span class=GramE>removeKeyword</span></span><span
+class=GramE>(</span>) etc.. </p>
+
+<p>Keywords created in this manner will appear in the labels of the item when
+viewed with the existing UML editor.<span style='mso-spacerun:yes'>  </span>When
+keywords get created, they are added as an annotation as shown below.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:8.5pt;page-break-after:avoid'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:587.25pt;height:62.25pt'
+ o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+ o:borderrightcolor="this">
+ <v:imagedata src="article_files/image002.jpg" o:title="keyword"/>
+ <w:bordertop type="single" width="4" shadow="t"/>
+ <w:borderleft type="single" width="4" shadow="t"/>
+ <w:borderbottom type="single" width="4" shadow="t"/>
+ <w:borderright type="single" width="4" shadow="t"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=787 height=87
+src="article_files/image003.jpg" v:shapes="_x0000_i1031"><![endif]></p>
+
+<p class=MsoCaption>Figure <!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC
+<span style='mso-element:field-separator'></span><![endif]--><span
+style='mso-no-proof:yes'>2</span><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->: Keywords in a model</p>
+
+<p>It is important to note that the use of annotations in this manner is
+non-standard.<span style='mso-spacerun:yes'>   </span>If you decide to export
+your model with keywords to XMI, the annotations would be moved into an XMI
+extension.<span style='mso-spacerun:yes'>   </span>Consumers of the XMI format
+could conceivably continue to use your keywords if they know how to work with
+the newly created XMI elements.</p>
+
+<p>The use of keywords is somewhat limited in that you cannot attach any
+constraints or validation or add properties to existing metatypes in
+anyway.<span style='mso-spacerun:yes'>   </span>They are strictly used as a tag
+to visually distinguish similar items.<span style='mso-spacerun:yes'> 
+</span>Another downside to keywords is that there is no formally defined
+concept of a dictionary of keywords.<span style='mso-spacerun:yes'>  
+</span>The implication of this is that if I define some keywords for my domain,
+I cannot directly share them with others.<span style='mso-spacerun:yes'>  
+</span>The set of appropriate keywords would have to be agreed upon and applied
+by the end user.<span style='mso-spacerun:yes'>   </span>Display of such keywords
+would also have to be supported by the modeling tool you are using.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableList1 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-top-alt:1.5pt;
+ mso-border-left-alt:.75pt;mso-border-bottom-alt:1.5pt;mso-border-right-alt:
+ .75pt;mso-border-color-alt:teal;mso-border-style-alt:solid;mso-yfti-tbllook:
+ 128;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=84 valign=top style='width:63.1pt;border-top:solid teal 1.5pt;
+  border-left:solid teal 1.0pt;border-bottom:none;border-right:none;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-left-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:64'><b style='mso-bidi-font-weight:normal'>Pros<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:solid teal 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid teal 1.0pt;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Adding keywords is trivial</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Great to visually distinguish between similar
+  looking items.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=84 valign=top style='width:63.1pt;border-top:none;border-left:solid teal 1.0pt;
+  border-bottom:solid teal 1.5pt;border-right:none;mso-border-left-alt:solid teal .75pt;
+  mso-border-bottom-alt:solid teal 1.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:128'><b style='mso-bidi-font-weight:normal'>Cons<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:none;border-left:
+  none;border-bottom:solid teal 1.5pt;border-right:solid teal 1.0pt;mso-border-bottom-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Limited functionality.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>No concept of dictionary of keywords to share common
+  keywords.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>No way to validate application of keywords.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Not standard or formally defined by
+  superstructure specification.</p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Lightweight_extension"></a>Lightweight extension<span
+style='font-size:10.0pt'><o:p></o:p></span></h3>
+
+<p>Lightweight extensions involve using profiles.<span
+style='mso-spacerun:yes'>  </span>Profiles are described in detail in the <a
+href="http://www.omg.org/technology/documents/formal/uml.htm">UML
+Superstructure specification</a> chapter 18. </p>
+
+<p>Profiles should be your first instinctive choice when deciding to extend or
+customize UML.<span style='mso-spacerun:yes'>  </span>A profile defines limited
+extensions to a reference metamodel with the purpose of adapting the metamodel
+to a specific platform domain.<span style='mso-spacerun:yes'>  </span>The
+primary extension construct is the Stereotype, which is defined as part of your
+Profile.<span style='mso-spacerun:yes'>  </span>Stereotypes can be used to add
+keywords, constraints, images, and properties (tagged values) to model elements.<span
+style='mso-spacerun:yes'>  </span>A profile introduces several constraints or
+restrictions on ordinary <span class=SpellE>metamodeling</span> through the use
+of metaclasses defined in this package.<span style='mso-spacerun:yes'> 
+</span>The profile mechanism is not a first-class mechanism (i.e. it does not
+allow for modifying existing <span class=SpellE>metamodels</span>).<span
+style='mso-spacerun:yes'>  </span>Rather, the intention of profiles is to give
+a straight-forward mechanism for adapting an existing metamodel with constructs
+that are specific to a particular domain.<span style='mso-spacerun:yes'> 
+</span>Each such adaptation is grouped in a profile which is a type of
+Package.<span style='mso-spacerun:yes'>  </span>Applying a profile does not
+change the underlying model in any way; it merely defines a view of the
+underlying model.</p>
+
+<p>Reasons for trying to use profiles include:</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l12 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Leveraging existing UML editors, </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l12 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Ease of deployment, </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l12 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Ease of working with, and primarily, </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l12 level1 lfo16;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>They are well documented means of extending
+UML.<span style='mso-spacerun:yes'>  </span></p>
+
+<p>To further explain the notion of reusing existing editors:<span
+style='mso-spacerun:yes'>  </span>presumably, you will be using some graphical
+based UML tool (built on top of open-source UML of course<span
+style='font-family:Wingdings;mso-ascii-font-family:Arial;mso-hansi-font-family:
+Arial;mso-char-type:symbol;mso-symbol-font-family:Wingdings'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Wingdings'>J</span></span>)
+to develop your domain specific instances of your meta-model.<span
+style='mso-spacerun:yes'>  </span>By using profiles, you will have the ability
+to leverage that tool when working with your meta-model without having to make
+customizations (i.e. without extending the editor to know about your domain specific
+items).<span style='mso-spacerun:yes'>   </span>Also, if you want end-users to
+work programmatically with your domain specific extension, you simply have to
+deploy your newly created profile.<span style='mso-spacerun:yes'> 
+</span>Granted, programmatic usage of profile is a bit clumsy, using <span
+class=SpellE>Element#setValue</span><span class=GramE>.(</span>Stereotype, String,
+Object)<span style='mso-spacerun:yes'>  </span>to set values of your new
+properties.<span style='mso-spacerun:yes'>   </span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Two new concepts have been introduced into the UML2 2.1 API.<span
+style='mso-spacerun:yes'>  </span>These concepts will be mentioned here but
+will be explored in more detail in future articles.<span
+style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'>   </span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo18;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Static Profile Definition:<span
+style='mso-spacerun:yes'>   </span>Newly introduced in UML2 2.1 is the ability
+to create statically defined profiles.<span style='mso-spacerun:yes'>   
+</span>In the “classical” approach to profiles, users typically create an Ecore
+representation by calling <span class=SpellE>Profile#<span class=GramE>define</span></span><span
+class=GramE>(</span>).<span style='mso-spacerun:yes'>  </span>When applying
+stereotypes from such a profile, a dynamically-generated EMF representation of
+the stereotype is retrieved from an annotation on the profile.<span
+style='mso-spacerun:yes'>   </span>Users now have the option to convert their
+profiles to Ecore model just as they would any other model.<span
+style='mso-spacerun:yes'>   </span>They can then generate code from that model
+and provide implementations for operations and derived features.</p>
+
+<p style='margin-left:.25in'><o:p>&nbsp;</o:p></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo18;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>OCL Integration:<span style='mso-spacerun:yes'> 
+</span>Users can specify invariant constraints or operation bodies in OCL and
+have code generated from the expressions entered in the UML model.<span
+style='mso-spacerun:yes'>   </span>Validation of constraints created on
+stereotypes is possible after the stereotype has been applied.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Newly introduced in UML 2.0 is the notion of “strict” application of a
+profile.<span style='mso-spacerun:yes'>  </span>This is a means of specifying
+the kinds of meta-types that your DSL is concerned with.<span
+style='mso-spacerun:yes'>   </span>For example, say you were really only
+interested in Classes, Properties and Operations but you only wanted to specify
+a stereotype for Class.<span style='mso-spacerun:yes'>   </span>You could
+create meta-class reference to Property and Operation.<span
+style='mso-spacerun:yes'>  </span>Then when applying your profile, you could
+specify a “strict” application.<span style='mso-spacerun:yes'>    </span>UML
+editors should respect the strict attribute of the profile application and
+remove all other UML concepts from palettes etc and just leave those that your
+DSL is concerned with.<span style='mso-spacerun:yes'>  </span>This is a feature
+that may or may not be supported by a given tool.<span
+style='mso-spacerun:yes'>   </span>Without a strict application of a profile,
+all other UML concepts will be available.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableList1 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-top-alt:1.5pt;
+ mso-border-left-alt:.75pt;mso-border-bottom-alt:1.5pt;mso-border-right-alt:
+ .75pt;mso-border-color-alt:teal;mso-border-style-alt:solid;mso-yfti-tbllook:
+ 128;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=84 valign=top style='width:63.1pt;border-top:solid teal 1.5pt;
+  border-left:solid teal 1.0pt;border-bottom:none;border-right:none;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-left-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:64'><b style='mso-bidi-font-weight:normal'>Pros<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:solid teal 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid teal 1.0pt;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Easy to create such extensions</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Well described with documentation in
+  Superstructure Specification</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Standard means to define icons</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Well defined display options.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Application of profiles and how to use them is
+  well defined.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Can add structure</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Low development cost</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=84 valign=top style='width:63.1pt;border-top:none;border-left:solid teal 1.0pt;
+  border-bottom:solid teal 1.5pt;border-right:none;mso-border-left-alt:solid teal .75pt;
+  mso-border-bottom-alt:solid teal 1.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:128'><b style='mso-bidi-font-weight:normal'>Cons<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:none;border-left:
+  none;border-bottom:solid teal 1.5pt;border-right:solid teal 1.0pt;mso-border-bottom-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Cannot specify behavior</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Only possibly to add new constraints, not to remove
+  constraints.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Clumsy programmatic usage</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Cannot modify existing structures</p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Hlt174419544"></a><a name="_Middleweight_extension"></a>Middleweight
+extension</h3>
+
+<p>Middleweight extensions are named such because they extend all of UML.<span
+style='mso-spacerun:yes'>   </span>That is, you pull into your domain all UML
+concepts, relationships etc.<span style='mso-spacerun:yes'>  </span>Middleweight
+extensions have two aspects: </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l11 level1 lfo24;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>Extend by referencing <span class=SpellE>uml.metamodel.uml</span>.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l11 level1 lfo24;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To that merged set of metatypes, add your own
+domain specific types.</p>
+
+<p>We make the distinction between middleweight and heavyweight based on what
+gets extended.</p>
+
+<p>Even though middleweight extensions are initially easier to create (because
+you omit the Language unit merge step in heavyweight extensions) middleweight
+extensions are discouraged for two main reasons. <span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l6 level1 lfo26;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>You create interdependency between on a specific
+version of UML.</p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l6 level1 lfo26;
+tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>You extend all of UML even if you may only be interested
+in certain aspects of it.</p>
+
+<p>If you require the flexibility of defining behavior, <span class=SpellE>subclassing</span>
+or redefining existing collections, then you should favor <a
+href="#_Heavyweight_extension">heavyweight extensions</a>.<span
+style='mso-spacerun:yes'>   </span>If your DSL on the other hand has much
+overlap with UML, you could consider using middleweight extensions.</p>
+
+<p>When using such extensions, keep in mind that you will be creating a
+dependency on open-source UML implementation and the internal .implementation
+classes.<span style='mso-spacerun:yes'>  </span>That is to say, if UML changes
+in some way, your newly introduced model elements that extend them might also
+have to change </p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableList1 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-top-alt:1.5pt;
+ mso-border-left-alt:.75pt;mso-border-bottom-alt:1.5pt;mso-border-right-alt:
+ .75pt;mso-border-color-alt:teal;mso-border-style-alt:solid;mso-yfti-tbllook:
+ 128;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=84 valign=top style='width:63.1pt;border-top:solid teal 1.5pt;
+  border-left:solid teal 1.0pt;border-bottom:none;border-right:none;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-left-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:64'><b style='mso-bidi-font-weight:normal'>Pros<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:solid teal 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid teal 1.0pt;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Easier than heavyweight to create initially.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Easy for end user to use programmatically.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Can add and modify behavior</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Can add and modify structure</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Can add and modify constraints</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>API is domain specific</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=84 valign=top style='width:63.1pt;border-top:none;border-left:solid teal 1.0pt;
+  border-bottom:solid teal 1.5pt;border-right:none;mso-border-left-alt:solid teal .75pt;
+  mso-border-bottom-alt:solid teal 1.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:128'><b style='mso-bidi-font-weight:normal'>Cons<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:none;border-left:
+  none;border-bottom:solid teal 1.5pt;border-right:solid teal 1.0pt;mso-border-bottom-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Creates interdependence on specific version of
+  UML.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Difficult to maintain especially if UML
+  specification changes.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>High development cost</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>File format is non-standard</p>
+  <p style='margin-left:.25in;mso-yfti-cnfc:128'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Heavyweight_extension"></a>Heavyweight extension</h3>
+
+<p>Creating middleweight extensions involve 2 steps: </p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l9 level1 lfo20;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>Select the language units you wish to extend and
+merge them.<span style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l9 level1 lfo20;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+</span></span></span><![endif]>To that merged set of metatypes, add your own
+domain specific types.</p>
+
+<p>Although the concept and terminology for “middleweight” extension is not
+mentioned in the official UML specification, the notion of using package merge
+to define languages is mentioned and forms the bases for constructing UML
+itself.</p>
+
+<p>So why exactly would you even consider a middleweight extension?<span
+style='mso-spacerun:yes'>  </span>The simple answer is: “ability to customize
+and specify behavior”.<span style='mso-spacerun:yes'>   </span>With
+middleweight extensions you have access to all the concepts of subsetting and
+redefinition that are used to create UML itself.<span
+style='mso-spacerun:yes'>   </span>Support for these concepts is handled
+through the customized code UML code generator.<span style='mso-spacerun:yes'> 
+</span>The details of these concepts will be explored in a future article but
+the basics are as follows:</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h4>Subsetting</h4>
+
+<p>A property may be marked as the subset of another, as long as every element
+in the context of the subsetting property conforms to the corresponding element
+in the context of the <span class=SpellE>subsetted</span> property.<span
+style='mso-spacerun:yes'>  </span>The UML2 API and code generator provide
+support for Java code to enforce these subset constraints.</p>
+
+<p>Subsetting comes in two basic flavors: derived subsets and non-derived
+subsets.<span style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:63.5pt;text-indent:-.25in;mso-list:l3 level1 lfo22;
+tab-stops:list 63.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Derived
+subsets<o:p></o:p></b></p>
+
+<p style='margin-left:63.5pt'>If a property is a derived subset, then its value
+or values can be computed from the value of one or more other properties.<span
+style='mso-spacerun:yes'>  </span>That is to say that the values exist in some
+form somewhere else in the meta-model and that those values can be computed.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:63.5pt'><img border=0 width=63 height=14 id="_x0000_i1033"
+src="../../../../images/tip.gif">Derived properties are often specified to be read-only.</p>
+
+<p style='margin-left:63.5pt'><i style='mso-bidi-font-style:normal'><u>Example:</u></i><span
+style='mso-spacerun:yes'>  </span><span class=SpellE>Package.nestedPackage</span>
+is a derived subset of <span class=SpellE>Package.ownedType</span>.<span
+style='mso-spacerun:yes'>   </span>In this case derivation is based on some
+aspect of the property, in this case, the type.</p>
+
+<p style='margin-left:63.5pt;text-indent:-.25in;mso-list:l3 level1 lfo22;
+tab-stops:list 63.5pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Non-derived
+subsets<o:p></o:p></b></p>
+
+<p style='margin-left:63.5pt'>Non-derived subsets<b style='mso-bidi-font-weight:
+normal'> </b>also apply to properties but such properties contain values that
+cannot be calculated directly from existing features.<span
+style='mso-spacerun:yes'>  </span></p>
+
+<p style='margin-left:63.5pt'><img border=0 width=63 height=14 id="_x0000_i1034"
+src="../../../../images/tip.gif"><span style='mso-spacerun:yes'> </span>Non-derived subsets
+must be writable.</p>
+
+<p style='margin-left:63.5pt'><i style='mso-bidi-font-style:normal'><u>Example:</u></i><span
+style='mso-spacerun:yes'>   </span>The precondition property of the Operation
+metaclass is an example.<span style='mso-spacerun:yes'>  </span>Pre-conditions
+subset <span class=SpellE>Namespace::ownedRule</span> but must be populated
+explicitly.<span style='mso-spacerun:yes'>  </span>Newly added items also get
+added to the <span class=SpellE>Namespace::ownedRule</span> collection.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<h4>Redefinition</h4>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Redefinition
+is a way to narrow the scope of a property or to constrain it.<span
+style='mso-spacerun:yes'>  </span>If you wish to restrict what can be added to
+an existing collection, you should use redefinition.<span
+style='mso-spacerun:yes'>  </span>In effect, redefinition replaces an existing
+property.<span style='mso-spacerun:yes'>  </span>You cannot widen the scope of
+a property with redefinition.<span style='mso-spacerun:yes'> 
+</span>Redefinition only makes sense in the context of generalization.<span
+style='mso-spacerun:yes'>  </span>That is to say that a property that is the
+redefined property must be one inherited by the classifier redefining it.<span
+style='mso-spacerun:yes'>  </span>Redefinition can be used to narrow the type
+of a property by referring to a more specific type.<span
+style='mso-spacerun:yes'>  </span>Redefinition of features which are lists of
+items replaces the entire list.<span style='mso-spacerun:yes'>  </span>That is
+to say, any items contributed via inheritance will be disregarded and the
+redefined list will be recalculated.<span style='mso-spacerun:yes'>   </span>If
+you wish to contribute items to an existing list, you can use a derived union.
+The name and visibility of a property are not required to match those of any
+property it redefines.<span style='mso-spacerun:yes'>  </span></p>
+
+<p><i style='mso-bidi-font-style:normal'><u>Example</u></i>: </p>
+
+<p style='margin-left:8.5pt;page-break-after:avoid'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:460.5pt;height:286.5pt'>
+ <v:imagedata src="article_files/image004.gif" o:title="Redefinition"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=614 height=382
+src="article_files/image004.gif" v:shapes="_x0000_i1035"><![endif]></p>
+
+<p class=MsoCaption>Figure <!--[if supportFields]><span style='mso-element:
+field-begin'></span><span style='mso-spacerun:yes'> </span>SEQ Figure \* ARABIC
+<span style='mso-element:field-separator'></span><![endif]--><span
+style='mso-no-proof:yes'>3</span><!--[if supportFields]><span style='mso-element:
+field-end'></span><![endif]-->: Redefinition</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h4>Derived Unions</h4>
+
+<p>Derived unions indicate that a feature is the union of one or more
+collections or scalar. Derived unions are analogous to abstract methods in
+Java.<span style='mso-spacerun:yes'>  </span>As with abstract methods, derived
+unions really only make sense in the context of a concrete type defining what
+is contributed.<span style='mso-spacerun:yes'>   </span>Derived unions are
+useful if you wish to indicate that a particular meta-type defines a feature
+but that feature is to be defined within the context of other meta-types.<span
+style='mso-spacerun:yes'>   </span>Users of derived unions would create a
+property which subsets the property marked as a derived union and then
+contributes more objects to the collection.<span style='mso-spacerun:yes'> 
+</span>A derived union is typically applied to properties on abstract types
+high up in the inheritance hierarchy.<span style='mso-spacerun:yes'>  </span>A
+derived union is read only.<span style='mso-spacerun:yes'>  </span>A derived
+union is derived.<span style='mso-spacerun:yes'>  </span>A derived union is a
+derived subset but not vice versa necessarily.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><i
+style='mso-bidi-font-style:normal'><u>Example</u></i>:</p>
+
+<p><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75" style='width:555pt;
+ height:654pt'>
+ <v:imagedata src="article_files/image005.gif" o:title="derivedUnion"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=740 height=872
+src="article_files/image005.gif" v:shapes="_x0000_i1036"><![endif]></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Middleweight extensions are great if you want to allow users to work
+programmatically with your code by presenting a very clean API or if you want
+to add or customize behavior.<span style='mso-spacerun:yes'>  </span>The
+downside to heavyweight extension is that it is the most costly approach: <span
+style='mso-spacerun:yes'> </span>it is the most difficult to develop and its
+overall usefulness might be limited to those who have intimate knowledge of
+your API and customizations.<span style='mso-spacerun:yes'>  </span></p>
+
+<p>Deploying middleweight extensions so that user may programmatically create
+instances of your DSL involve deploying all the <span class=SpellE>plugins</span>
+involved as opposed to a deploying a single profile as with lightweight
+extensions.<span style='mso-spacerun:yes'>  </span></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableList1 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-top-alt:1.5pt;
+ mso-border-left-alt:.75pt;mso-border-bottom-alt:1.5pt;mso-border-right-alt:
+ .75pt;mso-border-color-alt:teal;mso-border-style-alt:solid;mso-yfti-tbllook:
+ 128;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width=84 valign=top style='width:63.1pt;border-top:solid teal 1.5pt;
+  border-left:solid teal 1.0pt;border-bottom:none;border-right:none;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-left-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:64'><b style='mso-bidi-font-weight:normal'>Pros<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:solid teal 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid teal 1.0pt;mso-border-top-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;background:silver;
+  mso-shading:white;mso-pattern:solid silver;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Easy for end users to use programmatically</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Ability to override or customize operations
+  and behavior</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Selectively reuse UML concepts as required.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Constraints are enforced at compile time (
+  type safety )</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:64'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>API is domain specific</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=84 valign=top style='width:63.1pt;border-top:none;border-left:solid teal 1.0pt;
+  border-bottom:solid teal 1.5pt;border-right:none;mso-border-left-alt:solid teal .75pt;
+  mso-border-bottom-alt:solid teal 1.5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='mso-yfti-cnfc:128'><b style='mso-bidi-font-weight:normal'>Cons<o:p></o:p></b></p>
+  </td>
+  <td width=756 valign=top style='width:567.0pt;border-top:none;border-left:
+  none;border-bottom:solid teal 1.5pt;border-right:solid teal 1.0pt;mso-border-bottom-alt:
+  solid teal 1.5pt;mso-border-right-alt:solid teal .75pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Costly development (complicated)</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Difficult to develop such an extension</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Difficult to maintain.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Slightly more difficult to deploy.<span
+  style='mso-spacerun:yes'>  </span>Involves deploying all <span class=SpellE>plugins</span>
+  involved.</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>Cannot modify existing behavior</p>
+  <p style='margin-left:.5in;text-indent:-.25in;mso-list:l10 level1 lfo14;
+  tab-stops:list .5in;mso-yfti-cnfc:128'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]>File format is non-standard</p>
+  <p style='margin-left:.25in;mso-yfti-cnfc:128'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2>Option summary</h2>
+
+<p>If you have stuck with this document this far you have a sense that the decision
+making process of how to extend UML is not straightforward or simple.<span
+style='mso-spacerun:yes'>  </span>To help simplify what has been discussed, a
+summary table will be presented.<span style='mso-spacerun:yes'>  
+</span>Emphasis has been made on light weight extensions as this should be your
+first instinct.</p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableSimple2 border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-yfti-tbllook:160;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:-1;height:47.75pt'>
+  <td width=168 valign=top style='width:126.1pt;border:solid windowtext 1.0pt;
+  border-bottom:solid black 1.5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid black 1.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:47.75pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:5'><b><o:p>&nbsp;</o:p></b></p>
+  <p style='mso-yfti-cnfc:5'><b><o:p>&nbsp;</o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;border:none;border-bottom:solid black 1.5pt;
+  mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:47.75pt'>
+  <p align=center style='text-align:center;mso-yfti-cnfc:1'><b><a
+  href="#_Featherweight_extension"><span style='font-weight:normal'>Featherweight</span></a>
+  <o:p></o:p></b></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;border:none;border-bottom:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:47.75pt'>
+  <p align=center style='text-align:center;mso-yfti-cnfc:1'><b><a
+  href="#_Lightweight_extension"><span style='font-weight:normal'>Lightweight</span></a><o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;border:none;border-bottom:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:47.75pt'>
+  <p align=center style='text-align:center;mso-yfti-cnfc:1'><b><a
+  href="#_Middleweight_extension"><span style='font-weight:normal'>Middleweight</span></a><o:p></o:p></b></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;border:none;border-bottom:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:47.75pt'>
+  <p align=center style='text-align:center;mso-yfti-cnfc:1'><b><a
+  href="#_Heavyweight_extension"><span style='font-weight:normal'>Heavyweight</span></a><o:p></o:p></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Keyword support<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;border:none;mso-border-top-alt:
+  solid black 1.5pt;mso-border-left-alt:solid windowtext .5pt;background:#E6E6E6;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Simply used as a tag to highlight
+  certain characteristics</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Part of Stereotype definition in
+  Superstructure Specification.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;border:none;mso-border-top-alt:
+  solid black 1.5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes*</p>
+  <p align=center style='text-align:center'>Not directly supported although can
+  be accomplished if implementer customizes display code.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;border:none;mso-border-top-alt:
+  solid black 1.5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes*</p>
+  <p align=center style='text-align:center'>Not directly supported although can
+  be accomplished if implementer customizes display code.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Icon support<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Profiles directly support applying
+  and displaying icons.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes*</p>
+  <p align=center style='text-align:center'>Not directly supported although can
+  be accomplished if implementer customizes display code</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes*</p>
+  <p align=center style='text-align:center'>Not directly supported although can
+  be accomplished if implementer customizes display code.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid windowtext 1.0pt;
+  mso-border-right-alt:solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Restrict or constrain existing types<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;border:none;mso-border-left-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes <o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Add additional OCL
+  constraints.<span style='mso-spacerun:yes'>  </span>Some OCL integration
+  support.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Add additional OCL
+  constraints.<span style='mso-spacerun:yes'>  </span>Some OCL integration
+  support.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Add additional OCL
+  constraints.<span style='mso-spacerun:yes'>  </span>Some OCL integration
+  support</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid windowtext 1.0pt;
+  mso-border-right-alt:solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Extend existing types<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;border:none;mso-border-left-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Extend existing types through
+  Stereotype Generalization</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Extend existing types through
+  generalizations</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Extend existing types through
+  generalizations</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid windowtext 1.0pt;
+  mso-border-right-alt:solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Add new types that do not extend an existing
+  type<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;border:none;mso-border-left-alt:
+  solid windowtext .5pt;background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Stereotypes must be applied to some
+  existing UML concept to come into existence</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Create any type you want without
+  generalization and use freely.</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Create any type you want without
+  generalization and use freely.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Remove existing type<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No</b> *</p>
+  <p align=center style='text-align:center'>You are applying your newly created
+  Stereotypes to the UML domain.</p>
+  <p align=center style='text-align:center'>Use of “strict” application of
+  profile.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  <p align=center style='text-align:center'>All of UML pulled in.<span
+  style='mso-spacerun:yes'>  </span>Your DSL extends all of UML.</p>
+  <p align=center style='text-align:center'>Simply extend <span class=SpellE>uml.metamodel.uml</span></p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Your DSL extension would extend
+  only the merged language units that you would be interested in.</p>
+  <p align=center style='text-align:center'>Development is complicated because of
+  this merge step.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Add new properties<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Apply Profile, apply Stereotype
+  that adds property. Use <span class=SpellE><span class=GramE>setValue</span></span><span
+  class=GramE>(</span>) to get and set property. </p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Getters and setters for newly added
+  properties are created automatically.</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Getters and setters for newly added
+  properties are created automatically.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Remove existing properties<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No*</p>
+  <p align=center style='text-align:center'>Can only exclude entire types depending
+  on granularity of Language Unit.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Restrict/constrain existing properties<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>OCL constraints.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Directly by use of Sub-setting and
+  Redefinition.<span style='mso-spacerun:yes'>  </span>Indirectly by adding
+  additional constraints in which case code is generated.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Directly by use of Sub-setting and
+  Redefinition.<span style='mso-spacerun:yes'>  </span>Indirectly by adding
+  additional constraints in which case code is generated.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Add new operations<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Not able to specify behavior in a
+  profile currently.<span style='mso-spacerun:yes'>   </span>In the future, you
+  might be able to add behavior through OCL constraints.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>You can specify operations and
+  behavior.</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>You can specify operations and
+  behavior.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Remove existing operations<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No*</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes*</p>
+  <p align=center style='text-align:center'>Since the merged language unit code
+  gets regenerated it is possible to completely customize.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Restrict/constrain existing operations<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>OCL constraints can be attached to
+  operations</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Reuse UML concepts<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Possible to customize exactly which
+  concepts to reuse by merging your own Language Units</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Restrict multiplicity<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Remove existing constraints<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Add new constraints<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Yes<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Add OCL constraints.<span
+  style='mso-spacerun:yes'>  </span>Currently no runtime checks</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Add operations that directly
+  restrict operations.<span style='mso-spacerun:yes'>  </span>Type safety at
+  compile time.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Add operations that directly
+  restrict operations.<span style='mso-spacerun:yes'>  </span>Type safety at
+  compile time.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E6E6E6;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>First class extensibility<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E6E6E6;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Validation<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No<o:p></o:p></b></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Custom validation stubs are
+  automatically generated.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Custom validation stubs are
+  automatically generated.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E0E0E0;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Programmatic usage<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Easy</p>
+  <p align=center style='text-align:center'>Simply apply tag.</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Awkward<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>*Programmatic usage covered in
+  future document</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Easy</p>
+  <p align=center style='text-align:center'>Concepts are straight forward and
+  familiar to developers.</p>
+  <p align=center style='text-align:center'>*Programmatic usage covered in
+  future document</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Easy</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E0E0E0;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Efficiency of running code<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Very efficient</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Not optimal</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Very efficient</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Very efficient</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Cost of development<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Low</p>
+  <p align=center style='text-align:center'>Trivial development</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Medium<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Extension technique is well defined
+  and documented.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>High</p>
+  <p align=center style='text-align:center'>Developer must understand complex
+  concepts such as redefinition, subsetting, derived unions</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Highest</p>
+  <p align=center style='text-align:center'>Must merge language units and
+  developer must understand complex concepts such as redefinition, subsetting,
+  derived unions</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E0E0E0;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Ability to evolve<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Easy</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Easy<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Just modify profile and reapply</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Difficult</p>
+  <p align=center style='text-align:center'>Regenerate code</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Difficult</p>
+  <p align=center style='text-align:center'>Regenerate code</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Deploy so end users can work with<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>N/A</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>Easy<o:p></o:p></b></p>
+  <p align=center style='text-align:center'>Deploy profile, user must apply
+  profile and apply stereotype.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Easy<o:p></o:p></p>
+  <p align=center style='text-align:center'>Deploy <span class=SpellE>plugins</span></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:13.85pt'>
+  <p align=center style='text-align:center'>Easy<o:p></o:p></p>
+  <p align=center style='text-align:center'>Deploy <span class=SpellE>plugins</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;mso-yfti-lastrow:yes;height:13.85pt'>
+  <td width=168 valign=top style='width:126.1pt;border:none;border-right:solid black 1.5pt;
+  background:#E0E0E0;padding:0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p style='mso-yfti-cnfc:4'><b>Dependency on UML implementation<o:p></o:p></b></p>
+  </td>
+  <td width=145 valign=top style='width:108.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No</p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'><b style='mso-bidi-font-weight:
+  normal'>No</b> *</p>
+  <p align=center style='text-align:center'>Unless the meta-type is removed
+  altogether your extension will be valid.</p>
+  </td>
+  <td width=205 valign=top style='width:153.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>Yes</p>
+  <p align=center style='text-align:center'>Generator model references <span
+  class=SpellE>uml.metamodel.uml</span> which causes dependency on a particular
+  version of UML2.<span style='mso-spacerun:yes'>  </span>Depends on uml2 implementation</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+  <td width=191 valign=top style='width:143.5pt;background:#E0E0E0;padding:
+  0in 5.4pt 0in 5.4pt;height:13.85pt'>
+  <p align=center style='text-align:center'>No *</p>
+  <p align=center style='text-align:center'>You will be dependent on your
+  merged model based on language units but you control that.</p>
+  <p align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+</table>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<h2 style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Conclusion</h2>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Congratulations!
+You’ve made it this far, so you’ve gone through the thought process of selecting
+the extension technique that is right for you.<span style='mso-spacerun:yes'> 
+</span>Hopefully enough information has been provided to enable you to
+decisively conclude the right approach for you.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>We
+have explored some of the pros and cons of each type of extension as well as
+provided a summary of all the techniques.<span style='mso-spacerun:yes'> 
+</span>Detailed information of how to create heavy-weight extensions will be
+explored in more detail in future articles.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><img
+border=0 width=63 height=14 id="_x0000_i1032" src="../../../../images/tip.gif">The main
+conclusion of this article is: The use of <a href="#_Hlt174419544">Middleweight
+extensions</a> is discouraged and <a href="#_Lightweight_extension">Lightweight
+extensions</a> should be your first instinct.<span style='mso-spacerun:yes'>  
+</span>Middleweight extensions should be used in rare cases where much control
+is required.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>For
+more information on UML2, visit the <a href="http://www.eclipse.org/uml2">home
+page</a> or join the <a href="news://news.eclipse.org/eclipse.modeling.mdt.uml2">newsgroup</a>.</p>
+
+<h2 style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>References</h2>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>[1]
+K. Hussey. “Getting Started with UML2”. International Business Machines Corp.,
+2004, 2006.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>[2]
+K. Hussey. “Introduction to UML2 Profiles”. International Business Machines
+Corp., 2004, 2006.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>[3]
+UML Testing Profile. <span class=GramE>Version 1.0, formal/05-07-07.</span> <span
+class=GramE>OMG.,</span> July 2005.</p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-size:7.5pt'>Java and all Java-based trademarks and logos are
+trademarks or registered trademarks of Sun Microsystems, Inc. in the </span><st1:country-region><st1:place><span
+  style='font-size:7.5pt'>United States</span></st1:place></st1:country-region><span
+style='font-size:7.5pt'>, other countries, or both.</span></p>
+
+</div>
+
+</body>
+
+</html>
