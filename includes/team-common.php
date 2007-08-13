@@ -58,9 +58,21 @@ if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$expor
 else
 {
 	$projectName = $projct != "modeling" ? strtoupper($projct) : "Modeling Project";
-	
-	$data1 = getDevelopers(true);
-	$data2 = getDevelopers(false);
+	$data = array();
+	if (isset($_GET["byProject"]) && $projct == "modeling")
+	{
+	    $projs = array("emf","emft","gmf","gmt","mddi","mdt","m2m","m2t");
+	    foreach ($projs as $p)
+	    {
+	        $data[strtoupper($p) . " Committers"] = getDevelopers(true, $p);
+	        $data[strtoupper($p) . " Contributors"] = getDevelopers(false, $p);
+	    }
+	} 
+	else
+	{
+	    $data["Committers"] = getDevelopers(true, $projct);
+	    $data["Contributors"] = getDevelopers(false, $projct);
+	}
 	
 	ob_start();
 	$pageTitle= "Meet The Team";
@@ -73,27 +85,51 @@ else
 	print<<<EOHTML
 <div id="midcolumn">
 	<h1>Meet The $projectName Team</h1>
-	
 EOHTML;
-	if ($data1 && $data1[0])
+	if (isset($_GET["byProject"]) && $projct == "modeling")
 	{
-	print<<<EOHTML
-	<div class="homeitem3col">
-	<h3>Committers ($data1[0])</h3>
-	$data1[1]
-	</div>
-
-EOHTML;
+	    print "<blockquote><ul><li>Committers: ";
+	    foreach ($projs as $p)
+	    {
+	        if ($data[strtoupper($p) . " Committers"][0])
+	        {
+	            print '<a href="#' . strtoupper($p) . '_Committers">' . strtoupper($p) . '</a> &#160;'."\n";  
+	        }
+	    }
+	    print "</li>\n<li>Contributors: ";
+	    foreach ($projs as $p)
+	    {
+	        if ($data[strtoupper($p) . " Contributors"][0])
+	        {
+	            print '<a href="#' . strtoupper($p) . '_Contributors">' . strtoupper($p) . '</a> &#160;'."\n";
+	        }  
+	    }
+	    print "</li></ul>\n";
+	    print "</blockquote>\n";
 	}
-	if ($data2 && $data2[0])
+	else
 	{
-	print<<<EOHTML
-	<div class="homeitem3col">
-	<h3>Contributors ($data2[0])</h3>
-	$data2[1]
-	</div>
-
-EOHTML;
+	    print "<blockquote><ul><li>";
+	    if ($data["Committers"][0])
+	    {
+	        print '<a href="#Committers">Committers</a> &#160;'."\n";
+	    }
+	    if ($data["Contributors"][0])
+	    {
+	        print '<a href="#Contributors">Contributors</a> &#160;'."\n";
+	    }
+	    print "</li></ul>\n";
+	    print "</blockquote>\n";
+	    
+	}
+	foreach ($data as $label => $arr) {
+		if ($arr && is_array($arr) && sizeof($arr)>0 && $arr[0])
+		{
+		    print '<div class="homeitem3col">'."\n";
+	        print "<h3><a name=\"" . str_replace(" ","_",$label) . "\"></a>$label ($arr[0])</h3>\n";
+	        print $arr[1]."\n";
+	        print "</div>\n";
+		}
 	}
 	print<<<EOHTML
 </div>
@@ -133,9 +169,16 @@ EOHTML;
 		$exportFormatsList
 		</ul></p>
 	</div>
-</div>
-
 EOHTML;
+	if ($projct == "modeling")
+	{
+	print '<div class="sideitem">
+		<h6>Sort</h6>
+		<ul><li><a href="?'.(isset($_GET["byProject"])? '' : 'byProject').'">'.(isset($_GET["byProject"]) ? 'Overall' : 'By Project').'</a></li></ul>		
+	</div>
+';
+	}
+    print "</div>\n";
 }
 
 $html= ob_get_contents();
@@ -146,12 +189,11 @@ $pageAuthor= "Nick Boldt";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
-function getDevelopers($isCommitter = true)
+function getDevelopers($isCommitter = true, $projct)
 {
-	global $projct;
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
 			"WHERE committer = " . ($isCommitter ? "1" : "0") . 
-			($projct != "modeling" ? " AND " . ($projct == "emft" ? "groupname like 'emft%' " : "project LIKE '%$projct'") : "") . 
+			($projct != "modeling" ? " AND " . ($projct == "emft" ? "(groupname like 'emft%' OR project LIKE '%$projct')" : "project LIKE '%$projct'") : "") . 
 			" ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name
 	$result= wmysql_query($query);
 	$groups= array ();
