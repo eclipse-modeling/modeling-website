@@ -33,6 +33,46 @@
 	<!-- EMF 2.2.4 M200708072200 -->
 	
 	<!-- EMF 2.3.1 M200708142030 -->
+
+	<!-- EMF 2.2.4 M200708142200 -->
+	<category-def label="EMF SDK 2.2.4 M200708142200" name="EMF SDK 2.2.4 M200708142200">
+		<description>
+EMF SDK 2.2.4 M200708142200: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.doc" version="2.2.2.v200708142200" url="features/org.eclipse.emf.doc_2.2.2.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.2.1.v200708142200" url="features/org.eclipse.emf.ecore.sdo.doc_2.2.1.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.2.2.v200708142200" url="features/org.eclipse.emf.ecore.sdo.source_2.2.2.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.2.2.v200708142200" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.ecore.sdo_2.2.2.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.sdk" version="2.2.4.v200708142200" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.sdk_2.2.4.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.source" version="2.2.4.v200708142200" url="features/org.eclipse.emf.source_2.2.4.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf" version="2.2.4.v200708142200" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf_2.2.4.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.xsd.doc" version="2.2.1.v200708142200" url="features/org.eclipse.xsd.doc_2.2.1.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.xsd.source" version="2.2.4.v200708142200" url="features/org.eclipse.xsd.source_2.2.4.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.xsd" version="2.2.4.v200708142200" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.xsd_2.2.4.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
+	<feature id="org.eclipse.emf.examples" version="2.2.0.v200708142200" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.examples_2.2.0.v200708142200.jar" patch="false">
+		<category name="EMF SDK 2.2.4 M200708142200"/>
+	</feature>
 <category-def label="EMF SDK 2.3.1 M200708142030" name="EMF SDK 2.3.1 M200708142030">
 		<description>
 EMF SDK 2.3.1 M200708142030: contains runtime, source, and documentation features.
