@@ -275,22 +275,24 @@ if (is_array($projects) && sizeof($projects) > 1)
 					<tr>
 						<td colspan=1>org.eclipse.releng.basebuilder branch:<br><small>-basebuilderBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>"><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., HEAD, R3_2_maintenance, RC4_33, r322_v20070104 :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
+						</td><td><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., 
+						M1_34, v20070614, r322_v20070104,<br/>R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_common_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_common_releng_branch" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.releng branch:<br><small>-projRelengBranch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_proj_releng_branch" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_proj_releng_branch" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.* branch:<br><small>-branch</small></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_Branch_Override" value=""><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_Branch_Override" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
 					</tr>
 					<tr>
 						<td colspan=1>Keep tempfiles?<br><small>-noclean</small></td>
