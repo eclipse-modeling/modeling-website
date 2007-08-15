@@ -28,7 +28,7 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Info</h6>
 		<ul>
-			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=Core,Doc,Edit,Mapping,Releng,SDO,Edit,Tools,Website,XML%2FXMI,XSD" : "EMF,EMFT"; ?>&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
+			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=Core,Doc,Edit,Mapping,Releng,SDO,Edit,Tools,Website,XML%2FXMI,XSD" : "EMF&amp;component=" . $projct; ?>&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=branch%3A+HEAD+days%3A+7">Development This Week</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=branch%3A+R+days%3A+7">Maintenance This Week</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/downloads/stats.php">Download Stats</a></li>
