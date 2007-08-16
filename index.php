@@ -111,7 +111,7 @@ development technologies within the Eclipse community by providing a unified set
 				<ul>
 					<li><a href="http://www.eclipse.org/m2m/atl/">Atlas Transformation Language (ATL)</a> : a model transformation language and toolkit.</li>
 				</ul>
-				<li><a href="http://www.eclipse.org/proposals/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
+				<li><a href="http://www.eclipse.org/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
 					<li><a href="http://www.eclipse.org/emft/projects/jet/">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
 					<li><a href="http://www.eclipse.org/emft/projects/jeteditor/">JET Editor</a> : leverages Eclipse text editor framework to provide this capability via features like syntax coloring, error highlighting and code completion.</li>
