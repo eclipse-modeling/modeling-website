@@ -55,7 +55,7 @@ $deps = array(
 	"jet" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
-	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>", 
+	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"query" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=query#query\">Query</a>",
 	"transaction" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=transaction#transaction\">Transaction</a>",
@@ -101,7 +101,7 @@ if (function_exists("doRequirements"))
 	call_user_func("doRequirements");
 }
 
-$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"></a>";
+$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
 
 if (sizeof($builds) == 0)
 {
@@ -405,33 +405,33 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			{
 				$u = $u ? array("-$u") : array("");
 			}
-			
-			// support EMF page with three different valid prefixes which can 
+
+			// support EMF page with three different valid prefixes which can
 			// overlap when searched using dynamic check below
-			if ($filePreStatic && is_array($filePreStatic) && array_key_exists($proj,$filePreStatic)) 
+			if ($filePreStatic && is_array($filePreStatic) && array_key_exists($proj,$filePreStatic))
 			{
 				$filePreProj = array($filePreStatic[$proj][$cnt]); // just one value to check
 			}
 
 			$tries = array();
-			foreach ($u as $ux) 
-			{ 
-				foreach ($filePreProj as $filePre) 
+			foreach ($u as $ux)
+			{
+				foreach ($filePreProj as $filePre)
 				{
 					$tries[] = "$branch/$ID/$pre2$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 					$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 					$tries[] = "$branch/$ID/$pre2$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 					$tries[] = "$branch/$ID/$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
-				} 
+				}
 			}
-			$outNotFound = "<i><b>$pre2</b>$filePre"; 
-			if (sizeof($u) > 1 ) { 
+			$outNotFound = "<i><b>$pre2</b>$filePre";
+			if (sizeof($u) > 1 ) {
 				$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $outNotFound .= ($ui>0 ? "," : "") . $ux; } $outNotFound .= "}<i>";
-			} 
+			}
 			else
 			{
 				$outNotFound .= $u[0];
-			} 
+			}
 			$outNotFound .= "-$ziplabel.zip ...</i>";
 			$out = "";
 			foreach ($tries as $z)
@@ -447,7 +447,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 				$echo_out .= "<li>\n";
 				$echo_out .= $out;
 				$echo_out .= "</li>\n";
-			} 
+			}
 			else if (!isset($extraZips) || !is_array($extraZips) || !in_array($u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
 			{
 				$echo_out .= "<li>\n";
@@ -542,7 +542,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			if (is_file("$PWD${path}compilelogs/summary.txt"))
 			{
 				$compilelogSummary = file_get_contents("$PWD${path}compilelogs/summary.txt");
-				$link2 = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=".substr($path,0,strlen($path)-1);
+				$link2 = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=" . substr($path, 0, strlen($path) - 1);
 				if ($compilelogSummary)
 				{
 					$m = null;
@@ -559,11 +559,13 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			{
 				$icon = "not";
 				$result = "ERROR";
-			} else if ($didnotruns)
+			}
+			else if ($didnotruns)
 			{
 				$icon = "not";
 				$result = "CAUTION";
-			} else
+			}
+			else
 			{
 				$icon = ($warnings ? "check-maybe" : "check");
 				$result = "";
@@ -576,12 +578,12 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 				{
 					$icon = "check-maybe";
 					$result = "Skipped";
-				} 
+				}
 				else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
 				{
 					$icon = "not";
 					$result = "FAILED";
-				} 
+				}
 				else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
 				{
 					$icon = "check-tests-failed";
@@ -636,7 +638,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 			}
 		}
 	}
-	
+
 	if (!$result && !is_dir("$PWD${path}testresults/xml/"))
 	{
 		$result = "Skipped";
@@ -645,7 +647,7 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" : 
+		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" :
 				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
 	}
 
@@ -653,15 +655,15 @@ function showBuildResults($PWD, $path) // given path to /../downloads/drops/M200
 	{
 		$ID = substr($path, -14);
 		$conlog = "${path}testing/${ID}testing/linux.gtk_consolelog.txt";
-		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=".substr($path,0,strlen($path)-1);
+		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=" . substr($path, 0, strlen($path) - 1);
 		$link2 = (is_file("$PWD$conlog") ? "$mid$conlog" : (is_file("$PWD$testlog") ? "$testlog" : $link));
 		$result = (is_file("$PWD$conlog") ? "Testing..." : $result);
 	}
 
-	$out .= "<a " . 
-		(preg_match("/FAIL|CAUTION|ERROR/",$result) || $didnotruns > 0 || $errors > 0 || $failures > 0 ? "style=\"font-weight:bold;color:red\" " :
-			(preg_match("/Testing|Stalled|Skipped/",$result) || $warnings > 0 ? "style=\"font-weight:bold;color:orange\" " : 
-				"style=\"font-weight:bold;color:darkgreen\" ") ) . 
+	$out .= "<a " .
+		(preg_match("/FAIL|CAUTION|ERROR/", $result) || $didnotruns > 0 || $errors > 0 || $failures > 0 ? "class=\"fail\" " :
+			(preg_match("/Testing|Stalled|Skipped/",$result) || $warnings > 0 ? "class=\"warning\" " :
+				"class=\"success\" ") ) .
 		"href=\"$link2\">$result";
 	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
 	{
@@ -759,7 +761,7 @@ function grep($pattern, $file)
 	{
 		if (filesize($file) < ($maxfilesize))
 		{
-			$filec =  file($file);
+			$filec = file($file);
 		}
 		else
 		{
@@ -792,27 +794,30 @@ function outputBuild($branch, $ID, $c)
 	// generalize for any relabelled build, thus 2.0.1/M200405061234/*-2.0.2.zip is possible; label = 2.0.2
 	$IDlabel = $ziplabel;
 
-	$tests = ""; 
+	$tests = "";
+	$s = array();
 	if ($isBuildServer && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
 	{
-	  	$summary = "";
-	  	if (isset($jdk14testsPWD) && $jdk14testsPWD && is_dir($jdk14testsPWD))
-	  	{
+		if (isset($jdk14testsPWD) && $jdk14testsPWD && is_dir($jdk14testsPWD))
+		{
+			$summary = "";
 			$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
-			$summary .= ($summary ? "</span><span>" : "");
-	  	}
-	  	if (isset($jdk50testsPWD) && $jdk50testsPWD && is_dir($jdk50testsPWD))
-	  	{
+			$s[] = $summary;
+		}
+		if (isset($jdk50testsPWD) && $jdk50testsPWD && is_dir($jdk50testsPWD))
+		{
+			$summary = "";
 			$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
-			$summary .= ($summary ? "</span><span>" : "");
-	  	}
-	  	if (isset($testsPWD) && $testsPWD && is_dir($testsPWD))
-	  	{
+			$s[] = $summary;
+		}
+		if (isset($testsPWD) && $testsPWD && is_dir($testsPWD))
+		{
+			$summary = "";
 			$tests .= getOldTestResults("$testsPWD/", "$branch/$ID/", $summary) . "\n";
-			$summary = ($summary ? "<span>$summary</span>" : "");
-	  	}
-		//print "--$summary--$tests--";
+			$s[] = $summary;
+		}
 	}
+	$summary = join("", preg_replace("/^(.+)$/", "<span>$1</span>", $s));
 
 	$opts = loadBuildConfig("$PWD/$branch/$ID/build.cfg", $deps);
 
@@ -828,7 +833,7 @@ function outputBuild($branch, $ID, $c)
 		"&amp;project=$projct#$ID\">" .
 		"<img alt=\"Link to this build\" src=\"/modeling/images/link.png\"/>" .
 		"</a>" .
-		($opts["noclean"] || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? " <b><i style=\"color:orange\">noclean</i></b> <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>" : "");
+		((isset($opts["noclean"]) && $opts["noclean"]) || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? " <span class=\"noclean\">noclean</span> <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>" : "");
 
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
@@ -843,8 +848,9 @@ function outputBuild($branch, $ID, $c)
 
 function loadBuildConfig($file, $deps)
 {
-	$lines = (is_file($file) && is_readable($file) ? file($file) : array ());
+	$lines = (is_file($file) && is_readable($file) ? file($file) : array());
 
+	$opts = array();
 	foreach ($lines as $z)
 	{
 		$regs = null;
@@ -853,13 +859,13 @@ function loadBuildConfig($file, $deps)
 			$opts[$regs[1]] = $regs[2];
 		}
 		else if (preg_match("#^(buildAlias|noclean)=(.+)$#", $z, $regs))
-        {
-            $opts[$regs[1]] = trim($regs[2]);
-        }
+		{
+			$opts[$regs[1]] = trim($regs[2]);
+		}
 		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
 		{
-    		$rp = realpath($regs[2]);
-    		$opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
+			$rp = realpath($regs[2]);
+			$opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
 		}
 	}
 	return $opts;
@@ -871,27 +877,8 @@ function getBuildArtifacts($dir, $branchID)
 
 	$mid = "$downloadPre/$PR$proj/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
-	$lines = (is_file($file) && is_readable($file) ? file($file) : array());
 	$havedeps = array();
-
-	foreach ($lines as $z)
-	{
-		$regs = null;
-		if (preg_match("/^((" . join("|", array_keys($deps)) . ")(?:DownloadURL|File|BuildURL))=(.{2,})$/", $z, $regs))
-		{
-			$opts[$regs[1]] = $regs[3];
-			$havedeps[$regs[2]] = true;
-		}
-		else if (preg_match("#^(buildAlias|noclean)=(.+)$#", $z, $regs))
-        {
-            $opts[$regs[1]] = trim($regs[2]);
-        }
-		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
-        {
-    		$rp = realpath($regs[2]);
-            $opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
-        }
-	}
+	$opts = loadBuildConfig($file, $deps);
 
 	foreach (array_keys($havedeps) as $z)
 	{
@@ -931,7 +918,7 @@ function getBuildArtifacts($dir, $branchID)
 					if ($vanity != $reg[1])
 					{
 						$vanity = $reg[1] . " " . $vanity;
-					}	
+					}
 				}
 				if ($vanity == " downloads") {
 					$vanity="";
@@ -949,10 +936,10 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<li>\n";
 		$ret .= "<img src=\"/modeling/images/dl-more.gif\" alt=\"More info about this build\"/> Build Details\n";
 		$ret .= "<ul>\n";
-		
-		$version = $opts["buildAlias"] ? $opts["buildAlias"] : (preg_match("#(.+)/([IM]\d+)#", $branchID, $matches) ? $matches[2]: "HEAD");  
-		$ret .= "<li><a href=\"http://www.eclipse.org/${PR}/news/relnotes.php?project=${projct}&version=${version}\">Changes In This Build</a></li>\n";
-		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&project=$projct&ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
+
+		$version = (isset($opts["buildAlias"]) ? $opts["buildAlias"] : (preg_match("#(.+)/([IM]\d+)#", $branchID, $matches) ? $matches[2]: "HEAD"));
+		$ret .= "<li><a href=\"http://www.eclipse.org/$PR/news/relnotes.php?project=$projct&amp;version=$version\">Changes In This Build</a></li>\n";
+		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
 		foreach (array_keys($details) as $label)
 		{
 			$details[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
