@@ -50,14 +50,6 @@ $projects = array (
 	"XSD" => "xsd"
 );
 
-$level = array (
-	"eodm" => 2,
-	"ocl" => 2,
-	"uml2tools" => 2,
-	"uml2" => 2,
-	"xsd" => 2
-);
-
 $extraprojects = array (); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array (); //projects with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //projects without newsgroup
@@ -74,7 +66,7 @@ $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")
 $Nav->addNavSeparator("MDT", "$rooturl/");
 foreach (array_keys($projects) as $z)
 {
-	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
 }
 
 $bugcoms = array_flip($projects);

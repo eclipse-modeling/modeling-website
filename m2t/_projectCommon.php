@@ -54,14 +54,6 @@ $projects = array (
 	"M2T Shared" => "m2tshared"
 );
 
-$level = array (
-	"jet" => 2,
-	"mtl" => 2,
-	"xpand" => 2,
-	"m2tcore" => 2,
-	"m2tshared" => 2
-);
-
 /* TODO: 
  * 		remove from $emft_redirects (don't bounce to emft) 
  * 		& from $extraprojects (show on homepage) 
@@ -89,7 +81,7 @@ $proj = (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . "
 $Nav->addNavSeparator("M2T", "$rooturl/");
 foreach (array_keys($projects) as $z)
 {
-	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
 }
 
 $bugcoms = array_flip($projects);
