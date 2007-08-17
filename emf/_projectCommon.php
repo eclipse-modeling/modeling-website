@@ -53,13 +53,6 @@ $projects = array(
 );
 $tmp = array_flip($projects);
 
-$level = array (
-	"query" => 2,
-	"transaction" => 2,
-	"validation" => 2,
-	"sdo" => 2
-);
-
 $emft_redirects = null;
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //projects with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("emfqtv"); //projects with only information, no downloads, or no builds available yet, "projectkey"
@@ -84,12 +77,9 @@ $buildtypes = array(
 );
 
 $Nav->addNavSeparator("EMF", "$rooturl/");
-foreach (array_keys($projects) as $z)
+foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	if ($projects[$z] != "emf" && !in_array($projects[$z],$extraprojects))
-	{
-		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", $level[$projects[$z]]);
-	}
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/modeling/emf/downloads/?project=$proj");
