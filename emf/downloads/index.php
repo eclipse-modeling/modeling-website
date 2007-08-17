@@ -48,7 +48,7 @@ $dls = array(
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
-		) 
+		)
 	),
 	"/validation" => array(
 		"Validation" => array (
@@ -56,7 +56,7 @@ $dls = array(
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
-		) 
+		)
 	),
 	"/transaction" => array(
 		"Transaction" => array (
@@ -64,7 +64,7 @@ $dls = array(
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
-		) 
+		)
 	)
 );
 
@@ -78,7 +78,7 @@ $filePre = array(
 );
 /* alternate method for specifying prefixes - static list */
 $filePreStatic = array(
-	"/emf" => array( 
+	"/emf" => array(
 		"emf-sdo-xsd",
 		"emf-sdo-xsd",
 		"emf-sdo-xsd",
@@ -101,14 +101,17 @@ $html = ob_get_contents();
 ob_end_clean();
 
 $trans = array_flip($projects);
-$pageTitle = "Eclipse Modeling - ".(false===strpos($trans[$projct],"EMF")?"EMF ":"").$trans[$projct]." - Downloads";
+$pageTitle = "Eclipse Modeling - " . (false===strpos($trans[$projct], "EMF") ? "EMF " : "") . $trans[$projct] . " - Downloads";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch, Nick Boldt";
 
 # Generate the web page
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
-$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="'.(false===strpos($trans[$projct],"EMF")?"EMF ":"").$trans[$projct].' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
+if ($projct)
+{
+	$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="' . (false===strpos($trans[$projct], "EMF") ? "EMF " : "") . $trans[$projct] . ' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/' . $PR . '/feeds/builds-' . $projct . '.xml"/>' . "\n");
+}
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
