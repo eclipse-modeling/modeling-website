@@ -41,13 +41,6 @@ b.eodm
 	color: #0099CC;
 }
 
-.warning
-{
-	background-color: yellow;
-	font-weight: bold;
-	margin: 2em;
-}
-
 span.noclean
 {
 	font-weight: bold;
@@ -99,4 +92,19 @@ span.noclean
 	float: right;
 	position: relative;
 	margin: -5px 3px 0 0;
+}
+
+#midcolumn .homeitem3col a.success
+{
+	color: darkgreen;
+}
+
+#midcolumn .homeitem3col a.warning
+{
+	color: orange;
+}
+
+#midcolumn .homeitem3col a.fail
+{
+	color: red;
 }
