@@ -5,23 +5,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 ob_start();
 
 echo "<div id=\"midcolumn\">\n";
-$contents = file("docs.xml");
-$matches = null;
-foreach ($contents as $line) { 
-	if (false !== strpos($line, "<!-- DO NOT REMOVE: placeholder for wiki content -->"))
-	{
-		print wikiCategoryToListItems("EMF");
-	} 
-	else
-	{
-		print $line;
-	}
-}
+$contents = file_get_contents("docs.xml");
+$wikilist = wikiCategoryToListItems("EMF");
+print preg_replace("#<!-- DO NOT REMOVE: placeholder for wiki content -->#", $wikilist, $contents);
 echo "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
 
-print '<div class="sideitem">'."\n". '<h6>Documentation News</h6>';
+print '<div class="sideitem">' . "\n" . '<h6>Documentation News</h6>';
 getNews(4, "docs");
 print ' <ul>
 			<li><a href="/' . $PR . '/news-whatsnew.php">Older news</a></li>
@@ -37,8 +28,8 @@ $pageTitle = "Eclipse Modeling - EMF - Documents";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/emf/includes/docs.css"/>' . "\n");
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/emf/includes/docs.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.8 2007/03/30 19:29:58 nickb Exp $ -->
+<!-- $Id: index.php,v 1.9 2007/08/17 18:21:33 nickb Exp $ -->

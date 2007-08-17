@@ -1,5 +1,5 @@
-<?php 
-// $Id: scripts.php,v 1.40 2007/08/09 14:35:58 nickb Exp $ 
+<?php
+// $Id: scripts.php,v 1.41 2007/08/17 18:19:06 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -23,18 +23,18 @@ function getPWD($suf = "", $doDynCheck = true)
 	global $PR, $App;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 
-	if ($doDynCheck) 
+	if ($doDynCheck)
 	{
 		//dynamic assignments
    		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
    		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
 		
-    	//second dynamic assignment
-    	if (PWD_check($PWD, $suf))
-    	{
-    	    $PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
-		    PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
-    	}
+		//second dynamic assignment
+		if (PWD_check($PWD, $suf))
+		{
+			$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
+			PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
+		}
 	}
 	
 	//static assignments
@@ -106,7 +106,7 @@ function getPWD($suf = "", $doDynCheck = true)
 	}
 
 	if ($PWD == "" || PWD_check($PWD, $suf))
-	{ 
+	{
 		print "<!-- PWD not found! -->";
 	}
 
@@ -132,7 +132,7 @@ function loadDirSimple($dir, $ext, $type) // 1D array, not 2D
 				}
 			}
 		}
-		closedir($handle); 
+		closedir($handle);
 	}
 	else
 	{
@@ -154,7 +154,7 @@ function wArr($arr)
 	print "<pre>\n";
 	print_r($arr);
 	print "</pre>\n";
-} 
+}
 
 function w($s, $br = "") // shortcut for echo() with second parameter: "add break+newline"
 {
@@ -164,17 +164,17 @@ function w($s, $br = "") // shortcut for echo() with second parameter: "add brea
 	}
 	else if ($br)
 	{
-		$br = "<br/>\n"; 
+		$br = "<br/>\n";
 	}
 
-	print $s . $br; 
+	print $s . $br;
 }
 
 function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFmtSuf="") // allow overriding in case the file's not in /$PR/
 {
 	global $PR;
 
-	$xml = ($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml")); 
+	$xml = ($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"));
 	$news_regex = "%
 		^<news\ date=\"([^\"]+)\"(?:\ showOn=\"([^\"]+)\")?>$\\n
 		((?:^[^<].+$\\n)+)
@@ -348,7 +348,7 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out .= "<$tag>";
 	if ($style != "sideitem" && isset($incubating) && in_array($tmp, $incubating))
 	{
-		$out .= '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right" 
+		$out .= '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right"
 		src="http://www.eclipse.org/modeling/images/egg-icon.png" alt="Validation (Incubation) Phase"
 		border="0" /></a>';
 	}
@@ -358,7 +358,7 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
 
 	$out .= "<select id=\"project\" name=\"project\" onchange=\"javascript:document.getElementById('subproject_form').submit()\">\n";
-	foreach ($projectArray as $k => $v) 
+	foreach ($projectArray as $k => $v)
 	{
 		$out .= "<option value=\"$v\">$k</option>\n";
 	}
@@ -406,18 +406,18 @@ function isAuthorized()
 		return true;
 	}
 	// must be on a build server and must not be on www.eclipse.org
-	if ($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html") 
+	if ($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html")
 	{
 		return true;
 	}
-	$server_name = domainSuffix($_SERVER["SERVER_NAME"]); 
+	$server_name = domainSuffix($_SERVER["SERVER_NAME"]);
 	$host_ip = $_SERVER["SERVER_NAME"] ? gethostbyname($server_name) : null;
 	$host_name = $_SERVER["SERVER_ADDR"] ? domainSuffix(gethostbyaddr($_SERVER["SERVER_ADDR"])) : null;
 	if ($host_ip && $host_name && $host_ip == $_SERVER["SERVER_ADDR"] && $host_name == $_SERVER["SERVER_NAME"])
 	{
 		return true;
 	}
-	return false; 
+	return false;
 }
 
 function domainSuffix($domain)
@@ -440,7 +440,7 @@ function internalUseOnly()
 		<p>Sorry, this script must be run from a sanctioned build server. Contact Nick Boldt (codeslave[at]ca[dot]ibm[dot]com) for details.</p>
 		</div>
 		</div>	
-		<?php 			
+		<?php
 		$html = ob_get_contents();
 		ob_end_clean();
 		
@@ -449,7 +449,7 @@ function internalUseOnly()
 		$pageAuthor = "Nick Boldt";
 		
 		$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
-		exit; 
+		exit;
 	}
 }
 
@@ -494,61 +494,45 @@ function components($cvscoms)
 /* convert a wiki category page into a series of <li> items */
 function wikiCategoryToListItems($category)
 {
-	$collecting = false;
 	$wiki_contents = "";
 	
 	// insert wiki content
 	$host = "wiki.eclipse.org";
 	$url = "/Category:" . $category;
-	$vars = "";
 
 	$header = "Host: $host\r\n";
 	$header .= "User-Agent: PHP Script\r\n";
-	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
-	$header .= "Content-Length: ".strlen($vars)."\r\n";
 	$header .= "Connection: close\r\n\r\n";
 
 	$fp = fsockopen($host, 80, $errno, $errstr, 30);
-	if (!$fp) {
-			$out .=  "<li><i>$errstr ($errno)</i></li>\n";
-	} else {
-		fputs($fp, "GET $url"."?"."$vars  HTTP/1.1\r\n");
-			fputs($fp, $header.$vars);
-			while (!feof($fp)) {
-    			$wiki_contents .= fgets($fp, 128);
-			}
-			fclose($fp);
-		$wiki_contents = explode("\n",$wiki_contents);
-	}
-	if ($wiki_contents && is_array($wiki_contents))
+	if (!$fp)
 	{
-		foreach ($wiki_contents as $wline)
+		$out .= "<li><i>$errstr ($errno)</i></li>\n";
+	}
+	else
+	{
+		fputs($fp, "GET $url HTTP/1.1\r\n");
+		fputs($fp, $header);
+		while (!feof($fp))
 		{
-			$matches = null;
+			$wiki_contents .= fgets($fp, 128);
+		}
+		fclose($fp);
+	}
 
-			// find stop line
-			if (false !== strpos($wline, "printfooter"))
+	$out = "";
+	if ($wiki_contents)
+	{
+		$m = null;
+		if (preg_match("#<div id=\"mw-pages\">(.+)</div>[ \t\n]*<div class=\"printfooter\">#s", $wiki_contents, $m))
+		{
+			$links = null;
+			if (preg_match_all("#<a href=\"([^\"]+)\" title=\"([^\"]+)\">([^<]+)</a>#", $m[1], $links, PREG_SET_ORDER))
 			{
-				$collecting = false;
-				break;
-			}
-			
-			// collect link(s)
-			if ($collecting && preg_match_all("#<a href=\"/([^\"]+)\" title=\"([^\"]+)\">([^\<\>]+)</a>#", $wline, $matches, PREG_SET_ORDER))
-			{
-				if (is_array($matches) && sizeof($matches)>0)
+				foreach ($links as $z)
 				{
-					foreach ($matches as $match)
-					{
-						$out .= "<li><a href=\"http://wiki.eclipse.org/".$match[1]."\" title=\"".$match[2]."\">".$match[3]."</a></li>\n";
-					}
+					$out .= "<li><a href=\"http://wiki.eclipse.org/$z[1]\" title=\"$z[2]\">$z[3]</a></li>\n";
 				}
-			}
-			
-			// find start line
-			if (false !== strpos($wline, "Articles in category \"". $category ."\""))
-			{ 
-				$collecting = true;
 			}
 		}
 	}
