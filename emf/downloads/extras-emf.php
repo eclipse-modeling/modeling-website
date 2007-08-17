@@ -64,7 +64,7 @@ function doRequirements()
 	<b style="color:green">All-In-One SDK</b> bundle (includes source, runtime and docs
 	for <b class="emf">EMF</b>, <b class="xsd">XSD</b>, and <b class="sdo">SDO</b>).
 	Specific build dependencies and JDK version used for a given release are shown
-	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> - 
+	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> -
 	under <b>Build Dependencies</b>. </p>
 	<p>Note that Eclipse is only required if you intend to use the UI - for runtime-only use, only a JDK is required.</p>
 
@@ -72,10 +72,10 @@ function doRequirements()
 	<ul id="requirements">
 		<li>
 			<div class="bleedingedge">
-				EMF 2.3.0 contains significant, though binary  
+				EMF 2.3.0 contains significant, though binary
 				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
-			<img class="bleedingedge" src="/modeling/images/new.gif"/>
+			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
 			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0</a>
 			<ul id="req2_3_0">
 				<li>Eclipse 3.3.0</li>
@@ -282,26 +282,26 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 			else //something else
 			{
 				$sty = (preg_match("/[EF]/", $cnt) ? "errors" : "warnings");
-				$linksty = preg_match("/[EF]/", $cnt) ? "style=\"font-weight:bold;color:red\" " : 
-					(preg_match("/[W]/", $cnt) ? "style=\"font-weight:bold;color:orange\" " : 
-						"style=\"font-weight:bold;color:darkgreen\" ");
-				$stat = "<a " . $linksty . "href=\"$testlog\">$cnt</a>";
+				$linksty = preg_match("/[EF]/", $cnt) ? " class=\"fail\"" :
+					(preg_match("/[W]/", $cnt) ? " class=\"warning\"" :
+						" class=\"success\"");
+				$stat = "<a href=\"$testlog\"$linksty>$cnt</a>";
 			}
 		}
 		else // if we failed on the build, the JUnit stuff won't run (if javacFailOnError=true in runJDK14Tests.xml)
 		{
-			$stat = "<a " . $linksty . "href=\"$testlog\"><img src=\"/modeling/images/question.gif\" alt=\"Did Not Run - Previous Test Failed!\"/></a>";
+			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/question.gif\" alt=\"Did Not Run - Previous Test Failed!\"/></a>";
 		}
 		$ret .= "<li" . ($sty != "" ? " class=\"$sty\"" : "") . "><div>$stat</div>" . preg_replace("/^(.)/e", "chr(ord(\"$1\")-32)", $t) . "</li>\n";
 
-		$status .= " ".$stat;
+		$status .= " $stat";
 	}
 
 	global $isEMFserver;
 	$tmp = preg_replace("/^(.+?)(\d)(\d)$/e", "strtoupper(\"$1\") . \" $2.$3\"", $type) . " Tests";
 	if (is_file("$testsPWD$path$testDirs[0]/testlog.txt"))
 	{
-		$tmp = "<a  " . $linksty . "href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
+		$tmp = "<a href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\"$linksty>$tmp</a>";
 	}
 
 	return "<li>$tmp<ul>$ret</ul></li>";
@@ -363,8 +363,8 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 		else
 		{
 			$sty = "errors"; // it's always a failure here (see below)
-			$linksty = "style=\"font-weight:bold;color:red\" ";
-			$stat = " <a " . $linksty . "href=\"$testlog\">$cnt F</a> ";
+			$linksty = " class=\"fail\"";
+			$stat = " <a href=\"$testlog\"$linksty>$cnt F</a> ";
 		}
 		$ret .= "<li" . ($sty != "" ? " class=\"$sty\"" : "") . "><div>$stat</div>" . strtoupper($t) . "</li>\n";
 
@@ -375,7 +375,7 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 	$tmp = "Old Tests";
 	if (is_file("$testsPWD$path$testDirs[0]/testlog.txt"))
 	{
-		$tmp = "<a " . $linksty . "href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\">$tmp</a>";
+		$tmp = "<a href=\"" . ($isEMFserver ? "/$PR/build/log-viewer.php?test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt") . "\"$linksty>$tmp</a>";
 	}
 	return "<li>$tmp<ul>$ret</ul></li>";
 }
