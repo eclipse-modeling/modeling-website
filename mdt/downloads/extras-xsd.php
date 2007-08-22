@@ -52,7 +52,7 @@ function doLanguagePacks()
 					);
 					$packSuf = ".zip";
 					$folder = "NLS/2.2/";
-					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder); ?>
+					doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, true); ?>
 				<li>
 					<p>The language packs contain the following translations:</p>
 					<ul>

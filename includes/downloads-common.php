@@ -729,7 +729,7 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 						print "<li>" . join(", ", $ret) . "</li>\n";
 						$ret = array();
 					}
-					$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org/" : $downloadScript) .
+					$ret[] = "<a href=\"" . ($isArchive ? "http://archive.eclipse.org" : $downloadScript) .
 						"$downloadPre/$PR$proj/downloads/drops/$folder$packPre$packMid-$packMid2$packSuf\">$alt2</a>";
 					$cnt++;
 				}
