@@ -71,7 +71,11 @@ $bugzilla_pairs = array(
 	"ocl" => array("MDT", "OCL"),
 	"eodm" => array("MDT", "EODM"),
 	"uml2" => array("MDT", "UML2"),
-	"uml2tools" => array("MDT", "UML2%20Tools")
+	"uml2tools" => array("MDT", "UML2%20Tools"),
+	"compare" => array("EMFT", "Compare"),
+	"teneo" => array("EMFT", "Teneo"),
+	"cdo" => array("EMFT", "CDO"),
+	"net4j" => array("EMFT", "NET4J")
 );
 
 print "<div id=\"midcolumn\">\n";
