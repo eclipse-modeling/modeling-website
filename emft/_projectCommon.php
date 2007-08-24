@@ -82,7 +82,7 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
 	if (!isset($hasmoved[$projects[$z]]))
 	{
-		$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/", "_self", 2);				
+		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]#$projects[$z]", "_self", 2);				
 	} 
 	else
 	{
