@@ -102,8 +102,8 @@ $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EMFT", "_self", 2);
 $Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/modeling/emft/newsgroup-mailing-list.php", "_self", 2);
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/Modeling_Corner", "_self", 2);
-$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
-$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
+$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT". ($proj?"%26component%3D".$proj:"")."%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
+$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT" . ($proj?"&amp;component=".$proj:""), "_self", 2);
 $Nav->addCustomNav("Contributors", "/modeling/emft/project-info/team.php", "_self", 2);
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
