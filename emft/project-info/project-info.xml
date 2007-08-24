@@ -1,0 +1,24 @@
+<project>
+  <bugzilla>
+    <product name="EMFT"/>
+  </bugzilla>
+  <newsgroups>
+    <newsgroup name="eclipse.technology.emft"/>
+  </newsgroups>
+  <committers />
+  <contributors />
+  <leaders />
+  <cvs repository="/cvsroot/modeling/">
+    <module path="org.eclipse.emf"/>
+  </cvs>
+  <description url="/modeling/emft/" 
+               paragraph-url="/modeling/emft/project-info/project-page-paragraph.html"/>
+  <summary url="/modeling/emft/project-info/summary.html"/>
+  <getting-started url="/modeling/emft/"/>
+  <project-ip-log url="/modeling/emft/eclipse-project-ip-log.csv"/>
+  <mailing-lists>
+    <list name="emft-dev"/>
+  </mailing-lists>
+  <project-plan url="/modeling/emft/"/>
+  <releases/>
+</project>
