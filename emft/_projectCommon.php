@@ -96,7 +96,7 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EMFT");
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . ($proj?$proj:"teneo") . "&amp;version=HEAD", "_self", 2);
-$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . ($proj?$proj."%2F":$proj) . "+days%3A+7", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emf%25%2F" . ($proj?$proj."%2F":$proj) . "+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EMFT", "_self", 2);
