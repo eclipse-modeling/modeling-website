@@ -39,7 +39,7 @@ $cvsprojs = array();
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
-	"org.eclipse.emft" => array(
+	"org.eclipse.emf" => array(
 		"cdo" => "cdo",
 		"net4j" => "net4j",
 		"teneo" => "teneo"
@@ -47,8 +47,9 @@ $cvscoms = array(
 	"org.eclipse.emf" => array (
 		"compare" => "org.eclipse.emf.compare",
 		"jcrm" => "org.eclipse.emf.jcrm",
-		"search" => "org.eclipse.emf.search"
-	)
+		"search" => "org.eclipse.emf.search",
+		"teneo" => "org.eclipse.emf.teneo"
+		)
 	
 );
 
