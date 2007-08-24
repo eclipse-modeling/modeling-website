@@ -3,14 +3,6 @@
 require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-/* temporary: bounce old projects to old site */
-if ($_GET["project"] && $cvscoms && is_array($cvscoms) && array_key_exists($_GET["project"], $cvscoms["org.eclipse.emft"]))
-{
-	header("Location: http://www.eclipse.org/emft/downloads/?project=" .
-		($projects && is_array($projects) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : ""));
-	exit;
-}
-
 ob_start();
 
 /* config */
@@ -41,6 +33,30 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
+	"/teneo" => array(
+		"Teneo" => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),
+	"/cdo" => array(
+		"CDO" => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),
+	"/net4j" => array(
+		"Net4j" => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),
 	"/search" => array(
 		"Search" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -57,6 +73,9 @@ $filePre = array(
 	"/compare" => array("emft-compare", "emf-compare"),
 	"/jcrm" => array("emft-jcrm", "emf-jcrm"),
 	"/mwe" => array("emft-mwe", "emf-mwe"),
+	"/teneo" => array("emft-teneo", "emf-teneo"),
+	"/cdo" => array("emft-cdo", "emf-cdo"),
+	"/net4j" => array("emft-net4j", "emf-net4j"),
 	"/search" => array("emft-search", "emf-search")
 );
 
