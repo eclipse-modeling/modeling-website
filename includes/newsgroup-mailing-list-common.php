@@ -150,7 +150,7 @@ XML;
 print '	<form method="get" action="http://www.eclipse.org/search/search.cgi" name="searchngform" target="_blank">' . "\n";
 print "<p>\n";
 print '<label for="bug">Query: </label><input size="7" type="text" name="q" id="q"/> <input type="submit" value="Go!"/><br/>'."\n";
-print 'In: <select name="ul" style="width:140px;font-size:8pt">';
+print 'In: <select name="ul" style="width:100%; font-size:smaller">';
 $shown_ngs = array();
 foreach ($newsgroups as $label => $ngs)
 {
