@@ -1,7 +1,7 @@
 <?php
 $Nav->setLinkList(null);
 
-$PR = $PR == "technology/emft" ? $PR : "modeling/emft"; # override for when using old repo
+$PR = "modeling/emft";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
@@ -12,8 +12,8 @@ $debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GE
 $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
-$rooturl = "http://www.eclipse.org/emft";
-$downurl = ($isBuildServer ? "/emft" : "http://www.eclipse.org/emft");
+$rooturl = "http://www.eclipse.org/modeling/emft";
+$downurl = ($isBuildServer ? "/modeling/emft" : "http://www.eclipse.org/modeling/emft");
 $bugurl = "https://bugs.eclipse.org";
 
 if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
@@ -67,10 +67,7 @@ $hasmoved = array(
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 $regs = null;
-$proj = (isset ($_POST["build_Project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_POST["build_Project"], $regs)) ? 
-	$regs[1] : (isset ($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? 
-		$regs[1] : (preg_match("#/emft/projects/(.+)/index.php#", $_SERVER["SCRIPT_NAME"], $regs) ? 
-			$regs[1] : ""));
+$proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : "");
 
 $buildtypes = array(
 	"R" => "Release",
@@ -81,73 +78,33 @@ $buildtypes = array(
 );
 
 $Nav->addNavSeparator("EMFT", "$rooturl/");
-foreach (array_keys($projects) as $z)
+foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	if (!in_array($projects[$z],$extraprojects)) 
+	if (!isset($hasmoved[$projects[$z]]))
 	{
-		if (!array_key_exists($projects[$z],$hasmoved))
-		{
-			$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/", "_self", 2);				
-		} 
-		else
-		{
-			$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
-		}
+		$Nav->addCustomNav($z, "$rooturl/projects/$projects[$z]/", "_self", 2);				
+	} 
+	else
+	{
+		$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
 	}
 }
 
-if (!array_key_exists($proj,$hasmoved))
-{
-	$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $proj);
-	$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
-}
-else
-{
-	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/downloads/?project=" . $proj);
-	$Nav->addCustomNav("Update Manager", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/updates/", "_self", 2);
-}
-
-if (!array_key_exists($proj,$hasmoved))
-{
-	$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/index.php/EMFT");
-	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . ($proj?$proj:"teneo") . "&amp;version=HEAD", "_self", 2);
-	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . ($proj?$proj."%2F":$proj) . "+days%3A+7", "_self", 2);
-} 
-else
-{
-	$Nav->addNavSeparator("Documentation", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/docs.php?project=$proj");
-	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/news/relnotes.php?project=" . $proj . "&amp;version=HEAD", "_self", 2);
-	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/searchcvs.php?q=file%3A+org.eclipse.mdt%2Forg.eclipse.".$proj."%2F+days%3A+7", "_self", 2);
-}
-
-$Nav->addNavSeparator("Community", "http://wiki.eclipse.org/index.php/Modeling_Corner");
-
-if (!array_key_exists($proj,$hasmoved))
-{
-	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/EMFT", "_self", 2);
-	$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/modeling/emft/newsgroup-mailing-list.php", "_self", 2);
-} 
-else
-{
-	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/index.php/".($proj?"MDT-" . strtoupper($proj):"Model_Development_Tools_%28MDT%29"), "_self", 2);
-	$Nav->addCustomNav("Newsgroups", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/newsgroup-mailing-list.php", "_self", 2);
-}
-
-$Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/index.php/Modeling_Corner", "_self", 2);
-
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
-if (!array_key_exists($proj,$hasmoved))
-{
-	$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
-	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
-	$Nav->addCustomNav("Contributors", "/modeling/emft/project-info/team.php", "_self", 2);
-} 
-else
-{
-	$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DMDT" . (isset ($bugcoms[$proj]) ? "%26component=$bugcoms[$proj]" : "") . "%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
-	$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=MDT" . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
-	$Nav->addCustomNav("Contributors", "http://www.eclipse.org/modeling/" . $hasmoved[$proj] . "/project-info/team.php", "_self", 2);
-}
+$Nav->addNavSeparator("Downloads", "$downurl/downloads/?project=" . $proj);
+$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
+
+$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/EMFT");
+$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/modeling/emft/news/relnotes.php?project=" . ($proj?$proj:"teneo") . "&amp;version=HEAD", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/modeling/emft/searchcvs.php?q=file%3A+org.eclipse.emft%2F" . ($proj?$proj."%2F":$proj) . "+days%3A+7", "_self", 2);
+
+$Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/EMFT", "_self", 2);
+$Nav->addCustomNav("Newsgroup", "http://www.eclipse.org/modeling/emft/newsgroup-mailing-list.php", "_self", 2);
+$Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/Modeling_Corner", "_self", 2);
+$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/colchange.cgi?rememberedquery=product%3DEMFT%26bug_status%3DNEW%26bug_status%3DASSIGNED%26bug_status%3DREOPENED%26order%3Dbugs.bug_status%2Cbugs.target_milestone%2Cbugs.bug_id" . $collist, "_self", 2);
+$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=EMFT", "_self", 2);
+$Nav->addCustomNav("Contributors", "/modeling/emft/project-info/team.php", "_self", 2);
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
