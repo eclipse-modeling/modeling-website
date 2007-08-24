@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Eclipse.org - EMF Model Search Proposal</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="author" content="lucas bigeardel">
+<meta name="keywords" content="eclipse, modeling, emf, emft, search, ocl">
+
+<link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/small.css" title="small"><link rel="alternate stylesheet" type="text/css" href="EMFT_Search_prop_files/large.css" title="large"><link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/visual.css" media="screen"><link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/layout.css" media="screen">
+<link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/print.css" media="print"><script type="text/javascript" src="EMFT_Search_prop_files/styleswitcher.js"></script>
+
+</style></head><body>
+<div id="header">
+	<a href="http://www.eclipse.org/"><img src="EMFT_Search_prop_files/header_logo.gif" alt="Eclipse Logo" class="logo" border="0" height="68" width="163"></a>
+	<div id="searchbar">
+		<img src="EMFT_Search_prop_files/searchbar_transition.gif" class="transition" alt="" height="26" width="92">
+		<img src="EMFT_Search_prop_files/searchbar_header.gif" class="header" alt="Search" height="17" width="64">
+		<form method="get" action="/search/search.cgi"><input name="t" value="All" type="hidden"><input name="t" value="Downloads" type="hidden"><input name="t" value="Wiki" type="hidden"><input name="wf" value="574a74" type="hidden"><input name="q" value="" type="text"><input class="button" src="EMFT_Search_prop_files/searchbar_submit.gif" alt="Submit" onclick="this.submit();" type="image"></form>
+	</div>
+	<ul id="headernav">
+		<li class="first"><a class="smallText" title="Small Text" href="#" onclick="setActiveStyleSheet('small');return false;">A</a> <a class="largeText" title="Large Text" href="#" onclick="setActiveStyleSheet('large');return false;">A</a></li>
+		<li><a href="http://www.eclipse.org/org/foundation/contact.php">Contact</a></li>
+		<li><a href="http://www.eclipse.org/legal/">Legal</a></li>
+	</ul>
+</div><div id="topnav">
+<ul>
+<li>&nbsp;&nbsp;&nbsp;</li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/" target="_self">Home</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/community/" target="_self">Community</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/membership/" target="_self">Membership</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://wiki.eclipse.org/index.php/Development_Resources" target="_self">Committers</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/downloads/" target="_self">Downloads</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/resources/" target="_self">Resources</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/projects/" target="_self">Projects</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/org/" target="_self">About Us</a></li>
+<li class="tabseparator">&nbsp;&nbsp;&nbsp;</li>			
+</ul></div>
+<div id="topnavsep"></div><div id="leftcol">
+<ul id="leftnav">
+<li><a href="http://wiki.eclipse.org/index.php/Development_Resources">Committers</a></li>
+<li><a href="http://www.eclipse.org/newsgroups/">Newsgroups</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/">Bugs</a></li>
+<li><a href="http://www.eclipse.org/articles/">Articles</a></li>
+<li class="separator"><a class="separator">Links &nbsp;&nbsp;<img src="EMFT_Search_prop_files/leftnav_bullet_down.gif" alt="" border="0"></a></li>
+<li><a href="http://www.eclipse.org/proposals/">Proposals</a></li>
+<li style="border-style: none; background-image: url(/eclipse.org-common/themes/Phoenix/images/leftnav_fade.jpg); background-repeat: repeat-x;"><br><br><br><br><br><br><br><br>
+</li>
+</ul>
+
+</div>
+<div id="container">    <div id="maincontent">
+	<div id="midcolumn">
+
+<img src="EMFT_Search_prop_files/modeling_pos_logo_fc_med.jpg"></img>
+<H1> <img src="EMFT_Search_prop_files/esearch.gif"/> EMF Model Search Dev Plan</H1>
+
+<I>Last Modification (August 7th 2007) by <a href="mailto:lucas.bigearde@gmail.com">Lucas Bigeardel</a> & <a href="mailto:jacques.lescot@anyware-tech.com">Jacques Lescot</a></I>
+<!--
+<p><I><b>
+DISCLAIMER : This Development plan is a draft and should be considered as tentative while waiting mid July 2007 definitve one.
+</b></I>
+-->
+</p>
+<p>
+You are warmly invited to comment on and/or join the project development plan discussions. 
+Please send all feedbacks to the <a href="news://news.eclipse.org/eclipse.modeling.emft">Modeling EMFT newsgroup</a> & corresponding bugzillas.
+</p>
+
+<h4>Terminology</h4>
+
+<blockquote>
+<b>Task Priorities </b><BR>
+
+<blockquote>
+	<font color="RED"><b>[P1]</b></font> Critical<BR>
+	<font color="ORANGE"><b>[P2]</b></font> Major<BR>
+	<font color="BLUE"><b>[P3]</b></font> Normal<BR>
+	<font color="GREEN"><b>[P4]</b></font> Low<BR>
+	<font color="PURPLE"><b>[P5]</b></font> Lowest<BR>
+</blockquote>
+
+<BR>
+<b>Releases Milestones</b><BR>
+<blockquote>
+<p>
+<a href="http://www.eclipse.org/emft/projects/search/#search">EMF Search</a> is basically a "+2w" Eclipse project, mainly having dependencies on <a href="http://www.eclipse.org/modeling/emf"/>EMF</a> and, potententially "+3 weeks", considering dependencies on MDT <a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML2</a>, <a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools">UML2 tools</a> & <a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">OCL</a> <font COLOR="GRAY"><I>(UML2 Search is an example and thus should be delivered with 1 week delay ... to be discussed)</I></font>. 
+</p>
+</blockquote>
+<blockquote>
+<p>
+According to this timeline, we can define some milestones tags as :
+</p>
+
+<blockquote>
+	<b>[M<sub>n</sub>]</b> : Eclipse 3.4 Integration Milestone "n"<BR>
+	<b>[M<sub>n</sub> + <I>p</I>]</b> : Eclipse 3.4 Integration Milestone "n" + <I>"p"</I> weeks<BR>
+	<b>[M<sub>RC<sub>n</sub></sub> + <I>p</I>]</b> : Eclipse 3.4 Release Candidate Milestone "n" + <I>"p"</I> weeks<BR>
+</blockquote>
+
+<blockquote>
+  	<font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>3</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>7</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>RC1</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>RC2</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>RC3</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+  	<font color="GRAY"><b>[M<sub>GA</sub>+2w]</b></font> <I>(TBD by Eclipse Modeling PMC)</I><BR>
+
+</blockquote>
+</blockquote>
+</blockquote>
+<BR>
+<h4>Compliances</h4>
+	<blockquote>
+	<b>Source Code</b>
+	<blockquote>
+		<ul>
+			<li>J2SE [1.5+]
+		</ul>
+	</blockquote>
+	<b>EMF/MDT</b>
+	<blockquote>
+		<ul>
+			<li>EMF [2.3+]<BR>
+			<li>UML2 [2.1+]
+		</ul>
+	</blockquote>
+	<b>Eclipse</b>
+	<blockquote>
+		Eclipse SDK [3.3+]<BR>
+		RCP ready for <b>[M<sub>6</sub> + <I>2w</I>]</b> <I>(Tentative)</I>
+	</blockquote>
+	</blockquote>
+<BR>
+
+<H4>Tasks Breakdown <I>(Architectural)</I></H4>
+
+<blockquote>
+  <b> Core</b>
+
+  <ul> 
+  <blockquote>
+  	<li><font color="ORANGE"><b>(50%)</b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192858" title="bugzilla #192858">MS_CORE_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : Find dialog for loaded model (search engine based)</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192859" title="bugzilla #192859">MS_CORE_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : Study Teneo & search engine exploration/loading</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192864" title="bugzilla #192864">MS_CORE_300</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>7</sub>+2w]</b></font><I>(Tentative)</I> : Design Pattern Search</li>
+  </blockquote>
+  </ul> 
+  
+  <b> UI</b>
+
+  <ul> 
+  <blockquote>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192865" title="bugzilla #192865">MS_UI_RESULTS_100</a>]</b></font><font color="RED"><b>[P1]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : SelectionToViewer interface definition</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192867" title="bugzilla #192867">MS_UI_RESULTS_200</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Open Graphical Editor Toggle Mode</li>
+  	<li><font color="GREEN"><b>(75%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192868" title="bugzilla #192868">MS_UI_RESULTS_300</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Hierarchical Organization</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192885" title="bugzilla #192885">MS_UI_RESULTS_400</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Rational Common approach particpants organization (<I>UML2 Only ?</I>)</li>
+  	<!--
+  		<li><font color="PINK"><b>[MS_UI_RESULTS_500]</b></font><font color="PURPLE"><b>[P5]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Design pattern organization (<I>UML2 Only ?</I>)</li>
+  	-->
+  </blockquote>
+  <blockquote>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192897" title="bugzilla #192897">MS_UI_PARTICIPANTS_100</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Hierarchical Organization</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192899" title="bugzilla #192899">MS_UI_PARTICIPANTS_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Participants Hierarchy Filter</li>
+  </blockquote>
+  </ul> 
+
+  <b> Generation</b>
+  
+  <ul> 
+  <blockquote>
+  	<li><font color="GREEN"><b>(75%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192908" title="bugzilla #192908">MS_CODEGEN_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>RC<sub>3</sub></sub>+2w]</b></font> : Jet Template base generation</li>
+  	<li><font color="GREEN"><b>(75%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192911" title="bugzilla #192911">MS_CODEGEN_200</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>RC<sub>3</sub></sub>+2w]</b></font> : Genmodel integration (<I>Ask for an ext point to EMF</I>)</li>
+  	<li><font color="ORANGE"><b>(50%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192915" title="bugzilla #192915">MS_CODEGEN_300</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>3</sub>+2w]</b></font> : Ecore Search generation</li>
+  	<li><font color="ORANGE"><b>(50%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192914" title="bugzilla #192914">MS_CODEGEN_400</a>]</b></font><font color="GREEN"><b>[P3+]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : UML2 Search generation</li>
+  </blockquote>
+  </ul> 
+  
+  <b> Examples</b>
+  
+  <ul> 
+  <blockquote>
+  	<li><font color="GREEN"><b>(75%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192916" title="bugzilla #192916">MS_EXAMPLES_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Add UML2 search as an example</li>
+  </blockquote>
+  </ul> 
+  
+  <b> Documentation</b>
+  
+  <ul> 
+  <blockquote>
+  	<li><font color="ORANGE"><b>(50%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192919" title="bugzilla #192919">MS_DOCUMENTATION_100</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : API Documentation + Process + Roadmap</li>
+  </blockquote>
+  </ul>
+  
+  <b> Releng</b>
+  
+  <ul> 
+  <blockquote>
+  	<li><font color="ORANGE"><b>(50%) </b></font><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192921" title="bugzilla #192921">MS_RELENG_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font> : Runtime</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192922" title="bugzilla #192922">MS_RELENG_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font> : SDK</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192924" title="bugzilla #192924">MS_RELENG_300</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Doc</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192925" title="bugzilla #192925">MS_RELENG_400</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Examples</li>
+  </blockquote>
+  </ul> 
+
+  <b> Testing</b>
+  
+  <ul> 
+  <blockquote>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192926" title="bugzilla #192926">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Add EMF Search Engine Core Tests</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192927" title="bugzilla #192927">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Add EMF Search Ecore Tests</li>
+  	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192928" title="bugzilla #192928">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Add EMF Search UML2 Tests Tests</li>
+  </blockquote>
+  </ul> 
+</blockquote>
+<BR>
+
+<H4>Roadmap Timeline</H4>
+
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font><BR>
+  			<blockquote>
+ 			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+				<ul>
+					<li>Focus on stable APIs</li>
+					<li>Identify internal packages</li>
+					<li>Organizing Eclipse CVS source repositories</li>
+					<li>Populate EMFT Search Website with content</li>
+				</ul>
+			</blockquote>
+		<li>Tasks :</li>
+		<blockquote>
+                    <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192858" title="bugzilla #192858">MS_CORE_100</a>]</b></font><font color="BLUE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : Find dialog for loaded model (search engine based)</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192859" title="bugzilla #192859">MS_CORE_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : Study Teneo & search engine exploration/loading</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192919" title="bugzilla #192919">MS_DOCUMENTATION_100</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>1</sub>+2w]</b></font> : API Documentation + Process + Roadmap</li>
+		</blockquote>
+		</blockquote>
+	</blockquote>
+	
+ 
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font>
+		<blockquote>
+ 			<ul>
+				<li>Goals :</li>
+			</ul>	
+  			<blockquote>
+				<ul>
+				    <li>Focus on stable APIs</li>
+				    <li>Refactor for internal packages</li>
+				    <li>Organizing Eclipse CVS source + examples repositories</li>
+				    <li>Start integrating Releng for Runtime & SDK</li>
+				</ul>
+			</blockquote>
+		        <ul>
+ 		            <li>Tasks :</li>
+		            <blockquote>
+                        	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192921" title="bugzilla #192921">MS_RELENG_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font> : Runtime</li>
+                        	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192922" title="bugzilla #192922">MS_RELENG_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>2</sub>+2w]</b></font> : SDK</li>
+	                    </blockquote>
+                     </ul>
+		       </blockquote>
+                </blockquote>
+ 
+  
+ 
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>3</sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>JET based code generation</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+                	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192908" title="bugzilla #192908">MS_CODEGEN_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>RC<sub>3</sub></sub>+2w]</b></font> : Jet Template base generation</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192911" title="bugzilla #192911">MS_CODEGEN_200</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>RC<sub>3</sub></sub>+2w]</b></font> : Genmodel integration (<I>Ask for an ext point to EMF</I>)</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192915" title="bugzilla #192915">MS_CODEGEN_300</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>3</sub>+2w]</b></font> : Ecore Search generation</li>
+ 		</blockquote>
+	</ul>
+	</blockquote>
+  </blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>Focus on Releng</li>
+				<li>Unit Testing Phase 1 (Setup)</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192865" title="bugzilla #192865">MS_UI_RESULTS_100</a>]</b></font><font color="RED"><b>[P1]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : SelectionToViewer interface definition</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192867" title="bugzilla #192867">MS_UI_RESULTS_200</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Open Graphical Editor Toggle Mode</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192868" title="bugzilla #192868">MS_UI_RESULTS_300</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Hierarchical Organization</li>
+                    <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192916" title="bugzilla #192916">MS_EXAMPLES_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Add UML2 search as an example</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192914" title="bugzilla #192914">MS_CODEGEN_400</a>]</b></font><font color="GREEN"><b>[P3+]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : UML2 Search generation</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192925" title="bugzilla #192925">MS_RELENG_400</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Examples</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  </blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+		<li>API Freeze</li>
+		<li>Unit Testing Phase 2 (Refining)</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192926" title="bugzilla #192926">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Add EMF Search Engine Core Tests</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192897" title="bugzilla #192897">MS_UI_PARTICIPANTS_100</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Hierarchical Organization</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192899" title="bugzilla #192899">MS_UI_PARTICIPANTS_200</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Participants Hierarchy Filter</li>
+                     	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192927" title="bugzilla #192927">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>5</sub>+2w]</b></font> : Add EMF Search Ecore Tests</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>Code Freeze</li>
+				<li>Documentation</li>
+				<li>Unit Testing Phase 3 (Exhaustif)</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+			<li>publish Integrations buils for EMF Search for Ecore GA on download area</li>
+                 	<li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192924" title="bugzilla #192924">MS_RELENG_300</a>]</b></font><font color="BLUE"><b>[P3]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Doc</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192868" title="bugzilla #192868">MS_UI_RESULTS_300</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>4</sub>+2w]</b></font> : Hierarchical Organization</li>
+                    <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192885" title="bugzilla #192885">MS_UI_RESULTS_400</a>]</b></font><font color="GREEN"><b>[P4]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Rational Common approach particpants organization (<I>UML2 Only ?</I>)</li>
+  	                <li><font color="GRAY"><b>[<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=192928" title="bugzilla #192928">MS_TESTS_100</a>]</b></font><font color="ORANGE"><b>[P2]</b></font><font color="GRAY"><b>[M<sub>6</sub>+2w]</b></font> : Add EMF Search UML2 Tests Tests</li>
+   		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>7</sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>Pre Bit Freeze</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+ 			<li>Unit Testing Phase 4 (target : No <font color="RED"><b><strike>[P1]</strike></b></font> failures)</li>
+			<li>publish Integrations, Nightly builds for EMF Search for Ecore on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>RC<sub>1</sub></sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>Bit Freeze</li>
+				<li>l10n & i18n fixing</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+ 			<li>Unit Testing Phase 4 (target : No <font color="RED"><b><strike>[P1]</strike></b></font>, <font color="ORANGE"><b><strike>[P2]</strike></b></font> failures)</li>
+			<li>publish Integrations, Nightly builds for EMF Search for Ecore on download area</li>
+			<li>publish Integrations builds for EMF Search for UML2 on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>RC<sub>2</sub></sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>IP & Legal stuff</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+ 			<li>Unit Testing Phase 4 (target : No <font color="RED"><b><strike>[P1]</strike></b></font>, <font color="ORANGE"><b><strike>[P2]</strike></b></font>, <font color="BLUE"><b><strike>[P3]</strike></b></font> failures)</li>
+			<li>publish Integrations, Nightly builds for EMF Search for Ecore on download area</li>
+			<li>publish Integrations, Nightly builds for EMF Search for UML2 on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>RC<sub>3</sub></sub>+2w]</b></font>
+	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>Ramp Down, Reviews</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+ 			<li>Unit Testing Phase 4 (target : No <font color="RED"><b><strike>[P1]</strike></b></font>, <font color="ORANGE"><b><strike>[P2]</strike></b></font>, <font color="BLUE"><b><strike>[P3]</strike></b></font>, <font color="GREEN"><b><strike>[P4]</strike></b></font>, <font color="PURPLE"><b><strike>[P5]</strike></b></font> failures)</li>
+			<li>publish Integrations, Nightly builds for EMF Search for Ecore GA on download area</li>
+			<li>publish Integrations, Nightly builds for EMF Search for UML2 GA on download area</li>
+			<li>publish Unit Testing reports for EMF Search for Ecore on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>GA</sub>+2w]</b></font>
+  	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>EMF Search for Ecore GA </li>
+				<li>EMF Search for UML2 RC3 </li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+			<li>publish EMF Search for Ecore GA on download area</li>
+			<li>publish Unit Testing reports for EMF Search for Ecore & UML2 on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+  <blockquote>
+  	<font color="GRAY"><b>[M<sub>GA</sub>+3w]</b></font>
+  	<blockquote>
+  			<ul>
+				<li>Goals :</li>
+			</ul>	
+			<blockquote>
+			<ul>
+				<li>EMF Search for  GA</li>
+			</ul>
+		</blockquote>
+		<ul>
+		<li>Tasks :</li>
+		<blockquote>
+			<li>publish EMF Search for Ecore & UML2 GA on download area</li>
+			<li>publish Unit Testing reports for EMF Search for Ecore & UML2 on download area</li>
+  		</blockquote>
+	</ul>
+	</blockquote>
+	</blockquote>
+</blockquote>
+
+
+<H4>Links</H4>
+
+<a href="http://www.eclipse.org/modeling">[Eclipse modeling project]</a><BR>
+<a href="http://www.topcased.org">[Topcased project]</a><BR>
+<a href="http://www.anyware-technologies.com">[Anyware Technologies]</a><BR>
+<a href="http://www.airbus.com">[Airbus]</a><BR><br>
+
+
+</div>
+</div>
+
+</div><div id="footer">
+<ul id="footernav">
+<li class="first"><a href="http://www.eclipse.org/">Home</a></li>
+<li><a href="http://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+<li><a href="http://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+</ul>
+<p>Copyright © 2007 The Eclipse Foundation. All Rights Reserved</p>
+</div></body></html>

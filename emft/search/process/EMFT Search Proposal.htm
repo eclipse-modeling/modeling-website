@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Eclipse.org - EMF Model Search Proposal</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="author" content="lucas bigeardel">
+<meta name="keywords" content="eclipse, modeling, emf, emft, search, ocl">
+
+<link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/small.css" title="small"><link rel="alternate stylesheet" type="text/css" href="EMFT_Search_prop_files/large.css" title="large"><link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/visual.css" media="screen"><link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/layout.css" media="screen">
+<link rel="stylesheet" type="text/css" href="EMFT_Search_prop_files/print.css" media="print"><script type="text/javascript" src="EMFT_Search_prop_files/styleswitcher.js"></script>
+
+</style></head><body>
+<div id="header">
+	<a href="http://www.eclipse.org/"><img src="EMFT_Search_prop_files/header_logo.gif" alt="Eclipse Logo" class="logo" border="0" height="68" width="163"></a>
+	<div id="searchbar">
+		<img src="EMFT_Search_prop_files/searchbar_transition.gif" class="transition" alt="" height="26" width="92">
+		<img src="EMFT_Search_prop_files/searchbar_header.gif" class="header" alt="Search" height="17" width="64">
+		<form method="get" action="/search/search.cgi"><input name="t" value="All" type="hidden"><input name="t" value="Downloads" type="hidden"><input name="t" value="Wiki" type="hidden"><input name="wf" value="574a74" type="hidden"><input name="q" value="" type="text"><input class="button" src="EMFT_Search_prop_files/searchbar_submit.gif" alt="Submit" onclick="this.submit();" type="image"></form>
+	</div>
+	<ul id="headernav">
+		<li class="first"><a class="smallText" title="Small Text" href="#" onclick="setActiveStyleSheet('small');return false;">A</a> <a class="largeText" title="Large Text" href="#" onclick="setActiveStyleSheet('large');return false;">A</a></li>
+		<li><a href="http://www.eclipse.org/org/foundation/contact.php">Contact</a></li>
+		<li><a href="http://www.eclipse.org/legal/">Legal</a></li>
+	</ul>
+</div><div id="topnav">
+<ul>
+<li>&nbsp;&nbsp;&nbsp;</li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/" target="_self">Home</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/community/" target="_self">Community</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/membership/" target="_self">Membership</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://wiki.eclipse.org/index.php/Development_Resources" target="_self">Committers</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/downloads/" target="_self">Downloads</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/resources/" target="_self">Resources</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/projects/" target="_self">Projects</a></li>
+<li class="tabstart">&nbsp;&nbsp;&nbsp;</li>
+<li><a class="" href="http://www.eclipse.org/org/" target="_self">About Us</a></li>
+<li class="tabseparator">&nbsp;&nbsp;&nbsp;</li>			
+</ul></div>
+<div id="topnavsep"></div><div id="leftcol">
+<ul id="leftnav">
+<li><a href="http://wiki.eclipse.org/index.php/Development_Resources">Committers</a></li>
+<li><a href="http://www.eclipse.org/newsgroups/">Newsgroups</a></li>
+<li><a href="https://bugs.eclipse.org/bugs/">Bugs</a></li>
+<li><a href="http://www.eclipse.org/articles/">Articles</a></li>
+<li class="separator"><a class="separator">Links &nbsp;&nbsp;<img src="EMFT_Search_prop_files/leftnav_bullet_down.gif" alt="" border="0"></a></li>
+<li><a href="http://www.eclipse.org/proposals/">Proposals</a></li>
+<li style="border-style: none; background-image: url(/eclipse.org-common/themes/Phoenix/images/leftnav_fade.jpg); background-repeat: repeat-x;"><br><br><br><br><br><br><br><br>
+</li>
+</ul>
+
+</div>
+<div id="container">    <div id="maincontent">
+	<div id="midcolumn">
+
+
+<H1> <img src="EMFT_Search_prop_files/esearch.gif"/> EMF Model Search Proposal</H1>
+
+<p>
+EMF Model Search is a proposed open source project under the Eclipse Modeling Tools Project (EMFT).
+</p>
+<p>
+This proposal is in the Project Proposal Phase (as defined in the Eclipse Development Process document) and is written to declare its intent and scope. 
+This proposal is written to solicit additional participation and input from the Eclipse community. 
+You are invited to comment on and/or join the project. 
+Please send all feedback to the <a href="news://news.eclipse.org/eclipse.modeling.emft">Modeling EMFT newsgroup</a>.
+</p>
+
+<p>
+The initial contribution pdf document is available <a img="EMFT_Search_prop_files/pdf.gif" href="EMF Search Contribution.pdf">[here]</a>.
+</p>
+
+<H4>Background</H4>
+
+<p>
+EMF is a significant base for many eclipse projects <i>(STP, TPTP, GMF, ...)</i> and major companies products <i>(Rational&reg; Software Architect, Rational&reg; Software Architect, Codegear&trade; JBuilder&reg; 2007, ...)</i>.
+</p>
+<p>
+Many EMF based technologies, identified as exemplary tools, have been mutualized inside the EMF Technogy project and are becoming parts of the new top level Eclipse Modeling project. 
+</p>
+<p>
+EMF Model Driven Development, is now in an industrialization phase. Projects complexity increases, models can be fragmented over different plugins, synchronized with graphical editors, and thus mechanically lacks some productivity features. 
+</p>
+<p>
+Eclipse platform offers powerfull frameworks and extensions which JDT, CDT, and some other development tools take major advantage. 
+In the same trends, EMF modeling Eclipse platform integrations would help speeding up EMF MDD process. Reasonible candidates might be model refactoring, model compare, model merge or even model search <i>(Not hexaustive)</i>.
+</p> 
+<p>
+As Topcased open source modeling project contributors (Ecore, UML2, AADL, SysML modeling tools) and in an effort to mutualize development forces on EMF modeling space, we would like to contribute some of the existing Topcased productivity features to EMF Tools.
+</p>
+<p>
+This contribution will be the first step of a long term collaboration/merging strategy aiming to constantly improve Topcased core frameworks integration upon Modeling frameworks and tools.
+</p>
+
+<H4>Scope</H4>
+
+
+<p>The objectives of the EMFT Search project are to:</p>
+
+<ol>
+  <p>
+  <li> Create an open, extensible model search framework on top of the Eclipse platform search facilities</li>
+  </p>
+  <p>
+  <li> Provide a generic Modeling search generation utility with which third party modeling tools can easily integrate</li>
+  </p>
+  <p>
+  <li> Act as an additional reference for the ongoing process of making the Eclipse modeling framework more able to easily support EMF productivity features</li>
+  </p>
+</ol>
+
+<H4>Description</H4>
+
+EMF Model Search : a foundation for generic model search engines.
+
+<p><b>Ecore Based Search Engine</b></p>
+
+<ul>
+    <li> To be reused for all Ecore based Models</li>
+	<li> Defines a meta-model based search framework </li>
+	<p>
+	<li> Extension points</li>
+	<ul style="list-style-type:lower-roman">
+		<li>search queries</li>
+ 		<li>search participant meta-elements</li>
+ 		<li>search strategies/patterns</li>
+		<li>search scopes</li>
+	</ul>
+	</p>
+</ul>
+
+<ul>
+	<p>
+	<li>Integrated with Eclipse Search facilities</li>
+	<li>Model Search generation engine</li>
+	</p>
+	<p>
+	<li>Ready to use generated Model Search extensions</li>
+ 	<li>Available for any EMF based models</li>
+	</p>
+
+	<li>Standalone MetaElement Search Dialog</li>
+	<li>Open to any EMF based Query</li>
+	<ul>
+		<li>OCL</li>
+		<li>XPath</li>
+		<li>more ...</li>
+	</ul>
+</ul>
+
+<p>
+This means that EMF Model Search is not a concurrent for other EMFT projects, it just offer a query launching facility for EMFT Query or UML OCL based contributed model queries.
+</p>
+
+<H4>Overview</H4>
+
+<img src="architecture.png" href="EMFT Search Overview.svg">
+<a href="EMFT Search Overview.svg"><h6>[Inkscape SVG image]</h6></a>
+
+<H4>Organization</H4>
+<p>
+We propose sources under EPL for initial contribution, including model search core plus its <i>ecore</i> and <i>uml2</i> integrations.
+</p>
+<p>
+Model Search features are organized into :
+</p>
+<ul> 
+	<li>Core</li>
+	<li>UI</li>
+	<li>Generation</i>
+</ul>
+
+<p>
+The primary focus of the EMF Model Search project will be on Core and UI functionalities.
+</p>
+
+<H4>Initial commiters and contributors</H4>
+
+<p>The initial committers will initially focus on providing an open, well documented API.  Our agile development process will follow eclipse.org's standards for openness and transparency.  Our goal is to provide the infrastructure and APIs needed to allow the integration/generation of additional model search engines.We also plan to help improve the Eclipse platform by submitting patches and extension point suggestions.</p>
+
+ The initial team will consist of several part-time resources:
+
+<p><b>Project lead/Commiter</b></p>
+ 	<ul style="list-style-type:square">
+    	<li>Lucas Bigeardel (Anyware Technologies, Eclipse Consultant, Topcased Senior Developer)</li>
+	</ul> 
+
+<p><b>Commiter</b></p>
+  <ul style="list-style-type:square">
+    <li>Jacques Lescot (Topcased Developer/Commiter)</li>
+  </ul>
+
+<H4>Interested parties</H4>
+
+<p>
+EMF MDD/Modeling community is obviously the main target and audience for this project.  
+We are expecting and will actively pursue during the proposal and incubation phases, active participation. 
+It is possible that we may not be able to budget a full-time committer.
+
+<H4>User community</H4>
+
+<p>
+The existing Modeling developer/user community will be the primary user base. This includes an important presence in academia since Eclipse/EMF is frequently used in programming courses.
+</p>
+
+<H4>Links</H4>
+
+<a href="http://www.eclipse.org/modeling">[Eclipse modeling project]</a><BR>
+<a href="http://www.topcased.org">[Topcased project]</a><BR>
+<a href="http://www.anyware-technologies.com">[Anyware Technologies]</a><BR>
+<a href="http://www.airbus.com">[Airbus]</a><BR><br>
+
+
+</div>
+</div>
+
+</div><div id="footer">
+<ul id="footernav">
+<li class="first"><a href="http://www.eclipse.org/">Home</a></li>
+<li><a href="http://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+<li><a href="http://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+</ul>
+<p>Copyright © 2007 The Eclipse Foundation. All Rights Reserved</p>
+</div></body></html>
