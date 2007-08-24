@@ -5,12 +5,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
-
-foreach ($projects as $z)
-{
-	$descriptions[$z]["short"] = file_get_contents("$z/project-info/project-page-paragraph.html");
-	$descriptions[$z]["long"] = file_get_contents("$z/project-info/overview.html");
-}
 ?>
 
 <div id="midcolumn">
@@ -94,4 +88,4 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-<!-- $Id: index.php,v 1.27 2007/08/17 18:48:07 nickb Exp $ -->
+<!-- $Id: index.php,v 1.28 2007/08/24 05:49:09 nickb Exp $ -->

@@ -27,12 +27,6 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 } */   
 
 ob_start();
-
-foreach (array_diff($projects, $extraprojects) as $z)
-{
-	$descriptions[$z]["short"] = file_get_contents("$z/project-info/project-page-paragraph.html");
-	$descriptions[$z]["long"] = file_get_contents("$z/project-info/overview.html");
-}
 ?>
 
 <div id="midcolumn">

@@ -1,4 +1,10 @@
 <?php
+foreach (array_diff($projects, $extraprojects) as $z)
+{
+	$descriptions[$z]["short"] = file_get_contents("$z/project-info/project-page-paragraph.html");
+	$descriptions[$z]["long"] = file_get_contents("$z/project-info/overview.html");
+}
+
 $files = array(
 	"project-info/project-page-paragraph.html",
 	"project-info/overview.html"
@@ -12,7 +18,7 @@ foreach ($files as $z)
 	}
 	else
 	{
-		print "<p>No $z found!.</p>";
+		print "<p>No $z found!</p>";
 	}
 }
 
