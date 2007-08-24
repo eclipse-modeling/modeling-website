@@ -15,15 +15,15 @@ ob_start();
 
 	print "<h3>Old Projects</h3>\n"; 
 	print "<p>Looking for an old EMFT project? The following projects have moved:</p>\n";
-	print "<ul>\n";
-    print '<li style="border: 0px">Query has moved to <a href="http://www.eclipse.org/modeling/emf/?project=query#query">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-    print '<li style="border: 0px">Transaction has moved to <a href="http://www.eclipse.org/modeling/emf/?project=transaction#transaction">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-    print '<li style="border: 0px">Validation has moved to <a href="http://www.eclipse.org/modeling/emf/?project=validation#validation">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-    print '<li style="border: 0px">EODM has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">Modeling Development Tools (MDT)</a>.</li>'."\n";
-    print '<li style="border: 0px">OCL has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Modeling Development Tools (MDT)</a>.</li>'."\n";
-    print '<li style="border: 0px">JET has moved to <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">Model To Text (M2T)</a>.</li>'."\n";
-    print '<li style="border: 0px">JET Editor has been merged into <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">M2T-JET</a>.</li>'."\n"; 	
-	
+	print "<ul id=\"oldprojs\">\n";
+	print '<li>Query has moved to <a href="http://www.eclipse.org/modeling/emf/?project=query#query">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
+	print '<li>Transaction has moved to <a href="http://www.eclipse.org/modeling/emf/?project=transaction#transaction">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
+	print '<li>Validation has moved to <a href="http://www.eclipse.org/modeling/emf/?project=validation#validation">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
+	print '<li>EODM has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">Modeling Development Tools (MDT)</a>.</li>'."\n";
+	print '<li>OCL has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Modeling Development Tools (MDT)</a>.</li>'."\n";
+	print '<li>JET has moved to <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">Model To Text (M2T)</a>.</li>'."\n";
+	print '<li>JET Editor has been merged into <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">M2T-JET</a>.</li>'."\n"; 	
+
 	print "</ul>\n";
 
 	print "</div>\n";
