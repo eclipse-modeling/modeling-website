@@ -167,7 +167,7 @@ print <<<XML
 <div id="rightcolumn">
 XML;
 
-$extras = $extras ? $extras : array();
+$extras = (isset($extras) && is_array($extras) ? $extras : array());
 
 foreach ($extras as $z)
 {
