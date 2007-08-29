@@ -160,7 +160,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
 				<td colspan="2">
-				<?php if (isIES()) { ?>
+				<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
 				<p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
 				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
 					<?php displayOptions($options["BranchIES"],false,0); ?>
@@ -169,11 +169,9 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
 				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
 				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
-					<?php displayOptions(array("europa","callisto"),false,0); ?>
+					<?php displayOptions(array("ganymede","europa"),false,1); ?>
 				</select></small></p>
-				<!-- TODO: implement this in promoteToEclipse.sh for MDT builds -->
-				<!-- <p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (-bugzonly)</p> -->
-				</td>
+				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (-bugzonly)</p></td>
 			</tr>
 
 			<tr>
@@ -294,7 +292,7 @@ else
 
 	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() . 
 	' \"cd ' .
-		$workDir . 'modeling/scripts; ./promoteToEclipse.sh' . // one script, not two.
+		$workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
 	' -sub ' . $projct .
 	' -Q' .
 	' -cvsbranch ' . $cvsbranch .
@@ -347,7 +345,6 @@ print "<li><a href=\"?previewOnly=1\">preview promo</a></li>\n";
 print "<li><a href=\"?\">normal promo</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
-
 
 if ($isBuildServer && is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php"))
 {
