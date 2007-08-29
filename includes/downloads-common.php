@@ -883,8 +883,7 @@ function getBuildArtifacts($dir, $branchID)
 	$file = "$dir/$branchID/build.cfg";
 	$havedeps = array();
 	$opts = loadBuildConfig($file, $deps);
-
-	foreach (array_keys($havedeps) as $z)
+	foreach (array_keys($deps) as $z)
 	{
 		$builddir[$z] = (isset($opts["${z}DownloadURL"]) ? $opts["${z}DownloadURL"] : ""). (isset($opts["${z}BuildURL"]) ? $opts["${z}BuildURL"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
 		# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
@@ -893,6 +892,9 @@ function getBuildArtifacts($dir, $branchID)
 		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}File"]) ? $opts["${z}File"] : "");
 		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? "http://www.eclipse.org/downloads/download.php?file=$builddir[$z]" : $builddir[$z]) : "";
 		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? "http://www.eclipse.org/downloads/download.php?file=$buildfile[$z]" : $buildfile[$z]);
+		if ($builddir[$z]) {
+		    $havedeps[$z] = $z;
+		}
 	}
 
 	$ret = "";
