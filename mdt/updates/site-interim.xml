@@ -24,7 +24,32 @@
 	<!-- EODM 0.9.1 M200708240429 (Incubation) -->
 	
 	<!-- EODM 0.8.1 M200708240438 (Incubation) -->
-	<category-def label="MDT EODM SDK (Incubation) 0.8.1 M200708240438" name="MDT EODM SDK (Incubation) 0.8.1 M200708240438">
+	
+	<!-- UML2 2.1.1 M200708301304 -->
+	<category-def label="MDT UML2 SDK 2.1.1 M200708301304" name="MDT UML2 SDK 2.1.1 M200708301304">
+		<description>
+MDT UML2 SDK 2.1.1 M200708301304: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.1.1.v200707181556" url="features/org.eclipse.uml2.doc_2.1.1.v200707181556.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.1.0.v200706251652" url="features/org.eclipse.uml2.examples.source_2.1.0.v200706251652.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.1.0.v200706251652" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.examples_2.1.0.v200706251652.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.1.1.v200708301222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.sdk_2.1.1.v200708301222.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.1.1.v200708301222" url="features/org.eclipse.uml2.source_2.1.1.v200708301222.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.1.1.v200708301222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.1.1.v200708301222.jar" patch="false">
+		<category name="MDT UML2 SDK 2.1.1 M200708301304"/>
+	</feature>
+<category-def label="MDT EODM SDK (Incubation) 0.8.1 M200708240438" name="MDT EODM SDK (Incubation) 0.8.1 M200708240438">
 		<description>
 MDT EODM SDK (Incubation) 0.8.1 M200708240438: contains runtime, source, and documentation features.
 		</description>
