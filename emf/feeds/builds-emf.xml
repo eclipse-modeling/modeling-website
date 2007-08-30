@@ -118,33 +118,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] EMF M200708282230 (2.3.1.M200708282230) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230</id>
-    <updated>2007-08-29T04:51:48Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200708282230" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230" type="M" version="2.3.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708282230/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=M200708282230
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-M200708282230.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708282230/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20070821-0800/eclipse-SDK-I20070821-0800-linux-gtk.tar.gz</dependency>
-        </dependencies>
-        <coordinated status="CALLISTOSITEREADY"/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] EMF M200708142200 (2.2.4.M200708142200) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708142200#M200708142200"/>
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708142200#M200708142200</id>
