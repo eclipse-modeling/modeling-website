@@ -10,7 +10,7 @@
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-compare.xml</id>
   <entry>
-    <title>[announce] compare 0.7.0 S200708290221 is available</title>
+    <title>[announce] compare 0.7.0RC3 (S200708290221) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=S200708290221#S200708290221"/>
     <id>http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=S200708290221#S200708290221</id>
     <updated>2007-09-04T03:47:27Z</updated>
@@ -22,7 +22,7 @@
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=compare&amp;version=S200708290221
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-compare-SDK-.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-compare-SDK-0.7.0RC3.zip</release>
         </releases>
         <tests>
           <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/compare/downloads/drops/0.7.0/S200708290221/testResults.php" type="junit">
