@@ -21,7 +21,7 @@ if (!isset($cvsprojs) || !is_array($cvsprojs))
 	$cvsprojs = array();
 }
 
-$projectsf = array_flip(array_diff($projects,$extraprojects,$nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
+$projectsf = array_flip(array_diff($projects, $extraprojects, $nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
 
 /* set defaults */
@@ -49,9 +49,73 @@ $header = "";
 $header .= "<div id=\"midcolumn\">\n";
 $header .= "<h1>Release Notes</h1>\n";
 
+$vpicker = array();
+$result = wmysql_query("SELECT CONCAT(LEFT(`vanityname`, 4), 'x') AS `tmp` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `vanityname` LIKE '_._._' AND `vanityname` != '0.0.0' GROUP BY `tmp` DESC");
+if ($result)
+{
+	$c = 0;
+	while ($row = mysql_fetch_row($result))
+	{
+		$vpicker[] = $row[0];
+	}
+}
+
+/* figuring out what branch goes with what z.y.x stream is tricky, we guess based on a few assumptions:
+ * - all streams have a maintenance branch
+ * - HEAD always cooresponds to the newest stream
+ * - a descending sort of the z.y.x stream names lines up with a descending sort of the branch names (less HEAD, which is always on top)
+ *
+ * if that doesn't work out, guessing can be removed by defining $streams in each placeholder file (as necessary), like so:
+$streams = array(
+	"transaction" => array(
+		"1.2.x" => "HEAD",
+		"1.1.x" => "R1_1_maintenance",
+		"1.0.x" => "R1_0_maintenance"
+	)
+);
+ * streams that are dead (that is, they're not HEAD and they were never branched) can be specified with a value of ""
+ */
+$latest = array("HEAD");
+$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` != 'HEAD' GROUP BY `branch` DESC");
+if ($result)
+{
+	while ($row = mysql_fetch_row($result))
+	{
+		$latest[] = $row[0];
+	}
+}
+
+if (isset($streams) && is_array($streams) && isset($streams[$proj]))
+{
+	$streams = $streams[$proj];
+}
+else
+{
+	if (sizeof($vpicker) == sizeof($latest))
+	{
+		$streams = array_combine($vpicker, $latest);
+	}
+	else
+	{
+		$streams = array();
+		debug("oops, " . sizeof($vpicker) . " != " . sizeof($latest) . ", you should define \$streams[\"$proj\"] in {$_SERVER["PHP_SELF"]}");
+	}
+}
+
+if (!isset($_GET["version"]) || (preg_match("/^\d\.\d\.x$/", $_GET["version"]) && !isset($streams[$_GET["version"]])))
+{
+	if (sizeof($vpicker) > 0)
+	{
+		$_GET["version"] = $vpicker[0];
+	}
+	else
+	{
+		$_GET["version"] = "HEAD";
+	}
+}
+
 $sql = "SELECT `vanityname`, `branch` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') ORDER BY `vanityname` DESC";
 $result = wmysql_query($sql);
-$vpicker = array();
 if ($result)
 {
 	while ($row = mysql_fetch_row($result))
@@ -64,108 +128,52 @@ if ($result)
 	}
 }
 
-$rbuild = true;
-$extra_build = false;
-$version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build);
-$preversion = relminus($version, $cvsproj, $cvscom, $rbuild);
+$bugs = array();
 
-$outerversion = version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $nomenclature, $projectsf, $proj);
-$header .= $outerversion[0];
-$outerversion = $outerversion[1];
-
-$canConvertTZ = checkIfCanConvertTZ();
-
-if ($extra_build)
+if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 {
-	$branch = "'$version'";
-	$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+	$selected = $_GET["version"];
+	$v = preg_replace("/x$/", "_", $_GET["version"]);
+	$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `vanityname` LIKE '$v' ORDER BY `buildtime` DESC");
+	if ($streams[$_GET["version"]] !== "")
+	{
+		$versions = array($streams[$_GET["version"]]);
+	}
+	else //a dead stream (not HEAD, and no associated branch)
+	{
+		$versions = array();
+	}
+
+	while ($row = mysql_fetch_row($result))
+	{
+		$versions[] = $row[0];
+	}
+
+	$c = 0;
+	foreach ($versions as $z)
+	{
+		$_GET["version"] = $z;
+		$header = ($c == 0 ? $header : "");
+		release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header, $c == 0, $selected);
+		$c++;
+	}
 }
 else
 {
-	$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom'))";
-	$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
-}
-$result = wmysql_query($sql);
-$rels = array();
-if ($result)
-{
-	while ($row = mysql_fetch_row($result))
-	{
-		$rels[] = $row;
-	}
-}
-if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
-{
-	array_shift($rels);
+	release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header);
 }
 
 if (isset($_GET["bugzonly"]))
 {
-	$out = "";
-	$tnum = 0;
-	if (sizeof($rels))
-	{
-		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
-		{
-			$sql = "SELECT `bugid`,`title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
-			$result = wmysql_query($sql);
-			$num = mysql_num_rows($result);
-			$tnum += $num;
-	
-			while ($row = mysql_fetch_row($result))
-			{
-				$out .= ",".$row[0];
-			}
-		}
-	}
-	print $tnum . ";" . substr($out,1);
+	ob_end_clean();
+	print sizeof($bugs) . ";" . join(",", $bugs) . "\n";
 	exit;
 }
-
-if (sizeof($rels))
-{
-	$tnum = 0;
-	ob_start();
-	for ($i = 0; $i < (sizeof($rels) - 1); $i++)
-	{
-		$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
-		$result = wmysql_query($sql);
-		$num = mysql_num_rows($result);
-		$tnum += $num;
-
-		$header2 .= "<ul>\n";
-		$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed)" : ""). " <a href=\"?project=$proj&version=".$rels[$i][1]."&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a>\n";
-		$header2 .= "<ul>\n";
-		while ($row = mysql_fetch_row($result))
-		{
-			$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
-		}
-		if ($num == 0)
-		{
-			$header2 .= "<li>No bugs fixed for this release.</li>";
-		}
-		$header2 .= "</ul>\n";
-		$header2 .= "</li>\n";
-		$header2 .= "</ul>\n";
-	}
-	$html = ob_get_contents();
-	ob_end_clean();
-	$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . 
-		" ($tnum bugs fixed) <a href=\"?project=$proj&version=$version&bugzonly\"><img border=\"0\" src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
-}
-else
-{
-	$header .= "<h4>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</h4>\n";
-}
-print $header;
-print "</div>\n";
 
 print "</div>\n";
 
 /*** side items ***/
-print <<<XML
-<div id="rightcolumn">
-XML;
+print "<div id=\"rightcolumn\">\n";
 
 $extras = (isset($extras) && is_array($extras) ? $extras : array());
 
@@ -210,12 +218,93 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = isset($pageTitle) ? $pageTitle : "Eclipse Modeling - Release Notes";
+$pageTitle = (isset($pageTitle) ? $pageTitle : "Eclipse Modeling - Release Notes");
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Neil Skrypuch";
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+
+function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
+{
+	global $connect, $PR, $bugs;
+
+	$rbuild = true;
+	$extra_build = false;
+	$version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build);
+	$preversion = relminus($version, $cvsproj, $cvscom, $rbuild);
+
+	$outerversion = version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $projectsf, $proj, $initial, $selected);
+	$header .= $outerversion[0];
+	$outerversion = $outerversion[1];
+
+	$canConvertTZ = checkIfCanConvertTZ();
+
+	if ($extra_build)
+	{
+		$branch = "'$version'";
+		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+	}
+	else
+	{
+		$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom'))";
+		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+	}
+	$result = wmysql_query($sql);
+	$rels = array();
+	if ($result)
+	{
+		while ($row = mysql_fetch_row($result))
+		{
+			$rels[] = $row;
+		}
+	}
+	if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
+	{
+		array_shift($rels);
+	}
+
+	if (sizeof($rels))
+	{
+		$tnum = 0;
+		$header2 = "";
+		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
+		{
+			$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
+			$result = wmysql_query($sql);
+			$num = mysql_num_rows($result);
+			$tnum += $num;
+
+			$header2 .= "<ul>\n";
+			$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+			$header2 .= "<ul>\n";
+			while ($row = mysql_fetch_row($result))
+			{
+				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+				$bugs[] = $row[0];
+			}
+			if ($num == 0)
+			{
+				$header2 .= "<li>No bugs fixed for this release.</li>";
+			}
+			$header2 .= "</ul>\n";
+			$header2 .= "</li>\n";
+			$header2 .= "</ul>\n";
+		}
+
+		if (isset($_GET["bugzonly"]))
+		{
+			return;
+		}
+		$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed) <a href=\"?project=$proj&amp;version=$version&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
+	}
+	else
+	{
+		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found in $projectsf[$proj] $version</h3><p>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n";
+	}
+	print $header;
+	print "</div>\n";
+}
 
 /* find the previous release in the correct branch */
 function relminus($version, $cvsproj, $cvscom, $rbuild = true)
@@ -258,7 +347,7 @@ function builds($version, $preversion, $cvsproj, $cvscom)
 
 function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_build)
 {
-	$strict = (isset($_GET["strict"]) ? 1 : 0);
+	$strict = isset($_GET["strict"]);
 
 	if (!$connect)
 	{
@@ -285,6 +374,7 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 		if (!isset($version))
 		{
 			$result = wmysql_query("SELECT `branch` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') GROUP BY `branch`");
+			$branches = array();
 			while ($row = mysql_fetch_row($result))
 			{
 				$branches[] = $row[0];
@@ -296,9 +386,16 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 				$rbuild = false;
 				$extra_build = true;
 			}
-			else if (isset($vpicker[0]))
+			else if (sizeof($vpicker) > 0)
 			{
-				$version = $vpicker[0];
+				foreach ($vpicker as $z)
+				{
+					if (!preg_match("/x$/", $z))
+					{
+						$version = $z;
+						break;
+					}
+				}
 			}
 			else
 			{
@@ -322,8 +419,12 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 	return $version;
 }
 
-function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $nomenclature, $projectsf, $proj)
+function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $projectsf, $proj, $dohtml = true, $selected = null)
 {
+	global $nomenclature;
+
+	$selected = ($selected == null ? $version : $selected);
+
 	$out = "";
 	$out .= "<div class=\"homeitem3col\">\n";
 	$out .= "<h3>Filters</h3>\n";
@@ -359,9 +460,13 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	$vpicker = preg_replace("/^(.+)$/", "<option value=\"$1\">$1</option>\n", $vpicker);
 	if ($rbuild)
 	{
-		$builds = builds($version, $preversion, $cvsproj, $cvscom);
+		$builds = array();
+		if ($version == $selected)
+		{
+			$builds = builds($version, $preversion, $cvsproj, $cvscom);
+		}
 		$out .= extra_builds($version, $cvsproj, $cvscom, false);
-		$out .= join("", preg_replace("/(value=\"$version\")>(.+<\/option>)/", "$1 selected=\"selected\">$2" . join("", $builds), $vpicker));
+		$out .= join("", preg_replace("/(value=\"$selected\")>(.+<\/option>)/", "$1 selected=\"selected\">$2" . join("", $builds), $vpicker));
 		$outerversion = "";
 	}
 	else
@@ -372,14 +477,14 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 		if ($outerversion)
 		{
 			$builds = builds($outerversion, relminus($row[0], $cvsproj, $cvscom), $cvsproj, $cvscom);
-			$builds = preg_replace("/(value=\"$version\")/", "$1 selected=\"selected\"", $builds);
+			$builds = preg_replace("/(value=\"$selected\")/", "$1 selected=\"selected\"", $builds);
 			$out .= extra_builds($version, $cvsproj, $cvscom, false);
 			$out .= join("", preg_replace("/(value=\"$row[0]\">.+<\/option>)/", "$1" . join("", $builds), $vpicker));
 		}
 		else //we're looking at builds with no R build above them
 		{
-			$out .= extra_builds($version, $cvsproj, $cvscom);
-			$out .= join("", $vpicker);
+			$out .= extra_builds($version, $cvsproj, $cvscom, $selected == $version);
+			$out .= join("", preg_replace("/(value=\"$selected\")>(.+<\/option>)/", "$1 selected=\"selected\">$2", $vpicker));
 		}
 	}
 	$out .= "</select>\n";
@@ -392,7 +497,14 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	$out .= "</form>\n";
 	$out .= "</div>\n";
 
-	return array($out,$outerversion);
+	if ($dohtml)
+	{
+		return array($out, $outerversion);
+	}
+	else
+	{
+		return array("", $outerversion);
+	}
 }
 
 /* HEAD and Rx_y_maintenance builds that don't have an R build yet */

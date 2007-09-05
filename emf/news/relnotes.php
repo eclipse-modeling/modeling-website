@@ -16,5 +16,23 @@ if (isset($_GET["project"]) && $_GET["project"] == "emf")
 	$extras = array("doBleedingEdge");
 }
 
+$streams = array(
+	"query" => array(
+		"1.2.x" => "HEAD",
+		"1.1.x" => "R1_1_maintenance",
+		"1.0.x" => "R1_0_maintenance"
+	),
+	"transaction" => array(
+		"1.2.x" => "HEAD",
+		"1.1.x" => "R1_1_maintenance",
+		"1.0.x" => "R1_0_maintenance"
+	),
+	"validation" => array(
+		"1.2.x" => "HEAD",
+		"1.1.x" => "R1_1_maintenance",
+		"1.0.x" => "R1_0_maintenance"
+	)
+);
+
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-common.php");
 ?>
