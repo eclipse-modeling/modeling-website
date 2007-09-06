@@ -220,8 +220,10 @@ function doSubmit() {
 
 function doOnclickBugzonly(booln) {
 	with (document.forms.promoForm) {
+		<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
 		build_Update_IES_Map_File.disabled=booln;
 		build_IES_CVS_Branch.disabled=booln;
+		<?php } ?>
 		build_Announce_In_Newsgroup.disabled=booln;
 		build_Update_Coordinated_Update_Site.disabled=booln;
 		build_Coordinated_Site_Name.disabled=booln;
