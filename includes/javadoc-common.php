@@ -101,9 +101,6 @@ if (sizeof($subprojs) > 0)
 		{
 			$label = $trans ? $trans[$subproj] : $subproj;
 
-			$vers = loadSubDirs("$PWD$subproj/javadoc", "");
-			rsort($vers);
-			reset($vers);
 			$didprint = 0;
 			print '<li><b> ' . $label . '</b><a name="' . $subproj . '"></a>' . "\n";
 			if ($PR == "modeling/mdt" && $subproj == "xsd")
@@ -113,7 +110,10 @@ if (sizeof($subprojs) > 0)
 			}
 			else
 			{
-    			foreach ($vers as $ver)
+    			$vers = loadSubDirs("$PWD$subproj/javadoc", "");
+    			rsort($vers);
+    			reset($vers);
+			    foreach ($vers as $ver)
     			{
     				if (preg_match("/[^0-9.]+/", $ver))
     				{
