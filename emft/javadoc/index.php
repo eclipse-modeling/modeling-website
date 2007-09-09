@@ -1,9 +1,8 @@
 <?php
-/* TODO: support situation when we have components in /technology/emft and /modeling/org.eclipse.emft/ */
 $projDetails = array(
-	"/technology/emft",
-	"/emft/downloads",
-	"/emft",
+	"/modeling/emft",
+	"/modeling/emft/downloads",
+	"/modeling",
 	"EMFT"
 );
 require_once ("../../includes/buildServer-common.php");

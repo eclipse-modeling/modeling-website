@@ -1,6 +1,4 @@
 <?php
-/* TODO: support situation when we have components in /technology/emft and /modeling/org.eclipse.emft/ */
-
 /* path, project's downloads path, downloads page path, includes path, and vanity name */
 $PR = substr($projDetails[0],1); 
 $projectDownloadsPath = $projDetails[0];
