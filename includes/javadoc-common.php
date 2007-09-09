@@ -106,36 +106,44 @@ if (sizeof($subprojs) > 0)
 			reset($vers);
 			$didprint = 0;
 			print '<li><b> ' . $label . '</b><a name="' . $subproj . '"></a>' . "\n";
-			foreach ($vers as $ver)
-			{
-				if (preg_match("/[^0-9.]+/", $ver))
-				{
-					$vers2 = loadSubDirs("$PWD$subproj/javadoc/" . $ver, "");
-					rsort($vers2);
-					reset($vers2);
-					if (sizeof($vers2) > 0)
-					{
-						$didprint = 1;
-						print "<ul>\n";
-					}
-					foreach ($vers2 as $ver2)
-					{
-						print '<li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/' . $ver2 . '/">' . $ver . ' ' . $ver2 . '</a></li>' . "\n";
-					}
-					if (sizeof($vers2) > 0)
-					{
-						print "</ul>\n";
-					}
-				}
-				else
-				{
-					$didprint = 1;
-					print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
-				}
+			if ($PR == "modeling/mdt" && $subproj == "xsd")
+			{ 
+			    $didprint = 1;
+			    print '<ul><li><i><a href="/modeling/emf/javadoc/">See EMF Javadoc</a>.</i></li></ul>';
 			}
-			if ($didprint == 0)
+			else
 			{
-				print "<ul><li><i>None available.</i></li></ul>";
+    			foreach ($vers as $ver)
+    			{
+    				if (preg_match("/[^0-9.]+/", $ver))
+    				{
+    					$vers2 = loadSubDirs("$PWD$subproj/javadoc/" . $ver, "");
+    					rsort($vers2);
+    					reset($vers2);
+    					if (sizeof($vers2) > 0)
+    					{
+    						$didprint = 1;
+    						print "<ul>\n";
+    					}
+    					foreach ($vers2 as $ver2)
+    					{
+    						print '<li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/' . $ver2 . '/">' . $ver . ' ' . $ver2 . '</a></li>' . "\n";
+    					}
+    					if (sizeof($vers2) > 0)
+    					{
+    						print "</ul>\n";
+    					}
+    				}
+    				else
+    				{
+    					$didprint = 1;
+    					print '<ul><li><a href="' . $jdPWD . $subproj . '/javadoc/' . $ver . '/">' . $subproj . ' ' . $ver . '</a></li></ul>' . "\n";
+    				}
+    			}
+    			if ($didprint == 0)
+    			{
+    				print "<ul><li><i>None available.</i></li></ul>";
+    			}
 			}
 			print '</li>' . "\n";
 		}
