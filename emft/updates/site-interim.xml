@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/technology/emft/updates/site-interim.xml&amp;format=xml">
-	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/updates/ ... -->
+<site mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/updates/site-interim.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/ ... -->
 
-	<description url="http://download.eclipse.org/technology/emft/updates/site-interim.xml">
+	<description url="http://download.eclipse.org/modeling/emft/updates/site-interim.xml">
 	To install these plugins, point your Eclipse Update Manager at this site.
 	</description>
 
