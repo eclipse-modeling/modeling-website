@@ -3,12 +3,12 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>teneo Builds</title>
-  <link href="http://download.eclipse.org/technology/emft/feeds/builds-teneo.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://download.eclipse.org/modeling/emft/feeds/builds-teneo.xml" rel="self" type="application/atom+xml"/>
   <updated>2007-09-06T20:07:36Z</updated>
   <author>
     <name>teneo Build Team</name>
   </author>
-  <id>http://download.eclipse.org/technology/emft/feeds/builds-teneo.xml</id>
+  <id>http://download.eclipse.org/modeling/emft/feeds/builds-teneo.xml</id>
   <entry>
     <title>[announce] teneo I200709051239 (0.8.0.I200709051239) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=teneo&amp;showAll=1&amp;hlbuild=I200709051239#I200709051239"/>
