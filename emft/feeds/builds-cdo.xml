@@ -17,7 +17,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610271316" href="http://www.eclipse.org/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=R200610271316#R200610271316" type="R" version="0.7.2">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/cdo/downloads/drops/0.7.2/R200610271316/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=cdo</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=cdo</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=cdo#cdo</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=cdo&amp;amp;version=0.7.2
           </releasenotes>
@@ -47,7 +47,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610021452" href="http://www.eclipse.org/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=R200610021452#R200610021452" type="R" version="0.7.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/cdo/downloads/drops/0.7.1/R200610021452/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=cdo</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=cdo</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=cdo#cdo</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=cdo&amp;amp;version=0.7.1
           </releasenotes>
@@ -77,7 +77,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200609251359" href="http://www.eclipse.org/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=R200609251359#R200609251359" type="R" version="0.7.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/cdo/downloads/drops/0.7.0/R200609251359/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=cdo</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=cdo</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=cdo#cdo</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=cdo&amp;amp;version=0.7.0
           </releasenotes>

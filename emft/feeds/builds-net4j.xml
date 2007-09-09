@@ -17,7 +17,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610271244" href="http://www.eclipse.org/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610271244#R200610271244" type="R" version="0.7.2">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/net4j/downloads/drops/0.7.2/R200610271244/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=net4j</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=net4j#net4j</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.2
           </releasenotes>
@@ -45,7 +45,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610021152" href="http://www.eclipse.org/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610021152#R200610021152" type="R" version="0.7.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/net4j/downloads/drops/0.7.1/R200610021152/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=net4j</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=net4j#net4j</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.1
           </releasenotes>
@@ -73,7 +73,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200609251348" href="http://www.eclipse.org/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200609251348#R200609251348" type="R" version="0.7.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/net4j/downloads/drops/0.7.0/R200609251348/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=net4j</update>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=net4j#net4j</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.0
           </releasenotes>
