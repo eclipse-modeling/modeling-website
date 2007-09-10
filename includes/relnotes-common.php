@@ -144,9 +144,13 @@ if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 		$versions = array();
 	}
 
+	$tmp = array_flip($vpicker);
 	while ($row = mysql_fetch_row($result))
 	{
-		$versions[] = $row[0];
+    	if (isset($tmp[$row[0]]))
+		{
+			$versions[] = $row[0];
+		}
 	}
 
 	$c = 0;
