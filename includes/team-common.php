@@ -4,7 +4,10 @@
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App= new App(); $Nav= new Nav(); $Menu= new Menu(); include ($App->getProjectCommon());
 
 include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
-$projct= preg_replace("#.+/#", "", $PR); 
+$projct= preg_replace("#.+/#", "", $PR);
+
+$PMCsOnly = isset($_GET["PMCs"]);
+$people = $PMCsOnly ? "PMCs" : "Committers"; 
 
 $exportFormats = array(
 	"project,component,committerid", # Bjorn's format preference
@@ -64,13 +67,13 @@ else
 	    $projs = array("emf","emft","gmf","gmt","mddi","mdt","m2m","m2t");
 	    foreach ($projs as $p)
 	    {
-	        $data[strtoupper($p) . " Committers"] = getDevelopers(true, $p);
+	        $data[strtoupper($p) . " $people"] = getDevelopers(true, $p);
 	        $data[strtoupper($p) . " Contributors"] = getDevelopers(false, $p);
 	    }
 	} 
 	else
 	{
-	    $data["Committers"] = getDevelopers(true, $projct);
+	    $data[$people] = getDevelopers(true, $projct);
 	    $data["Contributors"] = getDevelopers(false, $projct);
 	}
 	
@@ -88,20 +91,20 @@ else
 EOHTML;
 	if (isset($_GET["byProject"]) && $projct == "modeling")
 	{
-	    print "<blockquote><ul><li>Committers: ";
+	    print "<blockquote><ul><li>$people: ";
 	    foreach ($projs as $p)
 	    {
-	        if ($data[strtoupper($p) . " Committers"][0])
+	        if ($data[strtoupper($p) . " $people"][0])
 	        {
-	            print '<a href="#' . strtoupper($p) . '_Committers">' . strtoupper($p) . '</a> &#160;'."\n";  
+	            print '<a href="#' . strtoupper($p) . '_' . $people . '">' . strtoupper($p) . '</a> &#160;'."\n";  
 	        }
 	    }
 	    print "</li>\n<li>Contributors: ";
 	    foreach ($projs as $p)
 	    {
-	        if ($data[strtoupper($p) . " Contributors"][0])
+	        if ($data[strtoupper($p) . " $people"][0])
 	        {
-	            print '<a href="#' . strtoupper($p) . '_Contributors">' . strtoupper($p) . '</a> &#160;'."\n";
+	            print '<a href="#' . strtoupper($p) . '_' . $people . '">' . strtoupper($p) . '</a> &#160;'."\n";
 	        }  
 	    }
 	    print "</li></ul>\n";
@@ -110,9 +113,9 @@ EOHTML;
 	else
 	{
 	    print "<blockquote><ul><li>";
-	    if ($data["Committers"][0])
+	    if ($data[$people][0])
 	    {
-	        print '<a href="#Committers">Committers</a> &#160;'."\n";
+	        print '<a href="#' . $people . '">' . $people . '</a> &#160;'."\n";
 	    }
 	    if ($data["Contributors"][0])
 	    {
@@ -173,8 +176,11 @@ EOHTML;
 	if ($projct == "modeling")
 	{
 	print '<div class="sideitem">
-		<h6>Sort</h6>
-		<ul><li><a href="?'.(isset($_GET["byProject"])? '' : 'byProject').'">'.(isset($_GET["byProject"]) ? 'Overall' : 'By Project').'</a></li></ul>		
+		<h6>Sort &amp; Filter</h6>
+		<ul>
+			<li><a href="?'.(isset($_GET["byProject"])? '' : 'byProject').'">'.(isset($_GET["byProject"]) ? 'Overall Team' : 'Sort By Project').'</a></li>
+			<li><a href="?'.($PMCsOnly ? '' : 'PMCs').'">'.($PMCsOnly ? 'Overall Team' : 'PMCs Only').'</a></li>
+		</ul>		
 	</div>
 ';
 	}
@@ -191,9 +197,11 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function getDevelopers($isCommitter = true, $projct)
 {
+	global $PMCsOnly;
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
 			"WHERE committer = " . ($isCommitter ? "1" : "0") . 
-			($projct != "modeling" ? " AND " . ($projct == "emft" ? "(groupname like 'emft%' OR project LIKE '%$projct')" : "project LIKE '%$projct'") : "") . 
+			($projct != "modeling" ? " AND " . ($projct == "emft" ? "(groupname LIKE 'emft%' OR project LIKE '%$projct')" : "project LIKE '%$projct'") : "") .
+			($PMCsOnly ? " AND Role LIKE '% PMC%'" : "") . 
 			" ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name
 	$result= wmysql_query($query);
 	$groups= array ();
