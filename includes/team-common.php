@@ -201,7 +201,7 @@ function getDevelopers($isCommitter = true, $projct)
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
 			"WHERE committer = " . ($isCommitter ? "1" : "0") . 
 			($projct != "modeling" ? " AND " . ($projct == "emft" ? "(groupname LIKE 'emft%' OR project LIKE '%$projct')" : "project LIKE '%$projct'") : "") .
-			($PMCsOnly ? " AND Role LIKE '% PMC%'" : "") . 
+			($PMCsOnly ? " AND Role LIKE '%PMC%'" : "") . 
 			" ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name
 	$result= wmysql_query($query);
 	$groups= array ();
