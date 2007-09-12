@@ -10,7 +10,29 @@
 	<!-- eodm 0.9.0 -->
 	
 	<!-- EODM 0.8.0 -->
-	<category-def label="MDT EODM SDK 0.8.0" name="MDT EODM SDK 0.8.0">
+	
+	<!-- UML2 2.0.4 -->
+	<category-def label="MDT UML2 SDK 2.0.4" name="MDT UML2 SDK 2.0.4">
+		<description>
+MDT UML2 SDK 2.0.4: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.0.4.v200707131442" url="features/org.eclipse.uml2.doc_2.0.4.v200707131442.jar" patch="false">
+		<category name="MDT UML2 SDK 2.0.4"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.0.4.v200707131442" url="features/org.eclipse.uml2.examples.source_2.0.4.v200707131442.jar" patch="false">
+		<category name="MDT UML2 SDK 2.0.4"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.0.4.v200707131442" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.examples_2.0.4.v200707131442.jar" patch="false">
+		<category name="MDT UML2 SDK 2.0.4"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.0.4.v200707131442" url="features/org.eclipse.uml2.source_2.0.4.v200707131442.jar" patch="false">
+		<category name="MDT UML2 SDK 2.0.4"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.0.4.v200707131442" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.0.4.v200707131442.jar" patch="false">
+		<category name="MDT UML2 SDK 2.0.4"/>
+	</feature>
+<category-def label="MDT EODM SDK 0.8.0" name="MDT EODM SDK 0.8.0">
 		<description>
 This category contains the features of the 0.8.0 build of MDT EODM SDK, which includes source, plugins, and documentation.
 		</description>
