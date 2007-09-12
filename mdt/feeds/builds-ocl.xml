@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ocl Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-07-13T16:24:21Z</updated>
+  <updated>2007-09-12T20:23:30Z</updated>
   <author>
     <name>ocl Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml</id>
+  <entry>
+    <title>[announce] ocl M200709121604 (1.1.1.M200709121604) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200709121604#M200709121604"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200709121604#M200709121604</id>
+    <updated>2007-09-12T20:23:30Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_1_maintenance" datetime="200709121604" href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200709121604#M200709121604" type="M" version="1.1.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.1/M200709121604/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=ocl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=ocl&amp;version=M200709121604
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-ocl-SDK-M200709121604.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.1/M200709121604/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/R200706262000/emf-sdo-xsd-SDK-2.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R200706192011/orbit-R200706192011.zip</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/R200706251652/mdt-uml2-SDK-2.1.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] ocl M200707131137 (1.1.1.M200707131137) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200707131137#M200707131137"/>
@@ -645,7 +675,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612071439" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612071439#I200612071439" type="I" version="1.1.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612071439/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <update>http://download.eclipse.org/technology/emft/updates/</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;version=1.1.0
           </releasenotes>
@@ -674,7 +704,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612051208" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612051208#I200612051208" type="I" version="1.1.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612051208/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <update>http://download.eclipse.org/technology/emft/updates/</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;version=1.1.0
           </releasenotes>
@@ -702,7 +732,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200611160858" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200611160858#S200611160858" type="S" version="1.1.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/S200611160858/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.1.0
           </releasenotes>
@@ -730,7 +760,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200611161546" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200611161546#M200611161546" type="M" version="1.0.2">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.2/M200611161546/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.2
           </releasenotes>
@@ -758,7 +788,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609250830" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609250830#S200609250830" type="S" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609250830/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -786,7 +816,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609221313" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609221313#S200609221313" type="S" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609221313/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -814,7 +844,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609210937" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609210937#S200609210937" type="S" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609210937/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -842,7 +872,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609141915" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609141915#S200609141915" type="S" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609141915/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -870,7 +900,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609250830" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=R200609250830#R200609250830" type="R" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/R200609250830/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -898,7 +928,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609141024" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200609141024#M200609141024" type="M" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609141024/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -926,7 +956,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609071146" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200609071146#M200609071146" type="M" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609071146/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -954,7 +984,7 @@
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200608311108" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200608311108#M200608311108" type="M" version="1.0.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200608311108/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
+        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
