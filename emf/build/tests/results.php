@@ -330,7 +330,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 					$ret .= "<td bgcolor=\"#FFFFFF\">&nbsp;<a href=\"".
 						(is_file($testsPWD.$path.$testDir."/results/".$t.".html") ? 
 							$pre.$mid.$path.$testDir."/results/".$t.".html#_Test_Results" : $pre.$mid.$path.$testDir."/testlog.txt").
-						"\"><span class=\"errors\"><abbr title=\"$t\"><img src=\"".$pre."images/not.gif\" width=\"16\" height=\"12\" border=\"0\" alt=\"BUILD FAILED!\"></abbr></a>&nbsp;</td>"."\n";
+						"\"><span class=\"errors\"><abbr title=\"$t\"><img src=\"/modeling/images/not.gif\" width=\"16\" height=\"12\" border=\"0\" alt=\"BUILD FAILED!\"></abbr></a>&nbsp;</td>"."\n";
 				} else if ($cnt==="...") { 
 					$ret .= "<td bgcolor=\"#FFFFFF\">&nbsp;<a style=\"text-decoration:none\" href=\"".($pre.$mid.$path.$testDir."/testlog.txt")."\"><span class=\"inprogress\"><abbr title=\"$t\">.&nbsp;.&nbsp;.</abbr></a>&nbsp;</td>"."\n";
 				} else if ($cnt==="") { 
@@ -341,7 +341,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 						$testDir.
 						"/results/".
 						$t.
-						".html#_Test_Results\"><abbr title=\"$t\"><img src=\"".$pre."images/check.gif\" width=\"16\" height=\"12\" border=\"0\" alt=\"Passed!\"></abbr></a>&nbsp;</td>"."\n";
+						".html#_Test_Results\"><abbr title=\"$t\"><img src=\"/modeling/images/check.gif\" width=\"16\" height=\"12\" border=\"0\" alt=\"Passed!\"></abbr></a>&nbsp;</td>"."\n";
 				} else {
 					$ret .= "<td bgcolor=\"#FFFFFF\">&nbsp;<a class=\"errors\" href=\"".
 						$pre.$mid.$path.
