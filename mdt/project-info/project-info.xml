@@ -51,9 +51,14 @@
 
 	<releases>
 		<release
-			name="1.0"
+			name="1.1"
 			status="tentative"
-			date="06/29/2007"
-			plan="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
+			date="30/06/2008"/>
+		<release
+			name="1.0"
+			status="completed"
+			date="29/06/2007"
+			plan="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"
+			download="http://www.eclipse.org/modeling/mdt/downloads/"/>
 	</releases>
 </project>
