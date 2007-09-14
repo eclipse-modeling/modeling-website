@@ -32,7 +32,7 @@ $projects = array(
 	"Teneo" => "teneo",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
-	"Model Workflow" => "mwe"
+	"Modeling Workflow" => "mwe"
 	);
 
 $cvsprojs = array();
