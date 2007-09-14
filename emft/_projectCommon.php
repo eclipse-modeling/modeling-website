@@ -31,8 +31,9 @@ $projects = array(
 	"JCR Management" => "jcrm",
 	"Teneo" => "teneo",
 	"CDO" => "cdo",
-	"Net4j" => "net4j"
-);
+	"Net4j" => "net4j",
+	"Model Workflow" => "mwe"
+	);
 
 $cvsprojs = array();
 
@@ -41,8 +42,9 @@ $cvsprojs = array();
 $cvscoms = array(
 	"org.eclipse.emf" => array (
 		"compare" => "org.eclipse.emf.compare",
-		"jcrm" => "org.eclipse.emf.jcrm",
 		"search" => "org.eclipse.emf.search",
+		"jcrm" => "org.eclipse.emf.jcrm",
+		"mwe" => "org.eclipse.emf.mwe",
 		"teneo" => "org.eclipse.emf.teneo",
 		"cdo" => "org.eclipse.emf.cdo",
 		"net4j" => "org.eclipse.emf.net4j"
@@ -54,7 +56,7 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm","search"); //components  with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm","search","mwe"); //components  with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array (); //components  without newsgroup
 $nomailinglist = array (); //components  without mailinglist
 $incubating = array("cdo","net4j","teneo","jcrm","compare","search"); // components which are still incubating
