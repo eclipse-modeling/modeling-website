@@ -62,21 +62,24 @@
 	<releases>
 		<!-- 2.4 -->
 		<release 
-			status="tentative"
-			date="2Q2008"
-			name="2.4"/>
+			status="scheduled"
+			date="30/06/2008"
+			name="2.4"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
 
 		<!-- 2.3 -->
 		<release 
-			status="tentative"
-			date="1Q2008"
-			name="2.3.2"/>
-		<release 
-			status="tentative"
-			date="4Q2007"
-			name="2.3.1"/>
+			status="scheduled"
+			date="29/02/2008"
+			name="2.3.2"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
 		<release 
 			status="scheduled"
+			date="28/09/2007"
+			name="2.3.1"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
+		<release 
+			status="completed"
 			date="29/06/2007"
 			name="2.3.0"
 			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
@@ -84,8 +87,9 @@
 		<!-- 2.2 -->
 		<release 
 			status="tentative"
-			date="3Q2007"
-			name="2.2.4"/>
+			date="28/09/2007"
+			name="2.2.4"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
 		<release 
 			status="completed"
 			date="14/05/2007"
@@ -110,8 +114,9 @@
 		<!-- 2.1 -->
 		<release 
 			status="tentative"
-			date="3Q2007"
-			name="2.1.3"/>
+			date="28/09/2007"
+			name="2.1.3"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
 		<release 
 			status="completed"
 			date="19/01/2006"
@@ -131,8 +136,9 @@
 		<!-- 2.0 -->
 		<release 
 			status="tentative"
-			date="3Q2007"
-			name="2.0.6"/>
+			date="28/09/2007"
+			name="2.0.6"
+			download="http://www.eclipse.org/modeling/emf/downloads/?project=emf" />
 		<release 
 			status="completed"
 			date="29/11/2005"
