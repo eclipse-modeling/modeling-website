@@ -33,7 +33,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/R200706262000/emf-sdo-xsd-SDK-2.3.0.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R200706192011/orbit-R200706192011.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/R200706251652/mdt-uml2-SDK-2.1.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/R200706251652/mdt-uml2-SDK-2.1.0.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -63,7 +63,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/R200706262000/emf-sdo-xsd-SDK-2.3.0.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/committers/drops/R200706192011/orbit-R200706192011.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/R200706251652/mdt-uml2-SDK-2.1.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/R200706251652/mdt-uml2-SDK-2.1.0.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -123,7 +123,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC4-200706081718/eclipse-SDK-3.3RC4-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200706200000/emf-sdo-xsd-SDK-2.3.0RC4.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/committers/drops/R200706192011/orbit-R200706192011.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200706141134/mdt-uml2-SDK-2.1RC3.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200706141134/mdt-uml2-SDK-2.1RC3.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -152,8 +152,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC3-200706011539/eclipse-SDK-3.3RC3-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200706081908/orbit-S200706081908.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200706130003/emf-sdo-xsd-SDK-2.3.0RC3.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/mdt-uml2-SDK-2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200706130003/emf-sdo-xsd-SDK-2.3.0RC3.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/mdt-uml2-SDK-2.1RC2.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -183,7 +183,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC3-200706011539/eclipse-SDK-3.3RC3-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200706061821/emf-sdo-xsd-SDK-I200706061821.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/committers/drops/S200706071352/orbit-S200706071352.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/mdt-uml2-SDK-2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200706051155/mdt-uml2-SDK-2.1RC2.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -213,7 +213,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC2-200705251350/eclipse-SDK-3.3RC2-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705300200/emf-sdo-xsd-SDK-2.3.0RC2.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200705242235/orbit-S200705242235.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200705251139/mdt-uml2-SDK-2.1RC1a.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200705251139/mdt-uml2-SDK-2.1RC1a.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -241,8 +241,8 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3RC1-200705171700/eclipse-SDK-3.3RC1-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200705230200/emf-sdo-xsd-SDK-2.3.0RC1.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200705171545/mdt-uml2-SDK-2.1M7.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705230200/emf-sdo-xsd-SDK-2.3.0RC1.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200705171545/mdt-uml2-SDK-2.1M7.zip</dependency>
           <dependency>http://fullmoon/tools/orbit/downloads/drops/S200705222254/orbit-S200705222254.zip</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -271,9 +271,9 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200705021947/orbit-S200705021947.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200705110650/emf-sdo-xsd-SDK-2.3.0M7.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200705111324/mdt-uml2-SDK-I200705111324.zip</dependency>
-          <dependency>http://fullmoon/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705110650/emf-sdo-xsd-SDK-2.3.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200705111324/mdt-uml2-SDK-I200705111324.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -303,7 +303,7 @@
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20070501-0010/eclipse-SDK-I20070501-0010-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200705020200/emf-sdo-xsd-SDK-I200705020200.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200705021641/mdt-uml2-SDK-I200705021641.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200705021641/mdt-uml2-SDK-I200705021641.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -333,7 +333,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/I20070418-1012/eclipse-SDK-I20070418-1012-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200704250200/emf-sdo-xsd-SDK-I200704250200.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200704251546/mdt-uml2-SDK-I200704251546.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200704251546/mdt-uml2-SDK-I200704251546.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -362,8 +362,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070418-1012/eclipse-SDK-I20070418-1012-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200704191605/emf-sdo-xsd-SDK-I200704191605.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200704192355/mdt-uml2-SDK-I200704192355.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200704191605/emf-sdo-xsd-SDK-I200704191605.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200704192355/mdt-uml2-SDK-I200704192355.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -392,8 +392,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070410-1043/eclipse-SDK-I20070410-1043-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200704121441/emf-sdo-xsd-SDK-I200704121441.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200704121352/mdt-uml2-SDK-I200704121352.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200704121441/emf-sdo-xsd-SDK-I200704121441.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200704121352/mdt-uml2-SDK-I200704121352.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -422,8 +422,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070410-1043/eclipse-SDK-I20070410-1043-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200704050200/emf-sdo-xsd-SDK-I200704050200.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200704121352/mdt-uml2-SDK-I200704121352.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200704050200/emf-sdo-xsd-SDK-I200704050200.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200704121352/mdt-uml2-SDK-I200704121352.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -452,8 +452,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070403-1110/eclipse-SDK-I20070403-1110-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200703161546/orbit-S200703161546.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200704050200/emf-sdo-xsd-SDK-I200704050200.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200703301423/uml2-SDK-I200703301423.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200704050200/emf-sdo-xsd-SDK-I200704050200.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200703301423/uml2-SDK-I200703301423.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -483,7 +483,7 @@
           <dependency>http://download.eclipse.org/downloads/drops/I20070313-1051/eclipse-SDK-I20070313-1051-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200703150200/emf-sdo-xsd-SDK-I200703150200.zip</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200702082257/orbit-S200702082257.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200703151535/uml2-SDK-I200703151535.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200703151535/uml2-SDK-I200703151535.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -512,8 +512,8 @@
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3M5-200702091006/eclipse-SDK-3.3M5-linux-gtk.tar.gz</dependency>
           <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S200702082257/orbit-S200702082257.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/S200702222305/uml2-SDK-2.1M5.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/S200702222305/uml2-SDK-2.1M5.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -541,9 +541,9 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3M5-200702091006/eclipse-SDK-3.3M5-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/downloads/orbit-lpgjavaruntime-1.1.0.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200702091416/uml2-SDK-I200702091416.zip</dependency>
+          <dependency>http://download.eclipse.org/downloads/orbit-lpgjavaruntime-1.1.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200702091416/uml2-SDK-I200702091416.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -599,9 +599,9 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070208-1200/eclipse-SDK-I20070208-1200-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/downloads/orbit-lpgjavaruntime-1.1.0.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200702071857/emf-sdo-xsd-SDK-I200702071857.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200702012039/uml2-SDK-I200702012039.zip</dependency>
+          <dependency>http://download.eclipse.org/downloads/orbit-lpgjavaruntime-1.1.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200702071857/emf-sdo-xsd-SDK-I200702071857.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200702012039/uml2-SDK-I200702012039.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -614,7 +614,7 @@
     <updated>2007-02-02T00:27:39Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702011837" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=I200702011837#I200702011837" type="I" version="1.1.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200702011837/" log="buildlog.txt" map="directory.txt"/>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/1.1.0/I200702011837/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://org/modeling/mdt/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=ocl&amp;version=1.1.0
@@ -629,8 +629,8 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070130-0800/eclipse-SDK-I20070130-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200702010200/emf-sdo-xsd-SDK-I200702010200.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.1.0/I200701182158/uml2-SDK-I200701182158.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200702010200/emf-sdo-xsd-SDK-I200702010200.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.1.0/I200701182158/uml2-SDK-I200701182158.zip</dependency>
           <dependency>http://emft.eclipse.org/downloads/orbit-lpgjavaruntime-1.0.0.zip</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -674,8 +674,8 @@
     <updated>2006-12-13T03:54:45Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612071439" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612071439#I200612071439" type="I" version="1.1.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612071439/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/1.1.0/I200612071439/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;version=1.1.0
           </releasenotes>
@@ -683,14 +683,14 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-I200612071439.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/I200612071439/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/I200612071439/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20061205-1200/eclipse-SDK-I20061205-1200-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.3.0/I200612071030/emf-sdo-xsd-SDK-I200612071030.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/tools/orbit/downloads/drops/1.0.0/I200612060942/orbit-lpgjavaruntime-1.0.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200612071030/emf-sdo-xsd-SDK-I200612071030.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/1.0.0/I200612060942/orbit-lpgjavaruntime-1.0.0.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -703,8 +703,8 @@
     <updated>2006-12-13T03:54:33Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200612051208" href="http://www.eclipse.org/emft/downloads/?showAll=1&amp;hlbuild=I200612051208#I200612051208" type="I" version="1.1.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/1.1.0/I200612051208/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/1.1.0/I200612051208/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;version=1.1.0
           </releasenotes>
@@ -712,13 +712,13 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-I200612051208.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/I200612051208/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/I200612051208/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200611300000/emf-sdo-xsd-SDK-I200611300000.zip</dependency>
-          <dependency>http://fullmoon/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200611300000/emf-sdo-xsd-SDK-I200611300000.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -731,8 +731,8 @@
     <updated>2006-11-21T21:22:07Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200611160858" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200611160858#S200611160858" type="S" version="1.1.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/S200611160858/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/S200611160858/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.1.0
           </releasenotes>
@@ -740,13 +740,13 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-1.1M3.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.1.0/S200611160858/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.1.0/S200611160858/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
           <dependency>2.3.0/S200611091546/emf-sdo-xsd-SDK-2.3.0M3.zip</dependency>
-          <dependency>http://fullmoon/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -759,8 +759,8 @@
     <updated>2006-11-21T21:21:31Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200611161546" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200611161546#M200611161546" type="M" version="1.0.2">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.2/M200611161546/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.2/M200611161546/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.2
           </releasenotes>
@@ -768,12 +768,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-M200611161546.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.2/M200611161546/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.2/M200611161546/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -787,8 +787,8 @@
     <updated>2006-11-21T21:20:58Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609250830" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609250830#S200609250830" type="S" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609250830/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609250830/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -796,12 +796,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-S200609250830.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609250830/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609250830/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060919-1045/eclipse-SDK-M20060919-1045-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -815,8 +815,8 @@
     <updated>2006-11-21T21:20:23Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609221313" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609221313#S200609221313" type="S" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609221313/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609221313/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -824,12 +824,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-S200609221313.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609221313/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609221313/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060919-1045/eclipse-SDK-M20060919-1045-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -843,8 +843,8 @@
     <updated>2006-11-21T21:19:52Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609210937" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609210937#S200609210937" type="S" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609210937/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609210937/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -852,12 +852,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-S200609210937.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609210937/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609210937/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060919-1045/eclipse-SDK-M20060919-1045-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -871,8 +871,8 @@
     <updated>2006-11-21T21:19:13Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609141915" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200609141915#S200609141915" type="S" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609141915/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609141915/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -880,12 +880,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-S200609141915.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/S200609141915/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/S200609141915/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/S200609141116/emf-sdo-xsd-SDK-2.2.1RC1.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609141116/emf-sdo-xsd-SDK-2.2.1RC1.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060912-1730/eclipse-SDK-M20060912-1730-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -899,8 +899,8 @@
     <updated>2006-11-21T21:18:38Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609250830" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=R200609250830#R200609250830" type="R" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/R200609250830/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/R200609250830/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -908,12 +908,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-1.0.1.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/R200609250830/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/R200609250830/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -927,8 +927,8 @@
     <updated>2006-11-21T21:18:04Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609141024" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200609141024#M200609141024" type="M" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609141024/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200609141024/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -936,12 +936,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-M200609141024.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609141024/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200609141024/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060906-1737/eclipse-SDK-M20060906-1737-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -955,8 +955,8 @@
     <updated>2006-11-21T21:17:23Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200609071146" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200609071146#M200609071146" type="M" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609071146/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200609071146/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -964,12 +964,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-M200609071146.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200609071146/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200609071146/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
           <dependency>http://download.eclipse.org/downloads/drops/M20060906-1737/eclipse-SDK-M20060906-1737-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
@@ -983,8 +983,8 @@
     <updated>2006-11-21T21:16:38Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200608311108" href="http://www.eclipse.org/emft/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=M200608311108#M200608311108" type="M" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200608311108/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/technology/emft/updates/?project=ocl</update>
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200608311108/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=ocl</update>
         <downloads>http://www.eclipse.org/emft/downloads/?project=ocl#ocl</downloads>
         <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ocl&amp;amp;version=1.0.1
           </releasenotes>
@@ -992,12 +992,12 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ocl-SDK-M200608311108.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/technology/emft/ocl/downloads/drops/1.0.1/M200608311108/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.0.1/M200608311108/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
         <dependencies>
-          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.1/M200608311032/emf-sdo-xsd-SDK-M200608311032.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200608311032/emf-sdo-xsd-SDK-M200608311032.zip</dependency>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20060830-0800/eclipse-SDK-M20060830-0800-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>

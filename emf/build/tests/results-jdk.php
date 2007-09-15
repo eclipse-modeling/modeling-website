@@ -301,7 +301,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 	
 	function getAllJDKTestResults($testsPWD,$path) { // given a build ID, determine any test results for build, junit
 		global $pre,$VER;
-		$mid = "../"."../../tools/emf/"."jdk".$VER."tests/"; // this is a symlink on the filesystem!
+		$mid = "../../../modeling/emf/emf/jdk".$VER."tests/"; // this is a symlink on the filesystem!
 
 		// return four <td> cells, one per test. if all passed, green check + link to log; if failures, red number (of failures) + link to log
 

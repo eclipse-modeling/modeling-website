@@ -303,7 +303,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 	function getAllOldTestResults($testsPWD,$path) { // given a build ID, determine any test results for BVT, FVT, SVT
 		global $pre;
-		$mid = "../"."../../tools/emf/"."tests/"; // this is a symlink on the filesystem!
+		$mid = "../../../modeling/emf/emf/tests/"; // this is a symlink on the filesystem!
 
 		// return four <td> cells, one per test. if all passed, green check + link to log; if failures, red number (of failures) + link to log
 
