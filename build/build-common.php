@@ -162,8 +162,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 						<!-- TODO: move these from emft into modeling/emf -->
 
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
 						</tr>						
 						<tr>						
 							<td> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a></td>
