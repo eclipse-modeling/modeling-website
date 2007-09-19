@@ -28,7 +28,29 @@
 	<!-- UML2 2.1.1 M200708301304 -->
 	
 	<!-- OCL 1.1.1 M200709121604 -->
-	<category-def label="MDT OCL SDK 1.1.1 M200709121604" name="MDT OCL SDK 1.1.1 M200709121604">
+	
+	<!-- EODM 0.9.1 M200709190417 (Incubation) -->
+	<category-def label="MDT EODM SDK (Incubation) 0.9.1 M200709190417" name="MDT EODM SDK (Incubation) 0.9.1 M200709190417">
+		<description>
+MDT EODM SDK (Incubation) 0.9.1 M200709190417: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.eodm.doc" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.doc_0.9.1.v200709190417.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
+	</feature>
+	<feature id="org.eclipse.eodm.examples" version="0.9.1.v200709190417" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm.examples_0.9.1.v200709190417.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
+	</feature>
+	<feature id="org.eclipse.eodm.sdk" version="0.9.1.v200709190417" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm.sdk_0.9.1.v200709190417.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
+	</feature>
+	<feature id="org.eclipse.eodm.source" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.source_0.9.1.v200709190417.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
+	</feature>
+	<feature id="org.eclipse.eodm" version="0.9.1.v200709190417" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm_0.9.1.v200709190417.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
+	</feature>
+<category-def label="MDT OCL SDK 1.1.1 M200709121604" name="MDT OCL SDK 1.1.1 M200709121604">
 		<description>
 MDT OCL SDK 1.1.1 M200709121604: contains runtime, source, and documentation features.
 		</description>
