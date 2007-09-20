@@ -29,8 +29,6 @@
 	
 	<!-- OCL 1.1.1 M200709121604 -->
 	
-	<!-- EODM 0.9.1 M200709190417 (Incubation) -->
-	
 	<!-- EODM 0.9.1RC S200709200027 (Incubation) -->
 	<category-def label="MDT EODM SDK (Incubation) 0.9.1RC S200709200027" name="MDT EODM SDK (Incubation) 0.9.1RC S200709200027">
 		<description>
@@ -51,26 +49,6 @@ MDT EODM SDK (Incubation) 0.9.1RC S200709200027: contains runtime, source, and d
 	</feature>
 	<feature id="org.eclipse.eodm" version="0.9.1.v200709200027" url="features/org.eclipse.eodm_0.9.1.v200709200027.jar" patch="false">
 		<category name="MDT EODM SDK (Incubation) 0.9.1RC S200709200027"/>
-	</feature>
-<category-def label="MDT EODM SDK (Incubation) 0.9.1 M200709190417" name="MDT EODM SDK (Incubation) 0.9.1 M200709190417">
-		<description>
-MDT EODM SDK (Incubation) 0.9.1 M200709190417: contains runtime, source, and documentation features.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.eodm.doc" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.doc_0.9.1.v200709190417.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
-	</feature>
-	<feature id="org.eclipse.eodm.examples" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.examples_0.9.1.v200709190417.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
-	</feature>
-	<feature id="org.eclipse.eodm.sdk" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.sdk_0.9.1.v200709190417.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
-	</feature>
-	<feature id="org.eclipse.eodm.source" version="0.9.1.v200709190417" url="features/org.eclipse.eodm.source_0.9.1.v200709190417.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
-	</feature>
-	<feature id="org.eclipse.eodm" version="0.9.1.v200709190417" url="features/org.eclipse.eodm_0.9.1.v200709190417.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.9.1 M200709190417"/>
 	</feature>
 <category-def label="MDT OCL SDK 1.1.1 M200709121604" name="MDT OCL SDK 1.1.1 M200709121604">
 		<description>

@@ -38,34 +38,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] eodm M200709190417 (0.9.1.M200709190417) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=M200709190417#M200709190417"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=M200709190417#M200709190417</id>
-    <updated>2007-09-19T09:28:22Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200709190417" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=M200709190417#M200709190417" type="M" version="0.9.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.1/M200709190417/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
-        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=M200709190417
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-M200709190417.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.1/M200709190417/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/M20070918-1350/eclipse-SDK-M20070918-1350-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.1/M200709120130/emf-sdo-xsd-SDK-M200709120130.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] eodm M200708240429 (0.9.1.M200708240429) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=M200708240429#M200708240429"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=M200708240429#M200708240429</id>
