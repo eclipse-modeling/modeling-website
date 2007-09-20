@@ -20,7 +20,29 @@
 	<!-- JET 0.8.1 M200709130857 (Incubation) -->
 	
 	<!-- JET 0.8.1 M200709140748 (Incubation) -->
-	<category-def label="M2T JET SDK (Incubation) 0.8.1 M200709140748" name="M2T JET SDK (Incubation) 0.8.1 M200709140748">
+	
+	<!-- JET 0.8.1RC S200709200945 (Incubation) -->
+	<category-def label="M2T JET SDK (Incubation) 0.8.1RC S200709200945" name="M2T JET SDK (Incubation) 0.8.1RC S200709200945">
+		<description>
+M2T JET SDK (Incubation) 0.8.1RC S200709200945: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.doc" version="0.8.0.v20070913-07707w31181_31" url="features/org.eclipse.jet.doc_0.8.0.v20070913-07707w31181_31.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.1RC S200709200945"/>
+	</feature>
+	<feature id="org.eclipse.jet.examples" version="0.8.0.v20070913-077-7w31181_24" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet.examples_0.8.0.v20070913-077-7w31181_24.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.1RC S200709200945"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="0.8.1.v20070913-07U182TZ7cjWEGkBuJH" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet.sdk_0.8.1.v20070913-07U182TZ7cjWEGkBuJH.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.1RC S200709200945"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="0.8.1.v20070913" url="features/org.eclipse.jet.source_0.8.1.v20070913.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.1RC S200709200945"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="0.8.1.v20070913-17E19oA55P5V_8" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.8.1.v20070913-17E19oA55P5V_8.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.1RC S200709200945"/>
+	</feature>
+<category-def label="M2T JET SDK (Incubation) 0.8.1 M200709140748" name="M2T JET SDK (Incubation) 0.8.1 M200709140748">
 		<description>
 M2T JET SDK (Incubation) 0.8.1 M200709140748: contains runtime, source, and documentation features.
 		</description>
