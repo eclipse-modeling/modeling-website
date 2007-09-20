@@ -60,7 +60,38 @@
 	<!-- EMF 2.3.1RC S200709182140 -->
 	
 	<!-- EMF 2.4.0 I200709201448 -->
-	<category-def label="EMF SDK 2.4.0 I200709201448" name="EMF SDK 2.4.0 I200709201448">
+	
+	<!-- QUERY 1.2.0 I200709201804 -->
+	<category-def label="EMF QUERY SDK 1.2.0 I200709201804" name="EMF QUERY SDK 1.2.0 I200709201804">
+		<description>
+EMF QUERY SDK 1.2.0 I200709201804: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.query.doc" version="1.1.100.v200709201851-218Y8s733G3H5_5H96" url="features/org.eclipse.emf.query.doc_1.1.100.v200709201851-218Y8s733G3H5_5H96.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.1.0.v200706071712-10-7w311817182823" url="features/org.eclipse.emf.query.ocl.source_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl" version="1.1.0.v200706071712-10-7w311817182823" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.query.ocl_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.sdk" version="1.1.100.v200709201851-548Y91DExJ5TDfTdUXKVULPt955I" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.query.sdk_1.1.100.v200709201851-548Y91DExJ5TDfTdUXKVULPt955I.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.source" version="1.1.0.v200706071712-10-7w311817182823" url="features/org.eclipse.emf.query.source_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query" version="1.1.0.v200706071712-10-7w311817182823" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.query_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples.source" version="1.1.100.v200709201851" url="features/org.eclipse.emf.query.examples.source_1.1.100.v200709201851.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples" version="1.1.100.v200709201851-42CE_kE77Y7dCDAbMB" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.query.examples_1.1.100.v200709201851-42CE_kE77Y7dCDAbMB.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0 I200709201804"/>
+	</feature>
+<category-def label="EMF SDK 2.4.0 I200709201448" name="EMF SDK 2.4.0 I200709201448">
 		<description>
 EMF SDK 2.4.0 I200709201448: contains runtime, source, and documentation features.
 		</description>
