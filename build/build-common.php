@@ -324,7 +324,7 @@ function setNote(val)
 {
     note = document.getElementById('note');
 	if (val == "emf" || val == "net4j") 
-		note.innerHTML = "Requires 1 SDKs: Eclipse"
+		note.innerHTML = "Requires 1 SDK: Eclipse"
 	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "ocl") 
