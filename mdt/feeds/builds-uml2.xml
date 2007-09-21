@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>UML2 Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-09-12T01:50:25Z</updated>
+  <updated>2007-09-21T14:40:41Z</updated>
   <author>
     <name>UML2 Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml</id>
+  <entry>
+    <title>[announce] uml2 I200709211011 (2.2.0.I200709211011) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200709211011#I200709211011"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200709211011#I200709211011</id>
+    <updated>2007-09-21T14:40:41Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200709211011" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200709211011#I200709211011" type="I" version="2.2.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/2.2.0/I200709211011/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2&amp;version=I200709211011
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2-SDK-I200709211011.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/2.2.0/I200709211011/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20070920-0936/eclipse-SDK-I20070920-0936-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/I200709201448/emf-sdo-xsd-SDK-I200709201448.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] uml2 2.0.4 (R200707131442) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=R200707131442#R200707131442"/>
@@ -479,7 +507,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705110650/emf-sdo-xsd-SDK-2.3.0M7.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
+          <dependency>http://fullmoon/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -506,8 +534,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200705110650/emf-sdo-xsd-SDK-2.3.0M7.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200705110650/emf-sdo-xsd-SDK-2.3.0M7.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/S-3.3M7-200705031400/eclipse-SDK-3.3M7-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -927,7 +955,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3M5-200702091006/eclipse-SDK-3.3M5-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/S200702121527/emf-sdo-xsd-SDK-2.3.0M5.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1039,7 +1067,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20070130-0800/eclipse-SDK-I20070130-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200702010200/emf-sdo-xsd-SDK-I200702010200.zip</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.0/I200702010200/emf-sdo-xsd-SDK-I200702010200.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1179,7 +1207,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3M4-200612141445/eclipse-SDK-3.3M4-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200612211251/emf-sdo-xsd-SDK-2.3.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/S200612211251/emf-sdo-xsd-SDK-2.3.0M4.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1207,7 +1235,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20061220-1400/eclipse-SDK-M20061220-1400-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/M200612211127/emf-sdo-xsd-SDK-M200612211127.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.2/M200612211127/emf-sdo-xsd-SDK-M200612211127.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1235,7 +1263,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.3M4-200612141445/eclipse-SDK-3.3M4-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200612211251/emf-sdo-xsd-SDK-2.3.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/S200612211251/emf-sdo-xsd-SDK-2.3.0M4.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1263,7 +1291,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20061213-1300/eclipse-SDK-I20061213-1300-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1291,7 +1319,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20061213-1300/eclipse-SDK-I20061213-1300-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1319,7 +1347,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20061213-1300/eclipse-SDK-I20061213-1300-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200612141025/emf-sdo-xsd-SDK-I200612141025.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1347,7 +1375,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20061205-1200/eclipse-SDK-I20061205-1200-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200612071030/emf-sdo-xsd-SDK-I200612071030.zip</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.3.0/I200612071030/emf-sdo-xsd-SDK-I200612071030.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1375,7 +1403,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20061121-1845/eclipse-SDK-I20061121-1845-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200611300000/emf-sdo-xsd-SDK-I200611300000.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200611300000/emf-sdo-xsd-SDK-I200611300000.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1402,8 +1430,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/M200611300200/emf-sdo-xsd-SDK-M200611300200.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.2/M200611300200/emf-sdo-xsd-SDK-M200611300200.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1431,7 +1459,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/I20061121-1845/eclipse-SDK-I20061121-1845-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/I200611230000/emf-sdo-xsd-SDK-I200611230000.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/I200611230000/emf-sdo-xsd-SDK-I200611230000.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1458,8 +1486,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200611091546/emf-sdo-xsd-SDK-2.3.0M3.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.3.0/S200611091546/emf-sdo-xsd-SDK-2.3.0M3.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1486,8 +1514,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1514,8 +1542,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/tools/emf/downloads/drops/2.2.2/M200611161441/emf-sdo-xsd-SDK-M200611161441.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/M20061115-1052/eclipse-SDK-M20061115-1052-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1542,8 +1570,8 @@
           </test>
         </tests>
         <dependencies>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.3.0/S200611091546/emf-sdo-xsd-SDK-2.3.0M3.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.3.0/S200611091546/emf-sdo-xsd-SDK-2.3.0M3.zip</dependency>
+          <dependency>http://fullmoon/downloads/drops/S-3.3M3-200611021715/eclipse-SDK-3.3M3-linux-gtk.tar.gz</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1570,7 +1598,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1597,7 +1625,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1624,7 +1652,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1651,7 +1679,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1678,7 +1706,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1705,7 +1733,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1732,7 +1760,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1759,7 +1787,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
         <coordinated status=""/>
       </build>
@@ -1786,7 +1814,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1812,7 +1840,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1838,7 +1866,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060919-1045/eclipse-SDK-M20060919-1045-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1864,7 +1892,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060912-1730/eclipse-SDK-M20060912-1730-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609141116/emf-sdo-xsd-SDK-2.2.1RC1.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/S200609141116/emf-sdo-xsd-SDK-2.2.1RC1.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1890,7 +1918,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060906-1737/eclipse-SDK-M20060906-1737-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200609071016/emf-sdo-xsd-SDK-M200609071016.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1916,7 +1944,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060823-1200/eclipse-SDK-M20060823-1200-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200608241248/emf-sdo-xsd-SDK-M200608241248.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200608241248/emf-sdo-xsd-SDK-M200608241248.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1942,7 +1970,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060810-0800/eclipse-SDK-M20060802-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200608170000/emf-sdo-xsd-SDK-M200608170000.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200608170000/emf-sdo-xsd-SDK-M200608170000.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1968,7 +1996,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060802-0800/eclipse-SDK-M20060802-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.1/M200608030000/emf-sdo-xsd-SDK-M200608030000.zip</dependency>
+          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/2.2.1/M200608030000/emf-sdo-xsd-SDK-M200608030000.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -1994,7 +2022,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060726-0800/eclipse-SDK-M20060726-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.1/M200607270021/emf-sdo-xsd-SDK-M200607270021.zip</dependency>
+          <dependency>http://www.eclipse.org/downloads/download.php?r=1&amp;file=/tools/emf/downloads/drops/2.2.1/M200607270021/emf-sdo-xsd-SDK-M200607270021.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2020,7 +2048,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20060712-0922/eclipse-SDK-M20060712-0922-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/M200607131143/emf-sdo-xsd-SDK-M200607131143.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.1/M200607131143/emf-sdo-xsd-SDK-M200607131143.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2046,7 +2074,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/R-3.2-200606291905/eclipse-SDK-3.2-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.0/R200606271057/emf-sdo-xsd-SDK-2.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/R200606271057/emf-sdo-xsd-SDK-2.2.0.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2072,7 +2100,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.0/S200606221156/emf-sdo-xsd-SDK-2.2.0RC9.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/S200606221156/emf-sdo-xsd-SDK-2.2.0RC9.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2098,7 +2126,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.0/S200606201609/emf-sdo-xsd-SDK-2.2.0RC8.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/S200606201609/emf-sdo-xsd-SDK-2.2.0RC8.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2124,7 +2152,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/M20060609-1217/eclipse-SDK-M20060609-1217-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.0/I200606150000/emf-sdo-xsd-SDK-I200606150000.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/I200606150000/emf-sdo-xsd-SDK-I200606150000.zip</dependency>
         </dependencies>
       </build>
     </summary>
@@ -2150,7 +2178,7 @@
         </tests>
         <dependencies>
           <dependency>http://download.eclipse.org/downloads/drops/S-3.2RC7-200606021317/eclipse-SDK-3.2RC7-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.0/I200606080000/emf-sdo-xsd-SDK-I200606080000.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/emf/downloads/drops/2.2.0/I200606080000/emf-sdo-xsd-SDK-I200606080000.zip</dependency>
         </dependencies>
       </build>
     </summary>
