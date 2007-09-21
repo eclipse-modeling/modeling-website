@@ -32,7 +32,50 @@
 	<!-- EODM 0.9.1RC S200709200027 (Incubation) -->
 	
 	<!-- UML2 2.2.0 I200709211011 -->
-	<category-def label="MDT UML2 SDK 2.2.0 I200709211011" name="MDT UML2 SDK 2.2.0 I200709211011">
+	
+	<!-- OCL 1.2.0 I200709211125 -->
+	<category-def label="MDT OCL SDK 1.2.0 I200709211125" name="MDT OCL SDK 1.2.0 I200709211125">
+		<description>
+MDT OCL SDK 1.2.0 I200709211125: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.1.0.v200706071450-10-7w311817182561" url="features/org.eclipse.emf.ocl.doc_1.1.0.v200706071450-10-7w311817182561.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.source" version="1.1.1.v200709211511-1007w31181_322622" url="features/org.eclipse.emf.ocl.source_1.1.1.v200709211511-1007w31181_322622.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl" version="1.1.1.v200709211511-1007w31181_322622" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.emf.ocl_1.1.1.v200709211511-1007w31181_322622.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all.sdk" version="1.2.0.v200709211511-6778Z_-KH-MUnXUKiGuQw1qWNIjf" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl.all.sdk_1.2.0.v200709211511-6778Z_-KH-MUnXUKiGuQw1qWNIjf.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all" version="1.2.0.v200709211511-338Z7_8Bu2z-HBPWTcIJPRJN" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl.all_1.2.0.v200709211511-338Z7_8Bu2z-HBPWTcIJPRJN.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.doc" version="1.1.0.v200706071450-21-8s733G3E3G5AC3" url="features/org.eclipse.ocl.doc_1.1.0.v200706071450-21-8s733G3E3G5AC3.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.source" version="1.1.100.v200709211511-328Z9oA55P5R_A9IAM" url="features/org.eclipse.ocl.source_1.1.100.v200709211511-328Z9oA55P5R_A9IAM.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml.source" version="1.2.0.v200709211511-11-7w31181_322622" url="features/org.eclipse.ocl.uml.source_1.2.0.v200709211511-11-7w31181_322622.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml" version="1.2.0.v200709211511-11-7w31181_322622" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl.uml_1.2.0.v200709211511-11-7w31181_322622.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.ocl" version="1.1.100.v200709211511-328Z9oA55P5R_A9IAM" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl_1.1.100.v200709211511-328Z9oA55P5R_A9IAM.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.examples.source" version="1.1.0.v200706071450" url="features/org.eclipse.emf.ocl.examples.source_1.1.0.v200706071450.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.examples" version="1.1.0.v200706071450-32-9oA55P5M5P8GJ5" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.emf.ocl.examples_1.1.0.v200706071450-32-9oA55P5M5P8GJ5.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0 I200709211125"/>
+	</feature>
+<category-def label="MDT UML2 SDK 2.2.0 I200709211011" name="MDT UML2 SDK 2.2.0 I200709211011">
 		<description>
 MDT UML2 SDK 2.2.0 I200709211011: contains runtime, source, and documentation features.
 		</description>
