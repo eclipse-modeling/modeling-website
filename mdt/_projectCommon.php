@@ -85,7 +85,7 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs.php?project=$proj");
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
-$Nav->addCustomNav("Plan", "$rooturl/docs/plans/mdt_project_plan_1_0.html", "_self", 2);
+$Nav->addCustomNav("Plan", "$rooturl/docs/plans/mdt_project_plan_1_1.html", "_self", 2);
 
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse.mdt%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
