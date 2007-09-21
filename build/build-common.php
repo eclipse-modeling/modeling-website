@@ -323,12 +323,14 @@ function showfullURL(val)
 function setNote(val) 
 {
     note = document.getElementById('note');
-	if (val == "emf") 
+	if (val == "emf" || val == "net4j") 
 		note.innerHTML = "Requires 1 SDKs: Eclipse"
 	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "ocl") 
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, LPG"
+	else if (val == "cdo") 
+		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, OCL, Net4j"
 	else if (val == "query" || val == "validation") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
 	else if (val == "transaction") 
