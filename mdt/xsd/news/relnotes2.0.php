@@ -42,24 +42,32 @@ $xsdimg = '';
 </div>
 <?php
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/$PR/xsd/news/relnotes-extras.php");
 print "<div id=\"rightcolumn\">\n";
 print <<<XML
 	<div class="sideitem">
 	<h6>Search CVS</h6>
 XML;
 print '	<form action="http://www.eclipse.org/' . (isset($PR) ? $PR : "modeling") . '/searchcvs.php" method="get" name="bugform" target="_blank">' . "\n";
-print <<<XML
+print '
 	<p>
 		<label for="bug">Bug ID: </label><input size="7" type="text" name="q" id="q"/>
 		<input type="submit" value="Go!"/>
 	</p>
 	</form>
 	</div>
-XML;
-print sideitems();
-print "</div>\n";
-
+	<div class="sideitem">
+		<h6>Releases</h6>
+		<p>
+			<ul>
+				<li><a href="http://www.eclipse.org/' . $PR . '/news/relnotes.php?project=xsd&amp;version=HEAD">Latest</a></li>
+				<li><a href="http://www.eclipse.org/' . $PR . '/xsd/news/relnotes2.0.php">2.0.0</a></li>
+				<li><a href="http://www.eclipse.org/' . $PR . '/xsd/news/relnotes1.x.php">1.x</a></li>
+			</ul>
+		</p>
+	</div>
+</div>
+';
+	
 $html = ob_get_contents();
 ob_end_clean();
 

@@ -102,6 +102,8 @@ else
 	}
 }
 
+$vpicker_all = $vpicker;
+$version_requested = $_GET["version"];
 if (!isset($_GET["version"]) || (preg_match("/^\d\.\d\.x$/", $_GET["version"]) && !isset($streams[$_GET["version"]])))
 {
 	if (sizeof($vpicker) > 0)
@@ -129,7 +131,7 @@ if ($result)
 }
 
 $bugs = array();
-
+$tnum_overall = 0;
 if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 {
 	$selected = $_GET["version"];
@@ -208,15 +210,8 @@ print "<h6>Generate Changeset</h6>\n";
 changesetForm();
 print "</div>\n";
 
-$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/$proj/news/relnotes-extras.php";
-if (file_exists($f))
-{
-	include($f);
-}
-if (function_exists("sideitems"))
-{
-	print sideitems();
-}
+require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-sideitems.php");
+print sideItemReleases($version_requested, $tnum_overall);
 print "</div>\n";
 
 $html = ob_get_contents();
@@ -231,13 +226,12 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
 {
-	global $connect, $PR, $bugs;
+	global $connect, $PR, $bugs, $tnum_overall;
 
 	$rbuild = true;
 	$extra_build = false;
-	$version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build);
-	$preversion = relminus($version, $cvsproj, $cvscom, $rbuild);
-
+	$version = pick_version($vpicker, $rbuild, $cvsproj, $cvscom, $connect, $extra_build); # R2_0_maintenance, 2.0.5, ...
+	$preversion = relminus($version, $cvsproj, $cvscom, $rbuild); # 2.0.5, 2.0.4, ...
 	$outerversion = version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvsprojs, $cvscom, $components, $projectsf, $proj, $initial, $selected);
 	$header .= $outerversion[0];
 	$outerversion = $outerversion[1];
@@ -301,10 +295,11 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			return;
 		}
 		$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed) <a href=\"?project=$proj&amp;version=$version&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
+		$tnum_overall += $tnum;
 	}
 	else
 	{
-		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found in $projectsf[$proj] $version</h3><p>" . ($connect ? "There are no builds in $projectsf[$proj] $version yet. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n";
+		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n";
 	}
 	print $header;
 	print "</div>\n";
@@ -351,6 +346,7 @@ function builds($version, $preversion, $cvsproj, $cvscom)
 
 function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_build)
 {
+	global $versions_x;
 	$strict = isset($_GET["strict"]);
 
 	if (!$connect)
@@ -389,17 +385,6 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 				$version = $_GET["version"];
 				$rbuild = false;
 				$extra_build = true;
-			}
-			else if (sizeof($vpicker) > 0)
-			{
-				foreach ($vpicker as $z)
-				{
-					if (!preg_match("/x$/", $z))
-					{
-						$version = $z;
-						break;
-					}
-				}
 			}
 			else
 			{
@@ -580,4 +565,5 @@ function checkIfCanConvertTZ()
 		return false;
 	}
 }
+
 ?>
