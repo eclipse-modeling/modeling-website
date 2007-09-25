@@ -27,18 +27,18 @@ $extraZips = array(
 $dls = array(
 	"/emf" => array(
 		"EMF, SDO, and XSD" => array(
-			"<b style=\"color:green\">All-In-One SDK</b> (runtimes, source, docs)" => "SDK",
+			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
 			"Standalone" => "Standalone",
 			"Models" => "Models",
 			"Automated Tests" => "Automated-Tests",
 			"Examples" => "Examples"
 		),
 		"EMF and SDO" => array(
-			"SDK (runtime, source, docs)" => "SDK",
+			"SDK (Runtime, Source, Doc)" => "SDK",
 			"Runtimes" => "runtime"
 		),
 		"XSD" => array(
-			"SDK (runtime, source, docs)" => "SDK",
+			"SDK (Runtime, Source, Doc)" => "SDK",
 			"Runtime" => "runtime"
 		)
 	),
