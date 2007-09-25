@@ -29,7 +29,7 @@ $dls = array(
 		"Model Workflow Engine" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
-			"Examples" => "examples",
+			//"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
 	),

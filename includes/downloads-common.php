@@ -52,7 +52,6 @@ else // all others
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
 	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=emf#emf\">EMF</a>",
-	"jet" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=jet/#jet\">Jet</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
 	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
@@ -61,9 +60,12 @@ $deps = array(
 	"transaction" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=transaction#transaction\">Transaction</a>",
 	"validation" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=validation#validation\">Validation</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
-	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>"
+	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
+	"orbit" => "<a href=\"http://www.eclipse.org/orbit/\">Orbit</a>",
+	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>"
 );
 
+// TODO: move this out into the per-project or per-component pages
 /* shortname => array("product", "component") */
 $bugzilla_pairs = array(
 	"emf" => array("EMF", ""),
@@ -75,7 +77,8 @@ $bugzilla_pairs = array(
 	"compare" => array("EMFT", "Compare"),
 	"teneo" => array("EMFT", "Teneo"),
 	"cdo" => array("EMFT", "CDO"),
-	"net4j" => array("EMFT", "NET4J")
+	"net4j" => array("EMFT", "NET4J"),
+	"mwe" => array("EMFT", "MWE"),
 );
 
 print "<div id=\"midcolumn\">\n";
