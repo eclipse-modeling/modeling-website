@@ -129,7 +129,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 					for multiple selections)</small>
 					<table>
 						<tr><td><b>Public</b></td><td><b>Mirror</b></td></tr>
-						<?php $buildServer = array("www.eclipse.org","emf.torolab.ibm.com","emft.eclipse.org","download.eclipse.org"); ?>
+						<?php $buildServer = array("www.eclipse.org","emf.torolab.ibm.com","emft.eclipse.org","build.eclipse.org"); ?>
 						<tr>						
 							<td> &#149; <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
 							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
@@ -146,32 +146,26 @@ if (is_array($projects) && sizeof($projects) > 1)
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
 						</tr>						
-
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">Query</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>, 
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>, 
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+							</td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a> 
+							</td>
 						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">Transaction</a></td>
-						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">Validation</a></td>
-						</tr>						
-						<!-- TODO: move these from emft into modeling/emf -->
-
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
 							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
-						</tr>						
+						</tr>		
+						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>				
 						<tr>						
-							<td> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a></td>
-							<td> &#149; <a href="http://fullmoon/tools/gef/downloads/">GEF</a></td>
-						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a></td>
-							<td> &#149; <a href="http://fullmoon/modeling/gmf/downloads/">GMF</a></td>
+							<td colspan="2"> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>, 
+										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>, 
+										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
+										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a></td>
 						</tr>						
 					</table>							
             <p><small>&#160;&#160;-- AND/OR --</small></p>
@@ -672,7 +666,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 			// add to $chosen
 			$urlFixed = trim($url);
 			if ($urlFixed) {
-				$urlFixed = preg_replace("/.+:\/\/(fullmoon[^\/]+)\//","http://download.eclipse.org/",$urlFixed);
+				$urlFixed = preg_replace("/.+:\/\/((fullmoon|emf.torolab.ibm.com|emft.eclipse.org|build.eclipse.org)[^\/]+)\//","http://download.eclipse.org/",$urlFixed);
 				$chosen[] = $urlFixed;
 			}
 			// add to file, if it exists and is writable
@@ -700,6 +694,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 
 function findCatg($url) {
 	$matches = array(
+		"12wtp" => "wtp-",
 		"11gmf" => "GMF-",
 		"10gef" => "GEF-",
 		"09net4j" => "emft-net4j-",
