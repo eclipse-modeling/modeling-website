@@ -59,7 +59,7 @@ if ($result)
 		$vpicker[] = $row[0];
 	}
 }
-if ($debug) { print "vpicker: "; print_r($vpicker); print "<hr>"; }
+debug_r($vpicker, "\$vpicker:", "<hr>");
 
 /* figuring out what branch goes with what z.y.x stream is tricky, we guess based on a few assumptions:
  * - all streams have a maintenance branch
@@ -85,24 +85,24 @@ if ($result)
 		$latest[] = $row[0];
 	}
 }
-if ($debug) { print "Latest: "; print_r($latest); print "<hr>"; }
+debug_r($latest, "\$latest:", "<hr>");
 
 if (isset($streams) && is_array($streams) && isset($streams[$proj]))
 {
 	$streams = $streams[$proj];
-	if ($debug) { print "Streams(1): "; print_r($streams); print "<hr>"; }
+    debug_r($streams, "\$streams(1): ", "<hr>");
 }
 else
 {
 	if (sizeof($vpicker) == sizeof($latest))
 	{
 		$streams = array_combine($vpicker, $latest);
-		if ($debug) { print "Streams(2): "; print_r($streams); print "<hr>"; }
+		debug_r($streams, "\$streams(2): ", "<hr>");
 	}
 	else
 	{
 		$streams = array();
-		debug("oops, " . sizeof($vpicker) . " != " . sizeof($latest) . ", you should define \$streams[\"$proj\"] in {$_SERVER["PHP_SELF"]}");
+		debug("<h2>oops, sizeof \$vpicker (" . sizeof($vpicker) . ") != sizeof \$latest (" . sizeof($latest) . "). You must define \$streams[\"$proj\"] in {$_SERVER["PHP_SELF"]}</h2>");
 	}
 }
 
