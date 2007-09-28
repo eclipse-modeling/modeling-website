@@ -59,6 +59,7 @@ if ($result)
 		$vpicker[] = $row[0];
 	}
 }
+if ($debug) { print "vpicker: "; print_r($vpicker); print "<hr>"; }
 
 /* figuring out what branch goes with what z.y.x stream is tricky, we guess based on a few assumptions:
  * - all streams have a maintenance branch
@@ -84,16 +85,19 @@ if ($result)
 		$latest[] = $row[0];
 	}
 }
+if ($debug) { print "Latest: "; print_r($latest); print "<hr>"; }
 
 if (isset($streams) && is_array($streams) && isset($streams[$proj]))
 {
 	$streams = $streams[$proj];
+	if ($debug) { print "Streams(1): "; print_r($streams); print "<hr>"; }
 }
 else
 {
 	if (sizeof($vpicker) == sizeof($latest))
 	{
 		$streams = array_combine($vpicker, $latest);
+		if ($debug) { print "Streams(2): "; print_r($streams); print "<hr>"; }
 	}
 	else
 	{
