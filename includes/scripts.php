@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.41 2007/08/17 18:19:06 nickb Exp $
+// $Id: scripts.php,v 1.42 2007/09/28 19:17:30 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -395,6 +395,23 @@ function debug($str, $level = 0)
 	if ($debug > $level)
 	{
 		print "<div class=\"debug\">$str</div>\n";
+	}
+}
+
+function debug_r($str, $header = "", $footer = "", $level = 0)
+{
+	global $debug;
+
+	if ($debug > $level)
+	{
+		if ($header) {
+		    print "<div class=\"debug\">"; print $header; print "</div>\n";
+		}
+		print "<div class=\"debug\">"; print_r($str); print "</div>\n";
+		if ($footer)
+		{
+		    print "<div class=\"debug\">"; print $footer; print "</div>\n";
+		}
 	}
 }
 
