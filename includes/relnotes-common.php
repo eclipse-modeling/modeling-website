@@ -299,6 +299,7 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 	}
 	else
 	{
+		//TODO: don't say 'nothing found' if $tnum_overall > 0
 		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n";
 	}
 	print $header;
@@ -346,7 +347,6 @@ function builds($version, $preversion, $cvsproj, $cvscom)
 
 function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_build)
 {
-	global $versions_x;
 	$strict = isset($_GET["strict"]);
 
 	if (!$connect)
@@ -385,6 +385,17 @@ function pick_version($vpicker, &$rbuild, $cvsproj, $cvscom, $connect, &$extra_b
 				$version = $_GET["version"];
 				$rbuild = false;
 				$extra_build = true;
+			}
+			else if (sizeof($vpicker) > 0)
+			{
+				foreach ($vpicker as $z)
+				{
+					if (!preg_match("/x$/", $z))
+					{
+						$version = $z;
+						break;
+					}
+				}
 			}
 			else
 			{
