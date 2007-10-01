@@ -18,7 +18,32 @@
 	<!-- OCL 1.1.1 -->
 	
 	<!-- UML2 2.1.1 -->
-	<category-def label="MDT UML2 SDK 2.1.1" name="MDT UML2 SDK 2.1.1">
+	
+	<!-- UML2TOOLS 0.7.1 (Incubation) -->
+	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.7.1" name="MDT UML2TOOLS SDK (Incubation) 0.7.1">
+		<description>
+MDT UML2TOOLS SDK (Incubation) 0.7.1: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.diagram.source" version="0.7.1.v200710010534" url="features/org.eclipse.uml2.diagram.source_0.7.1.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+	<feature id="org.eclipse.uml2.diagram" version="0.7.1.v200710010534" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.diagram_0.7.1.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.doc" version="0.7.0.v200710010534" url="features/org.eclipse.uml2tools.doc_0.7.0.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.sdk" version="0.7.1.v200710010534" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools.sdk_0.7.1.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools" version="0.7.1.v200710010534" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools_0.7.1.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.examples" version="0.7.1.v200710010534" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools.examples_0.7.1.v200710010534.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.7.1"/>
+	</feature>
+<category-def label="MDT UML2 SDK 2.1.1" name="MDT UML2 SDK 2.1.1">
 		<description>
 MDT UML2 SDK 2.1.1: contains runtime, source, and documentation features.
 		</description>
