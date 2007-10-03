@@ -46,7 +46,32 @@
 	<!-- UML2TOOLS 0.8.0M2 S200710031549 (Incubation) -->
 	
 	<!-- UML2 2.2M2 S200710031132 -->
+	
+	<!-- UML2 2.2M2 S200710031132 -->
 	<category-def label="MDT UML2 SDK 2.2M2 S200710031132" name="MDT UML2 SDK 2.2M2 S200710031132">
+		<description>
+MDT UML2 SDK 2.2M2 S200710031132: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200709210944" url="features/org.eclipse.uml2.doc_2.2.0.v200709210944.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.1.0.v200706251652" url="features/org.eclipse.uml2.examples.source_2.1.0.v200706251652.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.1.0.v200706251652" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.examples_2.1.0.v200706251652.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200710031301" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.sdk_2.2.0.v200710031301.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.2.0.v200710031301" url="features/org.eclipse.uml2.source_2.2.0.v200710031301.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.2.0.v200710031301" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.2.0.v200710031301.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2M2 S200710031132"/>
+	</feature>
+<category-def label="MDT UML2 SDK 2.2M2 S200710031132" name="MDT UML2 SDK 2.2M2 S200710031132">
 		<description>
 MDT UML2 SDK 2.2M2 S200710031132: contains runtime, source, and documentation features.
 		</description>
