@@ -1,8 +1,7 @@
 <?php
 function sideItemReleases($version="", $total=0)
 {
-    global $PR, $projct, $vpicker_all;
-    $additionalSideItems = "";
+    global $PR, $projct, $vpicker_all, $additionalSideItems;
     /* link hack for SDO case */
     if ($projct == "sdo")
     {
@@ -12,11 +11,6 @@ function sideItemReleases($version="", $total=0)
     else
     {
         $projct2 = $projct;        
-    }
-    $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $projct . "/news/relnotes-extras.php";
-    if (file_exists($f))
-    {
-    	include_once($f); # defines $additionalSideItems, if applicable (eg., EMF and XSD 2.0 and 1.x)
     }
 
     $out = "";

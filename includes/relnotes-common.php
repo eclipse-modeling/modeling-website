@@ -21,6 +21,16 @@ if (!isset($cvsprojs) || !is_array($cvsprojs))
 	$cvsprojs = array();
 }
 
+/* 
+ * OPTIONAL extras:
+ * $additionalSideItems (eg., EMF and XSD 2.0 and 1.x)
+ * $cannedBugs (bugs not found in database)
+ */
+$additionalSideItems = "";
+$cannedBugs = array(); 
+$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $projct . "/news/relnotes-extras.php";
+if (file_exists($f)) { include_once($f); }
+
 $projectsf = array_flip(array_diff($projects, $extraprojects, $nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
 
@@ -230,7 +240,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
 {
-	global $connect, $PR, $bugs, $tnum_overall;
+	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs;
 
 	$rbuild = true;
 	$extra_build = false;
@@ -280,14 +290,35 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			$header2 .= "<ul>\n";
 			$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
 			$header2 .= "<ul>\n";
-			while ($row = mysql_fetch_row($result))
+			if ($num > 0)
 			{
-				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
-				$bugs[] = $row[0];
-			}
-			if ($num == 0)
+    			while ($row = mysql_fetch_row($result))
+    			{
+    				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+    				$bugs[] = $row[0];
+    			}
+			} 
+			else
 			{
-				$header2 .= "<li>No bugs fixed for this release.</li>";
+			    if (isset($cannedBugs) && isset($cannedBugs[$rels[$i][1]]) && is_array($cannedBugs[$rels[$i][1]]) && sizeof($cannedBugs[$rels[$i][1]])>0)
+			    {
+        			$sql = "SELECT `bugid`, `title` FROM `bugdescs` WHERE `bugid` IN (" . join(", ",$cannedBugs[$rels[$i][1]]) . ") GROUP BY `bugid` DESC";
+        			$result = wmysql_query($sql);
+        			$num = mysql_num_rows($result);
+			        $tnum += $num;
+        			if ($num > 0)
+        			{
+            			while ($row = mysql_fetch_row($result))
+            			{
+            				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+            				$bugs[] = $row[0];
+            			}
+        			} 
+ 			    }
+			    else
+			    {
+                    $header2 .= "<li>No bugs fixed for this release.</li>";			        
+			    }
 			}
 			$header2 .= "</ul>\n";
 			$header2 .= "</li>\n";
