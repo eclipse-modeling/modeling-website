@@ -80,7 +80,38 @@
 	<!-- EMF 2.3.2 M200710031331 -->
 	
 	<!-- QUERY 1.2.0 I200710031708 -->
-	<category-def label="EMF QUERY SDK 1.2.0 I200710031708" name="EMF QUERY SDK 1.2.0 I200710031708">
+	
+	<!-- VALIDATION 1.2.0 I200710031709 -->
+	<category-def label="EMF VALIDATION SDK 1.2.0 I200710031709" name="EMF VALIDATION SDK 1.2.0 I200710031709">
+		<description>
+EMF VALIDATION SDK 1.2.0 I200710031709: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.validation.doc" version="1.1.0.v200706071520-21-8s733G3E4C5_88" url="features/org.eclipse.emf.validation.doc_1.1.0.v200706071520-21-8s733G3E4C5_88.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.ocl.source" version="1.1.0.v200706071520-10-7w311817182631" url="features/org.eclipse.emf.validation.ocl.source_1.1.0.v200706071520-10-7w311817182631.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.ocl" version="1.1.0.v200706071520-10-7w311817182631" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.validation.ocl_1.1.0.v200706071520-10-7w311817182631.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.sdk" version="1.1.100.v200709201856-54_793EGWG5cJjemkgWaheU6uE9F" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.validation.sdk_1.1.100.v200709201856-54_793EGWG5cJjemkgWaheU6uE9F.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.source" version="1.1.100.v200709201856-31_79oA55P5P7I8MDA" url="features/org.eclipse.emf.validation.source_1.1.100.v200709201856-31_79oA55P5P7I8MDA.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation" version="1.1.100.v200709201856-31_79oA55P5P7I8MDA" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.validation_1.1.100.v200709201856-31_79oA55P5P7I8MDA.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.examples.source" version="1.1.0.v200706071520" url="features/org.eclipse.emf.validation.examples.source_1.1.0.v200706071520.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.examples" version="1.1.0.v200706071520-52_7AgI99h9cAZDRKI" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.validation.examples_1.1.0.v200706071520-52_7AgI99h9cAZDRKI.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0 I200710031709"/>
+	</feature>
+<category-def label="EMF QUERY SDK 1.2.0 I200710031708" name="EMF QUERY SDK 1.2.0 I200710031708">
 		<description>
 EMF QUERY SDK 1.2.0 I200710031708: contains runtime, source, and documentation features.
 		</description>
