@@ -4,11 +4,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>EMF Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-10-03T04:40:58Z</updated>
+  <updated>2007-10-03T16:20:30Z</updated>
   <author>
     <name>EMF Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml</id>
+  <entry>
+    <title>[announce] emf R200710030400 (2.2.4.R200710030400) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=R200710030400#R200710030400"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=R200710030400#R200710030400</id>
+    <updated>2007-10-03T16:20:30Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_2_maintenance" datetime="200710030400" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=R200710030400#R200710030400" type="R" version="2.2.4">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.4/R200710030400/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=R200710030400
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-R200710030400.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.2.4/R200710030400/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.2.2-200702121330/eclipse-SDK-3.2.2-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status="CALLISTOSITEREADY"/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] emf I200710022259 (2.4.0.I200710022259) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200710022259#I200710022259"/>
@@ -123,7 +150,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=S200709182140#S200709182140</id>
     <updated>2007-09-19T03:23:13Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200709182140" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=S200709182140#S200709182140" type="S" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200709182140" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=S200709182140#S200709182140" type="S" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/S200709182140/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -177,7 +204,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709120130#M200709120130</id>
     <updated>2007-09-12T06:33:32Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200709120130" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709120130#M200709120130" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200709120130" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709120130#M200709120130" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200709120130/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -204,7 +231,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709042200#M200709042200</id>
     <updated>2007-09-05T03:06:07Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200709042200" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709042200#M200709042200" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200709042200" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200709042200#M200709042200" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200709042200/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -231,7 +258,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708301145#M200708301145</id>
     <updated>2007-08-30T16:57:24Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200708301145" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708301145#M200708301145" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200708301145" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708301145#M200708301145" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708301145/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -339,7 +366,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230</id>
     <updated>2007-08-29T04:51:48Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200708282230" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200708282230" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708282230#M200708282230" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708282230/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -393,7 +420,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708142030#M200708142030</id>
     <updated>2007-08-15T01:37:23Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200708142030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708142030#M200708142030" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200708142030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708142030#M200708142030" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708142030/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -447,7 +474,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708072030#M200708072030</id>
     <updated>2007-08-08T01:38:29Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200708072030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708072030#M200708072030" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200708072030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200708072030#M200708072030" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200708072030/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -501,7 +528,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707312030#M200707312030</id>
     <updated>2007-08-01T01:37:53Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200707312030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707312030#M200707312030" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200707312030" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707312030#M200707312030" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200707312030/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -555,7 +582,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707242120#M200707242120</id>
     <updated>2007-07-25T16:53:55Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200707242120" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707242120#M200707242120" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200707242120" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707242120#M200707242120" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200707242120/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -690,7 +717,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707171853#M200707171853</id>
     <updated>2007-07-18T06:23:24Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200707171853" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707171853#M200707171853" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200707171853" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707171853#M200707171853" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200707171853/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
@@ -744,7 +771,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707111516#M200707111516</id>
     <updated>2007-07-11T21:07:12Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_3_maintenance" datetime="200707111516" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707111516#M200707111516" type="M" version="2.3.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200707111516" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200707111516#M200707111516" type="M" version="2.3.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.3.1/M200707111516/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
