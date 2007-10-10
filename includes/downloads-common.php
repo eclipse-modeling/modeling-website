@@ -921,12 +921,12 @@ function getBuildArtifacts($dir, $branchID)
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
-				preg_match("/.+-SDK-(.+).zip/", $buildfile[$z], $reg);
+				preg_match("/.+-SDK-(incubation-|)(.+).zip/", $buildfile[$z], $reg);
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
 					$vanity = preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]);
-					if ($vanity != $reg[1])
+					if ($vanity != $reg[2])
 					{
-						$vanity = $reg[1] . " " . $vanity;
+						$vanity = $reg[2] . " " . $vanity;
 					}
 				}
 				if ($vanity == " downloads") {
