@@ -47,12 +47,13 @@ $cvscoms = array(
 
 $projects = array(
 	"Compare" => "compare",
-	"Search" => "search",
-	"JCR Management" => "jcrm",
-	"Teneo" => "teneo",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
-	"Modeling Workflow" => "mwe"
+	"Teneo" => "teneo",
+    // no builds yet
+	"JCR Management" => "jcrm",
+	"Modeling Workflow" => "mwe",
+	"Search" => "search",
 );
 
 $bugcoms = array_flip($projects);
