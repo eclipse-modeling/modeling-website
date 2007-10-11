@@ -18,7 +18,38 @@
 	<!-- NET4J 0.8.0 I200710101632 (Incubation) -->
 	
 	<!-- CDO 0.8.0 I200710101638 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200710101638" name="EMFT CDO SDK (Incubation) 0.8.0 I200710101638">
+	
+	<!-- MWE 0.7.0 I200710110222 -->
+	<category-def label="EMFT MWE SDK 0.7.0 I200710110222" name="EMFT MWE SDK 0.7.0 I200710110222">
+		<description>
+EMFT MWE SDK 0.7.0 I200710110222: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mwe.core.source" version="0.7.0.v200710110222" url="features/org.eclipse.emf.mwe.core.source_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.core" version="0.7.0.v200710110222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.mwe.core_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.doc" version="0.7.0.v200710110222" url="features/org.eclipse.emf.mwe.doc_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.examples.source" version="0.7.0.v200710110222" url="features/org.eclipse.emf.mwe.examples.source_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.examples" version="0.7.0.v200710110222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.mwe.examples_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.sdk" version="0.7.0.v200710110222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.mwe.sdk_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.ui.source" version="0.7.0.v200710110222" url="features/org.eclipse.emf.mwe.ui.source_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.ui" version="0.7.0.v200710110222" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.mwe.ui_0.7.0.v200710110222.jar" patch="false">
+		<category name="EMFT MWE SDK 0.7.0 I200710110222"/>
+	</feature>
+<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200710101638" name="EMFT CDO SDK (Incubation) 0.8.0 I200710101638">
 		<description>
 EMFT CDO SDK (Incubation) 0.8.0 I200710101638: contains runtime, source, and documentation features.
 		</description>
