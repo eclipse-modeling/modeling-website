@@ -56,7 +56,7 @@ ob_start();
 		Build News</h6>
 		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
 		<ul>
-			<li><a href="/modeling/emft/news/news-whatsnew.php#build">Other build news</a></li>
+			<li><a href="/modeling/emft/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
 	</div>
 
