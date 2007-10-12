@@ -252,7 +252,7 @@ else
 	// echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR<br/>";
 
 	$logdir = "/home/www-data/promo_logs/";
-	$logfile = "promo_log_" . $BR . "." . $ID . "_" . date("YmdHis") . ($_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
+	$logfile = "promo_log_" . $projct . "_" . $BR . "." . $ID . "_" . date("Y-m-d-H.i.s") . ($_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
 
 	if (!$previewOnly)
 	{
