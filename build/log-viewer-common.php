@@ -44,10 +44,13 @@ if (!isset ($reps))
 		"o.e.mdt" => "org.eclipse.mdt",
 		"o.e.m.c.r" => "org.eclipse.modeling.common.releng",
 		"o.e.r" => "org.eclipse.releng",
+		"dedd" => "download.eclipse.org/eclipse/downloads/drops",
+		"ddd" => "download.eclipse.org/downloads/drops",
 		"dd" => "/home/www-data/build/$PR/${projct}/downloads/drops",
+		"dm" => "download.eclipse.org/modeling",
+		"de" => "download.eclipse.org/eclipse",
 		"dte" => "download.eclipse.org/technology",
-		"dto" => "download.eclipse.org/tools",
-		"dm" => "download.eclipse.org/modeling"
+		"dto" => "download.eclipse.org/tools"
 	);
 }
 
