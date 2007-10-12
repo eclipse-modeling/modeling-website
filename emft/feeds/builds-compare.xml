@@ -66,34 +66,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] compare 0.7.0 (R200709070929) is available</title>
-    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=R200709070929#R200709070929"/>
-    <id>http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=R200709070929#R200709070929</id>
-    <updated>2007-09-11T14:43:05Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200709070929" href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=R200709070929#R200709070929" type="R" version="0.7.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/compare/downloads/drops/0.7.0/R200709070929/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emft/updates/</update>
-        <downloads>http://download.eclipse.org/modeling/emft/downloads/?project=compare</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=compare&amp;version=R200709070929
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-compare-SDK-0.7.0.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/compare/downloads/drops/0.7.0/R200709070929/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://archive.eclipse.org/modeling/emf/emf/downloads/drops/2.2.2/R200702131851/emf-sdo-xsd-SDK-2.2.2.zip</dependency>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.2.2-200702121330/eclipse-SDK-3.2.2-linux-gtk.tar.gz</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] compare 0.7.0RC3 (S200708290221) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=S200708290221#S200708290221"/>
     <id>http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=S200708290221#S200708290221</id>
