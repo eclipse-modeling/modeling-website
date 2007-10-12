@@ -22,28 +22,6 @@
 	<!-- UML2TOOLS 0.7.1 (Incubation) -->
 	
 	<!-- EODM 0.9.1 (Incubation) -->
-	
-	<!-- EODM 0.8.1 (Incubation) -->
-	<category-def label="MDT EODM SDK (Incubation) 0.8.1" name="MDT EODM SDK (Incubation) 0.8.1">
-		<description>
-MDT EODM SDK (Incubation) 0.8.1: contains runtime, source, and documentation features.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.eodm.doc" version="0.8.0.v200710090352" url="features/org.eclipse.eodm.doc_0.8.0.v200710090352.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.8.1"/>
-	</feature>
-	<feature id="org.eclipse.eodm.examples" version="0.8.0.v200710090352" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm.examples_0.8.0.v200710090352.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.8.1"/>
-	</feature>
-	<feature id="org.eclipse.eodm.sdk" version="0.8.0.v200710090352" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm.sdk_0.8.0.v200710090352.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.8.1"/>
-	</feature>
-	<feature id="org.eclipse.eodm.source" version="0.8.0.v200710090352" url="features/org.eclipse.eodm.source_0.8.0.v200710090352.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.8.1"/>
-	</feature>
-	<feature id="org.eclipse.eodm" version="0.8.0.v200710090352" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.eodm_0.8.0.v200710090352.jar" patch="false">
-		<category name="MDT EODM SDK (Incubation) 0.8.1"/>
-	</feature>
 <category-def label="MDT EODM SDK (Incubation) 0.9.1" name="MDT EODM SDK (Incubation) 0.9.1">
 		<description>
 MDT EODM SDK (Incubation) 0.9.1: contains runtime, source, and documentation features.
