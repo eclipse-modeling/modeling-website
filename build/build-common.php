@@ -329,8 +329,10 @@ function setNote(val)
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
 	else if (val == "transaction") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
-	else if (val == "uml2tools")
-		note.innerHTML = "Requires 9 SDKs: Eclipse, EMF, UML2, OCL, EMFT-QTV (3), GEF, GMF"
+	else if (val == "mwe")
+		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, GMF"
+	else if (val == "search")
+		note.innerHTML = "Requires 5 SDKs: Eclipse, EMF, UML2, OCL, GMF"
 	else
 		note.innerHTML = "Requires at least 2 SDKs: Eclipse, EMF, ..."
 }
