@@ -172,9 +172,7 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>News</h6>
 			<ul>
-				<li>Attend <a href="http://eclipsezilla.eclipsecon.org/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=EclipseCon+2007&track_id=7&long_desc_type=substring&long_desc=&keywords_type=allwords&keywords=&bug_status=SCHEDULED&bug_status=RESOLVED&resolution=ACCEPTED&emailtype1=substring&email1=&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">presentations on modeling projects</a> at <a href="http://www.eclipsecon.org/">EclipseCon 2007</a>.</li>
-				<li>M2T project completes its <a href="http://www.eclipse.org/proposals/m2t/">Creation Review</a>.</li>
-				<li><a href="http://www.eclipse.org/m2m/">M2M project</a> approved and provisioned.</li>
+				<li>Domain Specific Modeling <a href="http://eclipsesummit.org/summiteurope2007/index.php?page=detail/&id=32">demo</a> viewlets from <a href="http://eclipsesummit.org/summiteurope2007/index.php">Eclipse Summit Europe 2007</a> are <a href="http://www.eclipse.org/modeling/presentations/ese2007/index.php">posted</a>.</li>
 			</ul>
 		</div>
 	</div>
