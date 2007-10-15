@@ -74,15 +74,30 @@ function doRequirements()
 	
 	<ul id="requirements">
 		<li>
-			<div class="bleedingedge">
-				EMF 2.3.0 contains significant, though binary
+<!--
+	 		<div class="bleedingedge">
+				EMF 2.4.0 contains significant, though binary
 				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
 			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
-			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0</a>
+-->
+			<a href="javascript:toggle('req2_4_0')">EMF 2.4.0</a>
 			<ul id="req2_3_0">
-				<li>Eclipse 3.3.0</li>
-				<li>Java 5.0</li>
+				<li>Eclipse 3.4.0</li>
+				<li>Java 5.0+</li>
+			</ul>
+		</li>
+
+		<li>
+			<div class="bleedingedge">
+				EMF 2.3.x contains significant, though binary
+				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
+			</div>
+			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
+			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0-2.3.1</a>
+			<ul id="req2_3_0">
+				<li>Eclipse 3.3.0, 3.3.1</li>
+				<li>Java 5.0+</li>
 			</ul>
 		</li>
 
