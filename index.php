@@ -40,7 +40,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	
 	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/downloads/index_project.php");
 	$Nav->addCustomNav("EMF", "/modeling/emf/downloads/", "_self", 3);
-	$Nav->addCustomNav("EMFT", "/emft/downloads/", "_self", 3);
+	$Nav->addCustomNav("EMFT", "/modeling/emft/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/", "_self", 3);
 	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
 	$Nav->addCustomNav("MDDi", "/mddi/download.php", "_self", 3);
@@ -71,12 +71,12 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://www.eclipse.org/modeling/emf/">Eclipse Modeling Framework</a> (EMF) : a modeling framework and code generation facility for building tools and other applications based on a structured data model.</li>
 				<ul>
-					<li><a href="http://www.eclipse.org/emft/projects/cdo/">CDO</a> : a technology for distributed shared EMF models and a fast server-based O/R mapping solution. With CDO you can easily enhance your existing models in such a way that saving a resource transparently commits the applied changes to a relational database.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/net4j/">Net4j</a> : an extensible client-server system based on the Eclipse Runtime and the Spring Framework. You can easily extend the protocol stack with Eclipse plugins that provide new transport or application protocols.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/teneo/">Teneo</a> : a database persistency solution for EMF using Hibernate or JPOX/JDO 2.0. It supports automatic creation of EMF to Relational Mappings and the related database schemas.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/query/">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/transaction/">Model Transaction</a> (MT) : provides a model management layer built on top of EMF for managing EMF resources.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/validation/">Validation Framework</a> (VF) : provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
+					<li><a href="http://www.eclipse.org/modeling/emft/?project=cdo">CDO</a> : a technology for distributed shared EMF models and a fast server-based O/R mapping solution. With CDO you can easily enhance your existing models in such a way that saving a resource transparently commits the applied changes to a relational database.</li>
+					<li><a href="http://www.eclipse.org/modeling/emft/?project=net4j">Net4j</a> : an extensible client-server system based on the Eclipse Runtime and the Spring Framework. You can easily extend the protocol stack with Eclipse plugins that provide new transport or application protocols.</li>
+					<li><a href="http://www.eclipse.org/modeling/emft/?project=teneo">Teneo</a> : a database persistency solution for EMF using Hibernate or JPOX/JDO 2.0. It supports automatic creation of EMF to Relational Mappings and the related database schemas.</li>
+					<li><a href="http://www.eclipse.org/modeling/emf/?project=query">Model Query</a> (MQ) : facilitates the process of search and retrieval of model elements of interest in a flexible yet controlled and structured manner.</li>
+					<li><a href="http://www.eclipse.org/modeling/emf/?project=transaction">Model Transaction</a> (MT) : provides a model management layer built on top of EMF for managing EMF resources.</li>
+					<li><a href="http://www.eclipse.org/modeling/emf/?project=validation">Validation Framework</a> (VF) : provides model constraint definition, traversal, and evaluation for EMF model validation.</li>
 				</ul>
 			</ul>
 		</div>
@@ -111,10 +111,9 @@ development technologies within the Eclipse community by providing a unified set
 				<ul>
 					<li><a href="http://www.eclipse.org/m2m/atl/">Atlas Transformation Language (ATL)</a> : a model transformation language and toolkit.</li>
 				</ul>
-				<li><a href="http://www.eclipse.org/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
+				<li><a href="http://www.eclipse.org/modeling/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
-					<li><a href="http://www.eclipse.org/emft/projects/jet/">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF.</li>
-					<li><a href="http://www.eclipse.org/emft/projects/jeteditor/">JET Editor</a> : leverages Eclipse text editor framework to provide this capability via features like syntax coloring, error highlighting and code completion.</li>
+					<li><a href="http://www.eclipse.org/modeling/m2t/?project=jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF. Includes an editor which provides features like syntax coloring, error highlighting and code completion.</li>
 				</ul>
 			</ul>
 		</div>
