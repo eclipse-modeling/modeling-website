@@ -93,7 +93,7 @@ function doRequirements()
 				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
 			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
-			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: <a href="#archives">2.3.0</a>, <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a>
+			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: <a href="#archives">2.3.0</a> <a href="#archives"><img src="/images/link-out.png"></a>, <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a> <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135"><img src="/images/link-out.png"></a>
 			<ul id="req2_3_0">
 				<li>Eclipse 3.3.0, 3.3.1</li>
 				<li>Java 5.0+</li>
