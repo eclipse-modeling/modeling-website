@@ -68,10 +68,9 @@ function doRequirements()
 	for <b class="emf">EMF</b>, <b class="xsd">XSD</b>, and <b class="sdo">SDO</b>).
 	Specific build dependencies and JDK version used for a given release are shown
 	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> -
-	under <b>Build Dependencies</b>. </p>
+	under <b>Build Dependencies</b>. See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">EMF FAQ</a>.</p>
 	<p>Note that Eclipse is only required if you intend to use the UI - for runtime-only use, only a JDK is required.</p>
 
-	
 	<ul id="requirements">
 		<li>
 <!--
@@ -82,7 +81,7 @@ function doRequirements()
 			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
 -->
 			<a href="javascript:toggle('req2_4_0')">EMF 2.4.0</a>
-			<ul id="req2_3_0">
+			<ul id="req2_4_0">
 				<li>Eclipse 3.4.0</li>
 				<li>Java 5.0+</li>
 			</ul>
@@ -94,7 +93,7 @@ function doRequirements()
 				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
 			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
-			<a href="javascript:toggle('req2_3_0')">EMF 2.3.0-2.3.1</a>
+			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: <a href="#archives">2.3.0</a>, <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a>
 			<ul id="req2_3_0">
 				<li>Eclipse 3.3.0, 3.3.1</li>
 				<li>Java 5.0+</li>
