@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
 
+<news date="October 17, 2007" showOn="whatsnew">
+    OCL parser <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=176110">refactorings</a>
+    for grammar extensibility and improved error handling now available in the
+    OCL 1.2 <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=I200710171533&project=ocl#I200710171533">build</a> of 17 Oct.
+</news>
 <news date="March 29, 2007" showOn="whatsnew">
     Details about
     <a href="http://wiki.eclipse.org/index.php/OCL_1.1_API_Changes">API Changes</a>
@@ -193,6 +198,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.19 2007/03/29 13:16:10 cdamus Exp $ -->
+<!-- $Id: news.xml,v 1.20 2007/10/17 21:07:29 cdamus Exp $ -->
 
 </doc>
