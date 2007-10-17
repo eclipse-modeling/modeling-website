@@ -93,9 +93,11 @@ function doRequirements()
 				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
 			</div>
 			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
-			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: <a href="#archives">2.3.0</a> <a href="#archives"><img src="/modeling/images/link-out.png"></a>, <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a> <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135"><img src="/modeling/images/link-out.png"></a>
+			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: 
+<a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a> <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135"><img src="/modeling/images/link-out.png"></a>, 
+<a href="#archives">2.3.0</a> <a href="#archives"><img src="/modeling/images/link-out.png"></a> 
 			<ul id="req2_3_0">
-				<li>Eclipse 3.3.0, 3.3.1</li>
+				<li>Eclipse 3.3.1, 3.3.0</li>
 				<li>Java 5.0+</li>
 			</ul>
 		</li>
@@ -109,7 +111,7 @@ function doRequirements()
 		</li>
 
 		<li>
-			<a href="javascript:toggle('req2_1_0')">EMF 2.1.2, 2.1.1, 2.1.0</a>
+			<a href="javascript:toggle('req2_1_0')">EMF 2.1.3, 2.1.1, 2.1.0</a>
 			<ul id="req2_1_0" style="display: none">
 				<li>Eclipse 3.1.2, 3.1.1, 3.1.0, respectively</li>
 				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
@@ -117,7 +119,7 @@ function doRequirements()
 		</li>
 
 		<li>
-			<a href="javascript:toggle('req2_0_0')">EMF 2.0.5-2.0.2, 2.0.1, 2.0.0</a>
+			<a href="javascript:toggle('req2_0_0')">EMF 2.0.6-2.0.2, 2.0.1, 2.0.0</a>
 			<ul id="req2_0_0" style="display: none">
 				<li>Eclipse 3.0.2, 3.0.1, 3.0.0, respectively</li>
 				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
