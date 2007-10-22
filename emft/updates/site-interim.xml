@@ -34,7 +34,35 @@
 	<!-- MWE 0.7.0 I200710180708 (Incubation) -->
 	
 	<!-- SEARCH 0.7.0 I200710220836 (Incubation) -->
-	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200710220836" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710220836">
+	
+	<!-- SEARCH 0.7.0 I200710221440 (Incubation) -->
+	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440">
+		<description>
+EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.search.doc" version="0.7.0.v200710221440" url="features/org.eclipse.emf.search.doc_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.common" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search.common_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.ecore.ocl" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search.ecore.ocl_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.ocl" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search.ocl_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.sdk" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search.sdk_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.examples" version="0.7.0.v200710221440" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.search.examples_0.7.0.v200710221440.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440"/>
+	</feature>
+<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200710220836" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710220836">
 		<description>
 EMFT SEARCH SDK (Incubation) 0.7.0 I200710220836: contains runtime, source, and documentation features.
 		</description>
