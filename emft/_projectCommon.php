@@ -48,19 +48,19 @@ $cvscoms = array(
 $projects = array(
 	"Compare" => "compare",
 	"CDO" => "cdo",
+	"Modeling Workflow" => "mwe",
 	"Net4j" => "net4j",
+	"Search" => "search",
 	"Teneo" => "teneo",
     // no builds yet
 	"JCR Management" => "jcrm",
-	"Modeling Workflow" => "mwe",
-	"Search" => "search",
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm","search"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
