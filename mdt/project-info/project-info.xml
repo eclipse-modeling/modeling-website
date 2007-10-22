@@ -47,13 +47,24 @@
 	
 	<blogs/>
 
-	<project-plan url="/modeling/mdt/docs/plans/mdt_project_plan_1_0.html"/>
+	<project-plan url="/modeling/mdt/docs/plans/mdt_project_plan_1_1.html"/>
 
 	<releases>
 		<release
 			name="1.1"
 			status="tentative"
+			plan="/modeling/mdt/docs/plans/mdt_project_plan_1_1.html"
 			date="30/06/2008"/>
+		<release
+			name="1.0.2"
+			status="tentative"
+			date="27/02/2008"
+			download="http://www.eclipse.org/modeling/mdt/downloads/"/>
+		<release
+			name="1.0.1"
+			status="completed"
+			date="28/09/2007"
+			download="http://www.eclipse.org/modeling/mdt/downloads/"/>
 		<release
 			name="1.0"
 			status="completed"
