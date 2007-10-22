@@ -271,7 +271,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 						<td>&#160;</td>
 						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
 						</td><td><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., 
-						M1_34, v20070614, r322_v20070104,<br/>R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+						M2_34, v20070614, r322_v20070104,<br/>R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
