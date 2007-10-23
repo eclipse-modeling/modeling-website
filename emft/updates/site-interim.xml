@@ -36,7 +36,29 @@
 	<!-- SEARCH 0.7.0 I200710220836 (Incubation) -->
 	
 	<!-- SEARCH 0.7.0 I200710221440 (Incubation) -->
-	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440">
+	
+	<!-- COMPARE 0.8.0 I200710230727 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200710230727" url="features/org.eclipse.emf.compare.doc_0.8.0.v200710230727.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200710230727" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare.sdk_0.8.0.v200710230727.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200710230727" url="features/org.eclipse.emf.compare.source_0.8.0.v200710230727.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200710230727" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare_0.8.0.v200710230727.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200710230727" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare.examples_0.8.0.v200710230727.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200710230727"/>
+	</feature>
+<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440">
 		<description>
 EMFT SEARCH SDK (Incubation) 0.7.0 I200710221440: contains runtime, source, and documentation features.
 		</description>
