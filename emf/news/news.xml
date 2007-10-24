@@ -34,10 +34,10 @@
 	<a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">EMF 2.3 JVM Requirements</a> updated.
 </news>
 <news date="January 03, 2007" showOn="docs,whatsnew">
-	<a href="http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/tutorials/jet1/jet_tutorial1.html">JET Tutorial Part 1 (Introduction to JET)</a> updated.
+	<a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.emf/org.eclipse.emf/doc/org.eclipse.emf.doc/tutorials/jet1/jet_tutorial1.html?root=Modeling_Project&amp;view=co">JET Tutorial Part 1 (Introduction to JET)</a> updated.
 </news>
 <news date="Jan 03, 2007" showOn="docs,whatsnew">
-	<a href="http://dev.eclipse.org/viewcvs/indextools.cgi/*checkout*/org.eclipse.emf/doc/org.eclipse.emf.doc/tutorials/jet2/jet_tutorial2.html">JET Tutorial Part 2 (Write Code that Writes Code)</a> updated.
+	<a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.emf/org.eclipse.emf/doc/org.eclipse.emf.doc/tutorials/jet2/jet_tutorial2.html?root=Modeling_Project&amp;view=co">JET Tutorial Part 2 (Write Code that Writes Code)</a> updated.
 </news>
 <news date="December 07, 2006" showOn="docs,whatsnew,bleedingedge">
 	Details about <a href="http://wiki.eclipse.org/index.php/EMF_2.3_Generics">EMF 2.3 and JDK 5.0 Generics</a> are available.
@@ -275,6 +275,6 @@
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
 
-<!-- $Id: news.xml,v 1.17 2007/07/25 20:02:52 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.18 2007/10/24 06:04:29 nickb Exp $ -->
 
 </doc>
