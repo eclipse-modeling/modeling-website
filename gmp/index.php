@@ -81,7 +81,7 @@ $html =<<<EOHTML
 		<h3>What can you do with GMF?&nbsp;<a href="./gallery/index.php"><img src="http://www.eclipse.org/images/more.gif" alt="More..." /></a></h3>
 			<table width="100%">
 			<tr>
- 				<td colspan="2"><p>Well, if you've taken a look at the <a target="_blank" href="http://dev.eclipse.org/viewcvs/indextools.cgi/%7Echeckout%7E/uml2-home/docs/articles/Getting_Started_with_UML2/article.html">Getting Started with UML2</a> article and had trouble visualizing the model, GMF can help. On the left is the generated environment for working with a domain model (any EMF-based model), while on the right is a view of a graphical editor generated with GMF. To see more of what you can do with GMF, click the thumbnails below or <a href="./gallery/index.php">this link</a> to visit our gallery.</p>
+ 				<td colspan="2"><p>Well, if you've taken a look at the <a target="_blank" href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">Getting Started with UML2</a> article and had trouble visualizing the model, GMF can help. On the left is the generated environment for working with a domain model (any EMF-based model), while on the right is a view of a graphical editor generated with GMF. To see more of what you can do with GMF, click the thumbnails below or <a href="./gallery/index.php">this link</a> to visit our gallery.</p>
  				</td>
  			</tr>
  			<tr><td colspan="2" align="center"><a href="./gallery/index.php"><img src="./images/gallery_thumb.png"/></a></td></tr>
