@@ -96,11 +96,14 @@ $buildTypes = getBuildTypes($branches, $buildtypes);
 $builds = getBuildsFromDirs();
 if ($sortBy != "date")
 {
-	$builds = reorderArray($builds, $buildTypes);
+	
+	$builds = reorderAndSplitArray($builds, $buildTypes);
+	$releases = $builds[1]; 
+	$builds = $builds[0];
 }
 else
 {
-	krsort($builds);
+	krsort($builds); reset($builds);
 }
 
 if (function_exists("doRequirements"))
@@ -110,7 +113,7 @@ if (function_exists("doRequirements"))
 
 $rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
 
-if (sizeof($builds) == 0)
+if (sizeof($builds) == 0 && sizeof($releases) == 0)
 {
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3>${rssfeed}Builds</h3>\n";
@@ -129,6 +132,8 @@ if (sizeof($builds) == 0)
 
 if ($sortBy != "date")
 {
+	doLatest($releases, "Releases");
+	
 	$c = 0;
 	foreach ($builds as $branch => $types)
 	{
@@ -160,28 +165,7 @@ if ($sortBy != "date")
 }
 else if ($sortBy == "date")
 {
-	print "<div class=\"homeitem3col\">\n";
-	print "<a name=\"latest\"></a><h3>${rssfeed}Latest Builds</h3>\n";
-	print "<ul class=\"releases\">\n";
-	$c = 0;
-	foreach ($builds as $rID => $rbranch)
-	{
-		$ID = preg_replace("/^(\d{12})([IMNRS])$/", "$2$1", $rID);
-		$branch = preg_replace("/.$/", "", $rbranch);
-		print outputBuild($branch, $ID, $c++);
-
-		if (!$showAll && $c == $showMax && $c < sizeof($builds))
-		{
-			print showToggle($showAll, $showMax, $sortBy, sizeof($builds));
-			break;
-		}
-		else if ($showAll && sizeof($builds) > $showMax && $c == sizeof($builds))
-		{
-			print showToggle($showAll, $showMax, $sortBy, sizeof($builds));
-		}
-	}
-	print "</ul>\n";
-	print "</div>\n";
+	doLatest($builds, "Builds");
 }
 
 if ($doRefreshPage)
@@ -293,26 +277,60 @@ if (isset($incubating) && in_array($projct, $incubating))
 
 print "</div>\n";
 
-function reorderArray($arr, $buildTypes)
+function doLatest($releases, $label = "Releases")
+{
+	global $rssfeed, $showMax, $showAll, $sortBy;
+	if (sizeof($releases)>0)
+	{
+		print "<div class=\"homeitem3col\">\n";
+		print "<a name=\"latest\"></a><h3>${rssfeed}Latest $label</h3>\n";
+		print "<ul class=\"releases\">\n";
+		$c = 0;
+		foreach ($releases as $rID => $rbranch)
+		{
+			$ID = preg_replace("/^(\d{12})([IMNRS])$/", "$2$1", $rID);
+			$branch = preg_replace("/.$/", "", $rbranch);
+			print outputBuild($branch, $ID, $c++);
+			if (!$showAll && $c == $showMax && $c < sizeof($releases))
+			{
+				print showToggle($showAll, $showMax, $sortBy, sizeof($releases));
+				break;
+			}
+			else if ($showAll && sizeof($releases) > $showMax && $c == sizeof($releases))
+			{
+				print showToggle($showAll, $showMax, $sortBy, sizeof($releases));
+			}
+		}
+		print "</ul>\n";
+		print "</div>\n";
+	}
+}
+
+function reorderAndSplitArray($arr, $buildTypes)
 {
 	// the first dimension's order is preserved (kept as it is in the config file)
 	// sort the second dimension using the IMNRS order in $buildTypes
 	// rsort the third dimension
 
 	$new = array();
+	$rels = array();
 	foreach ($buildTypes as $br => $types)
 	{
 		foreach ($types as $bt => $names)
 		{
-			if (array_key_exists($br, $arr) && array_key_exists($bt, $arr[$br]) && is_array($arr[$br][$bt]))
+			if ($bt == "R" && isset($arr[$br][$bt]))
+			{
+				$id = $arr[$br][$bt][0];
+				$rels[substr($id,1) . $bt] = $br . $bt;
+			}
+			else if (array_key_exists($br, $arr) && array_key_exists($bt, $arr[$br]) && is_array($arr[$br][$bt]))
 			{
 				$new[$br][$bt] = $arr[$br][$bt];
 				rsort($new[$br][$bt]);
 			}
 		}
 	}
-
-	return $new;
+	return array($new,$rels);
 }
 
 function getBuildsFromDirs() // massage the builds into more useful structures
@@ -971,15 +989,23 @@ function showArchived($oldrels)
 {
 	global $PR, $proj;
 
+	$thresh = sizeof($oldrels) > 5 ? ceil(sizeof($oldrels)/3) : 6;
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3><a name=\"archives\"></a>Archived Releases</h3>\n";
 	print "<p>Older " . project_name($proj) . " releases have been moved to archive.eclipse.org, and can be accessed here:</p>";
-	print "<ul id=\"archives\">\n";
+	print '<table cellspacing="0" cellpadding="0" border="0" style="margin:0"><tr valign="top">'."\n";
+	print "<td><ul id=\"archives\">\n";
+	$cnt=-1;
 	foreach (array_keys($oldrels) as $z)
 	{
+		$cnt++;
+		if ($cnt % $thresh == 0) 
+		{
+			print "</ul></td><td><ul id=\"archives\">\n"; 
+		}
 		if (!$z || $oldrels[$z] === null)
 		{
-			print "<br/>"; # spacer
+			$cnt--; # spacer
 		}
 		else if (!is_array($oldrels[$z]))
 		{
@@ -991,6 +1017,8 @@ function showArchived($oldrels)
 		}
 	}
 	print "</ul>\n";
+	print "</td>";
+	print "</tr></table>\n";
 	print "</div>\n";
 }
 
