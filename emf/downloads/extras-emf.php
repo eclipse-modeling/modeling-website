@@ -47,95 +47,43 @@ function doBleedingEdge ()
 	';	
 }
 
-function requirementsNote()
-{ ?>
-<div class="homeitem3col">
-<h3>Usage notes</h3>
-<ul>
-	<li><i><b>Please note:</b></i><a name="emfruntimenote">&#160;</a>Use of XSD requires the EMF Runtime (RT) Package, or the complete SDK.</li>
-	<li><i><b>Please note:</b></i><a name="xsdruntimenote">&#160;</a>Use of XML Schema (XSD) models with EMF or SDO, requires the XSD Runtime (RT) Package, or the complete SDK.</li>
-</ul>
-</div>
-<?php }
-
 function doRequirements()
 {
+	global $PR,$projct;
+	if (!isset($projct) || !$projct) { $projct = "emf"; }
+	$isUpdate = strpos($_SERVER["PHP_SELF"],"/updates/")!==false;
+	$reqNotePrefix = $isUpdate ? "/$PR/downloads/?project=$projct" : ""; 
 ?>
 <div class="homeitem3col">
-	<h3>Requirements</h3>
-	<p><b>First-time users</b> can get started quickly by simply downloading the
-	<b style="color:green">All-In-One SDK</b> bundle (includes source, runtime and docs
-	for <b class="emf">EMF</b>, <b class="xsd">XSD</b>, and <b class="sdo">SDO</b>).
-	Specific build dependencies and JDK version used for a given release are shown
-	<?php print strpos($_SERVER["PHP_SELF"],"/updates/")!==false ? 'on the <a href="/modeling/emf/downloads/">downloads</a> page' : 'below'; ?> -
-	under <b>Build Dependencies</b>. See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">EMF FAQ</a>.</p>
-	<p>Note that Eclipse is only required if you intend to use the UI - for runtime-only use, only a JDK is required.</p>
-
-	<ul id="requirements">
-		<li>
-<!--
-	 		<div class="bleedingedge">
-				EMF 2.4.0 contains significant, though binary
-				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
-			</div>
-			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
--->
-			<a href="javascript:toggle('req2_4_0')">EMF 2.4.0</a>
-			<ul id="req2_4_0">
-				<li>Eclipse 3.4.0</li>
-				<li>Java 5.0+</li>
+	<h3>Getting Started</h3>
+		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest
+		<b style="color:green">All-In-One SDK</b> bundle, which includes source, runtime and docs
+		for EMF, SDO, and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (now part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT</a> project).
+		<?php echo $isUpdate ? "" : 'Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Update Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
+		
+	<h2 style="padding-left:10px">Minimum Requirements</h2>
+	<table cellpadding="2" cellspacing="4" border="0" style="padding-left:10px">
+	<tr align="left"><th>EMF</th><th><a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a><a href="<?php echo $reqNotePrefix; ?>#req_note_1">*</a></th><th>Java</th>
+		<th>Notes</th>
+	</tr>
+	<tr><td>2.4</td><td>3.4</td><td>5.0</td>
+		<td rowspan="5" valign="top">
+			<ul>
+				<li style="border:0;padding:1px"><a name="req_note_1">*</a> Eclipse is only required for EMF's tools. 
+					For runtime-only use, only a JRE is required.</li>
+				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.3.x contains significant, though binary compatible, 
+					<a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">changes from previous releases</a>.</li>
+				<li style="border:0;padding:1px"><a name="req_note_3">***</a> If you are using Sun's 1.4 JRE, please see 
+					<a href="http://www.eclipse.org/modeling/emf/downloads/install.php">this note</a>.</li>
 			</ul>
-		</li>
-
-		<li>
-			<div class="bleedingedge">
-				EMF 2.3.x contains significant, though binary
-				compatible, changes from previous releases. See <a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">The Bleeding Edge</a> for details (also at right).
-			</div>
-			<img class="bleedingedge" src="/modeling/images/new.gif" alt="New!"/>
-			<a href="javascript:toggle('req2_3_0')">EMF 2.3.x</a>: 
-<a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135">2.3.1</a> <a href="http://www.eclipse.org/modeling/emf/downloads/?showAll=1&hlbuild=R200709252135&project=emf#R200709252135"><img src="/modeling/images/link-out.png"></a>, 
-<a href="#archives">2.3.0</a> <a href="#archives"><img src="/modeling/images/link-out.png"></a> 
-			<ul id="req2_3_0">
-				<li>Eclipse 3.3.1, 3.3.0</li>
-				<li>Java 5.0+</li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="javascript:toggle('req2_2_0')">EMF 2.2.4-2.2.2, 2.2.1, 2.2.0</a>
-			<ul id="req2_2_0" style="display: none">
-				<li>Eclipse 3.2.2, 3.2.1 or 3.2.0</li>
-				<li>Java 1.4.2 or 5.0 - if Sun 1.4.2, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="javascript:toggle('req2_1_0')">EMF 2.1.3, 2.1.1, 2.1.0</a>
-			<ul id="req2_1_0" style="display: none">
-				<li>Eclipse 3.1.2, 3.1.1, 3.1.0, respectively</li>
-				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="javascript:toggle('req2_0_0')">EMF 2.0.6-2.0.2, 2.0.1, 2.0.0</a>
-			<ul id="req2_0_0" style="display: none">
-				<li>Eclipse 3.0.2, 3.0.1, 3.0.0, respectively</li>
-				<li>Java 1.4.2 - if Sun, <a href="/modeling/emf/downloads/install.php">click here</a>.</li>
-			</ul>
-		</li>
-
-		<li>
-			<a href="javascript:toggle('req1_x')">EMF 1.x</a>
-			<ul id="req1_x" style="display: none">
-				<li>Eclipse 2.x</li>
-				<li>Java 1.3.1</li>
-			</ul>
-		</li>
-	</ul>
+		</td>
+	</tr>
+	<tr><td>2.3<a href="<?php echo $reqNotePrefix; ?>#req_note_2">**</a></td><td>3.3</td><td>5.0</td></tr>
+	<tr><td>2.2</td><td>3.2</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_3">***</a></td></tr>
+	<tr><td>2.1</td><td>3.1</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_3">***</a></td></tr>
+	<tr><td>2.0</td><td>3.0</td><td>1.3.1</td></tr>
+	</table>
 </div>
-
 <?php
 }
 
@@ -151,7 +99,7 @@ function doLanguagePacks()
 	<ul>
 		<li>
 			<a href="javascript:toggle('lang2_2')">2.2.x Language Packs</a><a name="NLS2.2.x"></a>
-			<ul id="lang2_2">
+			<ul id="lang2_2" style="display: none">
 					<?php
 					$packs = array (
 						"2.2.x NLS Translation Packs" => "NLpacks-"
