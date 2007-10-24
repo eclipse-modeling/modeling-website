@@ -96,7 +96,47 @@
 	<!-- TRANSACTION 1.2.0 I200710171604 -->
 	
 	<!-- TRANSACTION 1.1.2 M200710151235 -->
-	<category-def label="EMF TRANSACTION SDK 1.1.2 M200710151235" name="EMF TRANSACTION SDK 1.1.2 M200710151235">
+	
+	<!-- EMF 2.2.5 M200710232000 -->
+	<category-def label="EMF SDK 2.2.5 M200710232000" name="EMF SDK 2.2.5 M200710232000">
+		<description>
+EMF SDK 2.2.5 M200710232000: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.doc" version="2.2.4.v200710232000" url="features/org.eclipse.emf.doc_2.2.4.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.2.2.v200710232000" url="features/org.eclipse.emf.ecore.sdo.doc_2.2.2.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.2.2.v200710232000" url="features/org.eclipse.emf.ecore.sdo.source_2.2.2.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.2.2.v200710232000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.ecore.sdo_2.2.2.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.sdk" version="2.2.5.v200710232000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.sdk_2.2.5.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.source" version="2.2.5.v200710232000" url="features/org.eclipse.emf.source_2.2.5.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf" version="2.2.5.v200710232000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf_2.2.5.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.xsd.doc" version="2.2.2.v200710232000" url="features/org.eclipse.xsd.doc_2.2.2.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.xsd.source" version="2.2.4.v200710232000" url="features/org.eclipse.xsd.source_2.2.4.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.xsd" version="2.2.4.v200710232000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.xsd_2.2.4.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+	<feature id="org.eclipse.emf.examples" version="2.2.1.v200710232000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.examples_2.2.1.v200710232000.jar" patch="false">
+		<category name="EMF SDK 2.2.5 M200710232000"/>
+	</feature>
+<category-def label="EMF TRANSACTION SDK 1.1.2 M200710151235" name="EMF TRANSACTION SDK 1.1.2 M200710151235">
 		<description>
 EMF TRANSACTION SDK 1.1.2 M200710151235: contains runtime, source, and documentation features.
 		</description>
