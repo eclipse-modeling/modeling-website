@@ -50,7 +50,32 @@
 	<!-- UML2 2.2M2 S200710031132 -->
 	
 	<!-- OCL 1.2.0 I200710171533 -->
-	<category-def label="MDT OCL SDK 1.2.0 I200710171533" name="MDT OCL SDK 1.2.0 I200710171533">
+	
+	<!-- UML2 2.2.0 I200710251013 -->
+	<category-def label="MDT UML2 SDK 2.2.0 I200710251013" name="MDT UML2 SDK 2.2.0 I200710251013">
+		<description>
+MDT UML2 SDK 2.2.0 I200710251013: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200710251000" url="features/org.eclipse.uml2.doc_2.2.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.1.0.v200710251000" url="features/org.eclipse.uml2.examples.source_2.1.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.1.0.v200710251000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.examples_2.1.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200710251000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.sdk_2.2.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.2.0.v200710251000" url="features/org.eclipse.uml2.source_2.2.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.2.0.v200710251000" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.2.0.v200710251000.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200710251013"/>
+	</feature>
+<category-def label="MDT OCL SDK 1.2.0 I200710171533" name="MDT OCL SDK 1.2.0 I200710171533">
 		<description>
 MDT OCL SDK 1.2.0 I200710171533: contains runtime, source, and documentation features.
 		</description>
