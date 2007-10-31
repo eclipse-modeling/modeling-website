@@ -74,7 +74,7 @@ function doRequirements()
 				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.3.x contains significant, though binary compatible, 
 					<a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">changes from previous releases</a>.</li>
 				<li style="border:0;padding:1px"><a name="req_note_3">***</a> If you are using Sun's 1.4 JRE, please see 
-					<a href="http://www.eclipse.org/modeling/emf/downloads/install.php">this note</a>.</li>
+					<a href="http://wiki.eclipse.org/MDT/XSD/FAQ/Sun_JDK14_Crimson_DOM">this note</a>.</li>
 			</ul>
 		</td>
 	</tr>

@@ -83,7 +83,7 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
-$Nav->addCustomNav("Installation", "$rooturl/downloads/install.php", "_self", 2);
+$Nav->addCustomNav("Installation", "http://wiki.eclipse.org/EMF/Installation", "_self", 2);
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
