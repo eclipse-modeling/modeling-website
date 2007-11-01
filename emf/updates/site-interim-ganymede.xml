@@ -112,7 +112,53 @@
 	<!-- EMF 2.3.2 M200710311644 -->
 	
 	<!-- VALIDATION 1.2.0 I200711011014 -->
-	<category-def label="EMF VALIDATION SDK 1.2.0 I200711011014" name="EMF VALIDATION SDK 1.2.0 I200711011014">
+	
+	<!-- TRANSACTION 1.2.0 I200711011044 -->
+	<category-def label="EMF TRANSACTION SDK 1.2.0 I200711011044" name="EMF TRANSACTION SDK 1.2.0 I200711011044">
+		<description>
+EMF TRANSACTION SDK 1.2.0 I200711011044: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.transaction.doc" version="1.2.0.v200710032115-23-8s733G5339755C" url="features/org.eclipse.emf.transaction.doc_1.2.0.v200710032115-23-8s733G5339755C.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.sdk" version="1.2.0.v200710032115-67A-96KPWQ3SKltOZfiVk2VJlG99" url="features/org.eclipse.emf.transaction.sdk_1.2.0.v200710032115-67A-96KPWQ3SKltOZfiVk2VJlG99.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.source" version="1.2.0.v200710032115-218Y8s733G4_3A5C_9" url="features/org.eclipse.emf.transaction.source_1.2.0.v200710032115-218Y8s733G4_3A5C_9.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction" version="1.2.0.v200710032115-218Y8s733G4_3A5C_9" url="features/org.eclipse.emf.transaction_1.2.0.v200710032115-218Y8s733G4_3A5C_9.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.doc" version="1.2.0.v200710032115-11-7w311821143226" url="features/org.eclipse.emf.workspace.doc_1.2.0.v200710032115-11-7w311821143226.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.source" version="1.2.0.v200710032115-218Y8s733G495E5C_A" url="features/org.eclipse.emf.workspace.source_1.2.0.v200710032115-218Y8s733G495E5C_A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace" version="1.2.0.v200710032115-218Y8s733G495E5C_A" url="features/org.eclipse.emf.workspace_1.2.0.v200710032115-218Y8s733G495E5C_A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.0.v200710032115" url="features/org.eclipse.emf.transaction.examples.source_1.2.0.v200710032115.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.examples" version="1.2.0.v200710032115-35-8xD4E5H__aGBBSB99K" url="features/org.eclipse.emf.transaction.examples_1.2.0.v200710032115-35-8xD4E5H__aGBBSB99K.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200710032115" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200710032115.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200710032115-35-9oA55P855DA88J" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200710032115-35-9oA55P855DA88J.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.2.0.v200710032115-7A7E_7DjlPkUhuogswYfgFHsfsMH" url="features/org.eclipse.emf.emfqtv.all.sdk_1.2.0.v200710032115-7A7E_7DjlPkUhuogswYfgFHsfsMH.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+	<feature id="org.eclipse.emf.emfqtv.all" version="1.2.0.v200710032115-6778Y_sKRFttpIbmjcSWQbdW-2KE" url="features/org.eclipse.emf.emfqtv.all_1.2.0.v200710032115-6778Y_sKRFttpIbmjcSWQbdW-2KE.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.2.0 I200711011044"/>
+	</feature>
+<category-def label="EMF VALIDATION SDK 1.2.0 I200711011014" name="EMF VALIDATION SDK 1.2.0 I200711011014">
 		<description>
 EMF VALIDATION SDK 1.2.0 I200711011014: contains runtime, source, and documentation features.
 		</description>
