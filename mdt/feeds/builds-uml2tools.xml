@@ -150,7 +150,7 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools RC3fix (0.7.0.S200706201055) is available</title>
+    <title>[announce] uml2tools 0.7.0RC3fix (0.7.0.S200706201055) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200706201055#S200706201055"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200706201055#S200706201055</id>
     <updated>2007-06-22T16:04:11Z</updated>
@@ -185,13 +185,13 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools M7b (1.0.0.S200705241121) is available</title>
+    <title>[announce] uml2tools 0.7.0M7b (0.7.0.S200705241121) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200705241121#S200705241121"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200705241121#S200705241121</id>
     <updated>2007-05-24T16:12:13Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705241121" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200705241121#S200705241121" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200705241121/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200705241121" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200705241121#S200705241121" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200705241121/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=S200705241121
@@ -200,7 +200,7 @@
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-M7b.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200705241121/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200705241121/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -220,22 +220,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M6b (S200704101450) is available</title>
+    <title>[announce] uml2tools 0.7.0M6b (S200704101450) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450</id>
     <updated>2007-05-14T19:40:00Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=S200704101450
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M6b.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M6b.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -255,22 +255,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M6b (S200704101450) is available</title>
+    <title>[announce] uml2tools 0.7.0M6b (S200704101450) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450</id>
     <updated>2007-04-11T15:09:04Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=S200704101450
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M6b.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M6b.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -290,22 +290,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M6b (S200704101450) is available</title>
+    <title>[announce] uml2tools 0.7.0M6b (S200704101450) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450</id>
     <updated>2007-04-11T13:21:59Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200704101450" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200704101450#S200704101450" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
         <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=S200704101450
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M6b.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M6b.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200704101450/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200704101450/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -325,22 +325,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M5 (S200702231841) is available</title>
+    <title>[announce] uml2tools 0.7.0M5 (S200702231841) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200702231841#S200702231841"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200702231841#S200702231841</id>
     <updated>2007-02-24T00:22:20Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702231841" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200702231841#S200702231841" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200702231841/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200702231841" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200702231841#S200702231841" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200702231841/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=0.7.0
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M5.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M5.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200702231841/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200702231841/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -360,22 +360,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M4b (S200701301715) is available</title>
+    <title>[announce] uml2tools 0.7.0M4b (S200701301715) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301715#S200701301715"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301715#S200701301715</id>
     <updated>2007-01-31T22:58:15Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701301715" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301715#S200701301715" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301715/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701301715" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301715#S200701301715" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200701301715/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=0.7.0
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4b.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M4b.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301715/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200701301715/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -395,22 +395,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M4a (S200701301242) is available</title>
+    <title>[announce] uml2tools 0.7.0M4a (S200701301242) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301242#S200701301242"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301242#S200701301242</id>
     <updated>2007-01-30T18:50:58Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701301242" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301242#S200701301242" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301242/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701301242" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200701301242#S200701301242" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200701301242/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://download.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=0.7.0
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4a.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M4a.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701301242/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200701301242/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -430,22 +430,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] uml2tools 1.0.0M4 (S200701221749) is available</title>
+    <title>[announce] uml2tools 0.7.0M4 (S200701221749) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=S200701221749#S200701221749"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=S200701221749#S200701221749</id>
     <updated>2007-01-23T23:14:31Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701221749" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=S200701221749#S200701221749" type="S" version="1.0.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/1.0.0/S200701221749/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200701221749" href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&amp;hlbuild=S200701221749#S200701221749" type="S" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/0.7.0/S200701221749/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/mdt/updates/</update>
         <downloads>http://org/modeling/mdt/downloads/?project=uml2tools</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=1.0.0
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=0.7.0
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-1.0.0M4.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-0.7.0M4.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/1.0.0/S200701221749/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.7.0/S200701221749/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
