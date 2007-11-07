@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.42 2007/09/28 19:17:30 nickb Exp $
+// $Id: scripts.php,v 1.43 2007/11/07 23:26:53 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -398,7 +398,7 @@ function debug($str, $level = 0)
 	}
 }
 
-function debug_r($str, $header = "", $footer = "", $level = 0)
+function debug_r($str, $header = "", $footer = "", $level = 0, $isPreformatted = false)
 {
 	global $debug;
 
@@ -407,7 +407,11 @@ function debug_r($str, $header = "", $footer = "", $level = 0)
 		if ($header) {
 		    print "<div class=\"debug\">"; print $header; print "</div>\n";
 		}
-		print "<div class=\"debug\">"; print_r($str); print "</div>\n";
+		print "<div class=\"debug\">";
+		print $isPreformatted ? "<pre><small>" : ""; 
+		print_r($str); 
+		print $isPreformatted ? "</small></pre>" : ""; 
+		print "</div>\n";
 		if ($footer)
 		{
 		    print "<div class=\"debug\">"; print $footer; print "</div>\n";
