@@ -224,7 +224,7 @@ print "</div>\n";
 print "<div class=\"sideitem\">\n";
 print "<h6>Getting Sources</h6>\n";
 print "<ul>\n";
-print "<li><a href=\"http://www.eclipse.org/modeling/emf/docs/misc/cvsdoc/emfcvsug.html\">CVS + Eclipse</a></li>\n";
+print "<li><a href=\"http://wiki.eclipse.org/EMF/Getting_Source\">CVS + Eclipse</a></li>\n";
 print "<li><a href=\"http://wiki.eclipse.org/index.php/CVS_Source_From_Mapfile\">CVS + Map File + Script</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/$PR/downloads/?project=$projct\">SDK zip</a> or <a href=\"http://www.eclipse.org/$PR/updates/\">Update Manager</a> (org.*.source_x.y.z.*/*src.zip)</li>\n";
 print "</ul>\n";
