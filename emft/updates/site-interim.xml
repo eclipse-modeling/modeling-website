@@ -40,7 +40,29 @@
 	<!-- COMPARE 0.8.0 I200710230727 (Incubation) -->
 	
 	<!-- CDO 0.8.0 I200711011334 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200711011334" name="EMFT CDO SDK (Incubation) 0.8.0 I200711011334">
+	
+	<!-- COMPARE 0.8.0 I200711071042 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200711071042" url="features/org.eclipse.emf.compare.doc_0.8.0.v200711071042.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200711071042" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare.sdk_0.8.0.v200711071042.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200711071042" url="features/org.eclipse.emf.compare.source_0.8.0.v200711071042.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200711071042" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare_0.8.0.v200711071042.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200711071042" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare.examples_0.8.0.v200711071042.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200711071042"/>
+	</feature>
+<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200711011334" name="EMFT CDO SDK (Incubation) 0.8.0 I200711011334">
 		<description>
 EMFT CDO SDK (Incubation) 0.8.0 I200711011334: contains runtime, source, and documentation features.
 		</description>
