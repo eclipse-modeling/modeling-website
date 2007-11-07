@@ -1,7 +1,8 @@
+This document describes how to access the source code for the EMF, SDO and XSD components. It assumes some familiarity with CVS concepts and some experience working with the Eclipse workbench.  
 
-This document describes how to access the source code for the EMF, SDO and XSD components. It assumes some familiarity with CVS concepts and some experience working with the Eclipse workbench.  For more information on CVS, please consult eclipse.org's [http://dev.eclipse.org/viewcvs/index.cgi CVS repository] page. Eclipse's help system also provides a tutorial and documentation for CVS.
+This document also includes a setup procedure that you may wish to use to resolve compilation errors.  
 
-<b>This document includes a setup procedure that you may wish to use to checkout the EMF, SDO and XSD projects and resolve compilation errors.  We have used this procedure on Eclipse 3.3.1.</b>
+''Experienced Eclipse CVS users may want to skip to [[#Using Team Project Set File (.psf)|Using Team Project Set File (.psf)]].''
 
 
 ==Software Environment==
@@ -56,11 +57,11 @@ The EMF, SDO and XSD sources are divided into three modules in CVS.
 	</tr>
 	<tr>
 		<td>plugins</td>
-		<td>contains the EMF runtime plug-ins</td>
+		<td>contains the EMF plug-ins</td>
 	</tr>
 	<tr>
-		<td>features</td>
-		<td>contains the EMF runtime features</td>
+		<td>[[EMF_2.3_New_Features_Migration_Guide | features]]</td>
+		<td>contains the EMF features</td>
 	</tr>
 	<tr>
 		<td>doc</td>
@@ -83,7 +84,7 @@ The EMF, SDO and XSD sources are divided into three modules in CVS.
 		<td>contains the SDO plug-ins</td>
 	</tr>
 	<tr>
-		<td>features</td>
+		<td>[[EMF_2.3_New_Features_Migration_Guide | features]]</td>
 		<td>contains the SDO features</td>
 	</tr>
 	<tr>
@@ -96,11 +97,11 @@ The EMF, SDO and XSD sources are divided into three modules in CVS.
 	</tr>
 	<tr>
 		<td>plugins</td>
-		<td>contains the XSD runtime plug-ins</td>
+		<td>contains the XSD plug-ins</td>
 	</tr>
 	<tr>
-		<td>features</td>
-		<td>contains the XSD runtime features</td>
+		<td>[[EMF_2.3_New_Features_Migration_Guide | features]]</td>
+		<td>contains the XSD features</td>
 	</tr>
 	<tr>
 		<td>doc</td>
@@ -150,10 +151,28 @@ An anonymous user has access only to check out files from the CVS repository. Th
 [[Image:EMF_getting_sources_img5.jpg]]
 
 
-==Checking out code for the first time==
+==Checking Out Code==
 
-If you followed the instructions in the previous section, you should see a new repository entry in the CVS Repositories view. To check out code, do the following:
- 
+If you followed the instructions in the previous section, you should see a new repository entry in the CVS Repositories view. 
+
+To check out code, you have two options. Either check out the projects automatically using a [[#Using Team Project Set File (.psf)|Team Project Set File]], or [[#Manual Checkout|manually]].
+
+===Using Team Project Set File (.psf)===
+
+* Download [[Media:EMF_Team_Project_Sets.zip|EMF_Team_Project_Sets.zip]] and save it somewhere memorable, like your desktop. 
+* Browse to that folder and unzip the file. There are several .psf file choices, depending on what you would like to load into your workspace.
+* Back in Eclipse, switch to the Java perspective.
+* From the File menu or Project Explorer context menu, select '''Import'''.
+* Choose '''Team > Team Project Set''', then click Next.
+
+[[Image:EMF_getting_sources_img9.jpg]] 
+
+* Browse for the .psf file you want to use, downloaded from [[Media:EMF_Team_Project_Sets.zip|EMF_Team_Project_Sets.zip]]. Click Finish.
+
+* Each feature & plugin will then be checked out as a project in the workspace. 
+
+===Manual Checkout===
+* Switch to the CVS perspective if not already there.
 * Expand the repository node.
 * Expand the HEAD node, as shown below, to view all the modules in the repository.
 * Scroll down and expand the <code>org.eclipse.emf/org.eclipse.emf</code> module, as shown below. Select the subdirectories of the features, plugins, docs, tests, and examples directories that you want to retrieve.
@@ -163,7 +182,6 @@ If you followed the instructions in the previous section, you should see a new r
 [[Image:EMF_getting_sources_img6.jpg]]
 
 * Each selected directory as is checked out as a project in the workspace.  Once the operation is complete, you can switch to the Java perspective to work with the projects.
-
 
 ==Resolving Dependency Problems==
 
@@ -190,5 +208,13 @@ Ensure that any projects with dependency problems are checked in the list of ava
 
 * If there are conflicts that cannot be resolved automatically, CVS will insert special markup in the file to indicate that those lines could not be merged.  You will need to resolve the conflicts manually.  See also [http://help.eclipse.org/stable/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-113b.htm Resolving conflicts]
 
+
+==More Info==
+
+* For more information on CVS, see:
+
+:* [http://dev.eclipse.org/viewcvs/index.cgi CVS repository]
+:* [http://help.eclipse.org/stable/index.jsp?topic=/org.eclipse.platform.doc.user/reference/ref-40a.htm help.eclipse.org CVS tutorial]
+:* [[CVS FAQ]]
 
 [[Category:EMF]]
