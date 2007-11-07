@@ -151,6 +151,7 @@ if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 	$selected = $_GET["version"];
 	$v = preg_replace("/x$/", "_", $_GET["version"]);
 	$result = wmysql_query("SELECT `vanityname` FROM `releases` WHERE `type` = 'R' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `vanityname` LIKE '$v' ORDER BY `buildtime` DESC");
+	debug_r($versions, "\$versions(0):", "<hr/>");
 	if ($streams[$_GET["version"]] !== "")
 	{
 		$versions = array($streams[$_GET["version"]]);
@@ -159,6 +160,7 @@ if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 	{
 		$versions = array();
 	}
+	debug_r($versions, "\$versions(1):", "<hr/>");
 
 	$tmp = array_flip($vpicker);
 	while ($row = mysql_fetch_row($result))
@@ -168,19 +170,33 @@ if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 			$versions[] = $row[0];
 		}
 	}
+	debug_r($versions, "\$versions(2):", "<hr/>");
 
 	$c = 0;
+	$relnotes_prev = array("","",0);
+	$relnotes_new =  null;
 	foreach ($versions as $z)
 	{
 		$_GET["version"] = $z;
 		$header = ($c == 0 ? $header : "");
-		release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header, $c == 0, $selected);
-		$c++;
+		# [205266] suppress duplicate listing of releases (Query 1.1.x / 1.1.0)
+		$relnotes_new = release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header, $c == 0, $selected);
+		if ($relnotes_new[1] != $relnotes_prev[1] || $relnotes_new[1] == "")
+		{
+			print $relnotes_new[0];
+			$tnum_overall += $relnotes_new[2];
+			$relnotes_prev = $relnotes_new;
+			$c++;
+		}
 	}
+	$relnotes_prev = null;
+	$relnotes_new  = null;
 }
 else
 {
-	release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header);
+	$relnotes_new = release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, $header);
+	$tnum_overall += $relnotes_new[2];
+	print $relnotes_new[0];
 }
 
 if (isset($_GET["bugzonly"]))
@@ -238,6 +254,8 @@ $pageAuthor = "Neil Skrypuch";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/relnotes.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
+# return array(HTML to display, simplified list for comparison, bug count)
+# if the simplified block has been echoed already, don't show it again and don't increment bug count in $tnum_overall
 function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
 {
 	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs;
@@ -270,16 +288,19 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 		{
 			$rels[] = $row;
 		}
+		debug_r($rels, "\$rels:","<hr/>",0,1);
 	}
 	if (!$rbuild && isset($rels[0]) && isset($rels[0][2]) && $rels[0][2] == "R")
 	{
 		array_shift($rels);
 	}
 
+	$releaseContents = "";
+	$tnum = 0;
 	if (sizeof($rels))
 	{
 		$tnum = 0;
-		$header2 = "";
+		$releaseContents = "";
 		for ($i = 0; $i < (sizeof($rels) - 1); $i++)
 		{
 			$sql = "SELECT `bugid`, `title` FROM `cvsfiles` FORCE INDEX (PRIMARY) NATURAL JOIN `commits` NATURAL JOIN `bugs` NATURAL JOIN `bugdescs` WHERE `date` <= '" . $rels[$i][0] . "' AND `date` >= '" . $rels[$i+1][0] . "' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND `branch` = $branch GROUP BY `bugid` DESC";
@@ -287,14 +308,14 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			$num = mysql_num_rows($result);
 			$tnum += $num;
 
-			$header2 .= "<ul>\n";
-			$header2 .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
-			$header2 .= "<ul>\n";
+			$releaseContents .= "<ul>\n";
+			$releaseContents .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+			$releaseContents .= "<ul>\n";
 			if ($num > 0)
 			{
     			while ($row = mysql_fetch_row($result))
     			{
-    				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+    				$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
     				$bugs[] = $row[0];
     			}
 			} 
@@ -310,35 +331,33 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
         			{
             			while ($row = mysql_fetch_row($result))
             			{
-            				$header2 .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+            				$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
             				$bugs[] = $row[0];
             			}
         			} 
  			    }
 			    else
 			    {
-                    $header2 .= "<li>No bugs fixed for this release.</li>";			        
+                    #$releaseContents .= "<li>No bugs fixed for this release.</li>";			        
 			    }
 			}
-			$header2 .= "</ul>\n";
-			$header2 .= "</li>\n";
-			$header2 .= "</ul>\n";
+			$releaseContents .= "</ul>\n";
+			$releaseContents .= "</li>\n";
+			$releaseContents .= "</ul>\n";
 		}
 
 		if (isset($_GET["bugzonly"]))
 		{
 			return;
 		}
-		$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed) <a href=\"?project=$proj&amp;version=$version&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $header2;
-		$tnum_overall += $tnum;
+		$header .= "<div class=\"homeitem3col\">\n" . "<h3>$projectsf[$proj] " . (preg_match("/\Q$outerversion\E/", $version) ? "" : "$outerversion ") . "$version" . ($rbuild ? " release" : "") . " ($tnum bugs fixed) <a href=\"?project=$proj&amp;version=$version&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a></h3>\n" . $releaseContents . "</div>\n";
 	}
 	else
 	{
-		//TODO: don't say 'nothing found' if $tnum_overall > 0
-		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n";
+		//TODO: don't say 'nothing found' if past releases exist 
+		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n" . "</div>\n";
 	}
-	print $header;
-	print "</div>\n";
+	return array($header, $releaseContents, $tnum);
 }
 
 /* find the previous release in the correct branch */
