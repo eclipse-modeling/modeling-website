@@ -119,14 +119,14 @@ foreach($array as $company => $v)
 			) . "</a></td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
 			 
 		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">" . number($num_committers_inactive[$company], 
-			array(7 => "<b style=\"color:red\">VAL</b>"), array(2 => "<b style=\"color:green\">VAL</b>")
+			array(7 => "<b style=\"color:red\">VAL</b>"), array(0 => "<b style=\"color:green\">VAL</b>")
 			) . "</a></td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
 			 
 		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company], 
 			null, array(7 => "<b style=\"color:red\">VAL</b>")
 			) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
 			 
-		"<td align=\"right\">" . percent($percent_active[$company], 100, 
+		"<td align=\"right\">" . percent($percent_active[$company], 
 			array(90 => "<b style=\"color:green\">VAL</b>", 70 => "<b style=\"color:blue\">VAL</b>"), array(25 => "<b style=\"color:red\">VAL</b>", 60 => "<b style=\"color:orange\">VAL</b>")
 			). "</td>" .
 		"<td align=\"right\">" . number($commits[$company]) . "</td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
@@ -149,7 +149,7 @@ foreach($array as $company => $v)
 	$had_active_committer = false;
 	foreach($committers[$company] as $committer_name => $committer_loc)
 	{
-		if ($committer_loc >= 11)
+		if ($committer_loc > $inactive_threshhold)
 		{
 			$had_active_committer = true;
 			$cnt++;
@@ -157,7 +157,7 @@ foreach($array as $company => $v)
 			{
 				print "</td><td></td><td valign=\"top\" style=\"padding-left:8px\">\n"; 
 			}
-			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". $committer_name&#160;(" . number($committer_loc,null,array(1 => "<b style=\"color:red\">VAL</b>", 11 => "<b style=\"color:orange\">VAL</b>")) . " LOC)<br/>";
+			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". " . $committer_name . "&#160;(" . number($committer_loc,null,array(100 => "<b style=\"color:orange\">VAL</b>")) . " LOC)<br/>";
 		}
 	}
 	if (!$had_active_committer)
@@ -179,7 +179,7 @@ foreach($array as $company => $v)
 	$had_inactive_committer = false;
 	foreach($committers[$company] as $committer_name => $committer_loc)
 	{
-		if ($committer_loc < 11)
+		if ($committer_loc <= $inactive_threshhold)
 		{
 			$had_inactive_committer = true;
 			$cnt++;
@@ -187,7 +187,7 @@ foreach($array as $company => $v)
 			{
 				print "</td><td></td><td valign=\"top\" style=\"padding-left:8px\">\n"; 
 			}
-			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". $committer_name&#160;(" . number($committer_loc,null,array(2 => "<b style=\"color:red\">VAL</b>", 11 => "<b style=\"color:orange\">VAL</b>")) . " LOC)<br/>";
+			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". $committer_name&#160;(" . number($committer_loc,null,array(10 => "<b style=\"color:red\">VAL</b>")) . " LOC)<br/>";
 		}
 	}
 	if (!$had_inactive_committer)
@@ -297,9 +297,9 @@ function number($num, $thresh_upper=null, $thresh_lower=null)
 }
 
 # see colorize()
-function percent($num, $mult=100, $thresh_upper=null, $thresh_lower=null)
+function percent($num, $thresh_upper=null, $thresh_lower=null)
 {
-	$val = (round($num*100*$mult)/100);
+	$val = (round($num*10000)/100);
 	return colorize($val, $val . "%", $thresh_upper, $thresh_lower);
 }
 
