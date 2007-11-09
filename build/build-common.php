@@ -194,6 +194,16 @@ if (is_array($projects) && sizeof($projects) > 1)
 			<tr>
 				<td rowspan="1" valign="top"><img src="/modeling/images/numbers/3.gif" /></td>
 				<td rowspan="1">&#160;</td>
+				<td colspan=1><a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">org.eclipse.releng.basebuilder</a> branch:<br><small>-basebuilderBranch</small>
+				<td>&#160;</td>
+				<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
+				</td><td><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag or Branch, eg., 
+				v20071108, v20070614,<br/>r322_v20070104, R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+			</tr>
+
+			<tr>
+				<td valign="top" rowspan="2" valign="top"><img src="/modeling/images/numbers/4.gif" /></td>
+				<td rowspan="2">&#160;</td>
 				<td><b>Build Alias</b><br><small>optional</small></td>
 				<td>&#160;</td>
 				<td><input name="build_Build_Alias" size=8></td>
@@ -203,8 +213,6 @@ if (is_array($projects) && sizeof($projects) > 1)
 			</tr>
 
 			<tr valign="top">
-				<td rowspan="1"><img src="/modeling/images/numbers/4.gif" /></td>
-				<td rowspan="1">&#160;</td>
 				<td valign="middle"><b>Mapfile &amp; Tagging</b></td>
 				<td>&#160;</td>
 				<td><select name="build_Mapfile_Rule" size="1">
@@ -227,8 +235,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 
 			<tr>
-				<td><img src="/modeling/images/numbers/5.gif" /></td>
-				<td>&#160;</td>
+				<td rowspan="1"><img src="/modeling/images/numbers/5.gif" /></td>
+				<td rowspan="1">&#160;</td>
 				<td><b>Run Tests</b></td>
 				<td>&#160;</td>
 				
@@ -265,13 +273,6 @@ if (is_array($projects) && sizeof($projects) > 1)
 				<td colspan="5"><table>
 					<tr>
 						<td colspan=3><b>Debug Options:</b></td>
-					</tr>
-					<tr>
-						<td colspan=1>org.eclipse.releng.basebuilder branch:<br><small>-basebuilderBranch</small></td>
-						<td>&#160;</td>
-						<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
-						</td><td><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag/Branch/Version, eg., 
-						M2_34, v20070614, r322_v20070104,<br/>R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
 					</tr>
 					<tr>
 						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
