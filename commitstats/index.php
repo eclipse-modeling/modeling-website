@@ -10,7 +10,9 @@ print "<div id=\"midcolumn\">\n";
 
 print "<h1>Commit stats per company for all Eclipse projects</h1>\n";
 
-require_once("data/_data.php");
+$year = 2007;
+$commits_file = "data/_data.php";
+require_once($commits_file);
 
 if (isset($_GET["sortBy"]))
 {
@@ -45,7 +47,7 @@ else if ($sortBy=="alocpc")
 
 print "<table><tr>" .
 	"<th valign=\"bottom\">Company</th>" . 
-	"<th colspan=\"2\">Commits<br/>(2007)</th>" . 
+	"<th colspan=\"2\">Commits<br/>($year)</th>" . 
 	"<th colspan=\"2\">Lines of Code<br/>(last 9 months)</th>" . 
 	"<th colspan=\"1\">Approx. LOC<br/>per Commit</th>" . 
 "</tr>\n";
@@ -68,6 +70,16 @@ print "</table>\n";
 print "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
+
+print "<div class=\"sideitem\">\n";
+print "<h6>About</h6>\n";
+print "<p>Queries used:\n";
+print "<ol>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-summary.php?company=x&login=y&year=$year\">summary</a></li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-active-committers.php?company=IBM\">active-committers</a><br/>(once per company)</li>\n";
+print "</ol>\n";
+print "<p>Data last collected:<br/>" . date("Y-m-d H:i:s T",filemtime($commits_file)) . "</p>\n";
+print "</div>\n";
 
 print "<div class=\"sideitem\">\n";
 print "<h6>Sort</h6>\n";
