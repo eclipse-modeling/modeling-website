@@ -70,6 +70,10 @@ print "<tr bgcolor=\"". bgcol($row). "\">" .
 		"<th colspan=\"1\"></th>" . 
 	"</tr>\n";
 print "</table>\n";
+
+print "<p>&nbsp;</p>\n";
+print "<p><small>This automatically collected information may not represent true activity and should not be used as sole indicator of individual or project behavior. See the <a href=\"http://wiki.eclipse.org/index.php/Commits_Explorer\">wiki page</a> about known data anamolies.</p>\n";
+print "<p>&nbsp;</p>\n";
 print "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
