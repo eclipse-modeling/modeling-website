@@ -45,7 +45,8 @@ else if ($sortBy=="alocpc")
 	arsort($alocpc); reset($alocpc); $array = $alocpc;
 }
 
-print "<table><tr>" .
+$row = 0;
+print "<table><tr bgcolor=\"". bgcol($row). "\">" .
 	"<th valign=\"bottom\">Company</th>" . 
 	"<th colspan=\"2\">Commits<br/>($year)</th>" . 
 	"<th colspan=\"2\">Lines of Code<br/>(last 9 months)</th>" . 
@@ -53,14 +54,16 @@ print "<table><tr>" .
 "</tr>\n";
 foreach($array as $company => $v)
 {
-	print "<tr>" . 
+	$row++;
+	print "<tr bgcolor=\"". bgcol($row). "\">" . 
 		"<td>$company</td>" . 
 		"<td align=\"right\">" . number_format($commits[$company]) . "</td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . "%)</td>" . 
 		"<td align=\"right\">" . number_format($loc[$company]) . "</td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). "%)</td>" .
 		"<td align=\"right\">" .  percent($alocpc[$company],1). "</td>" .
 	"</tr>\n";
 }
-print "<tr>" . 
+$row++;
+print "<tr bgcolor=\"". bgcol($row). "\">" . 
 		"<th>Total</th>" . 
 		"<th colspan=\"1\" align=\"right\">".number_format($num_commits_total)."</th><th colspan=\"1\"></th>" . 
 		"<th colspan=\"1\" align=\"right\">".number_format($num_loc_total)."</th><th colspan=\"1\"></th>" . 
@@ -105,6 +108,11 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 function percent($num,$mult=100)
 {
 	return (round($num*100*$mult)/100);
+}
+
+function bgcol($row)
+{
+	return $row % 2 == 0 ? "#EEEEEE" : "#FFFFFF"; 
 }
 
 ?>
