@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>eodm Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-eodm.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-10-12T22:11:29Z</updated>
+  <updated>2007-11-12T22:31:40Z</updated>
   <author>
     <name>eodm Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-eodm.xml</id>
+  <entry>
+    <title>[announce] eodm 0.9.1 (R200710090302) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200710090302#R200710090302"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200710090302#R200710090302</id>
+    <updated>2007-11-12T22:31:40Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200710090302" href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200710090302#R200710090302" type="R" version="0.9.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.1/R200710090302/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=eodm</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=eodm&amp;version=R200710090302
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-eodm-SDK-incubation-0.9.1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/eodm/downloads/drops/0.9.1/R200710090302/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/R-3.3-200706251500/eclipse-SDK-3.3-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.3.1/S200709182140/emf-sdo-xsd-SDK-2.3.1RC.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] eodm 0.8.1 (R200710090352) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=eodm&amp;showAll=1&amp;hlbuild=R200710090352#R200710090352"/>
