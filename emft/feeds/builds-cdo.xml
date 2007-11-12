@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>cdo Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-cdo.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-11-01T18:42:31Z</updated>
+  <updated>2007-11-12T21:07:35Z</updated>
   <author>
     <name>cdo Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-cdo.xml</id>
+  <entry>
+    <title>[announce] cdo I200711071232 (0.8.0.I200711071232) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=I200711071232#I200711071232"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=I200711071232#I200711071232</id>
+    <updated>2007-11-12T21:07:35Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200711071232" href="http://www.eclipse.org/modeling/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=I200711071232#I200711071232" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/cdo/downloads/drops/0.8.0/I200711071232/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=cdo</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=cdo&amp;version=I200711071232
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-cdo-SDK-incubation-I200711071232.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/cdo/downloads/drops/0.8.0/I200711071232/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/eclipse-SDK-3.4M2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200709260024/emf-sdo-xsd-SDK-2.4.0M2.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/net4j/downloads/drops/0.8.0/I200711071151/emft-net4j-SDK-incubation-I200711071151.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] cdo I200711011334 (0.8.0.I200711011334) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=I200711011334#I200711011334"/>
