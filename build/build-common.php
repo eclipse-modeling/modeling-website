@@ -325,7 +325,7 @@ function setNote(val)
 	else if (val == "ocl") 
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, Orbit"
 	else if (val == "cdo") 
-		note.innerHTML = "Requires at least 3 SDKs: Eclipse, EMF, Net4j, ..."
+		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Net4j"
 	else if (val == "query" || val == "validation") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
 	else if (val == "transaction") 
