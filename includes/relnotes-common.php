@@ -295,7 +295,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 # if the simplified block has been echoed already, don't show it again and don't increment bug count in $tnum_overall
 function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
 {
-	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs, $typeFilter;
+	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs, $typeFilter, $projectAndVersion;
 
 	$rbuild = true;
 	$extra_build = false;
@@ -346,7 +346,10 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			$tnum += $num;
 
 			$releaseContents .= "<ul>\n";
-			$releaseContents .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a><a name=\"" . $rels[$i][1] . "\">&nbsp;</a>" . ($num > 1 ? "($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+			$releaseContents .= "<li class=\"outerli\"><a href=\"" . $projectAndVersion . (isset($_GET["types"]) ? '&amp;types=' . $_GET["types"] : '') ."#" . $rels[$i][1] . "\">" . 
+				"<acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . 
+				"<a name=\"" . $rels[$i][1] . "\">&nbsp;</a>" . ($num > 1 ? "($num bugs fixed) " . 
+				"<a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
 			$releaseContents .= "<ul>\n";
 			if ($num > 0)
 			{
