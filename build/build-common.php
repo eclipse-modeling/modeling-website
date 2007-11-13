@@ -654,14 +654,14 @@ function getDependencyURLs($chosen, $entered, $file) {
 			$urlFixed = trim($url);
 			if ($urlFixed) {
 				$urlFixed = preg_replace("#.+://((fullmoon|fullmoon.+|emf.torolab.ibm.com|emft.eclipse.org|build.eclipse.org)[^/]+)/#","http://download.eclipse.org/",$urlFixed);
-				$urlFixed = preg_replace("#\&url=([^\&=]+)\&mirror_id#","$1",$urlFixed);
+				$urlFixed = preg_replace("#.+&url=([^&=]+).*#","$1",$urlFixed);
 				$urlFixed = preg_replace("#http://www.eclipse.org/downloads/download.php\?file=/#","http://download.eclipse.org/",$urlFixed);
 				$chosen[] = $urlFixed;
 			}
 			// add to file, if it exists and is writable
-			if (is_writable($file) && sizeof($lines)>0 && !in_array($url,$lines)) {
+			if (is_writable($file) && sizeof($lines)>0) {
 				$catg = findCatg($urlFixed);
-				if ($catg && $urlFixed) {
+				if ($catg && $urlFixed && !in_array("$catg=$urlFixed",$lines)) {
 					$lines[] = "$catg=$urlFixed"; // don't add a blank entry!
 				}
 			}					
