@@ -1,10 +1,10 @@
 <?php
-/* REMINDER: 
-   When adding new projects to the database, you must insert a 0.0.0 release as a basis from which 
-   to compare, or you won't get anything returned from your query.
+/* REMINDER:
+ When adding new projects to the database, you must insert a 0.0.0 release as a basis from which
+ to compare, or you won't get anything returned from your query.
 
-  	INSERT INTO `releases` SET `project` = 'org.eclipse.mdt', `component` = 'org.eclipse.uml2tools', `vanityname` = '0.0.0', `buildtime` = DATE_SUB(NOW(), INTERVAL 1 YEAR), `branch` = 'HEAD', `type` = 'R';
-  	
+ INSERT INTO `releases` SET `project` = 'org.eclipse.mdt', `component` = 'org.eclipse.uml2tools', `vanityname` = '0.0.0', `buildtime` = DATE_SUB(NOW(), INTERVAL 1 YEAR), `branch` = 'HEAD', `type` = 'R';
+  
  */
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
@@ -21,18 +21,19 @@ if (!isset($cvsprojs) || !is_array($cvsprojs))
 	$cvsprojs = array();
 }
 
-/* 
+/*
  * OPTIONAL extras:
  * $additionalSideItems (eg., EMF and XSD 2.0 and 1.x)
  * $cannedBugs (bugs not found in database)
  */
 $additionalSideItems = "";
-$cannedBugs = array(); 
+$cannedBugs = array();
 $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $projct . "/news/relnotes-extras.php";
 if (file_exists($f)) { include_once($f); }
 
 $projectsf = array_flip(array_diff($projects, $extraprojects, $nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
+$projectAndVersion = "?project=$projct&amp;version=" . $_GET["version"];
 
 /* set defaults */
 $cvscom = "";
@@ -50,6 +51,23 @@ else
 	$cvsproj = $tmp[0];
 	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
 }
+
+$typeFilter = "";
+if (isset($_GET["types"]) && preg_match("#[RIMS,]+#", $_GET["types"]))
+{
+	$types = preg_match("#,#", $_GET["types"]) ? explode(",", $_GET["types"]) : array($_GET["types"]);
+	foreach ($types as $t)
+	{
+		if ($typeFilter != "")
+		{
+			$typeFilter .= ", ";
+		}
+		$typeFilter .= "'$t'";
+	}
+	$typeFilter = " AND `type` in (" . $typeFilter . ")";
+}
+
+print "\$typeFilter = $typeFilter\n";
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
@@ -77,13 +95,13 @@ debug_r($vpicker, "\$vpicker:", "<hr>");
  * - a descending sort of the z.y.x stream names lines up with a descending sort of the branch names (less HEAD, which is always on top)
  *
  * if that doesn't work out, guessing can be removed by defining $streams in each placeholder file (as necessary), like so:
-$streams = array(
-	"transaction" => array(
-		"1.2.x" => "HEAD",
-		"1.1.x" => "R1_1_maintenance",
-		"1.0.x" => "R1_0_maintenance"
-	)
-);
+ $streams = array(
+ "transaction" => array(
+ "1.2.x" => "HEAD",
+ "1.1.x" => "R1_1_maintenance",
+ "1.0.x" => "R1_0_maintenance"
+ )
+ );
  * streams that are dead (that is, they're not HEAD and they were never branched) can be specified with a value of ""
  */
 $latest = array("HEAD");
@@ -100,7 +118,7 @@ debug_r($latest, "\$latest:", "<hr>");
 if (isset($streams) && is_array($streams) && isset($streams[$proj]))
 {
 	$streams = $streams[$proj];
-    debug_r($streams, "\$streams(1): ", "<hr>");
+	debug_r($streams, "\$streams(1): ", "<hr>");
 }
 else
 {
@@ -165,7 +183,7 @@ if (preg_match("/^\d\.\d\.x$/", $_GET["version"]))
 	$tmp = array_flip($vpicker);
 	while ($row = mysql_fetch_row($result))
 	{
-    	if (isset($tmp[$row[0]]))
+		if (isset($tmp[$row[0]]))
 		{
 			$versions[] = $row[0];
 		}
@@ -242,6 +260,27 @@ print "</div>\n";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-sideitems.php");
 print sideItemReleases($version_requested, $tnum_overall);
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Aggregation</h6>\n";
+print "<p><ul>\n";
+print "<li><a href=\"" . $projectAndVersion . "&amp;types=R\">Releases</a></li>\n";
+print "<li><a href=\"" . $projectAndVersion . "&amp;types=R,S\">Milestones</a></li>\n";
+print "<li><a href=\"" . $projectAndVersion . "\">All Builds</a></li>\n";
+print "</ul></p>\n";
+print <<<EOHTML
+	<p><a href="javascript:void(0)" onclick="javascript:this.style.display = 'none'; document.getElementById('aggregationinfo').style.display = 'block';">How does this work?</a></p>
+	<div id="aggregationinfo" style="display: none">
+		<p>Aggregation will hide or show intermediate builds (such as Integration or 
+		Maintenance) in order to get a per-release or per-Milestone picture of 
+		what bugs have been worked.</p>
+		<p>Note that because a bug may have been worked across more than one build, 
+		aggregation will likely reduce the total number of bugs reported.</p>  
+	</div>
+EOHTML;
+
+print "</div>\n";
+
 print "</div>\n";
 
 $html = ob_get_contents();
@@ -258,7 +297,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 # if the simplified block has been echoed already, don't show it again and don't increment bug count in $tnum_overall
 function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $projectsf, $proj, &$header, $initial = true, $selected = null)
 {
-	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs;
+	global $connect, $PR, $bugs, $tnum_overall, $cannedBugs, $typeFilter;
 
 	$rbuild = true;
 	$extra_build = false;
@@ -273,12 +312,12 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 	if ($extra_build)
 	{
 		$branch = "'$version'";
-		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom')" . $typeFilter . " AND ((`buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 	}
 	else
 	{
 		$branch = "(SELECT `branch` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom'))";
-		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom') AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
+		$sql = "SELECT " . ($canConvertTZ ? "CONVERT_TZ(`buildtime`, 'EST', 'GMT')" : "`buildtime`") . ", `vanityname`, `type` FROM `releases` WHERE `project` = '$cvsproj' AND (`component` LIKE '$cvscom')" . $typeFilter . " AND ((`buildtime` <= (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$version' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `buildtime` > (SELECT `buildtime` FROM `releases` WHERE `vanityname` = '$preversion' AND `project` = '$cvsproj' AND (`component` LIKE '$cvscom')) AND `branch` = $branch) OR `vanityname` = '$preversion') ORDER BY `buildtime` DESC, FIELD(`type`, 'R', 'S', 'M', 'I', 'N')";
 	}
 	$result = wmysql_query($sql);
 	$rels = array();
@@ -313,33 +352,33 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			$releaseContents .= "<ul>\n";
 			if ($num > 0)
 			{
-    			while ($row = mysql_fetch_row($result))
-    			{
-    				$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
-    				$bugs[] = $row[0];
-    			}
-			} 
+				while ($row = mysql_fetch_row($result))
+				{
+					$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+					$bugs[] = $row[0];
+				}
+			}
 			else
 			{
-			    if (isset($cannedBugs) && isset($cannedBugs[$rels[$i][1]]) && is_array($cannedBugs[$rels[$i][1]]) && sizeof($cannedBugs[$rels[$i][1]])>0)
-			    {
-        			$sql = "SELECT `bugid`, `title` FROM `bugdescs` WHERE `bugid` IN (" . join(", ",$cannedBugs[$rels[$i][1]]) . ") GROUP BY `bugid` DESC";
-        			$result = wmysql_query($sql);
-        			$num = mysql_num_rows($result);
-			        $tnum += $num;
-        			if ($num > 0)
-        			{
-            			while ($row = mysql_fetch_row($result))
-            			{
-            				$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
-            				$bugs[] = $row[0];
-            			}
-        			} 
- 			    }
-			    else
-			    {
-                    #$releaseContents .= "<li>No bugs fixed for this release.</li>";			        
-			    }
+				if (isset($cannedBugs) && isset($cannedBugs[$rels[$i][1]]) && is_array($cannedBugs[$rels[$i][1]]) && sizeof($cannedBugs[$rels[$i][1]])>0)
+				{
+					$sql = "SELECT `bugid`, `title` FROM `bugdescs` WHERE `bugid` IN (" . join(", ",$cannedBugs[$rels[$i][1]]) . ") GROUP BY `bugid` DESC";
+					$result = wmysql_query($sql);
+					$num = mysql_num_rows($result);
+					$tnum += $num;
+					if ($num > 0)
+					{
+						while ($row = mysql_fetch_row($result))
+						{
+							$releaseContents .= "<li><a href=\"/$PR/searchcvs.php?q=$row[0]\"><img src=\"/modeling/images/delta.gif\"/></a> <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=$row[0]\">$row[0]</a> $row[1]</li>\n";
+							$bugs[] = $row[0];
+						}
+					}
+				}
+				else
+				{
+					#$releaseContents .= "<li>No bugs fixed for this release.</li>";
+				}
 			}
 			$releaseContents .= "</ul>\n";
 			$releaseContents .= "</li>\n";
@@ -354,7 +393,7 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 	}
 	else
 	{
-		//TODO: don't say 'nothing found' if past releases exist 
+		//TODO: don't say 'nothing found' if past releases exist
 		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n" . "</div>\n";
 	}
 	return array($header, $releaseContents, $tnum);
@@ -548,6 +587,7 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	$out .= "<input type=\"submit\" value=\"Go!\"/>\n";
 	$out .= "</p>\n";
 
+	$out .= "<input type=\"hidden\" value=\"" . $_GET["types"] . "\" name=\"types\"/>\n";
 	$out .= "</form>\n";
 	$out .= "</div>\n";
 

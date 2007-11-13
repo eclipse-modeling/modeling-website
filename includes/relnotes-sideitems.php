@@ -25,7 +25,7 @@ function sideItemReleases($version="", $total=0)
 ';		
         foreach ($vpicker_all as $label => $ver)
         {
-            $out .= '<li><a href="http://www.eclipse.org/' . $PR . '/news/relnotes.php?project=' . $projct2 . '&amp;version=' . $ver . '">' . $ver . '</a>' . 
+            $out .= '<li><a href="http://www.eclipse.org/' . $PR . '/news/relnotes.php?project=' . $projct2 . '&amp;version=' . $ver . (isset($_GET["types"]) ? '&amp;types=' . $_GET["types"] : '') . '">' . $ver . '</a>' . 
                 ($ver == $version && $total > 0 ? " ($total bugs total)" : "") . '</li>'."\n";
         }
     	$out .= $additionalSideItems . '
