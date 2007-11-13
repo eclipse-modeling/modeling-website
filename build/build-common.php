@@ -7,13 +7,14 @@
 # $componentName = "UML2"; 
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
 
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
 // suppress projects which can't be built this way
 array_push($nodownloads,"xsd");  
 
-internalUseOnly(); 
+internalUseOnly();
 ob_start();
 
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
@@ -26,7 +27,6 @@ if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 	$tmp = array_keys($projectArray);
-	
 	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projctFromPath);
 }
 else
@@ -50,41 +50,35 @@ if (is_array($projects) && sizeof($projects) > 1)
 {
 	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
 }
-
 ?>
 
 <div class="homeitem3col">
 <h3>Run A Build</h3>
-
 <?php	
+if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
+{ // page one, the form
+	print "<p>To run a build, please complete the following form and click the Build button.</p>";
+} 
+else 
+{ 
+	print "<p>Your build is ".($previewOnly?"<b>NOT</b> ":"")."in progress".($previewOnly?", but the command is displayed below for preview":"").
+		". <a href=\"?project=$projct".($debugb?"&amp;debugb=1":"").($previewOnly?"&amp;previewOnly=1":"")."\">Build another?</a></p>";
+}
 
-	if (!$_POST["process"]=="build") { // page one, the form
-		print "<p>To run a build, please complete the following form and click the Build button.</p>";
-	} else { 
-		print "<p>Your build is ".($previewOnly?"<b>NOT</b> ":"")."in progress".($previewOnly?", but the command is displayed below for preview":"").
-			". <a href=\"?project=$projct".($debugb?"&amp;debugb=1":"").($previewOnly?"&amp;previewOnly=1":"")."\">Build another?</a></p>";
-	}
+if (!isset($options)) 
+{ 
+	$options = array(); 	
+} 
+else
+{
+	$options = array_merge($options, loadOptionsFromFile($dependenciesURLsFile));	
+	$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
+	$options["RunTests"] = array ("JUnit Tests=JUnit");
+}	
+$options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
-	$downloadsDir = $writableBuildRoot . "/build/downloads";
-	$workDir = $writableBuildRoot . "/build/";		
-	$dependenciesURLsFile = $writableBuildRoot . "/build/requests/dependencies.urls.txt"; // read-write, one shared file
-	
-	/** done customizing, shouldn't have to change anything below here **/
-
-	if (!isset($options)) 
-	{ 
-		$options = array(); 	
-	} 
-	else
-	{
-		$options = array_merge($options,loadOptionsFromRemoteFile($dependenciesURLsFile));	
-		$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
-		$options["RunTests"] = array ("JUnit Tests=JUnit");
-	}	
-	$options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
-
-	if (!$_POST["process"]=="build") { // page one, the form
-
+if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
+{ // page one, the form
 ?>
 
 <table>
@@ -434,50 +428,55 @@ function doOnLoadDefaults() {
 setTimeout('doOnLoadDefaults()',1000);
 
 </script>
-<?php } else { // page two, form submission results
+<?php 
+} 
+else 
+{ // page two, form submission results
 	
-		/****************************** END OF PAGE ONE / START OF PAGE TWO **********************************/
+	/****************************** END OF PAGE ONE / START OF PAGE TWO **********************************/
 
-		$newDependencies = splitDependencies($_POST["build_Dependencies_URL_New"]);
-		$dependencyURLs = getDependencyURLs($_POST["build_Dependencies_URL"],$newDependencies,$dependenciesURLsFile);	
+	$newDependencies = splitDependencies($_POST["build_Dependencies_URL_New"]);
+	$dependencyURLs = getDependencyURLs($_POST["build_Dependencies_URL"],$newDependencies,$dependenciesURLsFile);	
 
-		$buildTimestamp = date("YmdHi");
+	$buildTimestamp = date("YmdHi");
 
-		$ID = $_POST["build_Build_Type"].$buildTimestamp;
-		$BR = $_POST["build_Branch"]; # 2.1.0
+	$ID = $_POST["build_Build_Type"].$buildTimestamp;
+	$BR = $_POST["build_Branch"]; # 2.1.0
 		
-		$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
-		$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]); # 2.1.0 or HEAD?
+	$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
+	$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]); # 2.1.0 or HEAD?
 		
-		$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
+	$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
 
-	if (!$previewOnly) { 
+	if (!$previewOnly)
+	{
+		print '<p>Logfile is <a href="/'.$PR.$proj.$logfile.'">'.$workDir.$PR.$proj.$logfile.'</a></p>';
+	}
 ?>
-	<p>Logfile is <a href="/<?php print $PR.$proj.$logfile; ?>"><?php print $workDir.$PR.$proj.$logfile; ?></a></p>
-	
-<?php } ?>
 
 	<ul>
 		<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest">You can view, explore, or download your build here</a>.
 		Here's what you submitted:</li>
 
-	<?php 
+<?php
 		print "<ul>\n";
 		$i=2;
-		foreach ($_POST as $k => $v) {
-			if (strstr($k,"build_") && trim($v)!="" && !strstr($k,"_Sel") ) { 
-				$lab = preg_replace("/\_/"," ",substr($k,6));
+		foreach ($_POST as $k => $v)
+		{
+			if (strstr($k, "build_") && trim($v) != "" && !strstr($k, "_Sel"))
+			{
+				$lab = str_replace("_", " ", substr($k, 6));
 				$val = $k == "build_Dependencies_URL_New" ? $newDependencies : $v;
 				print "<li>";
-				print (is_array($val)? 
-					"<b>".$lab.":</b>" . "<ul>\n<li><small>".join("</small></li>\n<li><small>",$val)."</small></li>\n</ul>\n" : 
-					"<div>".$val."</div>" . "<b>".$lab.":</b>");
+				print (is_array($val) ?
+				"<b>" . $lab . ":</b>" . "<ul>\n<li><small>" . join("</small></li>\n<li><small>", $val) . "</small></li>\n</ul>\n" : 
+				"<div>" . $val . "</div>" . "<b>" . $lab . ":</b>");
 				print "</li>\n";
 				$i++;
 			}
-		} 
+		}
 
-		print "<li><div>".$_SERVER["REMOTE_ADDR"]."</div><b>Your IP:</b></li>\n"; 
+		print "<li><div>" . $_SERVER["REMOTE_ADDR"] . "</div><b>Your IP:</b></li>\n";
 		print "</ul>\n";
 		print "</ul>\n";
 
@@ -485,117 +484,102 @@ setTimeout('doOnLoadDefaults()',1000);
 
 		if ($branches["HEAD"] == $_POST["build_CVS_Branch"]) { $_POST["build_CVS_Branch"] = "HEAD"; }
 		
-		// fire the shell script...
+	// fire the shell script...
 
-		/** see http://ca3.php.net/manual/en/function.exec.php **/
+	/** see http://ca3.php.net/manual/en/function.exec.php **/
 
-		// create the log dir before trying to log to it
-		$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
-
-		// for the case where we're building EMFT but it's actually in EMF (or other) cvs repo
-		$topProjActual = "";
-		if ($topProj == "emft")
+	// create the log dir before trying to log to it
+	$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
+	$topProjActual = $topProj == "emft" ? "emf" : $topProj; // when we're building EMFT but it's actually in EMF cvs repo
+	$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
+	' -proj ' . $topProjActual . ' -sub '.$projct.
+	' -version '.$BR.
+	' -branch '.($_POST["build_Branch_Override"]!=""?$_POST["build_Branch_Override"]:$_POST["build_CVS_Branch"]).
+	$dependencyURLs.
+	($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
+	($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
+	' -mapfileRule '.$_POST["build_Mapfile_Rule"]. // pass in use-false, gen-true, gen-false
+	' -buildType '.$_POST["build_Build_Type"].
+	' -javaHome '.$_POST["build_Java_Home"].
+	' -downloadsDir '.$downloadsDir. // use central location
+	' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
+	' -writableBuildRoot '.$writableBuildRoot.
+	' -buildTimestamp '.$buildTimestamp.
+	($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
+	' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
+	($_POST["build_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_common_releng_branch"]:'').
+	($_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
+	($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
+	($_POST["build_noclean"]=="Y"?' -noclean':'').
+	($isBuildDotEclipseServer ? '' : ' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
+	if ($previewOnly)
+	{
+		print '</div><div class="homeitem3col">'."\n";
+		print "<h3>Build Command (Preview Only)</h3>\n";
+		if (!$isBuildDotEclipseServer){
+			print "<p><small><code>$preCmd</code></small></p>";
+		}
+	}
+	else if (!$isBuildDotEclipseServer)
+	{
+		exec($preCmd);
+	}
+	if ($previewOnly)
+	{
+		print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+	}
+	else if (!$isBuildDotEclipseServer)
+	{
+		exec($cmd);
+	}
+			
+	if (!$previewOnly && $isBuildDotEclipseServer)
+	{
+		$lockfile = "/opt/public/modeling/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
+		// check if lock file exists for this build type
+		if (is_file($lockfile))
 		{
-			foreach ($cvscoms as $cvsTop => $components)
+			print '</div><div class="homeitem3col">'."\n";
+			print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another build is already in progress.</h3>\n";
+			print "<p>Lockfile: <u>$lockfile</u></p>";
+			print "<p><small><code>";
+			foreach (file($lockfile) as $line) 
+			{ 
+				print "$line\n"; 
+			}
+			print "</code></small></p>";
+					
+		}
+		else // create lockfile
+		{
+			print '</div><div class="homeitem3col">'."\n";
+			$fp = fopen($lockfile, "w");
+			fputs($fp, $cmd . "\n");
+			fclose($fp);
+			$fp = null;
+			$fp = file($lockfile);
+			if (is_array($fp) && sizeof($fp)>0)
 			{
-				if (array_key_exists($projct, $components))
-				{
-					$topProjActual = str_replace("org.eclipse.","",$cvsTop);
-					break;
-				}
+				print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
+				print "<p>Lockfile: <u>$lockfile</u></p>";
+				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+			}
+			else
+			{
+				print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
+				print "<p>Lockfile: <u>$lockfile</u></p>";
+				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
 			}
 		}
-		if (!$topProjActual) { $topProjActual = $topProj; }
-
-		$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
-			' -proj ' . $topProjActual . ' -sub '.$projct.
-			' -version '.$BR.
-			' -branch '.($_POST["build_Branch_Override"]!=""?$_POST["build_Branch_Override"]:$_POST["build_CVS_Branch"]).
-			$dependencyURLs.
-			($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
-			($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
-
-			' -mapfileRule '.$_POST["build_Mapfile_Rule"]. // pass in use-false, gen-true, gen-false
-
-			' -buildType '.$_POST["build_Build_Type"].
-			' -javaHome '.$_POST["build_Java_Home"].
-			' -downloadsDir '.$downloadsDir. // use central location
-			' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
-			' -writableBuildRoot '.$writableBuildRoot.
-			' -buildTimestamp '.$buildTimestamp.
-			($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
-			
-			' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
-			($_POST["build_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_common_releng_branch"]:'').
-			($_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
-			($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
-			($_POST["build_noclean"]=="Y"?' -noclean':'').
-
-			($isBuildDotEclipseServer ? '' : ' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
-
-			if ($previewOnly) { 
-				print '</div><div class="homeitem3col">'."\n";
-				print "<h3>Build Command (Preview Only)</h3>\n";
-				if (!$isBuildDotEclipseServer){
-					print "<p><small><code>$preCmd</code></small></p>";
-				}
-			} else if (!$isBuildDotEclipseServer){
-				exec($preCmd);
-			}
-
-			if ($previewOnly) { 
-				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
-			} else if (!$isBuildDotEclipseServer){
-				exec($cmd);
-			}
-			
-			if (!$previewOnly && $isBuildDotEclipseServer)
+		if (is_file($lockfile))
+		{
+			if (!chmod($lockfile, 0666))
 			{
-				$lockfile = "/opt/public/modeling/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
-				// check if lock file exists for this build type
-				if (is_file($lockfile))
-				{
-					print '</div><div class="homeitem3col">'."\n";
-					print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another build is already in progress.</h3>\n";
-					print "<p>Lockfile: <u>$lockfile</u></p>";
-					print "<p><small><code>";
-					foreach (file($lockfile) as $line) 
-					{ 
-						print "$line\n"; 
-					}
-					print "</code></small></p>";
-					
-				}
-				else // create lockfile
-				{
-					print '</div><div class="homeitem3col">'."\n";
-					$fp = fopen($lockfile, "w");
-  					fputs($fp, $cmd . "\n");
-  					fclose($fp);
-  					$fp = null;
-  					$fp = file($lockfile);
-  					if (is_array($fp) && sizeof($fp)>0)
-  					{
-						print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
-						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
-  					}
-  					else
-  					{
-						print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
-						print "<p>Lockfile: <u>$lockfile</u></p>";
-						print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
-  					}
-				}
-				if (is_file($lockfile))
-				{
-  					if (!chmod($lockfile, 0666))
-  					{
-  						print "<p><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
-  					}
-				}
+				print "<p><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not set permission on lockfile; must delete manually. Contact codeslave{at}ca.ibm.com for assistance.</p>";
 			}
-		} // end else 
+		}
+	}
+} // end else
 
 print "</div>\n</div>\n";
 
@@ -669,7 +653,9 @@ function getDependencyURLs($chosen, $entered, $file) {
 			// add to $chosen
 			$urlFixed = trim($url);
 			if ($urlFixed) {
-				$urlFixed = preg_replace("/.+:\/\/((fullmoon|emf.torolab.ibm.com|emft.eclipse.org|build.eclipse.org)[^\/]+)\//","http://download.eclipse.org/",$urlFixed);
+				$urlFixed = preg_replace("#.+://((fullmoon|fullmoon.+|emf.torolab.ibm.com|emft.eclipse.org|build.eclipse.org)[^/]+)/#","http://download.eclipse.org/",$urlFixed);
+				$urlFixed = preg_replace("#\&url=([^\&=]+)\&mirror_id#","$1",$urlFixed);
+				$urlFixed = preg_replace("#http://www.eclipse.org/downloads/download.php\?file=/#","http://download.eclipse.org/",$urlFixed);
 				$chosen[] = $urlFixed;
 			}
 			// add to file, if it exists and is writable
@@ -683,10 +669,13 @@ function getDependencyURLs($chosen, $entered, $file) {
 		$newSize = sizeof($lines);
 	}
 	
+	rsort($lines); reset($lines);
 	$lines = array_unique($lines); // remove duplicate entries
 
 //	foreach ($chosen as $e) print "<i>. $e</i><br/>\n";
-	updateDependenciesFile($file,$lines,$newSize,$origSize);
+	if ($newSize > $origSize) {
+		updateDependenciesFile($file,$lines);
+	}
 	
 	$ret = "";
 	foreach ($chosen as $choice) {
@@ -718,8 +707,8 @@ function findCatg($url) {
 	}
 }
 
-function updateDependenciesFile($file,$lines,$newSize,$origSize) {
-	if (is_writable($file) && $lines && sizeof($lines)>0 && $newSize > $origSize) {
+function updateDependenciesFile($file,$lines) {
+	if (is_writable($file) && $lines && sizeof($lines)>0) {
 		$f = fopen($file, "w");
 		foreach ($lines as $line) {
 			fwrite($f,$line."\n");
@@ -727,58 +716,30 @@ function updateDependenciesFile($file,$lines,$newSize,$origSize) {
 		fclose($f);
 	}	
 }
-
 function displayCheckboxes($label,$options,$divSuffix="") {
 	$matches = null;
-	if ($options["reversed"]) {
+	if ($options["reversed"])
+	{	
 		// pop that item out
 		array_shift($options);
 		$options = array_reverse($options);
 	}
 
-	foreach ($options as $o => $option) {
+	foreach ($options as $o => $option)
+	{
 		$opt = $option;
 		$isSelected = false;
-		if (!preg_match("/\-\=[\d\.]+/",$opt)) { 
-			if (strstr($opt,"=")) {  // split line so that foo=bar becomes <input type="checkbox" name="bar" value="Y">foo
-				$matches=null;preg_match("/([^\=]+)\=([^\=]*)/",$opt,$matches);
+		if (!preg_match("/\-\=[\d\.]+/", $opt))
+		{
+			if (strstr($opt, "="))
+			{  // split line so that foo=bar becomes <input type="checkbox" name="bar" value="Y">foo
+				$matches=null;
+				preg_match("/([^\=]+)\=([^\=]*)/",$opt,$matches);
 				print "\n\t<input id=\"".$label."_".trim($matches[2]).$divSuffix."\" type=\"checkbox\" "."name=\"".$label."_".trim($matches[2]).$divSuffix."\" value=\"Y\">".trim($matches[1]);
 			} else { // turn foo into <input type="checkbox" name="foo" value="Y">foo</option>
 				print "\n\t<input id=\"".$label."_".$opt.$divSuffix."\" type=\"checkbox\" "."name=\"".$label."_".$opt.$divSuffix."\" value=\"Y\">".$opt;
 			}
 			print "<br/>\n";
-		}
-	}
-}
-
-function displayOptions($options,$verbose=false) {
-	$matches = null;
-	if ($options["reversed"]) {
-		// pop that item out
-		array_shift($options);
-		$options = array_reverse($options);
-	}
-
-	foreach ($options as $o => $option) {
-		$opt = $option;
-		$isSelected = false;
-		if (!preg_match("/\-\=[\d\.]+/",$opt)) { 
-			if (strstr($opt,"|selected")) {  // remove the |selected keyword
-				$isSelected=true;
-				$opt = substr($opt,0,strpos($opt,"|selected"));
-			}
-			if (strstr($opt,"=")) {  // split line so that foo=bar becomes <option value="bar">foo</option>
-				$matches = null;
-				preg_match("/([^\=]+)\=([^\=]*)/",$opt,$matches);
-				print "\n\t<option ".($isSelected?"selected ":"")."value=\"".trim($matches[2])."\">".
-				  ($verbose?trim($matches[2])." | ":"").trim($matches[1]).
-				  "</option>";
-			} else if (strstr($opt,"http") && strstr($opt,"drops")) { // turn http://foo/bar.zip into <option value="http://foo/bar.zip">bar.zip</option>
-				print "\n\t<option ".($isSelected?"selected ":"")."value=\"".$opt."\">".
-					substr($opt,6+strpos($opt,"drops"))."</option>";
-			} else { // turn foo into <option value="foo">foo</option>
-				print "\n\t<option ".($isSelected?"selected ":"")."value=\"".$opt."\">".$opt."</option>";
-			}
 		}
 	}
 }
@@ -873,73 +834,78 @@ function trimmed_read($file) {
 	return $lines;
 }
 
-function loadOptionsFromRemoteFile($file1) {
-	$sp = array();	if (is_file($file1)) { $sp = file($file1); }
+function loadOptionsFromFile($file1)
+{ 
+	$sp = array ();
+	if (is_file($file1))
+	{
+		$sp = file($file1);
+	}
 	$options = loadOptionsFromArray($sp);
 	return $options;
 }
 
-function loadOptionsFromRemoteFiles($file1,$file2) { 
-	$sp1 = file($file1);	if (!$sp1) { $sp1 = array(); }
-	$sp2 = file($file2);	if (!$sp2) { $sp2 = array(); }
-	$options = loadOptionsFromArray( array_merge($sp1,$sp2) );
-	return $options;
-}
-
-function loadOptionsFromArray($sp) {
-	$matches = null;
-	$options = array();
-	$debugb=-1;
+function loadOptionsFromArray($sp)
+{
+	global $debug; 
+	$options = array ();
 	$doSection = "";
 
-	foreach ($sp as $s) { 
-		if (strpos($s,"#")===0) { // skip, comment line
-		} else if (preg_match("/\[([a-zA-Z0-9\_\|]+)\]/",$s,$matches)) { // section starts
-			if (strlen($s)>2) { 
-				$isReversed = false;
-				if (strstr($s,"|reversed")) {  // remove the |reversed keyword
-					$isReversed=true;
-					$doSection = trim($matches[1]);
-					$doSection = substr($doSection,0,strpos($doSection,"|reversed"));
-				} else {
-					$doSection = trim($matches[1]);
-				}
-				if ($debugb>0) print "Section: $s --> $doSection<br>";
-
-				$options[$doSection] = array();
-				if ($isReversed) { $options[$doSection]["reversed"] = $isReversed; }
-			}
-		} else if (!preg_match("/\[([a-zA-Z\_]+)\]/",$s,$matches)) { 
-			if (strlen($s)>2) { 
-				if ($debugb>0) print "Loading: $s<br>";
-				$options[$doSection][] = trim($s);
-			}
+	foreach ($sp as $s)
+	{
+		$matches = null;
+		if (strpos($s, "#") === 0)
+		{ // skip, comment line
 		}
+		else
+			if (preg_match("/\[([a-zA-Z0-9\_\|]+)\]/", $s, $matches))
+			{ // section starts
+				if (strlen($s) > 2)
+				{
+					$isReversed = false;
+					if (strstr($s, "|reversed"))
+					{ // remove the |reversed keyword
+						$isReversed = true;
+						$doSection = trim($matches[1]);
+						$doSection = substr($doSection, 0, strpos($doSection, "|reversed"));
+					}
+					else
+					{
+						$doSection = trim($matches[1]);
+					}
+					if ($debug > 0)
+						print "Section: $s --> $doSection<br>";
+
+					$options[$doSection] = array ();
+					if ($isReversed)
+					{
+						$options[$doSection]["reversed"] = $isReversed;
+					}
+				}
+			}
+			else
+				if (!preg_match("/\[([a-zA-Z\_]+)\]/", $s, $matches))
+				{
+					if (strlen($s) > 2)
+					{
+						if ($debug > 0)
+							print "Loading: $s<br>";
+						$options[$doSection][] = trim($s);
+					}
+				}
 	}
 
 	return $options;
 }
 
-function getBranches($options) { 
-	foreach ($options["BranchAndJDK"] as $br => $branch) { 
-			$arr[	getValueFromOptionsString($branch,"name")] = 
-					getValueFromOptionsString($branch,"value");
+function getBranches($options)
+{
+	foreach ($options["BranchAndJDK"] as $br => $branch)
+	{
+		$arr[getValueFromOptionsString($branch, "name")] = getValueFromOptionsString($branch, "value");
 	}
 	return $arr;
 }
 
-function getValueFromOptionsString($opt,$nameOrValue) { 
-	if (strstr($opt,"|selected")) {  // remove the |selected keyword
-		$opt = substr($opt,0,strpos($opt,"|selected"));
-	}
-	if (strstr($opt,"=")) {  // split the name=value pairs, if present
-		if ($nameOrValue=="name" || $nameOrValue===0) { 
-			$opt = substr($opt,0,strpos($opt,"="));
-		} else if ($nameOrValue=="value" || $nameOrValue==1) { 
-			$opt = substr($opt,strpos($opt,"=")+1);
-		}
-	}
-	return $opt;
-}
 
 ?>

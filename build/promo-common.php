@@ -14,36 +14,34 @@
 	);
  */
  
- // TODO: migrate function in EMF promo page to here
-
 # $PR = "modeling/mdt";
 # $proj = "/uml2"; 
 # $projct = "uml2";
+# $topProj = "mdt";
+# $componentName = "UML2"; 
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
-$App = new App();
-$Nav = new Nav();
-$Menu = new Menu();
-include ($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
+
+$topProj = preg_replace("#.+/(.+)#","$1", $PR);
+
+// suppress projects which can't be built this way
+array_push($nodownloads,"xsd");  
+
 internalUseOnly();
-
-// temporarily suppress unsupported projects
-$nodownloads = array ("xsd");  
-
 ob_start();
 
-$debugb = isset ($_GET["debugb"]) ? 1 : 0;
-$previewOnly = isset ($_GET["previewOnly"]) ? 1 : 0;
+$debugb = isset($_GET["debugb"]) ? 1 : 0;
+$previewOnly = isset($_GET["previewOnly"]) ? 1 : 0; 
+
+$trans = array_flip($projects);
 
 $projctFromPath = getProjectFromPath($PR);
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 	$tmp = array_keys($projectArray);
-
-	$proj = "/" . (isset ($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projctFromPath);
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projctFromPath);
 }
 else
 {
@@ -57,8 +55,10 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 	header("Location: /" . $PR . $proj . "/build/promo.php");
 }
 
+$componentName =  ($trans[$projct] != "EMF" ? $trans[$projct] : "");
+
 print "<div id=\"midcolumn\">\n";
-print "<h1>Promote a Build</h1>\n";
+print "<h1>Promote a ". $componentName . " Component Build</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -68,29 +68,20 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 <div class="homeitem3col">
 <h3>Promote A Build</h3>
-
 <?php
-
-
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
-	print "<p>To promote, please complete the following form and click the Promote button.</p>";
+	print "<p>To promote a build, please complete the following form and click the Promote button.</p>";
 }
 else
 {
 	print "<p>Your promotion is " . ($previewOnly ? "<b>NOT</b> " : "") . "in progress" . ($previewOnly ? ", but the command is displayed below for preview" : "") .
 	". <a href=\"?z" . ($debugb ? "&amp;debugb=1" : "") . ($previewOnly ? "&amp;previewOnly=1" : "") . "\">Promote another?</a></p>";
 }
-?>
 
-<p>
-<?php
-
-$workDir = "/home/www-data/build/";
-
-if (!isset ($options))
+if (!isset($options))
 {
-	$options = array ();
+	$options = array();
 }
 else
 {
@@ -100,9 +91,6 @@ else
 	);
 }
 
-/** done customizing, shouldn't have to change anything below here **/
-
-//print "Branches:"; print_r($options["Branch"]);
 $buildIDs = array ();
 $buildIDs2 = array ();
 
@@ -160,18 +148,20 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
 				<td colspan="2">
-				<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
-				<p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
-				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
-					<?php displayOptions($options["BranchIES"],false,0); ?>
-				</select></small></p>
-				<?php } ?>
-				<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
-				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
-				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
-					<?php displayOptions(array("ganymede","europa"),false,1); ?>
-				</select></small></p>
-				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (-bugzonly)</p></td>
+					<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
+					<p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
+					<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
+						<?php displayOptions($options["BranchIES"],false,0); ?>
+					</select></small></p>
+					<?php } ?>
+					<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
+					<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
+					<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
+						<?php displayOptions(array("ganymede","europa"),false,1); ?>
+					</select></small></p>
+					<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Fixing_Assigned_Bugs">-bugzonly</a>)</p>
+					<p><input type="checkbox" name="build_Store_SDK_As_Dependency" value="Yes" onclick=""> Store SDK As Dependency? (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=207007">-addSDK</a>)</p>
+				</td>
 			</tr>
 
 			<tr>
@@ -261,7 +251,7 @@ else
 ?>
 	<ul>
 		<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest">You can view, explore, or download your build here</a>.
-			Here's what you submitted:</li>
+		Here's what you submitted:</li>
 <?php
 		print "<ul>\n";
 		foreach ($_POST as $k => $v)
@@ -272,18 +262,18 @@ else
 				$val = false !== strpos($v, ",") ? explode(",", $v) : $v;
 
 				print "<li>";
-				print (is_array($val) ? "<b>" .
-				$lab . ":</b>" . "<ul>\n<li>" . join("</li>\n<li>", $val) . "</li>\n</ul>\n" : "<div>" .
-				$val . "</div>" . "<b>" . $lab . ":</b>");
+				print (is_array($val) ?
+				"<b>" . $lab . ":</b>" . "<ul>\n<li><small>" . join("</small></li>\n<li><small>", $val) . "</small></li>\n</ul>\n" :
+				"<div>" . $val . "</div>" . "<b>" . $lab . ":</b>");
 				print "</li>\n";
 			}
 		}
-		print "<li><div>" . $_SERVER["REMOTE_ADDR"] . "</div><b>Your IP:</b>\n";
+		print "<li><div>" . $_SERVER["REMOTE_ADDR"] . "</div><b>Your IP:</b></li>\n";
+		print "</ul>\n";
 		print "</ul>\n";
 ?>
-	</ul>
 		
-	<p><b>NOTE:</b> If you are redirected to a fullmoon mirror, you may not see the new build for at least an hour.</p>
+	<p><b>NOTE:</b> Due to mirror replication delays, you may not see the new build for at least an hour.</p>
 
 <?php
 	// fire the shell script...
@@ -304,6 +294,7 @@ else
 	 ($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
 	 ($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
 	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+	 ($_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
 	 ($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
@@ -333,7 +324,7 @@ else
 	{
 		exec($cmd); // disable here to prevent operation
 	}
-}
+} // end else
 
 print "</div>\n</div>\n";
 
@@ -341,20 +332,20 @@ print "<div id=\"rightcolumn\">\n";
 print "<div class=\"sideitem\">\n";
 print "<h6>Options</h6>\n";
 print "<ul>\n";
-#print "<li><a href=\"?debugb=1\">debug promo</a></li>\n";
-print "<li><a href=\"?previewOnly=1\">preview promo</a></li>\n";
-#print "<li><a href=\"?debugb=1&previewOnly=1\">preview debug promo</a></li>\n";
-print "<li><a href=\"?\">normal promo</a></li>\n";
+print "<li><a href=\"?project=$projct&amp;previewOnly=1\">preview promo</a></li>\n";
+print "<li><a href=\"?project=$projct&amp;\">normal promo</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
-if ($isBuildServer && is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php"))
+$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
+if ($isBuildServer && file_exists($f))
 {
-	include_once $_SERVER['DOCUMENT_ROOT'] . "/$PR/build/sideitems-common.php";
-	if (function_exists("sidebar"))
-	{
-		sidebar();
-	}
+	include_once($f);
+}
+
+if ($isBuildServer && function_exists("sidebar"))
+{
+	sidebar();
 }
 
 print "</div>\n";
@@ -362,7 +353,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Promote a Build";
+$pageTitle = $componentName . " - Promote a Build";
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
@@ -370,170 +361,6 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 /************************** METHODS *****************************************/
-
-function displayCheckboxes($label, $options, $verbose = false, $checked = false)
-{
-	if ($options["reversed"])
-	{
-		// pop that item out
-		array_shift($options);
-		$options = array_reverse($options);
-	}
-
-	foreach ($options as $o => $option)
-	{
-		$opt = $option;
-		$isSelected = false;
-		if (!preg_match("/\-\=[\d\.]+/", $opt))
-		{
-			if (strstr($opt, "="))
-			{ // split line so that foo=bar becomes <input type="checkbox" name="bar" value="Y">foo
-				$matches = null;
-				preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
-				print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . trim($matches[2]) . "\" value=\"Y\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]);
-			}
-			else
-			{ // turn foo into <input type="checkbox" name="foo" value="Y">foo</option>
-				print "\n\t<input " . ($checked ? "checked " : "") . "type=\"checkbox\" " . "name=\"" . $label . "_" . $opt . "\" value=\"Y\">" . $opt;
-			}
-			print "<br/>\n";
-		}
-	}
-}
-
-function displayOptions($options, $verbose = false, $selected = -1)
-{
-	if ($options["reversed"])
-	{
-		// pop that item out
-		array_shift($options);
-		$options = array_reverse($options);
-	}
-
-	foreach ($options as $o => $option)
-	{
-		$opt = $option;
-		$isSelected = false;
-		if (!preg_match("/\-\=[\d\.]+/", $opt))
-		{
-			if (strstr($opt, "|selected"))
-			{ // remove the |selected keyword
-				$isSelected = true;
-				$opt = substr($opt, 0, strpos($opt, "|selected"));
-			}
-			if (strstr($opt, "="))
-			{ // split line so that foo=bar becomes <option value="bar">foo</option>
-				$matches = null;
-				preg_match("/([^\=]+)\=([^\=]*)/", $opt, $matches);
-				print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . trim($matches[2]) . "\">" . ($verbose ? trim($matches[2]) . " | " : "") . trim($matches[1]) . "</option>";
-			}
-			else
-			{ // turn foo into <option value="foo">foo</option>
-				print "\n\t<option " . ($isSelected || $selected == $o ? "selected " : "") . "value=\"" . $opt . "\">" . $opt . "</option>";
-			}
-		}
-	}
-}
-
-function loadOptionsFromFile($file1)
-{ // fn not used
-	$sp = array ();
-	if (is_file($file1))
-	{
-		$sp = file($file1);
-	}
-	$options = loadOptionsFromArray($sp);
-	return $options;
-}
-
-function loadOptionsFromRemoteFiles($file1, $file2)
-{
-	$sp1 = file($file1);
-	if (!$sp1)
-	{
-		$sp1 = array ();
-	}
-	$sp2 = file($file2);
-	if (!$sp2)
-	{
-		$sp2 = array ();
-	}
-	$options = loadOptionsFromArray(array_merge($sp1, $sp2));
-	return $options;
-}
-
-function loadOptionsFromRemoteFile($file1)
-{ // fn not used
-	$sp1 = file($file1);
-	if (!$sp1)
-	{
-		$sp1 = array ();
-	}
-	$options = loadOptionsFromArray($sp1);
-	return $options;
-}
-
-function loadOptionsFromArray($sp)
-{
-	global $debug; 
-	$options = array ();
-	$doSection = "";
-
-	foreach ($sp as $s)
-	{
-		$matches = null;
-		if (strpos($s, "#") === 0)
-		{ // skip, comment line
-		}
-		else
-			if (preg_match("/\[([a-zA-Z\_\|]+)\]/", $s, $matches))
-			{ // section starts
-				if (strlen($s) > 2)
-				{
-					$isReversed = false;
-					if (strstr($s, "|reversed"))
-					{ // remove the |reversed keyword
-						$isReversed = true;
-						$doSection = trim($matches[1]);
-						$doSection = substr($doSection, 0, strpos($doSection, "|reversed"));
-					}
-					else
-					{
-						$doSection = trim($matches[1]);
-					}
-					if ($debug > 0)
-						print "Section: $s --> $doSection<br>";
-
-					$options[$doSection] = array ();
-					if ($isReversed)
-					{
-						$options[$doSection]["reversed"] = $isReversed;
-					}
-				}
-			}
-			else
-				if (!preg_match("/\[([a-zA-Z\_]+)\]/", $s, $matches))
-				{
-					if (strlen($s) > 2)
-					{
-						if ($debug > 0)
-							print "Loading: $s<br>";
-						$options[$doSection][] = trim($s);
-					}
-				}
-	}
-
-	return $options;
-}
-
-function getBranches($options)
-{
-	foreach ($options["Branch"] as $br => $branch)
-	{
-		$arr[getValueFromOptionsString($branch, "name")] = getValueFromOptionsString($branch, "value");
-	}
-	return $arr;
-}
 
 function getProperties($file = null)
 {
@@ -562,55 +389,6 @@ function isIES()
 		return ($arr["IES"]-0);
 	}
 	return false;
-}
-
-function getValueFromOptionsString($opt, $nameOrValue)
-{
-	if (strstr($opt, "|selected"))
-	{ // remove the |selected keyword
-		$opt = substr($opt, 0, strpos($opt, "|selected"));
-	}
-	if (strstr($opt, "="))
-	{ // split the name=value pairs, if present
-		if ($nameOrValue == "name" || $nameOrValue === 0)
-		{
-			$opt = substr($opt, 0, strpos($opt, "="));
-		}
-		else
-			if ($nameOrValue == "value" || $nameOrValue == 1)
-			{
-				$opt = substr($opt, strpos($opt, "=") + 1);
-			}
-	}
-	return $opt;
-}
-
-function getprojRelengBranch($branches, $br_id)
-{ // { 2.1.0=HEAD|selected, 2.0.3=R2_0_maintenance, ... }, 2.0.3/M200506021148
-	if (false === strpos($br_id, "/") || sizeof($branches) < 1)
-	{
-		return "HEAD";
-	}
-	$BR = explode("/", $br_id);
-	$BR = $BR[0]; // 2.0.3
-	foreach ($branches as $br)
-	{
-		if (false !== strpos($br, $BR) && false !== strpos($br, "=") && false === strpos($br, "-"))
-		{
-			$cvsBranch = explode("=", $br);
-			$cvsBranch = $cvsBranch[1]; // HEAD|selected, R2_0_maintenance
-			if (false === strpos($cvsBranch, "|"))
-			{
-				return $cvsBranch; // R2_0_maintenance
-			}
-			else
-			{
-				$cvsBranch = explode("|", $cvsBranch);
-				return $cvsBranch[0]; // HEAD
-			}
-		}
-	}
-	return "HEAD";
 }
 
 function getBuildConfig($dir)
