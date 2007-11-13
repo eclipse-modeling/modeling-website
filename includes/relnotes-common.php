@@ -67,8 +67,6 @@ if (isset($_GET["types"]) && preg_match("#[RIMS,]+#", $_GET["types"]))
 	$typeFilter = " AND `type` in (" . $typeFilter . ")";
 }
 
-print "\$typeFilter = $typeFilter\n";
-
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
 
 ob_start();
@@ -348,7 +346,7 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 			$tnum += $num;
 
 			$releaseContents .= "<ul>\n";
-			$releaseContents .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a>" . ($num > 1 ? " ($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
+			$releaseContents .= "<li class=\"outerli\"><a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "\"><acronym title=\"" . str_replace(" ", "&#160;", $rels[$i][0]) . "&#160;GMT\">" . $rels[$i][1] . "</acronym></a><a name=\"" . $rels[$i][1] . "\">&nbsp;</a>" . ($num > 1 ? "($num bugs fixed) <a href=\"?project=$proj&amp;version=" . $rels[$i][1] . "&amp;bugzonly\"><img src=\"/modeling/images/checklist.gif\"/></a>" : "") . "\n";
 			$releaseContents .= "<ul>\n";
 			if ($num > 0)
 			{
