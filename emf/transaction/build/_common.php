@@ -2,7 +2,7 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "v20070614",
+	"BaseBuilderBranch" => "M1_34",
 	
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
