@@ -8,7 +8,11 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 print "<div id=\"midcolumn\">\n";
 
-print "<h1>Commit stats per company for all Eclipse projects</h1>\n";
+print "<h1>Eclipse Project Stats by Company, Commits &amp; LOC</h1>\n";
+
+print "<p><b><i>This automatically collected information may not represent true activity and should not be used as sole " . 
+	"indicator of individual or project behavior.<br/>See the <a href=\"http://wiki.eclipse.org/index.php/Commits_Explorer\">wiki page</a> for " . 
+	"known data anomalies. To report issues or request enhancements, see <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=209711\">bug 209711</a>.</i></b></p>\n";
 
 $year = 2007;
 $commits_file = "data/_data.php";
@@ -22,23 +26,14 @@ if (isset($_GET["sortBy"]))
 		$sortBy=$matches[1];
 	}
 }
-if (isset($_GET["showCommitters"]))
+if (isset($_GET["show"]))
 {
-	preg_match("#(active|inactive|all|none)#",$_GET["showCommitters"],$matches);
+	preg_match("#(locpp|active|inactive|all|none)#",$_GET["show"],$matches);
 	if (isset($matches) && isset($matches[1]))
 	{
-		$showCommitters=$matches[1];
+		$show=$matches[1];
 	}
 	}
-
-if (isset($_GET["showColor"]) && $_GET["showColor"] != 1)
-{
-	$showColor = false;
-}
-else
-{
-	$showColor = true;
-}
 
 # array to use when foreaching
 $array = $commits;
@@ -100,37 +95,29 @@ else if ($sortBy=="alocpc")
 $row = 0;
 # header / column sorts
 print "<table><tr bgcolor=\"". bgcol($row). "\">" .
-	"<th valign=\"bottom\"><a href=\"?sortBy=&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Company</a></th>" . 
-	"<th colspan=\"2\"><a href=\"?sortBy=activecommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Active<br>Committers</a></th>" . 
-	"<th colspan=\"2\"><a href=\"?sortBy=inactivecommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Inactive<br>Committers</a></th>" . 
-	"<th colspan=\"2\"><a href=\"?sortBy=totalcommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Total<br>Committers</a></th>" . 
-	"<th colspan=\"1\"><a href=\"?sortBy=pcactive&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Percent<br>Active</a></th>" . 
-	"<th colspan=\"2\"><a href=\"?sortBy=commits&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Commits<br/>($year)</a></th>" . 
-	"<th colspan=\"2\"><a href=\"?sortBy=loc&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Lines of Code<br/>(last 9 months)</a></th>" . 
-	"<th colspan=\"1\"><a href=\"?sortBy=alocpc&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Approx. LOC<br/>per Commit</a></th>" . 
+	"<th valign=\"bottom\"><a href=\"?sortBy=&amp;show=$show\">Company</a></th>" . 
+	"<th colspan=\"2\"><a href=\"?sortBy=activecommitters&amp;show=$show\">Active<br>Committers</a></th>" . 
+	"<th colspan=\"2\"><a href=\"?sortBy=inactivecommitters&amp;show=$show\">Inactive<br>Committers</a></th>" . 
+	"<th colspan=\"2\"><a href=\"?sortBy=totalcommitters&amp;show=$show\">Total<br>Committers</a></th>" . 
+	"<th colspan=\"1\"><a href=\"?sortBy=pcactive&amp;show=$show\">Percent<br>Active</a></th>" . 
+	"<th colspan=\"2\"><a href=\"?sortBy=commits&amp;show=$show\">Commits<br/>($year)</a></th>" . 
+	"<th colspan=\"2\"><a href=\"?sortBy=loc&amp;show=$show\">Lines of Code<br/>(last 9 months)</a></th>" . 
+	"<th colspan=\"1\"><a href=\"?sortBy=alocpc&amp;show=$show\">Approx. LOC<br/>per Commit</a></th>" . 
 "</tr>\n";
 foreach($array as $company => $v)
 {
 	$row++;
 	print "<tr bgcolor=\"". bgcol($row). "\">" . 
 		"<td>$company</td>" . 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">" . number($num_committers_active[$company], 
-			null, array(7 => "<b style=\"color:red\">VAL</b>")
-			) . "</a></td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
+		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">" . number($num_committers_active[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
 			 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">" . number($num_committers_inactive[$company], 
-			array(7 => "<b style=\"color:red\">VAL</b>"), array(0 => "<b style=\"color:green\">VAL</b>")
-			) . "</a></td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
+		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">" . number($num_committers_inactive[$company]) . "</a></td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
 			 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company], 
-			null, array(7 => "<b style=\"color:red\">VAL</b>")
-			) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
+		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
 			 
-		"<td align=\"right\">" . percent($percent_active[$company], 
-			array(90 => "<b style=\"color:green\">VAL</b>", 70 => "<b style=\"color:blue\">VAL</b>"), array(25 => "<b style=\"color:red\">VAL</b>", 60 => "<b style=\"color:orange\">VAL</b>")
-			). "</td>" .
+		"<td align=\"right\">" . percent($percent_active[$company]). "</td>" .
 		"<td align=\"right\">" . number($commits[$company]) . "</td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
-		"<td align=\"right\">" . number($loc[$company]) . "</td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
+		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">" . number($loc[$company]) . "</a></td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
 		"<td align=\"right\">" . round($alocpc[$company]). "</td>" .
 	"</tr>\n";
 	$row++;
@@ -138,14 +125,17 @@ foreach($array as $company => $v)
 	ksort($committers[$company]); reset($committers[$company]); 
 	
 	# active committers
-	print "<tr id=\"" . $company . "_active_committers\" style=\"display:" . ($showCommitters == "active" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+	print "<tr id=\"" . $company . "_active_committers\" style=\"display:" . ($show == "active" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
 	print "<td colspan=\"13\" style=\"padding:6px\">";
 	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_active_committers')\"><b>$company Active Committers</b></a><br/>\n";
-	print "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tr><td valign=\"top\" style=\"padding-left:8px\">\n"; 
-	
+	print "<a href=\"javascript:toggle('" . $company . "_active_committers')\"><b>$company: " . $num_committers_active[$company] . " Active Committers</b></a><br/>\n";
+	print 
+		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 	$cnt=0;
-	$split_thresh = $num_committers_active[$company] > 5 ? ceil($num_committers_active[$company]/3) : 5;
+	$row2=0;
+	$split_thresh = $num_committers_active[$company] > 5 ? ceil($num_committers_active[$company]/5) : 5;
 	$had_active_committer = false;
 	foreach($committers[$company] as $committer_name => $committer_loc)
 	{
@@ -155,27 +145,37 @@ foreach($array as $company => $v)
 			$cnt++;
 			if ($cnt % $split_thresh == 1) 
 			{
-				print "</td><td></td><td valign=\"top\" style=\"padding-left:8px\">\n"; 
+				print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+				print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+				$row2++;
 			}
-			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". " . $committer_name . "&#160;(" . number($committer_loc,null,array(100 => "<b style=\"color:orange\">VAL</b>")) . " LOC)<br/>";
+			print 
+				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+				"</td> </tr>\n";
+			$row2++;
 		}
 	}
 	if (!$had_active_committer)
 	{
-		print "<i" . ($showColor ? " style=\"color:red\"" : "") . ">No Active Committers!</i>";
+		print "<i style=\"color:red\">$company: No Active Committers!</i>";
 	}	
-	print "</td></tr></table></td></tr>\n";
+	print "</table></td></tr></table>";
+	print "</td></tr>\n";
 	$row++;
-	
+		
 	# inactive committers
-	print "<tr id=\"" . $company . "_inactive_committers\" style=\"display:" . ($showCommitters == "inactive" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+	print "<tr id=\"" . $company . "_inactive_committers\" style=\"display:" . ($show == "inactive" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
 	print "<td colspan=\"13\" style=\"padding:6px\">";
 	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_inactive_committers')\"><b>$company Inactive Committers</b></a><br/>\n";
-	print "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tr><td valign=\"top\" style=\"padding-left:8px\">\n"; # inactive
-	
+	print "<a href=\"javascript:toggle('" . $company . "_inactive_committers')\"><b>$company: " . $num_committers_inactive[$company] . " Inactive Committers</b></a><br/>\n";
+	print 
+		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 	$cnt=0;
-	$split_thresh = $num_committers_inactive[$company] > 5 ? ceil($num_committers_inactive[$company]/3) : 5;
+	$row2=0;
+	$split_thresh = $num_committers_inactive[$company] > 5 ? ceil($num_committers_inactive[$company]/5) : 5;
 	$had_inactive_committer = false;
 	foreach($committers[$company] as $committer_name => $committer_loc)
 	{
@@ -185,38 +185,85 @@ foreach($array as $company => $v)
 			$cnt++;
 			if ($cnt % $split_thresh == 1) 
 			{
-				print "</td><td></td><td valign=\"top\" style=\"padding-left:8px\">\n"; 
+				print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+				print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+				$row2++;
 			}
-			print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". $committer_name&#160;(" . number($committer_loc,null,array(10 => "<b style=\"color:red\">VAL</b>")) . " LOC)<br/>";
+			print 
+				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+				"</td> </tr>\n";
+			$row2++;
 		}
 	}
 	if (!$had_inactive_committer)
 	{
-		print "<i" . ($showColor ? " style=\"color:green\"" : "") . ">No inactive committers!</i>";
+		print "<i style=\"color:green\">No inactive committers!</i>";
 	}
-	print "</td></tr></table></td></tr>\n";
+	print "</table></td></tr></table>";
+	print "</td></tr>\n";
 	$row++;
 	
 	# all (total) committers
-	print "<tr id=\"" . $company . "_committers\" style=\"display:" . ($showCommitters == "all" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+	print "<tr id=\"" . $company . "_committers\" style=\"display:" . ($show == "all" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
 	print "<td colspan=\"13\" style=\"padding:6px\">";
 	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_committers')\"><b>$company Total Committers</b></a><br/>\n";
-	print "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tr><td valign=\"top\" style=\"padding-left:8px\">\n"; # all
-	
+	print "<a href=\"javascript:toggle('" . $company . "_committers')\"><b>$company: " . $num_committers[$company]. " Total Committers</b></a><br/>\n";
+	print 
+		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 	$cnt=0;
-	$split_thresh = $num_committers[$company] > 5 ? ceil($num_committers[$company]/3) : 5;
+	$row2=0;
+	$split_thresh = $num_committers[$company] > 5 ? ceil($num_committers[$company]/5) : 5;
 	foreach($committers[$company] as $committer_name => $committer_loc)
 	{
 		$cnt++;
 		if ($cnt % $split_thresh == 1) 
 		{
-			print "</td><td></td><td valign=\"top\" style=\"padding-left:8px\">\n"; 
+			print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+			print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+			$row2++;
 		}
-		print str_pad($cnt,2,"0",STR_PAD_LEFT) . ". $committer_name&#160;(" . number($committer_loc,null,array(1 => "<b style=\"color:red\">VAL</b>", 11 => "<b style=\"color:orange\">VAL</b>")) . " LOC)<br/>";
+		print 
+			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+			"</td> </tr>\n";
+		$row2++;
 	}
-	print "</td></tr></table></td></tr>\n";
-	$row++;
+	print "</table></td></tr></table>";
+	print "</td></tr>\n";
+	
+	# commits by project
+	print "<tr id=\"" . $company . "_loc_per_project\" style=\"display:" . ($show == "locpp" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+	print "<td colspan=\"13\" style=\"padding:6px\">";
+	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">[x]</a></div>";
+	print "<a href=\"javascript:toggle('" . $company . "_loc_per_project')\"><b>$company: LOC &amp; Committer Count for " . sizeof($loc_per_project[$company]) . " Projects</b></a><br/>\n";
+	print 
+		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+	$cnt=0;
+	$row2=0;
+	$split_thresh = sizeof($loc_per_project[$company]) > 5 ? ceil(sizeof($loc_per_project[$company])/3) : 5;
+	foreach($loc_per_project[$company] as $project_name => $project_loc)
+	{
+		$cnt++;
+		if ($cnt % $split_thresh == 1) 
+		{
+			print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+			print "<tr bgcolor=\"". bgcol($row2). "\"><th>Project</th><th>LOC</th><th>Commit-<br/>ters</th></tr>\n";
+			$row2++;
+		}
+		print 
+			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $project_name .  
+			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($project_loc) . 
+			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($num_project_commiters[$project_name][$company]) .
+			"</td> </tr>\n";
+		$row2++;
+	}
+	print "</table></td></tr></table>";
+	print "</td></tr>\n";
 }
 
 # footer / totals
@@ -234,8 +281,7 @@ print "<tr bgcolor=\"". bgcol($row). "\">" .
 print "</table>\n";
 
 print "<p>&#160;</p>\n";
-print "<p><small>This automatically collected information may not represent true activity and should not be used as sole indicator of individual or project behavior. See the <a href=\"http://wiki.eclipse.org/index.php/Commits_Explorer\">wiki page</a> about known data anamolies.</p>\n";
-print "<p>&#160;</p>\n";
+
 print "</div>\n";
 
 print "<div id=\"rightcolumn\">\n";
@@ -253,27 +299,28 @@ print "</div>\n";
 print "<div class=\"sideitem\">\n";
 print "<h6>Sort By</h6>\n";
 print "<ul>\n";
-print "<li><a " . ($sortBy == "" ? "name" : "href") . "=\"?sortBy=&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Company Name</a></li>\n";
-print "<li><a " . ($sortBy == "activecommitters" ? "name" : "href") . "=\"?sortBy=activecommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Active Committers</a></li>\n";
-print "<li><a " . ($sortBy == "inactivecommitters" ? "name" : "href") . "=\"?sortBy=inactivecommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Inactive Committers</a></li>\n";
-print "<li><a " . ($sortBy == "totalcommitters" ? "name" : "href") . "=\"?sortBy=totalcommitters&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Total Committers</a></li>\n";
-print "<li><a " . ($sortBy == "active" ? "name" : "href") . "=\"?sortBy=pcactive&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Percent Active</a></li>\n";
-print "<li><a " . ($sortBy == "commits" ? "name" : "href") . "=\"?sortBy=commits&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Commits</a></li>\n";
-print "<li><a " . ($sortBy == "loc" ? "name" : "href") . "=\"?sortBy=loc&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Lines of Code</a></li>\n";
-print "<li><a " . ($sortBy == "alocpc" ? "name" : "href") . "=\"?sortBy=alocpc&amp;showCommitters=$showCommitters&amp;showColor=$showColor\">Approx. LOC per Commit</a></li>\n";
+print "<li><a " . ($sortBy == "" ? "name" : "href") . "=\"?sortBy=&amp;show=$show\">Company Name</a></li>\n";
+print "<li><a " . ($sortBy == "activecommitters" ? "name" : "href") . "=\"?sortBy=activecommitters&amp;show=$show\">Active Committers</a></li>\n";
+print "<li><a " . ($sortBy == "inactivecommitters" ? "name" : "href") . "=\"?sortBy=inactivecommitters&amp;show=$show\">Inactive Committers</a></li>\n";
+print "<li><a " . ($sortBy == "totalcommitters" ? "name" : "href") . "=\"?sortBy=totalcommitters&amp;show=$show\">Total Committers</a></li>\n";
+print "<li><a " . ($sortBy == "active" ? "name" : "href") . "=\"?sortBy=pcactive&amp;show=$show\">Percent Active</a></li>\n";
+print "<li><a " . ($sortBy == "commits" ? "name" : "href") . "=\"?sortBy=commits&amp;show=$show\">Commits</a></li>\n";
+print "<li><a " . ($sortBy == "loc" ? "name" : "href") . "=\"?sortBy=loc&amp;show=$show\">Lines of Code</a></li>\n";
+print "<li><a " . ($sortBy == "alocpc" ? "name" : "href") . "=\"?sortBy=alocpc&amp;show=$show\">Approx. LOC per Commit</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
 print "<div class=\"sideitem\">\n";
 print "<h6>Show</h6>\n";
 print "<ul>\n";
-print "<li><a " . ($showCommitters == "active" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;showCommitters=active&amp;showColor=$showColor\">Active Committers</a></li>\n";
-print "<li><a " . ($showCommitters == "inactive" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;showCommitters=inactive&amp;showColor=$showColor\">Inactive Committers</a></li>\n";
-print "<li><a " . ($showCommitters == "all" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;showCommitters=all&amp;showColor=$showColor\">Total Committers</a></li>\n";
-print "<li><a " . ($showCommitters == "" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;showCommitters=&amp;showColor=$showColor\">No Committers</a></li>\n";
+print "<li><a " . ($show == "active" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=active\">Active Committers</a></li>\n";
+print "<li><a " . ($show == "inactive" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=inactive\">Inactive Committers</a></li>\n";
+print "<li><a " . ($show == "all" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=all\">Total Committers</a></li>\n";
+print "<li><a " . ($show == "" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=\">No Committers</a></li>\n";
 print "</ul>\n";
 print "<ul>\n";
-print "<li><a href=\"?sortBy=$sortBy&amp;showCommitters=$showCommitters&amp;showColor=" . ($showColor ? "0" : "1") . "\">Toggle Color</a></li>\n";
+print "<li><a " . ($show == "locpp" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=locpp\">Per-Project LOC</a></li>\n";
+print "<li><a " . ($show == "" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=\">No Per-Project LOC</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
@@ -282,7 +329,7 @@ print "</div>\n";
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Eclipse Stats By Company, Commits and LOC";
+$pageTitle = "Eclipse Project Stats By Company, Commits and LOC";
 $pageKeywords = ""; 
 $pageAuthor = "Nick Boldt";
 
@@ -290,48 +337,16 @@ $App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="te
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 # see colorize()
-function number($num, $thresh_upper=null, $thresh_lower=null)
+function number($num)
 {
-	$val = number_format($num);
-	return colorize($num, $val, $thresh_upper, $thresh_lower);
+	return number_format($num);
 }
 
 # see colorize()
-function percent($num, $thresh_upper=null, $thresh_lower=null)
+function percent($num)
 {
 	$val = (round($num*10000)/100);
-	return colorize($val, $val . "%", $thresh_upper, $thresh_lower);
-}
-
-# define number-based threshholds to assign colour, 
-# eg: $thresh_upper=array(90 => "<b style=\"color:green\">VAL</b>"), $thresh_lower=array(10 => "<b style=\"color:red\">VAL</b>")
-function colorize($val, $str, $thresh_upper=null, $thresh_lower=null)
-{
-	global $showColor;
-	if ($showColor)
-	{
-		if ($thresh_upper && is_array($thresh_upper))
-		{
-			foreach ($thresh_upper as $lim => $fmt)
-			{
-				if ($val >= $lim)
-				{
-					return preg_replace("#VAL#",$str,$fmt);
-				}
-			}
-		}
-		if ($thresh_lower && is_array($thresh_lower))
-		{
-			foreach ($thresh_lower as $lim => $fmt)
-			{
-				if ($val <= $lim)
-				{
-					return preg_replace("#VAL#",$str,$fmt);
-				}
-			}
-		}
-	}
-	return $str;
+	return $val . "%";
 }
 
 function bgcol($row)
