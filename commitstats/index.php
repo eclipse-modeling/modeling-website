@@ -292,6 +292,8 @@ print "<p>Queries used:\n";
 print "<ol>\n";
 print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-summary.php?company=x&login=y&year=$year\">summary</a></li>\n";
 print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-active-committers.php?company=IBM\">active-committers</a><br/>(once per company)</li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-project-diversity.php\">project-diversity</a><br/>(LOC per project)</li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-project-diversity-2.php\">project-diversity-2</a><br/>(committers per project)</li>\n";
 print "</ol>\n";
 print "<p>Data last collected:<br/>" . date("Y-m-d H:i:s T",filemtime($commits_file)) . "</p>\n";
 print "</div>\n";
