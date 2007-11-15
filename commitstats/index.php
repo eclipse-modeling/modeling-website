@@ -2,6 +2,10 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 ob_start();
 
+
+// http://dash.eclipse.org/dash/commits/web-app/summary.cgi?type=y&year=x&login=nickb
+// http://dash.eclipse.org/dash/commits/web-api/commit-details.php?project=modeling.gmf&year=2007&login=rgronback
+
 $theme = "Phoenix";
 
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
@@ -28,7 +32,7 @@ if (isset($_GET["sortBy"]))
 }
 if (isset($_GET["show"]))
 {
-	preg_match("#(locpp|active|inactive|all|none)#",$_GET["show"],$matches);
+	preg_match("#(active|inactive|all|commitspp|locpp)#",$_GET["show"],$matches);
 	if (isset($matches) && isset($matches[1]))
 	{
 		$show=$matches[1];
@@ -116,7 +120,7 @@ foreach($array as $company => $v)
 		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
 			 
 		"<td align=\"right\">" . percent($percent_active[$company]). "</td>" .
-		"<td align=\"right\">" . number($commits[$company]) . "</td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
+		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_commits_per_project')\">" . number($commits[$company]) . "</a></td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
 		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">" . number($loc[$company]) . "</a></td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
 		"<td align=\"right\">" . round($alocpc[$company]). "</td>" .
 	"</tr>\n";
@@ -150,7 +154,8 @@ foreach($array as $company => $v)
 				$row2++;
 			}
 			print 
-				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
 				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 				"</td> </tr>\n";
 			$row2++;
@@ -190,7 +195,8 @@ foreach($array as $company => $v)
 				$row2++;
 			}
 			print 
-				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
 				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 				"</td> </tr>\n";
 			$row2++;
@@ -226,7 +232,8 @@ foreach($array as $company => $v)
 			$row2++;
 		}
 		print 
-			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $committer_name .  
+			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
 			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 			"</td> </tr>\n";
 		$row2++;
@@ -235,6 +242,40 @@ foreach($array as $company => $v)
 	print "</td></tr>\n";
 	
 	# commits by project
+	print "<tr id=\"" . $company . "_commits_per_project\" style=\"display:" . ($show == "commitspp" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+	print "<td colspan=\"13\" style=\"padding:6px\">";
+	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_commits_per_project')\">[x]</a></div>";
+	print "<a href=\"javascript:toggle('" . $company . "_commits_per_project')\"><b>$company: Committer Trends for " . sizeof($loc_per_project[$company]) . " Projects</b></a><br/>\n";
+	print 
+		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+	$cnt=0;
+	$row2=0;
+	$split_thresh = sizeof($loc_per_project[$company]) > 5 ? ceil(sizeof($loc_per_project[$company])/3) : 5;
+	foreach($loc_per_project[$company] as $project_name => $project_loc)
+	{
+		$cnt++;
+		if ($cnt % $split_thresh == 1) 
+		{
+			print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+			print "<tr bgcolor=\"". bgcol($row2). "\"><th>Project</th><th>Trend</th><th>Commit-<br/>ters</th></tr>\n";
+			$row2++;
+		}
+		print 
+			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?company=x&login=y&project=" . $project_name . "&year=" . $year . "\">" . $project_name . "</a>" .  
+			"</td><td valign=\"top\" align=\"middle\" style=\"padding-left:3px;padding-right:3px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?company=x&month=y&project=" . $project_name . "&year=" . $year . "\">Trend</a>" . 
+			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?login=x&company=" . $company . "&month=y&project=" . $project_name . "&year=" . $year . "\">" . number($num_project_commiters[$project_name][$company]) . "</a>" .
+			"</td> </tr>\n";
+		$row2++;
+	}
+	print "</table></td></tr></table>";
+	print "</td></tr>\n";
+
+	# loc by project
 	print "<tr id=\"" . $company . "_loc_per_project\" style=\"display:" . ($show == "locpp" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
 	print "<td colspan=\"13\" style=\"padding:6px\">";
 	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">[x]</a></div>";
@@ -256,9 +297,11 @@ foreach($array as $company => $v)
 			$row2++;
 		}
 		print 
-			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\">" . $project_name .  
+			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?company=x&login=y&project=" . $project_name . "&year=" . $year . "\">" . $project_name . "</a>" .  
 			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($project_loc) . 
-			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($num_project_commiters[$project_name][$company]) .
+			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?top=x&company=" . $company . "&login=y&project=" . $project_name . "&year=" . $year . "\">" . number($num_project_commiters[$project_name][$company]) . "</a>" .
 			"</td> </tr>\n";
 		$row2++;
 	}
@@ -290,10 +333,18 @@ print "<div class=\"sideitem\">\n";
 print "<h6>About</h6>\n";
 print "<p>Queries used:\n";
 print "<ol>\n";
-print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-summary.php?company=x&login=y&year=$year\">summary</a></li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-summary.php?company=x&login=y&year=$year\">summary</a> (commits<br/>by company, user)</li>\n";
 print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-active-committers.php?company=IBM\">active-committers</a><br/>(once per company)</li>\n";
 print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-project-diversity.php\">project-diversity</a><br/>(LOC per project)</li>\n";
 print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-api/commit-project-diversity-2.php\">project-diversity-2</a><br/>(committers per project)</li>\n";
+
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?company=x&login=y&project=modeling.emf&year=" . $year . "\">summary.cgi</a> (commits<br/>by project)</li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?top=x&company=IBM&login=y&project=modeling.emf&year=" . $year . "\">summary.cgi</a> (commits<br/>by company &amp; project)</li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=nickb\">summary.cgi</a> (commits<br/>by project &amp; user)</li>\n";
+
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?company=x&month=y&project=modeling.emf&year=" . $year . "\">summary.cgi</a> (trend<br/>by project)</li>\n";
+print "<li><a href=\"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?login=x&company=IBM&month=y&project=modeling.emf&year=" . $year . "\">summary.cgi</a> (trend<br/>by company &amp; project)</li>\n";
+
 print "</ol>\n";
 print "<p>Data last collected:<br/>" . date("Y-m-d H:i:s T",filemtime($commits_file)) . "</p>\n";
 print "</div>\n";
@@ -319,6 +370,10 @@ print "<li><a " . ($show == "active" ? "name" : "href") . "=\"?sortBy=$sortBy&am
 print "<li><a " . ($show == "inactive" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=inactive\">Inactive Committers</a></li>\n";
 print "<li><a " . ($show == "all" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=all\">Total Committers</a></li>\n";
 print "<li><a " . ($show == "" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=\">No Committers</a></li>\n";
+print "</ul>\n";
+print "<ul>\n";
+print "<li><a " . ($show == "commitspp" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=commitspp\">Per-Project Trends</a></li>\n";
+print "<li><a " . ($show == "" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=\">No Per-Project Trends</a></li>\n";
 print "</ul>\n";
 print "<ul>\n";
 print "<li><a " . ($show == "locpp" ? "name" : "href") . "=\"?sortBy=$sortBy&amp;show=locpp\">Per-Project LOC</a></li>\n";
