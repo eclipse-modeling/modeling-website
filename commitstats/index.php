@@ -31,7 +31,7 @@ if (isset($_GET["showCommitters"]))
 	}
 	}
 
-if (isset($_GET["showColor"]) && $_GET["showColor"] == "false")
+if (isset($_GET["showColor"]) && $_GET["showColor"] != 1)
 {
 	$showColor = false;
 }
