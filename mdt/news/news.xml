@@ -2,35 +2,23 @@
 <doc>
 
 <news date="October 17, 2007" showOn="whatsnew">
-    OCL parser <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=176110">refactorings</a>
-    for grammar extensibility and improved error handling now available in the
-    OCL 1.2 <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=I200710171533&project=ocl#I200710171533">build</a> of 17 Oct.
+    OCL parser <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=176110">refactorings</a> for grammar extensibility and improved error handling now available in the OCL 1.2 <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=I200710171533&project=ocl#I200710171533">build</a> of 17 Oct.
 </news>
 <news date="March 29, 2007" showOn="whatsnew">
-    Details about
-    <a href="http://wiki.eclipse.org/index.php/OCL_1.1_API_Changes">API Changes</a>
-    for metamodel-specific bindings of the OCL Expressions package are available.
+    Details about <a href="http://wiki.eclipse.org/index.php/OCL_1.1_API_Changes">API Changes</a> for metamodel-specific bindings of the OCL Expressions package are available.
 </news>
 <news date="February 23, 2007" showOn="docs,whatsnew">
-	<a href="http://wiki.eclipse.org/index.php/MDT_1.0_New_and_Noteworthy">New & Noteworthy</a> added.
+	<a href="http://wiki.eclipse.org/index.php/MDT_1.0_New_and_Noteworthy">New &amp; Noteworthy</a> added.
 </news>
 <news date="February 22, 2007" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/index.php/Generating_Dynamic_Ecore_from_XML_Schema">Generating Dynamic Ecore from XML Schema (XSD)</a> added.
 </news>
 <news date="December 22, 2006" showOn="whatsnew">
-    OCL 1.1 Milestone 4 is now available for
-    <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=S200612211659&project=ocl#S200612211659">
-    download</a>.
-    Check out what's
-    <a href="http://wiki.eclipse.org/index.php/OCL_1.1_New_and_Noteworthy#1.1_M4">
-    New and Noteworthy</a>.
+    OCL 1.1 Milestone 4 is now available for <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=S200612211659&project=ocl#S200612211659">download</a>.  Check out what's <a href="http://wiki.eclipse.org/index.php/OCL_1.1_New_and_Noteworthy#1.1_M4" New and Noteworthy</a>.
 </news>
 <news date="August 2, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/faq.php?project=uml2">
-	UML2 FAQ</a> updated.
+	<a href="http://www.eclipse.org/modeling/mdt/faq.php?project=uml2">UML2 FAQ</a> updated.
 </news>
-<news date="August 01, 2006" showOn="whatsnew">
-	Since January 2006, there have been over 333,000 downloads of UML2!
 	<!-- other stats:
 	    Jan-July, total 2.0.0.x downloads: 40,378
 	    Jan-July, total 2.0.0 pre-release (I builds):  26,507, or about 4,000/mo
@@ -38,166 +26,130 @@
 	    Jan-July, total 2.0.0 release downloads:  13,871, or about 13,000/mo
     	    UM to Zip ratio:  8,966 to 4,905 or about 2:1 (65% UM)
 	-->
+<news date="August 01, 2006" showOn="whatsnew">
+	Since January 2006, there have been over 333,000 downloads of UML2!
 </news>
 <news date="July 18, 2006" showOn="whatsnew">
-	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">
-	Introduction to UML2 Profiles</a> article is now available.
+	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">Introduction to UML2 Profiles</a> article is now available.
 </news>
 <news date="July 17, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">
-	UML2 2.0 Migration Guide</a> updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">UML2 2.0 Migration Guide</a> updated.
 </news>
 <news date="July 13, 2006" showOn="whatsnew">
-	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">
-	Getting Started with UML2</a> article is now available.
+	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">Getting Started with UML2</a> article is now available.
 </news>
 <news date="June 13, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">
-	UML2 2.0 Migration Guide</a> updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">UML2 2.0 Migration Guide</a> updated.
 </news>
 <news date="June 08, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="June 08, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/UML2_2.0_Release_Review.html">
-	UML2 2.0 Release Review</a> presentation now available.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/UML2_2.0_Release_Review.html">UML2 2.0 Release Review</a> presentation now available.
 </news>
 <news date="May 26, 2006" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="May 26, 2006" showOn="whatsnew">
-	Initial draft of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">
-	UML2 2.0 Migration Guide</a> is now available.
+	Initial draft of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/guides/UML2_2.0_Migration_Guide/guide.html">UML2 2.0 Migration Guide</a> is now available.
 </news>
 <news date="April 17, 2006" showOn="whatsnew">
-	Slides from <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/EclipseCon2006_ShortTalk.html">
-	UML2 Short Talk</a> at EclipseCon 2006 are now available.
+	Slides from <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/EclipseCon2006_ShortTalk.html">UML2 Short Talk</a> at EclipseCon 2006 are now available.
 </news>
 <news date="April 17, 2006" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="March 16, 2006" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="March 6, 2006" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="February 20, 2006" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="January 9, 2006" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="December 12, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="November 7, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="September 30, 2005" showOn="whatsnew">
 	<a href="http://www.eclipse.org/modeling/mdt/updates/">Update Manager</a> site now supports mirrors.
 </news>
 <news date="September 26, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="August 04, 2005" showOn="whatsnew">
-	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">
-	Getting Started with UML2</a> article is now available.
+	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">Getting Started with UML2</a> article is now available.
 </news>
 <news date="August 04, 2005" showOn="whatsnew">
-	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">
-	Introduction to UML2 Profiles</a> article is now available.
+	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">Introduction to UML2 Profiles</a> article is now available.
 </news>
 <news date="July 26, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="June 17, 2005" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/UML2_1_1_ReleaseReview.html">
-	UML2 1.1 Release Review</a> presentation now available.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/UML2_1_1_ReleaseReview.html">UML2 1.1 Release Review</a> presentation now available.
 </news>
 <news date="May 20, 2005" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="April 18, 2005" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="March 07, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="March 07, 2005" showOn="whatsnew">
-	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="March 07, 2005" showOn="whatsnew">
-	Slides from <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/EclipseCon2005_ProjectSprint.html">
-	EMF and UML2 Project Sprint</a> at EclipseCon 2005 are now available.
+	Slides from <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/presentations/EclipseCon2005_ProjectSprint.html">EMF and UML2 Project Sprint</a> at EclipseCon 2005 are now available.
 </news>
 <news date="February 14, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="February 07, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan updated.
 </news>
 <news date="February 07, 2005" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="December 23, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="December 13, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="December 06, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">
-	UML2 2.0</a> development plan is now available.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_2_0.html">UML2 2.0</a> development plan is now available.
 </news>
 <news date="December 06, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="November 18, 2004" showOn="whatsnew">
-	UML2 <a href="http://www.eclipse.org/modeling/mdt/updates/">
-	Update Manager Site</a> now available.
+	UML2 <a href="http://www.eclipse.org/modeling/mdt/updates/">Update Manager Site</a> now available.
 </news>
 <news date="November 15, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="November 10, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan updated.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan updated.
 </news>
 <news date="November 01, 2004" showOn="whatsnew">
-	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">
-	UML2 1.1</a> development plan is now available.
+	Draft <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/plans/uml2_project_plan_1_1.html">UML2 1.1</a> development plan is now available.
 </news>
 <news date="October 29, 2004" showOn="whatsnew">
-	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">
-	Introduction to UML2 Profiles</a> article is now available.
+	Updated version of the <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Introduction_to_UML2_Profiles/article.html">Introduction to UML2 Profiles</a> article is now available.
 </news>
 <news date="July 23, 2004" showOn="whatsnew">
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.20 2007/10/17 21:07:29 cdamus Exp $ -->
+<!-- $Id: news.xml,v 1.21 2007/11/16 06:07:16 nickb Exp $ -->
 
 </doc>

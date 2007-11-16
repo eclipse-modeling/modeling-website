@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+
 <news date="November 6, 2007" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/EMF/Getting_Source">Getting Source From CVS</a> updated, including <a href="http://wiki.eclipse.org/EMF/Getting_Source#Using_Team_Project_Set_File_.28.psf.29">Team Project Sets</a>. 
 </news>
@@ -69,15 +70,15 @@
 <news date="August 23, 2006" showOn="docs,whatsnew">
 	<a href="http://wiki.eclipse.org/index.php/Modeling_Corner">EMF Corner relaunched as Modeling Corner</a>!
 </news>
+<!-- other stats:
+     Jan-July, total 2.2.0.x downloads: 229,283
+     Jan-July, total 2.2.0 pre-release (I builds): 125,480, or about 20,000/mo
+     UM to Zip ratio: 118,546 to 110,737 or about 1:1 (52% UM)
+     Jan-July, total 2.2.0 release downloads: 103,803, or about 100,000/mo
+     UM to Zip ratio: 83,078 to 20,725 or about 4:1 (80% UM)
+     -->
 <news date="August 01, 2006" showOn="whatsnew">
 	Since January 2006, there have been over 777,000 downloads of EMF (incl. 100,000 of EMF 2.2.0)!
-	<!-- other stats:
-	    Jan-July, total 2.2.0.x downloads: 229,283
-	    Jan-July, total 2.2.0 pre-release (I builds): 125,480, or about 20,000/mo
-	        UM to Zip ratio: 118,546 to 110,737 or about 1:1 (52% UM)
-	    Jan-July, total 2.2.0 release downloads: 103,803, or about 100,000/mo
-    	    UM to Zip ratio: 83,078 to 20,725 or about 4:1 (80% UM)
-	-->
 </news>
 <news date="July 20, 2006" showOn="whatsnew,docs">
 	<a href="http://www.eclipse.org/emf/docs/#presentations">Callisto Podcast Series: Ed Merks</a> is available.
@@ -98,14 +99,10 @@
 	<a href="http://www.eclipse.org/emf/docs/#presentations">EclipseCon 2006</a> presentations &amp; project files published.
 </news>
 <news date="October 13, 2005" showOn="whatsnew">
-	<a href="http://www.eclipse.org/org/processes/dashboard/dashboard_detail.php?project=EMF">EMF</a>
-	has the highest
-	<a href="http://www.eclipse.org/org/processes/dashboard/dashboard.php?sort=liveness">liveness</a>
-	of any project at Eclipse.org!
+	<a href="http://www.eclipse.org/org/processes/dashboard/dashboard_detail.php?project=EMF">EMF</a> has the highest <a href="http://www.eclipse.org/org/processes/dashboard/dashboard.php?sort=liveness">liveness</a> of any project at Eclipse.org!
 </news>
 <news date="September 30, 2005" showOn="whatsnew">
-	<a href="http://download.eclipse.org/modeling/emf/updates/site.xml">Update Manager</a> site now supports
-	<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/updates/site.xml&amp;format=xml">mirrors</a>.
+	<a href="http://download.eclipse.org/modeling/emf/updates/site.xml">Update Manager</a> site now supports <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/updates/site.xml&amp;format=xml">mirrors</a>.
 </news>
 <news date="July 06, 2005" showOn="whatsnew,docs">
 	<a href="http://www.eclipse.org/emf/docs/?doc=docs/whatsnew/emf2.1.html">What`s New in EMF 2.1?</a> overview published.
@@ -120,23 +117,16 @@
 	New <a href="http://www.eclipse.org/emf/docs/?doc=references/overview/EMF.Validation.html">EMF Validation Framework Overview</a> available on <a href="http://www.eclipse.org/emf/docs/#overviews">docs page</a>.
 </news>
 <news date="June 16, 2005" showOn="whatsnew">
-	EMF, SDO &amp; XSD are now being released as jarred plugins. In addition, two new standalone bundles
-	are available for <a href="http://www.eclipse.org/emf/downloads/">download</a>.
+	EMF, SDO &amp; XSD are now being released as jarred plugins. In addition, two new standalone bundles are available for <a href="http://www.eclipse.org/emf/downloads/">download</a>.
 </news>
 <news date="June 13, 2005" showOn="docs">
-	'Getting EMF Source Files from CVS' and 'Using Eclipse Update Manager to Update EMF, SDO or XSD' updated:
-	XSD is now an EMF subproject, rather than a Technology project.
+	'Getting EMF Source Files from CVS' and 'Using Eclipse Update Manager to Update EMF, SDO or XSD' updated: XSD is now an EMF subproject, rather than a Technology project.
 </news>
 <news date="June 03, 2005" showOn="whatsnew,docs">
-	Accessible (HTML/text) versions of
-	<a href="http://www.eclipse.org/emf/docs/#xsd">XSD</a>
-	and
-	<a href="http://www.eclipse.org/emf/docs/#presentations">EMF</a>
-	Powerpoint presentations now available.
+	Accessible (HTML/text) versions of <a href="http://www.eclipse.org/emf/docs/#xsd">XSD</a> and <a href="http://www.eclipse.org/emf/docs/#presentations">EMF</a> Powerpoint presentations now available.
 </news>
 <news date="May 19, 2005" showOn="whatsnew">
-	EMF Corner submission/review forms working again (email address was disabled).
-	If you've tried to submit or review and never heard back from us, please try again.
+	<a href="http://wiki.eclipse.org/Modeling_Corner">EMF Corner</a> submission/review forms working again (email address was disabled). If you've tried to submit or review and never heard back from us, please try again.
 </news>
 <news date="May 19, 2005" showOn="whatsnew,docs">
 	EMF Build 2.1.0.I200505191347 contains important and potentially breaking changes. <a href="http://www.eclipse.org/emf/docs/?doc=docs/whatsnew/tools2.1.html">Details here</a>.
@@ -271,8 +261,7 @@
 	<a href="http://www.eclipse.org/articles/Article-JET2/jet_tutorial2.html">JET Tutorial Part 2 (Write Code that Writes Code)</a> is available.
 </news>
 <news date="August 16, 2003" showOn="docs">
-	<a href="http://www.awprofessional.com/promotions/promotions.asp?st=2D676D36-3075-4F90-8F8B-D0D853F746A4">Eclipse Series</a> book on EMF is available:
-	<a href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a>.
+	<a href="http://www.awprofessional.com/promotions/promotions.asp?st=2D676D36-3075-4F90-8F8B-D0D853F746A4">Eclipse Series</a> book on EMF is available: <a href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a>.
 </news>
 <news date="July 31, 2003" showOn="docs">
 	<a href="http://www.eclipse.org/articles/Article-JET/jet_tutorial1.html">JET Tutorial Part 1 (Introduction to JET)</a> is available.
@@ -280,7 +269,5 @@
 <news date="July 15, 2003" showOn="docs">
 	<a href="http://www.eclipse.org/emf/docs/#references">Getting EMF Source Files from CVS</a> is available.
 </news>
-
-<!-- $Id: news.xml,v 1.21 2007/11/07 04:28:29 nickb Exp $ -->
 
 </doc>
