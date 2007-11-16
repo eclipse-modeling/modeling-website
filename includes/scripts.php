@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.43 2007/11/07 23:26:53 nickb Exp $
+// $Id: scripts.php,v 1.44 2007/11/16 05:46:57 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -176,9 +176,9 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 
 	$xml = ($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"));
 	$news_regex = "%
-		^<news\ date=\"([^\"]+)\"(?:\ showOn=\"([^\"]+)\")?>$\\n
-		((?:^[^<].+$\\n)+)
-		^</news>$\\n
+		<news\ date=\"([^\"]+)\"\ showOn=\"([^\"]+)\">.*\\n
+		(.+)\\n
+		</news>.*\\n
 		%mx";
 
 	if (!$xml)
