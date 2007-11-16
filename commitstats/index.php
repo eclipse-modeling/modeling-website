@@ -163,7 +163,7 @@ foreach($array as $company => $v)
 	}
 	if (!$had_active_committer)
 	{
-		print "<i style=\"color:red\">$company: No Active Committers!</i>";
+		print "<i>$company: No Active Committers!</i>";
 	}	
 	print "</table></td></tr></table>";
 	print "</td></tr>\n";
@@ -204,7 +204,7 @@ foreach($array as $company => $v)
 	}
 	if (!$had_inactive_committer)
 	{
-		print "<i style=\"color:green\">No inactive committers!</i>";
+		print "<i>No inactive committers!</i>";
 	}
 	print "</table></td></tr></table>";
 	print "</td></tr>\n";
