@@ -202,8 +202,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>&#160;</td>
 				<td><input name="build_Build_Alias" size=8></td>
 				<td><small>
-					Eg., for labelling Release builds as "2.0.1"<br> 
-					instead of "R200408081212"</small></td>
+					Eg., to label a milestone as "0.7.0M4" instead of "S200712120000". <br/>You must include the version -- "M4" is not valid.</small></td>
 			</tr>
 
 			<tr valign="top">
