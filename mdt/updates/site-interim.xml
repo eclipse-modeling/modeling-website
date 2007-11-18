@@ -67,30 +67,6 @@
 	
 	<!-- OCL 1.2.0M3 S200711121359 -->
 	
-	<!-- UML2TOOLS M3 S200711150602 (Incubation) -->
-	<category-def label="MDT UML2TOOLS SDK (Incubation) M3 S200711150602" name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602">
-		<description>
-MDT UML2TOOLS SDK (Incubation) M3 S200711150602: contains runtime, source, and documentation features.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.uml2.diagram.source" version="0.7.100.v200711150602" url="features/org.eclipse.uml2.diagram.source_0.7.100.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
-	<feature id="org.eclipse.uml2.diagram" version="0.7.100.v200711150602" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2.diagram_0.7.100.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
-	<feature id="org.eclipse.uml2tools.doc" version="0.7.0.v200711150602" url="features/org.eclipse.uml2tools.doc_0.7.0.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
-	<feature id="org.eclipse.uml2tools.sdk" version="0.7.1.v200711150602" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools.sdk_0.7.1.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
-	<feature id="org.eclipse.uml2tools" version="0.8.0.v200711150602" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools_0.8.0.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
-	<feature id="org.eclipse.uml2tools.examples" version="0.7.1.v200711150602" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools.examples_0.7.1.v200711150602.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) M3 S200711150602"/>
-	</feature>
 <category-def label="MDT OCL SDK 1.2.0M3 S200711121359" name="MDT OCL SDK 1.2.0M3 S200711121359">
 		<description>
 MDT OCL SDK 1.2.0M3 S200711121359: contains runtime, source, and documentation features.
