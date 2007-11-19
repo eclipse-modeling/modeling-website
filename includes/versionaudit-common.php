@@ -162,6 +162,11 @@ foreach ($dirs as $dir)
 
 			$lastdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $dir);
 			$lastplugdir = preg_replace("#cvssrc(?:_branches)?(/" . basename($dir) . ")#", "cvssrc_branches$1-latest", $plugdir);
+			if (!is_dir($lastplugdir))
+			{
+				logger(LOGGER_INFO, "$lastplugdir does not exist, skipping all checks on $plugdir\n");
+				continue;
+			}
 			$lastversion = preg_replace("/\.qualifier$/", "", plugin_version($lastplugdir));
 
 			$p = ($com == "" ? $proj : "$proj/$com");
@@ -186,7 +191,7 @@ foreach ($dirs as $dir)
 				{
 					$result2 = wmysql_query("SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
 					$row2 = mysql_fetch_row($result2);
-					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
+					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin/ startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
 				}
 				$msg = mysql_num_rows($result) . " commit(s) found >= $plugtext $lastversion, currently at $vanityname\n";
 				while ($row = mysql_fetch_row($result))
