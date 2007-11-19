@@ -193,7 +193,7 @@ foreach($array as $company => $v)
 						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 			$cnt=0;
 			$row2=0;
-			$split_thresh = $num_subgroup_committers_active > 5 ? ceil($num_subgroup_committers_active/5) : 5;
+			$split_thresh = $num_subgroup_committers_active > 5 ? ceil($num_subgroup_committers_active/3) : 5;
 			$had_active_committer = false;
 			foreach($committers[$company] as $committer_name => $committer_loc)
 			{
@@ -206,13 +206,16 @@ foreach($array as $company => $v)
 						if ($cnt % $split_thresh == 1) 
 						{
 							print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
-							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>Email</th><th>LOC</th></tr>\n";
 							$row2++;
 						}
 						print 
 							"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
 							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
-							"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+							"</td>" . 
+							"<td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" .
+							"http://w3.ibm.com/jct03002wt/bluepages/simpleSearch.wss?searchBy=Internet+address&location=All+locations&searchFor=" . $committer_emails[$company][$committer_name] . "\">" . str_replace(".ibm.com", "", $committer_emails[$company][$committer_name]) . "</td>" . 
+							"<td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 							"</td> </tr>\n";
 						$row2++;
 					}
@@ -237,7 +240,7 @@ foreach($array as $company => $v)
 						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 			$cnt=0;
 			$row2=0;
-			$split_thresh = $num_subgroup_committers_inactive > 5 ? ceil($num_subgroup_committers_inactive/5) : 5;
+			$split_thresh = $num_subgroup_committers_inactive > 5 ? ceil($num_subgroup_committers_inactive/3) : 5;
 			$had_inactive_committer = false;
 			foreach($committers[$company] as $committer_name => $committer_loc)
 			{
@@ -250,13 +253,15 @@ foreach($array as $company => $v)
 						if ($cnt % $split_thresh == 1) 
 						{
 							print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
-							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>Email</th><th>LOC</th></tr>\n";
 							$row2++;
 						}
 						print 
 							"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
 							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
-							"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+							"</td>" . 
+                                                        "<td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" .
+                                                        "http://w3.ibm.com/jct03002wt/bluepages/simpleSearch.wss?searchBy=Internet+address&location=All+locations&searchFor=" . $committer_emails[$company][$committer_name] . "\">" . str_replace(".ibm.com", "", $committer_emails[$company][$committer_name]) . "</td>" .                          							      "<td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 							"</td> </tr>\n";
 						$row2++;
 					}
@@ -281,7 +286,7 @@ foreach($array as $company => $v)
 						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
 			$cnt=0;
 			$row2=0;
-			$split_thresh = $num_subgroup_committers_total > 5 ? ceil($num_subgroup_committers_total/5) : 5;
+			$split_thresh = $num_subgroup_committers_total > 5 ? ceil($num_subgroup_committers_total/3) : 5;
 			foreach($committers[$company] as $committer_name => $committer_loc)
 			{
 				if (in_array($committer_name, $subgroup_list))
@@ -290,13 +295,16 @@ foreach($array as $company => $v)
 					if ($cnt % $split_thresh == 1) 
 					{
 						print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
-						print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+						print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>Email</th><th>LOC</th></tr>\n";
 						$row2++;
 					}
 					print 
 						"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
-							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
-						"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+						"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
+						"</td>" . 
+                                                "<td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" .
+                                                "http://w3.ibm.com/jct03002wt/bluepages/simpleSearch.wss?searchBy=Internet+address&location=All+locations&searchFor=" . $committer_emails[$company][$committer_name] . "\">" . str_replace(".ibm.com", "", $committer_emails[$company][$committer_name]) . "</td>" . 
+  						"<td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 						"</td> </tr>\n";
 					$row2++;
 				}
