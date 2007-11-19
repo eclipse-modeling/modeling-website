@@ -21,6 +21,8 @@ print "<p><b><i>This automatically collected information may not represent true 
 $year = 2007;
 $commits_file = "data/_data.php";
 require_once($commits_file);
+$commits_file = "data/_data2.php";
+require_once($commits_file);
 
 if (isset($_GET["sortBy"]))
 {
@@ -111,82 +113,300 @@ print "<table><tr bgcolor=\"". bgcol($row). "\">" .
 foreach($array as $company => $v)
 {
 	$row++;
-	print "<tr bgcolor=\"". bgcol($row). "\">" . 
-		"<td>$company</td>" . 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">" . number($num_committers_active[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
-			 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">" . number($num_committers_inactive[$company]) . "</a></td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
-			 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
-			 
-		"<td align=\"right\">" . percent($percent_active[$company]). "</td>" .
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_commits_per_project')\">" . number($commits[$company]) . "</a></td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
-		"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">" . number($loc[$company]) . "</a></td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
-		"<td align=\"right\">" . round($alocpc[$company]). "</td>" .
-	"</tr>\n";
-	$row++;
-	
-	ksort($committers[$company]); reset($committers[$company]); 
-	
-	# active committers
-	print "<tr id=\"" . $company . "_active_committers\" style=\"display:" . ($show == "active" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
-	print "<td colspan=\"13\" style=\"padding:6px\">";
-	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_active_committers')\"><b>$company: " . $num_committers_active[$company] . " Active Committers</b></a><br/>\n";
-	print 
-		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
-			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
-				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
-	$cnt=0;
-	$row2=0;
-	$split_thresh = $num_committers_active[$company] > 5 ? ceil($num_committers_active[$company]/5) : 5;
-	$had_active_committer = false;
-	foreach($committers[$company] as $committer_name => $committer_loc)
+	if (isset($company_subgroups) && is_array($company_subgroups) && array_key_exists($company,$company_subgroups) && isset($company_subgroups[$company]))
 	{
-		if ($committer_loc > $inactive_threshhold)
-		{
-			$had_active_committer = true;
-			$cnt++;
-			if ($cnt % $split_thresh == 1) 
-			{
-				print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
-				print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
-				$row2++;
-			}
-			print 
-				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
-				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
-				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
-				"</td> </tr>\n";
-			$row2++;
-		}
-	}
-	if (!$had_active_committer)
-	{
-		print "<i>$company: No Active Committers!</i>";
-	}	
-	print "</table></td></tr></table>";
-	print "</td></tr>\n";
-	$row++;
+		ksort($company_subgroups[$company]); reset($company_subgroups[$company]);
 		
-	# inactive committers
-	print "<tr id=\"" . $company . "_inactive_committers\" style=\"display:" . ($show == "inactive" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
-	print "<td colspan=\"13\" style=\"padding:6px\">";
-	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_inactive_committers')\"><b>$company: " . $num_committers_inactive[$company] . " Inactive Committers</b></a><br/>\n";
-	print 
-		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
-			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
-				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
-	$cnt=0;
-	$row2=0;
-	$split_thresh = $num_committers_inactive[$company] > 5 ? ceil($num_committers_inactive[$company]/5) : 5;
-	$had_inactive_committer = false;
-	foreach($committers[$company] as $committer_name => $committer_loc)
+		print 
+			"<tr bgcolor=\"". bgcol($row). "\">" . 
+			"<td>$company</td>" .
+			"<td align=\"right\">" . number($num_committers_active[$company]) . "</td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
+				 
+			"<td align=\"right\">" . number($num_committers_inactive[$company]) . "</td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
+				 
+			"<td align=\"right\">" . number($num_committers[$company]) . "</td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
+				 
+			"<td align=\"right\">" . percent($percent_active[$company]). "</td>" .
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_commits_per_project')\">" . number($commits[$company]) . "</a></td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">" . number($loc[$company]) . "</a></td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
+			"<td align=\"right\">" . round($alocpc[$company]). "</td>" .
+		"</tr>\n";
+	}
+	else
 	{
-		if ($committer_loc <= $inactive_threshhold)
+		print 
+			"<tr bgcolor=\"". bgcol($row). "\">" . 
+			"<td>$company</td>" .
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">" . number($num_committers_active[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers_active[$company]/$num_committers_active_total) . ")</td>" .
+				 
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">" . number($num_committers_inactive[$company]) . "</a></td><td align=\"right\">(" . percent(($num_committers_inactive[$company])/$num_committers_inactive_total) . ")</td>" .
+				 
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_committers')\">" . number($num_committers[$company]) . "</a></td><td align=\"right\">(" . percent($num_committers[$company]/$num_committers_total) . ")</td>" .
+				 
+			"<td align=\"right\">" . percent($percent_active[$company]). "</td>" .
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_commits_per_project')\">" . number($commits[$company]) . "</a></td><td align=\"right\">(" . percent($commits[$company]/$num_commits_total) . ")</td>" . 
+			"<td align=\"right\"><a href=\"javascript:toggle('" . $company . "_loc_per_project')\">" . number($loc[$company]) . "</a></td><td align=\"right\">(" . percent($loc[$company]/$num_loc_total). ")</td>" .
+			"<td align=\"right\">" . round($alocpc[$company]). "</td>" .
+		"</tr>\n";
+	}
+	$row++;
+	if (isset($company_subgroups) && is_array($company_subgroups) && array_key_exists($company,$company_subgroups) && isset($company_subgroups[$company]))
+	{
+		foreach($company_subgroups[$company] as $subgroup_name => $subgroup_list)
 		{
-			$had_inactive_committer = true;
+			$subgroup_label = $company . "_" . preg_replace("#[,&\(\) ]+#", "_",$subgroup_name);
+			$num_subgroup_committers_active = 0;
+			$num_subgroup_committers_inactive = 0;
+			$num_subgroup_committers_total = 0;
+			foreach ($subgroup_list as $n)
+			{
+				$num_subgroup_committers_total++;
+				$num_subgroup_committers_active   += $committers[$company][$n]  > $inactive_threshhold ? 1 : 0;
+				$num_subgroup_committers_inactive += $committers[$company][$n] <= $inactive_threshhold ? 1 : 0;
+			}
+			print 
+				"<tr bgcolor=\"". bgcol3($row). "\">" .
+				"<td><i>&#160;&#160;+ " . $subgroup_name . "</i></td>" .
+				"<td align=\"right\"><i><a href=\"javascript:toggle('" . $subgroup_label . "_active_committers')\">" . number($num_subgroup_committers_active) . "</a></i></td><td align=\"right\"><i>(" . percent($num_subgroup_committers_active/$num_committers_active[$company]) . ")</i></td>" .
+					 
+				"<td align=\"right\"><i><a href=\"javascript:toggle('" . $subgroup_label . "_inactive_committers')\">" . number($num_subgroup_committers_inactive) . "</a></i></td><td align=\"right\"><i>(" . percent($num_subgroup_committers_inactive/$num_committers_inactive[$company]) . ")</i></td>" .
+					 
+				"<td align=\"right\"><i><a href=\"javascript:toggle('" . $subgroup_label . "_committers')\">" . number($num_subgroup_committers_total) . "</a></i></td><td align=\"right\"><i>(" . percent($num_subgroup_committers_total/$num_committers[$company]) . ")</i></td>" .
+					 
+				"<td align=\"right\"><i>" . percent($num_subgroup_committers_active/$num_subgroup_committers_total). "</td>" .
+				#"<td align=\"right\"></td><td align=\"right\"></td>" . 
+				#"<td align=\"right\"></td><td align=\"right\"></td>" .
+				"<td align=\"right\" colspan=\"5\"></td>" .
+			"</tr>\n";
+			$row++;
+			
+			ksort($committers[$company]); reset($committers[$company]);
+			
+			# active group committers
+			print "<tr id=\"" . $subgroup_label . "_active_committers\" style=\"display:" . ($show == "active" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+			print "<td colspan=\"13\" style=\"padding:6px\">";
+			print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $subgroup_label . "_active_committers')\">[x]</a></div>";
+			print "&#160;&#160;+ <a href=\"javascript:toggle('" . $subgroup_label . "_active_committers')\"><b>$subgroup_name: " . $num_subgroup_committers_active . " Active Committers</b></a><br/>\n";
+			print 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+					"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+			$cnt=0;
+			$row2=0;
+			$split_thresh = $num_subgroup_committers_active > 5 ? ceil($num_subgroup_committers_active/5) : 5;
+			$had_active_committer = false;
+			foreach($committers[$company] as $committer_name => $committer_loc)
+			{
+				if (in_array($committer_name, $subgroup_list))
+				{
+					if ($committer_loc > $inactive_threshhold)
+					{
+						$had_active_committer = true;
+						$cnt++;
+						if ($cnt % $split_thresh == 1) 
+						{
+							print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+							$row2++;
+						}
+						print 
+							"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
+							"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+							"</td> </tr>\n";
+						$row2++;
+					}
+				}
+			}
+			if (!$had_active_committer)
+			{
+				print "<i>$company: No Active Committers!</i>";
+			}	
+			print "</table></td></tr></table>";
+			print "</td></tr>\n";
+			$row++;
+					
+			# inactive group committers
+			print "<tr id=\"" . $subgroup_label . "_inactive_committers\" style=\"display:" . ($show == "inactive" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+			print "<td colspan=\"13\" style=\"padding:6px\">";
+			print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $subgroup_label . "_inactive_committers')\">[x]</a></div>";
+			print "&#160;&#160;+ <a href=\"javascript:toggle('" . $subgroup_label . "_inactive_committers')\"><b>$subgroup_name: " . $num_subgroup_committers_inactive . " Inactive Committers</b></a><br/>\n";
+			print 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+					"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+			$cnt=0;
+			$row2=0;
+			$split_thresh = $num_subgroup_committers_inactive > 5 ? ceil($num_subgroup_committers_inactive/5) : 5;
+			$had_inactive_committer = false;
+			foreach($committers[$company] as $committer_name => $committer_loc)
+			{
+				if (in_array($committer_name, $subgroup_list))
+				{
+					if ($committer_loc <= $inactive_threshhold)
+					{
+						$had_inactive_committer = true;
+						$cnt++;
+						if ($cnt % $split_thresh == 1) 
+						{
+							print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+							print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+							$row2++;
+						}
+						print 
+							"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
+							"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+							"</td> </tr>\n";
+						$row2++;
+					}
+				}
+			}
+			if (!$had_inactive_committer)
+			{
+				print "<i>$company: No Inactive Committers!</i>";
+			}	
+			print "</table></td></tr></table>";
+			print "</td></tr>\n";
+			$row++;
+
+			# all (total) group committers
+			print "<tr id=\"" . $subgroup_label . "_committers\" style=\"display:" . ($show == "all" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+			print "<td colspan=\"13\" style=\"padding:6px\">";
+			print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $subgroup_label . "_committers')\">[x]</a></div>";
+			print "&#160;&#160;+ <a href=\"javascript:toggle('" . $subgroup_label . "_committers')\"><b>$subgroup_name: " . $num_subgroup_committers_total. " Total Committers</b></a><br/>\n";
+			print 
+				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+					"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+						"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+			$cnt=0;
+			$row2=0;
+			$split_thresh = $num_subgroup_committers_total > 5 ? ceil($num_subgroup_committers_total/5) : 5;
+			foreach($committers[$company] as $committer_name => $committer_loc)
+			{
+				if (in_array($committer_name, $subgroup_list))
+				{
+					$cnt++;
+					if ($cnt % $split_thresh == 1) 
+					{
+						print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+						print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+						$row2++;
+					}
+					print 
+						"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+							"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
+						"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+						"</td> </tr>\n";
+					$row2++;
+				}
+			}
+			print "</table></td></tr></table>";
+			print "</td></tr>\n";
+			$row++;
+		}
+	}
+
+	if (!isset($company_subgroups) || !is_array($company_subgroups) || !array_key_exists($company,$company_subgroups) || !isset($company_subgroups[$company]))
+	{
+		ksort($committers[$company]); reset($committers[$company]); 
+		
+		# active committers
+		print "<tr id=\"" . $company . "_active_committers\" style=\"display:" . ($show == "active" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+		print "<td colspan=\"13\" style=\"padding:6px\">";
+		print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_active_committers')\">[x]</a></div>";
+		print "<a href=\"javascript:toggle('" . $company . "_active_committers')\"><b>$company: " . $num_committers_active[$company] . " Active Committers</b></a><br/>\n";
+		print 
+			"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+				"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+					"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+		$cnt=0;
+		$row2=0;
+		$split_thresh = $num_committers_active[$company] > 5 ? ceil($num_committers_active[$company]/5) : 5;
+		$had_active_committer = false;
+		foreach($committers[$company] as $committer_name => $committer_loc)
+		{
+			if ($committer_loc > $inactive_threshhold)
+			{
+				$had_active_committer = true;
+				$cnt++;
+				if ($cnt % $split_thresh == 1) 
+				{
+					print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+					print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+					$row2++;
+				}
+				print 
+					"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+					"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
+					"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+					"</td> </tr>\n";
+				$row2++;
+			}
+		}
+		if (!$had_active_committer)
+		{
+			print "<i>$company: No Active Committers!</i>";
+		}	
+		print "</table></td></tr></table>";
+		print "</td></tr>\n";
+		$row++;
+			
+		# inactive committers
+		print "<tr id=\"" . $company . "_inactive_committers\" style=\"display:" . ($show == "inactive" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+		print "<td colspan=\"13\" style=\"padding:6px\">";
+		print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_inactive_committers')\">[x]</a></div>";
+		print "<a href=\"javascript:toggle('" . $company . "_inactive_committers')\"><b>$company: " . $num_committers_inactive[$company] . " Inactive Committers</b></a><br/>\n";
+		print 
+			"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+				"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+					"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+		$cnt=0;
+		$row2=0;
+		$split_thresh = $num_committers_inactive[$company] > 5 ? ceil($num_committers_inactive[$company]/5) : 5;
+		$had_inactive_committer = false;
+		foreach($committers[$company] as $committer_name => $committer_loc)
+		{
+			if ($committer_loc <= $inactive_threshhold)
+			{
+				$had_inactive_committer = true;
+				$cnt++;
+				if ($cnt % $split_thresh == 1) 
+				{
+					print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
+					print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
+					$row2++;
+				}
+				print 
+					"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
+					"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
+					"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
+					"</td> </tr>\n";
+				$row2++;
+			}
+		}
+		if (!$had_inactive_committer)
+		{
+			print "<i>No inactive committers!</i>";
+		}
+		print "</table></td></tr></table>";
+		print "</td></tr>\n";
+		$row++;
+		
+		# all (total) committers
+		print "<tr id=\"" . $company . "_committers\" style=\"display:" . ($show == "all" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
+		print "<td colspan=\"13\" style=\"padding:6px\">";
+		print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_committers')\">[x]</a></div>";
+		print "<a href=\"javascript:toggle('" . $company . "_committers')\"><b>$company: " . $num_committers[$company]. " Total Committers</b></a><br/>\n";
+		print 
+			"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
+				"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
+					"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
+		$cnt=0;
+		$row2=0;
+		$split_thresh = $num_committers[$company] > 5 ? ceil($num_committers[$company]/5) : 5;
+		foreach($committers[$company] as $committer_name => $committer_loc)
+		{
 			$cnt++;
 			if ($cnt % $split_thresh == 1) 
 			{
@@ -196,50 +416,15 @@ foreach($array as $company => $v)
 			}
 			print 
 				"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
-				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .  
+					"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
 				"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
 				"</td> </tr>\n";
 			$row2++;
 		}
+		print "</table></td></tr></table>";
+		print "</td></tr>\n";
+		$row++;
 	}
-	if (!$had_inactive_committer)
-	{
-		print "<i>No inactive committers!</i>";
-	}
-	print "</table></td></tr></table>";
-	print "</td></tr>\n";
-	$row++;
-	
-	# all (total) committers
-	print "<tr id=\"" . $company . "_committers\" style=\"display:" . ($show == "all" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
-	print "<td colspan=\"13\" style=\"padding:6px\">";
-	print "<div style=\"float:right\"><a href=\"javascript:toggle('" . $company . "_committers')\">[x]</a></div>";
-	print "<a href=\"javascript:toggle('" . $company . "_committers')\"><b>$company: " . $num_committers[$company]. " Total Committers</b></a><br/>\n";
-	print 
-		"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">" . 
-			"<tr><td valign=\"top\" style=\"padding-left:0px\">" . 
-				"<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n";
-	$cnt=0;
-	$row2=0;
-	$split_thresh = $num_committers[$company] > 5 ? ceil($num_committers[$company]/5) : 5;
-	foreach($committers[$company] as $committer_name => $committer_loc)
-	{
-		$cnt++;
-		if ($cnt % $split_thresh == 1) 
-		{
-			print "</table></td><td valign=\"top\" style=\"padding-left:6px\"><table cellspacing=\"0\" cellpadding=\"0\" border=\"1\">\n"; 
-			print "<tr bgcolor=\"". bgcol($row2). "\"><th>Committer</th><th>LOC</th></tr>\n";
-			$row2++;
-		}
-		print 
-			"<tr bgcolor=\"". bgcol($row2). "\"> <td valign=\"top\" align=\"left\" style=\"padding-left:6px\"><a target=\"summary\" href=\"" . 
-				"http://dash.eclipse.org/dash/commits/web-app/summary.cgi?project=x&type=y&year=" . $year . "&login=" . $committer_name . "\">" . $committer_name . "</a>" .   
-			"</td><td valign=\"top\" align=\"right\" style=\"padding-left:6px\">" . number($committer_loc) .
-			"</td> </tr>\n";
-		$row2++;
-	}
-	print "</table></td></tr></table>";
-	print "</td></tr>\n";
 	
 	# commits by project
 	print "<tr id=\"" . $company . "_commits_per_project\" style=\"display:" . ($show == "commitspp" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
@@ -274,6 +459,7 @@ foreach($array as $company => $v)
 	}
 	print "</table></td></tr></table>";
 	print "</td></tr>\n";
+	$row++;
 
 	# loc by project
 	print "<tr id=\"" . $company . "_loc_per_project\" style=\"display:" . ($show == "locpp" ? "" : "none") . "\" bgcolor=\"". bgcol2($row). "\">\n";
@@ -307,6 +493,7 @@ foreach($array as $company => $v)
 	}
 	print "</table></td></tr></table>";
 	print "</td></tr>\n";
+	$row++;
 }
 
 # footer / totals
@@ -414,6 +601,10 @@ function bgcol($row)
 function bgcol2($row)
 {
 	return $row % 2 == 0 ? "#EEEEEE" : "#DDDDDD"; 
+}
+function bgcol3($row)
+{
+	return $row % 2 == 0 ? "#EEEEFF" : "#DDDDFF"; 
 }
 
 ?>
