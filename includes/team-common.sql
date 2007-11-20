@@ -1,6 +1,11 @@
 
 --- mysqldump modeling -u some_user -p --tables developers teams groups team-common.sql.dump  
 
+--- To add a component:
+--- alter table groups change component component enum('','org.eclipse.emf','org.eclipse.emf.ecore.sdo','org.eclipse.emf.query','org.eclipse.emf.transaction','org.eclipse.emf.validation','org.eclipse.emf.cdo','org.eclipse.net4j','org.eclipse.emf.teneo','org.eclipse.emf.compare','org.eclipse.emf.search','org.eclipse.emf.jcrm','org.eclipse.gmf','org.eclipse.gmt','org.eclipse.mddi','org.eclipse.mddi.semanticbinding','org.eclipse.mddi.qvt','org.eclipse.mddi.modelbus''org.eclipse.mddi.modelbus.orchestration','org.eclipse.eodm','org.eclipse.ocl','org.eclipse.uml2','org.eclipse.uml2tools','org.eclipse.xsd','org.eclipse.m2m','org.eclipse.m2m.atl','org.eclipse.m2m.qvt','org.eclipse.m2m.infrastructure','org.eclipse.jet','org.eclipse.m2t.core','org.eclipse.m2t.shared','org.eclipse.mtl','org.eclipse.xpand','org.eclipse.emf.emfatic','org.eclipse.emf.ecoretools','org.eclipse.emf.mint','org.eclipse.emf.mwe','org.eclipse.ocltools');
+--- insert into groups values ('org.eclipse.emft','org.eclipse.emf.ecoretools','emft-ecoretools','/cvsroot/modeling/org.eclipse.emf/org.eclipse.emf.ecoretools');
+
+
 CREATE DATABASE IF NOT EXISTS modeling;
 
 -- teams
