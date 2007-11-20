@@ -17,8 +17,17 @@ $extraZips = array(
 	"-editor"
 );
 	
-/* project => sections => (prettyname => filename) */
+/* $project => sections/Project Name => (prettyname => filename) */
+/* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
+	/*"/newProj" => array(
+		"Project Name" => array( # same as value in _projectCommon.php's $projects array
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),*/
 	"/jet" => array(
 		"JET" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -28,43 +37,12 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
-	"/mtl" => array(
-		"MTL" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/xpand" => array(
-		"Xpand" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/m2tcore" => array(
-		"M2T Core" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/m2tshared" => array(
-		"M2T Shared" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	)
 );
 
-/* list of valid file prefixes for projects who have been renamed  */
-/* keys have leading / to match $proj */
+/* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
+/* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
+	/* "/newproj" => array("m2t-newproj"), */
 	"/jet" => array("emft-jet","m2t-jet")
 );
 

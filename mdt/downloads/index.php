@@ -11,16 +11,17 @@ $extraZips = array(
 	
 /* config */
 
-/* project => sections => (prettyname => filename) */
+/* $project => sections/Project Name => (prettyname => filename) */
+/* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
-	"/eodm" => array(
-		"EODM" => array(
+	/*"/newProj" => array(
+		"Project Name" => array( # same as value in _projectCommon.php's $projects array
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
-	),
+	),*/
 	"/uml2" => array(
 		"UML2" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -38,14 +39,6 @@ $dls = array(
 			"Stand-alone" => "standalone"
 		)
 	),
-	"/uml2tools" => array(
-		"UML2 Tools" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
 	"/xsd" => array(
 		"XSD" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -56,13 +49,13 @@ $dls = array(
 	)
 );
 
-/* list of valid file prefixes for projects who have been renamed  */
-/* keys have leading / to match $proj */
+/* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
+/* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
+	/* "/newproj" => array("mdt-newproj"), */
 	"/eodm" => array("emft-eodm","mdt-eodm"),
 	"/uml2" => array("uml2","mdt-uml2"),
 	"/ocl" => array("emft-ocl","mdt-ocl"),
-	"/uml2tools" => array("mdt-uml2tools"),
 	"/xsd" => array("xsd","mdt-xsd")
 );
 
