@@ -23,8 +23,17 @@ $extraZips = array(
 
 /* config */
 
-/* project => sections => (prettyname => filename) */
+/* $project => sections/Project Name => (prettyname => filename) */
+/* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
+	/*"/newProj" => array(
+		"Project Name" => array( # same as value in _projectCommon.php's $projects array
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),*/
 	"/emf" => array(
 		"EMF, SDO, and XSD" => array(
 			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
@@ -42,39 +51,13 @@ $dls = array(
 			"Runtime" => "runtime"
 		)
 	),
-	"/query" => array(
-		"Query" => array (
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/validation" => array(
-		"Validation" => array (
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/transaction" => array(
-		"Transaction" => array (
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	)
 );
 
-/* list of valid file prefixes for projects who have been renamed  */
-/* keys have leading / to match $proj */
+/* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
+/* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
+	/* "/compare" => array("emft-compare", "emf-compare"), */
 	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd"),
-	"/query" => array("emft-query", "emf-query"),
-	"/transaction" => array("emft-transaction", "emf-transaction"),
-	"/validation" => array("emft-validation", "emf-validation")
 );
 /* alternate method for specifying prefixes - static list */
 $filePreStatic = array(
