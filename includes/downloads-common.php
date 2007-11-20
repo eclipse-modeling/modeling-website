@@ -409,7 +409,7 @@ function IDtoDateStamp($ID, $style) // given N200402121441, return date("D, j M 
 
 function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
 {
-	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips;
+	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips, $projects;
 	$uu = 0;
 	$echo_out = "";
 
