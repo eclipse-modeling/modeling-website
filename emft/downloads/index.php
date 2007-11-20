@@ -7,24 +7,17 @@ ob_start();
 
 /* config */
 
-/* project => sections => (prettyname => filename) */
+/* $project => sections/Project Name => (prettyname => filename) */
+/* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
-	"/compare" => array(
-		"Compare" => array(
+	/*"/newProj" => array(
+		"Project Name" => array( # same as value in _projectCommon.php's $projects array
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
-	),
-	"/jcrm" => array(
-		"JCR Management" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
+	),*/
 	"/mwe" => array(
 		"Model Workflow Engine" => array(
 			"SDK (Runtime, Source)" => "SDK",
@@ -33,50 +26,12 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
-	"/teneo" => array(
-		"Teneo" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/cdo" => array(
-		"CDO" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/net4j" => array(
-		"Net4j" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),
-	"/search" => array(
-		"Search" => array(
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	)
 );
 
-/* list of valid file prefixes for projects who have been renamed  */
-/* keys have leading / to match $proj */
+/* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
+/* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
-	"/compare" => array("emft-compare", "emf-compare"),
-	"/jcrm" => array("emft-jcrm", "emf-jcrm"),
-	"/mwe" => array("emft-mwe", "emf-mwe"),
-	"/teneo" => array("emft-teneo", "emf-teneo"),
-	"/cdo" => array("emft-cdo", "emf-cdo"),
-	"/net4j" => array("emft-net4j", "emf-net4j"),
-	"/search" => array("emft-search", "emf-search")
+	/* "/compare" => array("emft-compare", "emf-compare"), */
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
