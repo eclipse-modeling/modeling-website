@@ -420,6 +420,19 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 	}
 
 	$cnt=-1; // for use with static prefix list
+	
+	if (!isset($dls[$proj]))
+	{
+		// set default
+		$flip = array_flip($projects);
+		$dls[$proj] = array($flip[$projct] => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		));
+	}
+	
 	foreach (array_keys($dls[$proj]) as $z)
 	{
 		$echo_out .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n";
