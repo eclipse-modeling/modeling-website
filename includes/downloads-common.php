@@ -822,7 +822,7 @@ function grep($pattern, $file)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps, $PR;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -877,7 +877,10 @@ function outputBuild($branch, $ID, $c)
 	
 	if (!isset($filePre[$proj]))
 	{
-		$filePre[$proj] = array("emft-" . $projct, "emf-" . $projct);
+		$topProj = preg_replace("#.+/(.+)#","$1", $PR);
+		$filePre[$proj] = $topProj == "emft" ? 
+			array("emft-" . $projct, "emf-" . $projct) : 
+			array($topProj . "-" . $projct);
 	}
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
