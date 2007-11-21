@@ -55,10 +55,10 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 	header("Location: /" . $PR . $proj . "/build/promo.php");
 }
 
-$componentName =  ($trans[$projct] != "EMF" ? $trans[$projct] : "");
+$componentName =  $trans[$projct];
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>Promote a ". $componentName . " Component Build</h1>\n";
+print "<h1>Promote a Build: " . $componentName . "</h1>\n";
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -130,9 +130,9 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
 ?>
 
-<table>
-	<form method=POST name="promoForm">
-			<input type="hidden" name="process" value="build" />
+<form method=POST name="promoForm">
+	<input type="hidden" name="process" value="build" />
+	<table>
 			<tr>
 				<td>&#160;</td>
 				<td><b>Build Version, ID &amp; Branch</b></td>
@@ -189,8 +189,8 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td>&#160;</td>
 			</tr>
-	</form>
-</table>
+	</table>
+</form>
 <script language="javascript">
 function doSubmit() {
 	answer = true;
@@ -283,22 +283,21 @@ else
 	$preCmd = 'mkdir -p ' . $logdir . ';';
 
 	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() . 
-	' \"cd ' .
-		$workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
+	' \"cd ' . $workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
 	' -sub ' . $projct .
 	' -Q' .
 	' -cvsbranch ' . $cvsbranch .
 	' -branch ' . $BR .
 	' -buildID ' . $ID .
 	' -user ' . $options["Users"][1] .
-	 ($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
-	 ($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
-	 ($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
-	 ($_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
-	 ($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
-	 ($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
-	 ($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
-	 ($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
+	($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
+	($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
+	($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+	($_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
+	($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
+	($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
+	($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
+	($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
 

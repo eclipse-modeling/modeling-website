@@ -41,7 +41,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 	header("Location: /" . $PR . $proj . "/build/");
 }
 
-$componentName =  ($trans[$projct] != "EMF" ? $trans[$projct] : "");
+$componentName =  $trans[$projct];
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>New " . strtoupper($topProj) . " Component Build: ". $componentName . "</h1>\n";
