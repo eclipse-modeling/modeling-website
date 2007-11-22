@@ -54,7 +54,29 @@
 	<!-- NET4J 0.8.0 I200711141103 (Incubation) -->
 	
 	<!-- CDO 0.8.0 I200711141128 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200711141128" name="EMFT CDO SDK (Incubation) 0.8.0 I200711141128">
+	
+	<!-- TENEO 0.8.0 I200711220653 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653" name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 I200711220653: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200711220653" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200711220653.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200711220653" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo.sdk_0.8.0.v200711220653.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200711220653" url="features/org.eclipse.emf.teneo.source_0.8.0.v200711220653.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200711220653" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo_0.8.0.v200711220653.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200711220653" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo.examples_0.8.0.v200711220653.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200711220653"/>
+	</feature>
+<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200711141128" name="EMFT CDO SDK (Incubation) 0.8.0 I200711141128">
 		<description>
 EMFT CDO SDK (Incubation) 0.8.0 I200711141128: contains runtime, source, and documentation features.
 		</description>
