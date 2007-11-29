@@ -182,6 +182,13 @@ print <<<EOHTML
 
 	<ul>
 		<li>
+			<div>Nov 6 2007</div>EclipseWorld 2007 - Fundamentals of the Eclipse Modeling Framework, presented by Dave Steinberg
+			<ul>
+				<li><a href="http://www.eclipse.org/modeling/emf/docs/presentations/EclipseWorld/EclipseWorld2007.pdf">Presentation</a> (PDF)</li>
+			</ul>
+		</li>
+
+		<li>
 			<div>July 19 2007</div>Eclipse EMF Demo - A complete modeling platform for Java, presented by Ed Merks
 			<ul>
 				<li><a href="http://redmonk.com/tv/eclipse-emf-demo-large/">Flash</a> or <a href="http://media1.podtech.net/download.php?file=media/2007/07/PID_011899/Podtech_eclipse_emf_demo.mp4">MP4</a> video (23 min, 84 MB)</li>
@@ -573,4 +580,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.10 2007/11/27 03:19:30 nickb Exp $ -->
+<!-- $Id: index.php,v 1.11 2007/11/29 19:45:37 nickb Exp $ -->
