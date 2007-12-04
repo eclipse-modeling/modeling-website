@@ -71,7 +71,7 @@ $files = array(
 	)
 );
 
-$where = '`download_date` > \'%1$s\' AND `download_date` <= \'%1$s 23:59:59\' AND `file_id` = %2$d';
+$where = '`download_date` >= \'%1$s 00:00:00\' AND `download_date` <= \'%1$s 23:59:59\' AND `file_id` = %2$d';
 $queries = array(
 	"file" => array(
 		"stats" => "SELECT COUNT(*) AS `c`, SUBSTRING_INDEX(`file_name`, '/', -1) as `f` FROM `downloads` USE INDEX (IDX_download_date) NATURAL JOIN `download_file_index` WHERE $where GROUP BY `f`",
