@@ -71,15 +71,16 @@ $files = array(
 	)
 );
 
-$where = '`download_date` >= \'%1$s 00:00:00\' AND `download_date` <= \'%1$s 23:59:59\' AND `file_id` = %2$d';
+$where = '`download_date` > \'%1$s\' AND `download_date` <= \'%1$s 23:59:59\' AND `file_id` = %2$d';
 $queries = array(
 	"file" => array(
-		"stats" => "SELECT COUNT(*) AS `c`, SUBSTRING_INDEX(`file_name`, '/', -1) as `f` FROM `downloads` NATURAL JOIN `download_file_index` WHERE $where GROUP BY `f`",
+		"stats" => "SELECT COUNT(*) AS `c`, SUBSTRING_INDEX(`file_name`, '/', -1) as `f` FROM `downloads` USE INDEX (IDX_download_date) NATURAL JOIN `download_file_index` WHERE $where GROUP BY `f`",
 		"timeslice" => "SELECT MAX(`day`) + INTERVAL 1 DAY FROM `file_downloads` WHERE `project` = '%s' AND `component` = '%s'",
 		"insert" => "INSERT INTO `file_downloads` (`project`, `component`, `day`, `fid`, `number`) VALUES ('%s', '%s', '%s', (SELECT `fid` FROM `distfiles` WHERE `filename` = '%s'), %d)"
 	),
 	"country" => array(
-		"stats" => "SELECT COUNT(*) AS `c`, `ccode` FROM `downloads` WHERE $where GROUP BY `ccode`",
+		"stats" => "SELECT COUNT(*) AS `c`, `ccode` FROM `downloads` USE INDEX (IDX_download_date) WHERE $where GROUP BY `ccode`
+					SELECT COUNT(*) AS `c`, `ccode` FROM `downloads` WHERE $where GROUP BY `ccode`",
 		"timeslice" => "SELECT MAX(`day`) + INTERVAL 1 DAY FROM `country_downloads` WHERE `project` = '%s' AND `component` = '%s'",
 		"insert" => "INSERT INTO `country_downloads` (`project`, `component`, `day`, `country`, `number`) VALUES ('%s', '%s', '%s', '%s', %d)"
 	)
