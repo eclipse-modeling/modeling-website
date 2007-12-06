@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>jet Builds</title>
   <link href="http://download.eclipse.org/modeling/m2t/feeds/builds-jet.xml" rel="self" type="application/atom+xml"/>
-  <updated>2007-12-06T19:40:32Z</updated>
+  <updated>2007-12-06T19:44:37Z</updated>
   <author>
     <name>jet Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2t/feeds/builds-jet.xml</id>
+  <entry>
+    <title>[announce] jet I200712061433 (0.9.0.I200712061433) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=I200712061433#I200712061433"/>
+    <id>http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=I200712061433#I200712061433</id>
+    <updated>2007-12-06T19:44:37Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200712061433" href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=I200712061433#I200712061433" type="I" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/jet/downloads/drops/0.9.0/I200712061433/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2t/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2t/downloads/?project=jet</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=jet&amp;version=I200712061433
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2t-jet-SDK-incubation-I200712061433.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/jet/downloads/drops/0.9.0/I200712061433/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/I20071127-0800/eclipse-SDK-I20071127-0800-linux-gtk.tar.gz</dependency>
+          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.4.0/I200712042004/emf-sdo-xsd-SDK-I200712042004.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] jet M200712061420 (0.8.2.M200712061420) is available</title>
     <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=M200712061420#M200712061420"/>
