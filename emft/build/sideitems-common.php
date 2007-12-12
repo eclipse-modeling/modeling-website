@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
@@ -10,7 +10,7 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li><a href="/modeling/emft/<?php print $projct ? $projct : "compare"; ?>/build/">Build</a>, 
+			<li><a href="/modeling/emft/<?php print $projct ? $projct : "compare"; ?>/build/">Build</a>,
 					 <a href="/modeling/emft/<?php print $projct ? $projct : "compare"; ?>/build/promo.php">Promote</a></li>
 		</ul>
 	</div>
@@ -25,18 +25,7 @@ function sidebar()
 			<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng">Modeling Project Releng Help</a></li>
 		</ul>
 	</div>
-<?php	if ($isEMFserver && $projct == "emf") { ?>
-	<div class="sideitem">
-		<h6>Tests</h6>
-		<ul>
-			<li><a href="/emf/build/patch.php">New Test</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=14&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">JDK 1.4</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=50&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">JDK 5.0</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results.php?<?php print "project=$projct&amp;version=&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">BVT, FVT, SVT</a></li>
-		</ul>
-	</div>
-<?php 
-		} 
+<?php
 	}
 }
 ?>
