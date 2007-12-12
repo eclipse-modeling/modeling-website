@@ -74,10 +74,9 @@ ob_start();
 	<div class="sideitem">
 		<h6>Plans</h6>
 		<ul>
-			<!-- <li><a href="http://wiki.eclipse.org/index.php/Callisto_Coordinated_Maintenance">Callisto 3.2.x Maintenance</a></li> -->
-			<li><a href="http://wiki.eclipse.org/index.php/Europa_Simultaneous_Release">Europa 3.3 Plan</a></li>
-			<li><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_3.html">Eclipse 3.3 Plan</a></li>
-			<li><a href="http://www.eclipse.org/modeling/emf/docs/dev-plans/emf_project_plan_2.3.html">EMF 2.3 Plan</a></li>
+			<li><a href="http://wiki.eclipse.org/index.php/Ganymede">Ganymede 3.4 Plan</a></li>
+			<li><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_4.html">Eclipse 3.4 Plan</a></li>
+			<li><a href="http://wiki.eclipse.org/EMF#Plans">EMF Plans</a>
 		</ul>
 	</div>
 
