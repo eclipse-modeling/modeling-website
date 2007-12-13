@@ -188,21 +188,36 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td rowspan="1" valign="top"><img src="/modeling/images/numbers/3.gif" /></td>
 				<td rowspan="1">&#160;</td>
-				<td colspan=1><a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">org.eclipse.releng.basebuilder</a> branch:<br><small>-basebuilderBranch</small>
+				<td colspan=1><a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">Basebuilder</a> Branch:</td>
 				<td>&#160;</td>
 				<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
-				</td><td><small> <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder"><img alt="updated" src="/modeling/images/updated.gif" border="0"></a> Enter Tag or Branch, eg., 
-				v20071108, v20070614,<br/>r322_v20070104, R3_1_maintenance, R3_0_maintenance :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a></small></td>
+				</td>
+				<td width="350"><small><a id="divToggle_relengBasebuilder" name="divToggle_relengBasebuilder" href="javascript:toggleDetails('relengBasebuilder')">[+]</a></small>
+					<div id="divDetail_relengBasebuilder" name="divDetail_relengBasebuilder" style="display:none;border:0">
+					<small>
+					Enter Tag or Branch, eg., 
+						<acronym title="Eclipse 3.4.x">v20071108</acronym>, 
+						<acronym title="Eclipse 3.3.x">v20070614</acronym>, 
+						<acronym title="Eclipse 3.2.x">r322_v20070104</acronym>, 
+						<acronym title="Eclipse 3.1.x">R3_1_maintenance</acronym> :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a>
+					</small>
+					</div>
+				</td>
 			</tr>
 
 			<tr>
 				<td valign="top" rowspan="2" valign="top"><img src="/modeling/images/numbers/4.gif" /></td>
 				<td rowspan="2">&#160;</td>
-				<td><b>Build Alias</b><br><small>optional</small></td>
+				<td><b>Build Alias</b><br><small>required for S and R builds</small></td>
 				<td>&#160;</td>
 				<td><input name="build_Build_Alias" size=8></td>
-				<td><small>
-					Eg., to label a milestone as "0.7.0M4" instead of "S200712120000". <br/>You must include the version -- "M4" is not valid.</small></td>
+				<td width="300"><small><a id="divToggle_buildAlias" name="divToggle_buildAlias" href="javascript:toggleDetails('buildAlias')">[+]</a></small>
+					<div id="divDetail_buildAlias" name="divDetail_buildAlias" style="display:none;border:0">
+					<small>
+					Eg., to label a milestone as "0.7.0M4" instead of "S200712120000". You must include the version -- "M4" is not valid.
+					</small>
+					</div>
+				</td>
 			</tr>
 
 			<tr valign="top">
@@ -210,15 +225,15 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>&#160;</td>
 				<td><select name="build_Mapfile_Rule" size="1">
 				<?php 	$options["MapfileRule"] = array (
-							"Use Map, No Tagging=use-false",
-							"Generate Map, No Tagging=gen-false|selected");
+							"Use Map=use-false",
+							"Generate Map=gen-false");
 						displayOptions($options["MapfileRule"]); ?>
 				</select> 
 				</td>
-				<td><small><a id="divMapfileRuleToggle" name="divMapfileRuleToggle" href="javascript:toggleDetails('divMapfileRule')">More Info</a></small>
-				<div id="divMapfileRuleDetail" name="divMapfileRuleDetail" style="display:none;border:0">
-				<table><tr valign="top"><td><small>Use Map, No Tagging</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build.<br/>Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
-						<tr valign="top"><td><small>Generate Map, No Tagging</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
+				<td><small><a id="divToggle_MapfileRule" name="divToggle_MapfileRule" href="javascript:toggleDetails('MapfileRule')">[+]</a></small>
+				<div id="divDetail_MapfileRule" name="divDetail_MapfileRule" style="display:none;border:0">
+				<table><tr valign="top"><td><small>Use Map</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build. Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
+						<tr valign="top"><td><small>Generate Map</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
 				</table>
 				</div>
 				</td>
@@ -236,24 +251,29 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td colspan="1">
 				<?php displayCheckboxes("build_Run_Tests",$options["RunTests"]); ?>
 				</td>
-				<td><small><a id="divRunTestsToggle" name="divRunTestsToggle" href="javascript:toggleDetails('divRunTests')">More Info</a></small>
-				<div id="divRunTestsDetail" name="divRunTestsDetail" style="display:none;border:0">
-				<small>
-				If yes to JUnit Tests, tests will be performed during build
+				<td width="300"><small><a id="divToggle_RunTests" name="divToggle_RunTests" href="javascript:toggleDetails('RunTests')">[+]</a></small>
+					<div id="divDetail_RunTests" name="divDetail_RunTests" style="display:none;border:0">
+					<small>
+					If yes to JUnit Tests, tests will be performed during build
 				to validate results and will be refected in build results on
-				download page and build detail pages.</small>
-				</div>
+				download page and build detail pages.
+					</small>
+					</div>
 				</td>
 			</tr> 
 
 			<tr>
 				<td><img src="/modeling/images/numbers/6.gif" /></td>
 				<td>&#160;</td>
-				<td><b>Email Address</b><br><small>optional</small></td>
+				<td><b>Email?</b></td>
 				<td>&#160;</td>
 				<td colspan="1"><input name="build_Email" size="20" maxlength="80"/></td>
-				<td><small>If you would like to be notified when the build <br>
-				(and/or tests) completes</small></td>
+				<td width="300"><small><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></small>
+					<div id="divDetail_email" name="divDetail_email" style="display:none;border:0">
+					<small>Add your email (or comma-separated emails) to be notified when done. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=210396">bug 210396</a>.
+					</small>
+					</div>
+				</td>
 			</tr>
 
 <?php if ($debugb) { ?>
@@ -378,16 +398,16 @@ function pickDefaultJavaHome(val) {
 
 function toggleDetails(id)
 {
-  toggle=document.getElementById(id + "Toggle");
-  detail=document.getElementById(id + "Detail");
-  if (toggle.innerHTML=="More Info") 
+  toggle=document.getElementById("divToggle_" + id);
+  detail=document.getElementById("divDetail_" + id);
+  if (toggle.innerHTML=="[+]") 
   {
-    toggle.innerHTML="Hide Info";
+    toggle.innerHTML="[-]";
     detail.style.display="";
   } 
   else
   {
-    toggle.innerHTML="More Info";
+    toggle.innerHTML="[+]";
     detail.style.display="none";
   }
 }
