@@ -12,7 +12,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
 // suppress projects which can't be built this way
-array_push($nodownloads,"xsd");  
+if (isset($nodownloads)) array_push($nodownloads,"xsd");  
 
 internalUseOnly();
 ob_start();
