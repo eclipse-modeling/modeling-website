@@ -132,10 +132,10 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 
 <form method=POST name="promoForm">
 	<input type="hidden" name="process" value="build" />
-	<table>
+	<table border="0">
 			<tr>
 				<td>&#160;</td>
-				<td><b>Build Version, ID &amp; Branch</b></td>
+				<td><b>Build Version,<br/>ID &amp; Branch</b></td>
 				<td>&#160;</td>
 				<td colspan=2>
 				<select style="font-size:9px" name="build_Version_Build_ID_And_Branch" size="8">
@@ -143,33 +143,100 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				</select></td>
 			</tr>
 
-			<tr valign="top">
+			<tr>
 				<td>&#160;</td>
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
-				<td colspan="2">
-					<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
-					<p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
-					<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
-						<?php displayOptions($options["BranchIES"],false,0); ?>
-					</select></small></p>
-					<?php } ?>
-					<p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p>
-					<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Update Coordinated Update Site? 
-					<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
-						<?php displayOptions(array("ganymede","europa"),false,1); ?>
-					</select></small></p>
-					<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Fixing_Assigned_Bugs">-bugzonly</a>)</p>
-					<p><input type="checkbox" name="build_Store_SDK_As_Dependency" value="Yes" onclick=""> Store SDK As Dependency? (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=207007">-addSDK</a>)</p>
+				<td><p>&#160; &#160; &#160; Use Properties File From 
+				<small><select style="font-size:9px" name="build_Use_Properties_File" size="1">
+					<?php displayOptions(array("CVS", "Local"), false, 0); ?>
+				</select></small></p>
+				</td>
+				<td width="300"><small><a id="divToggle_propertiesfile" name="divToggle_propertiesfile" href="javascript:toggleDetails('propertiesfile')">[+]</a></small>
+					<div id="divDetail_propertiesfile" name="divDetail_propertiesfile" style="display:none;border:0">
+					<small>
+					You can either use the properties file that's local to the promote script, in /home/www-data/build/modeling/scripts/, or extract the latest from CVS for the branch of build you're promoting (eg., HEAD, R0_7_maintenance).
+					</small>
+					</div>
+				</td>
+			</tr>
+			<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
+			<tr>
+				<td colspan="3">&#160;</td>
+				<td colspan="2"><p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
+				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
+					<?php displayOptions($options["BranchIES"],false,0); ?>
+				</select></small></p></td></tr>
+			<?php } ?>
+			<tr>
+				<td colspan="3">&#160;</td>
+				<td>
+				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Contribute to  
+				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
+					<?php displayOptions(array("ganymede", "europa"), false, 0); ?>
+				</select></small> update site?</p>
+				</td>
+				<td width="300"><small><a id="divToggle_coordinated" name="divToggle_coordinated" href="javascript:toggleDetails('coordinated')">[+]</a></small>
+					<div id="divDetail_coordinated" name="divDetail_coordinated" style="display:none;border:0">
+					<small>
+					This will create all the required coordinated update site contributions for your component. You need to be a member of the <i>callisto-dev</i> group in order to update your file in CVS. If you're not, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212325">bug 212325</a>.
+					See also <a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>.
+					</small>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">&#160;</td>
+				<td>
+				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Fixing_Assigned_Bugs">-bugzonly</a>)</p>
+				</td>
+				<td width="300"><small><a id="divToggle_bugzonly" name="divToggle_bugzonly" href="javascript:toggleDetails('bugzonly')">[+]</a></small>
+					<div id="divDetail_bugzonly" name="divDetail_bugzonly" style="display:none;border:0">
+					<small>
+					This currently only works on the emf.torolab server. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=191571">bug 191571</a>.
+					</small>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">&#160;</td>
+				<td>
+				<p><input type="checkbox" name="build_Store_SDK_As_Dependency" value="Yes" onclick=""> Add SDK As Dependency?</p>
+				</td>
+				<td width="300"><small><a id="divToggle_addSDK" name="divToggle_addSDK" href="javascript:toggleDetails('addSDK')">[+]</a></small>
+					<div id="divDetail_addSDK" name="divDetail_addSDK" style="display:none;border:0">
+					<small>
+					This flag adds your new build to the list of available builds 
+					to be used as a dependency for others (eg., to add UML2 or OCL as a dependency for Query). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=207007">bug 207007</a>. 
+					</small>
+					</div>
 				</td>
 			</tr>
 
 			<tr>
 				<td>&#160;</td>
-				<td><b>Email Address</b><br><small>optional</small></td>
+				<td><b>Announce?</td>
 				<td>&#160;</td>
-				<td><input name="build_Email" size=25 value="<?php echo $options["EmailDefault"]; ?>"></td>
-				<td><small>If you would like to be<br>notified when promotion done</small></td>
+				<td><p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p></td>
+				<td width="300"><small><a id="divToggle_announce" name="divToggle_announce" href="javascript:toggleDetails('announce')">[+]</a></small>
+					<div id="divDetail_announce" name="divDetail_announce" style="display:none;border:0">
+					<small>
+					You can configure how to announce, how long to delay, and where to annouce in your properties file.
+					</small>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>&#160;</td>
+				<td><b>Email?</td>
+				<td>&#160;</td>
+				<td><input name="build_Email" size="25" value="<?php echo $options["EmailDefault"]; ?>"></td>
+				<td width="300"><small><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></small>
+					<div id="divDetail_email" name="divDetail_email" style="display:none;border:0">
+					<small>Add your email (or comma-separated emails) to be notified when done. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=210396">bug 210396</a>.
+					</small>
+					</div>
+				</td>
 			</tr>
 
 			<tr>
@@ -178,8 +245,6 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<a target="_check" class="highlight" href="/<?php echo $PR; ?>/<?php echo $projct; ?>/build/">latest (or appropriate) driver(s)</a>, 
 				and that the <a target="_check" href="/<?php echo $PR; ?>/downloads/?project=<?php echo $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest" class="highlight">all tests have passed</a>.</p>
 				
-				<p><b>When done, don't forget to change any ASSIGNED bugzillas to FIXED.</b></p>
-
 				</td>
 			</tr>
 			<tr>
@@ -206,6 +271,22 @@ function doSubmit() {
 	} else {
 		// do nothing...
 	}
+}
+
+function toggleDetails(id)
+{
+  toggle=document.getElementById("divToggle_" + id);
+  detail=document.getElementById("divDetail_" + id);
+  if (toggle.innerHTML=="[+]") 
+  {
+    toggle.innerHTML="[-]";
+    detail.style.display="";
+  } 
+  else
+  {
+    toggle.innerHTML="[+]";
+    detail.style.display="none";
+  }
 }
 
 function doOnclickBugzonly(booln) {
@@ -239,7 +320,9 @@ else
 	$BR = explode("/", $BR[0]);
 	$ID = $BR[1];
 	$BR = $BR[0];
-	// echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR<br/>";
+	$relengProject = $PR=="modeling/emf" || $PR=="modeling/emft" ? "org.eclipse.emf/org.eclipse.emf.$projct.releng" : "org.eclipse.$topProj/org.eclipse.$projct.releng";
+	#echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR, relengProject: $relengProject<br/>";
+	
 
 	$logdir = "/home/www-data/promo_logs/";
 	$logfile = "promo_log_" . $projct . "_" . $BR . "." . $ID . "_" . date("Y-m-d-H.i.s") . ($_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
@@ -284,7 +367,10 @@ else
 
 	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() . 
 	' \"cd ' . $workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
-	' -sub ' . $projct .
+
+	($_POST["build_Use_Properties_File"] == "CVS" ? 
+		" -c $relengProject/promoteToEclipse.$projct.properties,$cvsbranch" : ' -sub ' . $projct) .
+
 	' -Q' .
 	' -cvsbranch ' . $cvsbranch .
 	' -branch ' . $BR .
