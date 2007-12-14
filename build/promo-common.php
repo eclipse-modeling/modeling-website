@@ -320,7 +320,10 @@ else
 	$BR = explode("/", $BR[0]);
 	$ID = $BR[1];
 	$BR = $BR[0];
-	$relengProject = $PR=="modeling/emf" || $PR=="modeling/emft" ? "org.eclipse.emf/org.eclipse.emf.$projct.releng" : "org.eclipse.$topProj/org.eclipse.$projct.releng";
+	$relengProject = 
+		$PR=="modeling/emf" || $PR=="modeling/emft" ? 
+			"org.eclipse.emf/org.eclipse." . ($projct != "emf" ? "emf." : "") . "$projct.releng" : 
+			"org.eclipse.$topProj/org.eclipse.$projct.releng";
 	#echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR, relengProject: $relengProject<br/>";
 	
 
