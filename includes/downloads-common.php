@@ -48,11 +48,12 @@ else // all others
 	$downloadPre = "";
 }
 
-/* these are possible deps, the actual deps must be a subset of these and are read from build.cfg 
- * see also:
- * 	 genBuildDetails.sh (depNames array) and 
- * 	 build-common.php (function findCatg() & <b>Dependency URLs</b>)
- */
+/* these are possible deps, the actual deps must be a subset of these and are read from build.cfg */ 
+/* See also:
+	 genBuildDetails.sh (depNames array),  
+	 downloads-common.php ($deps array), and
+     build-common.php (<b>Dependency URLs</b> & function findCatg())
+*/
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
 

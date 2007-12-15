@@ -117,10 +117,12 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><img src="/modeling/images/numbers/2.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Dependency URLs</b><br>
-					<!--  See also
-							genBuildDetails.sh (depNames array) and 
-	 						downloads-common.php ($deps array)
-	 				-->
+<!--  
+# See also:
+#	genBuildDetails.sh (depNames array),  
+#	downloads-common.php ($deps array), and
+#   build-common.php (<b>Dependency URLs</b> & function findCatg())
+-->
 					<small>
 					choose URLs (use <em>CTRL</em> <br> 
 					for multiple selections)</small>
@@ -714,7 +716,11 @@ function getDependencyURLs($chosen, $entered, $file) {
 	return $ret;
 }
 
-# see also genBuildDetails.sh and downloads-common.php
+/* See also:
+	 genBuildDetails.sh (depNames array),  
+	 downloads-common.php ($deps array), and
+     build-common.php (<b>Dependency URLs</b> & function findCatg())
+*/
 function findCatg($url) {
 	$matches = array(
 		"15uml2tools" => "mdt-uml2tools-",
