@@ -71,7 +71,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 <?php
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
-	print "<p>To promote a build, please complete the following form and click the Promote button.</p>";
+	print "<p>To promote a build, please complete the following form and click the Promote button.<br/>Note that by design, you cannot use this form to promote <a href=\"http://www.eclipse.org/modeling/downloads/build-types.php\">Nightly</a> (<b>N</b>) builds, in order to<br/>encourage higher quality, more stable releases.</p>";
 }
 else
 {
