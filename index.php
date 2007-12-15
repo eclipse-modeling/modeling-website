@@ -162,7 +162,8 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Project">Modeling Project Wiki</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Modeling Corner</a></li>
-				<li><a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
+				<li><a href="http://wiki.eclipse.org/Europa">Europa</a>, <a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
+				<li><a href="http://www.eclipse.org/modeling/project-info/team.php">Who's Who in Modeling?</a></li>
 			</ul>
 		</div>
 	</div>
