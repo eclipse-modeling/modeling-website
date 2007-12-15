@@ -157,11 +157,11 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 						</tr>		
 						<tr>						
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
 						</tr>						
