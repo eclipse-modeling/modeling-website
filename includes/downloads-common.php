@@ -48,22 +48,31 @@ else // all others
 	$downloadPre = "";
 }
 
-/* these are possible deps, the actual deps must be a subset of these and are read from build.cfg */
+/* these are possible deps, the actual deps must be a subset of these and are read from build.cfg 
+ * see also:
+ * 	 genBuildDetails.sh (depNames array) and 
+ * 	 build-common.php (function findCatg() & <b>Dependency URLs</b>)
+ */
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
+
 	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=emf#emf\">EMF</a>",
-	"net4j" => "<a href=\"http://www.eclipse.org/emft/projects/net4j/#net4j\">Net4j</a>",
-	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
-	"lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
-	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"query" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=query#query\">Query</a>",
 	"transaction" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=transaction#transaction\">Transaction</a>",
 	"validation" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=validation#validation\">Validation</a>",
+
+	"net4j" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=net4j#net4j\">Net4j</a>",
+	"mwe" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=mwe#mwe\">MWE</a>",
+	"ocltools" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=ocltools#ocltools\">OCL Tools</a>",
+
+	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
+	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
+	"uml2tools" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools\">UML2 Tools</a>",
+
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
-	"orbit" => "<a href=\"http://www.eclipse.org/orbit/\">Orbit</a>",
+	"orbit" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">Orbit</a>", "lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
 	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>",
-	"mwe" => "<a href=\"http://www.eclipse.org/emft/projects/mwe/#mwe\">MWE</a>",
 );
 
 // TODO: move this out into the per-project or per-component pages

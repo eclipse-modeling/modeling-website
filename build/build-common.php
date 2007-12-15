@@ -117,7 +117,10 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><img src="/modeling/images/numbers/2.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Dependency URLs</b><br>
-				
+					<!--  See also
+							genBuildDetails.sh (depNames array) and 
+	 						downloads-common.php ($deps array)
+	 				-->
 					<small>
 					choose URLs (use <em>CTRL</em> <br> 
 					for multiple selections)</small>
@@ -129,38 +132,45 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
 						</tr>
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a></td>
-						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a></td>
-						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a></td>
-						</tr>						
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>, 
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>, 
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>, 
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a> 
 							</td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a></td>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
+							</td>
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
+							</td>
 						</tr>		
+						<tr>						
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+							</td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+							</td>
+						</tr>						
 						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>				
 						<tr>						
-							<td colspan="2"> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>, 
+							<td colspan="2"> &#149; 
+										<a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>, 
 										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>, 
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
-										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>,
-										<a href="http://www.eclipse.org/emft/projects/mwe/#mwe">MWE</a></td>
+										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
+							</td>
 						</tr>						
 					</table>							
             <p><small>&#160;&#160;-- AND/OR --</small></p>
@@ -704,9 +714,12 @@ function getDependencyURLs($chosen, $entered, $file) {
 	return $ret;
 }
 
+# see also genBuildDetails.sh and downloads-common.php
 function findCatg($url) {
 	$matches = array(
-		"13wtp" => "emft-mwe-",
+		"15uml2tools" => "mdt-uml2tools-",
+		"14ecoretools" => "emft-ecoretools-",
+		"13mwe" => "emft-mwe-",
 		"12wtp" => "wtp-",
 		"11gmf" => "GMF-",
 		"10gef" => "GEF-",
