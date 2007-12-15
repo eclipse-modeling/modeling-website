@@ -159,7 +159,8 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td colspan="2"> &#149; <a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>, 
 										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>, 
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
-										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a></td>
+										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>,
+										<a href="http://www.eclipse.org/emft/projects/mwe/#mwe">MWE</a></td>
 						</tr>						
 					</table>							
             <p><small>&#160;&#160;-- AND/OR --</small></p>
@@ -344,7 +345,7 @@ function setNote(val)
 	else if (val == "transaction") 
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
 	else if (val == "mwe")
-		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, GMF"
+		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
 	else if (val == "search")
 		note.innerHTML = "Requires 5 SDKs: Eclipse, EMF, UML2, OCL, GMF"
 	else
@@ -705,6 +706,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 
 function findCatg($url) {
 	$matches = array(
+		"13wtp" => "emft-mwe-",
 		"12wtp" => "wtp-",
 		"11gmf" => "GMF-",
 		"10gef" => "GEF-",
