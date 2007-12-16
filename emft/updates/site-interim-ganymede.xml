@@ -64,7 +64,29 @@
 	<!-- ECORETOOLS 0.8.0 I200712120349 (Incubation) -->
 	
 	<!-- ECORETOOLS 0.8.0 I200712120349 (Incubation) -->
-	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200712120349" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200712120349">
+	
+	<!-- COMPARE 0.8.0 I200712161110 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200712161110" url="features/org.eclipse.emf.compare.doc_0.8.0.v200712161110.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200712161110" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200712161110.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200712161110" url="features/org.eclipse.emf.compare.source_0.8.0.v200712161110.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200712161110" url="features/org.eclipse.emf.compare_0.8.0.v200712161110.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200712161110" url="features/org.eclipse.emf.compare.examples_0.8.0.v200712161110.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110"/>
+	</feature>
+<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200712120349" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200712120349">
 		<description>
 EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200712120349: contains runtime, source, and documentation features.
 		</description>
