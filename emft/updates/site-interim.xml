@@ -66,7 +66,44 @@
 	<!-- ECORETOOLS 0.8.0 I200712120349 (Incubation) -->
 	
 	<!-- COMPARE 0.8.0 I200712161110 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110">
+	
+	<!-- NET4J 0.8.0M4 S200712171422 (Incubation) -->
+	<category-def label="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422" name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422">
+		<description>
+EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.net4j.db.source" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.db.source_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.db" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.db_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.doc" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.doc_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples.source" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.examples.source_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.examples_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.sdk" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.sdk_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.source" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.source_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui.source" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.ui.source_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui" version="0.8.0.v200712171422" url="features/org.eclipse.net4j.ui_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+	<feature id="org.eclipse.net4j" version="0.8.0.v200712171422" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.net4j_0.8.0.v200712171422.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.8.0M4 S200712171422"/>
+	</feature>
+<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110">
 		<description>
 EMFT COMPARE SDK (Incubation) 0.8.0 I200712161110: contains runtime, source, and documentation features.
 		</description>
