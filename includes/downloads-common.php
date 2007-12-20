@@ -62,6 +62,7 @@ $deps = array(
 	"transaction" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=transaction#transaction\">Transaction</a>",
 	"validation" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=validation#validation\">Validation</a>",
 
+	"compare" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=compare#compare\">Compare</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=net4j#net4j\">Net4j</a>",
 	"mwe" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=mwe#mwe\">MWE</a>",
 	"ocltools" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=ocltools#ocltools\">OCL Tools</a>",

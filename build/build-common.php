@@ -146,11 +146,13 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							</td>
 						</tr>						
 						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
 							</td>
@@ -723,6 +725,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"16compare" => "emft-compare-",
 		"15uml2tools" => "mdt-uml2tools-",
 		"14ecoretools" => "emft-ecoretools-",
 		"13mwe" => "emft-mwe-",
