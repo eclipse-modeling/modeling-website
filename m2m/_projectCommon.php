@@ -80,8 +80,8 @@ $Nav->addNavSeparator($projectName, "$rooturl/");
 
 # and remove this
 $Nav->addCustomNav("ATL", "http://www.eclipse.org/m2m/atl/", "_self", 2); 
-$Nav->addCustomNav("Procedural QVT", "http://wiki.eclipse.org/QVTO", "_self", 2); 
-$Nav->addCustomNav("Declarative QVT", "http://www.eclipse.org/m2m/", "_self", 2); 
+$Nav->addCustomNav("Procedural QVT", "http://wiki.eclipse.org/M2M/Operational_QVT_Language_(QVTO)", "_self", 2); 
+$Nav->addCustomNav("Declarative QVT", "http://wiki.eclipse.org/M2M/Relational_QVT_Language_(QVTR)", "_self", 2); 
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
