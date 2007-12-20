@@ -330,11 +330,12 @@ else
 	
 
 	$logdir = "/home/www-data/promo_logs/";
+	$logwebdir = "/promo_logs/";
 	$logfile = "promo_log_" . $projct . "_" . $BR . "." . $ID . "_" . date("Y-m-d-H.i.s") . ($_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
 
 	if (!$previewOnly)
 	{
-		print '<p>Logfile is '.$logdir.$logfile.'</p>';
+		print '<p>Logfile is <a href="' . $logwebdir . $logfile . '">' . $logdir . $logfile . '</a></p>';
 	}
 ?>
 	<ul>
