@@ -7,6 +7,7 @@ $streams = array(
 	"atl" => array(
 		"2.0.x" => "HEAD",
 	),
+);
 
 require ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/relnotes-common.php");
 ?>
