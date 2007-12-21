@@ -6,8 +6,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 /* Supported querystring parameters:
  *   q           - REQUIRED; search terms as outlined in http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List
- *   totalonly   - OPTIONAL; if set, display only a count of the # of deltas found; overrides showbuglist 
- *   showbuglist - OPTIONAL; if set, display csv list of bugs found                 
+ *   totalonly   - OPTIONAL; if set, display only a count of the # of deltas found; overrides showbuglist
+ *   showbuglist - OPTIONAL; if set, display csv list of bugs found
  *   bugfilter   - OPTIONAL; if set, filter results if `bugid` defined for each commit; values: "hasbug" or "nobug"
  *   fullpath    - OPTIONAL; if set, show full file path rather than just the filename
  */
@@ -83,7 +83,7 @@ $ec = "";
 /* this *could* be put into $extraf, but it would change the semantics slightly, in that any number searched for would be treated as a bug #, which i think is undesirable */
 if (preg_match("/^\s*\[?(\d+)\]?\s*$/", $_GET["q"], $regs))
 {
-	$_GET["q"] = $regs[1]; 
+	$_GET["q"] = $regs[1];
 	$where = "WHERE `bugid` = $regs[1]";
 	$et = "Bug #";
 	$bugid = $regs[1];
@@ -99,7 +99,7 @@ else if (preg_match("/(\S)/", $q, $regs) || sizeof($extra["where"]) + sizeof($ex
 	if (isset($_GET["bugfilter"]))
 	{
 		if ($_GET["bugfilter"] == "hasbug")
-		{ 
+		{
 			$where .= " AND `bugid` > 0";
 		}
 		else if ($_GET["bugfilter"] == "nobug")
@@ -141,8 +141,12 @@ $sql = "SELECT SQL_CALC_FOUND_ROWS `cvsname`, `revision`, `date`, `author`, `mes
 $result = wmysql_query($sql);
 
 $count = wmysql_query("SELECT FOUND_ROWS()"); //mysql_num_rows() doesn't do what we want here
-$row = mysql_fetch_row($count);
-$rows = $row[0];
+$rows = 0;
+if ($count)
+{
+	$row = mysql_fetch_row($count);
+	$rows = $row[0];
+}
 
 $title = "<span>$rows results total</span>Showing results " . ($offset + 1) . "-" . ($offset + $pagesize > $rows ? $rows : $offset + $pagesize) . " for " . ($_GET["q"] == "" ? "last $days days of commits" : "$et" . sanitize($_GET["q"], "text"));
 $title = ($rows == 0 ? "No results found for " . sanitize($_GET["q"], "text") . "" : $title);
@@ -155,23 +159,26 @@ dopager($rows, $page, $pagesize);
 print "<ul>\n";
 
 $bugs = array();
-while ($row = mysql_fetch_assoc($result))
+if ($result)
 {
-	$cvsroot = preg_replace("#^/cvsroot/([^\/]+)/.+#", "$1", $row["cvsname"]);
-	$file = basename($row["cvsname"], ",v");
-	$row["cvsname"] = preg_replace("#^/cvsroot/[^\/]+/(.+),v$#", "$1", $row["cvsname"]);
-	print "<li>\n";
-	print "<div>{$row['date']}</div>";
-	if ($row["bugid"] && !in_array($row["bugid"], $bugs))
-	{ 
-		$bugs[] = $row["bugid"]; 
+	while ($row = mysql_fetch_assoc($result))
+	{
+		$cvsroot = preg_replace("#^/cvsroot/([^\/]+)/.+#", "$1", $row["cvsname"]);
+		$file = basename($row["cvsname"], ",v");
+		$row["cvsname"] = preg_replace("#^/cvsroot/[^\/]+/(.+),v$#", "$1", $row["cvsname"]);
+		print "<li>\n";
+		print "<div>{$row['date']}</div>";
+		if ($row["bugid"] && !in_array($row["bugid"], $bugs))
+		{
+			$bugs[] = $row["bugid"];
+		}
+		print ($row["bugid"] ? "[<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id={$row['bugid']}\">{$row['bugid']}</a>] " : "");
+		print "<a href=\"" . cvsfile($cvsroot, $row["cvsname"]) . "\"><abbr title=\"{$row['cvsname']}\">" . ($fullpath ? $row['cvsname'] : $file) . "</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
+		print "<ul>\n";
+		print "<li><div>{$row['author']}</div>" . pretty_comment($row["message"], $q) . "</li>";
+		print "</ul>\n";
+		print "</li>\n";
 	}
-	print ($row["bugid"] ? "[<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id={$row['bugid']}\">{$row['bugid']}</a>] " : "");
-	print "<a href=\"" . cvsfile($cvsroot, $row["cvsname"]) . "\"><abbr title=\"{$row['cvsname']}\">" . ($fullpath ? $row['cvsname'] : $file) . "</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
-	print "<ul>\n";
-	print "<li><div>{$row['author']}</div>" . pretty_comment($row["message"], $q) . "</li>";
-	print "</ul>\n";
-	print "</li>\n";
 }
 print "</ul>\n";
 
@@ -179,7 +186,10 @@ dopager($rows, $page, $pagesize);
 
 print "</div>\n";
 print "</div>\n";
-mysql_close($connect);
+if ($connect)
+{
+	mysql_close($connect);
+}
 ?>
 <div id="rightcolumn">
 	<div class="sideitem">
@@ -195,7 +205,7 @@ mysql_close($connect);
 			<li><a href="?q=%22package+protected%22">"package protected"</a></li>
 			<li><a href="?q=Neil+Skrypuch">Neil Skrypuch</a></li>
 		</ul>
-		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p> 
+		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p>
 	</div>
 	<div class="sideitem">
 		<h6>Generate Changeset</h6>

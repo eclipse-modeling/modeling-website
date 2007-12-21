@@ -29,6 +29,7 @@ foreach ($accessfiles as $z)
 function wmysql_query($sql, $c = -1)
 {
 	global $connect;
+	$res = null;
 	if ($c === -1)
 	{
 		$c = $connect;
