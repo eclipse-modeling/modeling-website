@@ -456,10 +456,20 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	}
 	else
 	{
-		$out .= " / $icon\n\n$link2\n" . str_replace("../../../", "", $link);
+		$out .= " / $icon";
 	}
 
-	return $out;
+	return $isBuildServer ?
+		array(
+			str_replace("/modeling/", "http://" . $_SERVER["SERVER_NAME"] . "/modeling/", $out),
+			"http://" . $_SERVER["SERVER_NAME"] . $link2,
+			"http://" . $_SERVER["SERVER_NAME"] . $link
+		) :
+		array(
+			$out,
+			$link2,
+			$link
+		);
 }
 
 function fileFound($PWD, $url, $label) //only used once
@@ -600,7 +610,8 @@ function outputBuild($branch, $ID, $c)
 	$opts = loadBuildConfig("$PWD/$branch/$ID/build.cfg", $deps);
 
 	$ret = "<li>\n";
-	$ret .= "<div>" . showBuildResults("$PWD/", "$branch/$ID/") . "$summary</div>";
+	$buildResults = showBuildResults("$PWD/", "$branch/$ID/");
+	$ret .= "<div>" . $buildResults[0] . "$summary</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
 		"<i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> " .
 		"(" . IDtoDateStamp($ID, !$isBuildServer) . ")" .
