@@ -386,13 +386,13 @@ else
 	' -branch ' . $BR .
 	' -buildID ' . $ID .
 	' -user ' . $options["Users"][1] .
-	($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
-	($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
+	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
+	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
 	(isset($_POST["build_Close_Bugz_Only"]) && $_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
-	($_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
-	($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
-	($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
-	($_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
+	(isset($_POST["build_Store_SDK_As_Dependency"]) && $_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
+	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
+	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
+	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
