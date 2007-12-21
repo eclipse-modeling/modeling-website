@@ -49,15 +49,15 @@ if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["p
 	$buildResults = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/", $data["version"] . "/" . $data["buildID"] . "/", $html);
 	if ($html)
 	{
-		print $buildResults[0] . "<br/>\n<br/>\n";
-		print $buildResults[1] ."<br/>\n";
-		print $buildResults[2] ."<br/>\n";
+		print $buildResults[0] . "<br/>\n";
+		print '<a href="' . $buildResults[1] . '">Test Results</a>' . "<br/>\n";
+		print '<a href="' . $buildResults[2] . '">Build Log</a>' . "<br/>\n";
 	}
 	else
 	{
-		print $buildResults[0] ."\n\n";
-		print $buildResults[1] ."\n";
-		print $buildResults[2] ."\n";
+		print "Status\t" . $buildResults[0] ."\n";
+		print "Test Results\t" . $buildResults[1] ."\n";
+		print "Build Log\t" . $buildResults[2] ."\n";
 	}
 }
 else
