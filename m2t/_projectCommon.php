@@ -89,7 +89,7 @@ $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Plan", "http://wiki.eclipse.org/index.php/M2T_Plan_1.0", "_self", 2);
 
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
-$Nav->addCustomNav("Search CVS", "$rooturl/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/" . ($proj?$projectName . "-" . strtoupper($proj):$projectName), "_self", 2);
