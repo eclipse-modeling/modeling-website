@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.44 2007/11/16 05:46:57 nickb Exp $
+// $Id: scripts.php,v 1.45 2007/12/21 16:45:07 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -600,7 +600,7 @@ function changesetForm($bugid = "")
 			showing all changes for a given bug.
 		</p>
 		<p>
-			The requested bug must be indexed in the <a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=190525">Search CVS</a> database.
+			The requested bug must be indexed in the <a href="http://www.eclipse.org/modeling/searchcvs.php?q=190525">Search CVS</a> database.
 			Download the generated script for more information. If the script is empty, then the bug was not found.
 		</p>
 	</div>
