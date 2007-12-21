@@ -393,7 +393,7 @@ else
 	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
-	($_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
+	(isset($_POST["build_Email"]) && $_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
 
