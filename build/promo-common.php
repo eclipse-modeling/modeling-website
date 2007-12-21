@@ -20,6 +20,10 @@
 # $topProj = "mdt";
 # $componentName = "UML2"; 
 
+$showAll=null;
+$showMax=null;
+$sortBy=null;
+
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
 
@@ -107,7 +111,7 @@ foreach ($options["BranchAndJDK"] as $br)
 		foreach ($buildIDs as $k => $bid)
 		{
 			$buildcfgs = getBuildConfig("$dir/$bid/");
-			if ($buildcfgs["branch"]) // looking in build.cfg for "branch=..."
+			if (isset($buildcfgs["branch"]) && $buildcfgs["branch"]) // looking in build.cfg for "branch=..."
 			{
 				$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid . " | " . (isset($buildcfgs["branchCVS"]) ? $buildcfgs["branchCVS"] : $buildcfgs["branch"])
 					. (is_dir($dir . "/$bid/testresults/xml") ? '' : ' ** NO TEST RESULTS **');

@@ -52,8 +52,8 @@ $projects = array(
 	"QTV All-In-One" => "emfqtv",
 	"SDO" => "sdo"
 );
-$bugcoms = array_flip($projects);
-$bugcoms = preg_replace("/ /", "%20", $bugcoms);
+$tmp = array_flip($projects);
+$bugcoms = preg_replace("/ /", "%20", $tmp);
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
