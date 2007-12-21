@@ -41,15 +41,15 @@ $cvscoms = array(
 
 $projects = array(
 	"ATL" => "atl",
-	"Procedural QVT" => "qvto",
-	"Declarative QVT" => "qvtr"
+	"Operational QVT" => "qvto",
+	"Relational QVT" => "qvtr"
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("atl"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("qvto","qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("atl"); //components without newsgroup
 $nomailinglist = array("atl"); //components without mailinglist
 $incubating = array("qvto", "qvtr"); // components that are incubating
@@ -90,8 +90,8 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 #$Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 #$Nav->addCustomNav("Plan", "$rooturl/docs/plans/m2m_project_plan_1_1.html", "_self", 2);
 
-#$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
-#$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
+$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Model_to_Model_Transformation_(M2M)", "_self", 2);
