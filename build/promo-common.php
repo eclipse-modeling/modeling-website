@@ -1,7 +1,7 @@
 <?php
 /**
  * MUST DEFINE ARRAYS IN ORDER TO INCLUDE THIS PAGE:
- * 
+ *
  * 	$emails = array (
 		"emf" => "codeslave@ca.ibm.com,emerks@ca.ibm.com,marcelop@ca.ibm.com,davidms@ca.ibm.com,khussey@ca.ibm.com,walkerp@us.ibm.com"
 	);
@@ -13,12 +13,12 @@
 		)
 	);
  */
- 
+
 # $PR = "modeling/mdt";
-# $proj = "/uml2"; 
+# $proj = "/uml2";
 # $projct = "uml2";
 # $topProj = "mdt";
-# $componentName = "UML2"; 
+# $componentName = "UML2";
 
 $showAll=null;
 $showMax=null;
@@ -30,13 +30,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
 // suppress projects which can't be built this way
-array_push($nodownloads,"xsd");  
+array_push($nodownloads,"xsd");
 
 internalUseOnly();
 ob_start();
 
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
-$previewOnly = isset($_GET["previewOnly"]) ? 1 : 0; 
+$previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
 $trans = array_flip($projects);
 
@@ -151,7 +151,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>&#160;</td>
 				<td><b>Options</b><br><small></small></td>
 				<td>&#160;</td>
-				<td><p>&#160; &#160; &#160; Use Properties File From 
+				<td><p>&#160; &#160; &#160; Use Properties File From
 				<small><select style="font-size:9px" name="build_Use_Properties_File" size="1">
 					<?php displayOptions(array("CVS", "Local"), false, 0); ?>
 				</select></small></p>
@@ -167,7 +167,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
 			<tr>
 				<td colspan="3">&#160;</td>
-				<td colspan="2"><p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File? 
+				<td colspan="2"><p><input type="checkbox" name="build_Update_IES_Map_File" value="Yes" checked="checked"> Update IES Map File?
 				<small><select style="font-size:9px" name="build_IES_CVS_Branch" size="1">
 					<?php displayOptions($options["BranchIES"],false,0); ?>
 				</select></small></p></td></tr>
@@ -175,7 +175,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td colspan="3">&#160;</td>
 				<td>
-				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Contribute to  
+				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Contribute to
 				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
 					<?php displayOptions(array("ganymede", "europa"), false, 0); ?>
 				</select></small> update site?</p>
@@ -210,8 +210,8 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td width="300"><small><a id="divToggle_addSDK" name="divToggle_addSDK" href="javascript:toggleDetails('addSDK')">[+]</a></small>
 					<div id="divDetail_addSDK" name="divDetail_addSDK" style="display:none;border:0">
 					<small>
-					This flag adds your new build to the list of available builds 
-					to be used as a dependency for others (eg., to add UML2 or OCL as a dependency for Query). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=207007">bug 207007</a>. 
+					This flag adds your new build to the list of available builds
+					to be used as a dependency for others (eg., to add UML2 or OCL as a dependency for Query). See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=207007">bug 207007</a>.
 					</small>
 					</div>
 				</td>
@@ -246,9 +246,9 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td>&#160;</td>
 				<td colspan=5><p><b>Note</b>: Please ensure the build you intend to promote was done using the <br/>
-				<a target="_check" class="highlight" href="/<?php echo $PR; ?>/<?php echo $projct; ?>/build/">latest (or appropriate) driver(s)</a>, 
+				<a target="_check" class="highlight" href="/<?php echo $PR; ?>/<?php echo $projct; ?>/build/">latest (or appropriate) driver(s)</a>,
 				and that the <a target="_check" href="/<?php echo $PR; ?>/downloads/?project=<?php echo $projct; ?>&amp;sortBy=date&amp;hlbuild=0#latest" class="highlight">all tests have passed</a>.</p>
-				
+
 				</td>
 			</tr>
 			<tr>
@@ -263,14 +263,14 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 <script language="javascript">
 function doSubmit() {
 	answer = true;
-	with (document.forms.promoForm) { 
+	with (document.forms.promoForm) {
 		if (build_Version_Build_ID_And_Branch.options[build_Version_Build_ID_And_Branch.selectedIndex].value.indexOf("N")==0) {
 			answer = confirm(
 				'Are you sure you want to promote a Nightly build?');
 			if (answer) { build_Version_Build_ID_And_Branch.focus(); }
 		}
 	}
-	if (answer) { 
+	if (answer) {
 			document.forms.promoForm.submit();
 	} else {
 		// do nothing...
@@ -281,11 +281,11 @@ function toggleDetails(id)
 {
   toggle=document.getElementById("divToggle_" + id);
   detail=document.getElementById("divDetail_" + id);
-  if (toggle.innerHTML=="[+]") 
+  if (toggle.innerHTML=="[+]")
   {
     toggle.innerHTML="[-]";
     detail.style.display="";
-  } 
+  }
   else
   {
     toggle.innerHTML="[+]";
@@ -303,13 +303,13 @@ function doOnclickBugzonly(booln) {
 		build_Update_Coordinated_Update_Site.disabled=booln;
 		build_Coordinated_Site_Name.disabled=booln;
 		build_Email.disabled=booln;
-	} 
+	}
 }
 
 onload=loadSelects;
 
 function loadSelects() {
-	with (document.forms.promoForm) { 
+	with (document.forms.promoForm) {
 		build_Version_Build_ID_And_Branch.selectedIndex=0;
 	}
 }
@@ -324,18 +324,18 @@ else
 	$BR = explode("/", $BR[0]);
 	$ID = $BR[1];
 	$BR = $BR[0];
-	$relengProject = 
-		$projct == "emf" ? "org.eclipse.emf/org.eclipse.emf.releng/scripts" : 
-		($PR=="modeling/emf" || $PR=="modeling/emft" ? 
-			"org.eclipse.emf/org.eclipse.emf.$projct.releng" : 
+	$relengProject =
+		$projct == "emf" ? "org.eclipse.emf/org.eclipse.emf.releng/scripts" :
+		($PR=="modeling/emf" || $PR=="modeling/emft" ?
+			"org.eclipse.emf/org.eclipse.emf.$projct.releng" :
 			"org.eclipse.$topProj/org.eclipse.$projct.releng"
 		);
 	#echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR, relengProject: $relengProject<br/>";
-	
+
 
 	$logdir = "/home/www-data/promo_logs/";
 	$logwebdir = "/promo_logs/";
-	$logfile = "promo_log_" . $projct . "_" . $BR . "." . $ID . "_" . date("Y-m-d-H.i.s") . ($_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
+	$logfile = "promo_log_" . $projct . "_" . $BR . "." . $ID . "_" . date("Y-m-d-H.i.s") . (isset($_POST["build_Close_Bugz_Only"]) && $_POST["build_Close_Bugz_Only"] != "" ? '_bugzonly' : '') . ".txt";
 
 	if (!$previewOnly)
 	{
@@ -365,7 +365,7 @@ else
 		print "</ul>\n";
 		print "</ul>\n";
 ?>
-		
+
 	<p><b>NOTE:</b> Due to mirror replication delays, you may not see the new build for at least an hour.</p>
 
 <?php
@@ -375,10 +375,10 @@ else
 	// create the log dir before trying to log to it
 	$preCmd = 'mkdir -p ' . $logdir . ';';
 
-	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() . 
+	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() .
 	' \"cd ' . $workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
 
-	($_POST["build_Use_Properties_File"] == "CVS" ? 
+	($_POST["build_Use_Properties_File"] == "CVS" ?
 		" -c $relengProject/promoteToEclipse.$projct.properties,$cvsbranch" : ' -sub ' . $projct) .
 
 	' -Q' .
@@ -388,7 +388,7 @@ else
 	' -user ' . $options["Users"][1] .
 	($_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
 	($_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
-	($_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+	(isset($_POST["build_Close_Bugz_Only"]) && $_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
 	($_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
 	($_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	($_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
@@ -506,7 +506,7 @@ function getBuildConfig($dir)
 	return $results;
 }
 
-function getServerName() 
+function getServerName()
 {
 	$s = null;
 	exec("hostname -f",$s);
