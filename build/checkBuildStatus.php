@@ -62,7 +62,7 @@ if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["p
 }
 else
 {
-	print "STATUS UNKNOWN for modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "\n";
+	print "Status\tUNKNOWN\tfor modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "\n";
 }
 
 /**********************************************************************************************************************************/
