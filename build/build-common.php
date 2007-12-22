@@ -1,10 +1,10 @@
 <?php
 
 # $PR = "modeling/mdt";
-# $proj = "/uml2"; 
+# $proj = "/uml2";
 # $projct = "uml2";
 # $topProj = "mdt";
-# $componentName = "UML2"; 
+# $componentName = "UML2";
 
 $showAll=null;
 $showMax=null;
@@ -16,13 +16,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/_common.php");
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
 // suppress projects which can't be built this way
-if (isset($nodownloads)) array_push($nodownloads,"xsd");  
+if (isset($nodownloads)) array_push($nodownloads,"xsd");
 
 internalUseOnly();
 ob_start();
 
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
-$previewOnly = isset($_GET["previewOnly"]) ? 1 : 0; 
+$previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
 $trans = array_flip($projects);
 
@@ -58,27 +58,27 @@ if (is_array($projects) && sizeof($projects) > 1)
 
 <div class="homeitem3col">
 <h3>Run A Build</h3>
-<?php	
+<?php
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
 	print "<p>To run a build, please complete the following form and click the Build button.</p>";
-} 
-else 
-{ 
+}
+else
+{
 	print "<p>Your build is ".($previewOnly?"<b>NOT</b> ":"")."in progress".($previewOnly?", but the command is displayed below for preview":"").
 		". <a href=\"?project=$projct".($debugb?"&amp;debugb=1":"").($previewOnly?"&amp;previewOnly=1":"")."\">Build another?</a></p>";
 }
 
-if (!isset($options)) 
-{ 
-	$options = array(); 	
-} 
+if (!isset($options))
+{
+	$options = array();
+}
 else
 {
-	$options = array_merge($options, loadOptionsFromFile($dependenciesURLsFile));	
+	$options = array_merge($options, loadOptionsFromFile($dependenciesURLsFile));
 	$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
 	$options["RunTests"] = array ("JUnit Tests=JUnit");
-}	
+}
 $options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
@@ -94,7 +94,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					<div id="note" name="note" style="border:0;font-style:italic;font-weight:bold" readonly="readonly">&#160;</div>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td><img src="/modeling/images/numbers/1.gif" /></td>
 				<td>&#160;</td>
@@ -104,7 +104,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<input name="build_Java_Home" type="hidden" size="20"/>
 				<td colspan=3><select name="build_CVS_Branch" onchange="doBranchSelected(this)">
 				<?php displayOptionsTriplet($options["BranchAndJDK"]); ?>
-				</select> 
+				</select>
 				<select name="build_Build_Type">
 				<?php displayOptions($options["BuildType"]); ?>
 				</select></td>
@@ -116,40 +116,40 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					<div name="fullURL" id="fullURL" style="border:0;font-size:9px;" readonly="readonly">&#160;</div>
 				</td>
 			</tr>
-			
+
 			<tr valign="top">
 				<td><img src="/modeling/images/numbers/2.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Dependency URLs</b><br>
-<!--  
+<!--
 # See also:
-#	genBuildDetails.sh (depNames array),  
+#	genBuildDetails.sh (depNames array),
 #	downloads-common.php ($deps array), and
 #   build-common.php (<b>Dependency URLs</b> & function findCatg())
 -->
 					<small>
-					choose URLs (use <em>CTRL</em> <br> 
+					choose URLs (use <em>CTRL</em> <br>
 					for multiple selections)</small>
 					<table>
 						<tr><td><b>Public</b></td><td><b>Mirror</b></td></tr>
 						<?php $buildServer = array("www.eclipse.org","emf.torolab.ibm.com","emft.eclipse.org","build.eclipse.org"); ?>
-						<tr>						
+						<tr>
 							<td> &#149; <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
 							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
 						</tr>
-						<tr>						
+						<tr>
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>, 
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>, 
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a> 
+										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
-						</tr>						
-						<tr>						
+						</tr>
+						<tr>
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
@@ -160,27 +160,27 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
 							</td>
-						</tr>		
-						<tr>						
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
+						</tr>
+						<tr>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>, 
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
-						</tr>						
-						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>				
-						<tr>						
-							<td colspan="2"> &#149; 
-										<a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>, 
-										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>, 
+						</tr>
+						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
+						<tr>
+							<td colspan="2"> &#149;
+										<a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>,
+										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>,
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
 										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
 							</td>
-						</tr>						
-					</table>							
+						</tr>
+					</table>
             <p><small>&#160;&#160;-- AND/OR --</small></p>
 				</td>
 				<td>&#160;</td>
@@ -214,10 +214,10 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td width="350"><small><a id="divToggle_relengBasebuilder" name="divToggle_relengBasebuilder" href="javascript:toggleDetails('relengBasebuilder')">[+]</a></small>
 					<div id="divDetail_relengBasebuilder" name="divDetail_relengBasebuilder" style="display:none;border:0">
 					<small>
-					Enter Tag or Branch, eg., 
-						<acronym title="Eclipse 3.4.x">v20071108</acronym>, 
-						<acronym title="Eclipse 3.3.x">v20070614</acronym>, 
-						<acronym title="Eclipse 3.2.x">r322_v20070104</acronym>, 
+					Enter Tag or Branch, eg.,
+						<acronym title="Eclipse 3.4.x">v20071108</acronym>,
+						<acronym title="Eclipse 3.3.x">v20070614</acronym>,
+						<acronym title="Eclipse 3.2.x">r322_v20070104</acronym>,
 						<acronym title="Eclipse 3.1.x">R3_1_maintenance</acronym> :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a>
 					</small>
 					</div>
@@ -247,7 +247,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							"Use Map=use-false",
 							"Generate Map=gen-false");
 						displayOptions($options["MapfileRule"]); ?>
-				</select> 
+				</select>
 				</td>
 				<td><small><a id="divToggle_MapfileRule" name="divToggle_MapfileRule" href="javascript:toggleDetails('MapfileRule')">[+]</a></small>
 				<div id="divDetail_MapfileRule" name="divDetail_MapfileRule" style="display:none;border:0">
@@ -256,7 +256,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				</table>
 				</div>
 				</td>
-			</tr> 
+			</tr>
 
 			<tr><td colspan="6">&#160;</td></tr>
 
@@ -266,7 +266,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td rowspan="1">&#160;</td>
 				<td><b>Run Tests</b></td>
 				<td>&#160;</td>
-				
+
 				<td colspan="1">
 				<?php displayCheckboxes("build_Run_Tests",$options["RunTests"]); ?>
 				</td>
@@ -279,7 +279,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					</small>
 					</div>
 				</td>
-			</tr> 
+			</tr>
 
 			<tr>
 				<td><img src="/modeling/images/numbers/6.gif" /></td>
@@ -347,20 +347,20 @@ function showfullURL(val)
 	fullURL.innerHTML = val ? "&#160;--&gt; " + val + " &lt;--" : "&#160;";
 }
 
-function setNote(val) 
+function setNote(val)
 {
     note = document.getElementById('note');
-	if (val == "emf" || val == "net4j") 
+	if (val == "emf" || val == "net4j")
 		note.innerHTML = "Requires 1 SDK: Eclipse"
 	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare" || val == "teneo")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
-	else if (val == "ocl") 
+	else if (val == "ocl")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, Orbit"
-	else if (val == "cdo") 
+	else if (val == "cdo")
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Net4j"
-	else if (val == "query" || val == "validation") 
+	else if (val == "query" || val == "validation")
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
-	else if (val == "transaction") 
+	else if (val == "transaction")
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
 	else if (val == "mwe")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
@@ -370,12 +370,12 @@ function setNote(val)
 		note.innerHTML = "Requires at least 2 SDKs: Eclipse, EMF, ..."
 }
 
-function branchToDivNum() 
+function branchToDivNum()
 {
   return document.forms.buildForm.build_Branch.value.substring(0,3).replace(".","");
 }
 
-function setCheckbox(field,bool) 
+function setCheckbox(field,bool)
 {
 	if (document.forms.buildForm && document.forms.buildForm.elements[field] && document.forms.buildForm.elements[field].type=="checkbox")
 	{
@@ -390,8 +390,8 @@ function doBranchSelected(field) {
 }
 
 function pickDefaultBranch(val) {
-	with (document.forms.buildForm) { 
-		if (val.indexOf(" | ")>0) { 
+	with (document.forms.buildForm) {
+		if (val.indexOf(" | ")>0) {
 			build_Branch.value=val.substring(val.indexOf(" | ")+3,val.lastIndexOf(" | ")); // since the text label shown in the select box is not available for POST, store it here
 		} else {
 			build_Branch.value=val; // since the text label shown in the select box is not available for POST, store it here
@@ -399,14 +399,14 @@ function pickDefaultBranch(val) {
 	}
 }
 
-function checkdisabled(obj) 
+function checkdisabled(obj)
 {
 	return !obj.disabled;
 }
 
 function pickDefaultJavaHome(val) {
-	with (document.forms.buildForm) { 
-		if (val.indexOf(" | ")>0) { 
+	with (document.forms.buildForm) {
+		if (val.indexOf(" | ")>0) {
 			build_Java_Home.value=val.substring(3+val.lastIndexOf(" | ")); // since the text label shown in the select box is not available for POST, store it here
 		} else {
 			build_Java_Home.value=val; // since the text label shown in the select box is not available for POST, store it here
@@ -419,11 +419,11 @@ function toggleDetails(id)
 {
   toggle=document.getElementById("divToggle_" + id);
   detail=document.getElementById("divDetail_" + id);
-  if (toggle.innerHTML=="[+]") 
+  if (toggle.innerHTML=="[+]")
   {
     toggle.innerHTML="[-]";
     detail.style.display="";
-  } 
+  }
   else
   {
     toggle.innerHTML="[+]";
@@ -433,7 +433,7 @@ function toggleDetails(id)
 
 function doSubmit() {
   answer = true;
-  with (document.forms.buildForm) { 
+  with (document.forms.buildForm) {
 	  tofocus="build_Run_Tests_JUnit";
 	  if (!elements[tofocus]){
 	    tofocus="build_Run_Tests_JUnit";
@@ -448,7 +448,7 @@ function doSubmit() {
 	    tofocus=null;
 	  }
   }
-  if (answer) { 
+  if (answer) {
 	document.forms.buildForm.submit();
   } else if (tofocus) {
 	document.forms.buildForm.elements[tofocus].focus();
@@ -457,8 +457,8 @@ function doSubmit() {
 
 function doOnLoadDefaults() {
   field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
-  field=document.forms.buildForm.build_Mapfile_Rule; 
-  field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?> 
+  field=document.forms.buildForm.build_Mapfile_Rule;
+  field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?>
   setNote('<?php echo $projct; ?>');
   setCheckbox("build_Run_Tests_JUnit",true);
 }
@@ -466,24 +466,24 @@ function doOnLoadDefaults() {
 setTimeout('doOnLoadDefaults()',1000);
 
 </script>
-<?php 
-} 
-else 
+<?php
+}
+else
 { // page two, form submission results
-	
+
 	/****************************** END OF PAGE ONE / START OF PAGE TWO **********************************/
 
 	$newDependencies = splitDependencies($_POST["build_Dependencies_URL_New"]);
-	$dependencyURLs = getDependencyURLs($_POST["build_Dependencies_URL"],$newDependencies,$dependenciesURLsFile);	
+	$dependencyURLs = getDependencyURLs($_POST["build_Dependencies_URL"],$newDependencies,$dependenciesURLsFile);
 
 	$buildTimestamp = date("YmdHi");
 
 	$ID = $_POST["build_Build_Type"].$buildTimestamp;
 	$BR = $_POST["build_Branch"]; # 2.1.0
-		
+
 	$BR_suffix = "_".str_replace(".","",substr($BR,0,3));
 	$_POST["build_Branch"] = ($_POST["build_Branch"]?$_POST["build_Branch"]:$_POST["build_CVS_Branch"]); # 2.1.0 or HEAD?
-		
+
 	$logfile = '/downloads/drops/'.$BR.'/'.$ID.'/buildlog.txt';
 
 	if (!$previewOnly)
@@ -501,13 +501,13 @@ else
 		$i=2;
 		foreach ($_POST as $k => $v)
 		{
-			if (strstr($k, "build_") && trim($v) != "" && !strstr($k, "_Sel"))
+			if (strstr($k, "build_") && !strstr($k, "_Sel") && (is_array($v) || trim($v) != "")) // build_Dependencies_URL_New sets $v to an array; all others are strings
 			{
 				$lab = str_replace("_", " ", substr($k, 6));
 				$val = $k == "build_Dependencies_URL_New" ? $newDependencies : $v;
 				print "<li>";
 				print (is_array($val) ?
-				"<b>" . $lab . ":</b>" . "<ul>\n<li><small>" . join("</small></li>\n<li><small>", $val) . "</small></li>\n</ul>\n" : 
+				"<b>" . $lab . ":</b>" . "<ul>\n<li><small>" . join("</small></li>\n<li><small>", $val) . "</small></li>\n</ul>\n" :
 				"<div>" . $val . "</div>" . "<b>" . $lab . ":</b>");
 				print "</li>\n";
 				$i++;
@@ -521,7 +521,7 @@ else
 		$branches = getBranches($options);
 
 		if ($branches["HEAD"] == $_POST["build_CVS_Branch"]) { $_POST["build_CVS_Branch"] = "HEAD"; }
-		
+
 	// fire the shell script...
 
 	/** see http://ca3.php.net/manual/en/function.exec.php **/
@@ -570,7 +570,7 @@ else
 	{
 		exec($cmd);
 	}
-			
+
 	if (!$previewOnly && $isBuildDotEclipseServer)
 	{
 		$lockfile = "/opt/public/modeling/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
@@ -581,12 +581,12 @@ else
 			print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another build is already in progress.</h3>\n";
 			print "<p>Lockfile: <u>$lockfile</u></p>";
 			print "<p><small><code>";
-			foreach (file($lockfile) as $line) 
-			{ 
-				print "$line\n"; 
+			foreach (file($lockfile) as $line)
+			{
+				print "$line\n";
 			}
 			print "</code></small></p>";
-					
+
 		}
 		else // create lockfile
 		{
@@ -677,11 +677,11 @@ function splitDependencies($entered) {
 // return a string in the form "-URL http://... -URL http://..."
 function getDependencyURLs($chosen, $entered, $file) {
 	if (!$chosen) $chosen = array();
-	if (!is_array($chosen)) $chosen = array($chosen); // cast to array if not already 
-	
+	if (!is_array($chosen)) $chosen = array($chosen); // cast to array if not already
+
 	$origSize = 0;
 	$newSize = 0;
-	
+
 	// load values from $entered into $chosen
 	if ($entered) {
 		$lines = trimmed_read($file);
@@ -702,11 +702,11 @@ function getDependencyURLs($chosen, $entered, $file) {
 				if ($catg && $urlFixed && !in_array("$catg=$urlFixed",$lines)) {
 					$lines[] = "$catg=$urlFixed"; // don't add a blank entry!
 				}
-			}					
+			}
 		}
 		$newSize = sizeof($lines);
 	}
-	
+
 	rsort($lines); reset($lines);
 	$lines = array_unique($lines); // remove duplicate entries
 
@@ -714,7 +714,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 	if ($newSize > $origSize) {
 		updateDependenciesFile($file,$lines);
 	}
-	
+
 	$ret = "";
 	foreach ($chosen as $choice) {
 		if ($choice) $ret .= " -URL ".$choice;
@@ -723,7 +723,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 }
 
 /* See also:
-	 genBuildDetails.sh (depNames array),  
+	 genBuildDetails.sh (depNames array),
 	 downloads-common.php ($deps array), and
      build-common.php (<b>Dependency URLs</b> & function findCatg())
 */
@@ -747,7 +747,7 @@ function findCatg($url) {
 		"01eclipse" => "eclipse-",
 		"99other" => "/"
 	);
-	foreach ($matches as $catg => $match) { 
+	foreach ($matches as $catg => $match) {
 		if (false!==strpos($url,$match) || preg_match("#(".$match.")#",$url)) {
 			return $catg;
 		}
@@ -761,12 +761,12 @@ function updateDependenciesFile($file,$lines) {
 			fwrite($f,$line."\n");
 		}
 		fclose($f);
-	}	
+	}
 }
 function displayCheckboxes($label,$options,$divSuffix="") {
 	$matches = null;
 	if (isset($options["reversed"]) && $options["reversed"])
-	{	
+	{
 		// pop that item out
 		array_shift($options);
 		$options = array_reverse($options);
@@ -803,7 +803,7 @@ function displayOptionsTriplet($options) {
 	foreach ($options as $o => $option) {
 		$opt = $option;
 		$isSelected = false;
-		if (!preg_match("/\-\=[\d\.]+/",$opt)) { 
+		if (!preg_match("/\-\=[\d\.]+/",$opt)) {
 			if (strstr($opt,"|selected")) {  // remove the |selected keyword
 				$isSelected=true;
 				$opt = substr($opt,0,strpos($opt,"|selected"));
@@ -813,7 +813,7 @@ function displayOptionsTriplet($options) {
 				preg_match("/([^\=]+)\=([^\=]+)\,([^\,]+)/",$opt,$matches);
 				if (false !== strpos($matches[2],"--"))
 				{
-					$showValues =  ($matches[1] == $_SERVER["SERVER_NAME"]); 
+					$showValues =  ($matches[1] == $_SERVER["SERVER_NAME"]);
 				}
 				else if ($showValues)
 				{
@@ -833,7 +833,7 @@ function compareURLs($a, $b) {
    $bPF = substr($b,0,strpos($b,"="));
    $aDS = preg_replace("/.+([0-9]{12}|[0-9]{8}\-[0-9]{4}).+/","$1",$a);
    $bDS = preg_replace("/.+([0-9]{12}|[0-9]{8}\-[0-9]{4}).+/","$1",$b);
-   return $aPF == $bPF ? ($aDS < $bDS ? 1 : -1) : ($aPF > $bPF ? 1 : -1);  
+   return $aPF == $bPF ? ($aDS < $bDS ? 1 : -1) : ($aPF > $bPF ? 1 : -1);
 }
 
 function displayURLs($options,$verbose=false) {
@@ -845,7 +845,7 @@ function displayURLs($options,$verbose=false) {
 
 	usort($options, "compareURLs"); reset($options);
 	//sort($options); reset($options);
-	
+
 	$matches=null;
 	$currCatg="";
 	foreach ($options as $o => $option) {
@@ -854,11 +854,11 @@ function displayURLs($options,$verbose=false) {
 			$matches=null;preg_match("/([^\=]+)\=([^\=]*)/",$opt,$matches);
 			$catg = substr(trim($matches[1]), 2);
 			if ($catg!=$currCatg) {
-				if ($currCatg!="") 
+				if ($currCatg!="")
 					print "\n\t<option "."value=\""."\"></option>";
 				print "\n\t<option "."value=\""."\"> -- ".$catg." -- </option>";
 				$currCatg=$catg;
-			}	
+			}
 			print "\n\t<option "."value=\"".trim($matches[2])."\">".substr(trim($matches[2]),6+strpos(trim($matches[2]),"drops"))."</option>";
 		} else if (strstr($opt,"http") && strstr($opt,"drops")) { // turn http://foo/bar.zip into <option value="http://foo/bar.zip">bar.zip</option>
 			print "\n\t<option "."value=\"".$opt."\">".
@@ -869,9 +869,9 @@ function displayURLs($options,$verbose=false) {
 	}
 }
 
-function trimmed_read($file) {		
+function trimmed_read($file) {
 	$lines = array();
-	if (is_writable($file) && is_readable($file)) { 
+	if (is_writable($file) && is_readable($file)) {
 		$f = fopen($file, "r");
 		if ($f) {
 			while (!feof($f) && ($line = trim(fgets($f, 4096))) ) $lines[] = $line;
@@ -882,7 +882,7 @@ function trimmed_read($file) {
 }
 
 function loadOptionsFromFile($file1)
-{ 
+{
 	$sp = array ();
 	if (is_file($file1))
 	{
@@ -894,7 +894,7 @@ function loadOptionsFromFile($file1)
 
 function loadOptionsFromArray($sp)
 {
-	global $debug; 
+	global $debug;
 	$options = array ();
 	$doSection = "";
 
