@@ -457,7 +457,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 	$replacements = array(
 		"SUCCESS / Success" => "SUCCESS",
-		"FAILURE / FAILED:" => "FAILED"
+		"FAILURE / FAILED: " => "FAILED"
 	);
 	foreach ($replacements as $match => $replace)
 	{
