@@ -47,6 +47,10 @@ if (sizeof($data)<4)
 if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "/"))
 {
 	$buildResults = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/", $data["version"] . "/" . $data["buildID"] . "/", $html);
+	if ($buildResults[0] == "SUCCESS / Success / check")
+	{
+		$buildResults[0] = "SUCCESS";
+	}
 	if ($html)
 	{
 		print $buildResults[0] . "<br/>\n";
@@ -55,9 +59,9 @@ if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["p
 	}
 	else
 	{
-		print "Status\t" . $buildResults[0] ."\n";
-		print "Test Results\t" . $buildResults[1] ."\n";
-		print "Build Log\t" . $buildResults[2] ."\n";
+		print "Status\t" . $buildResults[0] ."\n\n";
+		print "Test Results\t" . $buildResults[1] ."\n\n";
+		print "Build Log\t" . $buildResults[2] ."\n\n";
 	}
 }
 else
