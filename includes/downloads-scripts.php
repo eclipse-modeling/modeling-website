@@ -455,6 +455,15 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 		$out .= "</a> <a href=\"$link\"><img src=\"/modeling/images/$icon.gif\" alt=\"$icon\"/></a>";
 	}
 
+	$replacements = array(
+		"SUCCESS / Success" => "SUCCESS",
+		"FAILURE / FAILED:" => "FAILED"
+	);
+	foreach ($replacements as $match => $replace)
+	{
+		if ($out == $match) $out = $replace;
+	}
+
 	return $isBuildServer ?
 		array(
 			str_replace("/modeling/", "http://" . $_SERVER["SERVER_NAME"] . "/modeling/", $out),

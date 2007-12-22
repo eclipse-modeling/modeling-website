@@ -47,17 +47,6 @@ if (sizeof($data)<4)
 if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "/"))
 {
 	$buildResults = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/", $data["version"] . "/" . $data["buildID"] . "/", $html);
-	$replacements = array(
-		"SUCCESS / Success / check" => "SUCCESS",
-		"FAILURE / FAILED: / not" => "FAILED"
-	);
-	foreach ($replacements as $match => $replace)
-	{
-		if ($buildResults[0] == $match)
-		{
-			$buildResults[0] = $replace;
-		}
-	}
 	if ($html)
 	{
 		print $buildResults[0] . "<br/>\n";
