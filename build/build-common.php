@@ -474,7 +474,7 @@ else
 	/****************************** END OF PAGE ONE / START OF PAGE TWO **********************************/
 
 	$newDependencies = splitDependencies($_POST["build_Dependencies_URL_New"]);
-	$dependencyURLs = getDependencyURLs($_POST["build_Dependencies_URL"],$newDependencies,$dependenciesURLsFile);
+	$dependencyURLs = getDependencyURLs(isset($_POST["build_Dependencies_URL"]) ? $_POST["build_Dependencies_URL"] : null,$newDependencies,$dependenciesURLsFile);
 
 	$buildTimestamp = date("YmdHi");
 
