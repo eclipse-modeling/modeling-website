@@ -1,5 +1,5 @@
 <?php
-/* Copyright (c) 2007 ibm, made available under EPL v1.0
+/* Copyright (c) 2007 IBM, made available under EPL v1.0
  * Contributors Nick Boldt
  *
  * The common parameter parsing module for the REST web-api
