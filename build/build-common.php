@@ -520,7 +520,7 @@ else
 
 		$branches = getBranches($options);
 
-		if ($branches["HEAD"] == $_POST["build_CVS_Branch"]) { $_POST["build_CVS_Branch"] = "HEAD"; }
+		if (isset($branches["HEAD"]) && isset($_POST["build_CVS_Branch"]) && $branches["HEAD"] == $_POST["build_CVS_Branch"]) { $_POST["build_CVS_Branch"] = "HEAD"; }
 
 	// fire the shell script...
 
@@ -532,7 +532,7 @@ else
 	$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
 	' -proj ' . $topProjActual . ' -sub '.$projct.
 	' -version '.$BR.
-	' -branch '.($_POST["build_Branch_Override"]!=""?$_POST["build_Branch_Override"]:$_POST["build_CVS_Branch"]).
+	' -branch '.(isset($_POST["build_Branch_Override"]) && $_POST["build_Branch_Override"]!="" && isset($_POST["build_CVS_Branch"]) ? $_POST["build_Branch_Override"] : $_POST["build_CVS_Branch"]).
 	$dependencyURLs.
 	($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
 	($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
@@ -545,10 +545,10 @@ else
 	' -buildTimestamp '.$buildTimestamp.
 	($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 	' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
-	($_POST["build_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_common_releng_branch"]:'').
-	($_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
-	($_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
-	($_POST["build_noclean"]=="Y"?' -noclean':'').
+	(isset($_POST["build_common_releng_branch"]) && $_POST["build_common_releng_branch"]!=""?' -commonRelengBranch '.$_POST["build_common_releng_branch"]:'').
+	(isset($_POST["build_proj_releng_branch"]) && $_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
+	(isset($_POST["build_emf_old_tests_branch"]) && $_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
+	(isset($_POST["build_noclean"]) && $_POST["build_noclean"]=="Y"?' -noclean':'').
 	($isBuildDotEclipseServer ? '' : ' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
 	if ($previewOnly)
 	{
