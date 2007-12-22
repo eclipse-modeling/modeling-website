@@ -442,7 +442,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	}
 	else
 	{
-		$out  .= ($result && $result != "..." ? ": " : "");
+		$out  .= ($result && $result != "..."  && $result != "Skipped" ? ": " : "");
 		$out2  = "";
 		$out2 .= ($didnotruns > 0 ? "$didnotruns DNR, " : "");
 		$out2 .= ($errors > 0 ? "$errors E, " : "");
@@ -453,10 +453,6 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	if ($styled)
 	{
 		$out .= "</a> <a href=\"$link\"><img src=\"/modeling/images/$icon.gif\" alt=\"$icon\"/></a>";
-	}
-	else
-	{
-		$out .= " / $icon";
 	}
 
 	return $isBuildServer ?
