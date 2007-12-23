@@ -4,12 +4,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 internalUseOnly(); 
 ob_start();
 
-$VER = $_GET["version"] && preg_match("/(14|50)/",$_GET["version"])? $_GET["version"] : "50"; 
-$PR = $_GET["project"] && preg_match("/(emf|uml2)/",$_GET["project"])? $_GET["project"] : "emf"; 
+$showAllResults = null;
+$showMax = null;
+$VER = isset($_GET["version"]) && $_GET["version"] && preg_match("/(14|50)/",$_GET["version"])? $_GET["version"] : "50";
+$PR = isset($_GET["project"]) && $_GET["project"] && preg_match("/(emf|uml2)/",$_GET["project"])? $_GET["project"] : "emf";
 $hadLoadDirSimpleError=1;
-
 ?>
-
 <div id="midcolumn">
 <?php
 	$doRefreshPage = false;
@@ -50,12 +50,11 @@ $hadLoadDirSimpleError=1;
 
 	//if ($debug>0) { w("BUILD TYPES:",1); wArr($buildTypes,"<br>",true,""); w("<hr noshade size=1 />"); }
 
-
 	// get branches from options file
 	$branches = getBranches($options);
 	//if ($debug>0) { w("BRANCHES:",1); wArr($branches,"<br>",true,""); w("<hr noshade size=1 />"); }
 
-	$sortBy  = array_key_exists("sortBy",$_GET)  ? $_GET["sortBy"]  : "";
+	$sortBy  = array_key_exists("sortBy",$_GET)  ? $_GET["sortBy"]  : "date";
 	$showAll = array_key_exists("showAll",$_GET) ? $_GET["showAll"] : "";
 	$showAllResults = array_key_exists("showAllResults",$_GET) ? $_GET["showAllResults"] : "";
 
@@ -303,7 +302,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 	function getAllOldTestResults($testsPWD,$path) { // given a build ID, determine any test results for BVT, FVT, SVT
 		global $pre;
-		$mid = "../../../modeling/emf/emf/tests/"; // this is a symlink on the filesystem!
+		$mid = "../../../modeling/emf/emf/oldtests/"; // this is a symlink on the filesystem!
 
 		// return four <td> cells, one per test. if all passed, green check + link to log; if failures, red number (of failures) + link to log
 
@@ -398,7 +397,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 	function getBranches($options) { 
 		$arr = array();
-		if ($options["Branch"] && is_array($options["Branch"])) {
+		if (isset($options["Branch"]) && $options["Branch"] && is_array($options["Branch"])) {
 			foreach ($options["Branch"] as $br => $branch) { 
 					$arr[	getValueFromOptionsString($branch,"name")] = 
 							getValueFromOptionsString($branch,"value");
@@ -409,7 +408,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 
 	function getBuildTypes($options) { 
 		$arr = array();
-		if ($options["Branch"] && is_array($options["Branch"])) {
+		if (isset($options["Branch"]) && $options["Branch"] && is_array($options["Branch"])) {
 			foreach ($options["Branch"] as $br => $branch) { 
 				foreach ($options["BuildType"] as $bt => $buildType) { 
 					$v = getValueFromOptionsString($branch,"value");
@@ -443,7 +442,7 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 	}
 
 	function listOptions($options,$bool) {
-		if ($options["reversed"]) {
+		if (isset($options["reversed"]) && $options["reversed"]) {
 			// pop that item out
 			array_shift($options);
 			$options = array_reverse($options);
