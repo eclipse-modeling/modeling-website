@@ -35,6 +35,12 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-scripts.php");
 $hadLoadDirSimpleError = 1;
 
+$file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $data["project"] . ".php";
+if (file_exists($file))
+{
+	include_once($file);
+}
+
 header($html ? "Content-Type: text/html\n\n" : "Content-Type: text/plain\n\n");
 if (sizeof($data)<4)
 {
@@ -46,18 +52,28 @@ if (sizeof($data)<4)
 
 if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "/"))
 {
-	$buildResults = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/", $data["version"] . "/" . $data["buildID"] . "/", $html);
+
+	$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
+	#print "<pre>\n";print_r($extraTestsResults);print "</pre>\n";
+	$buildResults  = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/",
+		$data["version"] . "/" . $data["buildID"] . "/", $html);
 	if ($html)
 	{
-		print $buildResults[0] . "<br/>\n";
+		print $buildResults[0];
+		print isset($extraTestsResults) && isset($extraTestsResults[0]) && sizeof($extraTestsResults[0]) > 0 ? implode(" | ", $extraTestsResults[0]) : "";
+		print "<br/>\n";
 		print '<a href="' . $buildResults[1] . '">Test Results</a>' . "<br/>\n";
 		print '<a href="' . $buildResults[2] . '">Build Log</a>' . "<br/>\n";
 	}
 	else
 	{
-		print "Status\t" . $buildResults[0] ."\n\n";
-		print "Test Results\t" . $buildResults[1] ."\n\n";
-		print "Build Log\t" . $buildResults[2] ."\n\n";
+		print "Status\t" . $buildResults[0];
+		print isset($extraTestsResults) && isset($extraTestsResults[0]) && isset($extraTestsResults[0][0]) ? $extraTestsResults[0][0] : "";
+		print "\n\n";
+		print "JUnit Results\t" . $buildResults[1] . "\n\n";
+		print isset($extraTestsResults) && isset($extraTestsResults[1]) && isset($extraTestsResults[1][0]) ? $extraTestsResults[1][0] : "";
+		print "\n";
+		print "Build Log\t" . $buildResults[2] . "\n\n";
 	}
 }
 else

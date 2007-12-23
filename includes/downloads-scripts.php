@@ -575,6 +575,122 @@ function grep($pattern, $file)
 	return false;
 }
 
+/* if $styled = 0 or false, return text only */
+function getExtraTestsResults($branch, $ID, $styled=1)
+{
+	global $isBuildServer, $jdk14testsPWD, $jdk50testsPWD, $testsPWD;
+	$tests = "";
+	$s = array(0 => "");
+	$t = array(0 => "");
+	if ($isBuildServer && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
+	{
+		if (isset($jdk14testsPWD) && $jdk14testsPWD && is_dir($jdk14testsPWD))
+		{
+			$summary = "";
+			$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
+			if (!$styled)
+			{
+				$summary = toPlainTextSummaries($summary);
+				$s[0] .= $summary[0];
+				$t[0] .= $summary[1];
+			}
+			else
+			{
+				$s[] = $summary;
+			}
+		}
+		if (isset($jdk50testsPWD) && $jdk50testsPWD && is_dir($jdk50testsPWD))
+		{
+			$summary = "";
+			$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
+			if (!$styled)
+			{
+				$summary = toPlainTextSummaries($summary);
+				$s[0] .= $summary[0];
+				$t[0] .= $summary[1];
+			}
+			else
+			{
+				$s[] = $summary;
+			}
+		}
+		if (isset($testsPWD) && $testsPWD && is_dir($testsPWD))
+		{
+			$summary = "";
+			$tests .= getOldTestResults("$testsPWD/", "$branch/$ID/", $summary) . "\n";
+			if (!$styled)
+			{
+				$summary = toPlainTextSummaries($summary);
+				$s[0] .= $summary[0];
+				$t[0] .= $summary[1];
+			}
+			else
+			{
+				$s[] = $summary;
+			}
+		}
+	}
+	return array($s, $t, $tests);
+}
+
+function toPlainTextSummaries($summary)
+{
+	$miniSummary  = "";
+	$textSummary  = "";
+	// <span> <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/" class="warning">511 W, 3 D</a> <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/"><img src="/modeling/images/check.gif" alt="OK"/></a></span>
+	$pattern = "#<a href=\"[^\"]+\?([^\"]+)=([^\"]+)\" class=\"([^\"]+)\">([^<]+)</a>#";
+	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
+	/* [1] => jdk50test
+	   [2] => /modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/
+       [3] => warning
+       [4] => 511 W, 3 D
+    */
+    if (sizeof($out) > 0)
+    {
+    	foreach ($out as $set)
+    	{
+    		$miniSummary .= " [" . strtoupper(str_replace("test", "", $set[1])) . ": " . $set[4] . "]";
+    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . " (" . str_replace("../../..", "", $set[2]) . "testlog.txt)\n";
+    	}
+    }
+
+	// <span><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html"><img src="/modeling/images/check.gif" alt="OK"/></a><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/fvt.html"><img src="/modeling/images/check.gif" alt="OK"/></a><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/svt.html"><img src="/modeling/images/check.gif" alt="OK"/></a></span>
+	$pattern = "#<a href=\"([^\"]+/results/([^\"]+).html)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#";
+	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
+	/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
+       [2] => bvt
+       [3] => check
+       [4] => OK
+    */
+    if (sizeof($out) > 0)
+    {
+    	foreach ($out as $set)
+    	{
+    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
+    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
+    	}
+    }
+
+	// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030432/results/svt.html" class="fail">1 F</a>
+	$pattern = "#<a href=\"([^\"]+/results/([^\"]+).html)\" class=\"([^\"]+)\">([^\<]+)</a>#";
+	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
+	/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
+       [2] => bvt
+       [3] => fail
+       [4] => 1F
+    */
+    if (sizeof($out) > 0)
+    {
+    	foreach ($out as $set)
+    	{
+    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
+    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
+    	}
+    }
+
+	return array($miniSummary,$textSummary);
+}
+
 function outputBuild($branch, $ID, $c)
 {
 	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps, $PR;
@@ -587,36 +703,12 @@ function outputBuild($branch, $ID, $c)
 	// generalize for any relabelled build, thus 2.0.1/M200405061234/*-2.0.2.zip is possible; label = 2.0.2
 	$IDlabel = $ziplabel;
 
-	$tests = "";
-	$s = array();
-	if ($isBuildServer && function_exists("getJDKTestResults") && function_exists("getOldTestResults"))
-	{
-		if (isset($jdk14testsPWD) && $jdk14testsPWD && is_dir($jdk14testsPWD))
-		{
-			$summary = "";
-			$tests = getJDKTestResults("$jdk14testsPWD/", "$branch/$ID/", "jdk14", $summary) . "\n";
-			$s[] = $summary;
-		}
-		if (isset($jdk50testsPWD) && $jdk50testsPWD && is_dir($jdk50testsPWD))
-		{
-			$summary = "";
-			$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
-			$s[] = $summary;
-		}
-		if (isset($testsPWD) && $testsPWD && is_dir($testsPWD))
-		{
-			$summary = "";
-			$tests .= getOldTestResults("$testsPWD/", "$branch/$ID/", $summary) . "\n";
-			$s[] = $summary;
-		}
-	}
-	$summary = join("", preg_replace("/^(.+)$/", "<span>$1</span>", $s));
-
 	$opts = loadBuildConfig("$PWD/$branch/$ID/build.cfg", $deps);
 
 	$ret = "<li>\n";
 	$buildResults = showBuildResults("$PWD/", "$branch/$ID/");
-	$ret .= "<div>" . $buildResults[0] . "$summary</div>";
+	$extraTestsResults = getExtraTestsResults($branch, $ID);
+	$ret .= "<div>" . $buildResults[0] .  join("", preg_replace("/^(.+)$/", "<span>$1</span>", $extraTestsResults[0])) . "</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
 		"<i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> " .
 		"(" . IDtoDateStamp($ID, !$isBuildServer) . ")" .
@@ -640,7 +732,7 @@ function outputBuild($branch, $ID, $c)
 	}
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
-	$ret .= $tests;
+	$ret .= $extraTestsResults[2];
 	$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
 	$ret .= "</ul>\n";
 	$ret .= "</li>\n";
