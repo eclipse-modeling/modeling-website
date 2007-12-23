@@ -44,7 +44,7 @@ function doBleedingEdge ()
 				<li><a href="../docs/#whatsnew">More from the Edge</a></li>
 			</ul>
 		</div>
-	';	
+	';
 }
 
 function doRequirements()
@@ -52,7 +52,7 @@ function doRequirements()
 	global $PR,$projct;
 	if (!isset($projct) || !$projct) { $projct = "emf"; }
 	$isUpdate = strpos($_SERVER["PHP_SELF"],"/updates/")!==false;
-	$reqNotePrefix = $isUpdate ? "/$PR/downloads/?project=$projct" : ""; 
+	$reqNotePrefix = $isUpdate ? "/$PR/downloads/?project=$projct" : "";
 ?>
 <div class="homeitem3col">
 	<h3>Getting Started</h3>
@@ -60,7 +60,7 @@ function doRequirements()
 		<b style="color:green">All-In-One SDK</b> bundle, which includes source, runtime and docs
 		for EMF, SDO, and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (now part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT</a> project).
 		<?php echo $isUpdate ? "" : 'Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Update Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
-		
+
 	<h2 style="padding-left:10px">Minimum Requirements</h2>
 	<table cellpadding="2" cellspacing="4" border="0" style="padding-left:10px">
 	<tr align="left"><th>EMF</th><th><a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a><a href="<?php echo $reqNotePrefix; ?>#req_note_1">*</a></th><th>Java</th>
@@ -69,11 +69,11 @@ function doRequirements()
 	<tr><td>2.4</td><td>3.4</td><td>5.0</td>
 		<td rowspan="5" valign="top">
 			<ul>
-				<li style="border:0;padding:1px"><a name="req_note_1">*</a> Eclipse is only required for EMF's tools. 
+				<li style="border:0;padding:1px"><a name="req_note_1">*</a> Eclipse is only required for EMF's tools.
 					For runtime-only use, only a JRE is required.</li>
-				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.3.x contains significant, though binary compatible, 
+				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.3.x contains significant, though binary compatible,
 					<a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">changes from previous releases</a>.</li>
-				<li style="border:0;padding:1px"><a name="req_note_3">***</a> If you are using Sun's 1.4 JRE, please see 
+				<li style="border:0;padding:1px"><a name="req_note_3">***</a> If you are using Sun's 1.4 JRE, please see
 					<a href="http://wiki.eclipse.org/MDT/XSD/FAQ/Sun_JDK14_Crimson_DOM">this note</a>.</li>
 			</ul>
 		</td>
@@ -92,7 +92,7 @@ function doLanguagePacks()
 	global $downloadScript, $downloadPre; ?>
 <div class="homeitem3col">
 	<a name="NLS"></a>
-	
+
 	<h3>Language Packs</h3>
 
 	<p>IBM is pleased to contribute translations for the Eclipse Modeling Framework.</p>
@@ -240,11 +240,11 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 			}
 			else if (preg_match("/FAILED/", $cnt)) //build failed
 			{
-				$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/not.gif\" alt=\"BUILD FAILED!\"/></a>";
+				$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/not.gif\" alt=\"FAILED\"/></a>";
 			}
 			else if ($cnt === 0) //all passed, 0 F, E, and N
 			{
-				$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/check.gif\" alt=\"Passed!\"/></a>";
+				$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/check.gif\" alt=\"OK\"/></a>";
 			}
 			else //something else
 			{
@@ -303,7 +303,7 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 			$logs[$t] = "results/$t.html";
 		}
 	}
-	
+
 	if (sizeof($logs) < 1)
 	{
 		$logs["..."] = "testlog.txt";
@@ -321,11 +321,11 @@ function getOldTestResults($testsPWD, $path, &$status) // given a build ID, dete
 		}
 		else if (preg_match("/FAILED/", $cnt)) //build failed
 		{
-			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/not.gif\" alt=\"BUILD FAILED!\"/></a>";
+			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/not.gif\" alt=\"FAILED\"/></a>";
 		}
 		else if ($cnt === 0)
 		{
-			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/check.gif\" alt=\"Passed!\"/></a>";
+			$stat = "<a href=\"$testlog\"><img src=\"/modeling/images/check.gif\" alt=\"OK\"/></a>";
 		}
 		else
 		{
@@ -468,7 +468,7 @@ function getTestResultsFailureCount($path, $testDirs, $file)
 {
 	$num = "";
 	$file = "$path$testDirs[0]/$file";
-	
+
 	if (preg_match("/testlog\.txt/", $file))
 	{
 		$num = (grep("/BUILD FAILED/", $file) ? "FAILED" : "");
