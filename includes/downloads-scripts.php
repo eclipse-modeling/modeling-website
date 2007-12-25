@@ -635,18 +635,23 @@ function getExtraTestsResults($branch, $ID, $styled=1)
 
 function toPlainTextSummaries($summary)
 {
+	global $debug;
+	if ($debug > 0) print htmlspecialchars($summary)."<br/>";
+
 	$miniSummary  = "";
 	$textSummary  = "";
-	// <span> <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/" class="warning">511 W, 3 D</a> <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/"><img src="/modeling/images/check.gif" alt="OK"/></a></span>
-	$pattern = "#<a href=\"[^\"]+\?([^\"]+)=([^\"]+)\" class=\"([^\"]+)\">([^<]+)</a>#";
+	// <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/" class="warning">511 W, 3 D</a>
+	// <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/"><img src="/modeling/images/check.gif" alt="OK"/></a>
+	// <a href="/modeling/emf/build/log-viewer.php?jdk50test=2.4.0/N200712241351/200712241410/">...</a>
+	$pattern = "#<a href=\"[^\"]+\?([^\"]+)=([^\"]+)\"(| class=\"[^\"]+\")>([^<]+)</a>#";
 	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
 	/* [1] => jdk50test
 	   [2] => /modeling/emf/build/log-viewer.php?jdk50test=2.2.4/R200710030400/200710030422/
-       [3] => warning
        [4] => 511 W, 3 D
     */
     if (sizeof($out) > 0)
     {
+	    if ($debug > 0) { print "\n-------1-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
     	foreach ($out as $set)
     	{
     		$miniSummary .= " [" . strtoupper(str_replace("test", "", $set[1])) . ": " . $set[4] . "]";
@@ -654,39 +659,34 @@ function toPlainTextSummaries($summary)
     	}
     }
 
-	// <span><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html"><img src="/modeling/images/check.gif" alt="OK"/></a><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/fvt.html"><img src="/modeling/images/check.gif" alt="OK"/></a><a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/svt.html"><img src="/modeling/images/check.gif" alt="OK"/></a></span>
-	$pattern = "#<a href=\"([^\"]+/results/([^\"]+).html)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#";
-	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
-	/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
-       [2] => bvt
-       [3] => check
-       [4] => OK
-    */
-    if (sizeof($out) > 0)
-    {
-    	foreach ($out as $set)
-    	{
-    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
-    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
-    	}
-    }
+	$patterns = array(
+		// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/svt.html"><img src="/modeling/images/check.gif" alt="OK"/></a>
+		"#<a href=\"([^\"]+/results/([^\"]+).html)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#",
 
-	// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030432/results/svt.html" class="fail">1 F</a>
-	$pattern = "#<a href=\"([^\"]+/results/([^\"]+).html)\" class=\"([^\"]+)\">([^\<]+)</a>#";
-	preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
-	/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
-       [2] => bvt
-       [3] => fail
-       [4] => 1F
-    */
-    if (sizeof($out) > 0)
-    {
-    	foreach ($out as $set)
-    	{
-    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
-    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
-    	}
-    }
+		// <a href="../../../modeling/emf/tests/2.4.0/N200712241351/200712241410/testlog.txt"><img src="/modeling/images/not.gif" alt="FAILED"/></a>
+		"#<a href=\"([^\"]+/modeling/emf/(tests)/[^\"]+)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#",
+
+		// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030432/results/svt.html" class="fail">1 F</a>
+		"#<a href=\"([^\"]+/results/([^\"]+).html)\" class=\"[^\"]+\">([^\<]+)</a>#",
+	);
+	foreach ($patterns as $pattern)
+	{
+		preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
+		/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
+	       [2] => bvt
+	       [3] => check
+	       [4] => OK
+	    */
+	    if (sizeof($out) > 0)
+	    {
+		    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
+	    	foreach ($out as $set)
+	    	{
+	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
+	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
+	    	}
+	    }
+	}
 
 	return array($miniSummary,$textSummary);
 }
