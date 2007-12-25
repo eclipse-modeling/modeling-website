@@ -41,7 +41,7 @@ if (file_exists($file))
 	include_once($file);
 }
 
-header($html ? "Content-Type: text/html\n\n" : "Content-Type: text/plain\n\n");
+if ($debug<0) header($html ? "Content-Type: text/html\n\n" : "Content-Type: text/plain\n\n");
 if (sizeof($data)<4)
 {
 	echo "Must specify top project, sub project (component), version, and buildID:\n\n" .
