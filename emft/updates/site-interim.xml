@@ -78,7 +78,29 @@
 	<!-- MWE 0.7.0 I200712210525 (Incubation) -->
 	
 	<!-- SEARCH 0.7.0 I200712211525 (Incubation) -->
-	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200712211525" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200712211525">
+	
+	<!-- TENEO 0.8.0 I200712280940 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940" name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 I200712280940: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200712280940" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200712280940.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200712280940" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200712280940.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200712280940" url="features/org.eclipse.emf.teneo.source_0.8.0.v200712280940.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200712280940" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo_0.8.0.v200712280940.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200712280940" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200712280940.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200712280940"/>
+	</feature>
+<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200712211525" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200712211525">
 		<description>
 EMFT SEARCH SDK (Incubation) 0.7.0 I200712211525: contains runtime, source, and documentation features.
 		</description>
