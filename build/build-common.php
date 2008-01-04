@@ -528,9 +528,8 @@ else
 
 	// create the log dir before trying to log to it
 	$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
-	$topProjActual = $topProj == "emft" ? "emf" : $topProj; // when we're building EMFT but it's actually in EMF cvs repo
 	$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
-	' -proj ' . $topProjActual . ' -sub '.$projct.
+	' -proj ' . $topProj . ' -sub '.$projct.
 	' -version '.$BR.
 	' -branch '.(isset($_POST["build_Branch_Override"]) && $_POST["build_Branch_Override"]!="" && isset($_POST["build_CVS_Branch"]) ? $_POST["build_Branch_Override"] : $_POST["build_CVS_Branch"]).
 	$dependencyURLs.
