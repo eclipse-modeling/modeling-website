@@ -1,13 +1,89 @@
 <p>
-Temporality is an open source component in the Eclipse Modeling
-Framework Technology (EMFT) project whose goal is to add automatic
-version of model instances. The basic idea is to provide a Temporal
+<a href="http://wiki.eclipse.org/Temporality">Temporality</a> is a feature providing 
+automatic versioning of model instances. The basic idea is to provide a Temporal
 mix-in base class that can be pulled into existing models. By simply
 extending the Temporal mix-in base class existing modeled types are
 supplied with temporal features. i.e.: they will keep track of changes
-made to their attributes and references.
+made to the value of their attributes and references.
 </p>
 
 <p>
-Lead : <a mailto="jccote@gmail.com">Jean-Claude Cote</a> 
+The temporality feature consist of a temporal.ecore model containing the Temporal EClass.
+ This model can be loaded using the Load Resource menu into an existing model to add 
+ temporality to existing modeled EClass. 
 </p>
+
+<p>
+Here's a simple model of a Fleet and Car given the ablility to keep track of versions of their instances by extending the Temporal base class.
+</p>
+
+<div align="center">
+  	<img src="/modeling/emft/temporality/images/fleet-model.png"/>
+	<p align="center"><em>Fleet and Car extend the Temporal EClass</em></p>
+</div>
+
+
+<p>
+Here's a snapshot of a generated instance editor for this Fleet model. Both the Fleet and Car can be added to the resource. In this snapshot we see one Fleet and 2 cars at the root of the resource.
+ The Fleet in question also has a vehicles list with one reference to car id: 1.
+</p>
+  
+
+<div align="center">
+  	<img src="/modeling/emft/temporality/images/normal-mode-16h.png"/>
+	<p align="center"><em>The Fleet instance editor as it looked on January third 16:00</em></p>
+</div>
+
+
+<p>
+With the context menu you can change the current date to 14:00 hours. The viewer now displays
+ the new current date at the top of the view.
+  
+</p>
+
+<div align="center">
+  	<img src="/modeling/emft/temporality/images/normal-mode-14h.png"/>
+	<p align="center"><em>The Fleet instance editor as it looked on January third 14:00</em></p>
+</div>
+ 
+<p>
+Normal mode looks just like the standard editor except for the display
+of the current date at the top of the viewer. When the current date is
+changed the view displays the state of the objects at the given time.
+For example at 14h the fleet has a car in its vehicles list. But at
+16h it no longer has any.
+</p>
+ 
+<p>
+Again with the context menu you can change the viewing mode to "advanced". In advanced mode the viewer displays the VersionHolder. The
+VersionHolder has the list of all the past/future versions. Each
+temporal object has one VersionHoder with one continuity and several
+versions.
+</p>
+
+<div align="center">
+  	<img src="/modeling/emft/temporality/images/advanced-mode-14h.png"/>
+	<p align="center"><em>The Fleet instance editor in advanced mode</em></p>
+</div>
+
+
+
+
+
+
+<ul>
+
+<li style="border-style: none;"><h2>Documentation</h2>
+ <p>
+ More information is available on the <a href="http://wiki.eclipse.org/Temporality">wiki page for Temporality</a>.
+ </p>
+</li>
+<li style="border-style: none;">
+ <h2>Contributors</h2>
+  <p>
+   Lead : <a href="mailto:jccote@gmail.com">Jean-Claude Cote</a> 
+  </p>
+</li>
+
+</ul>
+
