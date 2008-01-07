@@ -41,7 +41,8 @@ $cvscoms = array(
 		"teneo" => "org.eclipse.emf.teneo",
 		"cdo" => "org.eclipse.emf.cdo",
 		"net4j" => "org.eclipse.emf.net4j",
-		"ecoretools" => "org.eclipse.emf.ecoretools"
+		"ecoretools" => "org.eclipse.emf.ecoretools",
+		"temporality" => "org.eclipse.emf.temporality"
 		/* add more here */
 	)
 );
@@ -55,14 +56,15 @@ $projects = array(
 	"Teneo" => "teneo",
     // no builds yet
 	"JCR Management" => "jcrm",
-	"Ecore Tools" => "ecoretools"
+	"Ecore Tools" => "ecoretools",
+	"Temporality" => "temporality"
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm","temporality"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
