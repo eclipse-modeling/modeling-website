@@ -40,8 +40,10 @@ Here's a snapshot of a generated instance editor for this Fleet model. Both the 
 
 
 <p>
-With the context menu you can change the current date to 14:00 hours. The viewer now displays
- the new current date at the top of the view.  
+Because the Fleet and Car EClass are mix-in with the Temporal base class they keep track of 
+their history. So for example if we want to take a look at these instances as they were
+ two hours ago we simply use the context menu you to change the current date to 14:00 hours. The viewer now displays
+ the new current date at the top of the view. Note: If we want to see the instances "live" we simply input "now" in the dialog box for entering the current date/time.  
 </p>
 
 <div align="center">
@@ -53,8 +55,8 @@ With the context menu you can change the current date to 14:00 hours. The viewer
 Normal mode looks just like the standard editor except for the display
 of the current date at the top of the viewer. When the current date is
 changed the view displays the state of the objects at the given time.
-For example at 14:00h the fleet has a car in its vehicles list. But at
-16:00h it did not.
+For example at 16:00h the fleet had no vehicles in its vehicles list but it did at 
+14:00h.
 </p>
  
 <p>
