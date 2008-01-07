@@ -365,7 +365,7 @@ function setNote(val)
 	else if (val == "mwe")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
 	else if (val == "search")
-		note.innerHTML = "Requires 5 SDKs: Eclipse, EMF, UML2, OCL, GMF"
+		note.innerHTML = "Requires 12 SDKs: Eclipse, EMF, UML2, Orbit, OCL, QTV (3), GEF, GMF, Ecore Tools, UML2 Tools"
 	else
 		note.innerHTML = "Requires at least 2 SDKs: Eclipse, EMF, ..."
 }
