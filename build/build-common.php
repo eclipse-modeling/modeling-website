@@ -27,6 +27,10 @@ $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 $trans = array_flip($projects);
 
 $projctFromPath = getProjectFromPath($PR);
+
+// Support single component projects like GEF
+if (!$projctFromPath && $PR == $projct)	$projctFromPath = $projct;
+
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -350,7 +354,7 @@ function showfullURL(val)
 function setNote(val)
 {
     note = document.getElementById('note');
-	if (val == "emf" || val == "net4j")
+	if (val == "emf" || val == "gef" || val == "net4j")
 		note.innerHTML = "Requires 1 SDK: Eclipse"
 	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare" || val == "teneo")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
@@ -527,7 +531,7 @@ else
 	/** see http://ca3.php.net/manual/en/function.exec.php **/
 
 	// create the log dir before trying to log to it
-	$preCmd = 'mkdir -p '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
+	$preCmd = 'mkdir -p '.$workDir . ($PR == $projct ? $PR : $PR . $proj) . '/downloads/drops/'.$BR.'/'.$ID.'/eclipse ;';
 	$topProjActual = $topProj == "emft" ? "emf" : $topProj; // when we're building EMFT but it's actually in EMF cvs repo
 	$cmd = ($isBuildDotEclipseServer ? '' : '/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid '.$workDir.'modeling/scripts/start.sh') .
 	' -proj ' . $topProjActual . ' -sub '.$projct.
@@ -540,7 +544,7 @@ else
 	' -buildType '.$_POST["build_Build_Type"].
 	' -javaHome '.$_POST["build_Java_Home"].
 	' -downloadsDir '.$downloadsDir. // use central location
-	' -buildDir '.$workDir.$PR.$proj.'/downloads/drops/'.$BR.'/'.$ID.
+	' -buildDir '.$workDir . ($PR == $projct ? $PR : $PR . $proj) . '/downloads/drops/'.$BR.'/'.$ID.
 	' -writableBuildRoot '.$writableBuildRoot.
 	' -buildTimestamp '.$buildTimestamp.
 	($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
@@ -549,7 +553,7 @@ else
 	(isset($_POST["build_proj_releng_branch"]) && $_POST["build_proj_releng_branch"]!=""?' -projRelengBranch '.$_POST["build_proj_releng_branch"]:'').
 	(isset($_POST["build_emf_old_tests_branch"]) && $_POST["build_emf_old_tests_branch"]!=""?' -emfOldTestsBranch '.$_POST["build_emf_old_tests_branch"]:'').
 	(isset($_POST["build_noclean"]) && $_POST["build_noclean"]=="Y"?' -noclean':'').
-	($isBuildDotEclipseServer ? '' : ' >> '.$workDir.$PR.$proj.$logfile.' 2>&1 &"');	// logging to unique files
+	($isBuildDotEclipseServer ? '' : ' >> '.$workDir . ($PR == $projct ? $PR : $PR . $proj) . $logfile.' 2>&1 &"');	// logging to unique files
 	if ($previewOnly)
 	{
 		print '</div><div class="homeitem3col">'."\n";
