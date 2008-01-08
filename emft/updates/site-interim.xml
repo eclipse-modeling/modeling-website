@@ -96,7 +96,29 @@
 	<!-- SEARCH 0.7.0 I200801071957 (Incubation) -->
 	
 	<!-- SEARCH 0.7.0 I200801071957 (Incubation) -->
-	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200801071957" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200801071957">
+	
+	<!-- ECORETOOLS 0.8.0 I200801080938 (Incubation) -->
+	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938">
+		<description>
+EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200801080938" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200801080938.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.8.0.v200801080938" url="features/org.eclipse.emf.ecoretools.sdk_0.8.0.v200801080938.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.source" version="0.8.0.v200801080938" url="features/org.eclipse.emf.ecoretools.source_0.8.0.v200801080938.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200801080938" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.ecoretools_0.8.0.v200801080938.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200801080938" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200801080938.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938"/>
+	</feature>
+<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0 I200801071957" name="EMFT SEARCH SDK (Incubation) 0.7.0 I200801071957">
 		<description>
 EMFT SEARCH SDK (Incubation) 0.7.0 I200801071957: contains runtime, source, and documentation features.
 		</description>
