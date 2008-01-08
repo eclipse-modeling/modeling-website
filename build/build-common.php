@@ -499,7 +499,7 @@ else
 
 	if (!$previewOnly)
 	{
-		print '<p>Logfile is <a href="/'.$PR.$proj.$logfile.'">'.$workDir.$PR.$proj.$logfile.'</a></p>';
+		print '<p>Logfile is <a href="/' . ($PR == $projct ? $PR : $PR . $proj) . $logfile.'">'.$workDir . ($PR == $projct ? $PR : $PR . $proj) . $logfile.'</a></p>';
 	}
 ?>
 
@@ -553,6 +553,7 @@ else
 	' -downloadsDir '.$downloadsDir. // use central location
 	' -buildDir '.$workDir . ($PR == $projct ? $PR : $PR . $proj) . '/downloads/drops/'.$BR.'/'.$ID.
 	' -writableBuildRoot '.$writableBuildRoot.
+	(isset($options["ProjRelengRoot"]) && $options["ProjRelengRoot"] != "" ? ' -projRelengRoot \'' . $options["ProjRelengRoot"] . '\'': '').
 	' -buildTimestamp '.$buildTimestamp.
 	($_POST["build_Email"]!=""?' -email '.$_POST["build_Email"]:'').
 	' -basebuilderBranch '.($_POST["build_basebuilder_branch"]!=""?$_POST["build_basebuilder_branch"]:$options["BaseBuilderBranch"]).
