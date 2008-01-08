@@ -51,28 +51,28 @@ $cvscoms = array(
 $projects = array(
 	"Compare" => "compare",
 	"CDO" => "cdo",
+	"Ecore Tools" => "ecoretools",
 	"Modeling Workflow" => "mwe",
 	"Net4j" => "net4j",
 	"Search" => "search",
 	"Teneo" => "teneo",
     // no builds yet
 	"JCR Management" => "jcrm",
-	"Ecore Tools" => "ecoretools",
+	"Mint" => "mint",
 	"Temporality" => "temporality",
-	"Mint" => "mint"
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm","temporality","mint"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm","mint","temporality"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
 $hasmoved = array(
-	"query" => "emf", "transaction" => "emf", "validation" => "emf", 
-	"eodm" => "mdt", "ocl" => "mdt", 
+	"query" => "emf", "transaction" => "emf", "validation" => "emf",
+	"eodm" => "mdt", "ocl" => "mdt",
 	"jet" => "m2t", "jeteditor" => "m2t"); // components which have moved, and to where
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
@@ -95,8 +95,8 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
 	if (!isset($hasmoved[$projects[$z]]))
 	{
-		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);				
-	} 
+		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
+	}
 	else
 	{
 		$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
