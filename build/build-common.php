@@ -52,7 +52,14 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 $componentName =  $trans[$projct];
 
 print "<div id=\"midcolumn\">\n";
-print "<h1>New " . strtoupper($topProj) . " Component Build: ". $componentName . "</h1>\n";
+if (strtoupper($topProj) == $componentName)
+{
+	print "<h1>New $componentName Build</h1>\n";
+}
+else
+{
+	print "<h1>New " . strtoupper($topProj) . " Component Build: ". $componentName . "</h1>\n";
+}
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
