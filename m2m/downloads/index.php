@@ -15,7 +15,7 @@ ob_start();
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
 );
-	
+
 /* $project => sections/Project Name => (prettyname => filename) */
 /* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
@@ -27,6 +27,18 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),*/
+	"/atl" => array(
+		"ATL with UML2 Support" => array(
+			"SDK (Runtime, Source)" => "SDK-uml24atl",
+			"Runtime" => "runtime-uml24atl",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		),
+		"ATL" => array(
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtimes" => "runtime"
+		)
+	),
 );
 
 /* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
