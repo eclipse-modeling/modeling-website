@@ -31,12 +31,12 @@ $dls = array(
 		"ATL with UML2 Support" => array(
 			"SDK (Runtime, Source)" => "SDK-uml24atl",
 			"Runtime" => "runtime-uml24atl",
-			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		),
 		"ATL" => array(
 			"SDK (Runtime, Source)" => "SDK",
-			"Runtimes" => "runtime"
+			"Runtime" => "runtime",
+			"Examples" => "examples"
 		)
 	),
 );
