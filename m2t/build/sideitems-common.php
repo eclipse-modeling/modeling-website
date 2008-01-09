@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
@@ -10,8 +10,9 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li><a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/">Build</a>, 
-				<a href="/modeling/m2t/<?php print $projct ? $projct : "jet"; ?>/build/promo.php">Promote</a></li>
+			<li><a href="/<?php print $PR; ?>/<?php print $projct ? $projct : "jet"; ?>/build/">Build</a>,
+				<a href="/<?php print $PR; ?>/<?php print $projct ? $projct : "jet"; ?>/build/promo.php">Promote</a></li>
+			<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct ? $projct : "jet"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
 		</ul>
 	</div>
 

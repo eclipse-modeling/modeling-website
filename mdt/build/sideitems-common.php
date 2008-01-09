@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
@@ -10,15 +10,16 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-		<?php if ($projct == "ocl") { ?> 
-			<li>MDT: <a href="/modeling/mdt/<?php print $projct; ?>/build/">Build</a>, 
-					 <a href="/modeling/mdt/<?php print $projct; ?>/build/promo.php">Promote</a></li>
-			<li>QTV: <a href="/modeling/emf/query/build/">Build</a>, 
+		<?php if ($projct == "ocl") { ?>
+			<li>MDT: <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/">Build</a>,
+					 <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/promo.php">Promote</a></li>
+			<li>QTV: <a href="/modeling/emf/query/build/">Build</a>,
 					 <a href="/modeling/emf/query/build/promo.php">Promote</a></li>
 		<?php } else { ?>
-			<li><a href="/modeling/mdt/<?php print $projct; ?>/build/">Build</a>, 
-					 <a href="/modeling/mdt/<?php print $projct; ?>/build/promo.php">Promote</a></li>
+			<li><a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/">Build</a>,
+					 <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/promo.php">Promote</a></li>
 		<?php } ?>
+			<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct ? $projct : "uml2"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
 		</ul>
 	</div>
 
