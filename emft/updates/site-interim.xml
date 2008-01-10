@@ -100,7 +100,38 @@
 	<!-- ECORETOOLS 0.8.0 I200801080938 (Incubation) -->
 	
 	<!-- COMPARE 0.8.0 I200801100223 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223">
+	
+	<!-- MWE 0.7.0 I200801100355 (Incubation) -->
+	<category-def label="EMFT MWE SDK (Incubation) 0.7.0 I200801100355" name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355">
+		<description>
+EMFT MWE SDK (Incubation) 0.7.0 I200801100355: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mwe.core.source" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.core.source_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.core" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.core_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.doc" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.doc_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.examples.source" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.examples.source_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.examples" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.examples_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.sdk" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.sdk_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.ui.source" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.ui.source_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+	<feature id="org.eclipse.emf.mwe.ui" version="0.7.0.v200801100355" url="features/org.eclipse.emf.mwe.ui_0.7.0.v200801100355.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
+	</feature>
+<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223">
 		<description>
 EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223: contains runtime, source, and documentation features.
 		</description>
