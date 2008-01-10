@@ -98,7 +98,29 @@
 	<!-- SEARCH 0.7.0 I200801071957 (Incubation) -->
 	
 	<!-- ECORETOOLS 0.8.0 I200801080938 (Incubation) -->
-	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938">
+	
+	<!-- COMPARE 0.8.0 I200801100223 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200801100223" url="features/org.eclipse.emf.compare.doc_0.8.0.v200801100223.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200801100223" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200801100223.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200801100223" url="features/org.eclipse.emf.compare.source_0.8.0.v200801100223.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200801100223" url="features/org.eclipse.emf.compare_0.8.0.v200801100223.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200801100223" url="features/org.eclipse.emf.compare.examples_0.8.0.v200801100223.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200801100223"/>
+	</feature>
+<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938">
 		<description>
 EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801080938: contains runtime, source, and documentation features.
 		</description>
