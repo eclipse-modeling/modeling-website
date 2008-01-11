@@ -15,9 +15,9 @@ else
 
 $projct = preg_replace("#^/#", "", $proj);
 
-$projectName = explode("/",$PR); $projectName = strtoupper($projectName[1]); 
+$projectName = explode("/",$PR); $projectName = sizeof($projectName)>1 ? strtoupper($projectName[1]) : strtoupper($projectName[0]);
 $projectDownloadsPath = isset($_GET["tech"]) ? "/emft" : "/$PR";
-$projectDownloadsPagePath = $projectDownloadsPath."/downloads"; 
+$projectDownloadsPagePath = $projectDownloadsPath."/downloads";
 
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
 $buildDirPrefix = ($isBuildServer ? "/home/www-data/build" : $App->getDownloadBasePath());
