@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.45 2007/12/21 16:45:07 nickb Exp $
+// $Id: scripts.php,v 1.46 2008/01/11 20:53:21 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -28,7 +28,7 @@ function getPWD($suf = "", $doDynCheck = true)
 		//dynamic assignments
    		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
    		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
-		
+
 		//second dynamic assignment
 		if (PWD_check($PWD, $suf))
 		{
@@ -36,7 +36,7 @@ function getPWD($suf = "", $doDynCheck = true)
 			PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
 		}
 	}
-	
+
 	//static assignments
 	if (PWD_check($PWD, $suf))
 	{
@@ -65,16 +65,27 @@ function getPWD($suf = "", $doDynCheck = true)
 			4 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/",
 				"tries" => array(
-					"/home/local/httpd/download.eclipse.org/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf"
+					"/home/data/httpd/download.eclipse.org/$PR/$suf",
+					"/home/data/httpd/download.eclipse.org/tools/$PR/$suf",
+					"/home/data/httpd/download.eclipse.org/technology/$PR/$suf",
+
+					"/home/www/tools/$PR/$suf",
+					"/home/www/technology/$PR/$suf",
+					"/home/www/eclipse/$PR/$suf",
 				)
 			),
 			5 => array(
 				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
 				    $App->getDownloadBasePath() . "/$PR/" . $suf,
+
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf"
+					"/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf",
+					"/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf",
+
+					"/home/www/tools/$PR/$suf",
+					"/home/www/technology/$PR/$suf",
+					"/home/www/eclipse/$PR/$suf",
 				)
 			),
 			6 => array(
@@ -82,7 +93,14 @@ function getPWD($suf = "", $doDynCheck = true)
 				"tries" => array(
 					"/var/www/$PR/$suf",
 					"/var/www/html/$PR/$suf",
-					"/var/www/eclipse/$PR/$suf"
+
+					"/var/www/tools/$PR/$suf",
+					"/var/www/technology/$PR/$suf",
+					"/var/www/eclipse/$PR/$suf",
+
+					"/var/www/html/tools/$PR/$suf",
+					"/var/www/html/technology/$PR/$suf",
+					"/var/www/html/eclipse/$PR/$suf",
 				)
 			)
 		);
@@ -97,7 +115,7 @@ function getPWD($suf = "", $doDynCheck = true)
 					$PWD = $data[$y]["tries"][$z];
 					if (!PWD_check($PWD, $suf))
 					{
-						PWD_debug($PWD, $suf, "<!-- Found[${y}def-$z] -->");
+						PWD_debug($PWD, $suf, "<!-- Found: defaults[${y}][$z] -->");
 						break 2;
 					}
 				}
@@ -205,17 +223,17 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 			{
 				if (preg_match("/update/i",$regs[3][$i]))
 				{
-					print '<img src="/modeling/images/updated.gif" alt="Updated!"/> ';					
+					print '<img src="/modeling/images/updated.gif" alt="Updated!"/> ';
 				}
 				else
 				{
 					print '<img src="/modeling/images/new.gif" alt="New!"/> ';
 				}
-				
+
 			}
 			if (!$dateFmtPre && !$dateFmtSuf)
 			{
-				$app = (date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");	
+				$app = (date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");
 				print date("M" . '\&\n\b\s\p\;jS' . $app, strtotime($regs[1][$i])) . ' - ' . "\n";
 			} else if ($dateFmtPre)
 			{
@@ -283,7 +301,7 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 	}
 
 	$result = wmysql_query("SELECT IF(`component` != '', `component`, `project`), `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) AND `vanityname` != '0.0.0' ORDER BY `buildtime` DESC $limit");
-	
+
 	if ($result)
 	{
 		while ($row = mysql_fetch_row($result))
@@ -331,7 +349,7 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 			unset($projs[$s]);
 		}
 	}
-	
+
 	return array_intersect(array_merge($projects, $extraprojects), $projs);
 }
 
@@ -408,9 +426,9 @@ function debug_r($str, $header = "", $footer = "", $level = 0, $isPreformatted =
 		    print "<div class=\"debug\">"; print $header; print "</div>\n";
 		}
 		print "<div class=\"debug\">";
-		print $isPreformatted ? "<pre><small>" : ""; 
-		print_r($str); 
-		print $isPreformatted ? "</small></pre>" : ""; 
+		print $isPreformatted ? "<pre><small>" : "";
+		print_r($str);
+		print $isPreformatted ? "</small></pre>" : "";
 		print "</div>\n";
 		if ($footer)
 		{
@@ -422,7 +440,7 @@ function debug_r($str, $header = "", $footer = "", $level = 0, $isPreformatted =
 function isAuthorized()
 {
 	global $isEMFserver, $isBuildServer;
-	
+
 	if ($isBuildServer) {
 		return true;
 	}
@@ -453,22 +471,22 @@ function internalUseOnly()
 	{
 		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include_once($App->getProjectCommon());
 		ob_start(); ?>
-	
+
 		<div id="midcolumn">
-		
+
 		<div class="homeitem3col">
 		<h3>For Internal Use Only</h3>
 		<p>Sorry, this script must be run from a sanctioned build server. Contact Nick Boldt (codeslave[at]ca[dot]ibm[dot]com) for details.</p>
 		</div>
-		</div>	
+		</div>
 		<?php
 		$html = ob_get_contents();
 		ob_end_clean();
-		
+
 		$pageTitle = "For Internal Use Only";
 		$pageKeywords = "";
 		$pageAuthor = "Nick Boldt";
-		
+
 		$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 		exit;
 	}
@@ -516,7 +534,7 @@ function components($cvscoms)
 function wikiCategoryToListItems($category)
 {
 	$wiki_contents = "";
-	
+
 	// insert wiki content
 	$host = "wiki.eclipse.org";
 	$url = "/Category:" . $category;
