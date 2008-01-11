@@ -133,7 +133,6 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 {
 	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips, $projects;
 	$uu = 0;
-	$echo_out = "";
 
 	if (!$ziplabel)
 	{
@@ -155,9 +154,10 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 		));
 	}
 
+	$echo_out_all = "";
 	foreach (array_keys($dls[$proj]) as $z)
 	{
-		$echo_out .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n";
+		$echo_out = "";
 		foreach ($dls[$proj][$z] as $label => $u)
 		{
 			$cnt++;
@@ -194,11 +194,11 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			}
 			$outNotFound .= "-$ziplabel.zip ...</i>";
 			$out = "";
-			foreach ($tries as $z)
+			foreach ($tries as $y)
 			{
-				if (is_file("$PWD/$z"))
+				if (is_file("$PWD/$y"))
 				{
-					$out = fileFound("$PWD/", $z, $label);
+					$out = fileFound("$PWD/", $y, $label);
 					break;
 				}
 			}
@@ -216,10 +216,13 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 			}
 			$uu++;
 		}
-		$echo_out .= "</ul>\n</li>\n";
+		if ($echo_out) // if the whole category is empty, don't show it (eg., GEF)
+		{
+			$echo_out_all .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n" . $echo_out . "</ul>\n</li>\n";
+		}
 	}
 
-	return $echo_out;
+	return $echo_out_all;
 }
 
 /* if $styled = 0 or false, return text only */
@@ -258,7 +261,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	{
 		$indexHTML = is_file("$PWD${path}index.html") ? file_get_contents("$PWD${path}index.html") : "";
 		$zips = loadDirSimple($PWD . $path, ".zip", "f"); // get files count
-		$md5s = loadDirSimple($PWD . $path, ".zip.md5", "f"); // get files count
+		$md5s = is_dir($PWD . $path . "/checksum") ? loadDirSimple($PWD . $path . "/checksum", ".zip.md5", "f") : loadDirSimple($PWD . $path, ".zip.md5", "f"); // get files count
 
 		if ((sizeof($zips) >= $numzips && sizeof($md5s) >= $numzips))
 		{

@@ -16,7 +16,7 @@ else
 $projct = preg_replace("#^/#", "", $proj);
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
-$numzips = 0;
+$numzips = isset($extraZips) ? 0 - sizeof($extraZips) : 0; // if extra zips (new zips added later), reduce the "required" count when testing a build
 if (isset($dls[$proj]) && is_array($dls[$proj]))
 {
 	foreach (array_keys($dls[$proj]) as $z)
