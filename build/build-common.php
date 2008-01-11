@@ -545,7 +545,8 @@ else
 	' -version '.$BR.
 	' -branch '.(isset($_POST["build_Branch_Override"]) && $_POST["build_Branch_Override"]!="" && isset($_POST["build_CVS_Branch"]) ? $_POST["build_Branch_Override"] : $_POST["build_CVS_Branch"]).
 	$dependencyURLs.
-	($_POST["build_Run_Tests_JUnit"]=="Y" || $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y" ?' -antTarget run':' -antTarget runWithoutTest').
+	((isset($_POST["build_Run_Tests_JUnit"]) && $_POST["build_Run_Tests_JUnit"]=="Y") ||
+		(isset($_POST["build_Run_Tests_JUnit".$BR_suffix]) && $_POST["build_Run_Tests_JUnit".$BR_suffix]=="Y") ?' -antTarget run':' -antTarget runWithoutTest').
 	($_POST["build_Build_Alias"]?' -buildAlias '.$_POST["build_Build_Alias"]:"").	// 2.0.2, for example
 	' -mapfileRule '.$_POST["build_Mapfile_Rule"]. // pass in use-false, gen-true, gen-false
 	' -buildType '.$_POST["build_Build_Type"].
