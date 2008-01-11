@@ -102,7 +102,29 @@
 	<!-- COMPARE 0.8.0 I200801100223 (Incubation) -->
 	
 	<!-- MWE 0.7.0 I200801100355 (Incubation) -->
-	<category-def label="EMFT MWE SDK (Incubation) 0.7.0 I200801100355" name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355">
+	
+	<!-- COMPARE 0.8.0M4 I200801110217 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217" name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200801110217" url="features/org.eclipse.emf.compare.doc_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200801110217" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200801110217" url="features/org.eclipse.emf.compare.source_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200801110217" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200801110217" url="features/org.eclipse.emf.compare.examples_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 I200801110217"/>
+	</feature>
+<category-def label="EMFT MWE SDK (Incubation) 0.7.0 I200801100355" name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355">
 		<description>
 EMFT MWE SDK (Incubation) 0.7.0 I200801100355: contains runtime, source, and documentation features.
 		</description>
