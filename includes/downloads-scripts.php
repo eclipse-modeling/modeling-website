@@ -903,11 +903,15 @@ function getTestResultsJUnitXML($file)
 		{
 			return array($matches[1], $matches[2], 0);
 		}
-		else if (false!==strpos($line,"<testsuites></testsuites>")) // no tests run!
+		else if (preg_match("/<testsuite.+failures=\"(\d+)\" errors=\"(\d+)\".+/", $line, $matches))
+		{
+			return array($matches[2], $matches[1], 0);
+		}
+		else if (false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
 		{
 			return array(0, 0, 1);
 		}
 	}
-	return array(0, 0, 0);
+	return array(0, 0, 0); # Errors, Failures, DNRs
 }
 ?>
