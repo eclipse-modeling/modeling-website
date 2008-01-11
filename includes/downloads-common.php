@@ -25,11 +25,15 @@ if (isset($dls[$proj]) && is_array($dls[$proj]))
 	}
 }
 
-// include extras-$proj.php
-$file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras" . preg_replace("#^/#", "-", $proj) . ".php";
-if (file_exists($file))
+// include extras-$proj.php or extras-$PR.php
+$files = array ($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $projct . ".php", $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $PR . ".php");
+foreach ($files as $file)
 {
-	include_once($file);
+	if (file_exists($file))
+	{
+		include_once($file);
+		break;
+	}
 }
 
 $hadLoadDirSimpleError = 1; //have we echoed the loadDirSimple() error msg yet? if 1, omit error; if 0, echo at most 1 error
