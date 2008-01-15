@@ -489,10 +489,18 @@ function fileFound($PWD, $url, $label) //only used once
 {
 	global $isBuildServer, $downloadScript, $downloadPre, $PR, $proj;
 
+	$out = "";
 	$mid = "$downloadPre/$PR$proj/downloads/drops/"; // new for www.eclipse.org centralized download.php script
-
-	return (is_file("$PWD$url.md5") ? "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isBuildServer ? "" : "http://download.eclipse.org") .
-"$mid$url.md5\">md5</a>)</div>" : "") . "<a href=\"$downloadScript$mid$url\">$label</a>";
+	$md5files = array("$url.md5", preg_replace("#/([^/]+$)#", "/checksum/$1", $url) . ".md5");
+	foreach ($md5files as $md5file)
+	{
+		if (is_file($PWD.$md5file))
+		{
+			$out .= "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isBuildServer ? "" : "http://download.eclipse.org") .
+"$mid$md5file\">md5</a>)</div>"; break;
+		}
+	}
+	return $out . "<a href=\"$downloadScript$mid$url\">$label</a>";
 }
 
 function pretty_size($bytes)
