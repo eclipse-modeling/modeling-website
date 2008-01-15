@@ -142,6 +142,10 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 	$cnt=-1; // for use with static prefix list
 
+	if (!isset($dls[$proj]) && isset($dls["/"]))
+	{
+		$dls[$proj] = $dls["/"];
+	}
 	if (!isset($dls[$proj]))
 	{
 		// set default
@@ -727,6 +731,10 @@ function outputBuild($branch, $ID, $c)
 
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
 
+	if (!isset($filePre[$proj]) && isset($filePre["/"]))
+	{
+		$filePre[$proj] = $filePre["/"];
+	}
 	if (!isset($filePre[$proj]))
 	{
 		$topProj = preg_replace("#.+/(.+)#","$1", $PR);
