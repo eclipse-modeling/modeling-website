@@ -1,7 +1,5 @@
 <?php
 
-$numzips = $numzips - 1; // the editor zip is new, so don't require it
-
 /* used for sidebar entry */
 $NLpacks = array(
 	"0.7.x" => "NLS0.7.x"
@@ -20,11 +18,11 @@ $oldrels = array(
 function doLanguagePacks()
 {
 	global $downloadScript, $downloadPre;
-	
+
 ?>
 <div class="homeitem3col">
 	<a name="NLS"></a>
-	
+
 	<h3>Language Packs</h3>
 
 	<p>IBM is pleased to contribute translations for the Eclipse Modeling To Text (M2T) subcomponent JET.</p>

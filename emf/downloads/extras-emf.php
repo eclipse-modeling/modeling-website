@@ -1,7 +1,5 @@
 <?php
 
-$numzips = isset($numzips) ? $numzips - 2 : 0; // the stand-alone & models zips are new
-
 $testsPWD = "";
 $jdk14testsPWD = "";
 $jdk50testsPWD = "";
