@@ -293,8 +293,9 @@ function sanitize($str, $type = "url")
 
 function pagelink($page, $selected, $linktext = "")
 {
+	global $fullpath;
 	$innertext = ($linktext ? $linktext : $page);
-	$text = (!$selected ? "<a href=\"?q=" . sanitize($_GET["q"]) . "&amp;p=$page\">$innertext</a>" : $innertext);
+	$text = (!$selected ? "<a href=\"?q=" . sanitize($_GET["q"]) . "&amp;p=$page" . ($fullpath ? '&amp;fullpath' : '') . "\">$innertext</a>" : $innertext);
 	return "<span" . ($selected ? " class=\"selected\"" : "") . ">$text</span>";
 }
 
