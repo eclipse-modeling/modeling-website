@@ -132,6 +132,7 @@ else if (preg_match("/(\S)/", $q, $regs) || sizeof($extra["where"]) + sizeof($ex
 			}
 			?>
 			</select>
+			<input type="checkbox" value="Y" name="fullpath" <?php print $fullpath ? 'checked="checked"' : ''; ?>/> Show full paths?
 		</form>
 	</div>
 </div>
@@ -196,14 +197,14 @@ if ($connect)
 		<h6>Help</h6>
 		<p><a href="http://wiki.eclipse.org/index.php/Search_CVS">Consult the wiki</a>, or try these examples:</p>
 		<ul>
-			<li><a href="?q=%5B155286%5D">[155286]</a></li>
-			<li><a href="?q=98877+file%3A+ChangeAdapter">98877 file: ChangeAdapter</a></li>
-			<li><a href="?q=file%3A+org.eclipse.emf%2F+days%3A+7">file: org.eclipse.emf/ days: 7</a></li>
-			<li><a href="?q=days%3A200+author%3Amerks">days:200 author:merks</a></li>
-			<li><a href="?q=branch%3A+R2_1_+file%3A+.xml">branch: R2_1_ file: .xml</a></li>
-			<li><a href="?q=static+dynamic+project%3A+org.eclipse.emf">static dynamic project: org.eclipse.emf</a></li>
-			<li><a href="?q=%22package+protected%22">"package protected"</a></li>
-			<li><a href="?q=Neil+Skrypuch">Neil Skrypuch</a></li>
+			<li><a href="?q=%5B155286%5D<?php print $fullpath ? '&amp;fullpath' : ''; ?>">[155286]</a></li>
+			<li><a href="?q=98877+file%3A+ChangeAdapter<?php print $fullpath ? '&amp;fullpath' : ''; ?>">98877 file: ChangeAdapter</a></li>
+			<li><a href="?q=file%3A+org.eclipse.emf%2F+days%3A+7<?php print $fullpath ? '&amp;fullpath' : ''; ?>">file: org.eclipse.emf/ days: 7</a></li>
+			<li><a href="?q=days%3A200+author%3Amerks<?php print $fullpath ? '&amp;fullpath' : ''; ?>">days:200 author:merks</a></li>
+			<li><a href="?q=branch%3A+R2_1_+file%3A+.xml<?php print $fullpath ? '&amp;fullpath' : ''; ?>">branch: R2_1_ file: .xml</a></li>
+			<li><a href="?q=static+dynamic+project%3A+org.eclipse.emf<?php print $fullpath ? '&amp;fullpath' : ''; ?>">static dynamic project: org.eclipse.emf</a></li>
+			<li><a href="?q=%22package+protected%22<?php print $fullpath ? '&amp;fullpath' : ''; ?>">"package protected"</a></li>
+			<li><a href="?q=Neil+Skrypuch<?php print $fullpath ? '&amp;fullpath' : ''; ?>">Neil Skrypuch</a></li>
 		</ul>
 		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p>
 	</div>
