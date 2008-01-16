@@ -6,6 +6,7 @@
 	#
 	# Author: 		Richard Gronback
 	# Date:			2006-05-11
+	# Modification: 2008-01-16 Removed restriction to add new projects without Board consent, as per vote this day. [Richard Gronback]
 	#
 	# Description: Modeling project charter
 	#
@@ -212,7 +213,7 @@ development.</p>
 			<img src="modeling.png"/>
 			
 		<p>
-			To ensure the scope of the project remains consistent within the modeling mission, the PMC will seek Eclipse board approval for the creation of new projects.  The PMC will look to the EMO's judgement as to which cases would benefit from board review.
+			[1] The PMC will look to the EMO's judgement as to which cases would benefit from board review.
 			Note that the diagram is an architectural/dependency rendering, not a specification of the scope, i.e., the text not the diagram is normative.
 			</p>
 		<h2>Infrastructure</h2>
@@ -233,6 +234,9 @@ development.</p>
 		<p>Each project will coordinate their release cycles and be respectful of their dependent projects, particularly in the context of a larger
 		Eclipse coordinated release cycle. Projects are expected to publish their milestone plans.</p>
 		</blockquote>
+		
+		<b>Notes:</b><br/>
+		[1] The Board of Directors voted on 2008-01-16 and approved the removal of this sentence from the charter, "To ensure the scope of the project remains consistent within the modeling mission, the PMC will seek Eclipse board approval for the creation of new projects."
 
 	</div>
 </div>
