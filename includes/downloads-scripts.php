@@ -487,10 +487,10 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 function fileFound($PWD, $url, $label) //only used once
 {
-	global $isBuildServer, $downloadScript, $downloadPre, $PR, $proj;
+	global $isBuildServer, $downloadScript, $downloadPre, $PR, $proj, $isTools, $isTech;
 
 	$out = "";
-	$mid = "$downloadPre/$PR$proj/downloads/drops/"; // new for www.eclipse.org centralized download.php script
+	$mid = "$downloadPre/" . ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR$proj")) . "/downloads/drops/"; // new for www.eclipse.org centralized download.php script
 	$md5files = array("$url.md5", preg_replace("#/([^/]+$)#", "/checksum/$1", $url) . ".md5");
 	foreach ($md5files as $md5file)
 	{
@@ -787,9 +787,10 @@ function loadBuildConfig($file, $deps)
 
 function getBuildArtifacts($dir, $branchID)
 {
-	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct;
+	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct, $isTools, $isTech;
 
-	$mid = "$downloadPre/$PR$proj/downloads/drops/";
+	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for ww.eclipse.org/gef/ and download.eclipse.org/tools/gef
+	$mid = "$downloadPre/$PR2" . ($proj != "/" ? $proj : "") . "/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
 	$havedeps = array();
 	$opts = loadBuildConfig($file, $deps);

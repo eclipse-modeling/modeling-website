@@ -16,12 +16,21 @@ else
 $projct = preg_replace("#^/#", "", $proj);
 
 $projectName = explode("/",$PR); $projectName = sizeof($projectName)>1 ? strtoupper($projectName[1]) : strtoupper($projectName[0]);
-$projectDownloadsPath = isset($_GET["tech"]) ? "/emft" : "/$PR";
-$projectDownloadsPagePath = $projectDownloadsPath."/downloads";
 
+$PWD = getPWD("$projct/downloads/drops"); // see scripts.php
+$isTools = isset($_GET["tools"]);
+$isTech = isset($_GET["tech"]);
+if (preg_match("#/(tools|technology)/#", $PWD, $m))
+{
+	$isTools = $m[1] == "tools";
+	$isTech = $m[1] == "technology";
+}
+#if ($debug > 0) print "$PR, $proj, $isTools, $isTech<br/>";
+
+$projectDownloadsPagePath = "/" . ($isTools ? "$PR" : ($isTech ? "$PR" : "$PR$proj")) . "/downloads";
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
 $buildDirPrefix = ($isBuildServer ? "/home/www-data/build" : $App->getDownloadBasePath());
-$buildDir = (isset($_GET["tech"]) ? ($isBuildServer ? "/emft" : "/technology/emft") : "/$PR") . $proj . "/downloads/drops/" . $buildName;
+$buildDir = ($isTools ? "/tools/$PR" : ($isTech ? "/technology/$PR" : "/$PR$proj")) . "/downloads/drops/" . $buildName;
 $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
 $subprojName = array_flip($projects); $subprojName = $subprojName[$projct];
 $pageTitle = $projectName . ($subprojName && $projectName != $subprojName ? ' ' . $subprojName : '') . " Build " . $buildName . " - Test Results";
@@ -70,6 +79,7 @@ foreach ($catgs as $num => $dirBits)
 {
 	if ($num === 0)
 	{
+		#if ($debug > 0) print "Load these files: $buildDirPrefix . $dirBits[1], $dirBits[2]";
 		$files = loadDir($buildDirPrefix . $dirBits[1], $dirBits[2]);
 		$out = "";
 		if (sizeof($files) > 0)

@@ -43,6 +43,13 @@ $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"],
 $doRefreshPage = false;
 
 $PWD = getPWD("$projct/downloads/drops"); // see scripts.php
+$isTools = isset($_GET["tools"]);
+$isTech = isset($_GET["tech"]);
+if (preg_match("#/(tools|technology)/#", $PWD, $m))
+{
+	$isTools = $m[1] == "tools";
+	$isTech = $m[1] == "technology";
+}
 
 if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //internal
 {
