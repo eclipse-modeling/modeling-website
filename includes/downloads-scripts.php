@@ -232,9 +232,9 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 /* if $styled = 0 or false, return text only */
 function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads/drops/M200402021234/
 {
-	global $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct, $isBuildDotEclipseServer;
-	$mid = "../../../$PR/$projct/downloads/drops/"; // this is a symlink on the filesystem!
-
+	global $downloadPre, $pre, $isBuildServer, $doRefreshPage, $numzips, $PR, $projct, $isBuildDotEclipseServer, $isTech, $isTools;
+	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
+	$mid = "$downloadPre/$PR2" . ($projct == "" ? $projct : "/$projct") . "/downloads/drops/";
 	$out = "";
 
 	$warnings = 0;
@@ -415,7 +415,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?project=$projct&amp;build=$path" :
+		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR2/build/log-viewer.php?project=$projct&amp;build=$path" :
 				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
 	}
 
@@ -423,7 +423,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	{
 		$ID = substr($path, -14);
 		$conlog = "${path}testing/${ID}testing/linux.gtk_consolelog.txt";
-		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=" . substr($path, 0, strlen($path) - 1);
+		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR2/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=" . substr($path, 0, strlen($path) - 1);
 		$link2 = (is_file("$PWD$conlog") ? "$mid$conlog" : (is_file("$PWD$testlog") ? "$testlog" : $link));
 		$result = (is_file("$PWD$conlog") ? "Testing..." : $result);
 	}
@@ -789,7 +789,7 @@ function getBuildArtifacts($dir, $branchID)
 {
 	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct, $isTools, $isTech;
 
-	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for ww.eclipse.org/gef/ and download.eclipse.org/tools/gef
+	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
 	$mid = "$downloadPre/$PR2" . ($proj != "/" ? $proj : "") . "/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
 	$havedeps = array();
