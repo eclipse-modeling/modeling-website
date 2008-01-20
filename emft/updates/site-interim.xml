@@ -106,7 +106,29 @@
 	<!-- COMPARE 0.8.0M4 I200801110217 (Incubation) -->
 	
 	<!-- ECORETOOLS 0.8.0 I200801161252 (Incubation) -->
-	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801161252" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801161252">
+	
+	<!-- TENEO 0.8.0 I200801200338 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338" name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 I200801200338: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200801200338" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200801200338.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200801200338" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200801200338.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200801200338" url="features/org.eclipse.emf.teneo.source_0.8.0.v200801200338.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200801200338" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo_0.8.0.v200801200338.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200801200338" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200801200338.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200801200338"/>
+	</feature>
+<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801161252" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801161252">
 		<description>
 EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200801161252: contains runtime, source, and documentation features.
 		</description>
