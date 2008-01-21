@@ -192,7 +192,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td colspan="3">&#160;</td>
 				<td>
-				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Assigned Bugs to Fixed? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Fixing_Assigned_Bugs">-bugzonly</a>)</p>
+				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Resolved Bugs to Verified? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Verifying_Resolved_Bugs">-bugzonly</a>)</p>
 				</td>
 				<td width="300"><small><a id="divToggle_bugzonly" name="divToggle_bugzonly" href="javascript:toggleDetails('bugzonly')">[+]</a></small>
 					<div id="divDetail_bugzonly" name="divDetail_bugzonly" style="display:none;border:0">
