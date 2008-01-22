@@ -43,9 +43,9 @@ else
 
 	$require_db = $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php";
 
-	if (isset($_GET["verbosity"]) && preg_match("/^\d+$/", $_GET["verbosity"]))
+	if ((isset($_GET["debug"]) && preg_match("/(^\d+$)/", $_GET["debug"], $m)) || (isset($_GET["verbosity"]) && preg_match("/(^\d+$)/", $_GET["verbosity"], $m)))
 	{
-		$verbosity = $_GET["verbosity"];
+		$verbosity = $m[1];
 	}
 
 	/* here we inherit $dirs from the placeholder file that includes us */
@@ -64,7 +64,7 @@ else
 			exit(-5);
 		}
 	}
-	
+
 	foreach ($dirs as $dir)
 	{
 		if (!is_dir($dir))
@@ -271,6 +271,10 @@ foreach ($dirs as $dir)
 						if ($versions[$z] - $lastversions[$z] == 1 || $versions[$z] - $lastversions[$z] == 1000)
 						{
 							logger(LOGGER_OK, "$z last released at " . $vcache[$lastversions[$z]] . ", currently at " . $vcache[$versions[$z]] . "\n");
+						}
+						else if (!isset($vcache[$lastversions[$z]]) || !$vcache[$lastversions[$z]]) // if feature is new, no previous version will exist
+						{
+							logger(LOGGER_INFO, "$z appears to be new, skipping checks\n");
 						}
 						else
 						{
