@@ -15,10 +15,14 @@ else if (isset($_GET["project"]) && $_GET["project"]=="sdo")
 }
 ob_start();
 
-/* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
+/* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
 $extraZips = array(
-	"-Standalone",
-	"-Models"
+	"emf-sdo-xsd-Standalone", # deprecated
+	"emf-sdo-xsd-Models", # new
+	"emf-sdo-SDK", "xsd-SDK", # deprecated x 2
+	"emf-sdo-runtime", # deprecated
+	"emf-runtime", "sdo-runtime", # new EMF 2.4.0M5 x 2
+	"emf-sourcedoc", "sdo-sourcedoc", "xsd-sourcedoc", # new EMF 2.4.0M5 x 3
 );
 
 /* config */
@@ -37,17 +41,26 @@ $dls = array(
 	"/emf" => array(
 		"EMF, SDO, and XSD" => array(
 			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
-			"Standalone" => "Standalone",
+			"Standalone" => "Standalone",			# deprecated EMF 2.3.0
 			"Models" => "Models",
 			"Automated Tests" => "Automated-Tests",
 			"Examples" => "Examples"
 		),
 		"EMF and SDO" => array(
-			"SDK (Runtime, Source, Doc)" => "SDK",
-			"Runtimes" => "runtime"
+			"SDK (Runtime, Source, Doc)" => "SDK", 	# deprecated EMF 2.4.0M5
+			"Runtimes" => "runtime"					# deprecated EMF 2.4.0M5
+		),
+		"EMF" => array(
+			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
+			"Runtime" => "runtime"					# new EMF 2.4.0M5
+		),
+		"SDO" => array(
+			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
+			"Runtime" => "runtime"					# new EMF 2.4.0M5
 		),
 		"XSD" => array(
-			"SDK (Runtime, Source, Doc)" => "SDK",
+			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
+			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
 			"Runtime" => "runtime"
 		)
 	),
@@ -57,19 +70,24 @@ $dls = array(
 /* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
 	/* "/newproj" => array("emft-newproj", "emf-newproj"), */
-	"/emf" => array("emf-sdo-xsd", "emf-sdo", "xsd"),
+	"/emf" => array("emf-sdo-xsd", "emf-sdo", "emf", "sdo", "xsd"),
 );
 /* alternate method for specifying prefixes - static list */
 $filePreStatic = array(
 	"/emf" => array(
 		"emf-sdo-xsd",
+		"emf-sdo-xsd",	# deprecated EMF 2.3.0
 		"emf-sdo-xsd",
 		"emf-sdo-xsd",
 		"emf-sdo-xsd",
-		"emf-sdo-xsd",
-		"emf-sdo",
-		"emf-sdo",
-		"xsd",
+		"emf-sdo",		# deprecated EMF 2.4.0M5
+		"emf-sdo",		# deprecated EMF 2.4.0M5
+		"emf",			# new EMF 2.4.0M5
+		"emf",			# new EMF 2.4.0M5
+		"sdo",			# new EMF 2.4.0M5
+		"sdo",			# new EMF 2.4.0M5
+		"xsd",			# deprecated EMF 2.4.0M5
+		"xsd",			# new EMF 2.4.0M5
 		"xsd"
 	)
 );

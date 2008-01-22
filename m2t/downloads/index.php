@@ -14,9 +14,9 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
-	"-editor"
+	"m2t-jet-editor"
 );
-	
+
 /* $project => sections/Project Name => (prettyname => filename) */
 /* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(

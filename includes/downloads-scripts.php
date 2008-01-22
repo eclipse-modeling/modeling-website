@@ -212,7 +212,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 				$echo_out .= $out;
 				$echo_out .= "</li>\n";
 			}
-			else if (!isset($extraZips) || !is_array($extraZips) || !in_array($u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
+			else if (!isset($extraZips) || !is_array($extraZips) || !in_array($filePre . $u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
 			{
 				$echo_out .= "<li>\n";
 				$echo_out .= $outNotFound;
