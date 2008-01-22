@@ -48,15 +48,11 @@ $dls = array(
 		),
 		"EMF and SDO" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK", 	# deprecated EMF 2.4.0M5
-			"Runtimes" => "runtime"					# deprecated EMF 2.4.0M5
-		),
-		"EMF" => array(
-			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
-			"Runtime" => "runtime"					# new EMF 2.4.0M5
-		),
-		"SDO" => array(
-			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
-			"Runtime" => "runtime"					# new EMF 2.4.0M5
+			"Runtimes" => "runtime",					# deprecated EMF 2.4.0M5
+			"EMF Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
+			"EMF Runtime" => "runtime",					# new EMF 2.4.0M5
+			"SDO Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
+			"SDO Runtime" => "runtime"					# new EMF 2.4.0M5
 		),
 		"XSD" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
