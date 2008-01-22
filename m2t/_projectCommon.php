@@ -55,7 +55,7 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("mtl","xpand","m2tcore","m2tshared"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("mtl","m2tcore","m2tshared"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("jet","mtl","xpand","m2tcore","m2tshared"); //components without newsgroup
 $nomailinglist = array("jet","mtl","xpand","m2tcore","m2tshared"); //components without mailinglist
 $incubating = array("jet","mtl","xpand","m2tcore","m2tshared"); // components which are still incubating
