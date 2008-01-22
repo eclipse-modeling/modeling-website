@@ -386,10 +386,14 @@ function depgrep($dir, $plugin, $vanityname, $origplugin)
 function feature_version($file)
 {
 	$m = null;
-	if (preg_match("/<feature[^>]+version=\"([^\"]+)\"/s", file_get_contents($file), $m))
+	if (is_file($file) && is_readable($file))
 	{
-		return $m[1];
+		if (preg_match("/<feature[^>]+version=\"([^\"]+)\"/s", file_get_contents($file), $m))
+		{
+			return $m[1];
+		}
 	}
+	return null;
 }
 
 /* parse the bundle version out of a MANIFEST.MF file (or plugin.xml if we can't find a MANIFEST.MF) */
@@ -425,13 +429,15 @@ function plugin_version($plugdir)
 function convert_version($version)
 {
 	global $vcache;
+	$num = null;
+	if ($version)
+	{
+		$version = preg_replace("/\.qualifier$/", "", $version);
+		list($major, $minor, $patch) = split("\.", $version);
 
-	$version = preg_replace("/\.qualifier$/", "", $version);
-	list($major, $minor, $patch) = split("\.", $version);
-
-	$num = ($major * pow(10, 6) + $minor * pow(10, 3) + $patch);
-	$vcache[$num] = $version;
-
+		$num = ($major * pow(10, 6) + $minor * pow(10, 3) + $patch);
+		$vcache[$num] = $version;
+	}
 	return $num;
 }
 
