@@ -92,8 +92,8 @@ print <<<EOHTML
 
 		<li>
 			<div>Dec 5 2006</div>Getting EMF Source Files from CVS: <a href="http://wiki.eclipse.org/EMF/Getting_Source">Using Eclipse</a> and <a href="http://wiki.eclipse.org/index.php/CVS_Source_From_Mapfile">For A Given Build's Mapfile</a> (commandline)
-			
-			
+
+
 		</li>
 
 		<li>
@@ -132,13 +132,13 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>Sept 23  2004</div>Eclipse.org Newsgroups - Offline Searching with 
-				<a href="http://www.eclipse.org/modeling/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsMozilla.html">Mozilla</a> or 
+			<div>Sept 23  2004</div>Eclipse.org Newsgroups - Offline Searching with
+				<a href="http://www.eclipse.org/modeling/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsMozilla.html">Mozilla</a> or
 				<a href="http://www.eclipse.org/modeling/emf/docs/misc/SearchingNewsgroups/SearchingNewsgroupsOutlook.html">Outlook Express</a>
 		</li>
 
 		<li>
-			<div>Feb 27  2006</div>Eclipse.org Newsgroups - <a href="http://www.eclipse.org/modeling/emf/newsgroup-mailing-list.php">Online Searching</a> with 
+			<div>Feb 27  2006</div>Eclipse.org Newsgroups - <a href="http://www.eclipse.org/modeling/emf/newsgroup-mailing-list.php">Online Searching</a> with
 				<a href="http://wiki.eclipse.org/index.php/Searching_Eclipse_Newsgroups_With_Firefox">Firefox</a>
 		</li>
 	</ul>
@@ -149,6 +149,10 @@ print <<<EOHTML
 	<h3>The Bleeding Edge</h3>
 
 	<ul>
+		<li>
+			<div>Jan 22 2008</div><a href="http://wiki.eclipse.org/EMF/EMF_2.4/Packaging_Changes"><u>EMF 2.4 Packaging Changes</u> (2.4.0.I200801221930)</a>
+		</li>
+
 		<li>
 			<div>June 10 2007</div><a href="http://wiki.eclipse.org/index.php/EMF_2.3_Standalone_Zip"><u>RFC: Standalone Zip?</u> (2.3.0.RC3+)</a>
 		</li>
@@ -203,7 +207,7 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>Feb 21 2007</div>Eclipse Podcast: Wayne Beaton and Ed Merks - What is EMF? What does it do? What's new? 
+			<div>Feb 21 2007</div>Eclipse Podcast: Wayne Beaton and Ed Merks - What is EMF? What does it do? What's new?
 			<ul>
 				<li><a href="http://www.eclipse.org/downloads/download.php?file=/technology/phoenix/podcasts/Ed-Merks-21Feb07.mp3">MP3</a> (20 min, 18 MB)</li>
 			</ul>
@@ -287,7 +291,7 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>June 3 2005</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.xsd.doc/references/diagrams/diagrams.html">Diagrams 
+			<div>June 3 2005</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.xsd.doc/references/diagrams/diagrams.html">Diagrams
 and Animations of the internals of XSD models</a>
 		</li>
 	</ul>
@@ -580,4 +584,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.12 2007/11/29 19:47:52 nickb Exp $ -->
+<!-- $Id: index.php,v 1.13 2008/01/23 04:14:15 nickb Exp $ -->
