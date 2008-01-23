@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.46 2008/01/11 20:53:21 nickb Exp $
+// $Id: scripts.php,v 1.47 2008/01/23 19:21:05 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -399,11 +399,11 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 
 function project_name($proj)
 {
-	global $projects;
+	global $projects, $PR;
 
 	$tmp = array_flip($projects);
 	$proj = preg_replace("#^/#", "", $proj);
-	return $tmp[$proj];
+	return isset($tmp[$proj]) ? $tmp[$proj] : (isset($tmp[$PR]) ? $tmp[$PR] : "");
 }
 
 function debug($str, $level = 0)
