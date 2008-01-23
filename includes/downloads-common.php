@@ -6,7 +6,8 @@ if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 	$tmp = array_keys($projectArray);
-	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projectArray[$tmp[0]]);
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :
+		(sizeof($tmp) > 0 && isset($projectArray[$tmp[0]]) ? $projectArray[$tmp[0]] : ""));
 }
 else
 {
