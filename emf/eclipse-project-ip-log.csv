@@ -1,7 +1,7 @@
 Section 1 (Committers),,,,
 
 dev.eclipse.org Login,,,,
-merks,,,,
+emerks,,,,
 fbudinsky,,,,
 davidms,,,,
 marcelop,,,,
@@ -14,11 +14,11 @@ cdamus,,,,
 Section 2 (Developers),,,,
 
 Component,Bug #,Contributor,Size,Committer
-org.eclipse.emf.ecore,122422,Didier Villevalois,small,merks
-org.eclipse.emf.common,130525,Ronald Steinhau,small,merks
-org.eclipse.emf.ecore.edit,130468,Aaron Digulla,small,merks
-org.eclipse.xsd,132360,Steve Sexton,small,merks
-org.eclipse.emf.ecore.xmi + org.eclipse.emf.test.xml,129874,Jesper S Mueller,300 lines,merks
+org.eclipse.emf.ecore,122422,Didier Villevalois,small,emerks
+org.eclipse.emf.common,130525,Ronald Steinhau,small,emerks
+org.eclipse.emf.ecore.edit,130468,Aaron Digulla,small,emerks
+org.eclipse.xsd,132360,Steve Sexton,small,emerks
+org.eclipse.emf.ecore.xmi + org.eclipse.emf.test.xml,129874,Jesper S Mueller,300 lines,emerks
 org.eclipse.emf.edit,131811,Peter Nehrer,small,davidms
 org.eclipse.emf.edit.ui,150500,Henrik Rentz-Reichert,small,davidms
 org.eclipse.emf.validation,165661,Radomil Dvorak,231 lines,cdamus
@@ -33,25 +33,26 @@ org.eclipse.emf.validation,177645,David Cummings,1327 lines,cdamus
 org.eclipse.emf.transaction,178793,David Cummings,small,cdamus
 org.eclipse.emf.validation,178840,David Cummings,small,cdamus
 org.eclipse.emf.codegen + org.eclipse.emf.codegen.ui,147594,Chris Aniszczyk,small,davidms
-org.eclipse.emf.codegen,149770,Eric Norman,small,merks
-org.eclipse.emf.edit + org.eclipse.emf.test.edit,161744,Ian Bull,317 lines,merks
-org.eclipse.emf.ecore.xmi,166967,Peter Nehrer,small,merks
-org.eclipse.emf.edit + org.eclipse.emf.ecore + org.eclipse.emf.ecore.xmi + org.eclipse.emf.codegen.ecore + org.eclipse.xsd + org.eclipse.emf.test.xml,166112,Peter Nehrer,1827,merks
-org.eclipse.emf.common.ui,165770,Hallvard Traetteberg,174,merks
+org.eclipse.emf.codegen,149770,Eric Norman,small,emerks
+org.eclipse.emf.edit + org.eclipse.emf.test.edit,161744,Ian Bull,317 lines,emerks
+org.eclipse.emf.ecore.xmi,166967,Peter Nehrer,small,emerks
+org.eclipse.emf.edit + org.eclipse.emf.ecore + org.eclipse.emf.ecore.xmi + org.eclipse.emf.codegen.ecore + org.eclipse.xsd + org.eclipse.emf.test.xml,166112,Peter Nehrer,1827,emerks
+org.eclipse.emf.common.ui,165770,Hallvard Traetteberg,174,emerks
 org.eclipse.emf.test.tools,170204,John Francis,small,marcelop
-org.eclipse.emf.ecore + org.eclipse.emf.test.core,170223,Boris Gruschko,small,merks
+org.eclipse.emf.ecore + org.eclipse.emf.test.core,170223,Boris Gruschko,small,emerks
 org.eclipse.emf.ecore,156783,John Didion,170 lines,marcelop
 org.eclipse.emf.codegen,179004,Paul Elder,small,marcelop
-org.eclipse.emf.codegen.ecore,136881,Patrick Sodre,small,merks
-org.eclipse.emf.ecore + org.eclipse.emf.edit,185971,Richard Backhouse,144,merks
+org.eclipse.emf.codegen.ecore,136881,Patrick Sodre,small,emerks
+org.eclipse.emf.ecore + org.eclipse.emf.edit,185971,Richard Backhouse,144,emerks
 org.eclipse.emf.query,196579,Kiril Mitov,small,cdamus
 org.eclipse.emf.transaction,207306,Geoff Martin,small,cdamus
 org.eclipse.emf.transaction,209491,Ed merks,small,cdamus
 org.eclipse.emf.query,211055,Ed Merks,small,cdamus
 org.eclipse.emf.transaction,163291,Ed Merks,small,cdamus
-org.eclipse.emf.codegen.ecore,101163,Jacek Pospychala,small,merks
-org.eclipse.emf.databinding + org.eclipse.emf.databinding.edit,210139,Boris Bokowski,200,merks
-org.eclipse.emf.databinding + org.eclipse.emf.databinding.edit,210139,Giulio Seregni,200,merks
+org.eclipse.emf.codegen.ecore,101163,Jacek Pospychala,small,emerks
+org.eclipse.emf.databinding + org.eclipse.emf.databinding.edit,210139,Boris Bokowski,200,emerks
+org.eclipse.emf.databinding + org.eclipse.emf.databinding.edit,210139,Giulio Seregni,200,emerks
+org.eclipse.emf.databinding + org.eclipse.emf.databinding.edit,215131,Trevor S. Kaufman,small,emerks
 
 Section 3 (Third Party Software),,,,
 
