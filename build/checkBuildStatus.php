@@ -64,37 +64,46 @@ if (sizeof($data)<4)
 	exit;
 }
 
-$dropsDir = "/home/www-data/build/" . $data["parent"] . $data["top"] . ($data["project"] ? "/" . $data["project"] : "") . "/downloads/drops/";
-$buildDir = $dropsDir . $data["version"] . "/" . $data["buildID"] . "/";
-if (is_readable($buildDir))
+$unknown=true;
+$dropsDirs = array(
+	"/home/www-data/build/" . $data["parent"] . $data["top"] . ($data["project"] ? "/" . $data["project"] : "") . "/downloads/drops/", # modeling/emf/query
+	"/home/www-data/build/" . $data["parent"] . $data["top"] . "/downloads/drops/", # gef
+	"/home/www-data/build/" . $data["top"] . "/downloads/drops/",
+	);
+foreach ($dropsDirs as $dropsDir)
 {
+	if (is_readable($dropsDir . $data["version"] . "/" . $data["buildID"]))
+	{
 
-	$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
-	#print "<pre>\n";print_r($extraTestsResults);print "</pre>\n";
-	$buildResults  = showBuildResults($dropsDir,
-		$data["version"] . "/" . $data["buildID"] . "/", $html);
-	if ($html)
-	{
-		print $buildResults[0];
-		print isset($extraTestsResults) && isset($extraTestsResults[0]) && sizeof($extraTestsResults[0]) > 0 ? implode(" | ", $extraTestsResults[0]) : "";
-		print "<br/>\n";
-		print '<a href="' . $buildResults[1] . '">Test Results</a>' . "<br/>\n";
-		print '<a href="' . $buildResults[2] . '">Build Log</a>' . "<br/>\n";
-	}
-	else
-	{
-		print "Status\t" . $buildResults[0];
-		print isset($extraTestsResults) && isset($extraTestsResults[0]) && isset($extraTestsResults[0][0]) ? $extraTestsResults[0][0] : "";
-		print "\n\n";
-		print "JUnit Results\t" . $buildResults[1] . "\n\n";
-		print isset($extraTestsResults) && isset($extraTestsResults[1]) && isset($extraTestsResults[1][0]) ? $extraTestsResults[1][0] : "";
-		print "\n";
-		print "Build Log\t" . $buildResults[2] . "\n\n";
+		$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
+		#print "<pre>\n";print_r($extraTestsResults);print "</pre>\n";
+		$buildResults  = showBuildResults($dropsDir,
+			$data["version"] . "/" . $data["buildID"] . "/", $html);
+		if ($html)
+		{
+			print $buildResults[0];
+			print isset($extraTestsResults) && isset($extraTestsResults[0]) && sizeof($extraTestsResults[0]) > 0 ? implode(" | ", $extraTestsResults[0]) : "";
+			print "<br/>\n";
+			print '<a href="' . $buildResults[1] . '">Test Results</a>' . "<br/>\n";
+			print '<a href="' . $buildResults[2] . '">Build Log</a>' . "<br/>\n";
+		}
+		else
+		{
+			print "Status\t" . $buildResults[0];
+			print isset($extraTestsResults) && isset($extraTestsResults[0]) && isset($extraTestsResults[0][0]) ? $extraTestsResults[0][0] : "";
+			print "\n\n";
+			print "JUnit Results\t" . $buildResults[1] . "\n\n";
+			print isset($extraTestsResults) && isset($extraTestsResults[1]) && isset($extraTestsResults[1][0]) ? $extraTestsResults[1][0] : "";
+			print "\n";
+			print "Build Log\t" . $buildResults[2] . "\n\n";
+		}
+		$unknown=false;
+		break;
 	}
 }
-else
+if ($unknown)
 {
-	print "Status\tUNKNOWN" . ($debug > 0 ? "\t(" . $buildDir . ")" : "") . "\n\n";
+	print "Status\tUNKNOWN" . ($debug > 0 ? "\t(" . $dropsDir . $data["version"] . "/" . $data["buildID"] . ")" : "") . "\n\n";
 }
 
 /**********************************************************************************************************************************/
