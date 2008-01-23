@@ -26,8 +26,19 @@ $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/include
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
 $data = loadHttpGetVars();
-$PR = isset($data["top"]) ?  "modeling/" . $data["top"] : "";
-$projct = isset($data["project"]) ?  $data["project"] : "";
+if (!isset($data["parent"]))
+{
+	$data["parent"] = "modeling/";
+}
+else if (isset($data["parent"]) && $data["parent"] == "NONE")
+{
+	$data["parent"] = "";
+}
+
+$data["project"] = isset($data["project"]) ?  $data["project"] : "";
+$projct = $data["project"];
+$PR = isset($data["top"]) ? $data["parent"] . $data["top"] : "";
+
 $html = isset($_GET["html"]);
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/buildServer-common.php");
@@ -35,27 +46,32 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-scripts.php");
 $hadLoadDirSimpleError = 1;
 
-$file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $data["project"] . ".php";
-if (file_exists($file))
+if (isset($data["project"]))
 {
-	include_once($file);
+	$file = $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $data["project"] . ".php";
+	if (file_exists($file))
+	{
+		include_once($file);
+	}
 }
 
 if ($debug<0) header($html ? "Content-Type: text/html\n\n" : "Content-Type: text/plain\n\n");
 if (sizeof($data)<4)
 {
-	echo "Must specify top project, sub project (component), version, and buildID:\n\n" .
-		"  " . $_SERVER['SCRIPT_NAME'] . "?top=emf&amp;project=query&amp;version=1.1.0&amp;buildID=R200706201159\n" .
-		"  " . $_SERVER['SCRIPT_NAME'] . "?top=emf&amp;project=query&amp;version=1.1.0&amp;buildID=R200706201159&amp;html\n";
+	echo "Must specify parent project, top project, sub project (component), version, and buildID:\n\n" .
+		"  " . $_SERVER['SCRIPT_NAME'] . "?parent=NONE&top=gef&project=&version=3.4.0&buildID=R200706201159\n" .
+		"  " . $_SERVER['SCRIPT_NAME'] . "?parent=modeling/&top=emf&project=query&version=1.1.0&buildID=R200706201159&html\n";
 	exit;
 }
 
-if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . "/"))
+$dropsDir = "/home/www-data/build/" . $data["parent"] . $data["top"] . ($data["project"] ? "/" . $data["project"] : "") . "/downloads/drops/";
+$buildDir = $dropsDir . $data["version"] . "/" . $data["buildID"] . "/";
+if (is_readable($buildDir))
 {
 
 	$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
 	#print "<pre>\n";print_r($extraTestsResults);print "</pre>\n";
-	$buildResults  = showBuildResults("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["project"] . "/downloads/drops/",
+	$buildResults  = showBuildResults($dropsDir,
 		$data["version"] . "/" . $data["buildID"] . "/", $html);
 	if ($html)
 	{
@@ -78,7 +94,7 @@ if (is_readable("/home/www-data/build/modeling/" . $data["top"] . "/" . $data["p
 }
 else
 {
-	print "Status\tUNKNOWN" . ($debug > 0 ? "\t(" . $data["top"] . "/" . $data["project"] . "/downloads/drops/" . $data["version"] . "/" . $data["buildID"] . ")" : "") . "\n\n";
+	print "Status\tUNKNOWN" . ($debug > 0 ? "\t(" . $buildDir . ")" : "") . "\n\n";
 }
 
 /**********************************************************************************************************************************/
@@ -89,6 +105,7 @@ function loadHttpGetVars()
 	$data = array();
 	$input_patterns = array(
 		/* regex => array(http get vars) */
+		"#(NONE|[a-z/]+)#" => array("parent"),
 		"#([a-z0-9]+)#" => array("top","project"),
 		"#([0-9\.]{5})#" => array("version"),
 		"#([NIMSR][0-9]{12})#" => array("buildID"),
@@ -103,7 +120,7 @@ function loadHttpGetVars()
 			{
 				print "<pre>     [$regex][$httpfieldname] Got \$param = $param     </pre>\n";
 			}
-			if ($param)
+			if ($param !== null)
 			{
 				if (preg_match($regex, $param, $matches))
 				{
