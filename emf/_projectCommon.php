@@ -76,7 +76,9 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
+$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 $Nav->addNavSeparator($projectName, "$rooturl/");
+
 foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
 	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);

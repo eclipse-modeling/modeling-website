@@ -70,18 +70,19 @@ $buildtypes = array(
 );
 
 $Nav->setLinkList(array());
+$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 $Nav->addNavSeparator($projectName, "$rooturl/");
 
 # after moving to modeling index.php format, use this
 /*foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2); 
+	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
 }*/
 
 # and remove this
 foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	$Nav->addCustomNav($z, "http://wiki.eclipse.org/M2M/" . strtoupper($projects[$z]), "_self", 2); 
+	$Nav->addCustomNav($z, "http://wiki.eclipse.org/M2M/" . strtoupper($projects[$z]), "_self", 2);
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
