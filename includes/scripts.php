@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.49 2008/01/25 19:39:32 nickb Exp $
+// $Id: scripts.php,v 1.50 2008/01/25 19:42:58 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -141,7 +141,7 @@ function getPWD($suf = "", $doDynCheck = true)
 	krsort($PWDs); reset($PWDs);
 	foreach ($PWDs as $i => $PWD)
 	{
-		debug("$i : $PWD", 9);
+		#debug("$i : $PWD", 9);
 		if (!PWD_check($PWD, $suf))
 		{
 			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");

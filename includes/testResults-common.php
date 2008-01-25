@@ -75,10 +75,10 @@ $catgs = array (
 );
 foreach ($catgs as $num => $dirBits)
 {
-	if ($debug > 9) {
+	/*if ($debug > 9) {
 		print "[$PWD, $dirBits[1], $dirBits[2]]<br/>\n";
 		print "[$linkPre, $buildDir, $dirBits[1]]<br/>\n";
-	}
+	}*/
 	if ($num === 0)
 	{
 		$files = loadDir($PWD . $dirBits[1], $dirBits[2]);
