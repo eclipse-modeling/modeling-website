@@ -11,7 +11,7 @@ if (is_array($projects))
 {
 	$projectArray= getProjectArray($projects, $extraprojects, $nodownloads, $PR);
 	$tmp= array_keys($projectArray);
-	$proj= "/" . (isset ($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : $projectArray[$tmp[0]]);
+	$proj= "/" . (isset ($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] : (isset($tmp[0]) && isset($projectArray[$tmp[0]]) ? $projectArray[$tmp[0]] : ""));
 }
 else
 {
@@ -27,11 +27,22 @@ if (!isset ($params))
 	);
 }
 
+$PWD = getPWD("downloads/drops"); // see scripts.php
+$isTools = isset($_GET["tools"]);
+$isTech = isset($_GET["tech"]);
+if (preg_match("#/(tools|technology)/#", $PWD, $m))
+{
+	$isTools = $m[1] == "tools";
+	$isTech = $m[1] == "technology";
+}
+
+$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
+
 /* check these files, %s replaced with param from above */
 if (!isset ($files))
 {
 	$files= array (
-		"build" => array ($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/downloads/drops/%sbuildlog.txt")
+		"build" => array ($_SERVER['DOCUMENT_ROOT'] . "/$PR2/${projct}/downloads/drops/%sbuildlog.txt")
 	);
 }
 
@@ -75,7 +86,7 @@ foreach (array_keys($params) as $z)
 			$args[]= "$z=" . $_GET[$z];
 			if (!is_file($f) || !is_readable($f))
 			{
-				
+
 				print "<b>Error:</b> " . (is_numeric($debug) && $debug > 0 ? $f : preg_replace("#.+/$PR/(.+)#", "$1", $f)) . " is not a file or is not readable.\n";
 				exit;
 			}
@@ -85,7 +96,7 @@ foreach (array_keys($params) as $z)
 
 $step= isset ($_GET["step"]) && is_numeric($_GET["step"]) ? $_GET["step"] : 50; // how many lines to display?
 $maxlines= exec("wc -l $f"); $maxlines= preg_replace("/[\t\ \n]*(\d+)[\t\ \n]+.+/", "$1", $maxlines);
-$offset= isset ($_GET["offset"]) && is_numeric($_GET["offset"]) ? $_GET["offset"] : (isset ($_GET["tail"]) ? $maxlines - $step : 0); 
+$offset= isset ($_GET["offset"]) && is_numeric($_GET["offset"]) ? $_GET["offset"] : (isset ($_GET["tail"]) ? $maxlines - $step : 0);
 
 if (isset ($f))
 {
@@ -135,7 +146,7 @@ print "</div>\n";
 $html= ob_get_contents();
 ob_end_clean();
 $pageTitle= "Eclipse Modeling - Log Viewer";
-$pageKeywords= ""; 
+$pageKeywords= "";
 $pageAuthor= "Neil Skrypuch, Nick Boldt";
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/log-viewer.css\"/>\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
