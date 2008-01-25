@@ -114,7 +114,7 @@ function loadHttpGetVars()
 	$data = array();
 	$input_patterns = array(
 		/* regex => array(http get vars) */
-		"#(NONE|[a-z/]+)#" => array("parent"),
+		"#(NONE|[a-z]+/)#" => array("parent"),
 		"#([a-z0-9]+)#" => array("top","project"),
 		"#([0-9\.]{5})#" => array("version"),
 		"#([NIMSR][0-9]{12})#" => array("buildID"),
