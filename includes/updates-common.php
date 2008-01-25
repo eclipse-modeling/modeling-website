@@ -6,14 +6,15 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubating = false)
+function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases" => "site.xml","I, M, and S Builds" => "site-interim.xml"))
 {
 	global $App, $Nav, $Menu, $theme, $PR;
-	$PRS= array (
+	$PRS = array (
 		$shortname => $PR,
-		
+
 	);
-	$PRS= array_merge($PRS, $extra_PRS);
+	$PRS = $replace ? $extra_PRS : array_merge($PRS, $extra_PRS);
+
 	ob_start();
 ?>
 	<div id="midcolumn">
@@ -29,7 +30,7 @@ function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubati
 		<div class="homeitem3col">
 			<h3>Using Update Manager</h3>
 			<p>To install these plugins, point your Eclipse Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. <a href="http://www.eclipse.org/downloads/download.php?file=/<?php print $PR; ?>/updates/site.xml&amp;format=xml">Mirrors</a> <a href="http://www.eclipse.org/downloads/download.php?file=/<?php print $PR; ?>/updates/site-interim.xml&amp;format=xml">available</a>.</p>
-		
+
 		<?php
 
 	if (function_exists("notes"))
@@ -37,7 +38,7 @@ function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubati
 		notes();
 	}
 ?>
-		
+
 		<ul>
 			<li>
 				Help
@@ -55,15 +56,20 @@ function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubati
 
 	foreach ($PRS as $label => $thisPR)
 	{
-?> 
+		print <<<EOHTML
 											<li>
 											Add Update Site...<br/>
-											* Name: <b><?php print $label; ?> Update Manager Site</b><br/>
-											* URL: <b><a href="http://download.eclipse.org/<?php print $thisPR; ?>/updates/site.xml" target="_um">http://download.eclipse.org/<?php print $thisPR; ?>/updates/site.xml</a></b> (Releases)<br/>
-											&#160;&#160;&#160;&#160;(or): <b><a href="http://download.eclipse.org/<?php print $thisPR; ?>/updates/site-interim.xml" target="_um">http://download.eclipse.org/<?php print $thisPR; ?>/updates/site-interim.xml</a></b> (I, M and S Builds)
-											</li>
-										<?php
-
+											* Name: <b>$label Update Manager Site</b><br/>
+EOHTML;
+		$cnt=0;
+		foreach ($siteXMLs as $type => $sitexml)
+		{
+			print !$cnt ? "* URL: " : "&#160;&#160;&#160;&#160;&#160;(or): ";
+			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/$sitexml</a></b> ($type)";
+			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
+			$cnt++;
+		}
+		print "</li>\n";
 	}
 ?>
 										</ul>
@@ -80,20 +86,20 @@ function update_manager($shortname, $longname, $extra_PRS= array (), $isIncubati
 	<?php
 
 	print "<div id=\"rightcolumn\">\n";
-	
+
 	if ($isIncubating)
 	{
 	print '
 		<div class="sideitem">
 		   <h6>Incubation</h6>
-		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
-		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
-		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" 
+		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
+		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img
+		        align="center" src="http://www.eclipse.org/images/egg-incubation.png"
 		        border="0" /></a></div>
 		</div>
-		'; 
+		';
 	}
-	
+
 	$extras= array (
 		"doBleedingEdge"
 	);
