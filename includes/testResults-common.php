@@ -15,10 +15,8 @@ else
 }
 
 $projct = preg_replace("#^/#", "", $proj);
-
 $projectName = explode("/",$PR); $projectName = sizeof($projectName)>1 ? strtoupper($projectName[1]) : strtoupper($projectName[0]);
-
-$PWD = getPWD("$projct/downloads/drops"); // see scripts.php
+$PWD = getPWD("downloads/drops"); // see scripts.php
 $isTools = isset($_GET["tools"]);
 $isTech = isset($_GET["tech"]);
 if (preg_match("#/(tools|technology)/#", $PWD, $m))
@@ -30,8 +28,7 @@ if (preg_match("#/(tools|technology)/#", $PWD, $m))
 
 $projectDownloadsPagePath = "/" . ($isTools ? "$PR" : ($isTech ? "$PR" : "$PR$proj")) . "/downloads";
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
-$buildDirPrefix = $App->getDownloadBasePath();
-$buildDir = ($isTools ? "/tools/$PR" : ($isTech ? "/technology/$PR" : "/$PR$proj")) . "/downloads/drops/" . $buildName;
+$buildDir = ($isTools ? "/tools/$PR" : ($isTech ? "/technology/$PR" : "/$PR$proj")) . "/downloads/drops/";
 $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
 $subprojName = array_flip($projects); $subprojName = isset($subprojName[$projct]) ? $subprojName[$projct] : "";
 $pageTitle = $projectName . ($subprojName && $projectName != $subprojName ? ' ' . $subprojName : '') . " Build " . $buildName . " - Test Results";
@@ -60,36 +57,37 @@ print '<div id="midcolumn">
 $catgs = array (
 	array (
 		"Console Logs",
-		"/testresults/consolelogs/",
+		"/$buildName/testresults/consolelogs/",
 		".txt"
 	),
 	array (
 		"JUnit Test Results",
-		"/testresults/xml/",
+		"/$buildName/testresults/xml/",
 		".xml",
 		"Errors &amp; Failures"
 	),
 	array (
 		"Compilation Errors",
-		"/compilelogs/plugins/",
+		"/$buildName/compilelogs/plugins/",
 		".log",
 		"Errors &amp; Warnings"
 	)
 );
 foreach ($catgs as $num => $dirBits)
 {
-	if ($debug > 0) {
-		print "<!-- $buildDir, $dirBits[1], $dirBits[2] -->\n";
+	if ($debug > 9) {
+		print "[$PWD, $dirBits[1], $dirBits[2]]<br/>\n";
+		print "[$linkPre, $buildDir, $dirBits[1]]<br/>\n";
 	}
 	if ($num === 0)
 	{
-		$files = loadDir($buildDirPrefix . $buildDir . $dirBits[1], $dirBits[2]);
+		$files = loadDir($PWD . $dirBits[1], $dirBits[2]);
 		$out = "";
 		if (sizeof($files) > 0)
 		{
 			foreach ($files as $file)
 			{
-				$out .= '<li><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' . str_replace("_consolelog.txt", "", $file) . '</a> (' . pretty_size(filesize($buildDirPrefix . $buildDir . $dirBits[1] . $file)). ')</li>' . "\n";
+				$out .= '<li><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' . str_replace("_consolelog.txt", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 
 			}
 		} else
@@ -103,15 +101,15 @@ foreach ($catgs as $num => $dirBits)
 	} else
 		if ($num === 1)
 		{
-			$files = loadDirChildren($buildDirPrefix . $buildDir . $dirBits[1], $dirBits[2]);
+			$files = loadDirChildren($PWD . $dirBits[1], $dirBits[2]);
 			$out = "";
 			$noProblems = true;
 			foreach ($files as $file)
 			{
-				$results = getTestResults($buildDirPrefix . $buildDir . $dirBits[1] . $file);
+				$results = getTestResults($PWD . $dirBits[1] . $file);
 				$noProblems = $noProblems && !$results;
 				$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir. preg_replace("#/xml/#", "/html/", $dirBits[1]) . preg_replace("#\.xml$#",".html", $file) . '">' .
-				preg_replace("/\.xml$/", "", $file) . '</a> (' . pretty_size(filesize($buildDirPrefix . $buildDir . $dirBits[1] . $file)). ')</li>' . "\n";
+				preg_replace("/\.xml$/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 			}
 			print '<li><div><b style="color:' . ($noProblems ? "green" : "red") . '">' . ($noProblems ? "0 " : "") . $dirBits[3] . '</b></div>' .
 			'<a href="javascript:toggle(\'e' . $num . '\')">' . $dirBits[0] . '</a>';
@@ -121,16 +119,16 @@ foreach ($catgs as $num => $dirBits)
 		} else
 			if ($num === 2)
 			{
-				$files = loadDirChildren($buildDirPrefix . $buildDir . $dirBits[1], $dirBits[2]);
+				$files = loadDirChildren($PWD . $dirBits[1], $dirBits[2]);
 				$out = "";
-				$summary = getCompileResultsSummary($buildDirPrefix . $buildDir . $dirBits[1] . "../summary.txt");
+				$summary = getCompileResultsSummary($PWD . $dirBits[1] . "../summary.txt");
 				$noProblems = !$summary;
 				foreach ($files as $file)
 				{
-					$results = getCompileResults($buildDirPrefix . $buildDir . $dirBits[1] . $file);
+					$results = getCompileResults($PWD . $dirBits[1] . $file);
 					$noProblems = $noProblems && !$results;
 					$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' .
-					preg_replace("/((\/@dot|.jar).bin.log|_\d+\.\d+\.\d+\.v\d+)/", "", $file) . '</a> (' . pretty_size(filesize($buildDirPrefix . $buildDir . $dirBits[1] . $file)). ')</li>' . "\n";
+					preg_replace("/((\/@dot|.jar).bin.log|_\d+\.\d+\.\d+\.v\d+)/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 				}
 				print '<li><div><b style="color:' . ($noProblems ? "green" : "red") . '">' . ($noProblems ? "0 " : "") . ($summary? $summary : $dirBits[3]) . '</b></div>' .
 				'<a href="javascript:toggle(\'e' . $num . '\')">' . $dirBits[0] . '</a>';
