@@ -28,21 +28,12 @@ if (!isset ($params))
 }
 
 $PWD = getPWD("downloads/drops"); // see scripts.php
-$isTools = isset($_GET["tools"]);
-$isTech = isset($_GET["tech"]);
-if (preg_match("#/(tools|technology)/#", $PWD, $m))
-{
-	$isTools = $m[1] == "tools";
-	$isTech = $m[1] == "technology";
-}
-
-$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
 
 /* check these files, %s replaced with param from above */
 if (!isset ($files))
 {
 	$files= array (
-		"build" => array ($_SERVER['DOCUMENT_ROOT'] . "/$PR2/${projct}/downloads/drops/%sbuildlog.txt")
+		"build" => array ($PWD . "/%sbuildlog.txt")
 	);
 }
 
