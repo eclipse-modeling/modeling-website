@@ -27,15 +27,11 @@ $dls = array(
 		)
 	),*/
 	"/atl" => array(
-		"ATL with UML2 Support" => array(
-			"SDK (Runtime, Source)" => "SDK-uml24atl",
-			"Runtime" => "runtime-uml24atl",
-			"Automated Tests" => "automated-tests"
-		),
 		"ATL" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
-			"Examples" => "examples"
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
 		)
 	),
 );
