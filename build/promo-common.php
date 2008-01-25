@@ -40,7 +40,6 @@ $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
 $trans = array_flip($projects);
 
-$PWD = getPWD("downloads/drops");
 $projctFromPath = getProjectFromPath($PR);
 if (is_array($projects))
 {
@@ -61,6 +60,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 }
 
 $componentName = isset($trans[$projct]) ? $trans[$projct] : $projct;
+$PWD = getPWD("$projct/downloads/drops");
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>Promote a Build: " . $componentName . "</h1>\n";

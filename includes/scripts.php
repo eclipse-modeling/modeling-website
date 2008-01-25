@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.51 2008/01/25 21:15:12 nickb Exp $
+// $Id: scripts.php,v 1.52 2008/01/25 22:14:42 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -52,18 +52,27 @@ function getPWD($suf = "", $doDynCheck = true)
 	if (PWD_check($PWD, $suf))
 	{
 		$servers = array(
-			"/build\.eclipse\.org/" => "/opt/public/modeling/build/$PR/$suf",
-			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build/$PR/$suf",
-			"/emft(?:\.eclipse\.org)?/" => "/home/www-data/build/$PR/$suf",
-			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org/$PR/$suf",
-			"/fullmoon\.torolab\.ibm\.com/" => "/home/www/$PR/$suf"
+			"/build\.eclipse\.org/" => "/opt/public/modeling/build",
+			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build",
+			"/emft(?:\.eclipse\.org)?/" => "/home/www-data/build",
+			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org",
+			"/fullmoon\.torolab\.ibm\.com/" => "/home/www"
 		);
 
 		foreach (array_keys($servers) as $z)
 		{
-			if (preg_match($z, $_SERVER["HTTP_HOST"]))
+			$PWD = $servers[$z] . "/$PR/$suf";
+			if (preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
-				$PWD = $servers[$z];
+		   		$PWDs[] = $PWD;
+				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
+			}
+		}
+		foreach (array_keys($servers) as $z)
+		{
+			$PWD = $servers[$z] . "/$suf";
+			if (preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			{
 		   		$PWDs[] = $PWD;
 				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
 			}
@@ -98,6 +107,10 @@ function getPWD($suf = "", $doDynCheck = true)
 
 					"/home/www/tools/$PR/$suf",
 					"/home/www/technology/$PR/$suf",
+					"/home/www/eclipse/$PR/$suf",
+
+					"/home/www/tools/$suf",
+					"/home/www/technology/$suf",
 					"/home/www/eclipse/$PR/$suf",
 				)
 			),
@@ -141,7 +154,7 @@ function getPWD($suf = "", $doDynCheck = true)
 	krsort($PWDs); reset($PWDs);
 	foreach ($PWDs as $i => $PWD)
 	{
-		#debug("$i : $PWD", 9);
+		debug(" &#160; &#160; $i : $PWD", 9);
 		if (!PWD_check($PWD, $suf))
 		{
 			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
