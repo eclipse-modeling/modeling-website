@@ -415,7 +415,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 	if (!$link) // return a string with icon, result, and counts (if applic)
 	{
-		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR2/build/log-viewer.php?" . ($isTools ? "tools&" : ($isTech ? "technology&" : "")) . "project=$projct&amp;build=$path" :
+		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?" . ($isTools ? "tools&" : ($isTech ? "technology&" : "")) . "project=$projct&amp;build=$path" :
 				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
 	}
 
