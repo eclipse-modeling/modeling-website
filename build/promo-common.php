@@ -40,6 +40,7 @@ $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
 $trans = array_flip($projects);
 
+$PWD = getPWD("downloads/drops");
 $projctFromPath = getProjectFromPath($PR);
 if (is_array($projects))
 {
@@ -59,7 +60,7 @@ if ($projct != $projctFromPath && is_dir($_SERVER['DOCUMENT_ROOT'] . "/" . $PR .
 	header("Location: /" . $PR . $proj . "/build/promo.php");
 }
 
-$componentName =  $trans[$projct];
+$componentName = isset($trans[$projct]) ? $trans[$projct] : $projct;
 
 print "<div id=\"midcolumn\">\n";
 print "<h1>Promote a Build: " . $componentName . "</h1>\n";
@@ -104,7 +105,7 @@ foreach ($options["BranchAndJDK"] as $br)
 	$bits = explode("=", $br);
 	$BR = $bits[0];
 	// define which build types to show:
-	$dir = "$workDir$PR/$projct/downloads/drops/$BR";
+	$dir = "$PWD/$BR";
 	if (is_dir($dir))
 	{
 		$buildIDs = loadDirSimple($dir, "([MISR]+\d{12})", "d"); // include N builds
