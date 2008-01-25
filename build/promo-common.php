@@ -379,6 +379,7 @@ else
 	$cmd = ('/bin/bash -c "exec /usr/bin/nohup /usr/bin/setsid ssh ' . $options["Users"][0] . '@' . getServerName() .
 	' \"cd ' . $workDir . ($projct == "emf" ? 'emf' : 'modeling') . '/scripts; ./promoteToEclipse.sh' . #TODO: remove this hack once EMF runs as a modeling build
 
+	(isset($options["ProjRelengRoot"]) && $options["ProjRelengRoot"] != "" ? ' -projRelengRoot \'' . $options["ProjRelengRoot"] . '\'': '').
 	($_POST["build_Use_Properties_File"] == "CVS" ?
 		" -c $relengProject/promoteToEclipse.$projct.properties,$cvsbranch" : ' -sub ' . $projct) .
 
@@ -395,7 +396,6 @@ else
 	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	(isset($_POST["build_Email"]) && $_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
-	(isset($options["ProjRelengRoot"]) && $options["ProjRelengRoot"] != "" ? ' -projRelengRoot \'' . $options["ProjRelengRoot"] . '\'': '').
 
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
