@@ -395,6 +395,8 @@ else
 	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	(isset($_POST["build_Email"]) && $_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
+	(isset($options["ProjRelengRoot"]) && $options["ProjRelengRoot"] != "" ? ' -projRelengRoot \'' . $options["ProjRelengRoot"] . '\'': '').
+
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
 
