@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.47 2008/01/23 19:21:05 nickb Exp $
+// $Id: scripts.php,v 1.48 2008/01/25 17:06:36 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -20,22 +20,33 @@ function PWD_check($PWD, $suf)
 
 function getPWD($suf = "", $doDynCheck = true)
 {
-	global $PR, $App;
+	global $PR, $App, $isBuildServer;
 	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
+	$PWDs = array();
 
 	if ($doDynCheck)
 	{
 		//dynamic assignments
    		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
+   		$PWDs[] = $PWD;
    		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
 
 		//second dynamic assignment
 		if (PWD_check($PWD, $suf))
 		{
 			$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
+	   		$PWDs[] = $PWD;
 			PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
 		}
 	}
+
+	if (!PWD_check($PWD, $suf) && !$isBuildServer)
+	{
+		debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+		return $PWD;
+	}
+
+	$PWD="";
 
 	//static assignments
 	if (PWD_check($PWD, $suf))
@@ -53,10 +64,12 @@ function getPWD($suf = "", $doDynCheck = true)
 			if (preg_match($z, $_SERVER["HTTP_HOST"]))
 			{
 				$PWD = $servers[$z];
+		   		$PWDs[] = $PWD;
 				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
 			}
 		}
 	}
+	$PWD="";
 
 	//try a default guess: /home/www, two options
 	if (PWD_check($PWD, $suf))
@@ -116,20 +129,27 @@ function getPWD($suf = "", $doDynCheck = true)
 					if (!PWD_check($PWD, $suf))
 					{
 						PWD_debug($PWD, $suf, "<!-- Found: defaults[${y}][$z] -->");
+						$PWDs[] = $PWD;
 						break 2;
 					}
 				}
 			}
 		}
 	}
+	$PWD="";
 
-	if ($PWD == "" || PWD_check($PWD, $suf))
+	krsort($PWDs); reset($PWDs);
+	foreach ($PWDs as $PWD)
 	{
-		print "<!-- PWD not found! -->";
+		if (!PWD_check($PWD, $suf))
+		{
+			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+			return $PWD;
+		}
 	}
 
+	print "<!-- PWD not found! -->";
 	debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
-
 	return $PWD;
 }
 
