@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.55 2008/01/31 22:55:32 nickb Exp $
+// $Id: scripts.php,v 1.56 2008/01/31 22:57:42 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -87,7 +87,7 @@ function getPWD($suf = "", $doDynCheck = true)
 			4 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/",
 				"tries" => array(
-					"/home/data/httpd/download.eclipse.org",
+					"/home/data/httpd/download.eclipse.org/$suf",
 					"/home/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/data/httpd/download.eclipse.org/tools/$PR/$suf",
 					"/home/data/httpd/download.eclipse.org/technology/$PR/$suf",
@@ -102,7 +102,7 @@ function getPWD($suf = "", $doDynCheck = true)
 				"tries" => array(
 				    $App->getDownloadBasePath() . "/$PR/" . $suf,
 
-					"/home/local/data/httpd/download.eclipse.org",
+					"/home/local/data/httpd/download.eclipse.org/$suf",
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf",
 					"/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf",
