@@ -300,7 +300,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td colspan="1"><input name="build_Email" size="20" maxlength="80"/></td>
 				<td width="300"><small><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></small>
 					<div id="divDetail_email" name="divDetail_email" style="display:none;border:0">
-					<small>Add your email (or comma-separated emails) to be notified when done. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=210396">bug 210396</a>.
+					<small>Add your email (or comma-separated emails) to be notified when done.
 					</small>
 					</div>
 				</td>
