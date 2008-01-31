@@ -72,7 +72,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 <?php
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
-	print "<p>To run a build, please complete the following form and click the Build button.</p>";
+	print "<p>To run a build, please complete the following form and click the Build button. For help, click the <a href=\"#step3\">[+]</a> links below.</p>";
 }
 else
 {
@@ -216,7 +216,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr><td colspan="6">&#160;</td></tr>
 
 			<tr>
-				<td rowspan="1" valign="top"><img src="/modeling/images/numbers/3.gif" /></td>
+				<td rowspan="1" valign="top"><a name="step3"></a><img src="/modeling/images/numbers/3.gif" /></td>
 				<td rowspan="1">&#160;</td>
 				<td colspan=1><a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">Basebuilder</a> Branch:</td>
 				<td>&#160;</td>
