@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.52 2008/01/25 22:14:42 nickb Exp $
+// $Id: scripts.php,v 1.53 2008/01/31 22:50:57 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -90,10 +90,12 @@ function getPWD($suf = "", $doDynCheck = true)
 					"/home/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/data/httpd/download.eclipse.org/tools/$PR/$suf",
 					"/home/data/httpd/download.eclipse.org/technology/$PR/$suf",
+					"/home/data/httpd/download.eclipse.org",
 
 					"/home/www/tools/$PR/$suf",
 					"/home/www/technology/$PR/$suf",
 					"/home/www/eclipse/$PR/$suf",
+					"/home/www/eclipse",
 				)
 			),
 			5 => array(
@@ -104,6 +106,7 @@ function getPWD($suf = "", $doDynCheck = true)
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
 					"/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf",
 					"/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf",
+					"/home/local/data/httpd/download.eclipse.org",
 
 					"/home/www/tools/$PR/$suf",
 					"/home/www/technology/$PR/$suf",
@@ -112,21 +115,25 @@ function getPWD($suf = "", $doDynCheck = true)
 					"/home/www/tools/$suf",
 					"/home/www/technology/$suf",
 					"/home/www/eclipse/$PR/$suf",
+					"/home/www",
 				)
 			),
 			6 => array(
 				"checkdir" => "/var/www/",
 				"tries" => array(
-					"/var/www/$PR/$suf",
-					"/var/www/html/$PR/$suf",
+					"/var/www/html/tools/$PR/$suf",
+					"/var/www/html/technology/$PR/$suf",
+					"/var/www/html/eclipse/$PR/$suf",
 
 					"/var/www/tools/$PR/$suf",
 					"/var/www/technology/$PR/$suf",
 					"/var/www/eclipse/$PR/$suf",
 
-					"/var/www/html/tools/$PR/$suf",
-					"/var/www/html/technology/$PR/$suf",
-					"/var/www/html/eclipse/$PR/$suf",
+					"/var/www/html/$PR/$suf",
+					"/var/www/$PR/$suf",
+
+					"/var/www/html",
+					"/var/www",
 				)
 			)
 		);
