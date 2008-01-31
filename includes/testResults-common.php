@@ -16,7 +16,7 @@ else
 
 $projct = preg_replace("#^/#", "", $proj);
 $projectName = explode("/",$PR); $projectName = sizeof($projectName)>1 ? strtoupper($projectName[1]) : strtoupper($projectName[0]);
-$PWD = getPWD("downloads/drops"); // see scripts.php
+$PWD = getPWD("$PR$proj/downloads/drops"); // see scripts.php
 $isTools = isset($_GET["tools"]);
 $isTech = isset($_GET["tech"]);
 if (preg_match("#/(tools|technology)/#", $PWD, $m))
@@ -24,9 +24,9 @@ if (preg_match("#/(tools|technology)/#", $PWD, $m))
 	$isTools = $m[1] == "tools";
 	$isTech = $m[1] == "technology";
 }
-#if ($debug > 0) print "$PR, $proj, $isTools, $isTech<br/>";
+if ($debug > 1) print "$PR, $proj, $isTools, $isTech<br/>";
 
-$projectDownloadsPagePath = "/" . ($isTools ? "$PR" : ($isTech ? "$PR" : "$PR$proj")) . "/downloads";
+$projectDownloadsPagePath = "/" . $PR . "/downloads";
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
 $buildDir = ($isTools ? "/tools/$PR" : ($isTech ? "/technology/$PR" : "/$PR$proj")) . "/downloads/drops/";
 $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
@@ -75,10 +75,10 @@ $catgs = array (
 );
 foreach ($catgs as $num => $dirBits)
 {
-	/*if ($debug > 9) {
+	if ($debug > 9) {
 		print "[$PWD, $dirBits[1], $dirBits[2]]<br/>\n";
 		print "[$linkPre, $buildDir, $dirBits[1]]<br/>\n";
-	}*/
+	}
 	if ($num === 0)
 	{
 		$files = loadDir($PWD . $dirBits[1], $dirBits[2]);
