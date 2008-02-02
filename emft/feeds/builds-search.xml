@@ -4,11 +4,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>search Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-search.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-02-01T20:28:57Z</updated>
+  <updated>2008-02-02T00:02:21Z</updated>
   <author>
     <name>search Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-search.xml</id>
+  <entry>
+    <title>[announce] search I200802011810 (0.7.0.I200802011810) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=search&amp;showAll=1&amp;hlbuild=I200802011810#I200802011810"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=search&amp;showAll=1&amp;hlbuild=I200802011810#I200802011810</id>
+    <updated>2008-02-02T00:02:21Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200802011810" href="http://www.eclipse.org/modeling/emft/downloads/?project=search&amp;showAll=1&amp;hlbuild=I200802011810#I200802011810" type="I" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/search/downloads/drops/0.7.0/I200802011810/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=search</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=search&amp;version=I200802011810
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-search-SDK-incubation-I200802011810.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/search/downloads/drops/0.7.0/I200802011810/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org//tools/gef/downloads/drops/3.4.0/I200801021512/GEF-ALL-I200801021512.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080129-1400/eclipse-SDK-I20080129-1400-macosx-carbon.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/I200801292000/emf-sdo-xsd-SDK-I200801292000.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/S200712171224/emf-query-SDK-1.2.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.2.0/S200712171243/emf-transaction-SDK-1.2.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/validation/downloads/drops/1.2.0/S200712171225/emf-validation-SDK-1.2.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/gmf/downloads/drops/I-I20080114-200801141111/GMF-sdk-I20080114.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/I200801162020/mdt-ocl-SDK-I200801162020.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/I200801292200/mdt-uml2-SDK-I200801292200.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2tools/downloads/drops/0.8.0/S200801081543/mdt-uml2tools-SDK-incubation-M4.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/I20080129214859/orbit-I20080129214859.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/ecoretools/downloads/drops/0.8.0/N200801300951/emft-ecoretools-SDK-incubation-N200801300951.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] search I200802011433 (0.7.0.I200802011433) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=search&amp;showAll=1&amp;hlbuild=I200802011433#I200802011433"/>
