@@ -169,7 +169,7 @@ function options($args, $f)
 			print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;</a>";
 		}
 	print "<a href=\"?project=$projct&amp;" . join("&amp;", $args) . "&amp;offset=" . ($maxlines - $step) . "&amp;step=$step\">" . ($maxlines - $step) . " to " . ($maxlines) . " &gt;&gt;</a>";
-	print "<a href=\"" . preg_replace("#^" . $_SERVER['DOCUMENT_ROOT'] . "#", "", $f) . "\">unformatted log (" . trim(pretty_size(filesize("$f"))) . ")</a>";
+	print "<a href=\"" . preg_replace("#^" . $_SERVER['DOCUMENT_ROOT'] . "|/home/www-data/build#", "", $f) . "\">unformatted log (" . trim(pretty_size(filesize("$f"))) . ")</a>";
 	print "</div>\n";
 }
 function pretty_size($bytes)
