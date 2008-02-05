@@ -30,7 +30,7 @@ $dls = array(
 	),*/
 	"/jet" => array(
 		"JET" => array(
-			"SDK (Runtime, Source)" => "SDK",
+			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Editor" => "editor",
 			"Examples" => "examples",
