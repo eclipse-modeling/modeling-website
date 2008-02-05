@@ -27,7 +27,7 @@ if (!isset ($params))
 	);
 }
 
-$PWD = getPWD("downloads/drops"); // see scripts.php
+$PWD = getPWD("$PR$proj/downloads/drops"); // see scripts.php
 
 /* check these files, %s replaced with param from above */
 if (!isset ($files))
