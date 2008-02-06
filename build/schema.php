@@ -9,7 +9,7 @@ internalUseOnly();
 
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-$_query0 = "SHOW TABLES";
+$query = "SHOW TABLES";
 
 $tables = array();
 $pageTitle = "Search CVS - Database Schema";
@@ -20,7 +20,7 @@ print "<h1>$pageTitle</h1>";
 
 print "<div class=\"homeitem3col\">\n";
 print "<h3>Tables</h3>\n";
-$result = mysql_query($_query0,$_dbh);
+$result = wmysql_query($query);
 if (!$result)
 {
   	print "<p><ul><li><i>MySQL Error: ".mysql_error()."</i></li></ul></p>\n";
@@ -43,10 +43,10 @@ $desc_cols = array("Field", "Type", "Null", "Key", "Default", "Extra");
 
 foreach ($tables as $tablename)
 {
-	$_query1 = "DESCRIBE $tablename";
+	$query = "DESCRIBE $tablename";
 	print "<div class=\"homeitem3col\">\n";
 	print "<h3><a name=\"$tablename\"></a>" . ucfirst($tablename) . " Table</h3>\n";
-	$result = mysql_query($_query1,$_dbh);
+	$result = mysql_query($query);
 	if (!$result)
 	{
 	  	print "<p><ul><li><i>MySQL Error: ".mysql_error()."</i></li></ul></p>\n";
