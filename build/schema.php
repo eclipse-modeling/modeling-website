@@ -21,7 +21,7 @@ print "<div id=\"midcolumn\">\n";
 print "<h1>$pageTitle</h1>";
 print '<p>This database includes tables for <a href="http://wiki.eclipse.org/Search_CVS">Search CVS</a>,' .
 '<a href="http://wiki.eclipse.org/Search_CVS%2C_Release_Notes%2C_Build_News">Release Notes & Build News</a>,' .
-'<a href="http://www.eclipse.org/modeling/emf/downloads/stats.php">Download Stats</a>, and <a href="http://www.eclipse.org/modeling/team/">Meet The Modeling Team</a>.";
+'<a href="http://www.eclipse.org/modeling/emf/downloads/stats.php">Download Stats</a>, and <a href="http://www.eclipse.org/modeling/team/">Meet The Modeling Team</a>.</p>'."\n";
 
 $nav = "";
 $nav .=  "<div class=\"sideitem\">\n";
