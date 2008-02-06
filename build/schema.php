@@ -14,6 +14,8 @@ $query = "SHOW TABLES";
 $tables = array();
 $pageTitle = "Search CVS - Database Schema";
 
+ob_start();
+
 print "<div id=\"midcolumn\">\n";
 
 print "<h1>$pageTitle</h1>";
@@ -92,5 +94,6 @@ ob_end_clean();
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
