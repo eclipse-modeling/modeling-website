@@ -20,8 +20,9 @@ print "<div id=\"midcolumn\">\n";
 
 print "<h1>$pageTitle</h1>";
 
-print "<div class=\"homeitem3col\">\n";
-print "<h3>Tables</h3>\n";
+$nav = "";
+$nav .=  "<div class=\"sideitem\">\n";
+$nav .=  "<h6>Tables</h6>\n";
 $result = wmysql_query($query);
 if (!$result)
 {
@@ -29,17 +30,16 @@ if (!$result)
 }
 else
 {
-	print "<p><ul>\n";
+	$nav .= "<p><ul>\n";
   	while($row = mysql_fetch_row($result))
   	{
   		$tables[] = $row[0];
-    	print "<li><a href=\"#" . $row[0] . "\">" . ucfirst($row[0]) . "</a></li>\n";
+    	$nav .= "<li><a href=\"#" . $row[0] . "\">" . ucfirst($row[0]) . "</a></li>\n";
   	}
-	print "</ul></p>\n";
+	$nav .=  "</ul></p>\n";
 }
 
-print "</div>\n";
-
+$nav .= "</div>\n";
 
 $desc_cols = array("Field", "Type", "Null", "Key", "Default", "Extra");
 
@@ -78,6 +78,11 @@ foreach ($tables as $tablename)
 print "</div>\n"; // midcolumn
 
 print "<div id=\"rightcolumn\">\n";
+
+if (sizeof($tables) > 0 && $nav)
+{
+	print $nav;
+}
 
 print "<div class=\"sideitem\">\n";
 print "<h6>About</h6>\n";
