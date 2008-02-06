@@ -126,7 +126,29 @@
 	<!-- MINT 0.7.0 I200802060113 -->
 	
 	<!-- COMPARE 0.8.0 I200802061102 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200802061102" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200802061102">
+	
+	<!-- ECORETOOLS 0.8.0 I200802061231 (Incubation) -->
+	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231">
+		<description>
+EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200802061231" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200802061231.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.8.0.v200802061231" url="features/org.eclipse.emf.ecoretools.sdk_0.8.0.v200802061231.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.source" version="0.8.0.v200802061231" url="features/org.eclipse.emf.ecoretools.source_0.8.0.v200802061231.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200802061231" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.ecoretools_0.8.0.v200802061231.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200802061231" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200802061231.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200802061231"/>
+	</feature>
+<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200802061102" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200802061102">
 		<description>
 EMFT COMPARE SDK (Incubation) 0.8.0 I200802061102: contains runtime, source, and documentation features.
 		</description>
