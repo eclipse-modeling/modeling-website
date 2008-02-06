@@ -66,7 +66,7 @@ foreach ($tables as $tablename)
 			print "<tr>\n";
 	  		foreach ($desc_cols as $col)
 	  		{
-    				print "<td>" . $row[$col] . "</td>\n";
+    				print "<td>" . str_replace(",", ", ", $row[$col]) . "</td>\n";
 	  		}
 			print "</tr>\n";
 	  	}
