@@ -691,31 +691,22 @@ function toPlainTextSummaries($summary)
 
 	foreach ($patterns as $pattern)
 	{
+    	$set = null;
+		$out = array();
+		$outFail = array();
 		preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
 		preg_match_all($failedPattern, $summary, $outFail, PREG_SET_ORDER);
 		/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
 	       [2] => bvt
 	       [4] => OK
 	    */
-	    if (sizeof($out) > 0)
-	    {
-		    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
-	    	foreach ($out as $set)
-	    	{
-	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
-	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\n\t\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
-	    	}
-	    }
-	    else if (sizeof($outFail) > 0)
-	    {
-		    if ($debug > 0) { print "\n-------3-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
-	    	foreach ($outFail as $set)
-	    	{
-	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
-	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\n\t\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
-	    	}
-	    }
-
+    	$sets = sizeof($out) > 0 ? $out : $outFail;
+	    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($sets); print "</pre><br/>\n"; }
+    	foreach ($sets as $set)
+    	{
+    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
+    		$textSummary .= strtoupper($set[2]) . " Test: " . $set[3] . "\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
+    	}
 	}
 
 	return array($miniSummary,$textSummary);
