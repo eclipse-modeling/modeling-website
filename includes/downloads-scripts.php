@@ -689,6 +689,7 @@ function toPlainTextSummaries($summary)
 		"#<a href=\"([^\"]+/modeling/emf/(tests)/[^\"]+)\"><img src=\"[^\"]+/images/[^\"]+.gif\" alt=\"([^\"]+)\"\/></a>#"
 	;
 
+	$foundURLs = array();
 	foreach ($patterns as $pattern)
 	{
     	$set = null;
@@ -704,8 +705,12 @@ function toPlainTextSummaries($summary)
 	    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($sets); print "</pre><br/>\n"; }
     	foreach ($sets as $set)
     	{
-    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
-    		$textSummary .= strtoupper($set[2]) . " Test: " . $set[3] . "\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
+    		if (!in_array($set[1], $foundURLs)) {
+    			$foundURLs[] = $set[1];
+    			$url = str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]);
+	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
+	    		$textSummary .= strtoupper($set[2]) . " Test: " . $set[3] . "\t" . $url . "\n";
+    		}
     	}
 	}
 
