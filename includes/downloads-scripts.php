@@ -670,9 +670,9 @@ function toPlainTextSummaries($summary)
 	    if ($debug > 0) { print "\n-------1-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
     	foreach ($out as $set)
     	{
+    		$url = "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/" . $projct . "/" . $set[1] . "s/" . $set[2] . "testlog.txt";
     		$miniSummary .= " [" . strtoupper(str_replace("test", "", $set[1])) . ": " . $set[4] . "]";
-    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . "\n\t\t" .
-				"http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/" . $projct . "/" . $set[1] . "s/" . $set[2] . "testlog.txt\n";
+    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . "\t" . $url . "\n";
     	}
     }
 
@@ -709,7 +709,7 @@ function toPlainTextSummaries($summary)
     			$foundURLs[] = $set[1];
     			$url = str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]);
 	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
-	    		$textSummary .= strtoupper($set[2]) . " Test: " . $set[3] . "\t" . $url . "\n";
+	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\t" . $url . "\n";
     		}
     	}
 	}
