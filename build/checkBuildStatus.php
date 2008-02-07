@@ -75,6 +75,7 @@ if (sizeof($data)<4)
 
 $unknown=true;
 $dropsDir = getPWD($data["project"] . "/" . "downloads/drops/", false, $debug > 0);
+$buildDetails = "Build Details\t" . "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/downloads/?project=$projct&sortBy=date&hlbuild=" . $data["buildID"] . "#" . $data["buildID"] . "\n\n";
 if (is_readable($dropsDir . $data["version"] . "/" . $data["buildID"]))
 {
 	$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
@@ -96,12 +97,14 @@ if (is_readable($dropsDir . $data["version"] . "/" . $data["buildID"]))
 		print "JUnit Results\t" . $buildResults[1] . "\n\n";
 		print isset($extraTestsResults) && isset($extraTestsResults[1]) && isset($extraTestsResults[1][0]) && $extraTestsResults[1][0] ? $extraTestsResults[1][0] . "\n" : "";
 		print "Build Log\t" . $buildResults[2] . "\n\n";
+		print $buildDetails;
 	}
 	$unknown=false;
 }
 if ($unknown)
 {
 	print "Status\tUNKNOWN" . ($debug > 0 ? "\t(" . $dropsDir . $data["version"] . "/" . $data["buildID"] . ")" : "") . "\n\n";
+	print $buildDetails;
 }
 
 /**********************************************************************************************************************************/
