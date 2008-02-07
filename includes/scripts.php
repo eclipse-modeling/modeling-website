@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.57 2008/02/07 20:38:51 nickb Exp $
+// $Id: scripts.php,v 1.58 2008/02/07 22:18:45 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -160,7 +160,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 		}
 	}
 
-	print "<!-- PWD not found! -->";
+	debug("<!-- PWD not found! -->");
 	debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
 	return $PWD;
 }
