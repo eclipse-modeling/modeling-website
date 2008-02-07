@@ -16,7 +16,8 @@ else
 
 $projct = preg_replace("#^/#", "", $proj);
 $projectName = explode("/",$PR); $projectName = sizeof($projectName)>1 ? strtoupper($projectName[1]) : strtoupper($projectName[0]);
-$PWD = getPWD("$PR$proj/downloads/drops"); // see scripts.php
+$PWD = getPWD(($PR == $projct ? $projct : "$PR/$projct") . "/downloads/drops"); // see scripts.php
+
 $isTools = isset($_GET["tools"]);
 $isTech = isset($_GET["tech"]);
 if (preg_match("#/(tools|technology)/#", $PWD, $m))

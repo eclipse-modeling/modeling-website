@@ -651,7 +651,7 @@ function getExtraTestsResults($branch, $ID, $styled=1)
 
 function toPlainTextSummaries($summary)
 {
-	global $debug;
+	global $debug, $PR, $projct;
 	if ($debug > 0) print htmlspecialchars($summary)."<br/>";
 
 	$miniSummary  = "";
@@ -671,26 +671,30 @@ function toPlainTextSummaries($summary)
     	foreach ($out as $set)
     	{
     		$miniSummary .= " [" . strtoupper(str_replace("test", "", $set[1])) . ": " . $set[4] . "]";
-    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . " (" . str_replace("../../..", "", $set[2]) . "testlog.txt)\n";
+    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . "\n\t\t" .
+				"http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/" . $projct . "/" . $set[1] . "s/" . $set[2] . "testlog.txt\n";
     	}
     }
 
 	$patterns = array(
 		// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/svt.html"><img src="/modeling/images/check.gif" alt="OK"/></a>
-		"#<a href=\"([^\"]+/results/([^\"]+).html)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#",
-
-		// <a href="../../../modeling/emf/tests/2.4.0/N200712241351/200712241410/testlog.txt"><img src="/modeling/images/not.gif" alt="FAILED"/></a>
-		"#<a href=\"([^\"]+/modeling/emf/(tests)/[^\"]+)\"><img src=\"[^\"]+/images/([^\"]+).gif\" alt=\"([^\"]+)\"\/></a>#",
+		"#<a href=\"([^\"]+/results/([^\"]+).html)\"><img src=\"[^\"]+/images/[^\"]+.gif\" alt=\"([^\"]+)\"\/></a>#",
 
 		// <a href="../../../modeling/emf/tests/2.2.4/R200710030400/200710030432/results/svt.html" class="fail">1 F</a>
 		"#<a href=\"([^\"]+/results/([^\"]+).html)\" class=\"[^\"]+\">([^\<]+)</a>#",
 	);
+
+	$failedPattern =
+	 	// <a href="../../../modeling/emf/tests/2.4.0/N200712241351/200712241410/testlog.txt"><img src="/modeling/images/not.gif" alt="FAILED"/></a>
+		"#<a href=\"([^\"]+/modeling/emf/(tests)/[^\"]+)\"><img src=\"[^\"]+/images/[^\"]+.gif\" alt=\"([^\"]+)\"\/></a>#"
+	;
+
 	foreach ($patterns as $pattern)
 	{
 		preg_match_all($pattern, $summary, $out, PREG_SET_ORDER);
+		preg_match_all($failedPattern, $summary, $outFail, PREG_SET_ORDER);
 		/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
 	       [2] => bvt
-	       [3] => check
 	       [4] => OK
 	    */
 	    if (sizeof($out) > 0)
@@ -698,10 +702,20 @@ function toPlainTextSummaries($summary)
 		    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
 	    	foreach ($out as $set)
 	    	{
-	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[4] . "]";
-	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[4] . " (" . str_replace("../../../modeling/emf/tests/", "", $set[1]) . ")\n";
+	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
+	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\n\t\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
 	    	}
 	    }
+	    else if (sizeof($outFail) > 0)
+	    {
+		    if ($debug > 0) { print "\n-------3-------\n<br/><pre>"; print_r($out); print "</pre><br/>\n"; }
+	    	foreach ($outFail as $set)
+	    	{
+	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
+	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\n\t\t" . str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]) . "\n";
+	    	}
+	    }
+
 	}
 
 	return array($miniSummary,$textSummary);

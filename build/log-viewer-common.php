@@ -27,7 +27,7 @@ if (!isset ($params))
 	);
 }
 
-$PWD = getPWD("$PR$proj/downloads/drops"); // see scripts.php
+$PWD = getPWD(($PR == $projct ? $projct : "$PR/$projct") . "/downloads/drops"); // see scripts.php
 
 /* check these files, %s replaced with param from above */
 if (!isset ($files))
@@ -66,14 +66,14 @@ $filter= array (
 	"/^\[CVS .+\] U.+$/" => "",
 	"/^s+\n$/" => ""
 );
-
+$f = null;
 foreach (array_keys($params) as $z)
 {
 	if (isset ($_GET[$z]) && preg_match($params[$z], $_GET[$z]))
 	{
 		foreach ($files[$z] as $y)
 		{
-			$f= sprintf($y, $_GET[$z]);
+			$f = sprintf($y, $_GET[$z]);
 			$args[]= "$z=" . $_GET[$z];
 			if (!is_file($f) || !is_readable($f))
 			{
@@ -85,12 +85,11 @@ foreach (array_keys($params) as $z)
 	}
 }
 
-$step= isset ($_GET["step"]) && is_numeric($_GET["step"]) ? $_GET["step"] : 50; // how many lines to display?
-$maxlines= exec("wc -l $f"); $maxlines= preg_replace("/[\t\ \n]*(\d+)[\t\ \n]+.+/", "$1", $maxlines);
-$offset= isset ($_GET["offset"]) && is_numeric($_GET["offset"]) ? $_GET["offset"] : (isset ($_GET["tail"]) ? $maxlines - $step : 0);
-
 if (isset ($f))
 {
+	$step = isset ($_GET["step"]) && is_numeric($_GET["step"]) ? $_GET["step"] : 50; // how many lines to display?
+	$maxlines = exec("wc -l $f"); $maxlines= preg_replace("/[\t\ \n]*(\d+)[\t\ \n]+.+/", "$1", $maxlines);
+	$offset = isset ($_GET["offset"]) && is_numeric($_GET["offset"]) ? $_GET["offset"] : (isset ($_GET["tail"]) ? $maxlines - $step : 0);
 	if ($offset > 0)
 	{
 		exec("head -n" . ($step + $offset) . " $f | tail -n$step", $log);
@@ -102,7 +101,7 @@ if (isset ($f))
 }
 else
 {
-	print "Found nothing, quitting...\n";
+	print "Sorry, no log found.\n";
 	exit;
 }
 ob_start();

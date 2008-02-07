@@ -1,11 +1,9 @@
 <?php
-// $Id: scripts.php,v 1.56 2008/01/31 22:57:42 nickb Exp $
+// $Id: scripts.php,v 1.57 2008/02/07 20:38:51 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
 	global $debug_echoPWD;
-	$debug_echoPWD = 1;
-
 	if ($debug_echoPWD && is_dir($PWD) && is_readable($PWD) && ($suf != "logs" || is_writable($PWD)))
 	{
 		print $str;
@@ -18,10 +16,9 @@ function PWD_check($PWD, $suf)
 	return (!is_dir($PWD) || !is_readable($PWD) || ($suf == "logs" && !is_writable($PWD)));
 }
 
-function getPWD($suf = "", $doDynCheck = true)
+function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to hide (for security purposes!)
 {
 	global $PR, $App, $isBuildServer;
-	$debug_echoPWD = 1; // set 0 to hide (for security purposes!)
 	$PWDs = array();
 
 	if ($doDynCheck)
@@ -38,14 +35,13 @@ function getPWD($suf = "", $doDynCheck = true)
 	   		$PWDs[] = $PWD;
 			PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
 		}
-	}
 
-	if (!PWD_check($PWD, $suf) && !$isBuildServer)
-	{
-		debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
-		return $PWD;
+		if (!PWD_check($PWD, $suf) && !$isBuildServer)
+		{
+			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+			return $PWD;
+		}
 	}
-
 	$PWD="";
 
 	//static assignments
@@ -74,7 +70,7 @@ function getPWD($suf = "", $doDynCheck = true)
 			if (preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
 		   		$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
 			}
 		}
 	}
@@ -100,7 +96,7 @@ function getPWD($suf = "", $doDynCheck = true)
 			5 => array(
 				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
-				    $App->getDownloadBasePath() . "/$PR/" . $suf,
+				    $doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null,
 
 					"/home/local/data/httpd/download.eclipse.org/$suf",
 					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
@@ -141,7 +137,7 @@ function getPWD($suf = "", $doDynCheck = true)
 				foreach (array_keys($data[$y]["tries"]) as $z)
 				{
 					$PWD = $data[$y]["tries"][$z];
-					if (!PWD_check($PWD, $suf))
+					if ($PWD && !PWD_check($PWD, $suf))
 					{
 						PWD_debug($PWD, $suf, "<!-- Found: defaults[${y}][$z] -->");
 						$PWDs[] = $PWD;
