@@ -65,7 +65,7 @@ if (sizeof($data)<4)
 
 $unknown=true;
 $dropsDir = getPWD($data["project"] . "/" . "downloads/drops/", false, $debug > 0);
-$buildDetails = "Build Details\t" . "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/downloads/?project=$projct&sortBy=date&hlbuild=" . $data["buildID"] . "#" . $data["buildID"] . "\n\n";
+$buildDetails = "Build Details\t" . "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/downloads/?project=$projct&amp;sortBy=date&amp;hlbuild=" . $data["buildID"] . "#" . $data["buildID"] . "\n\n";
 if (is_readable($dropsDir . $data["version"] . "/" . $data["buildID"]))
 {
 	$extraTestsResults = getExtraTestsResults($data["version"], $data["buildID"], $html);
