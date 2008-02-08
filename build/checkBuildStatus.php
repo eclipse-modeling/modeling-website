@@ -59,7 +59,7 @@ if (sizeof($data)<4)
 {
 	echo "Must specify parent project, top project, sub project (component), version, and buildID:\n\n" .
 		"  " . $_SERVER['SCRIPT_NAME'] . "?parent=NONE&top=gef&project=&version=3.4.0&buildID=R200706201159\n" .
-		"  " . $_SERVER['SCRIPT_NAME'] . "?parent=modeling/&top=emf&project=query&version=1.1.0&buildID=R200706201159&html\n";
+		"  " . $_SERVER['SCRIPT_NAME'] . "?parent=modeling&top=emf&project=query&version=1.1.0&buildID=R200706201159&html\n";
 	exit;
 }
 
