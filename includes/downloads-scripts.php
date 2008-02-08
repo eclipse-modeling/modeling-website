@@ -672,7 +672,7 @@ function toPlainTextSummaries($summary)
     	{
     		$url = "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/" . $projct . "/" . $set[1] . "s/" . $set[2] . "testlog.txt";
     		$miniSummary .= " [" . strtoupper(str_replace("test", "", $set[1])) . ": " . $set[4] . "]";
-    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test\t" . $set[4] . "\t" . $url . "\n";
+    		$textSummary .= strtoupper(str_replace("test", "", $set[1])) . " Test (" . $set[4] . ")\t" . $url . "\n";
     	}
     }
 
@@ -699,7 +699,7 @@ function toPlainTextSummaries($summary)
 		preg_match_all($failedPattern, $summary, $outFail, PREG_SET_ORDER);
 		/* [1] => ../../../modeling/emf/tests/2.2.4/R200710030400/200710030422/results/bvt.html
 	       [2] => bvt
-	       [4] => OK
+	       [3] => OK
 	    */
     	$sets = sizeof($out) > 0 ? $out : $outFail;
 	    if ($debug > 0) { print "\n-------2-------\n<br/><pre>"; print_r($sets); print "</pre><br/>\n"; }
@@ -709,7 +709,7 @@ function toPlainTextSummaries($summary)
     			$foundURLs[] = $set[1];
     			$url = str_replace("../../..", "http://" . $_SERVER["SERVER_NAME"], $set[1]);
 	    		$miniSummary .= " [" . strtoupper($set[2]) . ": " . $set[3] . "]";
-	    		$textSummary .= strtoupper($set[2]) . " Test\t" . $set[3] . "\t" . $url . "\n";
+	    		$textSummary .= strtoupper($set[2]) . " Test (" . $set[3] . ")\t" . $url . "\n";
     		}
     	}
 	}
