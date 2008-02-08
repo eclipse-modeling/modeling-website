@@ -26,23 +26,13 @@ $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/include
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
 $data = loadHttpGetVars();
-if (!isset($data["parent"]))
-{
-	if ((!isset($data["top"]) && isset($data["project"])) || (isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"] && $data["project"] != "emf"))
-	{
-		$PR =  $data["project"]; # GEF
-		$data["parent"] = "NONE"; # could also be "tools"
-	}
-	else
-	{
-		$data["parent"] = "modeling";
-		$PR =  $data["parent"] . "/" . $data["top"]; # modeling/mdt
-	}
-}
-else if (isset($data["parent"]) && $data["parent"] == "NONE")
+if ((isset($data["parent"]) && $data["parent"] == "NONE") || (!isset($data["top"]) && isset($data["project"])) || (isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"] && $data["project"] != "emf"))
 {
 	$PR =  $data["project"]; # GEF
-	$data["parent"] = "NONE"; # could also be "tools"
+}
+else
+{
+	$PR =  $data["parent"] . "/" . $data["top"]; # modeling/mdt
 }
 
 $data["project"] = isset($data["project"]) ?  $data["project"] : "";
