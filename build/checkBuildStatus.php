@@ -32,7 +32,7 @@ if ((isset($data["parent"]) && $data["parent"] == "NONE") || (!isset($data["top"
 }
 else
 {
-	$PR =  $data["parent"] . "/" . $data["top"]; # modeling/mdt
+	$PR =  (isset($data["parent"]) && $data["parent"] != "NONE" ? $data["parent"] : "modeling") . "/" . $data["top"]; # modeling/mdt
 }
 
 $data["project"] = isset($data["project"]) ?  $data["project"] : "";
@@ -105,7 +105,7 @@ function loadHttpGetVars()
 	$data = array();
 	$input_patterns = array(
 		/* regex => array(http get vars) */
-		"#(NONE|[a-z]+/)#" => array("parent"),
+		"#(NONE|[a-z]+)#" => array("parent"),
 		"#([a-z0-9]+)#" => array("top","project"),
 		"#([0-9\.]{5})#" => array("version"),
 		"#([NIMSR][0-9]{12})#" => array("buildID"),
