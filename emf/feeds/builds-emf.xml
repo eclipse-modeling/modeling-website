@@ -64,33 +64,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] emf I200802052000 (2.4.0.I200802052000) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200802052000#I200802052000"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200802052000#I200802052000</id>
-    <updated>2008-02-06T02:02:59Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200802052000" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200802052000#I200802052000" type="I" version="2.4.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.4.0/I200802052000/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=I200802052000
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-I200802052000.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.4.0/I200802052000/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20080205-0010/eclipse-SDK-I20080205-0010-linux-gtk.tar.gz</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] emf I200801292000 (2.4.0.I200801292000) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200801292000#I200801292000"/>
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200801292000#I200801292000</id>
