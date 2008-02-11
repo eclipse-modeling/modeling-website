@@ -110,7 +110,7 @@ if ($projct == "atl")
 	$Nav->addCustomNav("Use Cases", "/m2m/atl/usecases/", "_self", 2);
 	$Nav->addCustomNav("Basic Examples", "/m2m/atl/basicExamples_Patterns/", "_self", 2);
 	$Nav->addCustomNav("Transformations", "/m2m/atl/atlTransformations/", "_self", 2);
-	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/", "_self", 2);
+	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/index-old.php", "_self", 2);
 	$Nav->addCustomNav("Documentation", "/m2m/atl/doc/", "_self", 2);
 	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/M2M/Atlas_Transformation_Language_(ATL)", "_self", 2);
 	$Nav->addCustomNav("Publications", "/m2m/atl/publication.php", "_self", 2);
