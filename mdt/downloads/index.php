@@ -6,7 +6,9 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
-	"mdt-ocl-standalone"
+	"mdt-ocl-standalone",
+	"xsd-SDK", # deprecated
+	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
 );
 
 /* config */
@@ -41,7 +43,8 @@ $dls = array(
 	),
 	"/xsd" => array(
 		"XSD" => array(
-			"SDK (Runtime, Source)" => "SDK",
+			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
+			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
 			"Runtime" => "runtime" //,
 			//"Examples" => "examples",
 			//"Automated Tests" => "automated-tests"
@@ -57,6 +60,14 @@ $filePre = array(
 	"/uml2" => array("uml2","mdt-uml2"),
 	"/ocl" => array("emft-ocl","mdt-ocl"),
 	"/xsd" => array("xsd","mdt-xsd")
+);
+
+$filePreStatic = array(
+	"/xsd" => array(
+		"xsd",			# deprecated EMF 2.4.0M5
+		"xsd",			# new EMF 2.4.0M5
+		"xsd"
+	)
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
