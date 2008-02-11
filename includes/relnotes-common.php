@@ -33,7 +33,7 @@ if (file_exists($f)) { include_once($f); }
 
 $projectsf = array_flip(array_diff($projects, $extraprojects, $nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
-$projectAndVersion = "?project=$projct&amp;version=" . $_GET["version"];
+$projectAndVersion = "?project=$projct&amp;version=" . htmlspecialchars($_GET["version"]);
 
 /* set defaults */
 $cvscom = "";
