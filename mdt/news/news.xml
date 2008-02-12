@@ -4,6 +4,12 @@
 <news date="February 12, 2008" showOn="whatsnew">
     The new <a href="http://www.eclipse.org/modeling/mdt/?project=bpmn2">BPMN2</a> and <a href="http://www.eclipse.org/modeling/mdt/?project=imm">IMM</a> components have been provisioned.
 </news>
+<news date="January 24, 2008" showOn="whatsnew">
+    The <a href="http://www.eclipse.org/modeling/mdt/docs/plans/mdt_project_plan_1_1.html">MDT 1.1 development plan</a> has been updated.
+</news>
+<news date="January 15, 2008" showOn="whatsnew">
+    A new <a href="http://wiki.eclipse.org/MDT-SBVR-Proposal">SVBR</a> component has been proposed.
+</news>
 <news date="October 17, 2007" showOn="whatsnew">
     OCL parser <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=176110">refactorings</a> for grammar extensibility and improved error handling now available in the OCL 1.2 <a href="http://www.eclipse.org/modeling/mdt/downloads/?showAll=1&hlbuild=I200710171533&project=ocl#I200710171533">build</a> of 17 Oct.
 </news>
@@ -153,6 +159,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.22 2008/02/12 20:31:13 khussey Exp $ -->
+<!-- $Id: news.xml,v 1.23 2008/02/12 20:39:52 khussey Exp $ -->
 
 </doc>
