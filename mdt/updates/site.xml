@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/mdt/updates/site.xml&amp;format=xml">
+<site pack200="true" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/mdt/updates/site.xml&amp;format=xml">
 	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/ ... -->
 
 	<description url="http://download.eclipse.org/modeling/mdt/updates/site.xml">
