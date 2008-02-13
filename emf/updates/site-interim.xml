@@ -204,7 +204,38 @@
 	<!-- TRANSACTION 1.2.0 I200802071129 -->
 	
 	<!-- EMF 2.4.0M5 S200802090050 -->
-	<category-def label="EMF SDK 2.4.0M5 S200802090050" name="EMF SDK 2.4.0M5 S200802090050">
+	
+	<!-- QUERY 1.2.0M5 S200802122130 -->
+	<category-def label="EMF QUERY SDK 1.2.0M5 S200802122130" name="EMF QUERY SDK 1.2.0M5 S200802122130">
+		<description>
+EMF QUERY SDK 1.2.0M5 S200802122130: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.query.doc" version="1.2.0.v200711141856-23-8s733G555A5ICE" url="features/org.eclipse.emf.query.doc_1.2.0.v200711141856-23-8s733G555A5ICE.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.1.0.v200711141856-11-7w311822252967" url="features/org.eclipse.emf.query.ocl.source_1.1.0.v200711141856-11-7w311822252967.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl" version="1.1.0.v200711141856-11-7w311822252967" url="features/org.eclipse.emf.query.ocl_1.1.0.v200711141856-11-7w311822252967.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.sdk" version="1.2.0.v200711141856-577-91H6X1NFFnJYQhFlUWHt955I" url="features/org.eclipse.emf.query.sdk_1.2.0.v200711141856-577-91H6X1NFFnJYQhFlUWHt955I.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.source" version="1.2.0.v200711141856-11-7w311823172914" url="features/org.eclipse.emf.query.source_1.2.0.v200711141856-11-7w311823172914.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query" version="1.2.0.v200711141856-11-7w311823172914" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/features/org.eclipse.emf.query_1.2.0.v200711141856-11-7w311823172914.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples.source" version="1.2.0.v200711141856" url="features/org.eclipse.emf.query.examples.source_1.2.0.v200711141856.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples" version="1.2.0.v200711141856-477-_kE77YAAAMAcQU" url="features/org.eclipse.emf.query.examples_1.2.0.v200711141856-477-_kE77YAAAMAcQU.jar" patch="false">
+		<category name="EMF QUERY SDK 1.2.0M5 S200802122130"/>
+	</feature>
+<category-def label="EMF SDK 2.4.0M5 S200802090050" name="EMF SDK 2.4.0M5 S200802090050">
 		<description>
 EMF SDK 2.4.0M5 S200802090050: contains runtime, source, and documentation features.
 		</description>
