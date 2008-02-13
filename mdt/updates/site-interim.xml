@@ -116,7 +116,14 @@
 	<!-- OCL 1.2.0M5 S200802121700 -->
 	
 	<!-- OCL 1.2.0M5 S200802121700 -->
-	<category-def label="MDT OCL SDK 1.2.0M5 S200802121700" name="MDT OCL SDK 1.2.0M5 S200802121700">
+	
+	<!-- UML2 2.2.0M5 S200802121122 -->
+	<category-def label="MDT UML2 SDK 2.2.0M5 S200802121122" name="MDT UML2 SDK 2.2.0M5 S200802121122">
+		<description>
+MDT UML2 SDK 2.2.0M5 S200802121122: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+<category-def label="MDT OCL SDK 1.2.0M5 S200802121700" name="MDT OCL SDK 1.2.0M5 S200802121700">
 		<description>
 MDT OCL SDK 1.2.0M5 S200802121700: contains runtime, source, and documentation features.
 		</description>
