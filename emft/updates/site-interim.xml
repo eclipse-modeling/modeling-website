@@ -134,7 +134,29 @@
 	<!-- SEARCH 0.7.0 I200802121916 (Incubation) -->
 	
 	<!-- COMPARE 0.8.0 I200802121915 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200802121915" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200802121915">
+	
+	<!-- MINT 0.7.0 I200802132343 -->
+	<category-def label="EMFT MINT SDK 0.7.0 I200802132343" name="EMFT MINT SDK 0.7.0 I200802132343">
+		<description>
+EMFT MINT SDK 0.7.0 I200802132343: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200802132343" url="features/org.eclipse.emf.mint.doc_0.7.0.v200802132343.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200802132343"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200802132343" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200802132343.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200802132343"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200802132343" url="features/org.eclipse.emf.mint.source_0.7.0.v200802132343.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200802132343"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200802132343" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.mint_0.7.0.v200802132343.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200802132343"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.examples" version="0.7.0.v200802132343" url="features/org.eclipse.emf.mint.examples_0.7.0.v200802132343.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200802132343"/>
+	</feature>
+<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200802121915" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200802121915">
 		<description>
 EMFT COMPARE SDK (Incubation) 0.8.0 I200802121915: contains runtime, source, and documentation features.
 		</description>
