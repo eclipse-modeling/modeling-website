@@ -56,8 +56,6 @@
 	<!-- JET 0.9.0 I200802071120 (Incubation) -->
 	
 	<!-- JET 0.9.0M5 S200802121745 (Incubation) -->
-	
-	<!-- JET 0.9.0M5 S200802121745 (Incubation) -->
 	<category-def label="M2T JET SDK (Incubation) 0.9.0M5 S200802121745" name="M2T JET SDK (Incubation) 0.9.0M5 S200802121745">
 		<description>
 M2T JET SDK (Incubation) 0.9.0M5 S200802121745: contains runtime, source, and documentation features.
@@ -81,11 +79,6 @@ M2T JET SDK (Incubation) 0.9.0M5 S200802121745: contains runtime, source, and do
 	<feature id="org.eclipse.jet.editor" version="0.9.0.v20080211-078-7w31191322" url="features/org.eclipse.jet.editor_0.9.0.v20080211-078-7w31191322.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.9.0M5 S200802121745"/>
 	</feature>
-<category-def label="M2T JET SDK (Incubation) 0.9.0M5 S200802121745" name="M2T JET SDK (Incubation) 0.9.0M5 S200802121745">
-		<description>
-M2T JET SDK (Incubation) 0.9.0M5 S200802121745: contains runtime, source, and documentation features.
-		</description>
-	</category-def>
 <category-def label="M2T JET SDK (Incubation) 0.9.0 I200802071120" name="M2T JET SDK (Incubation) 0.9.0 I200802071120">
 		<description>
 M2T JET SDK (Incubation) 0.9.0 I200802071120: contains runtime, source, and documentation features.
