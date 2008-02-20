@@ -116,7 +116,32 @@
 	<!-- UML2TOOLS 0.8.0M5 S200802180622 (Incubation) -->
 	
 	<!-- UML2TOOLS 0.8.0M5 S200802180622 (Incubation) -->
-	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.8.0M5 S200802180622" name="MDT UML2TOOLS SDK (Incubation) 0.8.0M5 S200802180622">
+	
+	<!-- UML2 2.2.0 I200802201750 -->
+	<category-def label="MDT UML2 SDK 2.2.0 I200802201750" name="MDT UML2 SDK 2.2.0 I200802201750">
+		<description>
+MDT UML2 SDK 2.2.0 I200802201750: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200801222150" url="features/org.eclipse.uml2.doc_2.2.0.v200801222150.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples.source_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200802201645" url="features/org.eclipse.uml2.sdk_2.2.0.v200802201645.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.2.0.v200802201645" url="features/org.eclipse.uml2.source_2.2.0.v200802201645.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.2.0.v200802201645" url="features/org.eclipse.uml2_2.2.0.v200802201645.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0 I200802201750"/>
+	</feature>
+<category-def label="MDT UML2TOOLS SDK (Incubation) 0.8.0M5 S200802180622" name="MDT UML2TOOLS SDK (Incubation) 0.8.0M5 S200802180622">
 		<description>
 MDT UML2TOOLS SDK (Incubation) 0.8.0M5 S200802180622: contains runtime, source, and documentation features.
 		</description>
