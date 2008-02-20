@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.58 2008/02/07 22:18:45 nickb Exp $
+// $Id: scripts.php,v 1.59 2008/02/20 06:08:05 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -48,6 +48,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	if (PWD_check($PWD, $suf))
 	{
 		$servers = array(
+			"/buildbox(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build",
 			"/build\.eclipse\.org/" => "/opt/public/modeling/build",
 			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build",
 			"/emft(?:\.eclipse\.org)?/" => "/home/www-data/build",
