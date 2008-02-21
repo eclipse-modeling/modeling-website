@@ -2,6 +2,7 @@
 $pre = "../../";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 internalUseOnly();
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/emf/downloads/extras-emf.php");
 ob_start();
 
 $showAllResults = null;
@@ -197,7 +198,7 @@ $pageTitle = "EMF Test Results";
 $pageKeywords = "";
 $pageAuthor = "Nick Boldt";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $pre . 'includes/downloads.css"/>' . "\n");
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 /************************** METHODS *****************************************/
@@ -353,13 +354,12 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 							$testDir.
 							"/testlog.txt\"><abbr title=\"$t\"><img src=\"http://www.eclipse.org/emf/images/not.gif\" width=\"16\" height=\"12\" border=\"0\" alt=\"BUILD FAILED!\"></abbr></a>&#160;</td>"."\n";
 					} else {
-						$ret .= "<td bgcolor=\"#FFFFFF\">&#160;<a class=\"errors\" href=\"".
-							$pre.$mid.$path.
-							$testDir.
-							"/testlog.txt\"><span class=\"errors\"><abbr title=\"$t\">".
-							$cnt.
-							"</abbr></span></a>&#160;</td>".
-							"\n";
+						$sty = (preg_match("/[EF]/", $cnt) ? "errors" : "warnings");
+						$linksty = preg_match("/[EF]/", $cnt) ? " class=\"fail\"" :
+							(preg_match("/[W]/", $cnt) ? " class=\"warning\"" :
+								" class=\"success\"");
+						$ret .= "<td bgcolor=\"#FFFFFF\">&#160;<a href=\"".
+							$pre.$mid.$path.$testDir."/testlog.txt\"$linksty><abbr title=\"$t\">$cnt</abbr></a>&#160;</td>\n";
 					}
 				} else { // if we failed on the build, the JUnit stuff won't run (if javacFailOnError=true in runJDK14Tests.xml)
 						$ret .= "<td valign=\"bottom\" bgcolor=\"#FFFFFF\" align=center>&#160;<a class=\"inprogress\" href=\"".
@@ -388,103 +388,6 @@ $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, 
 			}
 		}
 		return "";
-	}
-
-	function getJDKTestResultsFailureCount($f,$type="",&$didRunBuildTest) {
-		$fails=0;
-		$errors=0;
-		$notes=0;
-		$warns=0;
-		$deprecates=0;
-		$isBuild=true;
-		$isDone=false;
-		if ($f && sizeof($f)>0) {
-			foreach ($f as $line) {
-				if (false!==strpos($line,"runJUnitTestsOnly:")) { // won't be doing the first half
-					$didRunBuildTest=false;
-				}
-				// check first half of the log for build problems; second half for test problems.
-				// split on line with "runJUnitTests:"
-				if (false!==strpos($line,"runJUnitTests:")) { // second half
-					$isBuild=false;
-				}
-				if ($isBuild && $type=="build") {
-					if (false!==strpos($line,"[javac]") && false!==strpos($line,"error")) {
-						$m=null;preg_match("/\[javac\] (\d+) (fail|error).+/",$line,$m);
-						if ($m[2]=="fail") {
-							$fails+=$m[1];
-						} else if ($m[2]=="error") {
-							$errors+=$m[1];
-						}
-					} else if (false!==strpos($line,"[javac]") && false!==strpos($line,"deprecate")) {
-						$deprecates+=1;
-					} else if (false!==strpos($line,"[javac]") && false!==strpos($line,"warning")) {
-						$m=null;preg_match("/\[javac\] (\d+) (warning).+/",$line,$m);
-						if ($m[2]=="warning") {
-							$warns+=$m[1];
-						}
-					} else if (false!==strpos($line,"BUILD FAILED")) {
-						$fails="FAILED";
-						$isDone=true;
-						break;
-					}
-				} else if (!$isBuild && $type!="build") {
-					if (false!==strpos($line,"[java] There was ") || false!==strpos($line,"[java] There were ")) {
-						$m=null;preg_match("/(was|were) (\d+) (fail|error|warning).+/",$line,$m);
-						if ($m[3]=="fail") {
-							$fails+=$m[2];
-						} else if ($m[3]=="warning") {
-							$warns+=$m[2];
-						} else if ($m[3]=="error") {
-							$errors+=$m[2];
-						}
-					} else if (false!==strpos($line,"BUILD FAILED")) {
-						$fails="FAILED";
-						$isDone=true;
-						break;
-					}
-				}
-				if (false!==strpos($line,"finished on:")) {
-					$isDone=true;
-				}
-			}
-
-			if (!$isDone) {
-				return "...";
-			}
-			//w("<b>$fails F, $errors E</b>",1);
-			if ($fails===0 && $errors===0 && $notes===0 && $warns===0 && $deprecates===0) {
-				return 0;
-			} else {
-				$ret="";
-				if ($fails>0 && $fails!=="FAILED") {
-					$ret.= $fails."&#160;F";
-				}
-				if ($errors>0) {
-					if ($ret) { $ret.=",&#160;"; }
-					$ret.= $errors."&#160;E";
-				}
-				if ($notes>0) {
-					if ($ret) { $ret.=",&#160;"; }
-					$ret.= $notes."&#160;N";
-				}
-				if ($warns>0) {
-					if ($ret) { $ret.=",&#160;"; }
-					$ret.= $warns."&#160;W";
-				}
-				if ($deprecates>0) {
-					if ($ret) { $ret.=",&#160;"; }
-					$ret.= $deprecates."&#160;D";
-				}
-				if (!$ret && $fails==="FAILED") {
-					$ret = "FAILED";
-				}
-				//echo $ret."<br>";
-				return $ret;
-			}
-		} else {
-			return "";
-		}
 	}
 
 	function getBranches($options) {
