@@ -2,7 +2,7 @@
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
-	global $PR, $projct, $isBuildServer, $isEMFserver;
+	global $PR, $projct, $isBuildServer, $isEMFserver, $showAllResults, $sortBy;
 
 	if ($isBuildServer)
 	{
