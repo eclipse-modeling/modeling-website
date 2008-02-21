@@ -3,11 +3,13 @@
 $testsPWD = "";
 $jdk14testsPWD = "";
 $jdk50testsPWD = "";
+$jdk60testsPWD = "";
 if (isset($isEMFserver) && $isEMFserver)
 {
 	$testsPWD 	   = "/home/www-data/oldtests";   // path on emf.torolab ONLY
 	$jdk14testsPWD = "/home/www-data/jdk14tests"; // path on emf.torolab ONLY
 	$jdk50testsPWD = "/home/www-data/jdk50tests"; // path on emf.torolab ONLY
+	$jdk60testsPWD = "/home/www-data/jdk60tests"; // path on emf.torolab ONLY
 }
 
 $NLpacks = array(
@@ -191,7 +193,7 @@ function doLanguagePacks()
 
 <?php }
 
-function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" or "jdk14"
+function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk60", "jdk50" or "jdk14"
 {
 	global $pre, $isEMFserver, $PR;
 	$mid = "../../../$PR/${type}tests/"; // this is a symlink on the filesystem!
@@ -200,7 +202,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 	// $testsPWD is path to root of tests; $path defines 2.0/I200405501234/ ... also need to then check subdirs
 
 	$ret = "";
-	$tests = ($type == "jdk50" ? array("build", "junit") : array("build", "junit", "standalone"));
+	$tests = ($type == "jdk50" || $type == "jdk60" ? array("build", "junit") : array("build", "junit", "standalone"));
 	$testDirs = array();
 	if (is_dir($testsPWD . $path) && is_readable($testsPWD . $path))
 	{
@@ -227,7 +229,7 @@ function getJDKTestResults($testsPWD, $path, $type, &$status) //type is "jdk50" 
 		$testlog = ($isEMFserver ? "/$PR/build/log-viewer.php?${type}test=$path$testDirs[0]/" : "$pre$mid$path$testDirs[0]/testlog.txt");
 		if ($cnt === 0 || preg_match("/^[^EFP]+$/", $cnt)) // nothing, or no E or F or P
 		{
-			$cnt = ($type == "jdk50" ? getJDK50TestResultsFailureCount($f, $t) : getJDK14TestResultsFailureCount($f, $t));
+			$cnt = ($type == "jdk50" || $type == "jdk60" ? getJDKTestResultsFailureCount($f, $t) : getJDK14TestResultsFailureCount($f, $t));
 			if ($cnt === "...") //not done (yet)
 			{
 				$stat = "<a href=\"$testlog\">...</a>";
@@ -358,7 +360,7 @@ function getJDK14TestResultsFailureCount($f, $type = "")
 	return getGenericTestResultsFailureCount($f, $type, $issues, $steps, $parse);
 }
 
-function getJDK50TestResultsFailureCount($f, $type = "")
+function getJDKTestResultsFailureCount($f, $type = "")
 {
 	$issues = array("fail" => 0, "error" => 0, "warning" => 0, "note" => 0, "deprecate" => 0); //counts
 	$steps = array(1 => "/runJunitTests:/"); //possible steps and delimiters

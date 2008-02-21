@@ -594,7 +594,7 @@ function grep($pattern, $file)
 /* if $styled = 0 or false, return text only */
 function getExtraTestsResults($branch, $ID, $styled=1)
 {
-	global $isBuildServer, $jdk14testsPWD, $jdk50testsPWD, $testsPWD;
+	global $isBuildServer, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD;
 	$tests = "";
 	$s = array(0 => "");
 	$t = array(0 => "");
@@ -619,6 +619,21 @@ function getExtraTestsResults($branch, $ID, $styled=1)
 		{
 			$summary = "";
 			$tests .= getJDKTestResults("$jdk50testsPWD/", "$branch/$ID/", "jdk50", $summary) . "\n";
+			if (!$styled)
+			{
+				$summary = toPlainTextSummaries($summary);
+				$s[0] .= $summary[0];
+				$t[0] .= $summary[1];
+			}
+			else
+			{
+				$s[] = $summary;
+			}
+		}
+		if (isset($jdk60testsPWD) && $jdk60testsPWD && is_dir($jdk60testsPWD))
+		{
+			$summary = "";
+			$tests .= getJDKTestResults("$jdk60testsPWD/", "$branch/$ID/", "jdk60", $summary) . "\n";
 			if (!$styled)
 			{
 				$summary = toPlainTextSummaries($summary);
@@ -719,7 +734,7 @@ function toPlainTextSummaries($summary)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $testsPWD, $deps, $PR;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");

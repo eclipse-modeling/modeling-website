@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once ("../../includes/buildServer-common.php");
 
 /* Override default settings for EMF because it's non-standard and supports other params, like ?jdk50test= */
@@ -21,7 +21,8 @@ $params = array(
 	"build" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/$#",
 	"test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
 	"jdk14test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
-	"jdk50test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#"
+	"jdk50test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#",
+	"jdk60test" => "#^\d+\.\d+\.\d+/[IMNRS]\d{12}/\d{12}/$#"
 );
 
 /* check these files, %s replaced with param from above */
@@ -29,7 +30,8 @@ $files = array(
 	"build" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/downloads/drops/%sbuildlog.txt"),
 	"test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/oldtests/%stestlog.txt"),
 	"jdk14test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk14tests/%stestlog.txt"),
-	"jdk50test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk50tests/%stestlog.txt")
+	"jdk50test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk50tests/%stestlog.txt"),
+	"jdk60test" => array($_SERVER['DOCUMENT_ROOT'] . "/$PR/${projct}/jdk60tests/%stestlog.txt")
 );
 
 /* replace these values with key */
@@ -46,7 +48,8 @@ $reps = array(
 	"dm" => "download.eclipse.org/modeling",
 	"tests" => "/home/www-data/oldtests", // new path
 	"jdk14tests" => "/home/www-data/jdk14tests",
-	"jdk50tests" => "/home/www-data/jdk50tests"
+	"jdk50tests" => "/home/www-data/jdk50tests",
+	"jdk60tests" => "/home/www-data/jdk60tests"
 );
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/log-viewer-common.php");
