@@ -43,6 +43,7 @@ function sidebar()
 			<li><a href="/emf/build/patch.php">New Test</a></li>
 			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=14&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">JDK 1.4</a></li>
 			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=50&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">JDK 5.0</a></li>
+			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=60&amp;showAllResults=$showAllResults&amp;showAll=&amp;sortBy=$sortBy"; ?>">JDK 6.0</a></li>
 			<li><a href="/<?php print $PR; ?>/build/tests/results.php?<?php print "project=$projct&amp;sortBy=date"; ?>">BVT, FVT, SVT</a></li>
 		</ul>
 	</div>
