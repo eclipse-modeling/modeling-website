@@ -41,10 +41,10 @@ function sidebar()
 		<h6>Tests</h6>
 		<ul>
 			<li><a href="/emf/build/patch.php">New Test</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=14&amp;sortBy=date"; ?>">JDK 1.4</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=50&amp;sortBy=date"; ?>">JDK 5.0</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=60&amp;sortBy=date"; ?>">JDK 6.0</a></li>
-			<li><a href="/<?php print $PR; ?>/build/tests/results.php?<?php print "project=$projct&amp;sortBy=date"; ?>">BVT, FVT, SVT</a></li>
+			<li><a href="/modeling/emf/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=14&amp;sortBy=date"; ?>">JDK 1.4</a></li>
+			<li><a href="/modeling/emf/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=50&amp;sortBy=date"; ?>">JDK 5.0</a></li>
+			<li><a href="/modeling/emf/build/tests/results-jdk.php?<?php print "project=$projct&amp;version=60&amp;sortBy=date"; ?>">JDK 6.0</a></li>
+			<li><a href="/modeling/emf/build/tests/results.php?<?php print "project=$projct&amp;sortBy=date"; ?>">BVT, FVT, SVT</a></li>
 		</ul>
 	</div>
 <?php
