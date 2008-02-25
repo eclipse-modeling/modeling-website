@@ -7,6 +7,7 @@ $options = array (
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
 		"2.0.0=HEAD,/opt/sun-java2-5.0",
+		"2.1.0=R2_1_0_dev,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
         	"2.0.0=HEAD,/opt/sun-java2-5.0",
