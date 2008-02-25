@@ -23,7 +23,11 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a> (Overview and Developer's Guide)<br/>
+			<div>February 25 2008</div>EMF Book: <a target="_out" href="http://safari.informit.com/9780321331885">Eclipse Modeling Framework</a> (Overview and Developer's Guide), Second Edition (Rough Cut)
+		</li>
+
+		<li>
+			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a> (Overview and Developer's Guide), First Edition<br/>
 			<a target="_out" href="http://www.awprofessional.com/content/images/0131425420/samplechapter/budinskych02.pdf">Chapter 2 Sample</a> (PDF)
 		</li>
 
@@ -584,4 +588,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.13 2008/01/23 04:14:15 nickb Exp $ -->
+<!-- $Id: index.php,v 1.14 2008/02/25 16:53:05 nickb Exp $ -->
