@@ -12,4 +12,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
 $Nav->addNavSeparator("Project Home", 	"/mddi/");
 
+$App->Promotion = TRUE;
+
 ?>

@@ -103,5 +103,7 @@ $Nav->addCustomNav("Contributors", "http://www.eclipse.org/$PR/project-info/team
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
 
+$App->Promotion = TRUE;
+
 unset ($bugcoms);
 ?>
