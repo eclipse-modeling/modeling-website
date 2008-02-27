@@ -210,14 +210,7 @@
 	<!-- VALIDATION 1.2.0M5 S200802122140 -->
 	
 	<!-- TRANSACTION 1.2.0M5 S200802122150 -->
-	
-	<!-- EMF 2.4.0 I200802261800 -->
-	<category-def label="EMF SDK 2.4.0 I200802261800" name="EMF SDK 2.4.0 I200802261800">
-		<description>
-EMF SDK 2.4.0 I200802261800: contains runtime, source, and documentation features.
-		</description>
-	</category-def>
-<category-def label="EMF TRANSACTION SDK 1.2.0M5 S200802122150" name="EMF TRANSACTION SDK 1.2.0M5 S200802122150">
+	<category-def label="EMF TRANSACTION SDK 1.2.0M5 S200802122150" name="EMF TRANSACTION SDK 1.2.0M5 S200802122150">
 		<description>
 EMF TRANSACTION SDK 1.2.0M5 S200802122150: contains runtime, source, and documentation features.
 		</description>
