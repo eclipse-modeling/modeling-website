@@ -11,7 +11,29 @@
 	<!-- jet 0.8 -->
 	
 	<!-- JET 0.8.1 (Incubation) -->
-	<category-def label="M2T JET SDK (Incubation) 0.8.1" name="M2T JET SDK (Incubation) 0.8.1">
+	
+	<!-- JET 0.8.2 (Incubation) -->
+	<category-def label="M2T JET SDK (Incubation) 0.8.2" name="M2T JET SDK (Incubation) 0.8.2">
+		<description>
+M2T JET SDK (Incubation) 0.8.2: contains runtime, source, and documentation features.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.doc" version="0.8.0.v20070913-07707w31181_31" url="features/org.eclipse.jet.doc_0.8.0.v20070913-07707w31181_31.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.2"/>
+	</feature>
+	<feature id="org.eclipse.jet.examples" version="0.8.0.v20070913-077-7w31181_24" url="features/org.eclipse.jet.examples_0.8.0.v20070913-077-7w31181_24.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.2"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="0.8.2.v20071206-07U382TZ8ckPDJlBnIQ" url="features/org.eclipse.jet.sdk_0.8.2.v20071206-07U382TZ8ckPDJlBnIQ.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.2"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="0.8.2.v20071206" url="features/org.eclipse.jet.source_0.8.2.v20071206.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.2"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="0.8.2.v20071206-17E29oA55Q5O9G" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.8.2.v20071206-17E29oA55Q5O9G.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.8.2"/>
+	</feature>
+<category-def label="M2T JET SDK (Incubation) 0.8.1" name="M2T JET SDK (Incubation) 0.8.1">
 		<description>
 M2T JET SDK (Incubation) 0.8.1: contains runtime, source, and documentation features.
 		</description>
