@@ -12,6 +12,11 @@ $theme = "Phoenix";
 ob_start();
 
 print "<div id=\"midcolumn\">\n";
+$sortBy =  "type";
+if (isset($_GET["sortBy"]) && preg_match("#version#", $_GET["sortBy"], $m))
+{
+	$sortBy = $m[0];
+}
 
 print "<h1>$pageTitle</h1>";
 
@@ -30,16 +35,25 @@ foreach ($dirs as $dir)
 $dirs = $dirsSorted; krsort($dirs); reset($dirs); #print "<pre>"; print_r($dirs); print "</pre>"; 
 $mapLinks = array();
 $latestBuilds = array();
+$prevPr = "";
 foreach ($dirs as $key => $dir)
 {
 	list($version, $parent, $pr) = explode(":",$key);
 	$builds = loadDirSimple($dir, "[NIMRS]\d{12}", "d");
 	if (sizeof($builds) > 0)
 	{
-		print "<div class=\"homeitem3col\">\n";
-		$label = strtoupper(str_replace("/", " ", preg_replace("#downloads/drops/|$buildDir/|modeling/#", "", $dir)));
-		print "<h3><a name=\"" . str_replace(" ", "", $label) . "\"></a>$label</h3>\n";
-		print "<ul>\n";	
+		if ($sortBy == "version" && ($pr != $prevPr && $prevPr))
+		{
+			print "</ul>\n";	
+			print "</div>";
+		}
+		if ($sortBy != "version" || ($sortBy == "version" && ($pr != $prevPr || !$prevPr)))
+		{
+			print "<div class=\"homeitem3col\">\n";
+			print "<h3><a name=\"" . $pr . "\"></a>" . strtoupper($pr) . ($sortBy != "version" ? " " . $version : "") . "</h3>\n";
+			print "<ul>\n";
+		}
+		$prevPr=$pr;
 		usort($builds, "sortBuildIDByDatestamp"); reset($builds);
 		foreach ($builds as $build)
 		{
@@ -50,17 +64,26 @@ foreach ($dirs as $key => $dir)
 				$buildDirLink,preg_replace("#http://download.eclipse.org|//modeling/downloads/drops/|modeling/build#", "", $results[0])) . 
 				" &#160 &#160 &#160 <a href=\"${buildDirLink}directory.txt\">Map</a> " .
 				"| <a href=\"$mapLink\">Changes</a></div>" .
-				"<a href=\"" . $buildDirLink . "\">$version / $build</a></li>\n";
+				"<a href=\"" . $buildDirLink . "\">" . ($sortBy == "version" ? $version . " / ": "") . "$build</a></li>\n";
 			$mapLinks[$pr] = $mapLink;
 			if (!isset($latestBuilds[$pr]))
 			{
 				$latestBuilds[$pr] = array($version, $build, $buildDirLink);
 			}
 		}
-		print "</ul>\n";	
-		print "</div>";
+		if ($sortBy != "version")
+		{
+			print "</ul>\n";	
+			print "</div>";
+		}		
 	}
 }
+if ($sortBy == "version")
+{
+	print "</ul>\n";	
+	print "</div>";
+}
+print "<p>&#160;</p>\n";
 
 print "</div>\n"; // midcolumn
 
@@ -77,6 +100,11 @@ print "<h6>Search CVS</h6>\n";
 print "<ul>\n";
 foreach ($mapLinks as $pr => $maplink) print "<li><a href=\"" . $mapLinks[$pr] . "\">$pr.map</a></li>\n";
 print "</ul>\n";
+print "</div>\n";
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Sort</h6>\n";
+print "<ul><a href=\"?sortBy=" . ($sortBy == "version" ? "" : "version") . "\">" . ($sortBy == "version" ? "By project, version &amp; date" : "By project &amp; date") . "</ul>\n";
 print "</div>\n";
 
 print "<div class=\"sideitem\">\n";
