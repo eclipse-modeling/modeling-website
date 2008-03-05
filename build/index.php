@@ -22,10 +22,14 @@ $dirs = array_flatten_values(findDir($buildDir, "drops"));
 foreach ($dirs as $dir)
 {
 	preg_match("#.+/([^/]+)/([^/]+)/downloads/drops/(\d+\.\d+\.\d+)#", $dir, $m);
-	$dirsSorted[$m[3] . ":" . $m[1] . ":" . $m[2]] = $dir;
+	if ($m[2] != "xsd")
+	{
+		$dirsSorted[$m[3] . ":" . $m[1] . ":" . $m[2]] = $dir;
+	}
 }
 $dirs = $dirsSorted; krsort($dirs); reset($dirs); #print "<pre>"; print_r($dirs); print "</pre>"; 
-
+$mapLinks = array();
+$latestBuilds = array();
 foreach ($dirs as $key => $dir)
 {
 	list($version, $parent, $pr) = explode(":",$key);
@@ -41,11 +45,17 @@ foreach ($dirs as $key => $dir)
 		{
 			$results = showBuildResults($buildDir, str_replace($buildDir, "", $dir) . "/" . $build . "/", 1);
 			$buildDirLink = preg_replace("#http://download.eclipse.org|//modeling/downloads/drops/|modeling/build|buildlog.txt#","",$results[2]);
+			$mapLink = "http://www.eclipse.org/modeling/searchcvs.php?q=file%3A$pr.map+days%3A14";
 			print "<li><div>" . preg_replace("#http://www.eclipse.org/modeling/downloads/testResults.php?#", 
 				$buildDirLink,preg_replace("#http://download.eclipse.org|//modeling/downloads/drops/|modeling/build#", "", $results[0])) . 
-				"| <a href=\"${buildDirLink}directory.txt\">Map Used</a> " .
-				"| <a href=\"http://www.eclipse.org/modeling/searchcvs.php?q=file%3A$pr.map+days%3A14\">Map Changes</a></div>" .
+				" &#160 &#160 &#160 <a href=\"${buildDirLink}directory.txt\">Map</a> " .
+				"| <a href=\"$mapLink\">Changes</a></div>" .
 				"<a href=\"" . $buildDirLink . "\">$version / $build</a></li>\n";
+			$mapLinks[$pr] = $mapLink;
+			if (!isset($latestBuilds[$pr]))
+			{
+				$latestBuilds[$pr] = array($version, $build, $buildDirLink);
+			}
 		}
 		print "</ul>\n";	
 		print "</div>";
@@ -56,9 +66,24 @@ print "</div>\n"; // midcolumn
 
 print "<div id=\"rightcolumn\">\n";
 print "<div class=\"sideitem\">\n";
+print "<h6>Latest Builds &amp; Maps</h6>\n";
+print "<ul>\n";
+foreach ($latestBuilds as $pr => $lb) print "<li>[<a href=\"" . $mapLinks[$pr] . "\">M</a>] <a href=\"" . $lb[2] . "directory.txt\">" . strtoupper($pr) . " " . $lb[0] . " " . $lb[1] . "</a></li>\n";
+print "</ul>\n";
+print "</div>\n";
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Search CVS</h6>\n";
+print "<ul>\n";
+foreach ($mapLinks as $pr => $maplink) print "<li><a href=\"" . $mapLinks[$pr] . "\">$pr.map</a></li>\n";
+print "</ul>\n";
+print "</div>\n";
+
+print "<div class=\"sideitem\">\n";
 print "<h6>About</h6>\n";
 print "<p>Updated:<br/>" . date("Y-m-d H:i T") . "</p>\n";
 print "</div>\n";
+
 print "</div>\n"; // rightcolumn
 
 print "</div>\n";
