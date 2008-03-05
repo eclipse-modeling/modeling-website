@@ -68,7 +68,7 @@ print "<div id=\"rightcolumn\">\n";
 print "<div class=\"sideitem\">\n";
 print "<h6>Latest Builds &amp; Maps</h6>\n";
 print "<ul>\n";
-foreach ($latestBuilds as $pr => $lb) print "<li>[<a href=\"" . $mapLinks[$pr] . "\">M</a>] <a href=\"" . $lb[2] . "directory.txt\">" . strtoupper($pr) . " " . $lb[0] . " " . $lb[1] . "</a></li>\n";
+foreach ($latestBuilds as $pr => $lb) print "<li>[<a href=\"" . $mapLinks[$pr] . "\">M</a>] <a href=\"" . $lb[2] . "directory.txt\">" . formatProjectName($pr) . " " . $lb[0] . " " . $lb[1] . "</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
 
@@ -158,4 +158,10 @@ function sortBuildIDByDatestamp($a, $b)
     return ($a < $b) ? 1 : -1;
 }
 
+function formatProjectName($pr)
+{
+	$lim=5;
+	$pr = strtoupper($pr);
+	return strlen($pr)<=$lim ? $pr : substr($pr,0,$lim-1) . "'" . substr($pr,strlen($pr)-1);
+}
 ?>
