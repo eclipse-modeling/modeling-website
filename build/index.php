@@ -102,6 +102,35 @@ foreach ($mapLinks as $pr => $maplink) print "<li><a href=\"" . $mapLinks[$pr] .
 print "</ul>\n";
 print "</div>\n";
 
+$relengs = array(
+	"query" => "emf-org.eclipse.emf.query.releng",
+	"emf" => "emf-org.eclipse.emf.releng",
+	"transaction" => "emf-org.eclipse.emf.transaction.releng",
+	"validation" => "emf-org.eclipse.emf.validation.releng",
+	"cdo" => "emft-org.eclipse.emf.cdo.releng",
+	"compare" => "emft-org.eclipse.emf.compare.releng",
+	"ecoretools" => "emft-org.eclipse.emf.ecoretools.releng",
+	"mwe" => "emft-org.eclipse.emf.mwe.releng",
+	"net4j" => "emft-org.eclipse.emf.net4j.releng",
+	"search" => "emft-org.eclipse.emf.search.releng",
+	"teneo" => "emft-org.eclipse.emf.teneo.releng",
+	"gef" => "gef-org.eclipse.gef.releng",
+	"atl" => "m2m-org.eclipse.atl.releng",
+	"jet" => "m2t-org.eclipse.jet.releng",
+	"eodm" => "mdt-org.eclipse.eodm.releng",
+	"ocl" => "mdt-org.eclipse.ocl.releng",
+	"uml2" => "mdt-org.eclipse.uml2.releng",
+	"uml2tools" => "mdt-org.eclipse.uml2tools.releng"
+);
+ksort($relengs); reset($relengs);
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Update Search CVS</h6>\n";
+print "<ul>\n";
+foreach ($relengs as $key => $path) print "<li><a href=\"http://build.eclipse.org/modeling/build/updateSearchCVS.php?previewOnly=0&amp;projects%5B%5D=cvssrc%2F$path\">" . $key . "</a></li>\n";
+print "</ul>\n";
+print "</div>\n";
+
 print "<div class=\"sideitem\">\n";
 print "<h6>Sort</h6>\n";
 print "<ul><a href=\"?sortBy=" . ($sortBy == "version" ? "" : "version") . "\">" . ($sortBy != "version" ? "By project, version &amp; date" : "By project &amp; date") . "</ul>\n";
