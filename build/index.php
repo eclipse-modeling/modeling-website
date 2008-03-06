@@ -96,7 +96,7 @@ print "</ul>\n";
 print "</div>\n";
 
 print "<div class=\"sideitem\">\n";
-print "<h6>Search CVS</h6>\n";
+print "<h6><a href=\"http://www.eclipse.org/modeling/searchcvs.php\">Search CVS</a></h6>\n";
 print "<ul>\n";
 foreach ($mapLinks as $pr => $maplink) print "<li><a href=\"" . $mapLinks[$pr] . "\">$pr.map</a></li>\n";
 print "</ul>\n";
@@ -131,7 +131,7 @@ $relengs = array(
 ksort($relengs); reset($relengs);
 
 print "<div class=\"sideitem\">\n";
-print "<h6>Update Search CVS</h6>\n";
+print "<h6><a href=\"http://build.eclipse.org/modeling/build/updateSearchCVS.php\">Update Search CVS</a></h6>\n";
 print "<ul>\n";
 foreach ($relengs as $key => $path) print "<li><a href=\"http://build.eclipse.org/modeling/build/updateSearchCVS.php?previewOnly=0&amp;projects%5B%5D=cvssrc%2F$path\">" . $key . "</a></li>\n";
 print "</ul>\n";
@@ -139,12 +139,7 @@ print "</div>\n";
 
 print "<div class=\"sideitem\">\n";
 print "<h6>Sort</h6>\n";
-print "<ul><a href=\"?sortBy=" . ($sortBy == "version" ? "" : "version") . "\">" . ($sortBy != "version" ? "By project, version &amp; date" : "By project &amp; date") . "</ul>\n";
-print "</div>\n";
-
-print "<div class=\"sideitem\">\n";
-print "<h6>About</h6>\n";
-print "<p>Updated:<br/>" . date("Y-m-d H:i T") . "</p>\n";
+print "<ul><a href=\"?sortBy=" . ($sortBy == "version" ? "" : "version") . "\">" . ($sortBy != "version" ? "By project, version &amp; date" : "By project &amp; date") . "</a></ul>\n";
 print "</div>\n";
 
 print "</div>\n"; // rightcolumn
