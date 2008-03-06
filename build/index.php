@@ -219,7 +219,6 @@ function sortBuildIDByDatestamp($a, $b)
 function formatProjectName($pr)
 {
 	$lim=6;
-	$pr = strtoupper($pr);
-	return strlen($pr)<=$lim ? $pr : substr($pr,0,$lim-1) . "'" . substr($pr,strlen($pr)-1);
+	return strlen($pr)<=$lim ? $pr : substr($pr,0,$lim);
 }
 ?>
