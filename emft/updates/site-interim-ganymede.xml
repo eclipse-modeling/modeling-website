@@ -148,7 +148,29 @@
 	<!-- ECORETOOLS 0.8.0M5 S200802190452 (Incubation) -->
 	
 	<!-- MINT 0.7.0M5 S200802212231 -->
-	<category-def label="EMFT MINT SDK 0.7.0M5 S200802212231" name="EMFT MINT SDK 0.7.0M5 S200802212231">
+	
+	<!-- TENEO 0.8.0 S200803051429 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 S200803051429: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200803051429" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200803051429.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200803051429" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200803051429.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200803051429" url="features/org.eclipse.emf.teneo.source_0.8.0.v200803051429.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200803051429" url="features/org.eclipse.emf.teneo_0.8.0.v200803051429.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200803051429" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200803051429.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803051429"/>
+	</feature>
+<category-def label="EMFT MINT SDK 0.7.0M5 S200802212231" name="EMFT MINT SDK 0.7.0M5 S200802212231">
 		<description>
 EMFT MINT SDK 0.7.0M5 S200802212231: contains runtime, source, and documentation features.
 		</description>
