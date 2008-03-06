@@ -116,6 +116,8 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
   					}
 				}
 			}
+			
+			print "<a href=\"?\">Update another module</a>?";
 		}
 	}
 }
