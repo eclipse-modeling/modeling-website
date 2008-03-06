@@ -103,24 +103,30 @@ print "</ul>\n";
 print "</div>\n";
 
 $relengs = array(
-	"query" => "emf-org.eclipse.emf.query.releng",
+	"gef" => "gef-org.eclipse.gef.releng",
+
+	"atl" => "m2m-org.eclipse.atl.releng",
+	
+	"jet" => "m2t-org.eclipse.jet.releng",
+	
 	"emf" => "emf-org.eclipse.emf.releng",
+	"query" => "emf-org.eclipse.emf.query.releng",
 	"transaction" => "emf-org.eclipse.emf.transaction.releng",
 	"validation" => "emf-org.eclipse.emf.validation.releng",
+
+	"eodm" => "mdt-org.eclipse.eodm.releng",
+	"ocl" => "mdt-org.eclipse.ocl.releng",
+	"uml2" => "mdt-org.eclipse.uml2.releng",
+	"uml2tools" => "mdt-org.eclipse.uml2tools.releng",
+	
 	"cdo" => "emft-org.eclipse.emf.cdo.releng",
 	"compare" => "emft-org.eclipse.emf.compare.releng",
 	"ecoretools" => "emft-org.eclipse.emf.ecoretools.releng",
+	"mint" => "emft-org.eclipse.emf.mint.releng",
 	"mwe" => "emft-org.eclipse.emf.mwe.releng",
 	"net4j" => "emft-org.eclipse.emf.net4j.releng",
 	"search" => "emft-org.eclipse.emf.search.releng",
 	"teneo" => "emft-org.eclipse.emf.teneo.releng",
-	"gef" => "gef-org.eclipse.gef.releng",
-	"atl" => "m2m-org.eclipse.atl.releng",
-	"jet" => "m2t-org.eclipse.jet.releng",
-	"eodm" => "mdt-org.eclipse.eodm.releng",
-	"ocl" => "mdt-org.eclipse.ocl.releng",
-	"uml2" => "mdt-org.eclipse.uml2.releng",
-	"uml2tools" => "mdt-org.eclipse.uml2tools.releng"
 );
 ksort($relengs); reset($relengs);
 
