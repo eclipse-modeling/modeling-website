@@ -119,8 +119,8 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 			
 		}
 	}
+	print "<p><a href=\"?\">Update another module</a></p>\n";
 	print "</div>\n";
-	print "<div align=\"right\"><a href=\"?\">Update another module</a></div>\n";
 }
 else # if no $_GET["projects"] value, present UI to multi-select targets.
 {
