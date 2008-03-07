@@ -8,7 +8,7 @@ $pageTitle = "Eclipse Modeling Builds";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Nick Boldt";
 $theme = "Phoenix";
-
+internalUseOnly();
 ob_start();
 
 print "<div id=\"midcolumn\">\n";
