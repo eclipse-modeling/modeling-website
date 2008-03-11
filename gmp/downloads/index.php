@@ -25,7 +25,6 @@ $dls = array(
 		"GMF" => array(
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
-			"Editor" => "editor",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
 		)
