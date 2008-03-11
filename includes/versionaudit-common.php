@@ -321,7 +321,8 @@ foreach ($dirs as $dir)
 	}
 	else
 	{
-		print "$branch: $branchfails failure(s): commit plugin/feature fixes to CVS, then run http://build.eclipse.org/modeling/build/updateSearchCVS.php to refresh database.\n";
+		print "$branch: $branchfails failure(s): commit plugin/feature fixes to CVS, then run http://build.eclipse.org/modeling/build/updateSearchCVS.php to refresh database.\n" .
+				"         Or, if you recently released an R build, update the searchcvs/cvssrc_branches/*-latest folder to the newer tag.\n";
 		ksort($issues);
 		print join("\n", array_keys($issues)) . "\n\n";
 		$issues = array();
