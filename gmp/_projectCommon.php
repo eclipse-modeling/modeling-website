@@ -11,6 +11,21 @@ $debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GE
 $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/" : "/home/data/httpd/writable/www.eclipse.org/");
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
+{
+	$theme = $regs[1];
+}
+else
+{
+	$theme = "Phoenix";
+}
+
+/* projects/components in cvs */
+/* "proj" => "cvsname" */
+$cvsprojs = array (); /* should always be empty */
+
+/* sub-projects/components in cvs for projects/components above (if any) */
+/* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
 	"org.eclipse.gmf" => array (
 		"gmf" => "org.eclipse.gmf",
@@ -20,6 +35,15 @@ $cvscoms = array (
 $projects = array (
 	"GMF" => "gmf",
 );
+$bugcoms = array_flip($projects);
+$bugcoms = preg_replace("/ /", "%20", $bugcoms);
+
+$extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
+$nodownloads = array(""); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array(""); //components without newsgroup
+$nomailinglist = array(""); //components without mailinglist
+$incubating = array(""); // components which are still incubating
+$nomenclature = "Component"; //are we dealing with "components" or "projects"?
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 $regs = null;
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
@@ -37,4 +61,5 @@ $Nav->addNavSeparator("Project Home", 	"/gmf/");
 
 $App->Promotion = TRUE;
 
+unset ($bugcoms);
 ?>
