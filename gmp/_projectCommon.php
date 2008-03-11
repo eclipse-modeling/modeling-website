@@ -1,6 +1,6 @@
 <?php
 
-$PR = "modeling/m2t";
+$PR = "modeling/gmf";
 $projectName = "GMF";
 
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"]));
