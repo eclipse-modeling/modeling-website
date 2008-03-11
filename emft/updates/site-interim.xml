@@ -158,7 +158,29 @@
 	<!-- CDO 0.8.0 I200803090439 (Incubation) -->
 	
 	<!-- TENEO 0.8.0 S200803100207 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803100207" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803100207">
+	
+	<!-- TENEO 0.8.0 S200803111646 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 S200803111646: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200803111646" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200803111646.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200803111646" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200803111646.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200803111646" url="features/org.eclipse.emf.teneo.source_0.8.0.v200803111646.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200803111646" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo_0.8.0.v200803111646.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200803111646" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200803111646.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803111646"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803100207" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803100207">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 S200803100207: contains runtime, source, and documentation.
 		</description>
