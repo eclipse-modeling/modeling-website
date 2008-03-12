@@ -117,6 +117,7 @@ $matches= array_merge($matches, $hl);
 $replacements= array_merge($replacements, preg_replace("/^(.+)$/", "<span class=\"$1\">\\\$1</span>", array_keys($hl)));
 $matches= array_merge($matches, array_keys($filter));
 $replacements= array_merge($replacements, $filter);
+$log2 = array(); foreach ($log as $line) { $log2[] = htmlspecialchars($line); } $log = $log2; unset($log2); # fix HTML chars that break page rendering
 $log= preg_replace($matches, $replacements, $log);
 
 $i= $offset;
