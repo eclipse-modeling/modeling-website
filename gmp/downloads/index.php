@@ -15,7 +15,7 @@ $extraZips = array(
 $dls = array(
 	/*"/newProj" => array(
 		"Project Name" => array( # same as value in _projectCommon.php's $projects array
-			"SDK (Runtime, Source)" => "sdk",
+			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
@@ -26,7 +26,7 @@ $dls = array(
 			"SDK (Runtime, Source, Examples)" => "sdk",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
+			"Automated Tests" => "tests"
 		)
 	),
 );
