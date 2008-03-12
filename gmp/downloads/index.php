@@ -23,7 +23,7 @@ $dls = array(
 	),*/
 	"/gmf" => array(
 		"GMF" => array(
-			"SDK (Runtime, Source, Examples)" => "SDK",
+			"SDK (Runtime, Source, Examples)" => "sdk",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
