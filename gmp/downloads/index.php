@@ -27,6 +27,9 @@ $dls = array(
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "tests"
+			"Experimental SDK" => "sdk-experimental"
+			"Experimental Tests" => "tests-experimental"
+
 		)
 	),
 );
