@@ -26,8 +26,8 @@ $dls = array(
 			"SDK (Runtime, Source, Examples)" => "sdk",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "tests"
-			"Experimental SDK" => "sdk-experimental"
+			"Automated Tests" => "tests",
+			"Experimental SDK" => "sdk-experimental",
 			"Experimental Tests" => "tests-experimental"
 
 		)
