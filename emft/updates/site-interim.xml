@@ -164,7 +164,29 @@
 	<!-- MINT 0.7.0 I200803112236 -->
 	
 	<!-- TENEO 0.8.0 S200803121437 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803121437" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803121437">
+	
+	<!-- COMPARE 0.8.0 I200803130951 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200803130951" url="features/org.eclipse.emf.compare.doc_0.8.0.v200803130951.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200803130951" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200803130951.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200803130951" url="features/org.eclipse.emf.compare.source_0.8.0.v200803130951.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200803130951" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.compare_0.8.0.v200803130951.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200803130951" url="features/org.eclipse.emf.compare.examples_0.8.0.v200803130951.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200803130951"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803121437" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803121437">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 S200803121437: contains runtime, source, and documentation.
 		</description>
