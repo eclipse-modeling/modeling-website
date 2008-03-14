@@ -64,7 +64,7 @@ if (isset($_GET["projects"]) && $_GET["projects"] && is_array($_GET["projects"])
 				print "<h3>Build Command (Preview Only)</h3>\n";
 				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
 			} else if (!$isBuildDotEclipseServer){
-				exec($cmd);
+				exec("/opt/public/modeling/searchcvs/parsecvs.sh " . $cmd);
 			}
 			
 			if (!$previewOnly && $isBuildDotEclipseServer)
