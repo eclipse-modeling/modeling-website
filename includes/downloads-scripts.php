@@ -345,17 +345,17 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 				if (preg_match("/<font size=\"-1\" color=\"#FF0000\">skipped<\/font>/", $indexHTML))
 				{
 					$icon = "check-maybe";
-					$result = "Skipped";
+					$result = "Skipped ";
 				}
 				else if (preg_match("/(?:<!-- Examples -->.*FAIL\.gif|FAIL\.gif.*<!-- Automated Tests -->)/s", $indexHTML))
 				{
 					$icon = "not";
-					$result = "FAILED";
+					$result = "FAILED ";
 				}
 				else if (preg_match("/<!-- Automated Tests -->.*FAIL\.gif.*<!-- Examples -->/s", $indexHTML))
 				{
 					$icon = "check-tests-failed";
-					$result = "TESTS FAILED";
+					$result = "TESTS FAILED ";
 				}
 			}
 		}
@@ -409,7 +409,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 	if (!$result && !is_dir("$PWD${path}testresults/xml/"))
 	{
-		$result = "Skipped";
+		$result = "Skipped ";
 		$icon = "check-maybe";
 	}
 
