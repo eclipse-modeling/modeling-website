@@ -172,7 +172,29 @@
 	<!-- TENEO 0.8.0 S200803172105 (Incubation) -->
 	
 	<!-- TENEO 0.8.0 I200803191826 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826" name="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826">
+	
+	<!-- TENEO 0.8.0 S200803191909 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 S200803191909: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.source_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200803191909" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.teneo_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826" name="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 I200803191826: contains runtime, source, and documentation.
 		</description>
