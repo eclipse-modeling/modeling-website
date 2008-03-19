@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
 
+<news date="March 18, 2008" showOn="whatsnew">
+	<a href="http://www.eclipse.org/modeling/mdt/docs/presentations/EclipseCon2008_LongTalk.html">EclipseCon 2008 Long Talk</a> presentation now available.
+</news>
+<news date="March 11, 2008" showOn="whatsnew">
+    The new <a href="http://www.eclipse.org/modeling/mdt/?project=sbvr">SBVR</a> component has been provisioned.
+</news>
 <news date="February 12, 2008" showOn="whatsnew">
     The new <a href="http://www.eclipse.org/modeling/mdt/?project=bpmn2">BPMN2</a> and <a href="http://www.eclipse.org/modeling/mdt/?project=imm">IMM</a> components have been provisioned.
 </news>
@@ -159,6 +165,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.23 2008/02/12 20:39:52 khussey Exp $ -->
+<!-- $Id: news.xml,v 1.24 2008/03/19 07:56:13 khussey Exp $ -->
 
 </doc>
