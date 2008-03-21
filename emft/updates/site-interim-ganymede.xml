@@ -174,7 +174,29 @@
 	<!-- TENEO 0.8.0 I200803191826 (Incubation) -->
 	
 	<!-- TENEO 0.8.0 S200803191909 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909">
+	
+	<!-- MINT 0.7.0 I200803210015 -->
+	<category-def label="EMFT MINT SDK 0.7.0 I200803210015" name="EMFT MINT SDK 0.7.0 I200803210015">
+		<description>
+EMFT MINT SDK 0.7.0 I200803210015: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.doc_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.source_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.examples" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.examples_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 S200803191909: contains runtime, source, and documentation.
 		</description>
