@@ -59,7 +59,7 @@ $buildtypes = array(
 
 $Nav->addNavSeparator("Project Home", 	"/gmf/");
 
-$App->Promotion = TRUE;
+$App->Promotion = FALSE; # set true to enable current eclipse.org site-wide promo
 
 unset ($bugcoms);
 ?>
