@@ -190,7 +190,15 @@ print <<<EOHTML
 
 	<ul>
 		<li>
-			<div>Nov 8 2007</div>EclipseWorld 2007 - Fundamentals of the Eclipse Modeling Framework, presented by Dave Steinberg
+			<div>March 17 2008</div>EclipseCon 2008 - Fundamentals of the Eclipse Modeling Framework
+			<ul>
+				<li><a href="http://www.eclipse.org/modeling/emf/docs/presentations/EclipseCon/EclipseCon2008-EMF.pdf">Presentation</a> (PDF)</li>
+				<li><a href="http://www.eclipse.org/modeling/emf/docs/presentations/EclipseCon/EclipseCon2008-EMF-UM.zip">Update Manager Site for Exercises</a> (ZIP)</li>
+			</ul>
+		</li>
+
+		<li>
+			<div>Nov 8 2007</div>EclipseWorld 2007 - Fundamentals of the Eclipse Modeling Framework
 			<ul>
 				<li><a href="http://www.eclipse.org/modeling/emf/docs/presentations/EclipseWorld/EclipseWorld2007.pdf">Presentation</a> (PDF)</li>
 			</ul>
@@ -588,4 +596,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.14 2008/02/25 16:53:05 nickb Exp $ -->
+<!-- $Id: index.php,v 1.15 2008/03/25 15:53:28 davidms Exp $ -->
