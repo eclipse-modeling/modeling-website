@@ -13,36 +13,6 @@
     <title>[announce] ocl I200803191800 (1.2.0.I200803191800) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800"/>
     <id>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800</id>
-    <updated>2008-03-26T23:05:06Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200803191800" href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800" type="I" version="1.2.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.2.0/I200803191800/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=ocl&amp;version=I200803191800
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-ocl-all-SDK-I200803191800.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.2.0/I200803191800/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/downloads/drops/I20080305-1100/eclipse-SDK-I20080305-1100-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/I20080228221323/orbit-I20080228221323.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.4.0/I200803181800/emf-sdo-xsd-SDK-I200803181800.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/uml2/downloads/drops/2.2.0/I200803111920/mdt-uml2-SDK-I200803111920.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
-    <title>[announce] ocl I200803191800 (1.2.0.I200803191800) is available</title>
-    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800"/>
-    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800</id>
     <updated>2008-03-19T23:01:41Z</updated>
     <summary>
       <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200803191800" href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200803191800#I200803191800" type="I" version="1.2.0">
