@@ -224,7 +224,7 @@ function getTestResults($file)
 		}
 		if (false!==strpos($line,"<testsuites/>") || false!==strpos($line,"<testsuites />") || false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
 		{
-			return "DNR";
+			return "<b style='color:red'>D N R</b>";
 		}
 	}
 	return $results;
