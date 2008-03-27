@@ -222,7 +222,7 @@ function getTestResults($file)
 			$results = $matches[2] === "0" && $matches[1] === "0" ? "" : $matches[2] . "E, " . $matches[1] . "F";
 			return $results;
 		}
-		if (false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
+		if (false!==strpos($line,"<testsuites/>") || false!==strpos($line,"<testsuites />") || false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
 		{
 			return "DNR";
 		}

@@ -451,7 +451,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	{
 		$out  .= ($result && $result != "..."  && $result != "Skipped" ? ": " : "");
 		$out2  = "";
-		$out2 .= ($didnotruns > 0 ? "$didnotruns DNR, " : "");
+		$out2 .= ($didnotruns > 0 ? "$didnotruns D N R, " : "");
 		$out2 .= ($errors > 0 ? "$errors E, " : "");
 		$out2 .= ($failures > 0 ? "$failures F, " : "");
 		$out2 .= ($warnings > 0 ? "$warnings W" : "");
@@ -952,7 +952,7 @@ function getTestResultsJUnitXML($file)
 		{
 			return array($matches[2], $matches[1], 0);
 		}
-		else if (false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
+		else if (false!==strpos($line,"<testsuites/>") || false!==strpos($line,"<testsuites />") || false!==strpos($line,"<testsuites></testsuites>") || false!==strpos($line,"Failed to invoke suite")) // no tests run!
 		{
 			return array(0, 0, 1);
 		}
