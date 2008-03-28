@@ -5,6 +5,9 @@ $options = array (
 	"BaseBuilderBranch" => "M5_34",
 
 	"BranchAndJDK" => array (
+		"emf.torolab.ibm.com=------------,------------",
+        "2.1.0=HEAD,/opt/sun-java2-5.0",
+        
 		"emft.eclipse.org=------------,------------",
         "2.1.0=HEAD,/opt/sun-java2-5.0",
 	),
