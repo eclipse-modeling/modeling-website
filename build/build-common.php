@@ -363,7 +363,7 @@ function setNote(val)
     note = document.getElementById('note');
 	if (val == "emf" || val == "gef" || val == "net4j")
 		note.innerHTML = "Requires 1 SDK: Eclipse"
-	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare" || val == "teneo")
+	else if (val == "eodm" || val == "uml2" || val == "xsd" || val == "compare" || val == "teneo" || val == "jet")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "ocl")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, UML2, Orbit"
@@ -375,6 +375,8 @@ function setNote(val)
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
 	else if (val == "mwe")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
+	else if (val == "gmf")
+		note.innerHTML = "Requires 9 SDKs: Eclipse, EMF, UML2, Orbit, OCL, QTV (3), GEF"
 	else if (val == "search")
 		note.innerHTML = "Requires 12 SDKs: Eclipse, EMF, UML2, Orbit, OCL, QTV (3), GEF, GMF, Ecore Tools, UML2 Tools"
 	else
