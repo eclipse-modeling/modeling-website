@@ -2,12 +2,12 @@
 
 	#*****************************************************************************
 	#
-	# template.php
+	# index.php
 	#
-	# Author: 		Denis Roy
-	# Date:			2005-06-16
+	# Author: 		Dave Carlson
+	# Date:			$Id: $
 	#
-	# Description: Type your page comments here - these are not sent to the browser
+	# Description: SBVR project home page.
 	#
 	#
 	#****************************************************************************
