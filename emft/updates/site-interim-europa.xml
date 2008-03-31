@@ -172,7 +172,73 @@
 	<!-- TENEO 0.8.0 S200803172105 (Incubation) -->
 	
 	<!-- TENEO 0.8.0 I200803191826 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826" name="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826">
+	
+	<!-- TENEO 0.8.0 S200803191909 (Incubation) -->
+	
+	<!-- MINT 0.7.0 I200803210015 -->
+	
+	<!-- TENEO 0.8.0 I200803310559 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559" name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 I200803310559: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200803310559" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200803310559.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200803310559" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200803310559.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200803310559" url="features/org.eclipse.emf.teneo.source_0.8.0.v200803310559.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200803310559" url="features/org.eclipse.emf.teneo_0.8.0.v200803310559.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200803310559" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200803310559.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200803310559"/>
+	</feature>
+<category-def label="EMFT MINT SDK 0.7.0 I200803210015" name="EMFT MINT SDK 0.7.0 I200803210015">
+		<description>
+EMFT MINT SDK 0.7.0 I200803210015: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.doc_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.source_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.examples" version="0.7.0.v200803210015" url="features/org.eclipse.emf.mint.examples_0.7.0.v200803210015.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200803210015"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909" name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 S200803191909: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.source_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200803191909" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200803191909.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 S200803191909"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826" name="EMFT TENEO SDK (Incubation) 0.8.0 I200803191826">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 I200803191826: contains runtime, source, and documentation.
 		</description>
