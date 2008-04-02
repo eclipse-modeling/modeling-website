@@ -67,7 +67,32 @@
 	<!-- JET 0.9.0 I200803171102 (Incubation) -->
 	
 	<!-- JET 0.9.0 I200803181920 (Incubation) -->
-	<category-def label="M2T JET SDK (Incubation) 0.9.0 I200803181920" name="M2T JET SDK (Incubation) 0.9.0 I200803181920">
+	
+	<!-- JET 0.9.0M6 S200804021516 (Incubation) -->
+	<category-def label="M2T JET SDK (Incubation) 0.9.0M6 S200804021516" name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516">
+		<description>
+M2T JET SDK (Incubation) 0.9.0M6 S200804021516: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.doc" version="0.9.0.v20080211-078-7w31191322" url="features/org.eclipse.jet.doc_0.9.0.v20080211-078-7w31191322.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="0.9.0.v20080211-078-7w31191337" url="features/org.eclipse.jet.editor_0.9.0.v20080211-078-7w31191337.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+	<feature id="org.eclipse.jet.examples" version="0.8.0.v20080211-078-7w31191322" url="features/org.eclipse.jet.examples_0.8.0.v20080211-078-7w31191322.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="0.9.0.v20080211-07X-82Te4djPEEpBQEO" url="features/org.eclipse.jet.sdk_0.9.0.v20080211-07X-82Te4djPEEpBQEO.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="0.9.0.v20080211" url="features/org.eclipse.jet.source_0.9.0.v20080211.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="0.9.0.v20080211-17H-9oA55S5F6F" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.9.0.v20080211-17H-9oA55S5F6F.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.0M6 S200804021516"/>
+	</feature>
+<category-def label="M2T JET SDK (Incubation) 0.9.0 I200803181920" name="M2T JET SDK (Incubation) 0.9.0 I200803181920">
 		<description>
 M2T JET SDK (Incubation) 0.9.0 I200803181920: contains runtime, source, and documentation.
 		</description>
