@@ -187,16 +187,16 @@ print "<li><a href=\"?project=$PR&amp;version=$VER&amp;showAll=$showAll&amp;sort
 print "</ul>\n";
 print "</div>\n";
 
-$f = $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/build/sideitems-common.php";
-if ($isBuildServer && file_exists($f))
+$fsc = $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/build/sideitems-common.php";
+if ($isBuildServer && file_exists($fsc))
 {
-	include_once($f);
+	include_once($fsc);
 }
-
 if ($isBuildServer && function_exists("sidebar"))
 {
 	sidebar();
 }
+unset ($fsc);
 
 print "</div>\n";
 
