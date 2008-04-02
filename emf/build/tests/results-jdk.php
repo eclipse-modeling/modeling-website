@@ -187,7 +187,7 @@ print "<li><a href=\"?project=$PR&amp;version=$VER&amp;showAll=$showAll&amp;sort
 print "</ul>\n";
 print "</div>\n";
 
-$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
+$f = $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/build/sideitems-common.php";
 if ($isBuildServer && file_exists($f))
 {
 	include_once($f);
