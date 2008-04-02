@@ -187,7 +187,16 @@ print "<li><a href=\"?project=$PR&amp;version=$VER&amp;showAll=$showAll&amp;sort
 print "</ul>\n";
 print "</div>\n";
 
-if ($isEMFserver) { include_once $pre."build/sideitems-common.php"; }
+$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
+if ($isBuildServer && file_exists($f))
+{
+	include_once($f);
+}
+
+if ($isBuildServer && function_exists("sidebar"))
+{
+	sidebar();
+}
 
 print "</div>\n";
 
