@@ -26,7 +26,9 @@ $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/include
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
 $data = loadHttpGetVars();
-if ((isset($data["parent"]) && $data["parent"] == "NONE") || (!isset($data["top"]) && isset($data["project"])) || (isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"] && $data["project"] != "emf"))
+if ((isset($data["parent"]) && $data["parent"] == "NONE") || // no parent
+	(!isset($data["top"]) && isset($data["project"])) ||  // no top
+	(isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"] && $data["parent"] != "modeling")) // top == project, but parent != modeling 
 {
 	$PR =  $data["project"]; # GEF
 }
@@ -65,6 +67,7 @@ if (sizeof($data)<4)
 
 $unknown=true;
 $dropsDir = getPWD($data["project"] . "/" . "downloads/drops/", false, $debug > 0);
+
 $buildDetails = "Build Details\t" . "http://" . $_SERVER["SERVER_NAME"] . "/" . $PR . "/downloads/?project=$projct&amp;sortBy=date&amp;hlbuild=" . $data["buildID"] . "#" . $data["buildID"] . "\n\n";
 if (is_readable($dropsDir . $data["version"] . "/" . $data["buildID"]))
 {
