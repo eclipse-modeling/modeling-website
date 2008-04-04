@@ -794,6 +794,12 @@ function doNoclean($dir)
 
 /* thanks to http://www.php.net/manual/en/function.filesize.php#80995 */
 function dirsize($path){
+	$dirsize = exec("du -s $path");
+	if ($dirsize)
+	{
+		$dirsize = explode(" ", $dirsize);
+		return ($dirsize[0] - 0) * 1024;
+	}
 	if (!is_dir($path))
 	{
 		return filesize($path);
