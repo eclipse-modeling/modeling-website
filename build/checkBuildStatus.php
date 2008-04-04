@@ -26,8 +26,9 @@ $writableRoot = ($isBuildServer ? $_SERVER["DOCUMENT_ROOT"] . "/modeling/include
 $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/www-data";
 
 $data = loadHttpGetVars();
-if ((isset($data["parent"]) && $data["parent"] == "NONE") || // no parent
-	(!isset($data["top"]) && isset($data["project"])) ) // no top
+if ( (isset($data["parent"]) && $data["parent"] == "NONE" ) || // no parent
+	( !isset($data["top"]) && isset($data["project"]) ) ||  // no top
+	( (!isset($data["parent"]) || !$data["parent"]) && isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"]) ) // no parent & top == project  
 {
 	$PR =  $data["project"]; # GEF
 }
