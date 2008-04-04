@@ -760,8 +760,8 @@ function outputBuild($branch, $ID, $c)
 		"&amp;project=$projct#$ID\">" .
 		"<img alt=\"Link to this build\" src=\"/modeling/images/link.png\"/>" .
 		"</a>" .
-		((isset($opts["noclean"]) && $opts["noclean"]) || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? " <span class=\"noclean\">noclean</span> <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>" : "");
-
+		((isset($opts["noclean"]) && $opts["noclean"]) || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? doNoclean("$PWD/$branch/$ID") : "");
+		
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
 
 	if (!isset($filePre[$proj]) && isset($filePre["/"]))
@@ -783,6 +783,30 @@ function outputBuild($branch, $ID, $c)
 	$ret .= "</li>\n";
 
 	return $ret;
+}
+
+function doNoclean($dir)
+{
+	$sizeondisk = pretty_size(dirsize($dir));
+	return " <span class=\"noclean\">noclean: $sizeondisk</span>" .
+		   " <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>";		
+}
+
+/* thanks to http://www.php.net/manual/en/function.filesize.php#80995 */
+function dirsize($path){
+	if (!is_dir($path))
+	{
+		return filesize($path);
+	}
+	$size = 0;
+	foreach (scandir($path) as $file)
+	{
+		if ($file != '.' && $file != '..')
+		{
+			$size += dirsize($path . '/' . $file);
+		}
+	}
+	return $size;
 }
 
 function loadBuildConfig($file, $deps)
