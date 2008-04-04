@@ -27,8 +27,7 @@ $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/
 
 $data = loadHttpGetVars();
 if ((isset($data["parent"]) && $data["parent"] == "NONE") || // no parent
-	(!isset($data["top"]) && isset($data["project"])) ||  // no top
-	(isset($data["top"]) && isset($data["project"]) && $data["top"] == $data["project"] && $data["parent"] != "modeling")) // top == project, but parent != modeling 
+	(!isset($data["top"]) && isset($data["project"])) ) // no top
 {
 	$PR =  $data["project"]; # GEF
 }
