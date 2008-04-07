@@ -24,11 +24,12 @@ $dls = array(
 	"/gmf" => array(
 		"GMF" => array(
 			"SDK (Runtime, Source, Examples)" => "sdk",
+			"Experimental SDK" => "sdk-experimental",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
+			"Examples PDE Wizard" => "examples-pde",
 			"Automated Tests" => "tests",
-			"Experimental SDK" => "sdk-experimental",
-			"Experimental Tests" => "tests-experimental"
+			"Experimental Tests" => "tests-experimental",
 
 		)
 	),
