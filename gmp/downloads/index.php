@@ -8,6 +8,7 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
+	"examples-pde"
 );
 
 /* $project => sections/Project Name => (prettyname => filename) */
