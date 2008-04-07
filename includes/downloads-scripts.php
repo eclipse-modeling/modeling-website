@@ -474,7 +474,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 
 	return $isBuildServer ?
 		array(
-			str_replace("/modeling/", "http://" . $_SERVER["SERVER_NAME"] . "/modeling/", $out),
+			preg_replace("#^/modeling/#", "http://" . $_SERVER["SERVER_NAME"] . "/modeling/", $out),
 			"http://" . $_SERVER["SERVER_NAME"] . $link2,
 			"http://" . $_SERVER["SERVER_NAME"] . $link
 		) :
