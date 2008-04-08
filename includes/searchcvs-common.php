@@ -206,7 +206,7 @@ if ($connect)
 			<li><a href="?q=%22package+protected%22<?php print $fullpath ? '&amp;fullpath' : ''; ?>">"package protected"</a></li>
 			<li><a href="?q=Neil+Skrypuch<?php print $fullpath ? '&amp;fullpath' : ''; ?>">Neil Skrypuch</a></li>
 		</ul>
-		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a>.</p>
+		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a> or the <a href="http://build.eclipse.org/modeling/build/schema.php">Database Schema</a>.</p>
 	</div>
 	<div class="sideitem">
 		<h6>Generate Changeset</h6>
