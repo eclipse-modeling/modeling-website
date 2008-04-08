@@ -468,12 +468,23 @@ function doSubmit() {
   }
 }
 
+// bug 222298: TODO
+/*
+ * 1. get  
+ 
+ */
+function selectLatestDependencies()
+{
+	
+}
+
 function doOnLoadDefaults() {
   field=document.forms.buildForm.build_CVS_Branch;   doBranchSelected(field);
   field=document.forms.buildForm.build_Mapfile_Rule;
   field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?>;
   setNote('<?php echo $projct; ?>');
   setCheckbox("build_Run_Tests_JUnit",true);
+  selectLatestDependencies();
 }
 
 setTimeout('doOnLoadDefaults()',1000);
@@ -757,7 +768,7 @@ function findCatg($url) {
 		"07transaction" => "emf-transaction-|emft-transaction-",
 		"06query" => "emf-query-|emft-query-",
 		"05ocl" => "mdt-ocl-|emft-ocl-",
-		"04orbit" => "orbit-",
+		"04orbit" => "orbit-|orbitBundles-",
 		"03uml2" => "mdt-uml2-|uml2-",
 		"02emf" => "emf-sdo-xsd-",
 		"01eclipse" => "eclipse-",
