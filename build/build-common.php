@@ -92,6 +92,17 @@ else
 }
 $options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
+// bug 222298: this will probably break on some servers 
+$selectedDepsList = array();
+exec($workDir . "modeling/scripts/start_cron.sh -sub $projct -noSearchCVS -depsOnly", $selectedDepsList);
+$selectedDepsList2 = array(); 
+foreach($selectedDepsList as $i => $row)
+{
+	$bits = explode("=",$row);
+	$selectedDepsList2[$bits[0]] = $bits[1];  
+}
+$selectedDepsList = $selectedDepsList2; unset($selectedDepsList2); //print_r($selectedDepsList);
+
 if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 { // page one, the form
 ?>
@@ -122,9 +133,14 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			</tr>
 
 			<tr>
-				<td colspan="2"></td>
-				<td colspan="4">
+				<td colspan="6" align="right">
 					<div name="fullURL" id="fullURL" style="border:0;font-size:9px;" readonly="readonly">&#160;</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"></td>
+				<td colspan="2">
+					<small><acronym title="Show all deps / show only selected deps"><a href="javascript:toggleDependencies()">Toggle Selection</a></acronym> | <acronym title="Define a regex in _common.php to use this"><a href="javascript:resetLatestDependencies()">Reset Latest Dependencies</a></acronym></small> 
 				</td>
 			</tr>
 
@@ -358,8 +374,26 @@ function showfullURL(val)
 	fullURL.innerHTML = val ? "&#160;--&gt; " + val + " &lt;--" : "&#160;";
 }
 
+<?php 
+/* pull list of deps from $options[regex], if defined; see $selectedDepsList above */
+if (isset($selectedDepsList) && sizeof($selectedDepsList)>0)
+{
+	$numDeps = sizeof($selectedDepsList);
+	$theDeps = implode(", ", array_keys($selectedDepsList));
+	print <<<EOT
 function setNote(val)
 {
+	// defined dynamically in _common.php using \$options[regex]
+   	note = document.getElementById('note');
+   	note.innerHTML = "Requires $numDeps SDKs: $theDeps";
+}	
+EOT;
+}
+else
+{ ?>
+function setNote(val)
+{
+	// defined statically -- replace this in _common.php using \$options[regex]
     note = document.getElementById('note');
 	if (val == "emf" || val == "gef" || val == "net4j")
 		note.innerHTML = "Requires 1 SDK: Eclipse"
@@ -371,8 +405,6 @@ function setNote(val)
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Net4j"
 	else if (val == "query" || val == "validation")
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, OCL"
-	else if (val == "transaction")
-		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Validation"
 	else if (val == "mwe")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
 	else if (val == "gmf")
@@ -381,8 +413,8 @@ function setNote(val)
 		note.innerHTML = "Requires 12 SDKs: Eclipse, EMF, UML2, Orbit, OCL, QTV (3), GEF, GMF, Ecore Tools, UML2 Tools"
 	else
 		note.innerHTML = "Requires at least 2 SDKs: Eclipse, EMF, ..."
-}
-
+} <?php 
+} ?>
 function branchToDivNum()
 {
   return document.forms.buildForm.build_Branch.value.substring(0,3).replace(".","");
@@ -468,14 +500,94 @@ function doSubmit() {
   }
 }
 
-// bug 222298: TODO
-/*
- * 1. get  
- 
- */
+selectedDepsList = new Array();
+<?php $cnt=-1; foreach ($selectedDepsList as $key => $url) print "selectedDepsList[" . (++$cnt) . "] = '$url';\n"; ?>
+
+allDependencies = new Array();
+field=document.forms.buildForm.elements["build_Dependencies_URL[]"];
+for (i=0; i<field.options.length; i++)
+{
+	allDependencies[i] = [field.options[i].text, field.options[i].value, field.options[i].selected];
+}  
+
+
+/* onload of the page, pick the regex-specified defaults */
 function selectLatestDependencies()
 {
-	
+  field=document.forms.buildForm.elements["build_Dependencies_URL[]"];
+  for (j=0;j<selectedDepsList.length;j++)
+  {
+	for (i=0;i<field.options.length;i++)
+  	{
+  		if (field.options[i].value == selectedDepsList[j])
+  		{
+  			//alert('Match: ' + selectedDepsList[j]);
+  			field.options[i].selected=true;
+  			break;
+  		}
+  	}
+  }
+  refreshAllDependencies();
+}
+
+function refreshAllDependencies()
+{
+  field=document.forms.buildForm.elements["build_Dependencies_URL[]"];
+  for (i=0;i<field.options.length;i++)
+  {
+  	for (j=0;j<allDependencies.length;j++)
+  	{
+  		if (allDependencies[j][0] == field.options[i].text && allDependencies[j][1] == field.options[i].value)
+  		{ 
+  			allDependencies[j][2] = field.options[i].selected;
+  		}
+  	}
+  }
+}
+
+/* use this to purge any user-selected values and to only pick the latest deps */
+function resetLatestDependencies()
+{
+  if (selectedDepsList.length)
+  { 
+  	field=document.forms.buildForm.elements["build_Dependencies_URL[]"];
+  	for (i=0;i<field.options.length;i++)
+  	{
+  		field.options[i].selected = false;
+  	}
+  	selectLatestDependencies();
+  }
+  else
+  {
+  	alert("No latest dependencies specified in\n\$options[\"regex\"] in _common.php.")
+  }
+}
+
+/* toggle showing all deps and only the selected ones */
+function toggleDependencies()
+{
+	field=document.forms.buildForm.elements["build_Dependencies_URL[]"];
+	if (allDependencies.length==field.options.length)
+	{
+		j=0;
+		for (i=field.options.length-1;i>=0;i--)
+	  	{
+			allDependencies[i][2] = field.options[i].selected;
+	  		if (!field.options[i].selected)
+	  		{
+	  			field.remove(i);
+	  		}
+	  	}
+	}
+	else
+	{
+		field.options.length=0
+		for (i=0;i<allDependencies.length;i++)
+		{
+			field.options[field.options.length] = new Option(allDependencies[i][0], allDependencies[i][1], false, allDependencies[i][2]);
+		}
+		//selectLatestDependencies()
+	}
 }
 
 function doOnLoadDefaults() {
@@ -484,7 +596,8 @@ function doOnLoadDefaults() {
   field.selectedIndex=<?php echo isset($options["Mapfile_Rule_Default"]) ? $options["Mapfile_Rule_Default"] : 1; ?>;
   setNote('<?php echo $projct; ?>');
   setCheckbox("build_Run_Tests_JUnit",true);
-  selectLatestDependencies();
+  selectLatestDependencies(); 
+  if (selectedDepsList.length) { toggleDependencies(); }
 }
 
 setTimeout('doOnLoadDefaults()',1000);
@@ -820,7 +933,7 @@ function displayCheckboxes($label,$options,$divSuffix="") {
 
 function displayOptionsTriplet($options) {
 	$matches = null;
-	if ($options["reversed"]) {
+	if (isset($options["reversed"]) && $options["reversed"]) {
 		// pop that item out
 		array_shift($options);
 		$options = array_reverse($options);
@@ -864,7 +977,7 @@ function compareURLs($a, $b) {
 }
 
 function displayURLs($options,$verbose=false) {
-	if ($options["reversed"]) {
+	if (isset($options["reversed"]) && $options["reversed"]) {
 		// pop that item out
 		array_shift($options);
 		$options = array_reverse($options);
