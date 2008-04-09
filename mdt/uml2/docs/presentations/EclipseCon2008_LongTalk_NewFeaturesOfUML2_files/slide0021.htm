@@ -1,0 +1,479 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File
+href="../EclipseCon2008_LongTalk_NewFeaturesOfUML2.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>New Features Of UML2</title>
+<meta name=Description
+content="4/9/2008: Generics: Examples – Generic Operations">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<!--[if gte IE 5]>
+<object id=MSOANIM classid="CLSID:A4639D2F-774E-11D3-A490-00C04F6843FB"></object>
+<object id=MSOTIME classid="CLSID:A4639D29-774E-11D3-A490-00C04F6843FB"></object>
+<![endif]-->
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<style>
+<!--
+oa\:* { BEHAVIOR: url(#MSOANIM#ANIM) url(#MSOTIME#TIME) }
+oa\:par,oa\:seq,oa\:iterate { BEHAVIOR:url(#MSOTIME) }
+oa\:video,oa\:audio {BEHAVIOR:url(#MSOTIME) url(#MSOTIME#MEDIA) }
+-->
+</style>
+<script src=script.js></script><script><!--
+if( !IsNts() ) Redirect( "PPTSld" );
+//--></script><script><!--
+g_animItemsToHide=new Array("_x0000_s35867","_x0000_s35866");
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="35"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onload="LoadSld()"
+onkeypress="_KPH()" oa:clockstart="onstart">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1032"/><![if !vml]><img border=0
+ v:shapes="_x0000_s1032" src="master03_image005.jpg" style='position:absolute;
+ top:91.75%;left:0%;width:100.0%;height:8.25%'><![endif]><p:shaperange
+  href="master03.xml#_x0000_s1031"/><![if !vml]><img border=0
+ v:shapes="_x0000_s1031" src="master03_image006.jpg" style='position:absolute;
+ top:0%;left:2.05%;width:36.32%;height:14.0%'><![endif]><p:shaperange
+  href="master03.xml#_x0000_s1033"/>
+ <div v:shape="_x0000_s1033" class=O>
+ <div style='position:absolute;top:95.25%;left:16.85%;width:82.39%;height:2.25%'><span
+ style='mso-bidi-font-family:Arial;font-size:42%'><span
+ style='mso-spacerun:yes'> </span></span><span style='font-size:42%'>New
+ Features of UML2</span><span lang=EN-US style='font-size:42%;mso-ansi-language:
+ EN-US'> |<span style='mso-spacerun:yes'>  </span>Long Talk | Copyright © IBM
+ Corp., 2007-2008.<span style='mso-spacerun:yes'>  </span>All rights reserved. </span></div>
+ </div>
+ <div v:shape="_x0000_s1035" class=O>
+ <div style='mso-line-spacing:"100 50 0";mso-char-wrap:1;mso-kinsoku-overflow:
+ 1;position:absolute;top:96.25%;left:.93%;width:9.17%;height:2.25%'><span
+ lang=EN-US style='mso-bidi-font-family:Arial;font-size:42%;mso-ansi-language:
+ EN-US;mso-field-code:meta16'><b>13</b></span><span lang=EN-US
+ style='mso-bidi-font-family:Arial;font-size:42%;mso-ansi-language:EN-US;
+ mso-special-format:lastCR;display:none'><b>&#13;</b></span></div>
+ </div>
+ <![endif]><p:shaperange href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s35842"
+  type="#_x0000_m1026" style='position:absolute;left:54pt;top:84pt;width:612pt;
+  height:42pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape>
+ <div v:shape="_x0000_s35842" class=T style='position:absolute;top:16.75%;
+ left:8.42%;width:87.82%;height:6.0%'>Generics: Examples – Generic Operations</div>
+ <v:shape id="_x0000_s35845" type="#_x0000_t75" style='position:absolute;
+  left:84.75pt;top:231.125pt;width:220.5pt;height:66.75pt' fillcolor="#bbe0e3 [4]"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:imagedata src="slide0021_image033.png" o:title=""/>
+  <v:shadow color="gray [2]"/>
+  <o:lock v:ext="edit" text="t"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s35845"
+ src="slide0021_image034.jpg" style='position:absolute;top:42.75%;left:11.79%;
+ width:30.71%;height:12.25%'><![endif]><v:shape id="_x0000_s35846" type="#_x0000_t75"
+  style='position:absolute;left:367.25pt;top:194pt;width:298.625pt;height:105pt'
+  fillcolor="#bbe0e3 [4]" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:imagedata src="slide0021_image035.png" o:title=""/>
+  <v:shadow color="gray [2]"/>
+  <o:lock v:ext="edit" text="t"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s35846"
+ src="slide0021_image036.jpg" style='position:absolute;top:36.0%;left:50.93%;
+ width:41.38%;height:19.5%'><![endif]><v:group id="_x0000_s35863" style='position:absolute;
+  left:126pt;top:342pt;width:478.5pt;height:50.25pt' coordorigin="3696,3213"
+  coordsize="3828,402" o:tableproperties="1" o:tablelimits="43.25pt">
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:rect id="_x0000_s35848" style='position:absolute;left:3696;top:3213;
+   width:3828;height:402' fillcolor="#f3f3f3" stroked="f" strokecolor="black [1]">
+   <v:fill alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:line id="_x0000_s35849" style='position:absolute' from="3696,3213"
+   to="7524,3213" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35850" style='position:absolute' from="3696,3615"
+   to="7524,3615" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35851" style='position:absolute' from="3696,3213"
+   to="3696,3615" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35852" style='position:absolute' from="7524,3213"
+   to="7524,3615" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line></v:group><v:group id="_x0000_s35864" style='position:absolute;
+  left:126pt;top:402pt;width:478.5pt;height:79pt' coordorigin="3696,3639"
+  coordsize="3828,632" o:tableproperties="1" o:tablelimits="56.375pt">
+  <o:lock v:ext="edit" rotation="t"/>
+  <v:rect id="_x0000_s35854" style='position:absolute;left:3696;top:3639;
+   width:3828;height:632' fillcolor="#f3f3f3" stroked="f" strokecolor="black [1]">
+   <v:fill alignshape="f" o:detectmouseclick="t"/>
+   <v:shadow color="gray [2]"/>
+  </v:rect><v:line id="_x0000_s35855" style='position:absolute' from="3696,3639"
+   to="7524,3639" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35856" style='position:absolute' from="3696,4271"
+   to="7524,4271" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35857" style='position:absolute' from="3696,3639"
+   to="3696,4271" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line><v:line id="_x0000_s35858" style='position:absolute' from="7524,3639"
+   to="7524,4271" stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:line></v:group><v:line id="_x0000_s35859" style='position:absolute'
+  from="1in,324pt" to="660pt,324pt" strokecolor="black [1]">
+  <v:shadow color="gray [2]"/>
+ </v:line><![if !vml]><img border=0
+ v:shapes="_x0000_s35863,_x0000_s35848,_x0000_s35849,_x0000_s35850,_x0000_s35851,_x0000_s35852,_x0000_s35864,_x0000_s35854,_x0000_s35855,_x0000_s35856,_x0000_s35857,_x0000_s35858,_x0000_s35859"
+ src="slide0021_image037.gif" style='position:absolute;top:60.0%;left:9.92%;
+ width:82.02%;height:29.5%'><![endif]>
+ <div v:shape="_x0000_s35848">
+ <div class=Tbl1 style='mso-margin-left-alt:288;mso-text-indent-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576;mso-text-indent-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864;mso-text-indent-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152;mso-text-indent-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:63.75%;left:18.53%;width:64.6%;height:3.25%'><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%'>&nbsp;</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:"Arial Unicode MS";mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";font-size:60%;color:#7F0055'><b>public</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:#7F0055'><b>interface</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>MyClass</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:#7F0055'><b>extends</b></span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>EObject</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:black'>{</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:"Courier New";mso-ascii-font-family:"Courier New";
+ mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:66.25%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:white'>&nbsp;&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>&lt;T&gt;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:black'>T</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%;color:black'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>someOperation(T</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:black'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>p1);</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Courier New";mso-ascii-font-family:
+ "Courier New";mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:69.0%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>}</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:Arial;
+ mso-fareast-font-family:"Times New Roman";mso-special-format:lastCR;
+ display:none'>&#13;</span></span></span></div>
+ </div>
+ <div v:shape="_x0000_s35854">
+ <div class=Tbl1 style='mso-margin-left-alt:288;mso-text-indent-alt:288'></div>
+ <div class=Tbl2 style='mso-margin-left-alt:576;mso-text-indent-alt:576'></div>
+ <div class=Tbl3 style='mso-margin-left-alt:864;mso-text-indent-alt:864'></div>
+ <div class=Tbl4 style='mso-margin-left-alt:1152;mso-text-indent-alt:1152'></div>
+ <div class=Tbl style='mso-margin-left-alt:0'><span style='position:absolute;
+ top:74.75%;left:18.53%;width:64.6%;height:3.25%'><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%'>&nbsp;</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:"Arial Unicode MS";mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";font-size:60%;color:#7F0055'><b>public</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:#7F0055'><b>class</b></span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>MyClassImpl</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:#7F0055'><b>extends</b></span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>EObjectImpl</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:#7F0055'><b>implements</b></span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>MyClass</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:black'>{</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:"Courier New";mso-ascii-font-family:"Courier New";
+ mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:77.5%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:white'>&nbsp;&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:#7F0055'><b>public</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:#7F0055'><b>&nbsp;</b></span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>&lt;T&gt;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:black'>T</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%;color:black'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>someOperation(T</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:black'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>p1)</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";
+ mso-fareast-font-family:"Times New Roman";mso-hansi-font-family:Arial;
+ font-size:60%;color:black'>&nbsp;</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Arial Unicode MS";mso-ascii-font-family:
+ "Arial Unicode MS";mso-fareast-font-family:"Times New Roman";font-size:60%;
+ color:black'>{</span></span><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:"Courier New";mso-ascii-font-family:"Courier New";
+ mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:80.25%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:#3F7F5F'>//...</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Courier New";mso-ascii-font-family:
+ "Courier New";mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:82.75%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:Arial;
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ mso-hansi-font-family:Arial;font-size:60%;color:white'>&nbsp;&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>}</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:"Courier New";mso-ascii-font-family:
+ "Courier New";mso-fareast-font-family:"Times New Roman";font-size:60%'><br>
+  </span></span></span><span style='position:absolute;top:85.5%;left:18.53%;
+ width:64.6%;height:3.25%'><span style='mso-bidi-font-family:"Courier New"'><span
+ style='font-family:Arial;mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:
+ "Times New Roman";mso-hansi-font-family:Arial;font-size:60%'>&nbsp;</span></span><span
+ style='mso-bidi-font-family:"Courier New"'><span style='font-family:"Arial Unicode MS";
+ mso-ascii-font-family:"Arial Unicode MS";mso-fareast-font-family:"Times New Roman";
+ font-size:60%;color:black'>}</span></span><span style='mso-bidi-font-family:
+ "Courier New"'><span style='font-family:Arial;mso-ascii-font-family:Arial;
+ mso-fareast-font-family:"Times New Roman";mso-special-format:lastCR;
+ display:none'>&#13;</span></span></span></div>
+ </div>
+ <v:line id="_x0000_s35860" style='position:absolute;flip:x' from="336pt,155.5pt"
+  to="337.625pt,324pt" strokecolor="black [1]">
+  <v:shadow color="gray [2]"/>
+ </v:line><v:rect id="_x0000_s35861" style='position:absolute;left:1in;top:138pt;
+  width:172.875pt;height:45.75pt' filled="f" fillcolor="#bbe0e3 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+ </v:rect><v:rect id="_x0000_s35862" style='position:absolute;left:382.125pt;
+  top:138pt;width:172.875pt;height:45.75pt' filled="f" fillcolor="#bbe0e3 [4]"
+  stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+ </v:rect><![if !vml]><img border=0 v:shapes="_x0000_s35860"
+ src="slide0021_image038.gif" style='position:absolute;top:28.75%;left:46.62%;
+ width:.56%;height:31.75%'><![endif]>
+ <div v:shape="_x0000_s35861">
+ <div class=B1 style='mso-margin-left-alt:468;mso-text-indent-alt:288'></div>
+ <div class=B2 style='mso-margin-left-alt:720;mso-text-indent-alt:576'></div>
+ <div class=B3 style='mso-margin-left-alt:1008;mso-text-indent-alt:864'></div>
+ <div class=B4 style='mso-margin-left-alt:1296;mso-text-indent-alt:1152'></div>
+ <div class=B style='mso-margin-left-alt:216;position:absolute;top:26.5%;
+ left:11.04%;width:22.09%;height:5.25%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><u>UML Model</u></div>
+ </div>
+ <div v:shape="_x0000_s35862">
+ <div class=B1 style='mso-margin-left-alt:468;mso-text-indent-alt:288'></div>
+ <div class=B2 style='mso-margin-left-alt:720;mso-text-indent-alt:576'></div>
+ <div class=B3 style='mso-margin-left-alt:1008;mso-text-indent-alt:864'></div>
+ <div class=B4 style='mso-margin-left-alt:1296;mso-text-indent-alt:1152'></div>
+ <div class=B style='mso-margin-left-alt:216;position:absolute;top:26.5%;
+ left:54.11%;width:22.09%;height:5.25%'><span style='mso-special-format:nobullet;
+ display:none'>•</span><u>Properties</u></div>
+ </div>
+ <v:oval id="_x0000_s35866" style='position:absolute;left:378pt;top:246pt;
+  width:270pt;height:48pt;flip:y;mso-wrap-style:none;v-text-anchor:middle'
+  fillcolor="#bbe0e3 [4]" strokecolor="red">
+  <v:fill opacity="0" o:detectmouseclick="t"/>
+  <v:shadow color="gray [2]"/>
+  <p:animation number="2" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/><p:onmousemove flag="1"/></v:oval><![if !vml]><img
+ border=0 v:shapes="_x0000_s35866" src="slide0021_image039.gif"
+ style='position:absolute;top:45.5%;left:52.43%;width:37.82%;height:9.5%'><![endif]><v:oval
+  id="_x0000_s35867" style='position:absolute;left:78pt;top:270pt;width:3in;
+  height:18pt;mso-wrap-style:none;v-text-anchor:middle' fillcolor="#bbe0e3 [4]"
+  strokecolor="red">
+  <v:fill opacity="0" o:detectmouseclick="t"/>
+  <v:shadow color="gray [2]"/>
+  <p:animation number="3" delay="0" type="object" effect="cut"
+   direction="noBlack" flag="17408"/><p:onmousemove flag="1"/></v:oval><![if !vml]><img
+ border=0 v:shapes="_x0000_s35867" src="slide0021_image040.gif"
+ style='position:absolute;top:50.0%;left:10.86%;width:30.33%;height:4.0%'><![endif]></p:slide></div>
+
+<p:animation number="-1177318950"/><oa:par id="TimeNode0" dur="indefinite"
+ restart="never" p:nodeType="timingRoot">
+ <oa:seq id="TimeNode1" dur="indefinite" prev="document.onpptprev"
+  next="document.onpptnext" concurrent="enabled" nextAction="seek"
+  p:nodeType="mainSeq">
+  <oa:par id="TimeNode2" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode3" begin="0.0" fill="hold">
+    <oa:par id="TimeNode4" o:presetID="ppt_55" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode5" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s35866" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animate id="TimeNode6" dur="1.0" fill="hold"
+      targetElement="_x0000_s35866" attributeName="ppt_w" calcmode="linear"
+      valueType="number" keyTimes="0.0;1.0" values="#ppt_w*0.70;#ppt_w"/>
+     <oa:animate id="TimeNode7" dur="1.0" fill="hold"
+      targetElement="_x0000_s35866" attributeName="ppt_h" calcmode="linear"
+      valueType="number" keyTimes="0.0;1.0" values="#ppt_h;#ppt_h"/>
+     <oa:animateFilter id="TimeNode8" dur="1.0" targetElement="_x0000_s35866"
+      transition="in" filter="fade"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+  <oa:par id="TimeNode9" begin="indefinite" fill="hold">
+   <oa:par id="TimeNode10" begin="0.0" fill="hold">
+    <oa:par id="TimeNode11" o:presetID="ppt_55" o:presetClass="entrance"
+     o:presetSubType="0x0" begin="0.0" fill="hold" p:nodeType="clickEffect">
+     <oa:set id="TimeNode12" begin="0.0" dur="0.001" fill="hold"
+      targetElement="_x0000_s35867" attributeName="style.visibility"
+      to="visible"/>
+     <oa:animate id="TimeNode13" dur="1.0" fill="hold"
+      targetElement="_x0000_s35867" attributeName="ppt_w" calcmode="linear"
+      valueType="number" keyTimes="0.0;1.0" values="#ppt_w*0.70;#ppt_w"/>
+     <oa:animate id="TimeNode14" dur="1.0" fill="hold"
+      targetElement="_x0000_s35867" attributeName="ppt_h" calcmode="linear"
+      valueType="number" keyTimes="0.0;1.0" values="#ppt_h;#ppt_h"/>
+     <oa:animateFilter id="TimeNode15" dur="1.0" targetElement="_x0000_s35867"
+      transition="in" filter="fade"/>
+    </oa:par>
+   </oa:par>
+  </oa:par>
+ </oa:seq>
+</oa:par>
+</body>
+
+</html>
