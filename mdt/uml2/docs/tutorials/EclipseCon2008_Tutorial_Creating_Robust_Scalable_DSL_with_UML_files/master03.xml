@@ -1,0 +1,76 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout><p:colorscheme
+  colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"/>
+ <v:background id="_x0000_s1025" o:bwmode="white" fillcolor="white [0]">
+  <v:fill color2="#339 [5]"/>
+ </v:background><p:shaperange id="_x0000_s1032">
+  <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+   o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_s1032" type="#_x0000_t75" style='position:absolute;
+   left:0;top:495pt;width:10in;height:45pt' o:userdrawn="t">
+   <v:imagedata src="master03_image001.jpg" o:title="light4"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="_x0000_m1026">
+  <v:shapetype id="_x0000_m1026" style='position:absolute;left:54pt;top:84pt;
+   width:612pt;height:42pt;v-text-anchor:middle' coordsize="21600,21600"
+   o:master="" o:spt="1" path="m,l,21600r21600,l21600,xe" filled="f"
+   fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+   <v:fill color2="white [0]" o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <p:placeholder type="title"/>
+  </v:shapetype></p:shaperange>
+ <p:shaperange id="_x0000_m1027">
+  <v:shapetype id="_x0000_m1027" style='position:absolute;left:54pt;top:138pt;
+   width:612pt;height:342pt' coordsize="21600,21600" o:master="" o:spt="1"
+   path="m,l,21600r21600,l21600,xe" filled="f" fillcolor="#bbe0e3 [4]"
+   stroked="f" strokecolor="black [1]">
+   <v:fill color2="white [0]" o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <p:placeholder type="body" position="1"/>
+  </v:shapetype></p:shaperange>
+ <p:shaperange id="_x0000_s1031">
+  <v:shape id="_x0000_s1031" type="#_x0000_t75" style='position:absolute;
+   left:14.75pt;top:0;width:262.125pt;height:76pt' o:userdrawn="t">
+   <v:imagedata src="master03_image002.jpg" o:title="eclipsecon_2008"
+    croptop="8573f" cropbottom="8252f"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="_x0000_s1033">
+  <v:rect id="_x0000_s1033" style='position:absolute;left:114pt;top:509.875pt;
+   width:606pt;height:19.25pt' o:bwmode="black" o:userdrawn="t" filled="f"
+   fillcolor="#bbe0e3 [4]" stroked="f" strokecolor="black [1]">
+   <v:fill color2="white [0]"/>
+   <v:shadow color="gray [2]"/>
+   <v:textbox style='mso-fit-shape-to-text:t'/>
+   <p:tag name="___PPTMac11" type="binary" datasize="284" dataoffset="5"/>
+  </v:rect><v:rect id="_x0000_s1035" style='position:absolute;left:0;top:514.75pt;
+   width:79.25pt;height:25.25pt' o:bwmode="black" filled="f" fillcolor="#bbe0e3 [4]"
+   stroked="f" strokecolor="black [1]">
+   <v:shadow color="gray [2]"/>
+  </v:rect></p:shaperange>
+</xml>
