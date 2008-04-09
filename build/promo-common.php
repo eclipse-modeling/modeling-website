@@ -318,11 +318,11 @@ function checkReleaseExists(fullPath)
 		val = field.options[field.selectedIndex].value;
 		val = val.substring(val.indexOf("/") + 1);
 		val = val.substring(0, val.indexOf(" "));
-		document.location.href='http://build.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php?project=<?php print $projct; ?>&version=' + val;
+		document.location.href='http://www.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php?project=<?php print $projct; ?>&version=' + val;
 	}
 	else
 	{
-		document.location.href='http://build.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php';
+		document.location.href='http://www.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php';
 	}
 }
 
