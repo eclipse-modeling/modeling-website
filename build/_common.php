@@ -30,7 +30,7 @@ function getValueFromOptionsString($opt, $nameOrValue)
 function displayOptions($options, $verbose = false, $selected = -1)
 {
 	$matches = null;
-	if ($options["reversed"])
+	if (isset($options["reversed"]) && $options["reversed"])
 	{
 		// pop that item out
 		array_shift($options);
