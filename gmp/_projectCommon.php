@@ -23,14 +23,14 @@ else
 
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
-$cvsprojs = array (); /* should always be empty */
+$cvsprojs = array ("gmf" => "org.eclipse.gmf"); // TODO: use this until GMF has subprojects, then switch to use $cvscoms instead; will require reorging CVS and the components in the database
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
-	"org.eclipse.gmf" => array (
+/*	"org.eclipse.gmf" => array (
 		"gmf" => "org.eclipse.gmf",
-	)
+	)*/
 );
 
 $projects = array (
