@@ -40,7 +40,7 @@ $dls = array(
 /* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
 	/* "/newproj" => array("gmf-newproj"), */
-	"/gmf" => array("gmf")
+	"/gmf" => array("gmf", "GMF")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
