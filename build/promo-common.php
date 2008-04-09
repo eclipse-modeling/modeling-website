@@ -217,6 +217,22 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					</div>
 				</td>
 			</tr>
+			<tr>
+				<td colspan="3">&#160;</td>
+				<td>
+				<p><input type="checkbox" name="build_FORCE" value="Y" onclick=""> Allow republishing? 
+					(<a href="javascript:checkReleaseExists(true)">-FORCE</a>)</p>
+				</td>
+				<td width="300"><small><a id="divToggle_FORCE" name="divToggle_FORCE" href="javascript:toggleDetails('FORCE')">[+]</a></small>
+					<div id="divDetail_FORCE" name="divDetail_FORCE" style="display:none;border:0">
+					<small>
+					The -FORCE flag allows you to republish a build that already appears in the database. 
+					To check if your build is already in the database, use <a href="javascript:checkReleaseExists(true)">checkReleaseExists.php</a>.
+					See also the <a href="javascript:checkReleaseExists(false)">API</a>.
+					</small>
+					</div>
+				</td>
+			</tr>
 
 			<tr>
 				<td>&#160;</td>
@@ -294,15 +310,33 @@ function toggleDetails(id)
   }
 }
 
+function checkReleaseExists(fullPath)
+{
+	field = document.forms.promoForm.build_Version_Build_ID_And_Branch;
+	if (fullPath)
+	{
+		val = field.options[field.selectedIndex].value;
+		val = val.substring(val.indexOf("/") + 1);
+		val = val.substring(0, val.indexOf(" "));
+		document.location.href='http://build.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php?project=<?php print $projct; ?>&version=' + val;
+	}
+	else
+	{
+		document.location.href='http://build.eclipse.org/<?php print $PR; ?>/news/checkReleaseExists.php';
+	}
+}
+
 function doOnclickBugzonly(booln) {
 	with (document.forms.promoForm) {
 		<?php if (isIES() || $projct == "emf") { #TODO: remove this hack once EMF runs as a modeling build ?>
 		build_Update_IES_Map_File.disabled=booln;
 		build_IES_CVS_Branch.disabled=booln;
 		<?php } ?>
-		build_Announce_In_Newsgroup.disabled=booln;
 		build_Update_Coordinated_Update_Site.disabled=booln;
 		build_Coordinated_Site_Name.disabled=booln;
+		build_Store_SDK_As_Dependency.disabled=booln;
+		build_FORCE.disabled=booln;
+		build_Announce_In_Newsgroup.disabled=booln;
 		build_Email.disabled=booln;
 	}
 }
@@ -390,12 +424,13 @@ else
 	' -user ' . $options["Users"][1] .
 	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? ' -userIES ' . $options["Users"][2] : '') .
 	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" && $_POST["build_IES_CVS_Branch"] != "" ? ' -branchIES ' . $_POST["build_IES_CVS_Branch"] : '') .
-	(isset($_POST["build_Close_Bugz_Only"]) && $_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly' : '') .
+	(isset($_POST["build_Close_Bugz_Only"]) && $_POST["build_Close_Bugz_Only"]       != "" ? ' -bugzonly -FORCE' : '') .
 	(isset($_POST["build_Store_SDK_As_Dependency"]) && $_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
 	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
 	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	(isset($_POST["build_Email"]) && $_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
+	(isset($_POST["build_FORCE"]) && $_POST["build_FORCE"] != "" ? ' -FORCE' : '') .
 
 	' \"' .
 	' >> ' . $logdir . $logfile . ' 2>&1 &"'); // logging to unique files
