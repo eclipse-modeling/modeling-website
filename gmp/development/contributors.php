@@ -105,12 +105,6 @@ include ($App->getProjectCommon());
 			<td align="right" valign="top"><img
 				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
 				height="16" width="16"></td>
-			<td><a href="mailto:fplante@ca.ibm.com">Fred Plante</a>,&nbsp;IBM</td>
-		</tr>
-		<tr>
-			<td align="right" valign="top"><img
-				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
-				height="16" width="16"></td>
 			<td><a href="mailto:vramaswa@ca.ibm.com">Vishwanath Ramaswamy</a>,&nbsp;IBM</td>
 		</tr>
 		<tr>
@@ -182,6 +176,12 @@ include ($App->getProjectCommon());
 			<td align="right" valign="top"><img
 				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
 				height="16" width="16"></td>
+			<td><a href="mailto:alexander.fedorov@borland.com">Alexander Fedorov</a>,&nbsp;Borland</td>
+		</tr>
+		<tr>
+			<td align="right" valign="top"><img
+				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
+				height="16" width="16"></td>
 			<td><a href="mailto:michael.golubev@borland.com">Michael Golubev</a>,&nbsp;Borland</td>
 		</tr>
 		<tr>
@@ -189,6 +189,12 @@ include ($App->getProjectCommon());
 				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
 				height="16" width="16"></td>
 			<td><a href="mailto:idzelis@us.ibm.com">Mindaugas Idzelis</a>,&nbsp;IBM</td>
+		</tr>
+		<tr>
+			<td align="right" valign="top"><img
+				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
+				height="16" width="16"></td>
+			<td><a href="mailto:anna.karjakina@borland.com">Anna Karjakina</a>,&nbsp;Borland</td>
 		</tr>
 		<tr>
 			<td align="right" valign="top"><img

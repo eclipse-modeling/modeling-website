@@ -84,9 +84,12 @@ Developers (Section 2)<br/>
 			$dbc 		= null;
 		?>
 <br/>	
+xPand template engine (org.eclipse.gmf.xpand, org.eclipse.gmf.xpand.editor), originally developed by Sven Efftinge for oAW component in GMT project, was refactored for application in GMF by Artem Tikhomirov.
+<br/>
 Third Party Software (Section 3)<br/>
 <br/>
-org.apache.batik_1.6,cvsroot/technology/org.eclipse.gmf/plugins/org.apache.batik,Apache License Version 2.0 January 2004,unmodified entire package (includes pdf transcoder)<br/>
-org.apache.xerces_2.8,maintained by WebTools,Apache License Version 2.0 January 2004,unmodified entire package<br/>
+org.apache.batik_1.6,cvsroot/modeling/org.eclipse.gmf/plugins/org.apache.batik,Apache License Version 2.0 January 2004,unmodified entire package<br/>
+org.apache.xerces_2.8,maintained in Orbit,Apache License Version 2.0 January 2004,unmodified entire package<br/>
+LPG-V1.1 java runtime from http://sourceforge.net/projects/lpg,EPL v1.0<br/>
 	</body>
 </html>

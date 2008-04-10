@@ -95,7 +95,7 @@ extent as possible.</p>
 namely:</p>
 <ul>
 	<li>Graphical Modeling Framework source code release, available as versions tagged "R1_0" in the project's <a
-		href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gmf/?cvsroot=Technology_Project">CVS
+		href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gmf/?cvsroot=Modeling_Project">CVS
 	repository</a>.</li>
 	<li>Graphical Modeling Framework SDK (includes runtime and tooling
 	components, with sources) (downloadable).</li>

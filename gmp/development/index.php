@@ -55,7 +55,7 @@ include ($App->getProjectCommon());
 				<ul class="midlist">
 					<li><b><a
 										href="http://dev.eclipse.org/viewcvs/index.cgi">CVS Repository</a></b><br/>GMF development is managed in a CVS <a
-										href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gmf/?cvsroot=Technology_Project">repository</a>.
+										href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.gmf/?cvsroot=Modeling_Project">repository</a>.
 									Both "pserver" and "extssh" are supported. See <a
 										href="http://dev.eclipse.org/cvshowto.html">Using Eclipse with
 									CVS</a> for instructions.</li>
@@ -112,11 +112,11 @@ include ($App->getProjectCommon());
 									Learn what's involved in developing and contributing
 									enhancements or new capabilities for GMF.</li>
 					<li><b><a
-										href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.gmf/releng/org.eclipse.gmf.releng.builder/readme.html?cvsroot=Technology_Project">Build
+										href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.gmf/releng/org.eclipse.gmf.releng.builder/readme.html?cvsroot=Modeling_Project">Build
 									Process</a></b> <br>
 									The GMF continuous build process is modeled after other Eclipse
 									project build processes. The build process is documented <a
-										href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.gmf/releng/org.eclipse.gmf.releng.builder/readme.html?cvsroot=Technology_Project">here</a>
+										href="http://dev.eclipse.org/viewcvs/index.cgi/*checkout*/org.eclipse.gmf/releng/org.eclipse.gmf.releng.builder/readme.html?cvsroot=Modeling_Project">here</a>
 									with more documentation in development.</li>
 					<li><b><a
 										href="http://help.eclipse.org/help30/topic/org.eclipse.platform.doc.isv/reference/misc/api-usage-rules.html">API
@@ -140,8 +140,6 @@ include ($App->getProjectCommon());
 									for the for the coding standards, naming conventions, and other
 									guidelines used by the Platform. GMF will use these conventions
 									until such time as deviation is required.</li>
-					<li><b>Architectural Overview</b> <br>
-									A high level summary of the components and their architecture.</li>
 					<li><b><a
 										href="http://www.eclipse.org/gmf/requirements.php">Project
 									Requirements</a></b> <br>
@@ -161,14 +159,6 @@ include ($App->getProjectCommon());
 	</div>
 
 	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>GMF 1.0</h6>
-			<ul>
-				<li><a href="http://download.eclipse.org/modeling/gmf/downloads/index.php">Downloads</a></li>
-				<li><a href="http://www.eclipse.org/gmf/development/plan.php">Project Plan</a></li>
-				<li><a href="http://www.eclipse.org/gmf/requirements.php">Requirements</a></li>
-			</ul>
-		</div>
 		<div class="sideitem">
 			<h6>Mailing Lists</h6> GMF mailing lists are meant for discussion of development of the GMF project only. For all other questions please use the <a href="news://news.eclipse.org/eclipse.modeling.gmf">newsgroup</a>.
 			<ul>

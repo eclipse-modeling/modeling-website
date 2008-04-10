@@ -26,19 +26,22 @@ ob_start();
 		<div class="homeitem">
 			<h3>Quick Links</h3>
 				<ul class="midlist">
-					<li><a href="http://wiki.eclipse.org/index.php/Graphical_Modeling_Framework" target="_blank"><b>Wiki</b></a> | Find a set of <a href="http://wiki.eclipse.org/index.php/Graphical_Modeling_Framework_FAQ">FAQs</a> and other information.</li>
+					<li><a href="http://wiki.eclipse.org/index.php/Graphical_Modeling_Framework"><b>Wiki</b></a> | Find a set of <a href="http://wiki.eclipse.org/index.php/Graphical_Modeling_Framework_FAQ">FAQs</a> and other information.</li>
 					<li><a href="news://news.eclipse.org/eclipse.modeling.gmf" target="_blank"><b>Newsgroup</b></a> | For general questions and community discussion.</li>
 					<li><a href="http://dev.eclipse.org/mailman/listinfo/gmf-dev" target="_blank"><b>Mailing List</b></a> | For project development discussions.</li>
 					<li><a href="http://bugs.eclipse.org/bugs" target="_blank"><b>Bugs</b></a> | View <a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=GMF&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&order=Reuse+same+sort+as+last+time">all open</a> issues.</li>
-					<li><a href="http://wiki.eclipse.org/index.php/GMF_Project_Plan"><b>Project Plan</b></a> | Also, view a list of project <a href="http://www.eclipse.org/gmf/requirements.php">requirements</a>.</li>
+					<li><a href="http://wiki.eclipse.org/index.php/GMF_Project_Plan"><b>Project Plan</b></a> (draft for 2.1)</li>
 		</div>
 		<div class="homeitem">
 			<h3>Events</h3>
 			<ul class="midlist">
-				<li>Attend <a href="http://www.eclipsecon.org/2007/index.php?page=sub/&id=3624">Extending your DSM by leveraging the GMF Runtime</a> at <a href="http://www.eclipsecon.org/">EclipseCon 2007</a>.</li>		
-				<li>Attend <a href="http://www.eclipsecon.org/2007/index.php?page=sub/&id=3739">GMF Best Practices</a> at <a href="http://www.eclipsecon.org/">EclipseCon 2007</a>.</li>
-				<li>Attend <a href="http://www.eclipsecon.org/2007/index.php?page=sub/&id=3627">MDSD from Frontend to Code using Eclipse Modeling Technologies</a> at <a href="http://www.eclipsecon.org/">EclipseCon 2007</a>.</li>
-				<li><a href="http://www.eclipse.org/callisto/webinars.php" target="_blank"><b>Callisto Webinar</b></a> to feature Modeling projects (EMF & GMF). View <a href="http://adobedev.breezecentral.com/p17835008/">recording</a>.</li>
+				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=337">Introduction to the Graphical Modeling Framework</a> tutorial at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=48">Using GMF and M2M for Model-driven-development</a> tutorial at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=320">GMF Exemplary MDD</a> long talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=184">Migrating your Graphical Editor to the Eclipse Graphical Modeling Framework</a> long talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=387">Bitter GMF, or how we did UML with GMF</a> short talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+				<li>Subscribe to events and milestones <a target="_blank" href="feed://www.google.com/calendar/feeds/gmfdev%40gmail.com/public/basic"><img src="http://www.google.com/calendar/images/xml.gif" border=0></a>
+						<a target="_blank" href="webcal://www.google.com/calendar/ical/gmfdev%40gmail.com/public/basic.ics"><img src="http://www.google.com/calendar/images/ical.gif" border=0></a></li>
 			</ul>
 		</div>
 		<br/>
