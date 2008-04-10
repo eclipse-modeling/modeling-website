@@ -2,11 +2,8 @@
 /* extra sidebar stuff appended at the bottom */
 function sidebar()
 {
-	global $PR, $projct, $isBuildServer;
+	global $PR, $projct, $isBuildServer; ?>
 
-	if ($isBuildServer)
-	{
-	?>
 	<div class="sideitem">
 		<h6>GMF Update Sites</h6>
 		<ul>
@@ -20,7 +17,10 @@ function sidebar()
 			Europa builds</a></li>
 		</ul>
 	</div>
-	
+<?php
+	if ($isBuildServer)
+	{
+	?>
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
