@@ -10,37 +10,6 @@
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-transaction.xml</id>
   <entry>
-    <title>[announce] transaction I200804100145 (1.2.0.I200804100145) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=I200804100145#I200804100145"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=I200804100145#I200804100145</id>
-    <updated>2008-04-10T15:55:04Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200804100145" href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=I200804100145#I200804100145" type="I" version="1.2.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.2.0/I200804100145/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=transaction</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=transaction&amp;version=I200804100145
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-transaction-SDK-I200804100145.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.2.0/I200804100145/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080408-0800/eclipse-SDK-I20080408-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/emf/downloads/drops/2.4.0/I200804081800/emf-sdo-xsd-SDK-I200804081800.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/query/downloads/drops/1.2.0/S200804020200/emf-query-SDK-1.2.0M6.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/emf/validation/downloads/drops/1.2.0/S200804020210/emf-validation-SDK-1.2.0M6.zip</dependency>
-          <dependency>http://emf.torolab.ibm.com/modeling/mdt/ocl/downloads/drops/1.2.0/S200804020135/mdt-ocl-all-SDK-1.2.0M6.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] transaction 1.2.0M6 (S200804020220) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200804020220#S200804020220"/>
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200804020220#S200804020220</id>
