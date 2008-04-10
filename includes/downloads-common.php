@@ -96,6 +96,7 @@ $deps = array(
 /* shortname => array("product", "component") */
 $bugzilla_pairs = array(
 	"emf" => array("EMF", ""),
+	"gmf" => array("GMF", ""),
 	"xsd" => array("MDT", "XSD"),
 	"ocl" => array("MDT", "OCL"),
 	"eodm" => array("MDT", "EODM"),
@@ -286,12 +287,12 @@ print "</ul>\n";
 print "</div>\n";
 
 $f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
-if ($isBuildServer && file_exists($f))
+if (file_exists($f))
 {
 	include_once($f);
 }
 
-if ($isBuildServer && function_exists("sidebar"))
+if (function_exists("sidebar"))
 {
 	sidebar();
 }
