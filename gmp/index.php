@@ -73,7 +73,7 @@ ob_start();
 					href="http://wiki.eclipse.org/index.php/GMF_Tutorial"
 					target="_self">Tutorial</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines">Development Guidelines</a></li>
-				<li><a href="http://www.eclipse.org/gmf/development/index.php">Developer Resources</a></li>
+				<li><a href="http://www.eclipse.org/modeling/gmf/development/index.php">Developer Resources</a></li>
 				<li><a href="http://help.eclipse.org/help33/index.jsp">Online Documentation</a></li>
 				<li><a href="http://www.eclipse.org/modeling/gmf/downloads/">Downloads</a> <div style="float:right"><small><i>(<a href="http://download.eclipse.org/modeling/gmf/downloads/index-old.php">old downloads</a>)</i></small></div></li>
 			</ul>
