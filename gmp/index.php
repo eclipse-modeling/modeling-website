@@ -1,42 +1,10 @@
-<?php                                                                                                               
-require_once ($_SERVER['DOCUMENT_ROOT']."/eclipse.org-common/system/app.class.php"); 
-require_once ($_SERVER['DOCUMENT_ROOT']."/eclipse.org-common/system/nav.class.php"); 
-require_once ($_SERVER['DOCUMENT_ROOT']."/eclipse.org-common/system/menu.class.php"); 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/common/project-info.class.php");
-$App = new App(); $Nav = new Nav(); $Menu = new Menu(); 
-$projectInfo = new ProjectInfo("modeling.gmf");
-$projectInfo->generate_common_nav( $Nav );
-include ($App->getProjectCommon()); # All on the same line to unclutter the user's desktop' 
-	#*****************************************************************************
-	#
-	# index.php
-	#
-	# Author: 		Richard C. Gronback
-	# Date:			2005-12-01
-	#
-	# Description: 
-	#
-	#
-	#****************************************************************************
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-#
-# Begin: page-specific settings.  Change these. 
-$pageTitle = "Graphical Modeling Framework";
-$pageKeywords = "eclipse,project,graphical,modeling,model-driven";
-$pageAuthor = "Richard C. Gronback";
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-# Add page-specific Nav bars here
-# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
-# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
-# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
-
-# End: page-specific settings
-#
-
-# Paste your HTML content between the EOHTML markers!	
-$html =<<<EOHTML
-<div id="maincontent">
+ob_start();
+?>
 <div id="midcolumn">
 		<table width="100%">
 		<tr><td>&nbsp;</td></tr>
@@ -50,7 +18,7 @@ $html =<<<EOHTML
 				exemplary tools for select domain models which illustrate its capabilities. 
 				</td>
 				 <td align="right">
-					<img src="http://www.eclipse.org/gmf/images/logo_banner.png" />
+					<img src="images/logo_banner.png" />
 				</td>
 			</tr>
 		</table><hr/>
@@ -92,9 +60,9 @@ $html =<<<EOHTML
 	
 	<div id="rightcolumn">
 		<br />
-		<div>
+		<!-- <div>
 			<a href="http://www.eclipse.org/callisto/"><img src="http://www.eclipse.org/callisto/images/callistosmall.gif" border=0 alt="The Next Total Eclipse" title="Callisto"></a>
-		</div>
+		</div> -->
 		<div class="sideitem">
 			<h6>Getting started</h6>
 			<ul>				
@@ -104,26 +72,41 @@ $html =<<<EOHTML
 				<li><a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines">Development Guidelines</a></li>
 				<li><a href="http://www.eclipse.org/gmf/development/index.php">Developer Resources</a></li>
 				<li><a href="http://help.eclipse.org/help33/index.jsp">Online Documentation</a></li>
-				<li><a href="http://download.eclipse.org/modeling/gmf/downloads/index.php">Downloads</a></li>
+				<li><a href="http://www.eclipse.org/modeling/gmf/downloads/">Downloads</a> <div style="float:right"><small><i>(<a href="http://download.eclipse.org/modeling/gmf/downloads/index-old.php">old downloads</a>)</i></small></div></li>
 			</ul>
 		</div>
 		
-		<div class="sideitem">
-			<h6>What's New</h6>
-			<ul> 
-			    <li>Jan 3rd: GMF 2.0M4 available for <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-2.0M4-200701030300/index.php">download</a></li>
-			    <li>Attend <a href="http://eclipsezilla.eclipsecon.org/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=EclipseCon+2007&track_id=7&long_desc_type=substring&long_desc=&keywords_type=allwords&keywords=&bug_status=SCHEDULED&bug_status=RESOLVED&resolution=ACCEPTED&emailtype1=substring&email1=&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">presentations on modeling projects</a> at <a href="http://www.eclipsecon.org/">EclipseCon 2007</a>.</li>		
-			</ul>
-		</div>
+	<div class="sideitem">
+		<h6>News</h6>
+		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/modeling/gmf/news/news.xml")); ?>
+		<ul>
+			<li><a href="/modeling/gmf/news-whatsnew.php">Older news</a></li>
+		</ul>
 	</div>
+
+	<div class="sideitem">
+		<h6><a href="/modeling/gmf/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
+		<?php 
+		$tmp = array_flip($projects);
+		print ($tmp && isset($tmp[$proj]) && $tmp[$proj] ? $tmp[$proj] . " " : "");
+		?>
+		Build News</h6>
+		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
+		<ul>
+			<li><a href="/modeling/gmf/news-whatsnew.php#build">Other build news</a></li>
+		</ul>
+	</div>
+
 </div>
 
+<?php
+$html = ob_get_contents();
+ob_end_clean();
 
-EOHTML;
+$pageTitle = "Graphical Modeling Framework";
+$pageKeywords = "eclipse,project,graphical,modeling,model-driven";
+$pageAuthor = "Richard C. Gronback, Nick Boldt";
 
-# Generate the web page
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
-
-
-
