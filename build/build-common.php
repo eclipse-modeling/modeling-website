@@ -868,7 +868,7 @@ function findCatg($url) {
 		"14ecoretools" => "emft-ecoretools-",
 		"13mwe" => "emft-mwe-",
 		"12wtp" => "wtp-",
-		"11gmf" => "GMF-",
+		"11gmf" => "GMF-|gmf-",
 		"10gef" => "GEF-",
 		"09net4j" => "emft-net4j-",
 		"08validation" => "emf-validation-|emft-validation-",
