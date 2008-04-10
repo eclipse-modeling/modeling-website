@@ -139,7 +139,7 @@ EOHTML;
 
 <div id="rightcolumn">
 EOHTML;
-	if ($isIncubating)
+	if (isset($isIncubating) && $isIncubating)
 	{
 	print '
 		<div class="sideitem">
