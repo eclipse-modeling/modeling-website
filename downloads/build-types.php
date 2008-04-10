@@ -86,5 +86,5 @@ $pageTitle = "Eclipse Modeling - Build Types";
 $pageKeywords = ""; 
 $pageAuthor = "Neil Skrypuch";
 
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage("Phoenix", $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>

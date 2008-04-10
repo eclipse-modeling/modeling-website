@@ -24,5 +24,5 @@ $pageTitle = "Eclipse Modeling - Verifying Downloads with MD5 Checksum";
 $pageKeywords = ""; 
 $pageAuthor = "Nick Boldt";
 
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage("Phoenix", $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
