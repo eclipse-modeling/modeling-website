@@ -880,11 +880,11 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<ul>\n";
 		if (sizeof($opts) > 0)
 		{
-			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>{$opts["javaHome"]}</li>" : "");
+			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>" . ucwords(str_replace("-", " ", $opts["javaHome"])) . "</li>" : "");
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
-				preg_match("/.+-SDK-(incubation-|)(.+).zip/", $buildfile[$z], $reg);
+				preg_match("/.+-(incubation-|)([^-]+).zip/", $buildfile[$z], $reg);
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
 					$vanity = trim(preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]));
 					if ($vanity != $reg[2])
