@@ -87,7 +87,7 @@ EOHTML;
 
 	print "<div id=\"rightcolumn\">\n";
 
-	if ($isIncubating)
+	if (isset($isIncubating) && $isIncubating)
 	{
 	print '
 		<div class="sideitem">
@@ -101,7 +101,7 @@ EOHTML;
 	}
 
 	$extras= array (
-		"doBleedingEdge"
+		"doBleedingEdge", "sidebar"
 	);
 	foreach ($extras as $z)
 	{
