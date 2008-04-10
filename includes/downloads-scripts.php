@@ -895,7 +895,21 @@ function getBuildArtifacts($dir, $branchID)
 				if ($vanity == " downloads") {
 					$vanity="";
 				}
-				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":"")."$deps[$z] <a href=\"$buildfile[$z]\">$vanity</a></li>\n";
+				
+				$bf = array();
+				if (preg_match("#(.+)/orbitBundles-(.+).map$#", $buildfile[$z], $bfbits))
+				{
+					$bf[] = $bfbits[1] . "/orbit-" . $bfbits[2] . ".zip";
+					$bf[] = $buildfile[$z]; // map
+				}
+				else if (preg_match("#(.+)/orbit-(.+).zip$#", $buildfile[$z], $bfbits))
+				{
+					$bf[] = $buildfile[$z]; // zip
+					$bf[] = $bfbits[1] . "/orbitBundles-" . $bfbits[2] . ".map";
+				}
+				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":"")."$deps[$z] " . 
+					($z == "orbit" ? "<a href=\"{$bf[0]}\">$vanity</a> (<a href=\"{$bf[1]}\">map</a>)" : "<a href=\"{$buildfile[$z]}\">$vanity</a>") . 
+				"</li>\n";
 			}
 		}
 		else
