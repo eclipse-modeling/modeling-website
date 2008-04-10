@@ -1,0 +1,452 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<BODY BGCOLOR="white">nsURI: http://www.eclipse.org/gmf/2005/ToolDefinition<BR>
+<B>package: tooldef</B>
+<BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%" SUMMARY="">
+<TR BGCOLOR="#AAAADD">
+<FONT CLASS="FrameItemFont"><TD>Class</TD><TD>Super Type(s)</TD><TD colspan="2">Description</TD></FONT>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolRegistry</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sharedActions</TD><TD>tooldef::MenuAction</TD><TD>Instead of placing	common actions somewhere in menu hierarchy and referencing them in (2..n) cases, keep them in this central registry and use ItemRef everywhere (i.e. in 1..n cases)</TD>
+</TR>
+<TR>
+<TD></TD><TD>allMenus</TD><TD>tooldef::Menu</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>palette</TD><TD>tooldef::Palette</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AbstractTool</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolContainer</FONT></TD><TD><FONT CLASS="FrameItemFont">AbstractTool </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tools</TD><TD>tooldef::AbstractTool</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PaletteSeparator</FONT></TD><TD><FONT CLASS="FrameItemFont">AbstractTool </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolGroup</FONT></TD><TD><FONT CLASS="FrameItemFont">ToolContainer </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>collapsible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tools</TD><TD>tooldef::AbstractTool</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>active</TD><TD>tooldef::AbstractTool</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Palette</FONT></TD><TD><FONT CLASS="FrameItemFont">ToolContainer </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tools</TD><TD>tooldef::AbstractTool</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>default</TD><TD>tooldef::AbstractTool</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">StandardTool</FONT></TD><TD><FONT CLASS="FrameItemFont">AbstractTool </FONT></TD><TD colspan="2">predefined, like zoom or marquee</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>toolKind</TD><TD>tooldef::StandardToolKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CreationTool</FONT></TD><TD><FONT CLASS="FrameItemFont">AbstractTool </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenericTool</FONT></TD><TD><FONT CLASS="FrameItemFont">AbstractTool </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>toolClass</TD><TD>ecore::EJavaClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIcon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ItemBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Menu</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Separator</FONT></TD><TD><FONT CLASS="FrameItemFont">ItemBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PredefinedItem</FONT></TD><TD><FONT CLASS="FrameItemFont">ItemBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>identifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PredefinedMenu</FONT></TD><TD><FONT CLASS="FrameItemFont">Menu PredefinedItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>identifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ContributionItem</FONT></TD><TD><FONT CLASS="FrameItemFont">ItemBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>icon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MenuAction</FONT></TD><TD><FONT CLASS="FrameItemFont">ContributionItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>kind</TD><TD>tooldef::ActionKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>hotKey</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>icon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ItemRef</FONT></TD><TD><FONT CLASS="FrameItemFont">ItemBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>item</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ContextMenu</FONT></TD><TD><FONT CLASS="FrameItemFont">Menu </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>default</TD><TD>tooldef::MenuAction</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PopupMenu</FONT></TD><TD><FONT CLASS="FrameItemFont">Menu ContributionItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>icon</TD><TD>tooldef::Image</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MainMenu</FONT></TD><TD><FONT CLASS="FrameItemFont">Menu </FONT></TD><TD colspan="2">no default action and no id, just a collection of items</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Toolbar</FONT></TD><TD><FONT CLASS="FrameItemFont">Menu </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>items</TD><TD>tooldef::ItemBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Image</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DefaultImage</FONT></TD><TD><FONT CLASS="FrameItemFont">Image </FONT></TD><TD colspan="2">Delegate to EMF.Edit providers</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">BundleImage</FONT></TD><TD><FONT CLASS="FrameItemFont">Image </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>path</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundle</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">StyleSelector</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenericStyleSelector</FONT></TD><TD><FONT CLASS="FrameItemFont">StyleSelector </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>values</TD><TD>tooldef::AppearanceStyle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+</TABLE>
+</BODY>
+</HEAD>
+</HTML>

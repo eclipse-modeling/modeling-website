@@ -1,0 +1,2714 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<BODY BGCOLOR="white">nsURI: http://www.eclipse.org/gmf/2005/GenModel/2.0<BR>
+<B>package: gmfgen</B>
+<BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%" SUMMARY="">
+<TR BGCOLOR="#AAAADD">
+<FONT CLASS="FrameItemFont"><TD>Class</TD><TD>Super Type(s)</TD><TD colspan="2">Description</TD></FONT>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenEditorGenerator</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>packageNamePrefix</TD><TD>ecore::EString</TD><TD>Derived from genModel.genPackage[0].getBasePackage() by default</TD>
+</TR>
+<TR>
+<TD></TD><TD>modelID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sameFileForDiagramAndModel</TD><TD>ecore::EBoolean</TD><TD>Specified whether editor should create separate file for domain elements if diagram file references no domain model</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramFileExtension</TD><TD>ecore::EString</TD><TD>Distinct even when sameFileForDiagramAndModel is true. On init diagram, we just copy domain model element to new file with that extension. I won't try to set this equal to domainFileExtension</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainFileExtension</TD><TD>ecore::EString</TD><TD>By default, genModel.genPackage[0].getPrefix().toLowerCase(), as in emf/templates/editor/pluign.xmljet</TD>
+</TR>
+<TR>
+<TD></TD><TD>dynamicTemplates</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>templateDirectory</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>copyrightText</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>audits</TD><TD>gmfgen::GenAuditContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>metrics</TD><TD>gmfgen::GenMetricContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>plugin</TD><TD>gmfgen::GenPlugin</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editor</TD><TD>gmfgen::GenEditorView</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>navigator</TD><TD>gmfgen::GenNavigator</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>propertySheet</TD><TD>gmfgen::GenPropertySheet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>application</TD><TD>gmfgen::GenApplication</TD><TD>If application is defined within the model then generator should target RCP</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainGenModel</TD><TD>genmodel::GenModel</TD><TD>This is primary EMF genmodel for user's domain model</TD>
+</TR>
+<TR>
+<TD></TD><TD>expressionProviders</TD><TD>gmfgen::GenExpressionProviderContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenDiagram</FONT></TD><TD><FONT CLASS="FrameItemFont">GenContainerBase PackageNames ProviderClassNames LinkConstraints EditPartCandies EditorCandies Shortcuts BatchValidation MeasurementUnit </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editCommandsPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editHelpersPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartsPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPoliciesPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>providersPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoriesPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementTypesClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>paletteProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>paletteProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelingAssistantProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelingAssistantProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>propertyProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>propertyProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iconProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iconProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parserProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parserProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>abstractParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>structuralFeatureParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>structuralFeaturesParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>contributionItemProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>reorientConnectionViewCommandClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseEditHelperClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseExternalNodeLabelEditPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseItemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseGraphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referenceConnectionEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>textSelectionEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>textNonResizableEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>externalNodeLabelHostLayoutEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardPageClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardCategoryID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramEditorUtilClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramFileCreatorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>documentProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>initDiagramFileActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>newDiagramFileWizardClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>matchingStrategyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferenceInitializerClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>visualIDRegistryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementChooserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>loadResourceActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editingDomainID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsDecoratorProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsDecoratorProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>createShortcutActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containsShortcutsTo</TD><TD>ecore::EString</TD><TD>Set of domain meta-model file extensions. Elements of the corresponding models could be shortcutted on this diagram.</TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsProvidedFor</TD><TD>ecore::EString</TD><TD>Set of domain meta-model names. Elements of this diagram domain model could be added as a shortcuts to the diagrams of the specified domains.</TD>
+</TR>
+<TR>
+<TD></TD><TD>validationProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>markerNavigationProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>markerNavigationProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationEnabled</TD><TD>ecore::EBoolean</TD><TD>If enabled, ValidationAction is contributed by the editor plugin</TD>
+</TR>
+<TR>
+<TD></TD><TD>metricProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>metricProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecoratorProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecorators</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecoratorProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>units</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>synchronized</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainDiagramElement</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>topLevelNodes</TD><TD>gmfgen::GenTopLevelNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>links</TD><TD>gmfgen::GenLink</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>palette</TD><TD>gmfgen::Palette</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenEditorView</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>packageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>actionBarContributorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>className</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">BatchValidation</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>validationProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>markerNavigationProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>markerNavigationProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationEnabled</TD><TD>ecore::EBoolean</TD><TD>If enabled, ValidationAction is contributed by the editor plugin</TD>
+</TR>
+<TR>
+<TD></TD><TD>metricProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>metricProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecoratorProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecorators</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>validationDecoratorProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ProviderClassNames</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>elementTypesClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>paletteProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>paletteProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelingAssistantProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelingAssistantProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>propertyProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>propertyProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iconProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>iconProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parserProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parserProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>abstractParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>structuralFeatureParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>structuralFeaturesParserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>contributionItemProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Shortcuts</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsDecoratorProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsDecoratorProviderPriority</TD><TD>gmfgen::ProviderPriority</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>createShortcutActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containsShortcutsTo</TD><TD>ecore::EString</TD><TD>Set of domain meta-model file extensions. Elements of the corresponding models could be shortcutted on this diagram.</TD>
+</TR>
+<TR>
+<TD></TD><TD>shortcutsProvidedFor</TD><TD>ecore::EString</TD><TD>Set of domain meta-model names. Elements of this diagram domain model could be added as a shortcuts to the diagrams of the specified domains.</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PackageNames</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editCommandsPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editHelpersPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartsPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPoliciesPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>providersPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoriesPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LinkConstraints</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">EditorCandies</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardPageClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationWizardCategoryID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramEditorUtilClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramFileCreatorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>documentProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>initDiagramFileActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>newDiagramFileWizardClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>matchingStrategyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferenceInitializerClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>visualIDRegistryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementChooserClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>loadResourceActionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editingDomainID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">EditPartCandies</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>reorientConnectionViewCommandClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseEditHelperClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseExternalNodeLabelEditPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseItemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>baseGraphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referenceConnectionEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>textSelectionEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>textNonResizableEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>externalNodeLabelHostLayoutEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MeasurementUnit</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>units</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenPlugin</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>provider</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>version</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>printingEnabled</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>activatorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenCommonBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">One that combines attributes that are essential for diagram elements</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Behaviour</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>subject</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomBehaviour</FONT></TD><TD><FONT CLASS="FrameItemFont">Behaviour </FONT></TD><TD colspan="2">Custom user behaviour</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>key</TD><TD>ecore::EString</TD><TD>Key used to register edit policy in host edit part</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPolicyQualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>subject</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">SharedBehaviour</FONT></TD><TD><FONT CLASS="FrameItemFont">Behaviour </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>subject</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>delegate</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">OpenDiagramBehaviour</FONT></TD><TD><FONT CLASS="FrameItemFont">Behaviour </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramKind</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editorID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>subject</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenContainerBase</FONT></TD><TD><FONT CLASS="FrameItemFont">GenCommonBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenChildContainer</FONT></TD><TD><FONT CLASS="FrameItemFont">GenContainerBase </FONT></TD><TD colspan="2">Base class for all ChildNode containers</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenNode</FONT></TD><TD><FONT CLASS="FrameItemFont">GenChildContainer </FONT></TD><TD colspan="2">EClass mapped to Node</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>graphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenNodeLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenTopLevelNode</FONT></TD><TD><FONT CLASS="FrameItemFont">GenNode </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>graphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenNodeLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenChildNode</FONT></TD><TD><FONT CLASS="FrameItemFont">GenNode </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>graphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenNodeLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containers</TD><TD>gmfgen::GenChildContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenChildSideAffixedNode</FONT></TD><TD><FONT CLASS="FrameItemFont">GenChildNode </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>graphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSideName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenNodeLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containers</TD><TD>gmfgen::GenChildContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenChildLabelNode</FONT></TD><TD><FONT CLASS="FrameItemFont">GenChildNode </FONT></TD><TD colspan="2">Child node represented by label; typically hosted by list compartment</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>graphicalNodeEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labelReadOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labelElementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenNodeLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgen::GenCompartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containers</TD><TD>gmfgen::GenChildContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labelModelFacet</TD><TD>gmfgen::LabelModelFacet</TD><TD>If model facet is not specified then custom parser should be provided for the label</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenCompartment</FONT></TD><TD><FONT CLASS="FrameItemFont">GenChildContainer </FONT></TD><TD colspan="2">Child container within node. Compartment, iow.</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canonicalEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>canCollapse</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>hideIfEmpty</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>needsTitle</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>listLayout</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containedNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childNodes</TD><TD>gmfgen::GenChildNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>node</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenLink</FONT></TD><TD><FONT CLASS="FrameItemFont">GenCommonBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outgoingCreationAllowed</TD><TD>ecore::EBoolean</TD><TD>Support link creation from source to target</TD>
+</TR>
+<TR>
+<TD></TD><TD>incomingCreationAllowed</TD><TD>ecore::EBoolean</TD><TD>Support link creation from target to source</TD>
+</TR>
+<TR>
+<TD></TD><TD>viewDirectionAlignedWithModel</TD><TD>ecore::EBoolean</TD><TD>View (Edge) will always be directed from model source to model target</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::LinkModelFacet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgen::GenLinkLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creationConstraints</TD><TD>gmfgen::GenLinkConstraints</TD><TD>Specifies additional restrictions on link creation</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenLabel</FONT></TD><TD><FONT CLASS="FrameItemFont">GenCommonBase </FONT></TD><TD colspan="2">Label on diagram</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::LabelModelFacet</TD><TD>If model facet is not specified then custom parser should be provided for the label</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenNodeLabel</FONT></TD><TD><FONT CLASS="FrameItemFont">GenLabel </FONT></TD><TD colspan="2">Label within node</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::LabelModelFacet</TD><TD>If model facet is not specified then custom parser should be provided for the label</TD>
+</TR>
+<TR>
+<TD></TD><TD>node</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenExternalNodeLabel</FONT></TD><TD><FONT CLASS="FrameItemFont">GenNodeLabel </FONT></TD><TD colspan="2">Label attached to node</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::LabelModelFacet</TD><TD>If model facet is not specified then custom parser should be provided for the label</TD>
+</TR>
+<TR>
+<TD></TD><TD>node</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenLinkLabel</FONT></TD><TD><FONT CLASS="FrameItemFont">GenLabel </FONT></TD><TD colspan="2">Label attached to link</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visualID</TD><TD>ecore::EInt</TD><TD>way to decide which editpart to use for specific diagram element. Maps to attribute in DRT.</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPartClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>itemSemanticEditPolicyClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>notationViewFactoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>alignment</TD><TD>gmfgen::LinkLabelAlignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramRunTimeClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementType</TD><TD>gmfgen::ElementType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewmap</TD><TD>gmfgen::Viewmap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>behaviour</TD><TD>gmfgen::Behaviour</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>modelFacet</TD><TD>gmfgen::LabelModelFacet</TD><TD>If model facet is not specified then custom parser should be provided for the label</TD>
+</TR>
+<TR>
+<TD></TD><TD>link</TD><TD>gmfgen::GenLink</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ElementType</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base element type</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>uniqueIdentifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>displayName</TD><TD>ecore::EString</TD><TD>When there's palette, defaults to title of first tool that uses element with this type</TD>
+</TR>
+<TR>
+<TD></TD><TD>definedExternally</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramElement</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MetamodelType</FONT></TD><TD><FONT CLASS="FrameItemFont">ElementType </FONT></TD><TD colspan="2">Element type based on ecore type</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>uniqueIdentifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>displayName</TD><TD>ecore::EString</TD><TD>When there's palette, defaults to title of first tool that uses element with this type</TD>
+</TR>
+<TR>
+<TD></TD><TD>definedExternally</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editHelperClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramElement</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">SpecializationType</FONT></TD><TD><FONT CLASS="FrameItemFont">ElementType </FONT></TD><TD colspan="2">Specialization of metamodel type</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>uniqueIdentifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>displayName</TD><TD>ecore::EString</TD><TD>When there's palette, defaults to title of first tool that uses element with this type</TD>
+</TR>
+<TR>
+<TD></TD><TD>definedExternally</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editHelperAdviceClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramElement</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>metamodelType</TD><TD>gmfgen::MetamodelType</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NotationType</FONT></TD><TD><FONT CLASS="FrameItemFont">ElementType </FONT></TD><TD colspan="2">Pure design element</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>uniqueIdentifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>displayName</TD><TD>ecore::EString</TD><TD>When there's palette, defaults to title of first tool that uses element with this type</TD>
+</TR>
+<TR>
+<TD></TD><TD>definedExternally</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramElement</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Marker interface for the particular model facets</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LinkModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">ModelFacet </FONT></TD><TD colspan="2">Model facet of links</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LabelModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">ModelFacet </FONT></TD><TD colspan="2">Model facet of labels</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">TypeModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">ModelFacet </FONT></TD><TD colspan="2">Model facet of an EClass</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metaClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentMetaFeature</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childMetaFeature</TD><TD>genmodel::GenFeature</TD><TD>Usually the same as containmentMetaFeature, unless you need to distinguish where to put and where to get from</TD>
+</TR>
+<TR>
+<TD></TD><TD>modelElementSelector</TD><TD>gmfgen::GenConstraint</TD><TD>Selection criterion for domain model elements associated with this type model facet</TD>
+</TR>
+<TR>
+<TD></TD><TD>modelElementInitializer</TD><TD>gmfgen::GenElementInitializer</TD><TD>State initializer for domain model elements associated with this type model facet</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">TypeLinkModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">TypeModelFacet LinkModelFacet </FONT></TD><TD colspan="2">Model facet of an EClass that associates two EClasses</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metaClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentMetaFeature</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childMetaFeature</TD><TD>genmodel::GenFeature</TD><TD>Usually the same as containmentMetaFeature, unless you need to distinguish where to put and where to get from</TD>
+</TR>
+<TR>
+<TD></TD><TD>modelElementSelector</TD><TD>gmfgen::GenConstraint</TD><TD>Selection criterion for domain model elements associated with this type model facet</TD>
+</TR>
+<TR>
+<TD></TD><TD>modelElementInitializer</TD><TD>gmfgen::GenElementInitializer</TD><TD>State initializer for domain model elements associated with this type model facet</TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceMetaFeature</TD><TD>genmodel::GenFeature</TD><TD>If source feature is not specified then link container is a link source</TD>
+</TR>
+<TR>
+<TD></TD><TD>targetMetaFeature</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureLinkModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">LinkModelFacet </FONT></TD><TD colspan="2">Model facet of a feature-based link</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metaFeature</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureLabelModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">LabelModelFacet </FONT></TD><TD colspan="2">Model facet of label based on domain model attribute(s)</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>viewPattern</TD><TD>ecore::EString</TD><TD>Pattern for java.text.MessageFormat to produce label on diagram</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPattern</TD><TD>ecore::EString</TD><TD>Pattern for java.text.MessageFormat to produce text for inplace editor; if not specified then viewPattern should be used</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metaFeatures</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DesignLabelModelFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">LabelModelFacet </FONT></TD><TD colspan="2">Model facet of a label with DescriptionStyle</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Attributes</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Captures aspects of variuos draw2d classes</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ColorAttributes</FONT></TD><TD><FONT CLASS="FrameItemFont">Attributes </FONT></TD><TD colspan="2">Deprecated, use StyleAttributes instead</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">StyleAttributes</FONT></TD><TD><FONT CLASS="FrameItemFont">Attributes </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>fixedFont</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fixedForeground</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fixedBackground</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ResizeConstraints</FONT></TD><TD><FONT CLASS="FrameItemFont">Attributes </FONT></TD><TD colspan="2">Bit-wise OR of any {@link org.eclipse.draw2d.PositionConstants#NORTH}, {@link org.eclipse.draw2d.PositionConstants#SOUTH}, {@link org.eclipse.draw2d.PositionConstants#EAST} or {@link org.eclipse.draw2d.PositionConstants#WEST}</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>resizeHandles</TD><TD>ecore::EInt</TD><TD>Any direction mentioned here (and combination thereof, like e.g. NORTH_WEST) is added as resizable handle</TD>
+</TR>
+<TR>
+<TD></TD><TD>nonResizeHandles</TD><TD>ecore::EInt</TD><TD>Directions mentioned with this attribute are explicitly denoted as non-resizable (i.e. with 'move' cursor). If you'd like to omit handle {@link org.eclipse.gef.editpolicies.ResizableEditPolicy#createSelectionHandles} completely, just don't list it here</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DefaultSizeAttributes</FONT></TD><TD><FONT CLASS="FrameItemFont">Attributes </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>width</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>height</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LabelOffsetAttributes</FONT></TD><TD><FONT CLASS="FrameItemFont">Attributes </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>x</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>y</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Viewmap</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutType</TD><TD>gmfgen::ViewmapLayoutType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgen::Attributes</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureViewmap</FONT></TD><TD><FONT CLASS="FrameItemFont">Viewmap </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutType</TD><TD>gmfgen::ViewmapLayoutType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>figureQualifiedClassName</TD><TD>ecore::EString</TD><TD>Name of GEF Figure class</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgen::Attributes</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">SnippetViewmap</FONT></TD><TD><FONT CLASS="FrameItemFont">Viewmap </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutType</TD><TD>gmfgen::ViewmapLayoutType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgen::Attributes</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">InnerClassViewmap</FONT></TD><TD><FONT CLASS="FrameItemFont">Viewmap </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutType</TD><TD>gmfgen::ViewmapLayoutType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>className</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>classBody</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgen::Attributes</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ParentAssignedViewmap</FONT></TD><TD><FONT CLASS="FrameItemFont">Viewmap </FONT></TD><TD colspan="2">Figure (with specified class name, if any) will be assigned by (or should be taken from) parent</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutType</TD><TD>gmfgen::ViewmapLayoutType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>getterName</TD><TD>ecore::EString</TD><TD>Access figure from parent's figure</TD>
+</TR>
+<TR>
+<TD></TD><TD>setterName</TD><TD>ecore::EString</TD><TD>Child could provide typed alternative to setFigure() method</TD>
+</TR>
+<TR>
+<TD></TD><TD>figureQualifiedClassName</TD><TD>ecore::EString</TD><TD>When specified, type of child's figure</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgen::Attributes</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ValueExpression</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Expression as a is textual statement which results in a value when evaluated in a context</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>gmfgen::GenLanguage</TD><TD>Specifies the language in which the expression is stated</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenConstraint</FONT></TD><TD><FONT CLASS="FrameItemFont">ValueExpression </FONT></TD><TD colspan="2">Boolean type value expression which is to be evaluated in a context</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>gmfgen::GenLanguage</TD><TD>Specifies the language in which the expression is stated</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Palette</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>flyout</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>packageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>factoryClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>gmfgen::GenDiagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>groups</TD><TD>gmfgen::ToolGroup</TD><TD>GEF allows only containers as palette immediate children</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">EntryBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>createMethodName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolEntry</FONT></TD><TD><FONT CLASS="FrameItemFont">EntryBase ToolGroupItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>createMethodName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>default</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedToolName</TD><TD>ecore::EString</TD><TD>Optional</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>genNodes</TD><TD>gmfgen::GenNode</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>genLinks</TD><TD>gmfgen::GenLink</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elements</TD><TD>gmfgen::GenCommonBase</TD><TD>Enforces 'tool for either node or link' - if there are values in genNodes list, returns it (no respect to values in genLinks); returns value of genLinks otherwise</TD>
+</TR>
+<TR>
+<TD></TD><TD>properties</TD><TD>ecore::EStringToStringMapEntry</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolGroupItem</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Separator</FONT></TD><TD><FONT CLASS="FrameItemFont">ToolGroupItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolGroup</FONT></TD><TD><FONT CLASS="FrameItemFont">EntryBase ToolGroupItem </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>largeIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>smallIconPath</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>createMethodName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>stack</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>collapse</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>toolsOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>entries</TD><TD>gmfgen::ToolGroupItem</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenElementInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base class for initializers of domain model elements</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>typeModelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD>The type model facet whose domain model element is to be intialized by this initializer</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenFeatureSeqInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont">GenElementInitializer </FONT></TD><TD colspan="2">Feature sequence initializer</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>typeModelFacet</TD><TD>gmfgen::TypeModelFacet</TD><TD>The type model facet whose domain model element is to be intialized by this initializer</TD>
+</TR>
+<TR>
+<TD></TD><TD>initializers</TD><TD>gmfgen::GenFeatureInitializer</TD><TD>Value specifications as initializers for individual features which should be initialized in the order given by this list</TD>
+</TR>
+<TR>
+<TD></TD><TD>elementClass</TD><TD>genmodel::GenClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>creatingInitializer</TD><TD>gmfgen::GenReferenceNewElementSpec</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenFeatureValueSpec</FONT></TD><TD><FONT CLASS="FrameItemFont">ValueExpression GenFeatureInitializer </FONT></TD><TD colspan="2">Value specification associated with a specific feature</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>gmfgen::GenLanguage</TD><TD>Specifies the language in which the expression is stated</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>genmodel::GenFeature</TD><TD>The feature for which is to be initialized by this initializer</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>gmfgen::GenFeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenReferenceNewElementSpec</FONT></TD><TD><FONT CLASS="FrameItemFont">GenFeatureInitializer </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>genmodel::GenFeature</TD><TD>The feature for which is to be initialized by this initializer</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>gmfgen::GenFeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>newElementInitializers</TD><TD>gmfgen::GenFeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenFeatureInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>genmodel::GenFeature</TD><TD>The feature for which is to be initialized by this initializer</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>gmfgen::GenFeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenLinkConstraints</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Groups constraints on the link source and target end</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>link</TD><TD>gmfgen::GenLink</TD><TD>References the owning link of this constraints</TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEnd</TD><TD>gmfgen::GenConstraint</TD><TD>Restriction enforced by the the source end, may reference variables 'oppositeEnd' pointing to targetEnd and 'link' denoting the link domainmetaElement instance if available.</TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEnd</TD><TD>gmfgen::GenConstraint</TD><TD>Restriction enforced by the the target end, may reference variables 'oppositeEnd' pointing to sourceEnd and 'link' denoting the link domainmetaElement instance if available.</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenRuleContainerBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base container for rules like audit, metrics...</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editor</TD><TD>gmfgen::GenEditorGenerator</TD><TD>The editor generator containing this rule container</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenAuditContainer</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleContainerBase </FONT></TD><TD colspan="2">Container for audit rules representing a hierarchical organization of audits in the constraint category hierarchy of emft.validation framework</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>id</TD><TD>ecore::EString</TD><TD>Identifier which is unique within the scope of its parent container.</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name for the category of audits organized in this container</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this audit container</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editor</TD><TD>gmfgen::GenEditorGenerator</TD><TD>The editor generator containing this rule container</TD>
+</TR>
+<TR>
+<TD></TD><TD>parentContainer</TD><TD>gmfgen::GenAuditContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>audits</TD><TD>gmfgen::GenAuditRule</TD><TD>The audit rules organized in this container</TD>
+</TR>
+<TR>
+<TD></TD><TD>childContainers</TD><TD>gmfgen::GenAuditContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenRuleBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base class for rule like audit, metric rules...</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenAuditRule</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleBase </FONT></TD><TD colspan="2">Auditing rule in the form of a constraint evaluated against its target</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics</TD>
+</TR>
+<TR>
+<TD></TD><TD>id</TD><TD>ecore::EString</TD><TD>Unique identifier of this audit rule</TD>
+</TR>
+<TR>
+<TD></TD><TD>message</TD><TD>ecore::EString</TD><TD>The text message to be reported in case of this audit violation</TD>
+</TR>
+<TR>
+<TD></TD><TD>severity</TD><TD>gmfgen::GenSeverity</TD><TD>Describes the severity of this audit rule violation</TD>
+</TR>
+<TR>
+<TD></TD><TD>useInLiveMode</TD><TD>ecore::EBoolean</TD><TD>Indicates if this audit should be evaluated also in Live mode. If 'false', only Batch mode is applicable</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>rule</TD><TD>gmfgen::GenConstraint</TD><TD>A boolean type condition which if not satisfied indicates this audit rule violation. It is evaluated in the context of the target</TD>
+</TR>
+<TR>
+<TD></TD><TD>target</TD><TD>gmfgen::GenAuditable</TD><TD>The target representing the context this audit is evaluated in</TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>gmfgen::GenAuditContainer</TD><TD>The containing audit container of this audit rule</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenRuleTarget</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">The target against which a rule can be evaluated</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenDomainElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">GenAuditable GenMeasurable </FONT></TD><TD colspan="2">Target for rules applied on domain model elements</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>genmodel::GenClass</TD><TD>Targeted domain model element</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenDiagramElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">GenAuditable GenMeasurable </FONT></TD><TD colspan="2">Target for rules applied on diagram notation model selectively, for specific visualized element</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>gmfgen::GenCommonBase</TD><TD>Targeted visualized element</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenDomainAttributeTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">GenAuditable </FONT></TD><TD colspan="2">Represents value based target, useful for audit rules expression not capable of ecore meta-model access</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>nullAsError</TD><TD>ecore::EBoolean</TD><TD>Indicates whether null value of the attribute is reported as audit failure or success</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attribute</TD><TD>genmodel::GenFeature</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenNotationElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">GenAuditable GenMeasurable </FONT></TD><TD colspan="2">Target for rules applied on diagram notation model elements</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>genmodel::GenClass</TD><TD>Targeted diagram notation model element</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenMetricContainer</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleContainerBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editor</TD><TD>gmfgen::GenEditorGenerator</TD><TD>The editor generator containing this rule container</TD>
+</TR>
+<TR>
+<TD></TD><TD>metrics</TD><TD>gmfgen::GenMetricRule</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenMetricRule</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics</TD>
+</TR>
+<TR>
+<TD></TD><TD>key</TD><TD>ecore::EString</TD><TD>Unique key identifying this metric an abbreviation for this metric</TD>
+</TR>
+<TR>
+<TD></TD><TD>lowLimit</TD><TD>ecore::EDoubleObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>highLimit</TD><TD>ecore::EDoubleObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>rule</TD><TD>gmfgen::ValueExpression</TD><TD>Expression that calculates the value of this metric which is of EDataType that encapsulates java.lang.Number subclasses or their primitives</TD>
+</TR>
+<TR>
+<TD></TD><TD>target</TD><TD>gmfgen::GenMeasurable</TD><TD>The target representing the context this metric is evaluated in</TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>gmfgen::GenMetricContainer</TD><TD>The containing metric container of this metric rule</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenAuditedMetricTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">GenAuditable </FONT></TD><TD colspan="2">Target metric which can be evaluated by audit rule. The target context here is the metric rule resulting type classifier</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metric</TD><TD>gmfgen::GenMetricRule</TD><TD>Metric wich can be involved in audit</TD>
+</TR>
+<TR>
+<TD></TD><TD>metricValueContext</TD><TD>genmodel::GenDataType</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenAuditable</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleTarget </FONT></TD><TD colspan="2">Target suitable for auditing</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenMeasurable</FONT></TD><TD><FONT CLASS="FrameItemFont">GenRuleTarget </FONT></TD><TD colspan="2">Marker interface for anything that can be subject to metrics</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenExpressionProviderContainer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>expressionsPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>abstractExpressionClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>providers</TD><TD>gmfgen::GenExpressionProviderBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenExpressionProviderBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>expressions</TD><TD>gmfgen::ValueExpression</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>gmfgen::GenExpressionProviderContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenJavaExpressionProvider</FONT></TD><TD><FONT CLASS="FrameItemFont">GenExpressionProviderBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>expressions</TD><TD>gmfgen::ValueExpression</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>gmfgen::GenExpressionProviderContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenExpressionInterpreter</FONT></TD><TD><FONT CLASS="FrameItemFont">GenExpressionProviderBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>gmfgen::GenLanguage</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>className</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>requiredPluginIDs</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>expressions</TD><TD>gmfgen::ValueExpression</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>gmfgen::GenExpressionProviderContainer</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenNavigator</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>contentExtensionID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>contentExtensionName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>contentExtensionPriority</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>linkHelperExtensionID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sorterExtensionID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>actionProviderID</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>contentProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labelProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>linkHelperClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sorterClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>actionProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>abstractNavigatorItemClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>navigatorGroupClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>navigatorItemClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>packageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>childReferences</TD><TD>gmfgen::GenNavigatorChildReference</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenNavigatorChildReference</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>referenceType</TD><TD>gmfgen::GenNavigatorReferenceType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>groupName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>groupIcon</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>hideIfEmpty</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>child</TD><TD>gmfgen::GenCommonBase</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenPropertySheet</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Sheet consists of few categories (aka tabs)</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>packageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>needsCaption</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labelProviderClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tabs</TD><TD>gmfgen::GenPropertyTab</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenPropertyTab</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>label</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sheet</TD><TD>gmfgen::GenPropertySheet</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenStandardPropertyTab</FONT></TD><TD><FONT CLASS="FrameItemFont">GenPropertyTab </FONT></TD><TD colspan="2">Standard property category plugs in predefined sets of properties (provided by runtime). Identifiers 'appearance', 'diagram' and 'advanced' are known at the moment</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>label</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sheet</TD><TD>gmfgen::GenPropertySheet</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenCustomPropertyTab</FONT></TD><TD><FONT CLASS="FrameItemFont">GenPropertyTab </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>label</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>className</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sheet</TD><TD>gmfgen::GenPropertySheet</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>filter</TD><TD>gmfgen::GenPropertyTabFilter</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenPropertyTabFilter</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>tab</TD><TD>gmfgen::GenCustomPropertyTab</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">TypeTabFilter</FONT></TD><TD><FONT CLASS="FrameItemFont">GenPropertyTabFilter </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>types</TD><TD>ecore::EString</TD><TD>Fully-qualified class names for selection to match</TD>
+</TR>
+<TR>
+<TD></TD><TD>generatedTypes</TD><TD>gmfgen::GeneratedType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>tab</TD><TD>gmfgen::GenCustomPropertyTab</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomTabFilter</FONT></TD><TD><FONT CLASS="FrameItemFont">GenPropertyTabFilter </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>className</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>tab</TD><TD>gmfgen::GenCustomPropertyTab</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GenApplication</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>iD</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>title</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>applicationPackageName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>applicationClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>workbenchAdvisorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>workbenchWindowAdvisorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>actionBarAdvisorClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>perspectiveClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>perspectiveId</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>editorGen</TD><TD>gmfgen::GenEditorGenerator</TD><TD></TD>
+</TR>
+</TABLE>
+</BODY>
+</HEAD>
+</HTML>

@@ -1,0 +1,2351 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<BODY BGCOLOR="white">nsURI: http://www.eclipse.org/gmf/2005/GraphicalDefinition<BR>
+<B>package: gmfgraph</B>
+<BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%" SUMMARY="">
+<TR BGCOLOR="#AAAADD">
+<FONT CLASS="FrameItemFont"><TD>Class</TD><TD>Super Type(s)</TD><TD colspan="2">Description</TD></FONT>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Canvas</FONT></TD><TD><FONT CLASS="FrameItemFont">Identity </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figures</TD><TD>gmfgraph::FigureGallery</TD><TD>containment here doesn't restrict nodes/connection from using figure galeries defined elsewhere. No assumption should be made whether or not node/connection figure is defined in the galery beloning to this canvas<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>nodes</TD><TD>gmfgraph::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>connections</TD><TD>gmfgraph::Connection</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>gmfgraph::Compartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>labels</TD><TD>gmfgraph::DiagramLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureGallery</FONT></TD><TD><FONT CLASS="FrameItemFont">Identity </FONT></TD><TD colspan="2">Kind of explicit figure library notion. Bundle of figures. Allows to specify plugin id (allows importing it later from gmfgen code) in addition to figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>implementationBundle</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figures</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Identity</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Easy and readable way to reference element of the model from another one<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DiagramElement</FONT></TD><TD><FONT CLASS="FrameItemFont">Identity </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::FigureHandle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>facets</TD><TD>gmfgraph::VisualFacet</TD><TD>anything to further specify constraint or any other aspect of the element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>find</TD><TD>VisualFacet</TD><TD>utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Node</FONT></TD><TD><FONT CLASS="FrameItemFont">DiagramElement </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resizeConstraint</TD><TD>gmfgraph::Direction</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>affixedParentSide</TD><TD>gmfgraph::Direction</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::FigureHandle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>facets</TD><TD>gmfgraph::VisualFacet</TD><TD>anything to further specify constraint or any other aspect of the element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>nodeFigure</TD><TD>gmfgraph::Figure</TD><TD>Specializes DiagramElement.figure<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>find</TD><TD>VisualFacet</TD><TD>utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Connection</FONT></TD><TD><FONT CLASS="FrameItemFont">DiagramElement </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::FigureHandle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>facets</TD><TD>gmfgraph::VisualFacet</TD><TD>anything to further specify constraint or any other aspect of the element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>connectionFigure</TD><TD>gmfgraph::Figure</TD><TD>Specializes DiagramElement.figure<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>find</TD><TD>VisualFacet</TD><TD>utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Compartment</FONT></TD><TD><FONT CLASS="FrameItemFont">DiagramElement </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>collapsible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>needsTitle</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::FigureHandle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>facets</TD><TD>gmfgraph::VisualFacet</TD><TD>anything to further specify constraint or any other aspect of the element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>find</TD><TD>VisualFacet</TD><TD>utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DiagramLabel</FONT></TD><TD><FONT CLASS="FrameItemFont">Node </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resizeConstraint</TD><TD>gmfgraph::Direction</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>affixedParentSide</TD><TD>gmfgraph::Direction</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>elementIcon</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::FigureHandle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>facets</TD><TD>gmfgraph::VisualFacet</TD><TD>anything to further specify constraint or any other aspect of the element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>nodeFigure</TD><TD>gmfgraph::Figure</TD><TD>Specializes DiagramElement.figure<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>find</TD><TD>VisualFacet</TD><TD>utility operation to get first visual facet assignable (in Java terms, {@link Class#isAssignableFrom(Class)}) to variables of designated class. Argument can't be null<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">VisualFacet</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GeneralFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">VisualFacet </FONT></TD><TD colspan="2">provide means to attach arbitrary data to your diagram element definition. It's up to you (template author) to process it somehow.<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>identifier</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>data</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AlignmentFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">VisualFacet </FONT></TD><TD colspan="2">Makes sense for DiagramLabels of Links only (now). Constants from {@link org.eclipse.draw2d.ConnectionLocator} are: MIDDLE = Alignment.CENTER, TARGET = Alignment.END, SOURCE = Alignment.BEGINNING<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>alignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GradientFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">VisualFacet </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>direction</TD><TD>gmfgraph::Direction</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LabelOffsetFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">VisualFacet </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>x</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>y</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DefaultSizeFacet</FONT></TD><TD><FONT CLASS="FrameItemFont">VisualFacet </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>defaultSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureMarker</FONT></TD><TD><FONT CLASS="FrameItemFont">Layoutable </FONT></TD><TD colspan="2">Anything you could combine visual representation from. Ordinary GEF figures, custom-defined or references to defined elsewhere.<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureHandle</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Entry in the figure's hierarchy to reference from diagram element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Figure</FONT></TD><TD><FONT CLASS="FrameItemFont">FigureMarker FigureHandle Identity </FONT></TD><TD colspan="2">org.eclipse.draw2d.Figure<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureRef</FONT></TD><TD><FONT CLASS="FrameItemFont">FigureMarker </FONT></TD><TD colspan="2">Need this to facilitate reuse of figures while keeping (so nice looking) containment relationship in the Figure class<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>figure</TD><TD>gmfgraph::Figure</TD><TD>not FigureMarker because don't want to reference figure references.<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ConnectionFigure</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DecorationFigure</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Shape</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure </FONT></TD><TD colspan="2">org.eclipse.draw2d.Shape<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Label</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure </FONT></TD><TD colspan="2">org.eclipse.draw2d.Label<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>text</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LabeledContainer</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure </FONT></TD><TD colspan="2">org.eclipse.draw2d.LabeledContainer<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Rectangle</FONT></TD><TD><FONT CLASS="FrameItemFont">Shape </FONT></TD><TD colspan="2">org.eclipse.draw2d.RectangleFigure<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">RoundedRectangle</FONT></TD><TD><FONT CLASS="FrameItemFont">Shape </FONT></TD><TD colspan="2">org.eclipse.draw2d.RoundedRectangle<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>cornerWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>cornerHeight</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Ellipse</FONT></TD><TD><FONT CLASS="FrameItemFont">Shape </FONT></TD><TD colspan="2">org.eclipse.draw2d.Ellipse<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Polyline</FONT></TD><TD><FONT CLASS="FrameItemFont">Shape </FONT></TD><TD colspan="2">org.eclipse.draw2d.Polyline<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Polygon</FONT></TD><TD><FONT CLASS="FrameItemFont">Polyline </FONT></TD><TD colspan="2">org.eclipse.draw2d.Polygon<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ScalablePolygon</FONT></TD><TD><FONT CLASS="FrameItemFont">Polygon </FONT></TD><TD colspan="2">Marker interface to denote polygons with ability to autoscale to fit all available bounds. Separate class is needed instead of property in the Polygon class because of generalization PolygonDecoration extends Polygon<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PolylineConnection</FONT></TD><TD><FONT CLASS="FrameItemFont">Polyline ConnectionFigure </FONT></TD><TD colspan="2">org.eclipse.draw2d.PolylineConnection<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceDecoration</TD><TD>gmfgraph::DecorationFigure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetDecoration</TD><TD>gmfgraph::DecorationFigure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PolylineDecoration</FONT></TD><TD><FONT CLASS="FrameItemFont">Polyline DecorationFigure </FONT></TD><TD colspan="2">org.eclipse.draw2d.PolylineDecoration<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PolygonDecoration</FONT></TD><TD><FONT CLASS="FrameItemFont">Polygon DecorationFigure </FONT></TD><TD colspan="2">org.eclipse.draw2d.PolygonDecoration<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>outline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineKind</TD><TD>gmfgraph::LineKind</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorFill</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>xorOutline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>resolvedChildren</TD><TD>gmfgraph::Figure</TD><TD>Same as children, but resolves child FigureRefs, if any, to Figures<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>template</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomClass</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomAttribute</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>value</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>directAccess</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>multiStatementValue</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FigureAccessor</FONT></TD><TD><FONT CLASS="FrameItemFont">FigureHandle </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>accessor</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>typedFigure</TD><TD>gmfgraph::CustomFigure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomFigure</FONT></TD><TD><FONT CLASS="FrameItemFont">Figure CustomClass </FONT></TD><TD colspan="2">Any figure class provided by some bundle<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>customChildren</TD><TD>gmfgraph::FigureAccessor</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomDecoration</FONT></TD><TD><FONT CLASS="FrameItemFont">CustomFigure DecorationFigure </FONT></TD><TD colspan="2">Same as CustomFigure, but for Decorations<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>customChildren</TD><TD>gmfgraph::FigureAccessor</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomConnection</FONT></TD><TD><FONT CLASS="FrameItemFont">CustomFigure ConnectionFigure </FONT></TD><TD colspan="2">Same as CustomFigure, but for Connections<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parent</TD><TD>gmfgraph::Figure</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencingElements</TD><TD>gmfgraph::DiagramElement</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>gmfgraph::FigureMarker</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>foregroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>backgroundColor</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maximumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minimumSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>preferredSize</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>font</TD><TD>gmfgraph::Font</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>border</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>location</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>customChildren</TD><TD>gmfgraph::FigureAccessor</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Color</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">RGBColor</FONT></TD><TD><FONT CLASS="FrameItemFont">Color </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>red</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>green</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>blue</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ConstantColor</FONT></TD><TD><FONT CLASS="FrameItemFont">Color </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>value</TD><TD>gmfgraph::ColorConstants</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Font</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">BasicFont</FONT></TD><TD><FONT CLASS="FrameItemFont">Font </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>faceName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>height</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>style</TD><TD>gmfgraph::FontStyle</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Point</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>x</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>y</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Dimension</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>dx</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>dy</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Insets</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>top</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>left</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bottom</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>right</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Border</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LineBorder</FONT></TD><TD><FONT CLASS="FrameItemFont">Border </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>width</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>color</TD><TD>gmfgraph::Color</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MarginBorder</FONT></TD><TD><FONT CLASS="FrameItemFont">Border </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>insets</TD><TD>gmfgraph::Insets</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CompoundBorder</FONT></TD><TD><FONT CLASS="FrameItemFont">Border </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>outer</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>inner</TD><TD>gmfgraph::Border</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomBorder</FONT></TD><TD><FONT CLASS="FrameItemFont">Border CustomClass </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LayoutData</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>owner</TD><TD>gmfgraph::Layoutable</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomLayoutData</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutData CustomClass </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>owner</TD><TD>gmfgraph::Layoutable</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GridLayoutData</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutData </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>grabExcessHorizontalSpace</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>grabExcessVerticalSpace</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>verticalAlignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>horizontalAlignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>verticalSpan</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>horizontalSpan</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>horizontalIndent</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>owner</TD><TD>gmfgraph::Layoutable</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sizeHint</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">BorderLayoutData</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutData </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>alignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>vertical</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>owner</TD><TD>gmfgraph::Layoutable</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Layoutable</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutData</TD><TD>gmfgraph::LayoutData</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layout</TD><TD>gmfgraph::Layout</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Layout</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CustomLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout CustomClass </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>qualifiedClassName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bundleName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attributes</TD><TD>gmfgraph::CustomAttribute</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GridLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>numColumns</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>equalWidth</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>margins</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>spacing</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">BorderLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>spacing</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FlowLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>vertical</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>matchMinorSize</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>forceSingleLine</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>majorAlignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minorAlignment</TD><TD>gmfgraph::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>majorSpacing</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>minorSpacing</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">XYLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">XYLayoutData</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutData </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>owner</TD><TD>gmfgraph::Layoutable</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>topLeft</TD><TD>gmfgraph::Point</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>size</TD><TD>gmfgraph::Dimension</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">StackLayout</FONT></TD><TD><FONT CLASS="FrameItemFont">Layout </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+</TABLE>
+</BODY>
+</HEAD>
+</HTML>

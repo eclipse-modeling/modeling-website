@@ -1,0 +1,1008 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<BODY BGCOLOR="white">nsURI: http://www.eclipse.org/gmf/2005/mappings/2.0<BR>
+<B>package: mappings</B>
+<BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%" SUMMARY="">
+<TR BGCOLOR="#AAAADD">
+<FONT CLASS="FrameItemFont"><TD>Class</TD><TD>Super Type(s)</TD><TD colspan="2">Description</TD></FONT>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Mapping</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">
+			OCL: nodes-&gt;forAll(n|n.containmentFeature.oclIsUndefined() and not n.child.domainMetaElement.oclIsUndefined() implies links-&gt;exists(let r:ecore::EReference= linkMetaFeature.oclAsType(ecore::EReference) in r.containment and r.eReferenceType.isSuperTypeOf(n.child.domainMetaElement)))<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>nodes</TD><TD>mappings::TopNodeReference</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>links</TD><TD>mappings::LinkMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>mappings::CanvasMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>appearanceStyles</TD><TD>tooldef::StyleSelector</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>audits</TD><TD>mappings::AuditContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>metrics</TD><TD>mappings::MetricContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MappingEntry</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainMetaElement</TD><TD>ecore::EClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainSpecialization</TD><TD>mappings::Constraint</TD><TD>Specializes further the domain meta element EClass associated with this mapping and should be evaluated in this EClass context<BR>
+			OCL: self.getDomainContext()<BR>
+			OCL: not domainSpecialization.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainInitializer</TD><TD>mappings::ElementInitializer</TD><TD>Initializer for the domain model element associated with mapping<BR>
+			OCL: not domainInitializer.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>labelMappings</TD><TD>mappings::LabelMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>relatedDiagrams</TD><TD>mappings::CanvasMapping</TD><TD>Diagrams that may be associated with this diagram element. It's up to client application to define what this association means (e.g. open diagram)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>getDomainContext</TD><TD>EClass</TD><TD>This method simplifies OCL expressions (makes it easy to write for both Node and Link).<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NeedsContainment</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NodeReference</FONT></TD><TD><FONT CLASS="FrameItemFont">NeedsContainment </FONT></TD><TD colspan="2">
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.eReferenceType.isSuperTypeOf(child.domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>childrenFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not childrenFeature.oclIsUndefined() implies childrenFeature.eReferenceType.isSuperTypeOf(child.domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>child</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ChildReference</FONT></TD><TD><FONT CLASS="FrameItemFont">NodeReference </FONT></TD><TD colspan="2">
+			OCL: not (ownedChild.oclIsUndefined() and referencedChild.oclIsUndefined())<BR>
+			OCL: not childrenFeature.oclIsUndefined() implies childrenFeature.eContainingClass.isSuperTypeOf(parentNode.domainMetaElement)<BR>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.eContainingClass.isSuperTypeOf(parentNode.domainMetaElement)<BR>
+			OCL: not child.getDomainContext().oclIsUndefined() implies not containmentFeature.oclIsUndefined()<BR>
+			OCL: let child:NodeMapping=(if ownedChild.oclIsUndefined() then referencedChild else ownedChild endif) in (((child.labelMappings-&gt;size() = 1) and child.labelMappings-&gt;forAll( soleLabel: LabelMapping | soleLabel.diagramLabel = child.diagramNode)) implies (child.diagramNode.affixedParentSide = gmfgraph::Direction::NONE))<BR>
+			OCL: let child:NodeMapping=(if ownedChild.oclIsUndefined() then referencedChild else ownedChild endif) in ((not compartment.oclIsUndefined()) implies (child.diagramNode.affixedParentSide = gmfgraph::Direction::NONE))<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>childrenFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not childrenFeature.oclIsUndefined() implies childrenFeature.eReferenceType.isSuperTypeOf(child.domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>child</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parentNode</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartment</TD><TD>mappings::CompartmentMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>ownedChild</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>referencedChild</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">TopNodeReference</FONT></TD><TD><FONT CLASS="FrameItemFont">NodeReference </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>childrenFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not childrenFeature.oclIsUndefined() implies childrenFeature.eReferenceType.isSuperTypeOf(child.domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>child</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>ownedChild</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NodeMapping</FONT></TD><TD><FONT CLASS="FrameItemFont">MappingEntry MenuOwner ToolOwner AppearanceSteward </FONT></TD><TD colspan="2">Both top-level diagram node and any inner node<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainMetaElement</TD><TD>ecore::EClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainSpecialization</TD><TD>mappings::Constraint</TD><TD>Specializes further the domain meta element EClass associated with this mapping and should be evaluated in this EClass context<BR>
+			OCL: self.getDomainContext()<BR>
+			OCL: not domainSpecialization.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainInitializer</TD><TD>mappings::ElementInitializer</TD><TD>Initializer for the domain model element associated with mapping<BR>
+			OCL: not domainInitializer.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>labelMappings</TD><TD>mappings::LabelMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>relatedDiagrams</TD><TD>mappings::CanvasMapping</TD><TD>Diagrams that may be associated with this diagram element. It's up to client application to define what this association means (e.g. open diagram)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>contextMenu</TD><TD>tooldef::ContextMenu</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tool</TD><TD>tooldef::AbstractTool</TD><TD>Way to create this element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>appearanceStyle</TD><TD>tooldef::StyleSelector</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramNode</TD><TD>gmfgraph::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>mappings::ChildReference</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>compartments</TD><TD>mappings::CompartmentMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>getDomainContext</TD><TD>EClass</TD><TD>This method simplifies OCL expressions (makes it easy to write for both Node and Link).<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CompartmentMapping</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>compartment</TD><TD>gmfgraph::Compartment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>parentNode</TD><TD>mappings::NodeMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>children</TD><TD>mappings::ChildReference</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LinkMapping</FONT></TD><TD><FONT CLASS="FrameItemFont">MappingEntry NeedsContainment MenuOwner ToolOwner AppearanceSteward </FONT></TD><TD colspan="2">Connection element<BR>
+			OCL: domainMetaElement.oclIsUndefined() implies containmentFeature.oclIsUndefined() and sourceMetaFeature.oclIsUndefined()<BR>
+			OCL: not domainMetaElement.oclIsUndefined()  implies containmentFeature.eReferenceType.isSuperTypeOf(domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainMetaElement</TD><TD>ecore::EClass</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainSpecialization</TD><TD>mappings::Constraint</TD><TD>Specializes further the domain meta element EClass associated with this mapping and should be evaluated in this EClass context<BR>
+			OCL: self.getDomainContext()<BR>
+			OCL: not domainSpecialization.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>domainInitializer</TD><TD>mappings::ElementInitializer</TD><TD>Initializer for the domain model element associated with mapping<BR>
+			OCL: not domainInitializer.oclIsUndefined() implies not domainMetaElement.oclIsUndefined()<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>labelMappings</TD><TD>mappings::LabelMapping</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>relatedDiagrams</TD><TD>mappings::CanvasMapping</TD><TD>Diagrams that may be associated with this diagram element. It's up to client application to define what this association means (e.g. open diagram)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>containmentFeature</TD><TD>ecore::EReference</TD><TD>
+			OCL: not containmentFeature.oclIsUndefined() implies containmentFeature.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>contextMenu</TD><TD>tooldef::ContextMenu</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>tool</TD><TD>tooldef::AbstractTool</TD><TD>Way to create this element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>appearanceStyle</TD><TD>tooldef::StyleSelector</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramLink</TD><TD>gmfgraph::Connection</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceMetaFeature</TD><TD>ecore::EStructuralFeature</TD><TD>
+			OCL: not domainMetaElement.oclIsUndefined() implies sourceMetaFeature.oclIsUndefined() or sourceMetaFeature.eContainingClass.isSuperTypeOf(domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>linkMetaFeature</TD><TD>ecore::EStructuralFeature</TD><TD>
+			OCL: not(domainMetaElement.oclIsUndefined() or linkMetaFeature.oclIsUndefined()) implies linkMetaFeature.eContainingClass.isSuperTypeOf(domainMetaElement)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>creationConstraints</TD><TD>mappings::LinkConstraints</TD><TD>Specifies additional restrictions on link creation<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>getDomainContext</TD><TD>EClass</TD><TD>This method simplifies OCL expressions (makes it easy to write for both Node and Link).<BR>
+</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CanvasMapping</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramCanvas</TD><TD>gmfgraph::Canvas</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainModel</TD><TD>ecore::EPackage</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>domainMetaElement</TD><TD>ecore::EClass</TD><TD>
+			OCL: not domainMetaElement.oclIsUndefined() implies not(domainMetaElement.abstract or domainMetaElement.interface)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>palette</TD><TD>tooldef::Palette</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>menuContributions</TD><TD>tooldef::MainMenu</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>toolbarContributions</TD><TD>tooldef::Toolbar</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LabelMapping</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Label definition; text is taken from the graph model; no editing support; user may contribute custom parser<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramLabel</TD><TD>gmfgraph::DiagramLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mapEntry</TD><TD>mappings::MappingEntry</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureLabelMapping</FONT></TD><TD><FONT CLASS="FrameItemFont">LabelMapping </FONT></TD><TD colspan="2">Label based on feature(s) from domain model<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>viewPattern</TD><TD>ecore::EString</TD><TD>Pattern for java.text.MessageFormat to produce label text<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>editPattern</TD><TD>ecore::EString</TD><TD>Pattern for java.text.MessageFormat to produce text for inplace editor; if not specified then viewPattern should be used<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramLabel</TD><TD>gmfgraph::DiagramLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mapEntry</TD><TD>mappings::MappingEntry</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>features</TD><TD>ecore::EAttribute</TD><TD>
+			OCL: features-&gt;forAll(f | f.eContainingClass.isSuperTypeOf(mapEntry.domainMetaElement))<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DesignLabelMapping</FONT></TD><TD><FONT CLASS="FrameItemFont">LabelMapping </FONT></TD><TD colspan="2">Label based on DescriptionStyle from notation model<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>readOnly</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>diagramLabel</TD><TD>gmfgraph::DiagramLabel</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mapEntry</TD><TD>mappings::MappingEntry</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Constraint</FONT></TD><TD><FONT CLASS="FrameItemFont">ValueExpression </FONT></TD><TD colspan="2">Boolean type value expression which is to be evaluated in a context<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>mappings::Language</TD><TD>Specifies the language in which the expression is stated<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LinkConstraints</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Groups constraints on the link source and target end<BR>
+			OCL: not (sourceEnd.oclIsUndefined() and targetEnd.oclIsUndefined())<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>linkMapping</TD><TD>mappings::LinkMapping</TD><TD>References the link mapping restricted by these constraints<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEnd</TD><TD>mappings::Constraint</TD><TD>Restriction enforced by the the source end, may reference variable 'oppositeEnd' pointing to targetEnd domainMetaElement instance if available.<BR>
+			OCL: let lm:LinkMapping=linkMapping in if lm.sourceMetaFeature.oclIsUndefined() then (if lm.containmentFeature.oclIsUndefined() then lm.linkMetaFeature.eContainingClass else lm.containmentFeature.eContainingClass endif) else lm.sourceMetaFeature.oclAsType(ecore::EReference).eReferenceType endif<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEnd</TD><TD>mappings::Constraint</TD><TD>Restriction enforced by the the target end, may reference variable 'oppositeEnd' pointing to sourceEnd domainMetaElement instance.<BR>
+			OCL: linkMapping.linkMetaFeature.eType.oclAsType(ecore::EClass)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ValueExpression</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Expression as a textual statement which results in a value when evaluated in a context<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>mappings::Language</TD><TD>Specifies the language in which the expression is stated<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ElementInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base class for initializers of domain model elements<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>mappingEntry</TD><TD>mappings::MappingEntry</TD><TD>The 'MappingEntry' whose domain model element is to be intialized by this initializer<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureSeqInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont">ElementInitializer </FONT></TD><TD colspan="2">Feature sequence initializer to initialize a sequence of features<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>mappingEntry</TD><TD>mappings::MappingEntry</TD><TD>The 'MappingEntry' whose domain model element is to be intialized by this initializer<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>initializers</TD><TD>mappings::FeatureInitializer</TD><TD>Value specifications as initializers for individual features which should be initialized in the order given by this list<BR>
+			OCL: self.elementClass<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>elementClass</TD><TD>ecore::EClass</TD><TD>
+			OCL: not creatingInitializer.feature.oclIsUndefined() implies creatingInitializer.feature.oclAsType(ecore::EReference).eReferenceType.isSuperTypeOf(elementClass)<BR>
+			OCL: not creatingInitializer.feature.oclIsUndefined() implies not (elementClass.interface or elementClass.abstract)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>creatingInitializer</TD><TD>mappings::ReferenceNewElementSpec</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureInitializer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>ecore::EStructuralFeature</TD><TD>The feature for which is to be initialized by this initializer<BR>
+			OCL: feature &lt;&gt; null implies not featureSeqInitializer.initializers-&gt;exists(i| i &lt;&gt; self and i.feature = self.feature)<BR>
+			OCL: feature &lt;&gt; null implies feature.eContainingClass.isSuperTypeOf(featureSeqInitializer.elementClass)<BR>
+			OCL: feature &lt;&gt; null implies feature.changeable<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>mappings::FeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FeatureValueSpec</FONT></TD><TD><FONT CLASS="FrameItemFont">ValueExpression FeatureInitializer </FONT></TD><TD colspan="2">Value specification associated with a specific feature<BR>
+			OCL: feature<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>body</TD><TD>ecore::EString</TD><TD>The text of the expression<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>language</TD><TD>mappings::Language</TD><TD>Specifies the language in which the expression is stated<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>langName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>ecore::EStructuralFeature</TD><TD>The feature for which is to be initialized by this initializer<BR>
+			OCL: feature &lt;&gt; null implies not featureSeqInitializer.initializers-&gt;exists(i| i &lt;&gt; self and i.feature = self.feature)<BR>
+			OCL: feature &lt;&gt; null implies feature.eContainingClass.isSuperTypeOf(featureSeqInitializer.elementClass)<BR>
+			OCL: feature &lt;&gt; null implies feature.changeable<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>mappings::FeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ReferenceNewElementSpec</FONT></TD><TD><FONT CLASS="FrameItemFont">FeatureInitializer </FONT></TD><TD colspan="2">
+			OCL: feature.many = false implies not (newElementInitializers-&gt;size() &gt; 1)<BR>
+			OCL: let r: ecore::EReference = feature.oclAsType(ecore::EReference) in feature &lt;&gt; null implies r.containment<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>feature</TD><TD>ecore::EStructuralFeature</TD><TD>The feature for which is to be initialized by this initializer<BR>
+			OCL: feature &lt;&gt; null implies not featureSeqInitializer.initializers-&gt;exists(i| i &lt;&gt; self and i.feature = self.feature)<BR>
+			OCL: feature &lt;&gt; null implies feature.eContainingClass.isSuperTypeOf(featureSeqInitializer.elementClass)<BR>
+			OCL: feature &lt;&gt; null implies feature.changeable<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>featureSeqInitializer</TD><TD>mappings::FeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>newElementInitializers</TD><TD>mappings::FeatureSeqInitializer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MenuOwner</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>contextMenu</TD><TD>tooldef::ContextMenu</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ToolOwner</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>tool</TD><TD>tooldef::AbstractTool</TD><TD>Way to create this element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AppearanceSteward</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>appearanceStyle</TD><TD>tooldef::StyleSelector</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AuditContainer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Container for audit rules representing a hierarchical organization of audits in the constraint category hierarchy of emft.validation framework<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>id</TD><TD>ecore::EString</TD><TD>Identifier which is unique within the scope of its parent container.<BR>
+			OCL: not parentContainer.oclIsUndefined() implies parentContainer.childContainers-&gt;one(i | i.id = self.id)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name for the category of audits organized in this container<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this audit container<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>parentContainer</TD><TD>mappings::AuditContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>audits</TD><TD>mappings::AuditRule</TD><TD>The audit rules organized in this container<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>childContainers</TD><TD>mappings::AuditContainer</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">RuleBase</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Base class for rule like audit, metric rules...<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AuditRule</FONT></TD><TD><FONT CLASS="FrameItemFont">RuleBase </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>id</TD><TD>ecore::EString</TD><TD>Unique identifier of this audit rule<BR>
+			OCL: not id.oclIsUndefined() implies container.audits-&gt;one(i | i.id = self.id)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>severity</TD><TD>mappings::Severity</TD><TD>Describes the severity of this audit rule violation<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>useInLiveMode</TD><TD>ecore::EBoolean</TD><TD>Indicates if this audit should be evaluated also in Live mode. If 'false', only Batch mode is applicable<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>message</TD><TD>ecore::EString</TD><TD>The text message to be reported in case of this audit violation<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>rule</TD><TD>mappings::Constraint</TD><TD>A boolean type condition which if not satisfied indicates this audit rule violation. It is evaluated in the context of the target<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>target</TD><TD>mappings::Auditable</TD><TD>The target representing the context this audit is evaluated in<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>mappings::AuditContainer</TD><TD>The containing audit container of this audit rule<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DomainElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">Auditable Measurable </FONT></TD><TD colspan="2">Target for rules applied on domain model elements<BR>
+			OCL: element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EClass</TD><TD>Targeted domain model element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DomainAttributeTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">Auditable </FONT></TD><TD colspan="2">Represents value based target, useful for audit rules expression not capable of ecore meta-model access<BR>
+			OCL: attribute.eType<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>nullAsError</TD><TD>ecore::EBoolean</TD><TD>Indicates whether null value of the attribute is reported as audit failure or success<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>attribute</TD><TD>ecore::EAttribute</TD><TD>The attribute the value of which is used as context in audit rule defining this target<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DiagramElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">Auditable Measurable </FONT></TD><TD colspan="2">Target for rules applied on diagram notation model selectively, for specific visualized element<BR>
+			OCL: if element.oclIsKindOf(NodeMapping) then 'notation::Node' else 'notation::Edge' endif<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>mappings::MappingEntry</TD><TD>Targeted visualized element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NotationElementTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">Auditable Measurable </FONT></TD><TD colspan="2">Target for rules applied on diagram notation model elements<BR>
+			OCL: element<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EClass</TD><TD>Targeted diagram notation model element<BR>
+			OCL: element.eAllSuperTypes-&gt;including(element)-&gt;one(ePackage.name = 'notation' and name = 'View')<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MetricContainer</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metrics</TD><TD>mappings::MetricRule</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">MetricRule</FONT></TD><TD><FONT CLASS="FrameItemFont">RuleBase </FONT></TD><TD colspan="2">
+			OCL: not lowLimit.oclIsUndefined() and not highLimit.oclIsUndefined()  implies lowLimit &lt; highLimit<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD>A human readable name of this rule<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD>The detailed description of this rule semantics<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>key</TD><TD>ecore::EString</TD><TD>Unique key identifying this metric an abbreviation for this metric<BR>
+			OCL: not key.oclIsUndefined() implies container.metrics-&gt;one(i | i.key = self.key)<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>lowLimit</TD><TD>ecore::EDoubleObject</TD><TD>The lowest acceptable value of the rule expression result<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>highLimit</TD><TD>ecore::EDoubleObject</TD><TD>The highest acceptable value of the rule expression result<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>rule</TD><TD>mappings::ValueExpression</TD><TD>Expression that calculates the value of this metric which is of EDataType that encapsulates java.lang.Number subclasses or their primitives<BR>
+			OCL: 'ecore::EDoubleObject'<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>target</TD><TD>mappings::Measurable</TD><TD>The target representing the context this metric is evaluated in<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD>container</TD><TD>mappings::MetricContainer</TD><TD>The containing metric container of this metric rule<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">AuditedMetricTarget</FONT></TD><TD><FONT CLASS="FrameItemFont">Auditable </FONT></TD><TD colspan="2">Target metric which can be evaluated by audit rule. The target context here is the metric rule resulting type classifier<BR>
+			OCL: 'ecore::EDoubleObject'<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>metric</TD><TD>mappings::MetricRule</TD><TD>Metric which can be checked by audit<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Auditable</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Target suitable for auditing<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Measurable</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2">Marker interface for anything that can be subject to metrics<BR>
+</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Operation</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+</TABLE>
+</BODY>
+</HEAD>
+</HTML>

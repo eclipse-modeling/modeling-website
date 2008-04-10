@@ -1,0 +1,725 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+<BODY BGCOLOR="white">nsURI: http://www.eclipse.org/gmf/runtime/1.0.0/notation<BR>
+<B>package: notation</B>
+<BR>
+<BR>
+<TABLE BORDER="0" WIDTH="100%" SUMMARY="">
+<TR BGCOLOR="#AAAADD">
+<FONT CLASS="FrameItemFont"><TD>Class</TD><TD>Super Type(s)</TD><TD colspan="2">Description</TD></FONT>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Edge</FONT></TD><TD><FONT CLASS="FrameItemFont">View </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>type</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mutable</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>eAnnotations</TD><TD>ecore::EAnnotation</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>persistedChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>styles</TD><TD>notation::Style</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>notation::Diagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>transientChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>source</TD><TD>notation::View</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>target</TD><TD>notation::View</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bendpoints</TD><TD>notation::Bendpoints</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceAnchor</TD><TD>notation::Anchor</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetAnchor</TD><TD>notation::Anchor</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Node</FONT></TD><TD><FONT CLASS="FrameItemFont">View </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>type</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mutable</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>eAnnotations</TD><TD>ecore::EAnnotation</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>persistedChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>styles</TD><TD>notation::Style</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>notation::Diagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>transientChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>layoutConstraint</TD><TD>notation::LayoutConstraint</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Style</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FillStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>fillColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LineStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>lineColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FontStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>fontColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fontName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fontHeight</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bold</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>italic</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>underline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>strikeThrough</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">TitleStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>showTitle</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">SortingStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sorting</TD><TD>notation::Sorting</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sortingKeys</TD><TD>notation::SortKeyMap</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>sortedObjects</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DescriptionStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">LayoutConstraint</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Size</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutConstraint </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>width</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>height</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Location</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutConstraint </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>x</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>y</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Bounds</FONT></TD><TD><FONT CLASS="FrameItemFont">Location Size </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>x</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>y</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>width</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>height</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Ratio</FONT></TD><TD><FONT CLASS="FrameItemFont">LayoutConstraint </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>value</TD><TD>ecore::EDouble</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Anchor</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Bendpoints</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">IdentityAnchor</FONT></TD><TD><FONT CLASS="FrameItemFont">Anchor </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>id</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">RoutingStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>routing</TD><TD>notation::Routing</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>smoothness</TD><TD>notation::Smoothness</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>avoidObstructions</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>closestDistance</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinkStatus</TD><TD>notation::JumpLinkStatus</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinkType</TD><TD>notation::JumpLinkType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinksReverse</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">View</FONT></TD><TD><FONT CLASS="FrameItemFont">EModelElement </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>type</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mutable</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>eAnnotations</TD><TD>ecore::EAnnotation</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>persistedChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>styles</TD><TD>notation::Style</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>notation::Diagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>transientChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">RelativeBendpoints</FONT></TD><TD><FONT CLASS="FrameItemFont">Bendpoints </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>points</TD><TD>notation::RelativeBendpointList</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Diagram</FONT></TD><TD><FONT CLASS="FrameItemFont">View </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>visible</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>type</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>mutable</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>name</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>measurementUnit</TD><TD>notation::MeasurementUnit</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>eAnnotations</TD><TD>ecore::EAnnotation</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>sourceEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>targetEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>persistedChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>styles</TD><TD>notation::Style</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>element</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>diagram</TD><TD>notation::Diagram</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>transientChildren</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>persistedEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>TransientEdges</TD><TD>notation::Edge</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Image</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>data</TD><TD>ecore::EByteArray</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">CanonicalStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>canonical</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ShapeStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">EObject FontStyle DescriptionStyle FillStyle LineStyle </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>fontColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fontName</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fontHeight</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>bold</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>italic</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>underline</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>strikeThrough</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>fillColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ConnectorStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">EObject RoutingStyle LineStyle </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>routing</TD><TD>notation::Routing</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>smoothness</TD><TD>notation::Smoothness</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>avoidObstructions</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>closestDistance</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinkStatus</TD><TD>notation::JumpLinkStatus</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinkType</TD><TD>notation::JumpLinkType</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>jumpLinksReverse</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>lineColor</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">PageStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>pageX</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageY</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageHeight</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DrawerStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>collapsed</TD><TD>ecore::EBoolean</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">GuideStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>horizontalGuides</TD><TD>notation::Guide</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>verticalGuides</TD><TD>notation::Guide</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">Guide</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>position</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>nodeMap</TD><TD>notation::NodeEntry</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">NodeEntry</FONT></TD><TD><FONT CLASS="FrameItemFont"></FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>value</TD><TD>notation::Alignment</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>key</TD><TD>notation::Node</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">FilteringStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>filtering</TD><TD>notation::Filtering</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>filteringKeys</TD><TD>notation::FilterKeyList</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>filteredObjects</TD><TD>ecore::EObject</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">DiagramStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">EObject PageStyle GuideStyle DescriptionStyle </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>pageX</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageY</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageWidth</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>pageHeight</TD><TD>ecore::EInt</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>description</TD><TD>ecore::EString</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>horizontalGuides</TD><TD>notation::Guide</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>verticalGuides</TD><TD>notation::Guide</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ImageStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">Style </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>antiAlias</TD><TD>ecore::EBooleanObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maintainAspectRatio</TD><TD>ecore::EBooleanObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>cropBound</TD><TD>notation::Bounds</TD><TD></TD>
+</TR>
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD colspan="1"><FONT CLASS="FrameItemFont">ImageBufferStyle</FONT></TD><TD><FONT CLASS="FrameItemFont">ImageStyle </FONT></TD><TD colspan="2"></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Attribute</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>antiAlias</TD><TD>ecore::EBooleanObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>maintainAspectRatio</TD><TD>ecore::EBooleanObject</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD BGCOLOR="#DDEEFF">Reference</TD><TD BGCOLOR="#DDEEFF">Type</TD><TD BGCOLOR="#DDEEFF">Description</TD>
+</TR>
+<TR>
+<TD></TD><TD>cropBound</TD><TD>notation::Bounds</TD><TD></TD>
+</TR>
+<TR>
+<TD></TD><TD>imageBuffer</TD><TD>notation::Image</TD><TD></TD>
+</TR>
+</TABLE>
+</BODY>
+</HEAD>
+</HTML>
