@@ -140,7 +140,32 @@
 	<!-- UML2 2.2.0M6 S200804020110 -->
 	
 	<!-- OCL 1.2.0M6 S200804020135 -->
-	<category-def label="MDT OCL SDK 1.2.0M6 S200804020135" name="MDT OCL SDK 1.2.0M6 S200804020135">
+	
+	<!-- UML2TOOLS 0.8.0M6 S200804101255 (Incubation) -->
+	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255" name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255">
+		<description>
+MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.diagram.source" version="0.7.100.v200804101255" url="features/org.eclipse.uml2.diagram.source_0.7.100.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+	<feature id="org.eclipse.uml2.diagram" version="0.7.100.v200804101255" url="features/org.eclipse.uml2.diagram_0.7.100.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.doc" version="0.7.0.v200804101255" url="features/org.eclipse.uml2tools.doc_0.7.0.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.sdk" version="0.7.1.v200804101255" url="features/org.eclipse.uml2tools.sdk_0.7.1.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools" version="0.8.0.v200804101255" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2tools_0.8.0.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.examples" version="0.7.1.v200804101255" url="features/org.eclipse.uml2tools.examples_0.7.1.v200804101255.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0M6 S200804101255"/>
+	</feature>
+<category-def label="MDT OCL SDK 1.2.0M6 S200804020135" name="MDT OCL SDK 1.2.0M6 S200804020135">
 		<description>
 MDT OCL SDK 1.2.0M6 S200804020135: contains runtime, source, and documentation.
 		</description>
