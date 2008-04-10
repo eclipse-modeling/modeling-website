@@ -1,8 +1,5 @@
 <?php
 
-/* used for sidebar entry */
-$NLpacks = array();
-
 $oldrels = array(
 	//"2.0.2" => array("2008/02/25 02:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0.2-200802250200"),
 	"2.0.1" => array("2007/09/28 00:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0.1-200709280000"),
