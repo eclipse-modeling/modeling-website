@@ -4,7 +4,10 @@
 
 	<description url="http://download.eclipse.org/modeling/gmf/updates/site-interim.xml">
 	To install these plugins, point your Eclipse Update Manager at this site.
+	</description>
 	
+	<!-- gmf -->
+
 	<!-- GMF 2.1.0M6 S200804101632 -->
 	<category-def label="GMF SDK 2.1.0M6 S200804101632" name="GMF SDK 2.1.0M6 S200804101632">
 		<description>
@@ -47,10 +50,5 @@ GMF SDK 2.1.0M6 S200804101632: contains runtime, source, and documentation.
 	<feature id="org.eclipse.gmf" version="1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDrpWYxakgb4B" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/updates/features/org.eclipse.gmf_1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDrpWYxakgb4B.jar" patch="false">
 		<category name="GMF SDK 2.1.0M6 S200804101632"/>
 	</feature>
-</description>
 
-	<!-- gmf -->
-
-	<!-- GMF 2.1.0 M5 -->
-	
 </site>
