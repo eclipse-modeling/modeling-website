@@ -87,8 +87,8 @@ $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.ph
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse.gmf%2F" . (false && $proj?"org.eclipse.gmf.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 $Nav->addCustomNav("API Plan", "http://wiki.eclipse.org/GMF_Project_Plan", "_self", 2);
 
-$Nav->addNavSeparator("Community", "http://www.eclipse.org/gmf/development/");
-$Nav->addCustomNav("How To Contribute", "http://www.eclipse.org/gmf/development/", "_self", 2);
+$Nav->addNavSeparator("Community", "http://www.eclipse.org/$PR/development/");
+$Nav->addCustomNav("How To Contribute", "http://www.eclipse.org/$PR/development/", "_self", 2);
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Graphical_Modeling_Framework", "_self", 2);
 $Nav->addCustomNav("Newsgroup", "http://dev.eclipse.org/newslists/news.eclipse.modeling.gmf/maillist.html", "_self", 2);
 $Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/gmf-releng", "_self", 2);
