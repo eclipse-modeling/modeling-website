@@ -236,7 +236,10 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
 	$mid = "$downloadPre/$PR2" . ($projct == "" ? $projct : "/$projct") . "/downloads/drops/";
 	$out = "";
-
+	$buildlog = "$PWD${path}buildlog.txt";
+	$buildlog_cache = null;
+	clearstatcache();
+	
 	$warnings = 0;
 	$errors = 0;
 	$failures = 0;
@@ -251,17 +254,29 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	$link = "";
 	$link2 = "";
 
-	clearstatcache();
-	if ($isBuildServer && is_file("$PWD${path}buildlog.txt")) // if the log's too big, don't open it!
+	$ID = substr($path, -14);
+	if (is_file("${path}testing/${ID}testing/linux.gtk_consolelog.txt")) // testing or perhaps failed and didn't clean up
 	{
-		if (grep("/BUILD FAILED/", "$PWD${path}buildlog.txt"))
+		$icon = "check-maybe";
+		$conlog = "${path}testing/${ID}testing/linux.gtk_consolelog.txt";
+		$testlog = ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR2/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=" . substr($path, 0, strlen($path) - 1);
+		$link = ($isBuildServer && !$isBuildDotEclipseServer ? "/$PR/build/log-viewer.php?" . ($isTools ? "tools&" : ($isTech ? "technology&" : "")) . "project=$projct&amp;build=$path" :
+				($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path."buildlog.txt");
+		$link2 = (is_file("$PWD$conlog") ? "$mid$conlog" : (is_file("$PWD$testlog") ? "$testlog" : $link));
+		$result = (is_file("$PWD$conlog") ? "Testing..." : $result);
+	}
+	
+	if (!$icon && $isBuildServer && is_file($buildlog)) // if the log's too big, don't open it!
+	{
+		$buildlog_cache = (isset($buildlog_cache) && $buildlog_cache) ? $buildlog_cache : loadFile($buildlog);
+		if (grep("/BUILD FAILED/", $buildlog, $buildlog_cache))
 		{
 			$icon = "not";
 			$result = "FAILED"; // BUILD
 		}
 	}
 
-	if (is_file("$PWD${path}index.html") || is_file("$PWD${path}index.php"))
+	if (!$icon && (is_file("$PWD${path}index.html") || is_file("$PWD${path}index.php")))
 	{
 		$indexHTML = is_file("$PWD${path}index.html") ? file_get_contents("$PWD${path}index.html") : "";
 		$zips = loadDirSimple($PWD . $path, ".zip", "f"); // get files count
@@ -369,26 +384,27 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	}
 
 	clearstatcache();
-	if ($isBuildServer && $icon == "question" && is_file("$PWD${path}buildlog.txt"))
+	if ($isBuildServer && $icon == "question" && is_file($buildlog))
 	{
-		if ($isBuildServer && grep("/\[start\] start\.sh finished on: /", "$PWD${path}buildlog.txt"))
+		$buildlog_cache = (isset($buildlog_cache) && $buildlog_cache) ? $buildlog_cache : loadFile($buildlog);
+		if ($isBuildServer && grep("/\[start\] start\.sh finished on: /", $buildlog, $buildlog_cache))
 		{
 			$icon = "not"; //display failed icon - not in progress anymore!
 			$result = "FAILED"; // BUILD
 		}
 
-		if ($result != "FAILED" && strtotime("now") - filemtime("$PWD${path}buildlog.txt") < 7200)
+		if ($result != "FAILED" && strtotime("now") - filemtime($buildlog) < 7200)
 		{
 			$doRefreshPage = true;
 		}
 		else
 		{
 			$mightHavePassed = false;
-			if (grep("/BUILD SUCCESSFUL/", "$PWD${path}buildlog.txt"))
+			if (grep("/BUILD SUCCESSFUL/", $buildlog, $buildlog_cache))
 			{
 				$mightHavePassed = true;
 			}
-			else if (grep("/BUILD FAILED/", "$PWD${path}buildlog.txt"))
+			else if (grep("/BUILD FAILED/", $buildlog, $buildlog_cache))
 			{
 				$icon = "not"; //display failed icon
 				$result = "FAILED"; // BUILD
@@ -562,22 +578,10 @@ function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive =
 	}
 }
 
-function grep($pattern, $file)
+function grep($pattern, $file, $file_cache = null)
 {
-	$maxfilesize = 1*1024*1024; // 1M file limit
-	$filec = array();
-	if (is_file($file) && is_readable($file))
-	{
-		if (filesize($file) < ($maxfilesize))
-		{
-			$filec = file($file);
-		}
-		else
-		{
-			exec("tail -n4000 $file", $filec);
-		}
-	}
-
+	$filec = $file_cache ? $file_cache : loadFile($file);
+	
 	foreach ($filec as $z)
 	{
 		if (preg_match($pattern, $z))
@@ -589,6 +593,25 @@ function grep($pattern, $file)
 
 	$filec = array();
 	return false;
+}
+
+function loadFile($file)
+{
+	$maxfilesize = 64*1024; // 64K file limit
+	$filec = array();
+	if (is_file($file) && is_readable($file))
+	{
+		if (filesize($file) < ($maxfilesize))
+		{
+			$filec = file($file);
+		}
+		else
+		{
+			exec("tail -n50 $file", $filec); // just grab the last n lines
+		}
+	}
+
+	return $filec;
 }
 
 /* if $styled = 0 or false, return text only */
@@ -983,7 +1006,8 @@ function showArchived($oldrels)
 
 function getTestResultsJUnitXML($file)
 {
-	$data = file($file);
+	$data = array();
+	exec("head -3 $file | grep \"<testsuite\"", $data); // possibly faster than file($file), but might break on some servers
 	foreach ($data as $line)
 	{
 		// <testsuite errors="0" failures="0" ...>
