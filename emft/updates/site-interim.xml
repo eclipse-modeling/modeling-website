@@ -194,7 +194,29 @@
 	<!-- NET4J 0.8.0 I200804071452 (Incubation) -->
 	
 	<!-- TENEO 0.8.0 I200804102324 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200804102324" name="EMFT TENEO SDK (Incubation) 0.8.0 I200804102324">
+	
+	<!-- ECORETOOLS 0.8.0M6 I200804110303 (Incubation) -->
+	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303">
+		<description>
+EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200804110303" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200804110303.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.8.0.v200804110303" url="features/org.eclipse.emf.ecoretools.sdk_0.8.0.v200804110303.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.source" version="0.8.0.v200804110303" url="features/org.eclipse.emf.ecoretools.source_0.8.0.v200804110303.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200804110303" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/features/org.eclipse.emf.ecoretools_0.8.0.v200804110303.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200804110303" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200804110303.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0M6 I200804110303"/>
+	</feature>
+<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200804102324" name="EMFT TENEO SDK (Incubation) 0.8.0 I200804102324">
 		<description>
 EMFT TENEO SDK (Incubation) 0.8.0 I200804102324: contains runtime, source, and documentation.
 		</description>
