@@ -1,10 +1,29 @@
-Committers
+Section 1 (Committers),,,,
 
-...
+dev.eclipse.org Login,,,,
+fallilaire,,,,
+mbarbero,,,,
+mbohlen,,,,
+fjouault,,,,
+wpiers,,,,
+dwagelaar,,,,
 
-Developers
+Section 2 (Developers),,,,
 
-...
+Component,Bug #,Contributor,Size,Committer
+org.eclipse.m2m.atl.adt.debug,181759,Mikaël Barbero,788,fallilaire
+org.eclipse.m2m.atl.engine.vm,181970,Lutz Wrage,small,fallilaire
+org.eclipse.m2m.atl.drivers.uml24atl,193924,Sebastien GABEL,320,fallilaire
+org.eclipse.m2m.atl.engine,194569,Jacques LESCOT,small,fjouault
+org.eclipse.m2m.atl.drivers.uml24atl,194894,Hugo Bruneliere,small,fallilaire
+org.eclipse.m2m.atl.adt.editor,196826,Mikaël Barbero,small,fallilaire
+org.eclipse.m2m.atl.engine,197797,Hugo Bruneliere,45,fallilaire
+org.eclipse.m2m.atl.drivers.emf4atl,202897,Rene Ladan,small,dwagelaar
+org.eclipse.m2m.atl.engine.vm,210408,Quentin GLINEUR,110,wpiers
+org.eclipse.m2m.atl.engine.emfvm,218632,Brahim-Khalil Loukil,small,wpiers
+org.eclipse.m2m.atl.engine.vm,218653,Quentin GLINEUR,small,wpiers
 
-Third Party Software
-...
+Section 3 (Third Party Software),,,,
+
+Name,Location,License,Usage,
+LPG ANTLR Runtime v3.0.0,/cvsroot/tools/org.eclipse.orbit/org.antlr.runtime v3_0_0,Eclipse Public License Version 1.0,original antlrruntime.jar repackaged as an OSGi bundle
