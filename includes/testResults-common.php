@@ -86,6 +86,7 @@ foreach ($catgs as $num => $dirBits)
 		$out = "";
 		if (sizeof($files) > 0)
 		{
+			sort($files); reset($files);
 			foreach ($files as $file)
 			{
 				$out .= '<li><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' . 
@@ -107,12 +108,16 @@ foreach ($catgs as $num => $dirBits)
 			$files = loadDirChildren($PWD . $dirBits[1], $dirBits[2]);
 			$out = "";
 			$noProblems = true;
-			foreach ($files as $file)
+			if (sizeof($files) > 0)
 			{
-				$results = getTestResults($PWD . $dirBits[1] . $file);
-				$noProblems = $noProblems && !$results;
-				$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir. preg_replace("#/xml/#", "/html/", $dirBits[1]) . preg_replace("#\.xml$#",".html", $file) . '">' .
-				preg_replace("/\.xml$/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+				sort($files); reset($files);
+				foreach ($files as $file)
+				{
+					$results = getTestResults($PWD . $dirBits[1] . $file);
+					$noProblems = $noProblems && !$results;
+					$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir. preg_replace("#/xml/#", "/html/", $dirBits[1]) . preg_replace("#\.xml$#",".html", $file) . '">' .
+					preg_replace("/\.xml$/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+				}
 			}
 			print '<li><div><b style="color:' . ($noProblems ? "green" : "red") . '">' . ($noProblems ? "0 " : "") . $dirBits[3] . '</b></div>' .
 			'<a href="javascript:toggle(\'e' . $num . '\')">' . $dirBits[0] . '</a>';
@@ -126,12 +131,16 @@ foreach ($catgs as $num => $dirBits)
 				$out = "";
 				$summary = getCompileResultsSummary($PWD . $dirBits[1] . "../summary.txt");
 				$noProblems = !$summary;
-				foreach ($files as $file)
+				if (sizeof($files) > 0)
 				{
-					$results = getCompileResults($PWD . $dirBits[1] . $file);
-					$noProblems = $noProblems && !$results;
-					$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' .
-					preg_replace("/((\/@dot|.jar).bin.log|_\d+\.\d+\.\d+\.v\d+)/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+					sort($files); reset($files);
+					foreach ($files as $file)
+					{
+						$results = getCompileResults($PWD . $dirBits[1] . $file);
+						$noProblems = $noProblems && !$results;
+						$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' .
+						preg_replace("/((\/@dot|.jar).bin.log|_\d+\.\d+\.\d+\.v\d+)/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+					}
 				}
 				print '<li><div><b style="color:' . ($noProblems ? "green" : "red") . '">' . ($noProblems ? "0 " : "") . ($summary? $summary : $dirBits[3]) . '</b></div>' .
 				'<a href="javascript:toggle(\'e' . $num . '\')">' . $dirBits[0] . '</a>';
