@@ -88,7 +88,9 @@ foreach ($catgs as $num => $dirBits)
 		{
 			foreach ($files as $file)
 			{
-				$out .= '<li><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' . str_replace("_consolelog.txt", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+				$out .= '<li><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' . 
+					preg_replace("#_consolelog\.txt|\.AllSuites|\.metadata\.log\.txt#", "", $file) . 
+					'</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 
 			}
 		} else
