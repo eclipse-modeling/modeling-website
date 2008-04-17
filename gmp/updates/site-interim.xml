@@ -13,7 +13,53 @@
 	<!-- GMF 2.1.0M6a S200804111629 -->
 	
 	<!-- GMF 2.1.0 I200804151202 -->
-	<category-def label="GMF SDK 2.1.0 I200804151202" name="GMF SDK 2.1.0 I200804151202">
+	
+	<!-- GMF 2.1.0 I200804171622 -->
+	<category-def label="GMF SDK 2.1.0 I200804171622" name="GMF SDK 2.1.0 I200804171622">
+		<description>
+GMF SDK 2.1.0 I200804171622: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.gmf.doc" version="1.1.0.v20070330-1300-108Y7w3119143301111" url="features/org.eclipse.gmf.doc_1.1.0.v20070330-1300-108Y7w3119143301111.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.examples.pde" version="1.1.0.v20070511-1500-2-8Y8s733H3C4514A44" url="features/org.eclipse.gmf.examples.pde_1.1.0.v20070511-1500-2-8Y8s733H3C4514A44.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.1.0.v20080223-0300-2-8Z8s733I3A3G177C3" url="features/org.eclipse.gmf.runtime.notation.source_1.1.0.v20080223-0300-2-8Z8s733I3A3G177C3.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation" version="1.1.0.v20080223-0300-2-8Z8s733I3A3G177C3" url="features/org.eclipse.gmf.runtime.notation_1.1.0.v20080223-0300-2-8Z8s733I3A3G177C3.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.1.0.v20080328-1605-7K8V4EFp_acwbScQvytr" url="features/org.eclipse.gmf.runtime.thirdparty_1.1.0.v20080328-1605-7K8V4EFp_acwbScQvytr.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk" version="2.0.1.v20080411-0411-7_41A9RjdRVJtGAFpLVqa8OKLtth" url="features/org.eclipse.gmf.sdk_2.0.1.v20080411-0411-7_41A9RjdRVJtGAFpLVqa8OKLtth.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.source" version="1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDvnWW_Negb4B" url="features/org.eclipse.gmf.source_1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDvnWW_Negb4B.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tooling.source" version="2.0.1.v20080223-0300" url="features/org.eclipse.gmf.tooling.source_2.0.1.v20080223-0300.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tooling" version="2.0.1.v20080223-0300-7V78EAVEHhHehBgsz-aM5Evh" url="features/org.eclipse.gmf.tooling_2.0.1.v20080223-0300-7V78EAVEHhHehBgsz-aM5Evh.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf" version="1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDvnWW_Negb4B" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/updates/features/org.eclipse.gmf_1.1.0.v20080223-0300-7c7AEKFEWvfTJz-JDvnWW_Negb4B.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.experimental.source" version="1.1.1.v20080322-0000" url="features/org.eclipse.gmf.sdk.experimental.source_1.1.1.v20080322-0000.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20080322-0000-772_9CYQCD1DeJZ6EMDD" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20080322-0000-772_9CYQCD1DeJZ6EMDD.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+	<feature id="org.eclipse.gmf.examples" version="1.0.100.v20080322-0000-7_-_DE8McIJQK3Mh9SrLM" url="features/org.eclipse.gmf.examples_1.0.100.v20080322-0000-7_-_DE8McIJQK3Mh9SrLM.jar" patch="false">
+		<category name="GMF SDK 2.1.0 I200804171622"/>
+	</feature>
+<category-def label="GMF SDK 2.1.0 I200804151202" name="GMF SDK 2.1.0 I200804151202">
 		<description>
 GMF SDK 2.1.0 I200804151202: contains runtime, source, and documentation.
 		</description>
