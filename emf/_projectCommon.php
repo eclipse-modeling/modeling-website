@@ -55,6 +55,10 @@ $projects = array(
 $tmp = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $tmp);
 
+/* hack for Ed -- for emf, show all the emf (sub)components */
+$bugcoms["emf"] = array("Core", "Doc", "Edit", "Mapping", "Tools", "XML/XMI"); 
+$bugcoms["emf"] = implode("%26component=",$bugcoms["emf"]);
+
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("sdo","query","transaction","validation", "emfqtv"); //components without newsgroup
