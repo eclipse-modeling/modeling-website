@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site pack200="true" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/m2t/updates/releases/site.xml&amp;format=xml">
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/m2t/updates/releases/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/m2t/updates/releases/site.xml&amp;format=xml">
 	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/ ... -->
 
-	<description url="http://download.eclipse.org/modeling/m2t/updates/releases">
+	<description url="http://download.eclipse.org/modeling/m2t/updates/releases/site.xml">
 	To install these plugins, point your Eclipse Update Manager at this site.
 	</description>
 
-
-	<!-- JET 0.8.2 (Incubation) -->
-	<category-def label="M2T JET SDK (Incubation) 0.8.2" name="M2T JET SDK (Incubation) 0.8.2">
-		<description>
-M2T JET SDK (Incubation) 0.8.2: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.jet.doc" version="0.8.0.v20070913-07707w31181_31" url="features/org.eclipse.jet.doc_0.8.0.v20070913-07707w31181_31" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.8.2"/>
-	</feature>
-	<feature id="org.eclipse.jet.examples" version="0.8.0.v20070913-077-7w31181_24" url="features/org.eclipse.jet.examples_0.8.0.v20070913-077-7w31181_24" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.8.2"/>
-	</feature>
-	<feature id="org.eclipse.jet.sdk" version="0.8.2.v20071206-07U382TZ8ckPDJlBnIQ" url="features/org.eclipse.jet.sdk_0.8.2.v20071206-07U382TZ8ckPDJlBnIQ" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.8.2"/>
-	</feature>
-	<feature id="org.eclipse.jet.source" version="0.8.2.v20071206" url="features/org.eclipse.jet.source_0.8.2.v20071206" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.8.2"/>
-	</feature>
-	<feature id="org.eclipse.jet" version="0.8.2.v20071206-17E29oA55Q5O9G" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.8.2.v20071206-17E29oA55Q5O9G" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.8.2"/>
-	</feature>
 
 	<!-- JET 0.7.3 (Incubation) -->
 	<category-def label="M2T JET SDK (Incubation) 0.7.3" name="M2T JET SDK (Incubation) 0.7.3">
@@ -35,19 +13,19 @@ M2T JET SDK (Incubation) 0.8.2: contains runtime, source, and documentation.
 M2T JET SDK (Incubation) 0.7.3: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.jet.doc" version="0.7.2.v20070510------0842292723" url="features/org.eclipse.jet.doc_0.7.2.v20070510------0842292723" patch="false">
+	<feature id="org.eclipse.jet.doc" version="0.7.2.v20070510------0842292723" url="features/org.eclipse.jet.doc_0.7.2.v20070510------0842292723.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.7.3"/>
 	</feature>
-	<feature id="org.eclipse.jet.examples" version="0.7.0.v20070510------0842292723" url="features/org.eclipse.jet.examples_0.7.0.v20070510------0842292723" patch="false">
+	<feature id="org.eclipse.jet.examples" version="0.7.0.v20070510------0842292723" url="features/org.eclipse.jet.examples_0.7.0.v20070510------0842292723.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.7.3"/>
 	</feature>
-	<feature id="org.eclipse.jet.sdk" version="0.7.3.v20070510-84229BsSJGoGgGy" url="features/org.eclipse.jet.sdk_0.7.3.v20070510-84229BsSJGoGgGy" patch="false">
+	<feature id="org.eclipse.jet.sdk" version="0.7.3.v20070510-84229BsSJGoGgGy" url="features/org.eclipse.jet.sdk_0.7.3.v20070510-84229BsSJGoGgGy.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.7.3"/>
 	</feature>
-	<feature id="org.eclipse.jet.source" version="0.7.3.v20070510" url="features/org.eclipse.jet.source_0.7.3.v20070510" patch="false">
+	<feature id="org.eclipse.jet.source" version="0.7.3.v20070510" url="features/org.eclipse.jet.source_0.7.3.v20070510.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.7.3"/>
 	</feature>
-	<feature id="org.eclipse.jet" version="0.7.3.v20070510------1G955I5E5_" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.7.3.v20070510------1G955I5E5_" patch="false">
+	<feature id="org.eclipse.jet" version="0.7.3.v20070510------1G955I5E5_" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/features/org.eclipse.jet_0.7.3.v20070510------1G955I5E5_.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.7.3"/>
 	</feature>
 
