@@ -4,8 +4,9 @@ function doRequirements()
 ?>
 <div class="homeitem3col">
 	<h3>Build Compatibility</h3>
-		<p style="padding-left:10px">Teneo has two different current builds: the I-build (the build id starts with an I) and the 
-		S-build (the build id starts with an S). The I- and S-build are compatible with different versions of EMF/Eclipse:</p>
+		<p style="padding-left:10px">Teneo has two different current builds: the Integration-build (the build id starts with an I) and the 
+		Stable-build (the build id starts with an S). Both builds are made from the same source tree and all bug fixes and new functionality
+		is present in both builds. The I- and S-build are compatible with different versions of EMF/Eclipse:</p>
 		<p style="padding-left:10px"><b>I-build (0.8.0):</b> this build is for Eclipse 3.3/EMF 2.3</p>
 		<p style="padding-left:10px"><b>S-build (0.8.0):</b> this build is for Eclipse 3.4/EMF 2.4</p>
 		<br/>
