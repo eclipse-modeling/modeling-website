@@ -54,6 +54,43 @@ MDT UML2 SDK 2.0.4: contains runtime, source, and documentation.
 		<category name="MDT UML2 SDK 2.0.4"/>
 	</feature>
 
+	<!-- OCL 1.1.2 -->
+	<category-def label="MDT OCL SDK 1.1.2" name="MDT OCL SDK 1.1.2">
+		<description>
+MDT OCL SDK 1.1.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.1.0.v200706071450-10-7w311817182561" url="features/org.eclipse.emf.ocl.doc_1.1.0.v200706071450-10-7w311817182561.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.source" version="1.1.1.v200709121956-1007w31181_232_67" url="features/org.eclipse.emf.ocl.source_1.1.1.v200709121956-1007w31181_232_67.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl" version="1.1.1.v200709121956-1007w31181_232_67" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.emf.ocl_1.1.1.v200709121956-1007w31181_232_67.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all.sdk" version="1.1.2.v200711262212-655_-JBYPSbnPexYUS8mkoIokBkC" url="features/org.eclipse.ocl.all.sdk_1.1.2.v200711262212-655_-JBYPSbnPexYUS8mkoIokBkC.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all" version="1.1.2.v200711262212-3237_76ThLBBkCeGUHbQW" url="features/org.eclipse.ocl.all_1.1.2.v200711262212-3237_76ThLBBkCeGUHbQW.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.doc" version="1.1.0.v200706071450-21-8s733G3E3G5AC3" url="features/org.eclipse.ocl.doc_1.1.0.v200706071450-21-8s733G3E3G5AC3.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.source" version="1.1.2.v200711262212-3219oA55P6H8I9HDE" url="features/org.eclipse.ocl.source_1.1.2.v200711262212-3219oA55P6H8I9HDE.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml.source" version="1.1.1.v200707131415-1007w311818242526" url="features/org.eclipse.ocl.uml.source_1.1.1.v200707131415-1007w311818242526.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml" version="1.1.1.v200707131415-1007w311818242526" url="features/org.eclipse.ocl.uml_1.1.1.v200707131415-1007w311818242526.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+	<feature id="org.eclipse.ocl" version="1.1.2.v200711262212-3219oA55P6H8I9HDE" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl_1.1.2.v200711262212-3219oA55P6H8I9HDE.jar" patch="false">
+		<category name="MDT OCL SDK 1.1.2"/>
+	</feature>
+
 	<!-- OCL 1.0.2 -->
 	<category-def label="MDT OCL SDK 1.0.2" name="MDT OCL SDK 1.0.2">
 		<description>
