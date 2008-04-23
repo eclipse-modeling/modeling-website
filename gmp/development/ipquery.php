@@ -40,7 +40,7 @@ if (!$isFormatted)
 	print "Developers (Section 2)\n";
 	doIPQuery(false);
 	print "\n";
-	if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0))
+	if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 	{
 		print "Additional IP\n";
 		foreach ($extra_IP as $ip)
@@ -50,7 +50,7 @@ if (!$isFormatted)
 	}
 	print "\n";
 	print "Third Party Software (Section 3)\n";
-	if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0))
+	if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 	{
 		foreach ($third_party as $tp)
 		{
@@ -79,7 +79,7 @@ else
 		<?php doIPQuery(true); ?>
 		<p>
 		<h4>Additional</h4>
- 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0))
+ 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 		{
 			print "<h4>Additional IP</h4>\n";
 			print "<ul>\n";
@@ -92,7 +92,7 @@ else
 	</div>
 	<div class="homeitem3col">
 		<h3>Third Party Software (Section 3)</h3>
-		<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0))
+		<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 		{
 			print "<ul>\n";
 			foreach ($third_party as $tp)
