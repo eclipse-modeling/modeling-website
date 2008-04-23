@@ -77,5 +77,4 @@ function doIPQuery($product_id, $isFormatted = true)
 	$dbh 		= null;
 	$dbc 		= null;
 }
-
 ?>

@@ -31,6 +31,7 @@ $third_party = array(
 
 if (!$isFormatted)
 {
+	header("Content-type: text/plain\n\n");
 	print "Committers (Section 1)\n";
 	foreach ($committers as $committer)
 	{
@@ -67,20 +68,16 @@ ob_start();
 	<div class="homeitem3col">
 		<h3>Committers (Section 1)</h3>
 		<ul>
-<?php foreach ($committers as $committer) 
-{
-	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a></li>\n";
-} ?>
+			<li>See list at right.</li>
 		</ul>
 	</div>
 	<div class="homeitem3col">
 		<h3>Developers (Section 2)</h3>
 		<?php doIPQuery($product_id, true); ?>
 		<p>
-		<h4>Additional</h4>
  		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 		{
-			print "<h4>Additional IP</h4>\n";
+			print "<b>Additional IP</b>\n";
 			print "<ul>\n";
 			foreach ($extra_IP as $ip)
 			{
@@ -105,7 +102,7 @@ ob_start();
 
 <div id="rightcolumn">
 	<div class="sideitem">
-		<h6>Search CVS By Author</h6>
+		<h6>Committers (Section 1)</h6>
 		<ul>
 <?php foreach ($committers as $committer) 
 {
