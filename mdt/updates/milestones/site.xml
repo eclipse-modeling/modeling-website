@@ -32,6 +32,77 @@ MDT UML2 SDK 2.2.0M6 S200804020110: contains runtime, source, and documentation.
 		<category name="MDT UML2 SDK 2.2.0M6 S200804020110"/>
 	</feature>
 
+	<!-- OCL 1.2.0M6 S200804020135 -->
+	<category-def label="MDT OCL SDK 1.2.0M6 S200804020135" name="MDT OCL SDK 1.2.0M6 S200804020135">
+		<description>
+MDT OCL SDK 1.2.0M6 S200804020135: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.2.0.v200710171842-108Y7w311913373254" url="features/org.eclipse.emf.ocl.doc_1.2.0.v200710171842-108Y7w311913373254.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.examples.source" version="1.2.0.v200710171842" url="features/org.eclipse.emf.ocl.examples.source_1.2.0.v200710171842.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.examples" version="1.2.0.v200710171842-35-9oA55R69_N_EGC" url="features/org.eclipse.emf.ocl.examples_1.2.0.v200710171842-35-9oA55R69_N_EGC.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.sdk" version="1.2.0.v200709211511-787C_7_5SSkLQVTJj1tOjjv58vCD" url="features/org.eclipse.emf.ocl.sdk_1.2.0.v200709211511-787C_7_5SSkLQVTJj1tOjjv58vCD.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.source" version="1.1.100.v200710171842-108Y7w311914373248" url="features/org.eclipse.emf.ocl.source_1.1.100.v200710171842-108Y7w311914373248.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl" version="1.1.100.v200710171842-108Y7w311914373248" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.emf.ocl_1.1.100.v200710171842-108Y7w311914373248.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all.sdk" version="1.2.0.v200709211511-67_8Y_-NQOaOSTYItmx1hqqiJbiq" url="features/org.eclipse.ocl.all.sdk_1.2.0.v200709211511-67_8Y_-NQOaOSTYItmx1hqqiJbiq.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.all" version="1.2.0.v200709211511-348Y7__AuvCDBhJNKhOMSc9" url="features/org.eclipse.ocl.all_1.2.0.v200709211511-348Y7__AuvCDBhJNKhOMSc9.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.doc" version="1.2.0.v200710171842-23-8s733I377E75A9" url="features/org.eclipse.ocl.doc_1.2.0.v200710171842-23-8s733I377E75A9.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.source" version="1.2.0.v200711121858-34-9oA55S5D9Q_DFK" url="features/org.eclipse.ocl.source_1.2.0.v200711121858-34-9oA55S5D9Q_DFK.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml.source" version="1.2.0.v200711121858-11-7w311914393169" url="features/org.eclipse.ocl.uml.source_1.2.0.v200711121858-11-7w311914393169.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl.uml" version="1.2.0.v200711121858-11-7w311914393169" url="features/org.eclipse.ocl.uml_1.2.0.v200711121858-11-7w311914393169.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+	<feature id="org.eclipse.ocl" version="1.2.0.v200711121858-34-9oA55S5D9Q_DFK" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl_1.2.0.v200711121858-34-9oA55S5D9Q_DFK.jar" patch="false">
+		<category name="MDT OCL SDK 1.2.0M6 S200804020135"/>
+	</feature>
+
+	<!-- UML2 2.2.0M5 S200802121122 -->
+	<category-def label="MDT UML2 SDK 2.2.0M5 S200802121122" name="MDT UML2 SDK 2.2.0M5 S200802121122">
+		<description>
+MDT UML2 SDK 2.2.0M5 S200802121122: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200801222150" url="features/org.eclipse.uml2.doc_2.2.0.v200801222150.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples.source_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.sdk_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.source_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.2.0.v200802110945" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.2.0.v200802110945.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
+	</feature>
+
 	<!-- OCL 1.2.0M5 S200802121700 -->
 	<category-def label="MDT OCL SDK 1.2.0M5 S200802121700" name="MDT OCL SDK 1.2.0M5 S200802121700">
 		<description>
@@ -76,31 +147,6 @@ MDT OCL SDK 1.2.0M5 S200802121700: contains runtime, source, and documentation.
 	</feature>
 	<feature id="org.eclipse.ocl" version="1.2.0.v200711121858-34-9oA55R696J8AFA" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.ocl_1.2.0.v200711121858-34-9oA55R696J8AFA.jar" patch="false">
 		<category name="MDT OCL SDK 1.2.0M5 S200802121700"/>
-	</feature>
-
-	<!-- UML2 2.2.0M5 S200802121122 -->
-	<category-def label="MDT UML2 SDK 2.2.0M5 S200802121122" name="MDT UML2 SDK 2.2.0M5 S200802121122">
-		<description>
-MDT UML2 SDK 2.2.0M5 S200802121122: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200801222150" url="features/org.eclipse.uml2.doc_2.2.0.v200801222150.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
-	</feature>
-	<feature id="org.eclipse.uml2.examples.source" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples.source_2.2.0.v200802110945.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
-	</feature>
-	<feature id="org.eclipse.uml2.examples" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.examples_2.2.0.v200802110945.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
-	</feature>
-	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.sdk_2.2.0.v200802110945.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
-	</feature>
-	<feature id="org.eclipse.uml2.source" version="2.2.0.v200802110945" url="features/org.eclipse.uml2.source_2.2.0.v200802110945.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
-	</feature>
-	<feature id="org.eclipse.uml2" version="2.2.0.v200802110945" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.uml2_2.2.0.v200802110945.jar" patch="false">
-		<category name="MDT UML2 SDK 2.2.0M5 S200802121122"/>
 	</feature>
 
 </site>
