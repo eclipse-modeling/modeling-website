@@ -1,7 +1,8 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
-ob_start();
+$isFormatted = !isset($_GET["unformatted"]);
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php");
 
+$product_id = 29; # GMF 
 $committers = array(
 	"ahunter",
 	"ashatalin",
@@ -17,6 +18,51 @@ $committers = array(
 	"sshaw",
 	"vramaswamy",
 );
+
+$extra_IP = array(
+	"xPand template engine (org.eclipse.gmf.xpand, org.eclipse.gmf.xpand.editor), originally developed by Sven Efftinge for oAW component in GMT project, was refactored for application in GMF by Artem Tikhomirov."
+);
+
+$third_party = array(
+	"org.apache.batik_1.6,cvsroot/modeling/org.eclipse.gmf/plugins/org.apache.batik,Apache License Version 2.0 January 2004,unmodified entire package",
+	"org.apache.xerces_2.8,maintained in Orbit,Apache License Version 2.0 January 2004,unmodified entire package",
+	"LPG-V1.1 java runtime from http://sourceforge.net/projects/lpg,EPL v1.0",
+);
+
+if (!$isFormatted)
+{
+	print "Committers (Section 1)\n";
+	foreach ($committers as $committer)
+	{
+		print $committer."\n";
+	}
+	print "\n";
+	print "Developers (Section 2)\n";
+	doIPQuery(false);
+	print "\n";
+	if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0))
+	{
+		print "Additional IP\n";
+		foreach ($extra_IP as $ip)
+		{
+			print "$ip\n";
+		} 
+	}
+	print "\n";
+	print "Third Party Software (Section 3)\n";
+	if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0))
+	{
+		foreach ($third_party as $tp)
+		{
+			print "$tp\n";
+		}
+	}
+	exit;
+}
+else
+{
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+	ob_start();
 ?>
 <div id="midcolumn">
 	<div class="homeitem3col">
@@ -24,29 +70,37 @@ $committers = array(
 		<ul>
 <?php foreach ($committers as $committer) 
 {
-	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\"$committer</a></li>\n";
+	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a></li>\n";
 } ?>
 		</ul>
 	</div>
 	<div class="homeitem3col">
 		<h3>Developers (Section 2)</h3>
-		<b>component, bug #, contributor, size, description</b><br/>
-<?php
-	$product_id = 29; # GMF 
-	require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
-?>
-
-<br/>	
-xPand template engine (org.eclipse.gmf.xpand, org.eclipse.gmf.xpand.editor), originally developed by Sven Efftinge for oAW component in GMT project, was refactored for application in GMF by Artem Tikhomirov.
-
+		<?php doIPQuery(true); ?>
+		<p>
+		<h4>Additional</h4>
+ 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0))
+		{
+			print "<h4>Additional IP</h4>\n";
+			print "<ul>\n";
+			foreach ($extra_IP as $ip)
+			{
+				print "<li>$ip</li>\n";
+			}
+			print "</ul>\n";
+		} ?>
 	</div>
 	<div class="homeitem3col">
 		<h3>Third Party Software (Section 3)</h3>
-		<ul>
-			<li>org.apache.batik_1.6,cvsroot/modeling/org.eclipse.gmf/plugins/org.apache.batik,Apache License Version 2.0 January 2004,unmodified entire package</li>
-			<li>org.apache.xerces_2.8,maintained in Orbit,Apache License Version 2.0 January 2004,unmodified entire package</li>
-			<li>LPG-V1.1 java runtime from http://sourceforge.net/projects/lpg,EPL v1.0</li>
-		</ul>
+		<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0))
+		{
+			print "<ul>\n";
+			foreach ($third_party as $tp)
+			{
+				print "<li>$tp</li>\n";
+			}
+			print "</ul>\n";
+		} ?>
 	</div>
 </div>
 
@@ -56,12 +110,17 @@ xPand template engine (org.eclipse.gmf.xpand, org.eclipse.gmf.xpand.editor), ori
 		<ul>
 <?php foreach ($committers as $committer) 
 {
-	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\"$committer</a></li>\n";
+	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a></li>\n";
 } ?>
 		</ul>
 	</div>
+	<div class="sideitem">
+		<h6>Data</h6>
+		<ul>
+			<li><a href="?unformatted">View unformatted data</a></li>
+		</ul>
+	</div>
 </div>
-			
 
 <?php
 $html = ob_get_contents();
