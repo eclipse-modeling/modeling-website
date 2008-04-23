@@ -38,7 +38,7 @@ if (!$isFormatted)
 	}
 	print "\n";
 	print "Developers (Section 2)\n";
-	doIPQuery(false);
+	doIPQuery($product_id, false);
 	print "\n";
 	if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 	{
@@ -75,7 +75,7 @@ ob_start();
 	</div>
 	<div class="homeitem3col">
 		<h3>Developers (Section 2)</h3>
-		<?php doIPQuery(true); ?>
+		<?php doIPQuery($product_id, true); ?>
 		<p>
 		<h4>Additional</h4>
  		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)

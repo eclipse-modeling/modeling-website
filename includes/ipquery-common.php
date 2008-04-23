@@ -6,7 +6,7 @@
 # Load up the classfile
 require_once "/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 
-function doIPQuery($isFormatted = true)
+function doIPQuery($product_id, $isFormatted = true)
 {
 	# Connect to database
 	$dbc 	= new DBConnectionBugs();
