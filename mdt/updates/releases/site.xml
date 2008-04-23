@@ -54,4 +54,23 @@ MDT UML2 SDK 2.0.4: contains runtime, source, and documentation.
 		<category name="MDT UML2 SDK 2.0.4"/>
 	</feature>
 
+	<!-- OCL 1.0.2 -->
+	<category-def label="MDT OCL SDK 1.0.2" name="MDT OCL SDK 1.0.2">
+		<description>
+MDT OCL SDK 1.0.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.doc_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.sdk" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.sdk_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.source" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.source_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl" version="1.0.1.v200611161546" url="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/features/org.eclipse.emf.ocl_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+
 </site>
