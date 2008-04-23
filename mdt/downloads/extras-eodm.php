@@ -1,6 +1,8 @@
 <?php
 
 $oldrels = array(
+	"0.9.0" => "200707052236",
+	"0.8.0" => "200707260741",
 	"0.7.5" => array("2006/11/16 21:08","http://archive.eclipse.org/modeling/mdt/eodm/downloads/drops/0.7.5/S200611162108/"),
 	"0.7.0" => "200610160717"
 );
