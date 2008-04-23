@@ -88,15 +88,19 @@ ob_start();
 	</div>
 	<div class="homeitem3col">
 		<h3>Third Party Software (Section 3)</h3>
+		<ul>
 		<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 		{
-			print "<ul>\n";
 			foreach ($third_party as $tp)
 			{
 				print "<li>$tp</li>\n";
 			}
-			print "</ul>\n";
+		} 
+		else
+		{
+			print "<li>None.</li>\n"; 
 		} ?>
+		</ul>
 	</div>
 </div>
 
@@ -108,6 +112,21 @@ ob_start();
 {
 	print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a></li>\n";
 } ?>
+		</ul>
+	</div>
+	<div class="sideitem">
+		<h6>Developers (Section 2)</h6>
+		<ul>
+			<li><a href="#section2">Developers (Section 2)</a></li>
+			<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0) {
+				print '<li><a href="#section2">Additional IP</a></li>'."\n";
+			} ?>
+		</ul>
+	</div>
+	<div class="sideitem">
+		<h6>Third Party Software (Section 3)</h6>
+		<ul>
+			<li><a href="#section3">Third Party Software (Section 3)</a></li>
 		</ul>
 	</div>
 	<div class="sideitem">
