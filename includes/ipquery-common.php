@@ -68,7 +68,7 @@ function doIPQuery($product_id, $isFormatted = true)
 	}
 	if ($isFormatted)
 	{	
-		print "		<table>\n";
+		print "		</table>\n";
 	}
 	
 	$dbc->disconnect();
