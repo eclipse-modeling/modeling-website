@@ -59,7 +59,7 @@ function doIPQuery($product_id, $isFormatted = true)
 	while($myrow = mysql_fetch_assoc($rs)) {
 		if ($isFormatted)
 		{	
-			print "<tr><td>" . $myrow['name'] . "</td><td>" .
+			print "<tr><td nowrap=\"nowrap\">" . $myrow['name'] . "</td><td nowrap=\"nowrap\">" .
 				"<a href=\"http://www.eclipse.org/modeling/gmf/searchcvs.php?q=" . $myrow['bug_id'] . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $myrow['bug_id'] . "\"></a>" .  
 				"<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . 
 				"</td><td>" . $myrow['login_name'] . "</td><td>" . $myrow['size'] . "</td><td>" . str_replace(",", " ", $myrow['short_desc']) . " (" . str_replace(",", " ", $myrow['description']) . ")</td></tr>\n";
