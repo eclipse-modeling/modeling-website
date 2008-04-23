@@ -66,18 +66,18 @@ ob_start();
 ?>
 <div id="midcolumn">
 	<div class="homeitem3col">
-		<h3>Committers (Section 1)</h3>
+		<a name="section1"></a><h3>Committers (Section 1)</h3>
 		<ul>
 			<li>See list at right.</li>
 		</ul>
 	</div>
 	<div class="homeitem3col">
-		<h3>Developers (Section 2)</h3>
+		<a name="section2"></a><h3>Developers (Section 2)</h3>
 		<?php doIPQuery($product_id, true); ?>
 		<p>
  		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 		{
-			print "<b>Additional IP</b>\n";
+			print "<a name=\"section2a\"></a><b>Additional IP</b>\n";
 			print "<ul>\n";
 			foreach ($extra_IP as $ip)
 			{
@@ -87,7 +87,7 @@ ob_start();
 		} ?>
 	</div>
 	<div class="homeitem3col">
-		<h3>Third Party Software (Section 3)</h3>
+		<a name="section3"></a><h3>Third Party Software (Section 3)</h3>
 		<ul>
 		<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 		{
@@ -119,7 +119,7 @@ ob_start();
 		<ul>
 			<li><a href="#section2">Developers (Section 2)</a></li>
 			<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0) {
-				print '<li><a href="#section2">Additional IP</a></li>'."\n";
+				print '<li><a href="#section2a">Additional IP</a></li>'."\n";
 			} ?>
 		</ul>
 	</div>
