@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emf/updates/releases/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/emf/updates/releases/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emf/updates/releases/site.xml">
+	To install these plugins, point your Eclipse Update Manager at this site.
+	</description>
+
+
+	<!-- EMF 2.0.6 -->
+	<category-def label="EMF SDK 2.0.6 (EMF + SDO + XSD)" name="EMF SDK 2.0.6 (EMF + SDO + XSD)">
+		<description>
+EMF SDK 2.0.6 (EMF + SDO + XSD): contains runtime, source, documentation and examples.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.0.5" url="features/org.eclipse.emf.ecore.sdo.source_2.0.5.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf" version="2.0.5" url="features/org.eclipse.emf_2.0.5.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.sdk" version="2.0.6" url="features/org.eclipse.emf.sdk_2.0.6.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.doc" version="2.0.3" url="features/org.eclipse.xsd.doc_2.0.3.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.0.5" url="features/org.eclipse.emf.ecore.sdo.doc_2.0.5.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.0.5" url="features/org.eclipse.emf.ecore.sdo_2.0.5.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.source" version="2.0.5" url="features/org.eclipse.emf.source_2.0.5.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.doc" version="2.0.4" url="features/org.eclipse.emf.doc_2.0.4.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.source" version="2.0.6" url="features/org.eclipse.xsd.source_2.0.6.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd" version="2.0.6" url="features/org.eclipse.xsd_2.0.6.jar" patch="false">
+		<category name="EMF SDK 2.0.6 (EMF + SDO + XSD)"/>
+	</feature>
+
+</site>
