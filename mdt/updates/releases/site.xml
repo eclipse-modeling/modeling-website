@@ -7,6 +7,25 @@
 	</description>
 
 
+	<!-- OCL 1.0.2 -->
+	<category-def label="MDT OCL SDK 1.0.2" name="MDT OCL SDK 1.0.2">
+		<description>
+MDT OCL SDK 1.0.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.doc_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.sdk" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.sdk_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl.source" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl.source_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.ocl" version="1.0.1.v200611161546" url="features/org.eclipse.emf.ocl_1.0.1.v200611161546.jar" patch="false">
+		<category name="MDT OCL SDK 1.0.2"/>
+	</feature>
+
 	<!-- EODM 0.9.1 (Incubation) -->
 	<category-def label="MDT EODM SDK (Incubation) 0.9.1" name="MDT EODM SDK (Incubation) 0.9.1">
 		<description>
