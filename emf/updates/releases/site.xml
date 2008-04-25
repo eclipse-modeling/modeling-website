@@ -7,6 +7,37 @@
 	</description>
 
 
+	<!-- QUERY 1.1.1 -->
+	<category-def label="EMF QUERY SDK 1.1.1" name="EMF QUERY SDK 1.1.1">
+		<description>
+EMF QUERY SDK 1.1.1: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.query.doc" version="1.1.0.v200706071712-21-8s733G3E4C5B76" url="features/org.eclipse.emf.query.doc_1.1.0.v200706071712-21-8s733G3E4C5B76.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.1.0.v200706071712-10-7w311817182823" url="features/org.eclipse.emf.query.ocl.source_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl" version="1.1.0.v200706071712-10-7w311817182823" url="features/org.eclipse.emf.query.ocl_1.1.0.v200706071712-10-7w311817182823.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.sdk" version="1.1.1.v200711281714-54191D7X1MKFuGkIiFcJLHt955I6" url="features/org.eclipse.emf.query.sdk_1.1.1.v200711281714-54191D7X1MKFuGkIiFcJLHt955I6.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.source" version="1.1.1.v200711281714-1007w311822392825" url="features/org.eclipse.emf.query.source_1.1.1.v200711281714-1007w311822392825.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query" version="1.1.1.v200711281714-1007w311822392825" url="features/org.eclipse.emf.query_1.1.1.v200711281714-1007w311822392825.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples.source" version="1.1.0.v200706071712" url="features/org.eclipse.emf.query.examples.source_1.1.0.v200706071712.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples" version="1.1.0.v200706071712-428Y_kE77Y7U9QAOEC" url="features/org.eclipse.emf.query.examples_1.1.0.v200706071712-428Y_kE77Y7U9QAOEC.jar" patch="false">
+		<category name="EMF QUERY SDK 1.1.1"/>
+	</feature>
+
 	<!-- QUERY 1.0.2 -->
 	<category-def label="EMF QUERY SDK 1.0.2" name="EMF QUERY SDK 1.0.2">
 		<description>
