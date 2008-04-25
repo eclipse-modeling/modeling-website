@@ -7,6 +7,31 @@
 	</description>
 
 
+	<!-- QUERY 1.0.2 -->
+	<category-def label="EMF QUERY SDK 1.0.2" name="EMF QUERY SDK 1.0.2">
+		<description>
+EMF QUERY SDK 1.0.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.query.doc" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query.doc_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query.ocl.source_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query.ocl_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.sdk" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query.sdk_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.source" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query.source_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.query" version="1.0.1.v200611161603" url="features/org.eclipse.emf.query_1.0.1.v200611161603.jar" patch="false">
+		<category name="EMF QUERY SDK 1.0.2"/>
+	</feature>
+
 	<!-- EMF 2.3.2 -->
 	<category-def label="EMF SDK 2.3.2 (EMF + SDO + XSD)" name="EMF SDK 2.3.2 (EMF + SDO + XSD)">
 		<description>
