@@ -7,6 +7,28 @@
 	</description>
 
 
+	<!-- EODM 0.9.1 (Incubation) -->
+	<category-def label="MDT EODM SDK (Incubation) 0.9.1" name="MDT EODM SDK (Incubation) 0.9.1">
+		<description>
+MDT EODM SDK (Incubation) 0.9.1: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.eodm.doc" version="0.9.1.v200710090302" url="features/org.eclipse.eodm.doc_0.9.1.v200710090302.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1"/>
+	</feature>
+	<feature id="org.eclipse.eodm.examples" version="0.9.1.v200710090302" url="features/org.eclipse.eodm.examples_0.9.1.v200710090302.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1"/>
+	</feature>
+	<feature id="org.eclipse.eodm.sdk" version="0.9.1.v200710090302" url="features/org.eclipse.eodm.sdk_0.9.1.v200710090302.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1"/>
+	</feature>
+	<feature id="org.eclipse.eodm.source" version="0.9.1.v200710090302" url="features/org.eclipse.eodm.source_0.9.1.v200710090302.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1"/>
+	</feature>
+	<feature id="org.eclipse.eodm" version="0.9.1.v200710090302" url="features/org.eclipse.eodm_0.9.1.v200710090302.jar" patch="false">
+		<category name="MDT EODM SDK (Incubation) 0.9.1"/>
+	</feature>
+
 	<!-- EODM 0.8.1 (Incubation) -->
 	<category-def label="MDT EODM SDK (Incubation) 0.8.1" name="MDT EODM SDK (Incubation) 0.8.1">
 		<description>
