@@ -90,7 +90,7 @@ EOHTML;
 </td><td>
 	<div id="midcolumn">
 		<?php print boxhead("IPZilla Mailing Lists"); ?>
-			<p>Sign up anyone in your organization to a mailing list for tracking incoming or completed IPZilla contribution questionnaires (CQs), both lists are emailed once at midnight every night. </p>
+			<p>Sign up anyone in your organization to a mailing list for tracking incoming or completed IPZilla contribution questionnaires (CQs), both lists are emailed once at midnight every night.</p>
 			<ul>
 				<li>Incoming: <b>dennis@flask.ye.get</b></li> 	 	
 				<li>Completed: <b>dennis@flask.ye.get</b></li>
@@ -101,7 +101,7 @@ EOHTML;
 		<?php print boxhead("Project Reviews"); ?>
 			<p>Project Review conference call numbers:</p>
 			<ul>
-				<li><b>+1.613.***.****</b><br/> (Ottawa &amp; int'l) or</li>
+				<li><b>+1.***.***.****</b><br/> (Ottawa &amp; int'l) or</li>
 				<li><b>+1.***.***.****</b><br/>(toll-free N. America)</li>
 				<li>passcode <b>*******</b></li>
 			</ul>
