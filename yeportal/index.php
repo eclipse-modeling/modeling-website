@@ -3,9 +3,14 @@ $theme="Lazarus";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 ob_start();
 
+$sty = isset($_GET["sty"]);
+
 function boxhead($title)
 {
-$boxhead = <<<EOHTML
+	global $sty;
+	if (!$sty)
+	{
+		$boxhead = <<<EOHTML
 	<div style='margin-bottom: 1em;'>
 		<div class="">
 			<b class="blueonwhite">
@@ -31,10 +36,23 @@ $boxhead = <<<EOHTML
 						<div class="portal-component">
 					  		<div>
 EOHTML;
-return $boxhead;
+	}
+	else
+	{
+		$boxhead = <<<EOHTML
+	<div class="sideitem">
+		<h6>$title</h6>
+EOHTML;
+	}	
+	return $boxhead;
 }
 
-$boxfoot = <<<EOHTML
+function boxfoot()
+{
+	global $sty;
+	if (!$sty)
+	{
+		$boxfoot = <<<EOHTML
 					  		</div>
 						</div>
 						<div style="height: 1px; visibility: hidden;">.</div>
@@ -57,6 +75,13 @@ $boxfoot = <<<EOHTML
 		</div>
 	</div>
 EOHTML;
+	}
+	else
+	{
+		$boxfoot="\n	</div>\n";
+	}
+	return $boxfoot;
+}
 ?>
 
 <table width="100%"><tr valign="middle">
@@ -96,7 +121,7 @@ EOHTML;
 				<li>Completed: <b>dennis@flask.ye.get</b></li>
 			</ul>
 			<p align="right"><a href="#">[edit]</a></p>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 	
 		<?php print boxhead("Project Reviews"); ?>
 			<p>Project Review conference call numbers:</p>
@@ -105,7 +130,7 @@ EOHTML;
 				<li><b>+1.***.***.****</b><br/>(toll-free N. America)</li>
 				<li>passcode <b>*******</b></li>
 			</ul>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 	
 		<?php print boxhead("Committer Tools"); ?>
 			<ul>
@@ -114,7 +139,7 @@ EOHTML;
 				<li><a href="#">Bugzilla components, targets, versions</a></li>
 				<li><a href="#">Committer mailing list archive</a></li>
 			</ul>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 	
 		<?php print boxhead("Website Tools"); ?>
 			<ul>
@@ -122,7 +147,7 @@ EOHTML;
 				<li><a href="#">Download stats</a></li>
 				<li><a href="#">Web server statistics</a></li>
 			</ul>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 	
 		<?php print boxhead("Infrastructure Tools"); ?>
 			<ul>
@@ -132,7 +157,7 @@ EOHTML;
 				<li><a href="#">Eclipse infra status</a></li>
 				<li><a href="#">DNS test</a></li>
 			</ul>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 	
 		<?php print boxhead("My Contact Info"); ?>
 			<p>H*R Software Canada<br/>
@@ -146,7 +171,7 @@ EOHTML;
 			<a href="http://divby0.blogspot.com">http://divby0.blogspot.com</a><br/>
 			43:45:06N, 79:11:16W</p>
 			<p align="right"><a href="#">[edit]</a></p>
-		<?php print $boxfoot; ?>
+		<?php print boxfoot(); ?>
 		
 	</div>
 </td></tr></table>
