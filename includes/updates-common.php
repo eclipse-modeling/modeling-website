@@ -6,7 +6,7 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases" => "site.xml","I, M, and S Builds" => "site-interim.xml"))
+function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"))
 {
 	global $App, $Nav, $Menu, $theme, $PR;
 	$PRS = array (
@@ -18,7 +18,7 @@ function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubat
 	ob_start();
 ?>
 	<div id="midcolumn">
-		<h1><?php print $shortname; ?> Update Manager Site</h1>
+		<h1><?php print $shortname; ?> Update Sites</h1>
 
 <?php
 
@@ -26,31 +26,48 @@ function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubat
 	{
 		call_user_func("doRequirements");
 	}
-?>
-		<div class="homeitem3col">
-			<h3>Using Update Manager</h3>
-			<p>To install these plugins, point your Eclipse Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. <a href="http://www.eclipse.org/downloads/download.php?file=/<?php print $PR; ?>/updates/site.xml&amp;format=xml">Mirrors</a> <a href="http://www.eclipse.org/downloads/download.php?file=/<?php print $PR; ?>/updates/site-interim.xml&amp;format=xml">available</a>.</p>
-
-		<?php
 
 	if (function_exists("notes"))
 	{
 		notes();
 	}
 ?>
+	<div class="homeitem3col">
+		<h3>Using Eclipse 3.4M6+ (p2 Install Manager)</h3>
+		<p>To install these plugins, point your Install Manager at this site. 
+		<!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. --> 
+		</p>
 
 		<ul>
-			<li>
-				Help
-				<ul>
-					<li>
-						Software Updates
-						<ul>
-							<li>
-								Find and Install...
-								<ul>
-									<li>
-										Search for new features to install
+			<li>Help &gt; Software Updates... &gt; Available Software &gt; Add Site...
+			<ul><?php
+	foreach ($PRS as $label => $thisPR)
+	{
+		print <<<EOHTML
+				<li><b>$label Update Sites</b><br/>
+											
+EOHTML;
+		$cnt=0;
+		foreach ($siteXMLs as $type => $sitexml)
+		{
+			print !$cnt ? "* Location: " : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(or): ";
+			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
+			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
+			$cnt++;
+		}
+		print "			</li>\n";
+	} ?>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="homeitem3col">
+		<h3>Using Eclipse 3.4M5 (Update Manager)</h3>
+		<p>To install these plugins, point your Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. </p>
+
+		<ul>
+			<li>Help &gt; Software Updates &gt; Find and Install... &gt; Search for new features to install
 										<ul>
 										<?php
 
@@ -65,7 +82,7 @@ EOHTML;
 		foreach ($siteXMLs as $type => $sitexml)
 		{
 			print !$cnt ? "* URL: " : "&#160;&#160;&#160;&#160;&#160;(or): ";
-			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/$sitexml</a></b> ($type)";
+			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b>";
 			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
 			$cnt++;
 		}
@@ -73,12 +90,6 @@ EOHTML;
 	}
 ?>
 										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
 			</li>
 		</ul>
 	</div>
@@ -113,11 +124,18 @@ EOHTML;
 	print "</div>\n";
 	$html= ob_get_contents();
 	ob_end_clean();
-	$pageTitle= "$longname - $shortname - Update Manager";
+	$pageTitle= "$longname - $shortname - Updates";
 	$pageKeywords= ""; // TODO: add something here
 	$pageAuthor= "Neil Skrypuch, Nick Boldt";
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 	$App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 }
+
+// deprecated URLs
+function update_manager_old($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases" => "site.xml","I, M, and S Builds" => "site-interim.xml"))
+{
+	return update_manager($shortname, $longname, $extra_PRS, $isIncubating, $replace, $siteXMLs);
+}
+
 ?>

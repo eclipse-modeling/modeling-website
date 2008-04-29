@@ -14,5 +14,5 @@ function notes()
 			"so you'll have to use the older sites until that time. See links at right.</i></p>\n";
 }
 
-update_manager("GMF", "Eclipse Modeling", $PRS, false);
+update_manager_old("GMF", "Eclipse Modeling", $PRS, false);
 ?>
