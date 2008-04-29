@@ -76,7 +76,7 @@ EOHTML;
 		print <<<EOHTML
 											<li>
 											Add Update Site...<br/>
-											* Name: <b>$label Update Manager Site</b><br/>
+											* Name: <b>$label Update Site</b><br/>
 EOHTML;
 		$cnt=0;
 		foreach ($siteXMLs as $type => $sitexml)
