@@ -44,13 +44,13 @@ function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubat
 	foreach ($PRS as $label => $thisPR)
 	{
 		print <<<EOHTML
-				<li><b>$label Update Sites</b><br/>
+				<li>
 											
 EOHTML;
 		$cnt=0;
 		foreach ($siteXMLs as $type => $sitexml)
 		{
-			print !$cnt ? "* Location: " : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(or): ";
+			print !$cnt ? "Location: " : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(or): ";
 			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
 			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
 			$cnt++;
