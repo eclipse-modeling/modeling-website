@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/m2m/updates/milestones/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/m2m/updates/milestones/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/m2m/updates/milestones/site.xml">
+	To install these plugins, point your Eclipse Update Manager at this site.
+	</description>
+
+
+	<!-- ATL 2.0.0M6 S200804031124 -->
+	<category-def label="M2M ATL SDK 2.0.0M6 S200804031124" name="M2M ATL SDK 2.0.0M6 S200804031124">
+		<description>
+M2M ATL SDK 2.0.0M6 S200804031124: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.m2m.atl.adt" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.adt_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.doc" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.doc_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.engine" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.engine_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.sdk" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.sdk_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.source" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.source_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.examples" version="2.0.0.v200804031124" url="features/org.eclipse.m2m.atl.examples_2.0.0.v200804031124.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.0M6 S200804031124"/>
+	</feature>
+
+</site>
