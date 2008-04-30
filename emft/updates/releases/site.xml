@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emft/updates/releases/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/updates/releases/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emft/updates/releases/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- CDO 0.7.2 (Incubation) -->
+	<category-def label="EMFT CDO SDK (Incubation) 0.7.2" name="EMFT CDO SDK (Incubation) 0.7.2">
+		<description>
+EMFT CDO SDK (Incubation) 0.7.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.cdo.client" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.client_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.dbgen" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.dbgen_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.doc" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.doc_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.examples" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.examples_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.jdbc" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.jdbc_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.sdk" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.sdk_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.server_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.source" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.source_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.utilities" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo.utilities_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo" version="0.7.1.v200610271316" url="features/org.eclipse.emf.cdo_0.7.1.v200610271316.jar" patch="false">
+		<category name="EMFT CDO SDK (Incubation) 0.7.2"/>
+	</feature>
+
+</site>
