@@ -10,9 +10,9 @@ $PRS = array();
 
 function notes()
 {
-	print "<p><i style=\"color:red\"><b>NOTE:</b> not all GMF updates have migrated to the new Update Manager site yet, " .
-			"so you'll have to use the older sites until that time. See links at right.</i></p>\n";
+	/* print "<p><i style=\"color:red\"><b>NOTE:</b> not all GMF updates have migrated to the new Update Manager site yet, " .
+			"so you'll have to use the older sites until that time. See links at right.</i></p>\n"; */
 }
 
-update_manager_old("GMF", "Eclipse Modeling", $PRS, false);
+update_manager("GMF", "Eclipse Modeling", $PRS, false);
 ?>
