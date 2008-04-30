@@ -75,6 +75,25 @@ EMFT MWE SDK (Incubation) 0.7.0 I200801100355: contains runtime, source, and doc
 		<category name="EMFT MWE SDK (Incubation) 0.7.0 I200801100355"/>
 	</feature>
 
+	<!-- MINT 0.7.0 I200804020004 -->
+	<category-def label="EMFT MINT SDK 0.7.0 I200804020004" name="EMFT MINT SDK 0.7.0 I200804020004">
+		<description>
+EMFT MINT SDK 0.7.0 I200804020004: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200804020004" url="features/org.eclipse.emf.mint.doc_0.7.0.v200804020004.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200804020004"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200804020004" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200804020004.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200804020004"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200804020004" url="features/org.eclipse.emf.mint.source_0.7.0.v200804020004.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200804020004"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200804020004" url="features/org.eclipse.emf.mint_0.7.0.v200804020004.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0 I200804020004"/>
+	</feature>
+
 	<!-- CDO 0.8.0 I200804071623 (Incubation) -->
 	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200804071623" name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623">
 		<description>
