@@ -7,11 +7,11 @@ function sidebar()
 	<div class="sideitem">
 		<h6>GMF Update Sites</h6>
 		<ul>
-			<li><a href="http://download.eclipse.org/modeling/gmf/update-site/releases/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmf/updates/releases/site.xml">
 			Release builds</a></li>
-			<li><a href="http://download.eclipse.org/modeling/gmf/update-site/milestone/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmf/updates/milestones/site.xml">
 			Milestone builds</a></li>
-			<li><a href="http://download.eclipse.org/modeling/gmf/update-site/interim/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmf/updates/interim/site.xml">
 			Integration builds</a></li>
 			<li><a href="http://download.eclipse.org/modeling/gmf/update-site/europa/site.xml">
 			Europa builds</a></li>
