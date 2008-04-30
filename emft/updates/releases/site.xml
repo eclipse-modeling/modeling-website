@@ -7,6 +7,28 @@
 	</description>
 
 
+	<!-- NET4J 0.7.2 (Incubation) -->
+	<category-def label="EMFT NET4J SDK (Incubation) 0.7.2" name="EMFT NET4J SDK (Incubation) 0.7.2">
+		<description>
+EMFT NET4J SDK (Incubation) 0.7.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.net4j.doc" version="0.7.1.v200610271244" url="features/org.eclipse.net4j.doc_0.7.1.v200610271244.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples" version="0.7.1.v200610271244" url="features/org.eclipse.net4j.examples_0.7.1.v200610271244.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.net4j.sdk" version="0.7.1.v200610271244" url="features/org.eclipse.net4j.sdk_0.7.1.v200610271244.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.net4j.source" version="0.7.1.v200610271244" url="features/org.eclipse.net4j.source_0.7.1.v200610271244.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
+	</feature>
+	<feature id="org.eclipse.net4j" version="0.7.1.v200610271244" url="features/org.eclipse.net4j_0.7.1.v200610271244.jar" patch="false">
+		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
+	</feature>
+
 	<!-- CDO 0.7.2 (Incubation) -->
 	<category-def label="EMFT CDO SDK (Incubation) 0.7.2" name="EMFT CDO SDK (Incubation) 0.7.2">
 		<description>
