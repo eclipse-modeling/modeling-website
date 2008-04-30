@@ -180,6 +180,16 @@ EMFT MINT SDK 0.7.0 I200804250059: contains runtime, source, and documentation.
 		<category name="EMFT MINT SDK 0.7.0 I200804250059"/>
 	</feature>
 
+	<!-- COMPARE 0.8.0 I200804210355 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.examples_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
+	</feature>
+
 	<!-- CDO 0.8.0 I200804071623 (Incubation) -->
 	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200804071623" name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623">
 		<description>
