@@ -146,6 +146,16 @@ EMFT MINT SDK 0.7.0M6 S200804120013: contains runtime, source, and documentation
 		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
 	</feature>
 
+	<!-- COMPARE 0.8.0M4 S200801110217 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0M4 S200801110217" name="EMFT COMPARE SDK (Incubation) 0.8.0M4 S200801110217">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0M4 S200801110217: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200801110217" url="features/org.eclipse.emf.compare.examples_0.8.0.v200801110217.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M4 S200801110217"/>
+	</feature>
+
 	<!-- COMPARE 0.7.0RC4 S200709261141 (Incubation) -->
 	<category-def label="EMFT COMPARE SDK (Incubation) 0.7.0RC4 S200709261141" name="EMFT COMPARE SDK (Incubation) 0.7.0RC4 S200709261141">
 		<description>
