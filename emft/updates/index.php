@@ -16,5 +16,5 @@ function notes()
 			"Update Manager sites, so you'll have to use the new sites for newer releases.</i></p>\n"; */
 }
 
-update_manager_old("EMFT", "Eclipse Modeling", $PRS, true);
+update_manager("EMFT", "Eclipse Modeling", $PRS, true);
 ?>
