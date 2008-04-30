@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/gmf/updates/milestones/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/gmf/updates/milestones/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/gmf/updates/milestones/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- GMF 2.1M5 S200802151500 -->
+	<category-def label="GMF SDK 2.1M5 S200802151500" name="GMF SDK 2.1M5 S200802151500">
+		<description>
+GMF SDK 2.1M5 S200802151500: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.gmf.doc" version="1.1.0.v20070330-1300-108Y7w3119122502222" url="features/org.eclipse.gmf.doc_1.1.0.v20070330-1300-108Y7w3119122502222.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.examples.pde" version="1.1.0.v20070511-1500-2-8Y8s733G3E3515A33" url="features/org.eclipse.gmf.examples.pde_1.1.0.v20070511-1500-2-8Y8s733G3E3515A33.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.1.0.HEAD" url="features/org.eclipse.gmf.runtime.notation.source_1.1.0.HEAD.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation" version="1.1.0.HEAD-308Z9ANFIH467815944" url="features/org.eclipse.gmf.runtime.notation_1.1.0.HEAD-308Z9ANFIH467815944.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.0.0.v20070608-1200-7D85-EB7sQS6TpS2TQUV" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.0.0.v20070608-1200-7D85-EB7sQS6TpS2TQUV.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.0.0.v20080107-0000-7J8P4EEt6Yajc-ifjYcd" url="features/org.eclipse.gmf.runtime.thirdparty_1.0.0.v20080107-0000-7J8P4EEt6Yajc-ifjYcd.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.source" version="2.0.1.v20071003-0000" url="features/org.eclipse.gmf.sdk.source_2.0.1.v20071003-0000.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk" version="2.0.1.v20071003-0000-7f7BEAVEMnXQGKPLmcKJkkUIF--J" url="features/org.eclipse.gmf.sdk_2.0.1.v20071003-0000-7f7BEAVEMnXQGKPLmcKJkkUIF--J.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.source" version="1.1.0.v20080215-1500-7c79ELpEWwfTDeiraETRj4Pmnvfj" url="features/org.eclipse.gmf.source_1.1.0.v20080215-1500-7c79ELpEWwfTDeiraETRj4Pmnvfj.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf" version="1.1.0.v20080215-1500-7c79ELpEWwfTDeiraETRj4Pmnvfj" url="features/org.eclipse.gmf_1.1.0.v20080215-1500-7c79ELpEWwfTDeiraETRj4Pmnvfj.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20071003-0000-618YBcMAAqDZBd5DJBB" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20071003-0000-618YBcMAAqDZBd5DJBB.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20071207-1111-7I1E8ZEDx2WYPj5cz-Foxkj" url="features/org.eclipse.gmf.tests_2.0.0.v20071207-1111-7I1E8ZEDx2WYPj5cz-Foxkj.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+	<feature id="org.eclipse.gmf.examples" version="1.0.100.v20070608-1300-7A-AnE9IgKLWNBQa_VvMM" url="features/org.eclipse.gmf.examples_1.0.100.v20070608-1300-7A-AnE9IgKLWNBQa_VvMM.jar" patch="false">
+		<category name="GMF SDK 2.1M5 S200802151500"/>
+	</feature>
+
+</site>
