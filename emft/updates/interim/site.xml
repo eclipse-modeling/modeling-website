@@ -205,26 +205,26 @@ EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200804251303: contains runtime, source, 
 		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200804251303"/>
 	</feature>
 
-	<!-- COMPARE 0.8.0 I200804231044 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044">
+	<!-- COMPARE 0.8.0 I200804210355 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355">
 		<description>
-EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044: contains runtime, source, and documentation.
+EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200804231044" url="features/org.eclipse.emf.compare.doc_0.8.0.v200804231044.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044"/>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.doc_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200804231044" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200804231044.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044"/>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200804231044" url="features/org.eclipse.emf.compare.source_0.8.0.v200804231044.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044"/>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.source_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare" version="0.8.0.v200804231044" url="features/org.eclipse.emf.compare_0.8.0.v200804231044.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044"/>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200804231044" url="features/org.eclipse.emf.compare.examples_0.8.0.v200804231044.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804231044"/>
+	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.examples_0.8.0.v200804210355.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
 
 	<!-- CDO 0.8.0 I200804071623 (Incubation) -->
@@ -334,16 +334,6 @@ EMFT MINT SDK 0.7.0 I200804020004: contains runtime, source, and documentation.
 	</feature>
 	<feature id="org.eclipse.emf.mint" version="0.7.0.v200804020004" url="features/org.eclipse.emf.mint_0.7.0.v200804020004.jar" patch="false">
 		<category name="EMFT MINT SDK 0.7.0 I200804020004"/>
-	</feature>
-
-	<!-- COMPARE 0.8.0 I200804210355 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355" name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355">
-		<description>
-EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.compare.examples" version="0.8.0.v200804210355" url="features/org.eclipse.emf.compare.examples_0.8.0.v200804210355.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200804210355"/>
 	</feature>
 
 	<!-- CDO 0.8.0 I200803090439 (Incubation) -->
