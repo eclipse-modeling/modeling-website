@@ -158,7 +158,7 @@ include ($App->getProjectCommon());
 			<td align="right" valign="top"><img
 				src="http://www.eclipse.org/images/Adarrow.gif" border="0"
 				height="16" width="16"></td>
-			<td><a href="mailto:cdamus@ca.ibm.com">Christian Damus</a>,&nbsp;IBM</td>
+			<td><a href="mailto:give.a.damus@gmail.com">Christian Damus</a></td>
 		</tr>
 		<tr>
 			<td align="right" valign="top"><img
