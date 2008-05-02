@@ -35,7 +35,58 @@ EMFT TENEO SDK (Incubation) 0.8.0 I200804231725: contains runtime, source, and d
 EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316: contains runtime, source, and documentation.
 		</description>
 	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.diagram.search" version="0.7.0.v200805020316" url="features/org.eclipse.emf.ecoretools.diagram.search_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.all.sdk" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.all.sdk_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.codegen" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.codegen_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.common" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.common_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.doc" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.doc_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.ecore.ocl" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.ecore.ocl_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.ecore" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.ecore_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
 	<feature id="org.eclipse.emf.search.examples" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.examples_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.genmodel" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.genmodel_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.ocl" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.ocl_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.runtime" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.runtime_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search.sdk" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search.sdk_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.emf.search" version="0.7.0.v200805020316" url="features/org.eclipse.emf.search_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.uml2.diagram.clazz.search" version="0.7.0.v200805020316" url="features/org.eclipse.uml2.diagram.clazz.search_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.uml2.search.common" version="0.7.0.v200805020316" url="features/org.eclipse.uml2.search.common_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.uml2.search.ocl" version="0.7.0.v200805020316" url="features/org.eclipse.uml2.search.ocl_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.uml2.search.runtime" version="0.7.0.v200805020316" url="features/org.eclipse.uml2.search.runtime_0.7.0.v200805020316.jar" patch="false">
+		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
+	</feature>
+	<feature id="org.eclipse.uml2.search" version="0.7.0.v200805020316" url="features/org.eclipse.uml2.search_0.7.0.v200805020316.jar" patch="false">
 		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805020316"/>
 	</feature>
 
