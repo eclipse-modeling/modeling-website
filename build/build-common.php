@@ -313,7 +313,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>&#160;</td>
 				<td><b>Email?</b></td>
 				<td>&#160;</td>
-				<td colspan="1"><input name="build_Email" size="20" maxlength="80"/></td>
+				<td colspan="1"><input name="build_Email" size="25" value="<?php echo $options["EmailDefault"]; ?>"/></td>
 				<td width="300"><small><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></small>
 					<div id="divDetail_email" name="divDetail_email" style="display:none;border:0">
 					<small>Add your email (or comma-separated emails) to be notified when done.
