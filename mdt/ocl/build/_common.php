@@ -31,7 +31,7 @@ $options = array (
 
 	"EmailDefault" => "give.a.damus@gmail.com, nickboldt@gmail.com", // prefil email contact box with comma-sep'd list
 	
-	"Users" => array("nickb","nickb","nboldt") /* build user, eclipse cvs user, IES cvs user */
+	"Users" => array("cdamus","cdamus",NULL) /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
