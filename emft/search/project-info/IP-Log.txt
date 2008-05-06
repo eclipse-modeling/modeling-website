@@ -1,0 +1,42 @@
+Committers
+=======
+lbigearde (Lucas Bigeardel, Lead)
+jlescot (Jacques Lescot)
+
+Developers
+=======
+
+#1 -----------------
+contributor : Roman Tarasov
+plugin : org.eclipse.emf.search.codegen
+bugzilla : https://bugs.eclipse.org/bugs/show_bug.cgi?id=218698
+ipzilla : http://dev.eclipse.org/ipzilla/show_bug.cgi?id=2113
+commiter who committed : lbigearde
+size : small contribution
+----------------------
+
+3rd Parties
+-------------
+#1 ----------------
+name : org.apache.commons.lang
+version: 2.1
+IPZilla #: http://dev.eclipse.org/ipzilla/show_bug.cgi?id=1948 (PB CQ1595)
+location of jar : www.eclipse.org/orbit
+license name: 	 Apache License Version 2.0
+usage: unmodified entire package
+
+#2 ----------------
+name : org.apache.commons.cli
+version: 1.0
+IPZilla #: http://dev.eclipse.org/ipzilla/show_bug.cgi?id=1947 (PB CQ1590)
+location of jar : www.eclipse.org/orbit
+license name: 	 Apache License Version 2.0
+usage: unmodified entire package
+
+#3 ----------------
+name : org.apache.commons.logging
+version: 1.0.4
+IPZilla #: http://dev.eclipse.org/ipzilla/show_bug.cgi?id=1946 (PB CQ224)
+location of jar : www.eclipse.org/orbit
+license name: 	 Apache License Version 2.0
+usage: unmodified entire package
