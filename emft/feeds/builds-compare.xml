@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>compare Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-compare.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-05-05T09:34:20Z</updated>
+  <updated>2008-05-06T09:26:22Z</updated>
   <author>
     <name>compare Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-compare.xml</id>
+  <entry>
+    <title>[announce] compare 0.8.0M7 (I200805060349) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200805060349#I200805060349"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200805060349#I200805060349</id>
+    <updated>2008-05-06T09:26:22Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805060349" href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200805060349#I200805060349" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/compare/downloads/drops/0.8.0/I200805060349/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=compare</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=compare&amp;version=I200805060349
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-compare-SDK-incubation-0.8.0M7.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/compare/downloads/drops/0.8.0/I200805060349/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M7-200805020100/eclipse-SDK-3.4M7-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805052017/emf-sdo-xsd-SDK-2.4.0M7.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] compare I200805050346 (0.8.0.I200805050346) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200805050346#I200805050346"/>
