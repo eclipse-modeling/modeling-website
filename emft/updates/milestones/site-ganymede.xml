@@ -127,23 +127,26 @@ EMFT NET4J SDK (Incubation) 0.8.0M6 S200804140554: contains runtime, source, and
 		<category name="EMFT NET4J SDK (Incubation) 0.8.0M6 S200804140554"/>
 	</feature>
 
-	<!-- MINT 0.7.0M6 S200804120013 -->
-	<category-def label="EMFT MINT SDK 0.7.0M6 S200804120013" name="EMFT MINT SDK 0.7.0M6 S200804120013">
+	<!-- MINT 0.7.0M7 S200805070024 -->
+	<category-def label="EMFT MINT SDK 0.7.0M7 S200805070024" name="EMFT MINT SDK 0.7.0M7 S200805070024">
 		<description>
-EMFT MINT SDK 0.7.0M6 S200804120013: contains runtime, source, and documentation.
+EMFT MINT SDK 0.7.0M7 S200805070024: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.doc_0.7.0.v200804120013.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200805070024" url="features/org.eclipse.emf.mint.doc_0.7.0.v200805070024.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M7 S200805070024"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200804120013.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
+	<feature id="org.eclipse.emf.mint.examples" version="0.7.0.v200805070024" url="features/org.eclipse.emf.mint.examples_0.7.0.v200805070024.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M7 S200805070024"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.source_0.7.0.v200804120013.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200805070024" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200805070024.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M7 S200805070024"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint_0.7.0.v200804120013.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200805070024" url="features/org.eclipse.emf.mint.source_0.7.0.v200805070024.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M7 S200805070024"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200805070024" url="features/org.eclipse.emf.mint_0.7.0.v200805070024.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M7 S200805070024"/>
 	</feature>
 
 	<!-- ECORETOOLS 0.8.0M6 S200804110303 (Incubation) -->
@@ -338,23 +341,23 @@ EMFT NET4J SDK (Incubation) 0.8.0M5 S200802181356: contains runtime, source, and
 		<category name="EMFT NET4J SDK (Incubation) 0.8.0M5 S200802181356"/>
 	</feature>
 
-	<!-- MINT 0.7.0M5 S200802212231 -->
-	<category-def label="EMFT MINT SDK 0.7.0M5 S200802212231" name="EMFT MINT SDK 0.7.0M5 S200802212231">
+	<!-- MINT 0.7.0M6 S200804120013 -->
+	<category-def label="EMFT MINT SDK 0.7.0M6 S200804120013" name="EMFT MINT SDK 0.7.0M6 S200804120013">
 		<description>
-EMFT MINT SDK 0.7.0M5 S200802212231: contains runtime, source, and documentation.
+EMFT MINT SDK 0.7.0M6 S200804120013: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200802212231" url="features/org.eclipse.emf.mint.doc_0.7.0.v200802212231.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M5 S200802212231"/>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.doc_0.7.0.v200804120013.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200802212231" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200802212231.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M5 S200802212231"/>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200804120013.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200802212231" url="features/org.eclipse.emf.mint.source_0.7.0.v200802212231.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M5 S200802212231"/>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint.source_0.7.0.v200804120013.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint" version="0.7.0.v200802212231" url="features/org.eclipse.emf.mint_0.7.0.v200802212231.jar" patch="false">
-		<category name="EMFT MINT SDK 0.7.0M5 S200802212231"/>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200804120013" url="features/org.eclipse.emf.mint_0.7.0.v200804120013.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0M6 S200804120013"/>
 	</feature>
 
 	<!-- ECORETOOLS 0.8.0M5 S200802190452 (Incubation) -->
