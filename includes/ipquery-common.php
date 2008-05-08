@@ -36,7 +36,8 @@ function doIPQuery($product_id, $isFormatted = true)
 						keywords.keywordid = 22 AND 
 						profiles.userid = attachments.submitter_id AND 
 						bugs.product_id = $product_id
-				ORDER BY profiles.login_name";
+				ORDER BY
+						profiles.login_name";
 												
 	
 	$rs = mysql_query($sql_info, $dbh);
@@ -72,6 +73,44 @@ function doIPQuery($product_id, $isFormatted = true)
 	if ($isFormatted)
 	{	
 		print "		</table>\n";
+	}
+	
+	$dbc->disconnect();
+	
+	$rs 		= null;
+	$dbh 		= null;
+	$dbc 		= null;
+}
+
+function doProductIDQuery()
+{
+	# Connect to database
+	$dbc 	= new DBConnectionBugs();
+	$dbh 	= $dbc->connect();
+						
+	$sql_info = "SELECT 
+					products.id, 
+					products.name
+			FROM 
+					products 
+			ORDER BY
+					products.id";
+	
+	$rs = mysql_query($sql_info, $dbh);
+	
+	if(mysql_errno($dbh) > 0) {
+		echo "There was an error processing this request: " . $sql_info . " : ";
+		
+		# For debugging purposes - don't display this stuff in a production page.
+		echo mysql_error($dbh);
+		
+		# Mysql disconnects automatically, but I like my disconnects to be explicit.
+		$dbc->disconnect();
+		exit;
+	}
+
+	while($myrow = mysql_fetch_assoc($rs)) {
+		print $myrow['id'] . ", " . $myrow['name'] . "\n";
 	}
 	
 	$dbc->disconnect();
