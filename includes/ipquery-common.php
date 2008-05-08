@@ -77,7 +77,7 @@ function doIPQuery($product_id, $isFormatted = true)
 				"<a href=\"/modeling/gmf/searchcvs.php?q=" . $myrow['bug_id'] . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $myrow['bug_id'] . "\"></a>&#160;" .  
 				"<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . 
 				"</td><td><acronym title=\"" . $myrow['login_name'] . "\">$shortname</acronym></td><td>" . $myrow['size'] . "</td>" .
-				"<td width=\"100%\"><small>" . str_replace(",", " ", $myrow['short_desc']) . " (" . str_replace(",", " ", $myrow['description']) . ")</small></td></tr>\n";
+				"<td width=\"100%\"><small>" . str_replace(",", " ", $myrow['short_desc']) . "<br/>" . str_replace(",", " ", $myrow['description']) . "</small></td></tr>\n";
 		}
 		else
 		{
