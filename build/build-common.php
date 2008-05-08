@@ -65,8 +65,8 @@ if (is_array($projects) && sizeof($projects) > 1)
 {
 	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
 }
-?>
 
+print showBuildsInProgress(); ?>
 <div class="homeitem3col">
 <h3>Run A Build</h3>
 <?php
@@ -1088,5 +1088,44 @@ function getBranches($options)
 	return $arr;
 }
 
+function showBuildsInProgress() 
+{
+	$build_processes = explode("\n", exec("ps ax --forest | grep -v grep | grep /start.sh")); 
+	$inprogress = false;
+	foreach ($build_processes as $bp) { 
+		if (trim($bp))
+		{ 
+			$inprogress = true; 
+			break;
+		}
+	}
+	if ($inprogress) { 
+		print '	
+	<div style="border:red 2px dashed; padding: 10px">
+	The following builds are currently in progress on this server.
+	<ul>
+'; 
+		foreach ($build_processes as $bp) { 
+			if (trim($bp))
+			{
+				print "<li>"; 
+				$alltokens = tokenize($bp); # function defined in ../includes/scripts.php # print_r($alltokens);
+				$tokens = array("proj", "sub", "version", "branch", "buildType", "buildTimestamp", "basebuilderBranch");
+				foreach ($tokens as $t)
+				{
+					print " <acronym title=\"$t\">" . $alltokens[$t] . "</acronym>";				
+				}
+				$url = str_replace($alltokens["writableBuildRoot"]. "/build", "", $alltokens["buildDir"]);
+				print " :: <a href=\"" . $url . "\">Build Artifacts</a>";
+				print "</li>";
+				unset($alltokens);
+			} 
+		}
+		print '
+	</ul>
+	</div>
+';
+	}	
+}
 
 ?>

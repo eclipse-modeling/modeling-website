@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.59 2008/02/20 06:08:05 nickb Exp $
+// $Id: scripts.php,v 1.60 2008/05/08 04:46:55 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -659,4 +659,34 @@ function changesetForm($bugid = "")
 	</form>
 <?php
 }
+
+function tokenize($in) # split a shell command into flag/value pairs
+{
+	/* 17722 ? Ss 0:00 /bin/bash /home/www-data/build/modeling/scripts/start.sh -proj gmf 
+	 * -sub gmf -version 2.1.0 -branch HEAD 
+	 * -URL http://download.eclipse.org/eclipse/downloads/drops/S-3.4M7-200805020100/eclipse-SDK-3.4M7-linux-gtk.tar.gz 
+	 * -URL http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805052017/emf-sdo-xsd-SDK-2.4.0M7.zip 
+	 * -URL http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/S200805052208/mdt-uml2-SDK-2.2.0M7.zip 
+	 * -URL http://download.eclipse.org/tools/orbit/downloads/drops/S20080427194908/orbitBundles-S20080427194908.map 
+	 * -URL http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/S200805061053/mdt-ocl-SDK-1.2.0M7.zip 
+	 * -URL http://emft.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/S200805061125/emf-query-SDK-1.2.0M7.zip 
+	 * -URL http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.2.0/S200805061205/emf-transaction-SDK-1.2.0M7.zip 
+	 * -URL http://emft.eclipse.org/modeling/emf/validation/downloads/drops/1.2.0/S200805061125/emf-validation-SDK-1.2.0M7.zip 
+	 * -URL http://download.eclipse.org/tools/gef/downloads/drops/3.4.0/S200804291800/GEF-ALL-3.4.0M7.zip -antTarget run 
+	 * -mapfileRule use-false -buildType I -javaHome /opt/sun-java2-5.0 -downloadsDir /home/www-data/build/downloads 
+	 * -buildDir /home/www-data/build/modeling/gmf/gmf/downloads/drops/2.1.0/I200805072353 
+	 * -writableBuildRoot /home/www-data -buildTimestamp 200805072353 
+	 * -email gmf-releng@eclipse.org,nickboldt@gmail.com,max.feldman@borland.com,anthonyh@ca.ibm.com 
+	 * -basebuilderBranch M7_34 
+	 */
+	$bits = explode(" -", $in);
+	$pairs["cmd"] = $bits[0];
+	for ($i=1; $i<sizeof($bits); $i++)
+	{
+		$pair = explode(" ", $bits[$i]); 
+		$pairs[$pair[0]] = $pair[1]; 			
+	}
+	return $pairs;
+} 
+
 ?>
