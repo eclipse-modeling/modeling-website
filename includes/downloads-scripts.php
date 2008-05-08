@@ -822,7 +822,7 @@ function outputBuild($branch, $ID, $c)
 function doNoclean($dir)
 {
 	$sizeondisk = pretty_size(dirsize($dir));
-	return " <span class=\"noclean\"><acronym title=\"Failed builds do not clean up temp files. Please do so manually: disk space is limited!\">Size on disk: $sizeondisk</acronym></span>" .
+	return " <span class=\"noclean\"><acronym title=\"Failed builds do not purge temp files. Please do so manually: space is limited!\">Size on disk: $sizeondisk</acronym></span>" .
 		   " <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>";		
 }
 
