@@ -73,8 +73,8 @@ function doIPQuery($product_id, $isFormatted = true)
 		if ($isFormatted)
 		{	
 			$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
-			print "<tr><td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td><td>" .
-				"<a href=\"/modeling/gmf/searchcvs.php?q=" . $myrow['bug_id'] . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $myrow['bug_id'] . "\"></a>&#160;" .  
+			print "<tr align=\"top\"><td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td><td nowrap=\"nowrap\">" .
+				"<a href=\"/modeling/searchcvs.php?q=" . $myrow['bug_id'] . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $myrow['bug_id'] . "\"></a>&#160;" .  
 				"<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $myrow['bug_id'] . "\">" . $myrow['bug_id'] . "</a>" . 
 				"</td><td><acronym title=\"" . $myrow['login_name'] . "\">$shortname</acronym></td><td>" . $myrow['size'] . "</td>" .
 				"<td width=\"100%\"><small style=\"font-size:8px\">" . str_replace(",", " ", $myrow['short_desc']) . "<br/>" . str_replace(",", " ", $myrow['description']) . "</small></td></tr>\n";
