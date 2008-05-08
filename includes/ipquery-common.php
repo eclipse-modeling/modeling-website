@@ -69,9 +69,11 @@ function doIPQuery($product_id, $isFormatted = true)
 	{	
 		print "		<table>\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th><th>Size</th><th>Description</th></tr>\n";
 	}
+	$bgcol = "#FFFFFF";
 	while($myrow = mysql_fetch_assoc($rs)) {
 		if ($isFormatted)
 		{	
+			$bgcol = "#FFFFFF" ? "#EEEEEE" : "#FFFFFF";
 			$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
 			print "<tr align=\"top\"><td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td><td nowrap=\"nowrap\">" .
 				"<a href=\"/modeling/searchcvs.php?q=" . $myrow['bug_id'] . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $myrow['bug_id'] . "\"></a>&#160;" .  
