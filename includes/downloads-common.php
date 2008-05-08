@@ -41,6 +41,7 @@ $hadLoadDirSimpleError = 1; //have we echoed the loadDirSimple() error msg yet? 
 $sortBy = (isset($_GET["sortBy"]) && preg_match("/^(date)$/", $_GET["sortBy"], $regs) ? $regs[1] : "");
 $showAll = (isset($_GET["showAll"]) && preg_match("/^(1)$/", $_GET["showAll"], $regs) ? $regs[1] : "0");
 $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"], $regs) ? $regs[1] : ($sortBy == "date" ? "10" : "5"));
+$showBuildResults = !isset($_GET["light"]) && !isset($_GET["nostatus"]); // suppress display of status to render page faster
 $doRefreshPage = false;
 
 $PWD = getPWD("$projct/downloads/drops"); // see scripts.php

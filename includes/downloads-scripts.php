@@ -131,7 +131,7 @@ function IDtoDateStamp($ID, $style) // given N200402121441, return date("D, j M 
 
 function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabel = "") // the new way - use a ziplabel pregen'd from a dir list!
 {
-	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips, $projects;
+	global $PR, $suf, $proj, $projct, $filePreStatic, $extraZips, $projects, $showBuildResults;
 	$uu = 0;
 
 	if (!$ziplabel)
@@ -159,73 +159,84 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 	}
 
 	$echo_out_all = "";
-	foreach (array_keys($dls[$proj]) as $z)
+	
+	if (!$showBuildResults)
 	{
-		$echo_out = "";
-		foreach ($dls[$proj][$z] as $label => $u)
+		foreach (array_keys($dls[$proj]) as $z)
 		{
-			$cnt++;
-			if (!is_array($u)) // for compatibilty with uml2, where there's no "RT" value in $u
-			{
-				$u = $u ? array("-$u") : array("");
-			}
-
-			// support EMF page with three different valid prefixes which can
-			// overlap when searched using dynamic check below
-			if ($filePreStatic && is_array($filePreStatic) && array_key_exists($proj,$filePreStatic))
-			{
-				$filePreProj = array($filePreStatic[$proj][$cnt]); // just one value to check
-			}
-
-			$tries = array();
-			foreach ($u as $ux)
-			{
-				foreach ($filePreProj as $filePre)
-				{
-					$tries[] = "$branch/$ID/$pre2$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
-					$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
-					$tries[] = "$branch/$ID/$pre2$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
-					$tries[] = "$branch/$ID/$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
-				}
-			}
-			$outNotFound = "<i><b>$pre2</b>$filePre";
-			if (sizeof($u) > 1 ) {
-				$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $outNotFound .= ($ui>0 ? "," : "") . $ux; } $outNotFound .= "}<i>";
-			}
-			else
-			{
-				$outNotFound .= $u[0];
-			}
-			$outNotFound .= "-$ziplabel.zip ...</i>";
-			$out = "";
-			foreach ($tries as $y)
-			{
-				if (is_file("$PWD/$y"))
-				{
-					$out = fileFound("$PWD/", $y, $label);
-					break;
-				}
-			}
-			if ($out)
-			{
-				$echo_out .= "<li>\n";
-				$echo_out .= $out;
-				$echo_out .= "</li>\n";
-			}
-			else if (!isset($extraZips) || !is_array($extraZips) || !in_array($filePre . $u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
-			{
-				$echo_out .= "<li>\n";
-				$echo_out .= $outNotFound;
-				$echo_out .= "</li>\n";
-			}
-			$uu++;
-		}
-		if ($echo_out) // if the whole category is empty, don't show it (eg., GEF)
-		{
-			$echo_out_all .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n" . $echo_out . "</ul>\n</li>\n";
+			$echo_out_all .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> " . fileFound("$PWD/", "$branch/$ID/", "$z Build Artifacts") . "</li>\n";
+			break;
 		}
 	}
-
+	else
+	{
+		foreach (array_keys($dls[$proj]) as $z)
+		{
+			$echo_out = "";
+			foreach ($dls[$proj][$z] as $label => $u)
+			{
+				$cnt++;
+				if (!is_array($u)) // for compatibilty with uml2, where there's no "RT" value in $u
+				{
+					$u = $u ? array("-$u") : array("");
+				}
+	
+				// support EMF page with three different valid prefixes which can
+				// overlap when searched using dynamic check below
+				if ($filePreStatic && is_array($filePreStatic) && array_key_exists($proj,$filePreStatic))
+				{
+					$filePreProj = array($filePreStatic[$proj][$cnt]); // just one value to check
+				}
+	
+				$tries = array();
+				foreach ($u as $ux)
+				{
+					foreach ($filePreProj as $filePre)
+					{
+						$tries[] = "$branch/$ID/$pre2$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$pre2$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+					}
+				}
+				$outNotFound = "<i><b>$pre2</b>$filePre";
+				if (sizeof($u) > 1 ) {
+					$outNotFound .= "</i>{"; foreach ($u as $ui => $ux) { $outNotFound .= ($ui>0 ? "," : "") . $ux; } $outNotFound .= "}<i>";
+				}
+				else
+				{
+					$outNotFound .= $u[0];
+				}
+				$outNotFound .= "-$ziplabel.zip ...</i>";
+				$out = "";
+				foreach ($tries as $y)
+				{
+					if (is_file("$PWD/$y"))
+					{
+						$out = fileFound("$PWD/", $y, $label);
+						break;
+					}
+				}
+				if ($out)
+				{
+					$echo_out .= "<li>\n";
+					$echo_out .= $out;
+					$echo_out .= "</li>\n";
+				}
+				else if (!isset($extraZips) || !is_array($extraZips) || !in_array($filePre . $u[0],$extraZips)) // $extraZips defined in downloads/index.php if necessary
+				{
+					$echo_out .= "<li>\n";
+					$echo_out .= $outNotFound;
+					$echo_out .= "</li>\n";
+				}
+				$uu++;
+			}
+			if ($echo_out) // if the whole category is empty, don't show it (eg., GEF)
+			{
+				$echo_out_all .= "<li><img src=\"/modeling/images/dl.gif\" alt=\"Download\"/> $z\n<ul>\n" . $echo_out . "</ul>\n</li>\n";
+			}
+		}
+	}
 	return $echo_out_all;
 }
 
@@ -757,7 +768,7 @@ function toPlainTextSummaries($summary)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
@@ -770,8 +781,8 @@ function outputBuild($branch, $ID, $c)
 	$opts = loadBuildConfig("$PWD/$branch/$ID/build.cfg", $deps);
 
 	$ret = "<li>\n";
-	$buildResults = showBuildResults("$PWD/", "$branch/$ID/");
-	$extraTestsResults = getExtraTestsResults($branch, $ID);
+	$buildResults = $showBuildResults ? showBuildResults("$PWD/", "$branch/$ID/") : array("");
+	$extraTestsResults = $showBuildResults ? getExtraTestsResults($branch, $ID) : array(array(), "", "");
 	$ret .= "<div>" . $buildResults[0] .  join("", preg_replace("/^(.+)$/", "<span>$1</span>", $extraTestsResults[0])) . "</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
 		"<i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> " .
