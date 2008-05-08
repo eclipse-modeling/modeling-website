@@ -26,7 +26,7 @@ function sidebar()
 		<ul>
 			<li><a href="/<?php print $PR; ?>/<?php print $projct ? $projct : "gmf"; ?>/build/">Build</a>,
 				<a href="/<?php print $PR; ?>/<?php print $projct ? $projct : "gmf"; ?>/build/promo.php">Promote</a></li>
-			<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct ? $projct : "gmf"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
+			<li><a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct ? $projct : "gmf"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a> (<a href="/<?php print $PR; ?>/downloads/?project=<?php print $projct ? $projct : "gmf"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date&amp;light">Light</a>)</li>
 		</ul>
 	</div>
 
