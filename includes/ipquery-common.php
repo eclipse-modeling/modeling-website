@@ -67,7 +67,7 @@ function doIPQuery($product_id, $isFormatted = true)
 
 	if ($isFormatted)
 	{	
-		print "		<table width=\"99%\">\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th><th>Size</th><th>Description</th></tr>\n";
+		print "		<table>\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th><th>Size</th><th>Description</th></tr>\n";
 	}
 	$bgcol = "#EEEEEE";
 	while($myrow = mysql_fetch_assoc($rs)) {
