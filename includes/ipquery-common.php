@@ -12,8 +12,20 @@ function doIPQuery($product_id, $isFormatted = true)
 	$dbc 	= new DBConnectionBugs();
 	$dbh 	= $dbc->connect();
 						
-	# NOTE: product_id = 29 is GMF, bug_status = 5 is RESOLVED, resolution = 2 is FIXED, 'contributed' keyword id = 22	
-						
+	# NOTE: bug_status = 5 is RESOLVED, resolution = 2 is FIXED, 'contributed' keyword id = 22
+	# for product_id, use:	
+	# 8, EMF
+	# 12, GMT
+	# 29, GMF
+	# 40, MDDi
+	# 42, EMFT
+	# 63, Modeling
+	# 67, MDT
+	# 71, M2M
+	# 87, M2T
+	# 105, Amalgam
+	# 106, TMF
+					
 	$sql_info = "SELECT 
 						attachments.filename,
 						attachments.description,
