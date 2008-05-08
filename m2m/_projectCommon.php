@@ -32,16 +32,16 @@ $cvsprojs = array (); /* should always be empty */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.m2m" => array (
-		"atl" => "org.eclipse.m2m.atl",
-		"qvto" => "org.eclipse.m2m.qvto",
-		"qvtr" => "org.eclipse.m2m.qvtr",
+		"atl" => "org.eclipse.atl",
+		"qvtoml" => "org.eclipse.qvtoml",
+		"qvtr" => "org.eclipse.qvtr",
 		/* add more here */
 	)
 );
 
 $projects = array(
 	"ATL" => "atl",
-	"Operational QVT" => "qvto",
+	"Operational QVT" => "qvtoml",
 	"Relational QVT" => "qvtr"
 );
 
@@ -49,10 +49,10 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("qvto","qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("qvtoml","qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("atl"); //components without newsgroup
 $nomailinglist = array("atl"); //components without mailinglist
-$incubating = array("qvto", "qvtr"); // components that are incubating
+$incubating = array("qvtoml", "qvtr"); // components that are incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
