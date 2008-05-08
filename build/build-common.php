@@ -66,7 +66,9 @@ if (is_array($projects) && sizeof($projects) > 1)
 	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
 }
 
-print showBuildsInProgress(); ?>
+if (!isset ($_POST["process"]) || !$_POST["process"] == "build") {
+	print showBuildsInProgress(); 
+} ?>
 <div class="homeitem3col">
 <h3>Run A Build</h3>
 <?php
@@ -1101,7 +1103,7 @@ function showBuildsInProgress()
 	}
 	if ($inprogress) { 
 		print '	
-	<div style="border:red 2px dashed; padding: 10px">
+	<div style="padding-left: 20px; padding-right: 25px"><div style="border:red 2px dashed; padding: 10px">
 	The following builds are currently in progress on this server.
 	<ul>
 '; 
@@ -1123,7 +1125,7 @@ function showBuildsInProgress()
 		}
 		print '
 	</ul>
-	</div>
+	</div></div>
 ';
 	}	
 }
