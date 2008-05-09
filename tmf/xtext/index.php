@@ -31,7 +31,7 @@
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
 	<div id="midcolumn">
-		<img alt="Xtext Logo" border=0 src="images/logo.png"/>
+		<img alt="Xtext Logo" border=0 src="images/logo.png" size="50%"/>
 	</div>
 	<div id="midcolumn">
 	  <p>Xtext is framework/tool for development of external textual DSLs. Just describe your very own DSL using Xtext's simple EBNF grammar language and the generator will create a parser, an AST-meta model (implemented in EMF) as well as a full-featured Eclipse Text Editor from that.</p>
