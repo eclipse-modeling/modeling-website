@@ -1,4 +1,8 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php 
+	header('Location: http://wiki.eclipse.org/xtext');
+	exit();
+
+ 																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 
 	#*****************************************************************************
 	#
@@ -20,22 +24,19 @@
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	$Nav->addCustomNav("Projectplan", "projectplan.php");
-	$Nav->addNavSeparator("Xtext (oAW 4.3)", 	"http://www.openarchitectureware.org");
-	$Nav->addCustomNav("Download", "http://www.eclipse.org/gmt/oaw/download/");
-	$Nav->addCustomNav("Documentation", "http://www.eclipse.org/gmt/oaw/doc/4.2/html/contents/xtext_reference.html");
+	#$Nav->addCustomNav("Projectplan", "projectplan.php");
+	#$Nav->addNavSeparator("Xtext (oAW 4.3)", 	"http://www.openarchitectureware.org");
+	#$Nav->addCustomNav("Download", "http://www.eclipse.org/gmt/oaw/download/");
+	#$Nav->addCustomNav("Documentation", "http://www.eclipse.org/gmt/oaw/doc/4.2/html/contents/xtext_reference.html");
 
 	# End: page-specific settings
 	#
 		
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
-	<table><tr><td>
+	<table><tr><td></td></tr><tr><td>
 	        <h1 class="firstHeading">Xtext</h1>
 
-          <p><br />
-Welcome to the Xtext wiki.
-</p>
 <p><img alt="Xtext Logo" src="images/logo.png" width="350" border="0" align="right" vspace="10" hspace="20"/>Xtext is a framework/tool for development of external textual DSLs. Just describe your very own DSL using Xtext's simple EBNF grammar language and the generator will create a parser, an AST-meta model (implemented in EMF) as well as a full-featured Eclipse Text Editor from that.
 </p><p>The Framework integrates with technology from Eclipse Modeling such as EMF, GMF, M2T and parts of EMFT. Development with Xtext is optimized for short turn-arounds, so that adding new features to an existing DSL can be done in seconds.
 </p><p>Language development has never been so easy.
