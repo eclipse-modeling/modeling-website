@@ -31,7 +31,7 @@
 	$html = <<<EOHTML
 
 	<div id="midcolumn">
-	  This project was just provisioned, so there is nothing to see here.
+	  The Xtext project was just provisioned, so there is nothing to see here.
 	</div>
 
 EOHTML;
