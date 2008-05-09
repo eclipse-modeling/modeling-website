@@ -30,6 +30,7 @@
 		
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
+	<table><tr><td>
 	        <h1 class="firstHeading">Xtext</h1>
 
           <p><br />
@@ -62,6 +63,7 @@ Welcome to the Xtext wiki.
 </li><li><b><a href="http://wiki.eclipse.org/index.php?title=Xtext_Release_Engineering&amp;action=edit" class="new" title="Xtext Release Engineering">Release Engineering</a></b> - how to set up the build and produce a release.
 </li><li><b><a href="http://wiki.eclipse.org/index.php?title=Xtext_Project_Plan&amp;action=edit" class="new" title="Xtext Project Plan">Project Plan</a></b> - what's coming up?.
 </li></ul>
+</td></tr></table>
 </td></tr></table>
 
 
