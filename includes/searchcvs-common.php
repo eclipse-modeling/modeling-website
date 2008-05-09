@@ -209,6 +209,11 @@ if ($connect)
 		<p>See also the complete <a href="http://wiki.eclipse.org/index.php/Search_CVS#Parameter_List">Parameter List</a> or the <a href="http://build.eclipse.org/modeling/build/schema.php">Database Schema</a>.</p>
 	</div>
 	<div class="sideitem">
+		<h6>Data</h6>
+		<p>If data is out of date, you can <a href="http://build.eclipse.org/modeling/build/updateSearchCVS.php">update it here</a>.</p>
+		<p>To request a new module be added, contact <a href="http://wiki.eclipse.org/User:Nickb">Nickb</a>.</p>
+	</div>
+	<div class="sideitem">
 		<h6>Generate Changeset</h6>
 		<?php changesetForm($bugid); ?>
 	</div>
