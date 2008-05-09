@@ -34,7 +34,7 @@
 		<img alt="Xtext Logo" border=0 src="images/logo.png" size="50%"/>
 	</div>
 	<div id="midcolumn">
-	  <p>Xtext is framework/tool for development of external textual DSLs. Just describe your very own DSL using Xtext's simple EBNF grammar language and the generator will create a parser, an AST-meta model (implemented in EMF) as well as a full-featured Eclipse Text Editor from that.</p>
+	  <p>Xtext is a framework/tool for development of external textual DSLs. Just describe your very own DSL using Xtext's simple EBNF grammar language and the generator will create a parser, an AST-meta model (implemented in EMF) as well as a full-featured Eclipse Text Editor from that.</p>
 	  <p>The Framework integrates with technology from Eclipse Modeling such as EMF, GMF, M2T and parts of EMFT. Development with Xtext is optimized for short turn-arounds, so that adding new features to an existing DSL can be done in a second.</p> 
 	  <p>Language development has never been so easy.</p>
 	</div>
