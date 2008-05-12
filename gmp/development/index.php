@@ -152,7 +152,7 @@ include ($App->getProjectCommon());
 									Modeling Project charter found <a
 										href="http://www.eclipse.org/modeling/modeling-charter.php">here</a>.</li>
 					<li><b><a
-										href="http://www.eclipse.org/gmf/development/contributors.php">Contributors
+										href="http://www.eclipse.org/modeling/gmf/project-info/team.php">Contributors
 									and Committers</a></b> <br>
 									List of Eclipse GMF Project contributors and committers.</li>
 		</div>

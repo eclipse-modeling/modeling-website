@@ -9,7 +9,7 @@ $projectInfo->generate_common_nav( $Nav );
 include ($App->getProjectCommon()); 
 	#*****************************************************************************
 	#
-	# contributors.php
+	# build_schedule.php
 	#
 	# Author: 		Max Feldman
 	# Date:			2006-05-05
