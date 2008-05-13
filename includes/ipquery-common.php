@@ -154,7 +154,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $committers, $product_id, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 	
 	if (!$isFormatted)
