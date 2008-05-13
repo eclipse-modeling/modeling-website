@@ -35,7 +35,9 @@ function doIPQuery($product_id, $isFormatted = true)
 		# 87, M2T
 		# 105, Amalgam
 		# 106, TMF
-						
+
+		# TODO: provide a non-attachment based query -- just bugs for which there's a contributed keyword and a comment defining the commit size?
+		
 		$sql_info = "SELECT 
 							attachments.filename,
 							attachments.description,
@@ -266,9 +268,17 @@ function doIPQueryPage()
 		</div>
 		<div class="sideitem">
 			<h6>Data</h6>
+			
+			<p>Note that this data is only as accurate as the 
+			<a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines#Committing_a_Contribution">process used to collect it</a>.
+			 To appear in this list, a contribution must: (1) include a patch, (2) attached to a bug, (3) bearing the <i>contributed</i> keyword. If you see an omission and cannot correct it yourself,  
+			 <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=modeling&component=Website">please report it</a>.
+			</p>
+
 			<ul>
 				<li><a href="?unformatted">View unformatted data</a></li>
 			</ul>
+
 		</div>
 	</div>
 	
