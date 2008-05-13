@@ -9,9 +9,11 @@ if (is_file("$bugClass")) require_once "$bugClass";
 function doIPQuery($product_id, $isFormatted = true)
 {
 	global $bugClass;
+	$cnt = 0;
 	if (!is_file($bugClass)) 
 	{
 		print "<li><b style='color:red'>Error: could not query Bugzilla database.</b></li>";
+		$cnt = -1;
 	}
 	else
 	{
@@ -79,6 +81,7 @@ function doIPQuery($product_id, $isFormatted = true)
 		}
 		$bgcol = "#FFFFEE";
 		while($myrow = mysql_fetch_assoc($rs)) {
+			$cnt++;
 			if ($isFormatted)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
@@ -107,6 +110,7 @@ function doIPQuery($product_id, $isFormatted = true)
 		$dbh 		= null;
 		$dbc 		= null;
 	}
+	return $cnt;
 }
 
 function doBugLink($id)
@@ -203,7 +207,8 @@ function doIPQueryPage()
 		</div>
 		<div class="homeitem3col">
 			<a name="section2"></a><h3>Developers (Section 2)</h3>
-			<?php doIPQuery($product_id, true); ?>
+			<?php $cnt = doIPQuery($product_id, true); ?>
+			<p align="right"><?php echo $cnt; ?> records found.</p> 
 			<p>
 	 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 			{
