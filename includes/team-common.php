@@ -189,7 +189,7 @@ EOHTML;
 
 $html= ob_get_contents();
 ob_end_clean();
-$pageTitle= "Modeling - " . ($projectName ? $projectName . " -" : "") . " Meet The Team";
+$pageTitle= "Eclipse Modeling - " . ($projectName && $projct != "modeling" ? $projectName . " -" : "") . " Meet The Team";
 $pageKeywords= "";
 $pageAuthor= "Nick Boldt";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
