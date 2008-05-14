@@ -72,23 +72,7 @@ ob_start();
 	</div>
 
 	<div class="homeitem">
-		<h3>Newsgroup Search</h3>
-		<ul>
-<?php foreach ($newsgroups as $label => $ngs)
-{
-	print '<li>' . $label. ": ";
-	foreach ($ngs as $i => $ng) 
-	{
-		if ($i>0) { print ", "; }
-		print '<a href="http://www.eclipse.org/search/search.cgi?cmd=Search%21&amp;form=extended&amp;wf=574a74&amp;ps=10&amp;m=all&amp;t=5&amp;ul=%2Fnewslists%2Fnews.eclipse.'.$ng.'&amp;wm=wrd&amp;t=News&amp;t=Mail">eclipse.'.$ng.'</a>'; 
-	}
-	print "</li>\n"; 
-} ?>		
-		</ul>
-	</div>
-
-	<div class="homeitem">
-		<h3>Newsgroup Browse (<a style="color:white;text-decoration:underline" href="http://www.eclipse.org/newsgroups/">Password Required</a>)</h3>
+		<h3>Newsgroup Search / Browse</h3>
 		<ul>
 <?php foreach ($newsgroups as $label => $ngs)
 {
@@ -99,7 +83,7 @@ ob_start();
 		print '<a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.'.$ng.'">eclipse.'.$ng.'</a>'; 
 	}
 	print "</li>\n"; 
-} ?>
+} ?>		
 		</ul>
 	</div>
 
@@ -147,10 +131,9 @@ print <<<XML
 	<div class="sideitem">
 	<h6>Search Newsgroup</h6>
 XML;
-print '	<form method="get" action="http://www.eclipse.org/search/search.cgi" name="searchngform">' . "\n";
+print '<form method="get" action="http://www.eclipse.org/newsportal/thread.php" name="searchngform">' . "\n";
 print "<p>\n";
-print '<label for="bug">Query: </label><input size="7" type="text" name="q" id="q"/> <input type="submit" value="Go!"/><br/>'."\n";
-print 'In: <select name="ul" style="width:100%; font-size:smaller">';
+print '<select name="group" style="width:100%; font-size:smaller">';
 $shown_ngs = array();
 foreach ($newsgroups as $label => $ngs)
 {
@@ -159,21 +142,13 @@ foreach ($newsgroups as $label => $ngs)
 		if (!in_array($ng,$shown_ngs)) 
 		{
 			$shown_ngs[] = $ng;
-			print '<option value="/newslists/news.eclipse.'.$ng.'">'.$ng.'</option>'."\n"; 
+			print '<option value="eclipse.'.$ng.'">'.$ng.'</option>'."\n"; 
 		} 
 	}
 }
 print "</select><br/>\n"; 
+print '<input type="submit" value="Go!"/><br/>'."\n";
 print <<<XML
-	<input type="hidden" name="cmd" value="Search!"/>
-	<input type="hidden" name="form" value="extended"/>
-	<input type="hidden" name="wf" value="574a74"/>
-	<input type="hidden" name="ps" value="10"/>
-	<input type="hidden" name="m" value="all"/>
-	<input type="hidden" name="t" value="5"/>
-	<input type="hidden" name="wm" value="wrd"/>
-	<input type="hidden" name="t" value="News"/>
-	<input type="hidden" name="t" value="Mail"/>
 	</p>
 	</form>
 	</div>
