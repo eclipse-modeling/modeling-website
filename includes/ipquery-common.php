@@ -11,6 +11,10 @@ $attachmentsOnly = !isset($_GET["allcontribs"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "contact";
 $showbuglist = isset($_GET["showbuglist"]);
+if ($showbuglist) 
+{
+	$sortBy = "bugs.bug_id";
+}
  
 function doIPQuery()
 {
@@ -361,7 +365,8 @@ function doIPQueryPage()
 			</p>
 
 			<ul>
-				<li><a href="?unformatted<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View unformatted data</a></li>
+				<li><a href="?unformatted<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View unformatted data (txt)</a></li>
+				<li><a href="?showbuglist<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View bug numbers only (csv)</a></li>
 			</ul>
 			</ul>
 		</div>
