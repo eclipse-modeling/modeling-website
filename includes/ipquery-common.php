@@ -177,7 +177,7 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "font-weight:bold" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
+					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "font-weight:bold" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></acronym></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
