@@ -80,6 +80,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							bugs.bug_id = 147594 AND bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							bugs.product_id = $product_id AND
+							profiles.userid = longdescs.who AND
 							longdescs.bug_id = bugs.bug_id    
 					ORDER BY
 							$order";
