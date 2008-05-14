@@ -163,12 +163,16 @@ function printIPQuery($data, $isFormatted = true)
 				"<th>Description</th></tr>\n";
 	}
 	$bgcol = "#FFFFEE";
+	$prevDesc = "";
 	foreach ($data as $myrow)
 	{
 		$cnt++;
 		if ($isFormatted)
-		{	
-			$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
+		{
+			if ($myrow['description'] != $prevDesc)
+			{	
+				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
+			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
@@ -179,6 +183,7 @@ function printIPQuery($data, $isFormatted = true)
 						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>&#160;&#160;&#149;&#160;" . str_replace(",", " ", $myrow['description']) : "")) . 
 					(isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "</strike> (obsolete patch)" : "") . "</small></td>" .
 				  "</tr>\n";
+			$prevDesc = $myrow['description'];
 		}
 		else
 		{
