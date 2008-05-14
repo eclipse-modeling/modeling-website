@@ -154,6 +154,7 @@ function doBugLink($id)
 
 function getContributor($in)
 {
+	echo "Processing {{ $in }}<br/>";
 	if (strpos($in, "@") !== false && strpos($in, "[") === false)
 	{
 		$email = $in;
@@ -161,9 +162,10 @@ function getContributor($in)
 	}
 	else
 	{
-		$chunks = explode(" ", implode(" ", $in));
+		$chunks = explode(" ", str_replace("\n", " ", $in));
 		foreach ($chunks as $chunk)
 		{
+			echo "Processing {$chunk}<br/>";
 			if (strpos($chunk, "email=") !== false)
 			{
 				$email = explode("=", $chunk); $email = $email[1];
