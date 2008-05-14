@@ -117,7 +117,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 				}
 				if (preg_match("/[/", $myrow['login_name']))
 				{
-					$myrow['login_name'] = "?";
+					$myrow['login_name'] = "?@?.?";
 				}
 				$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
