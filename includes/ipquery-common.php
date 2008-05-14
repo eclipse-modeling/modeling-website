@@ -10,6 +10,7 @@ $isFormatted = !isset($_GET["unformatted"]);
 $attachmentsOnly = !isset($_GET["allcontribs"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "contact";
+$component = isset($_GET["$component"]) ? urldecode($_GET["$component"]) : ""; 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
 {
@@ -18,7 +19,7 @@ if ($showbuglist)
  
 function doIPQuery()
 {
-	global $bugClass, $product_id, $sortBy, $showbuglist, $attachmentsOnly;
+	global $bugClass, $product_id, $sortBy, $component, $showbuglist, $attachmentsOnly;
 	$data = array();
 	if (!is_file($bugClass)) 
 	{
@@ -62,10 +63,11 @@ function doIPQuery()
 							attachments, attach_data, bugs, components, keywords, profiles 
 					WHERE
 							attachments.ispatch = 1 AND 
-							attachments.isobsolete = 0 AND
+							attachments.isobsolete = 0 AND 
 							attachments.bug_id = bugs.bug_id AND 
 							attachments.attach_id = attach_data.id AND 
-							components.id = bugs.component_id AND 
+							components.id = bugs.component_id AND
+							" . ($component ? "components.name = '$component' AND " : "") . " 
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							profiles.userid = attachments.submitter_id AND 
@@ -82,12 +84,13 @@ function doIPQuery()
 					FROM 
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
-							components.id = bugs.component_id AND 
+							components.id = bugs.component_id AND   
+							" . ($component ? "components.name = '$component' AND " : "") . " 
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
-							bugs.product_id = $product_id AND
-							profiles.userid = longdescs.who AND
-							longdescs.bug_id = bugs.bug_id AND
+							bugs.product_id = $product_id AND 
+							profiles.userid = longdescs.who AND 
+							longdescs.bug_id = bugs.bug_id AND 
 							longdescs.thetext like '%[contrib %]%'
 					ORDER BY
 							$order";
@@ -117,15 +120,15 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
-	global $sortBy, $attachmentsOnly;
+	global $sortBy, $component, $attachmentsOnly;
 	$cnt = 0;
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name'>Component</a></th>" .
-				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id'>Bug #</a></th>" .
-				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact'>Contributor</a></th>" . 
-				($attachmentsOnly ? "<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size'>Size</a></th>" : "") . 
+				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . (!$attachmentsOnly ? "&amp;allcontribs" : "" ) . "'>Component</a></th>" .
+				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . (!$attachmentsOnly ? "&amp;allcontribs" : "" ) . "'>Bug #</a></th>" .
+				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . (!$attachmentsOnly ? "&amp;allcontribs" : "" ) . "'>Contributor</a></th>" . 
+				($attachmentsOnly ? "<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . (!$attachmentsOnly ? "&amp;allcontribs" : "" ) . "'>Size</a></th>" : "") . 
 				"<th>Description</th></tr>\n";
 	}
 	$bgcol = "#FFFFEE";
@@ -137,7 +140,7 @@ function printIPQuery($data, $isFormatted = true)
 			$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
+					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . (!$attachmentsOnly ? "&amp;allcontribs" : "" ) . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					($attachmentsOnly ? "<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" : "") .
@@ -290,6 +293,8 @@ function doIPQueryPage()
 	ob_start();
 	?>
 	<div id="midcolumn">
+	
+		<h1><?php print $projectName; ?> IP Log</h1>
 		<div class="homeitem3col">
 			<a name="section1"></a><h3>Committers (Section 1)</h3>
 			<ul>
@@ -365,8 +370,8 @@ function doIPQueryPage()
 			</p>
 
 			<ul>
-				<li><a href="?unformatted<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View unformatted data (txt)</a></li>
-				<li><a href="?showbuglist<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View bug numbers only (csv)</a></li>
+				<li><a href="?unformatted<?php print !$attachmentsOnly ? "&amp;allcontribs" : ""; ?>">View unformatted data (txt)</a></li>
+				<li><a href="?showbuglist<?php print !$attachmentsOnly ? "&amp;allcontribs" : ""; ?>">View bug numbers only (csv)</a></li>
 			</ul>
 			</ul>
 		</div>
@@ -376,7 +381,7 @@ function doIPQueryPage()
 	$html = ob_get_contents();
 	ob_end_clean();
 	
-	$pageTitle= "Eclipse Modeling - " . ($projectName ? $projectName . " -" : "") . " IP Log";
+	$pageTitle= "Eclipse Modeling - " . ($projectName && $projct != "modeling" ? $projectName . " -" : "") . " IP Log";
 	$pageKeywords = "eclipse,project,modeling,IP";
 	$pageAuthor = "Nick Boldt";
 	
