@@ -67,6 +67,8 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 					ORDER BY
 							$order" : 
 					"SELECT 
+							longdescs.thetext as description,
+							LENGTH(longdescs.thetext) AS size,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
@@ -78,7 +80,9 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							components.id = bugs.component_id AND 
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
-							bugs.product_id = $product_id
+							bugs.product_id = $product_id AND
+							longdescs.who = profiles.login_name AND
+							longdescs.bug_id = bugs.bug.id AND longdescs.thetext like '[contrib %]'    
 					ORDER BY
 							$order";
 													
