@@ -81,7 +81,8 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							keywords.keywordid = 22 AND 
 							bugs.product_id = $product_id AND
 							profiles.userid = longdescs.who AND
-							longdescs.bug_id = bugs.bug_id    
+							longdescs.bug_id = bugs.bug_id AND
+							longdescs.thetext like '%[contrib%]%'
 					ORDER BY
 							$order";
 													
