@@ -10,7 +10,7 @@ $showobsolete = isset($_GET["showobsolete"]);
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact#", $_GET["sortBy"], $m) ? $m[0] : "bugs.bug_id";
-$component = isset($_GET["$component"]) ? urldecode($_GET["$component"]) : ""; 
+$component = isset($_GET["component"]) ? urldecode($_GET["component"]) : ""; 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
 {
