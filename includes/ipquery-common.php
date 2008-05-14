@@ -9,10 +9,11 @@ if (is_file("$bugClass")) require_once "$bugClass";
 $isFormatted = !isset($_GET["unformatted"]);
 $attachmentsOnly = !isset($_GET["allcontribs"]);
 $debug = isset($_GET["debug"]);
+$sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "contact";
  
 function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 {
-	global $bugClass;
+	global $bugClass, $sortBy;
 	$cnt = 0;
 	if (!is_file($bugClass)) 
 	{
@@ -42,7 +43,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 
 		# TODO: provide a non-attachment based query -- just bugs for which there's a contributed keyword and a comment defining the commit size?
 		
-		$order = "profiles.login_name ASC";
+		$order = "$sortBy ASC";
 		$sql_info = $attachmentsOnly ? 
 					"SELECT 
 							attachments.description,
@@ -52,7 +53,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							profiles.userid,
 							bugs.short_desc,
 							components.name,
-							profiles.login_name
+							profiles.login_name AS contact
 					FROM 
 							attachments, attach_data, bugs, components, keywords, profiles 
 					WHERE
@@ -68,12 +69,12 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 					ORDER BY
 							$order" : 
 					"SELECT 
-							longdescs.thetext as description,
+							longdescs.thetext AS description,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
 							components.name,
-							longdescs.thetext as login_name
+							longdescs.thetext AS contact
 					FROM 
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
@@ -103,7 +104,12 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 	
 		if ($isFormatted)
 		{	
-			print "		<table>\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th>" . ($attachmentsOnly ? "<th>Size</th>" : "") . "<th>Description</th></tr>\n";
+			print "		<table>\n			<tr>" .
+					"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name'>Component</a></th>" .
+					"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id'>Bug #</a></th>" .
+					"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact'>Contributor</a></th>" . 
+					($attachmentsOnly ? "<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size'>Size</a></th>" : "") . 
+					"<th>Description</th></tr>\n";
 		}
 		$bgcol = "#FFFFEE";
 		while($myrow = mysql_fetch_assoc($rs)) {
@@ -112,7 +118,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 				
-				list($shortname, $email) = getContributor($myrow['login_name']);
+				list($shortname, $email) = getContributor($myrow['contact']);
 				
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
@@ -126,7 +132,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			}
 			else
 			{
-				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $myrow['login_name'] . 
+				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $myrow['contact'] . 
 					($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
 					"," . str_replace(",", " ", $myrow['short_desc']) . 
 					(isset($myrow['description']) && $myrow['description'] ? " (" . str_replace(",", " ", $myrow['description']) . ")" : "") . 
@@ -340,7 +346,7 @@ function doIPQueryPage()
 			<ul>
 				<li><a href="?unformatted">View unformatted data</a></li>
 			</ul>
-
+			</ul>
 		</div>
 	</div>
 	
