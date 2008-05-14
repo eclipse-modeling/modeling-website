@@ -1,6 +1,6 @@
 <?php
 $product_id = 42; # EMFT
-$committers = array(
+$committers = array( # taken from http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emft
 	"lbigearde",
 	"jlescot", 
 	"estepper", 

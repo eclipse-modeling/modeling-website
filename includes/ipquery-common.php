@@ -371,7 +371,7 @@ function doIPQueryPage()
 
 			<ul>
 				<li><a href="?unformatted<?php print !$attachmentsOnly ? "&amp;allcontribs" : ""; ?>">View unformatted data (txt)</a></li>
-				<li><a href="?showbuglist<?php print !$attachmentsOnly ? "&amp;allcontribs" : ""; ?>">View bug numbers only (csv)</a></li>
+				<li><a href="?showbuglist<?php print !$attachmentsOnly ? "&amp;allcontribs" : ""; ?>">View bugs only (csv)</a></li>
 			</ul>
 			</ul>
 		</div>
