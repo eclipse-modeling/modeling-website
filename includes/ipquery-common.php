@@ -292,6 +292,7 @@ function doIPQueryPage()
 		{
 			$bugs[] = $myrow['bug_id'];
 		}
+		array_unique($bugs);
 		print join(",", $bugs) . "\n";
 		exit;
 	}	
