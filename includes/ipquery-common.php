@@ -8,7 +8,8 @@ if (is_file("$bugClass")) require_once "$bugClass";
 
 $isFormatted = !isset($_GET["unformatted"]);
 $attachmentsOnly = !isset($_GET["allcontribs"]);
-
+$debug = isset($_GET["debug"]);
+ 
 function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 {
 	global $bugClass;
@@ -154,30 +155,31 @@ function doBugLink($id)
 
 function getContributor($in)
 {
-	echo "Processing {{ $in }}<br/>";
+	global $debug; 
+	if ($debug) echo "Processing {{ $in }}<br/>";
 	if (strpos($in, "@") !== false && strpos($in, "[") === false)
 	{
 		$email = $in;
-		print "Got \$email = $email<br/>";
+		if ($debug) print "Got \$email = $email<br/>";
 	}
 	else
 	{
 		$chunks = explode(" ", str_replace("\n", " ", $in));
 		foreach ($chunks as $chunk)
 		{
-			echo "Processing {$chunk}<br/>";
+			if ($debug) echo "Processing {$chunk}<br/>";
 			if (strpos($chunk, "email=") !== false)
 			{
 				$email = explode("=", $chunk); $email = $email[1];
 				$email = preg_replace("#[/\"\]]+#","",$email); # trim out "/]
-				print "Got \$email = $email<br/>";
+				if ($debug) print "<b style='color:green'>Got \$email = $email</b><br/>";
 				break;
 			}
 		}
 	}
 	$shortname = explode("@", $email); $shortname = $shortname[0];
-	print "Got \$shortname = $shortname<br/>";
-	return array($shortname, $in);
+	if ($debug) print "<b style='color:green'>Got \$shortname = $shortname</b><br/>";
+	return array($shortname, $email);
 }
 
 function doProductIDQuery()
