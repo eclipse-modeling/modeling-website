@@ -300,6 +300,7 @@ function doIPQueryPage()
 		{
 			print $bug[0] . "\t" . $bug[1] . "\n";
 		}
+		print "\n" . sizeof($bugs) . " bugs total.\n";
 		exit;
 	}	
 	if (!$isFormatted)
