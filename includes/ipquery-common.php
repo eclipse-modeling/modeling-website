@@ -77,11 +77,11 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
 							components.id = bugs.component_id AND 
-							bugs.bug_id = keywords.bug_id AND 
+							bugs.bug_id = 147594 AND bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							bugs.product_id = $product_id AND
 							longdescs.who = profiles.login_name AND
-							longdescs.bug_id = bugs.bug_id AND longdescs.thetext like '%[contrib %]%'    
+							longdescs.bug_id = bugs.bug_id    
 					ORDER BY
 							$order";
 													
