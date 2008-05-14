@@ -117,9 +117,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			if ($isFormatted)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-				
 				list($shortname, $email) = getContributor($myrow['contact']);
-				
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
 						"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
@@ -132,10 +130,11 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			}
 			else
 			{
-				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $myrow['contact'] . 
+				list($shortname, $email) = getContributor($myrow['contact']);
+				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
 					($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
 					"," . str_replace(",", " ", $myrow['short_desc']) . 
-					(isset($myrow['description']) && $myrow['description'] ? " (" . str_replace(",", " ", $myrow['description']) . ")" : "") . 
+					(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+", " ", $myrow['description']) . ")" : "") . 
 					"\n";
 			}
 		}
@@ -344,7 +343,7 @@ function doIPQueryPage()
 			</p>
 
 			<ul>
-				<li><a href="?unformatted">View unformatted data</a></li>
+				<li><a href="?unformatted<?php print $attachmentsOnly ? "&amp;allcontribs" : "" ?>">View unformatted data</a></li>
 			</ul>
 			</ul>
 		</div>
