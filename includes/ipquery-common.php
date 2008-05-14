@@ -158,9 +158,9 @@ function printIPQuery($data, $isFormatted = true)
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></th>" .
-				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></th>" .
-				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></th>" . 
+				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></th>" .
+				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></th>" .
+				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></th>" . 
 				"<th>Size</th>" . 
 				"<th>Description</th></tr>\n";
 	}
@@ -177,7 +177,7 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
+					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "font-weight:bold" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
@@ -281,7 +281,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $showbuglist, $showobsolete, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $showbuglist, $showobsolete, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 
 	if ($showbuglist)
@@ -419,15 +419,15 @@ function doIPQueryPage()
 
 			<ul>
 <?php			if (!$showobsolete) { 
-					print '<li><a href="?showobsolete">Show Obsolete Patches</a></li>';
+					print '<li><a href="?showobsolete'  . ($component ? "&amp;component=" . $component : "") . '">Show Obsolete Patches</a></li>';
 				} 
 				else
 				{
-					print '<li><a href="?">Hide Obsolete Patches</a></li>';
+					print '<li><a href="?' .  ($component ? "&amp;component=" . $component : "") . '">Hide Obsolete Patches</a></li>';
 				}?>
 				<p>
-				<li><a href="?unformatted<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View unformatted data</a></li>
-				<li><a href="?showbuglist<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View bugs only</a></li>
+				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View unformatted data</a></li>
+				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View bugs only</a></li>
 			</ul>
 			</ul>
 		</div>
