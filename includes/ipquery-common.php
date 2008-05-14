@@ -44,12 +44,11 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 		$order = "profiles.login_name ASC";
 		$sql_info = $attachmentsOnly ? 
 					"SELECT 
-							attachments.filename,
 							attachments.description,
 							attachments.ispatch,
-							attachments.bug_id,
-							attachments.submitter_id,
 							LENGTH(attach_data.thedata) AS size,
+							bugs.bug_id,
+							profiles.userid,
 							bugs.short_desc,
 							components.name,
 							profiles.login_name
@@ -99,7 +98,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 	
 		if ($isFormatted)
 		{	
-			print "		<table>\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th><th>Size</th><th>Description</th></tr>\n";
+			print "		<table>\n			<tr><th>Component</th><th>Bug #</th><th>Contributor</th>" . ($attachmentsOnly ? "<th>Size</th>" : "") . "<th>Description</th></tr>\n";
 		}
 		$bgcol = "#FFFFEE";
 		while($myrow = mysql_fetch_assoc($rs)) {
@@ -112,13 +111,19 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
 						"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 						"<td><acronym title=\"" . $myrow['login_name'] . "\">$shortname</acronym></td>" .
-						"<td>" . $myrow['size'] . "</td>" .
-						"<td width=\"99%\"><small style=\"font-size:8px\">" . preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . "<br/>" . str_replace(",", " ", $myrow['description'])) . "</small></td>" .
+						($attachmentsOnly ? "<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" : "") .
+						"<td width=\"99%\"><small style=\"font-size:8px\">" . 
+							preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>" . str_replace(",", " ", $myrow['description']) : "")) . 
+						"</small></td>" .
 					  "</tr>\n";
 			}
 			else
 			{
-				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $myrow['login_name'] . "," . $myrow['size'] . "," . str_replace(",", " ", $myrow['short_desc']) . " (" . str_replace(",", " ", $myrow['description']) . ")\n";
+				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $myrow['login_name'] . 
+					($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
+					"," . str_replace(",", " ", $myrow['short_desc']) . 
+					(isset($myrow['description']) && $myrow['description'] ? " (" . str_replace(",", " ", $myrow['description']) . ")" : "") . 
+					"\n";
 			}
 		}
 		if ($isFormatted)
