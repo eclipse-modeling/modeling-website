@@ -50,6 +50,7 @@ function doIPQuery()
 					"SELECT 
 							attachments.description,
 							attachments.ispatch,
+							attachments.isobsolete,
 							LENGTH(attach_data.thedata) AS size,
 							bugs.bug_id,
 							profiles.userid,
@@ -174,9 +175,9 @@ function printIPQuery($data, $isFormatted = true)
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
-					"<td width=\"99%\"><small style=\"font-size:8px\">" . 
+					"<td width=\"99%\">" . "<small style=\"font-size:8px\">" . (isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "<strike>" : "") .  
 						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>&#160;&#160;&#149;&#160;" . str_replace(",", " ", $myrow['description']) : "")) . 
-					"</small></td>" .
+					(isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "</strike> (obsolete patch)" : "") . "</small></td>" .
 				  "</tr>\n";
 		}
 		else
@@ -185,7 +186,8 @@ function printIPQuery($data, $isFormatted = true)
 			print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
 				"," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . 
 				"," . str_replace(",", " ", $myrow['short_desc']) . 
-				(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") . 
+				(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") .
+				(isset($myrow['isobsolete']) && $myrow['isobsolete'] ? " [obsolete patch]" : "") . 
 				"\n";
 		}
 	}
