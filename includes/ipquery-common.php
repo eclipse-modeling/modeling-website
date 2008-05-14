@@ -6,6 +6,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 $bugClass="/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 if (is_file("$bugClass")) require_once "$bugClass";
 
+$showobsolete = isset($_GET["showobsolete"]);
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "bugs.bug_id";
@@ -18,7 +19,7 @@ if ($showbuglist)
  
 function doIPQuery()
 {
-	global $bugClass, $product_id, $sortBy, $component, $showbuglist;
+	global $bugClass, $product_id, $sortBy, $component, $showbuglist, $showobsolete;
 	$data = array();
 	if (!is_file($bugClass)) 
 	{
@@ -60,7 +61,8 @@ function doIPQuery()
 					FROM 
 							attachments, attach_data, bugs, components, keywords, profiles 
 					WHERE
-							attachments.ispatch = 1 AND 
+							attachments.ispatch = 1 AND
+							" . (!$showobsolete ? "attachments.isobsolete = 0 AND " : "") . "
 							attachments.bug_id = bugs.bug_id AND 
 							attachments.attach_id = attach_data.id AND 
 							components.id = bugs.component_id AND
@@ -151,15 +153,15 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
-	global $sortBy, $component;
+	global $sortBy, $component, $showobsolete;
 	$cnt = 0;
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . "'>Component</a></th>" .
-				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . "'>Bug #</a></th>" .
-				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . "'>Contributor</a></th>" . 
-				"<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . "'>Size</a></th>" . 
+				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></th>" .
+				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></th>" .
+				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></th>" . 
+				"<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . ($showobsolete ? "&amp;showobsolete" : "") . "'>Size</a></th>" . 
 				"<th>Description</th></tr>\n";
 	}
 	$bgcol = "#FFFFEE";
@@ -175,7 +177,7 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
+					"<td><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
@@ -279,7 +281,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $showbuglist, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $showbuglist, $showobsolete, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 
 	if ($showbuglist)
@@ -408,8 +410,15 @@ function doIPQueryPage()
 			</p>
 
 			<ul>
-				<li><a href="?unformatted">View unformatted data (txt)</a></li>
-				<li><a href="?showbuglist">View bugs only (csv)</a></li>
+<?php			if (!$showobsolete) { 
+					print '<li><a href="?showobsolete">Show Obsolete Patches</a></li>';
+				} 
+				else
+				{
+					print '<li><a href="?">Hide Obsolete Patches</a></li>';
+				}?>
+				<li><a href="?unformatted<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View unformatted data (txt)</a></li>
+				<li><a href="?showbuglist<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View bugs only (csv)</a></li>
 			</ul>
 			</ul>
 		</div>
