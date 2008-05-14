@@ -110,10 +110,10 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			if ($isFormatted)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-				$myrow['login_name'] = preg_replace("[contrib.*email=\"([^\"]+)\".*]", "$1", $myrow['login_name']);
+				$myrow['login_name'] = preg_replace("/.*[contrib.*(email|contributor)=\"([^\"]+)\".*].*/", "$2", $myrow['login_name']);
 				if (preg_match("/[/", $myrow['login_name']))
 				{
-					$myrow['login_name'] = preg_replace("[contrib.*contributor=\"([^\"]+)\".*]", "$1", $myrow['login_name']);
+					$myrow['login_name'] = "<i>unknown</i>";
 				}
 				$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
