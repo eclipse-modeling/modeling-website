@@ -87,7 +87,7 @@ function doIPQuery()
 							bugs.product_id = $product_id AND 
 							profiles.userid = longdescs.who AND 
 							longdescs.bug_id = bugs.bug_id AND 
-							longdescs.thetext like '%[contrib %]%'
+							longdescs.thetext like '%[contrib %email=%]%'
 					ORDER BY
 							$order");
 													
@@ -175,7 +175,7 @@ function printIPQuery($data, $isFormatted = true)
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
 					"<td width=\"99%\"><small style=\"font-size:8px\">" . 
-						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>" . str_replace(",", " ", $myrow['description']) : "")) . 
+						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>&#160;&#160;&#149;&#160;" . str_replace(",", " ", $myrow['description']) : "")) . 
 					"</small></td>" .
 				  "</tr>\n";
 		}
