@@ -68,14 +68,13 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							$order" : 
 					"SELECT 
 							longdescs.thetext as description,
-							LENGTH(longdescs.thetext) AS size,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
 							components.name,
 							profiles.login_name
 					FROM 
-							bugs, components, keywords, profiles 
+							longdescs, bugs, components, keywords, profiles 
 					WHERE
 							components.id = bugs.component_id AND 
 							bugs.bug_id = keywords.bug_id AND 
