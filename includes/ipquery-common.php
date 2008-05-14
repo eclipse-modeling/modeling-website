@@ -134,7 +134,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
 					($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
 					"," . str_replace(",", " ", $myrow['short_desc']) . 
-					(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+", " ", $myrow['description']) . ")" : "") . 
+					(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") . 
 					"\n";
 			}
 		}
