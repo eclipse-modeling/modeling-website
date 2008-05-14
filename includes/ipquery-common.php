@@ -67,6 +67,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 					ORDER BY
 							$order" : 
 					"SELECT 
+							longdescs.thetext as description,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
@@ -81,7 +82,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							bugs.product_id = $product_id AND
 							profiles.userid = longdescs.who AND
 							longdescs.bug_id = bugs.bug_id AND
-							longdescs.thetext like '%[contrib%]%'
+							longdescs.thetext like '%[contrib %]%'
 					ORDER BY
 							$order";
 													
@@ -109,6 +110,11 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			if ($isFormatted)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
+				$myrow['login_name'] = preg_replace("[contrib.*email=\"([^\"]+)\".*]", "$1", $myrow['login_name']);
+				if (preg_match("/[/", $myrow['login_name']))
+				{
+					$myrow['login_name'] = preg_replace("[contrib.*contributor=\"([^\"]+)\".*]", "$1", $myrow['login_name']);
+				}
 				$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
