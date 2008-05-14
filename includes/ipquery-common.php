@@ -1,12 +1,15 @@
 <?php # Script for retrieving IP log information.
 
-$isFormatted = !isset($_GET["unformatted"]);
-$bugClass="/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
+# for database schema, see: https://dev.eclipse.org/committers/committertools/dbo_bugs_schema.php
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+$bugClass="/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php";
 if (is_file("$bugClass")) require_once "$bugClass";
 
-function doIPQuery($product_id, $isFormatted = true)
+$isFormatted = !isset($_GET["unformatted"]);
+$attachmentsOnly = !isset($_GET["allcontribs"]);
+
+function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 {
 	global $bugClass;
 	$cnt = 0;
@@ -38,7 +41,9 @@ function doIPQuery($product_id, $isFormatted = true)
 
 		# TODO: provide a non-attachment based query -- just bugs for which there's a contributed keyword and a comment defining the commit size?
 		
-		$sql_info = "SELECT 
+		$order = "profiles.login_name ASC";
+		$sql_info = $attachmentsOnly ? 
+					"SELECT 
 							attachments.filename,
 							attachments.description,
 							attachments.ispatch,
@@ -61,7 +66,22 @@ function doIPQuery($product_id, $isFormatted = true)
 							profiles.userid = attachments.submitter_id AND 
 							bugs.product_id = $product_id
 					ORDER BY
-							profiles.login_name";
+							$order" : 
+					"SELECT 
+							bugs.bug_id,
+							profiles.userid,
+							bugs.short_desc,
+							components.name,
+							profiles.login_name
+					FROM 
+							bugs, components, keywords, profiles 
+					WHERE
+							components.id = bugs.component_id AND 
+							bugs.bug_id = keywords.bug_id AND 
+							keywords.keywordid = 22 AND 
+							bugs.product_id = $product_id
+					ORDER BY
+							$order";
 													
 		
 		$rs = mysql_query($sql_info, $dbh);
@@ -160,7 +180,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $attachmentsOnly, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 	
 	if (!$isFormatted)
@@ -173,7 +193,7 @@ function doIPQueryPage()
 		}
 		print "\n";
 		print "Developers (Section 2)\n";
-		doIPQuery($product_id, false);
+		doIPQuery($product_id, false, $attachmentsOnly);
 		print "\n";
 		if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 		{
@@ -209,7 +229,7 @@ function doIPQueryPage()
 		</div>
 		<div class="homeitem3col">
 			<a name="section2"></a><h3>Developers (Section 2)</h3>
-			<?php $cnt = doIPQuery($product_id, true); ?>
+			<?php $cnt = doIPQuery($product_id, true, $attachmentsOnly); ?>
 			<p align="right"><?php echo $cnt; ?> records found.</p> 
 			<p>
 	 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
