@@ -158,9 +158,9 @@ function printIPQuery($data, $isFormatted = true)
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></th>" .
-				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></th>" .
-				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></th>" . 
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></acronym></th>" . 
 				"<th>Size</th>" . 
 				"<th>Description</th></tr>\n";
 	}
@@ -177,7 +177,7 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "font-weight:bold" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></acronym></td>" .
+					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></acronym></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
