@@ -28,7 +28,7 @@ $dls = array(
 	),*/
 	"/atl" => array(
 		"ATL" => array(
-			"SDK (Runtime, Source)" => "SDK",
+			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests"
