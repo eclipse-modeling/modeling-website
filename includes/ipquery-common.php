@@ -8,7 +8,7 @@ if (is_file("$bugClass")) require_once "$bugClass";
 
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
-$sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "contact";
+$sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "bugs.bug_id";
 $component = isset($_GET["$component"]) ? urldecode($_GET["$component"]) : ""; 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
@@ -169,7 +169,7 @@ function printIPQuery($data, $isFormatted = true)
 		$cnt++;
 		if ($isFormatted)
 		{
-			if ($myrow['description'] != $prevDesc)
+			if ($myrow['short_desc'] != $prevDesc)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 			}
@@ -180,10 +180,11 @@ function printIPQuery($data, $isFormatted = true)
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
 					"<td width=\"99%\">" . "<small style=\"font-size:8px\">" . (isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "<strike>" : "") .  
-						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>&#160;&#160;&#149;&#160;" . str_replace(",", " ", $myrow['description']) : "")) . 
+						($myrow['short_desc'] != $prevDesc ? preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc'])) : "") . 
+						(isset($myrow['description']) && $myrow['description'] ? "<br/>&#160;&#160;&#149;&#160;" . preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['description'])) : "") . 
 					(isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "</strike> (obsolete patch)" : "") . "</small></td>" .
 				  "</tr>\n";
-			$prevDesc = $myrow['description'];
+			$prevDesc = $myrow['short_desc'];
 		}
 		else
 		{
