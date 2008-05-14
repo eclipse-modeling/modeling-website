@@ -10,15 +10,15 @@ $isFormatted = !isset($_GET["unformatted"]);
 $attachmentsOnly = !isset($_GET["allcontribs"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "contact";
+$showbuglist = isset($_GET["showbuglist"]);
  
-function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
+function doIPQuery()
 {
-	global $bugClass, $sortBy;
-	$cnt = 0;
+	global $bugClass, $product_id, $sortBy, $showbuglist, $attachmentsOnly;
+	$data = array();
 	if (!is_file($bugClass)) 
 	{
 		print "<li><b style='color:red'>Error: could not query Bugzilla database.</b></li>";
-		$cnt = -1;
 	}
 	else
 	{
@@ -92,62 +92,69 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 		$rs = mysql_query($sql_info, $dbh);
 		
 		if(mysql_errno($dbh) > 0) {
-			echo "There was an error processing this request: " . $sql_info . " : ";
-			
-			# For debugging purposes - don't display this stuff in a production page.
-			echo mysql_error($dbh);
-			
-			# Mysql disconnects automatically, but I like my disconnects to be explicit.
+			echo "<li><b style='color:red'>There was an error processing this request: " . $sql_info . " : " .  mysql_error($dbh) . "</b></li>\n";
 			$dbc->disconnect();
 			exit;
 		}
 	
-		if ($isFormatted)
-		{	
-			print "		<table>\n			<tr>" .
-					"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name'>Component</a></th>" .
-					"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id'>Bug #</a></th>" .
-					"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact'>Contributor</a></th>" . 
-					($attachmentsOnly ? "<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size'>Size</a></th>" : "") . 
-					"<th>Description</th></tr>\n";
+		while($myrow = mysql_fetch_assoc($rs)) 
+		{
+			$data[] = $myrow;
 		}
-		$bgcol = "#FFFFEE";
-		while($myrow = mysql_fetch_assoc($rs)) {
-			$cnt++;
-			if ($isFormatted)
-			{	
-				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-				list($shortname, $email) = getContributor($myrow['contact']);
-				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
-						"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
-						"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
-						($attachmentsOnly ? "<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" : "") .
-						"<td width=\"99%\"><small style=\"font-size:8px\">" . 
-							preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>" . str_replace(",", " ", $myrow['description']) : "")) . 
-						"</small></td>" .
-					  "</tr>\n";
-			}
-			else
-			{
-				list($shortname, $email) = getContributor($myrow['contact']);
-				print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
-					($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
-					"," . str_replace(",", " ", $myrow['short_desc']) . 
-					(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") . 
-					"\n";
-			}
-		}
-		if ($isFormatted)
-		{	
-			print "		</table>\n";
-		}
-		
+
 		$dbc->disconnect();
 		
 		$rs 		= null;
 		$dbh 		= null;
 		$dbc 		= null;
+	}
+	return $data;
+}
+
+function printIPQuery($data, $isFormatted = true)
+{
+	global $sortBy, $attachmentsOnly;
+	$cnt = 0;
+	if ($isFormatted)
+	{	
+		print "		<table>\n			<tr>" .
+				"<th><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name'>Component</a></th>" .
+				"<th><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id'>Bug #</a></th>" .
+				"<th><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact'>Contributor</a></th>" . 
+				($attachmentsOnly ? "<th><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size'>Size</a></th>" : "") . 
+				"<th>Description</th></tr>\n";
+	}
+	$bgcol = "#FFFFEE";
+	foreach ($data as $myrow)
+	{
+		$cnt++;
+		if ($isFormatted)
+		{	
+			$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
+			list($shortname, $email) = getContributor($myrow['contact']);
+			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
+					"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
+					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
+					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
+					($attachmentsOnly ? "<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" : "") .
+					"<td width=\"99%\"><small style=\"font-size:8px\">" . 
+						preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>" . str_replace(",", " ", $myrow['description']) : "")) . 
+					"</small></td>" .
+				  "</tr>\n";
+		}
+		else
+		{
+			list($shortname, $email) = getContributor($myrow['contact']);
+			print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
+				($attachmentsOnly ? "," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") : "") . 
+				"," . str_replace(",", " ", $myrow['short_desc']) . 
+				(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") . 
+				"\n";
+		}
+	}
+	if ($isFormatted)
+	{	
+		print "		</table>\n";
 	}
 	return $cnt;
 }
@@ -227,9 +234,20 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $attachmentsOnly, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $attachmentsOnly, $showbuglist, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
-	
+
+	if ($showbuglist)
+	{
+		header("Content-type: text/csv\n\n");
+		$bugs = array();
+		foreach (doIPQuery() as $myrow)
+		{
+			$bugs[] = $myrow['bug_id'];
+		}
+		print join(",", $bugs) . "\n";
+		exit;
+	}	
 	if (!$isFormatted)
 	{
 		header("Content-type: text/plain\n\n");
@@ -240,7 +258,7 @@ function doIPQueryPage()
 		}
 		print "\n";
 		print "Developers (Section 2)\n";
-		doIPQuery($product_id, false, $attachmentsOnly);
+		printIPQuery(doIPQuery(), false);
 		print "\n";
 		if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
 		{
@@ -276,7 +294,7 @@ function doIPQueryPage()
 		</div>
 		<div class="homeitem3col">
 			<a name="section2"></a><h3>Developers (Section 2)</h3>
-			<?php $cnt = doIPQuery($product_id, true, $attachmentsOnly); ?>
+			<?php $cnt = printIPQuery(doIPQuery(), true); ?>
 			<p align="right"><?php echo $cnt; ?> records found.</p> 
 			<p>
 	 		<?php if (isset($extra_IP) && is_array($extra_IP) && sizeof($extra_IP) > 0)
