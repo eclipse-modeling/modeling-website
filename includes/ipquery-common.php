@@ -421,6 +421,7 @@ function doIPQueryPage()
 				{
 					print '<li><a href="?">Hide Obsolete Patches</a></li>';
 				}?>
+				<p>
 				<li><a href="?unformatted<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View unformatted data</a></li>
 				<li><a href="?showbuglist<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View bugs only</a></li>
 			</ul>
