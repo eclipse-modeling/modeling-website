@@ -67,17 +67,16 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 					ORDER BY
 							$order" : 
 					"SELECT 
-							longdescs.thetext as description,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
 							components.name,
-							profiles.login_name
+							longdescs.thetext as login_name
 					FROM 
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
 							components.id = bugs.component_id AND 
-							bugs.bug_id = 147594 AND bugs.bug_id = keywords.bug_id AND 
+							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							bugs.product_id = $product_id AND
 							profiles.userid = longdescs.who AND
