@@ -72,7 +72,7 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 							profiles.userid,
 							bugs.short_desc,
 							components.name,
-							lngdescs.who
+							profiles.login_name
 					FROM 
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
