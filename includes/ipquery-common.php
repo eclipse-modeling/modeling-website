@@ -290,10 +290,13 @@ function doIPQueryPage()
 		$bugs = array();
 		foreach (doIPQuery() as $myrow)
 		{
-			$bugs[] = $myrow['bug_id'];
+			$bugs[] = array($myrow['bug_id'], $myrow['short_desc']);
 		}
-		array_unique($bugs);
-		print join(",", $bugs) . "\n";
+		$bugs = array_unique($bugs);
+		foreach ($bugs as $bug)
+		{
+			print $bug[0] . "\t" . $bug[1] . "\n";
+		}
 		exit;
 	}	
 	if (!$isFormatted)
@@ -418,8 +421,8 @@ function doIPQueryPage()
 				{
 					print '<li><a href="?">Hide Obsolete Patches</a></li>';
 				}?>
-				<li><a href="?unformatted<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View unformatted data (txt)</a></li>
-				<li><a href="?showbuglist<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View bugs only (csv)</a></li>
+				<li><a href="?unformatted<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View unformatted data</a></li>
+				<li><a href="?showbuglist<?php print $showobsolete ? "&amp;showobsolete" : ""; ?>">View bugs only</a></li>
 			</ul>
 			</ul>
 		</div>
