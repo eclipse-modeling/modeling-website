@@ -110,20 +110,13 @@ function doIPQuery($product_id, $isFormatted = true, $attachmentsOnly = true)
 			if ($isFormatted)
 			{	
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-				$myrow['login_name'] = preg_replace("/.*[contrib.*email=\"([^\"]+)\".*].*/", "$1", $myrow['login_name']);
-				if (preg_match("/[/", $myrow['login_name']))
-				{
-					$myrow['login_name'] = preg_replace("/.*[contrib.*contributor=\"([^\"]+)\".*].*/", "$1", $myrow['login_name']);
-				}
-				if (preg_match("/[/", $myrow['login_name']))
-				{
-					$myrow['login_name'] = "?@?.?";
-				}
-				$shortname = explode("@", $myrow['login_name']); $shortname = $shortname[0];
+				
+				list($shortname, $email) = getContributor($myrow['login_name']);
+				
 				print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 						"<td><small style=\"font-size:8px\">" . $myrow['name'] . "</small></td>" .
 						"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
-						"<td><acronym title=\"" . $myrow['login_name'] . "\">$shortname</acronym></td>" .
+						"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 						($attachmentsOnly ? "<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" : "") .
 						"<td width=\"99%\"><small style=\"font-size:8px\">" . 
 							preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc']) . (isset($myrow['description']) && $myrow['description'] ? "<br/>" . str_replace(",", " ", $myrow['description']) : "")) . 
@@ -158,6 +151,33 @@ function doBugLink($id)
 	return "<a href=\"/modeling/searchcvs.php?q=" . $id . "\"><img src=\"/modeling/images/delta.gif\" border=\"0\" alt=\"Search CVS for bug " . $id . "\"></a>&#160;" .  
 		   "<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=" . $id . "\">" . $id . "</a>";
 }
+
+function getContributor($in)
+{
+	if (strpos($in, "@") !== false && strpos($in, "[") === false)
+	{
+		$email = $in;
+		print "Got \$email = $email<br/>";
+	}
+	else
+	{
+		$chunks = explode(" ", implode(" ", $in));
+		foreach ($chunks as $chunk)
+		{
+			if (strpos($chunk, "email=") !== false)
+			{
+				$email = explode("=", $chunk); $email = $email[1];
+				$email = preg_replace("#[/\"\]]+#","",$email); # trim out "/]
+				print "Got \$email = $email<br/>";
+				break;
+			}
+		}
+	}
+	$shortname = explode("@", $email); $shortname = $shortname[0];
+	print "Got \$shortname = $shortname<br/>";
+	return array($shortname, $in);
+}
+
 function doProductIDQuery()
 {
 	# Connect to database
