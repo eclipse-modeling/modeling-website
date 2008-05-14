@@ -286,13 +286,16 @@ function doIPQueryPage()
 
 	if ($showbuglist)
 	{
-		header("Content-type: text/csv\n\n");
+		header("Content-type: text/plain\n\n");
 		$bugs = array();
 		foreach (doIPQuery() as $myrow)
 		{
-			$bugs[] = array($myrow['bug_id'], $myrow['short_desc']);
+			$pair = array($myrow['bug_id'], $myrow['short_desc']);
+			if (!in_array($pair, $bugs))
+			{
+				$bugs[] = $pair;
+			}
 		}
-		$bugs = array_unique($bugs);
 		foreach ($bugs as $bug)
 		{
 			print $bug[0] . "\t" . $bug[1] . "\n";
