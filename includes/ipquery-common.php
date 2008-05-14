@@ -329,7 +329,7 @@ function doIPQueryPage()
 			</ul>
 		</div>
 		<div class="sideitem">
-			<h6>Data</h6>
+			<a name="Note"></a><h6>Data</h6>
 			
 			<p>Note that this data is only as accurate as the 
 			<a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines#Committing_a_Contribution">process used to collect it</a>.
