@@ -459,6 +459,6 @@ function pretty_print($in, $split, $num)
 		}
 		$out .= $bits[$i];
 	}
-	return '<acronym title="$in">' . $out . '</acronym>';
+	return "<acronym title=\"$in\">$out</acronym>";
 }
 ?>
