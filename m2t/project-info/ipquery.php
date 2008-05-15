@@ -1,5 +1,5 @@
 <?php
-$product_id = 8; # EMF 
+$product_id = 87; # M2T
 $committers = array(
 	"pelder",
 	"jcheuoua",
