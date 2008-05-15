@@ -391,14 +391,7 @@ function doIPQueryPage()
 			</ul>
 		</div>
 		<div class="sideitem">
-			<a name="Note"></a><h6>Data</h6>
-			
-			<p>Note that this data is only as accurate as the 
-			<a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines#Committing_a_Contribution">process used to collect it</a>.
-			 To appear in this list, a contribution must: (1) include a patch, (2) attached to a bug, (3) bearing the <i>contributed</i> keyword. If you see an omission and cannot correct it yourself,  
-			 <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=modeling&component=Website">please report it</a>.
-			</p>
-
+			<a name="Note"></a><h6>Data Filters</h6>
 			<ul>
 <?php			if (!$showobsolete) { 
 					print '<li><a href="?showobsolete'  . ($component ? "&amp;component=" . $component : "") . '">Show Obsolete Patches</a></li>';
@@ -411,7 +404,19 @@ function doIPQueryPage()
 				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View unformatted data</a></li>
 				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View bugs only</a></li>
 			</ul>
-			</ul>
+		</div>
+		<div class="sideitem">
+			<a name="Note"></a><h6>Data Inclusion</h6>
+			
+			<p>Note that this data is only as accurate as the 
+			<a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines#Committing_a_Contribution">process used to collect it</a>.
+			 To appear in this list, a contribution must: (1) have a related bug, (2) include a <i>patch</i> type attachment, and (3) bear the <i>contributed</i> keyword. 
+			 
+			 <p>For older bugs that do not follow the above convention, you can also tag a contribution by entering a <i>[contrib email="..."/]</i> comment in a bug, or add some <i>Additional IP</i> <a href="http://www.eclipse.org/modeling/gmf/project-info/ipquery.php#section2a">like this</a>.
+
+			 <p>If you see an omission and cannot correct it yourself,  
+			 <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=modeling&component=Website">please report it</a>.
+			</p>
 		</div>
 	</div>
 	
