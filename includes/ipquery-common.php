@@ -9,7 +9,7 @@ if (is_file("$bugClass")) require_once "$bugClass";
 $showobsolete = isset($_GET["showobsolete"]);
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
-$sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact#", $_GET["sortBy"], $m) ? $m[0] : "bugid";
+$sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "bugid";
 $component = isset($_GET["component"]) ? preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"])) : ""; 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
@@ -132,7 +132,7 @@ function printIPQuery($data, $isFormatted = true)
 				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "component" ? " style='text-decoration:underline'" : "") . " href='?sortBy=component" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
 				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugid" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugid" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
 				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></acronym></th>" . 
-				"<th>Size</th>" . 
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Size</a></acronym></th>" . 
 				"<th>Description</th></tr>\n";
 	}
 	$bgcol = "#FFFFEE";
