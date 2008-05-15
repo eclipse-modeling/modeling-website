@@ -9,12 +9,12 @@ if (is_file("$bugClass")) require_once "$bugClass";
 $showobsolete = isset($_GET["showobsolete"]);
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
-$sortBy = isset($_GET["sortBy"]) && preg_match("#components.name|bugs.bug_id|contact#", $_GET["sortBy"], $m) ? $m[0] : "bugs.bug_id";
+$sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact#", $_GET["sortBy"], $m) ? $m[0] : "bugid";
 $component = isset($_GET["component"]) ? preg_replace("#[%'\";]+#", "", urldecode($_GET["component"])) : ""; 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
 {
-	$sortBy = "bugs.bug_id";
+	$sortBy = "bugid";
 }
  
 function doIPQuery()
@@ -53,10 +53,10 @@ function doIPQuery()
 							attachments.ispatch,
 							attachments.isobsolete,
 							LENGTH(attach_data.thedata) AS size,
-							bugs.bug_id,
+							bugs.bug_id AS bugid,
 							profiles.userid,
 							bugs.short_desc,
-							components.name,
+							components.name as component,
 							profiles.login_name AS contact
 					FROM 
 							attachments, attach_data, bugs, components, keywords, profiles 
@@ -77,10 +77,10 @@ function doIPQuery()
 							1 AS ispatch,
 							0 AS isobsolete,
 							0 AS size,
-							bugs.bug_id,
+							bugs.bug_id AS bugid,
 							profiles.userid,
 							bugs.short_desc,
-							components.name,
+							components.name AS component,
 							longdescs.thetext AS contact
 					FROM 
 							longdescs, bugs, components, keywords, profiles 
@@ -129,8 +129,8 @@ function printIPQuery($data, $isFormatted = true)
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "components.name" ? " style='text-decoration:underline'" : "") . " href='?sortBy=components.name" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugs.bug_id" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugs.bug_id" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "component" ? " style='text-decoration:underline'" : "") . " href='?sortBy=component" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugid" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugid" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
 				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></acronym></th>" . 
 				"<th>Size</th>" . 
 				"<th>Description</th></tr>\n";
@@ -148,8 +148,8 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></acronym></td>" .
-					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
+					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['component'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['component'] ? "" : "&amp;component=" . urlencode($myrow['component'])) . "\">" . $myrow['component'] . "</a></acronym></td>" .
+					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? pretty_size($myrow['size']) : "") . "</td>" .
 					"<td width=\"99%\">" . "<small style=\"font-size:8px\">" .  
@@ -162,7 +162,7 @@ function printIPQuery($data, $isFormatted = true)
 		else
 		{
 			list($shortname, $email) = getContributor($myrow['contact']);
-			print $myrow['name'] . "," . $myrow['bug_id'] . "," . $email . 
+			print $myrow['component'] . "," . $myrow['bugid'] . "," . $email . 
 				"," . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . 
 				"," . str_replace(",", " ", $myrow['short_desc']) . 
 				(isset($myrow['description']) && $myrow['description'] ? " (" . preg_replace("/[,\n]+/", " ", $myrow['description']) . ")" : "") .
@@ -240,7 +240,7 @@ function doProductIDQuery()
 	}
 
 	while($myrow = mysql_fetch_assoc($rs)) {
-		print $myrow['id'] . ", " . $myrow['name'] . "\n";
+		print $myrow['id'] . ", " . $myrow['component'] . "\n";
 	}
 	
 	$dbc->disconnect();
@@ -261,7 +261,7 @@ function doIPQueryPage()
 		$bugs = array();
 		foreach (doIPQuery() as $myrow)
 		{
-			$pair = array($myrow['bug_id'], $myrow['short_desc']);
+			$pair = array($myrow['bugid'], $myrow['short_desc']);
 			if (!in_array($pair, $bugs))
 			{
 				$bugs[] = $pair;
