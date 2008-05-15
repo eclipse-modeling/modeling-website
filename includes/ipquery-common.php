@@ -48,7 +48,7 @@ function doIPQuery()
 
 		$order = "$sortBy ASC";
 		$queries = array( 
-					"SELECT 
+					"SELECT * FROM (SELECT 
 							attachments.description,
 							attachments.ispatch,
 							attachments.isobsolete,
@@ -70,10 +70,8 @@ function doIPQuery()
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							profiles.userid = attachments.submitter_id AND 
-							bugs.product_id = $product_id
-					ORDER BY
-							$order",  
-					"SELECT 
+							bugs.product_id = $product_id), 
+					(SELECT 
 							longdescs.thetext AS description,
 							bugs.bug_id,
 							profiles.userid,
@@ -90,7 +88,7 @@ function doIPQuery()
 							bugs.product_id = $product_id AND 
 							profiles.userid = longdescs.who AND 
 							longdescs.bug_id = bugs.bug_id AND 
-							longdescs.thetext like '%[contrib %email=%]%'
+							longdescs.thetext like '%[contrib %email=%]%')
 					ORDER BY
 							$order");
 													
@@ -108,39 +106,6 @@ function doIPQuery()
 			{
 				$data[] = $myrow;
 			}
-			
-			/*while($myrow = mysql_fetch_assoc($rs)) 
-			{
-				$contribnew = getContributor($myrow['contact']);
-				if (!isset($data["b" . $myrow['bug_id'] . "_" . $contribnew]))
-				{
-					$data["b" . $myrow['bug_id'] . "_" . $contribnew] = $myrow;
-				}
-				else
-				{
-					# split existing into two rows
-					$myprv = $data["b" . $myrow['bug_id']];
-					$contribprv = getContributor($myprv['contact']);
-					
-					$data["b" . $myrow['bug_id'] . "_" . $contribprv] = array(
-						"description" => $myprv['description'] . "\n" . $myrow['description'], 
-						"size" => $myprv['size'],
-						"bug_id" => $myprv['bug_id'],
-						"short_desc" => $myprv['short_desc'],
-						"name" => $myprv['name'],
-						"contact" => $myprv['contact']
-					);
-					$data["b" . $myrow['bug_id'] . "_" . $contribnew] = array(
-						"description" => $myprv['description'] . "\n" . $myrow['description'], 
-						"size" => $myprv['size'],
-						"bug_id" => $myprv['bug_id'],
-						"short_desc" => $myprv['short_desc'],
-						"name" => $myprv['name'],
-						"contact" => $myrow['contact']
-					);
-					unset($data["b" . $myrow['bug_id']]);
-				}
-			}*/
 		}
 		$dbc->disconnect();
 		
@@ -153,6 +118,8 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
+	
+
 	global $sortBy, $component, $showobsolete;
 	$cnt = 0;
 	if ($isFormatted)
@@ -180,7 +147,7 @@ function printIPQuery($data, $isFormatted = true)
 					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['name'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['name'] ? "" : "&amp;component=" . urlencode($myrow['name'])) . "\">" . $myrow['name'] . "</a></acronym></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bug_id']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
-					"<td>" . (isset($myrow['size']) && $myrow['size'] ? $myrow['size'] : "") . "</td>" .
+					"<td>" . (isset($myrow['size']) && $myrow['size'] ? pretty_size($myrow['size']) : "") . "</td>" .
 					"<td width=\"99%\">" . "<small style=\"font-size:8px\">" .  
 						($myrow['short_desc'] != $prevDesc ? preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['short_desc'])) : "") . 
 						(isset($myrow['description']) && $myrow['description'] ? ($myrow['short_desc'] != $prevDesc ? "<br/>" : "") . "&#160;&#160;&#149;&#160;" . (isset($myrow['isobsolete']) && $myrow['isobsolete'] ? "<strike>" : "") . preg_replace("#(\d{5,6})#", doBugLink("$1"), str_replace(",", " ", $myrow['description'])) : "") . 
@@ -444,4 +411,24 @@ function doIPQueryPage()
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 }
+
+function pretty_size($bytes)
+{
+	$sufs= array (
+		"B",
+		"K",
+		"M",
+		"G",
+		"T",
+		"P"
+	); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
+	$suf= 0;
+	while ($bytes >= 1000)
+	{
+		$bytes /= 1024;
+		$suf++;
+	}
+	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
+}
+
 ?>
