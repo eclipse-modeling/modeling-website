@@ -48,7 +48,7 @@ function doIPQuery()
 
 		$order = "$sortBy ASC";
 		$queries = array( 
-					"SELECT * FROM (SELECT 
+					"SELECT 
 							attachments.description,
 							attachments.ispatch,
 							attachments.isobsolete,
@@ -70,8 +70,9 @@ function doIPQuery()
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							profiles.userid = attachments.submitter_id AND 
-							bugs.product_id = $product_id) as a, 
-					(SELECT 
+							bugs.product_id = $product_id
+					UNION ALL  
+					SELECT 
 							longdescs.thetext AS description,
 							bugs.bug_id,
 							profiles.userid,
@@ -88,7 +89,7 @@ function doIPQuery()
 							bugs.product_id = $product_id AND 
 							profiles.userid = longdescs.who AND 
 							longdescs.bug_id = bugs.bug_id AND 
-							longdescs.thetext like '%[contrib %email=%]%') AS b
+							longdescs.thetext like '%[contrib %email=%]%'
 					ORDER BY
 							$order");
 													
