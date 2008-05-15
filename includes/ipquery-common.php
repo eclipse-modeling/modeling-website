@@ -451,7 +451,7 @@ function pretty_print($in, $split, $num)
 {
 	$bits = explode($split, $in);
 	$out = ""; 
-	for ($i=sizeof($bits) - 1 - $num; $i<sizeof($bits) - 1; $i++)
+	for ($i=sizeof($bits) - $num; $i<sizeof($bits); $i++)
 	{
 		if ($out)
 		{
