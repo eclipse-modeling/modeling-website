@@ -74,6 +74,9 @@ function doIPQuery()
 					UNION  
 					(SELECT 
 							longdescs.thetext AS description,
+							1 AS ispatch,
+							0 AS isobsolete,
+							0 AS size,
 							bugs.bug_id,
 							profiles.userid,
 							bugs.short_desc,
