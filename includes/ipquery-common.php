@@ -341,10 +341,21 @@ function doIPQueryPage()
 			<ul>
 			<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 			{
+				print "<table>\n" .
+						"<tr><th>Name</th><th>Location</th><th>License</th><th>Usage</th></tr>\n";
+				$bgcol = "#FFFFEE";
 				foreach ($third_party as $tp)
 				{
-					print "<li>$tp</li>\n";
+					$bits = explode(",", $tp);
+					$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
+					print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
+						"<td>" . $bits[0] . "</td>" .
+						"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
+						"<td>" . $bits[2] . "</td>" .
+						"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
+						"</tr>\n";
 				}
+				print "</table>";
 			} 
 			else
 			{
@@ -435,4 +446,19 @@ function pretty_size($bytes)
 	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
 }
 
+# return a string condensed down the the last $num pieces, split by $split, and wrapped with its full value as an <acronym>
+function pretty_print($in, $split, $num)
+{
+	$bits = explode($split, $in);
+	$out = ""; 
+	for ($i=sizeof($bits) - 1 - $num; $i<sizeof($bits) - 1; $i++)
+	{
+		if ($out)
+		{
+			$out .= $split;
+		}
+		$out .= $bits[$i];
+	}
+	return '<acronym title="$in">' . $out . '</acronym>';
+}
 ?>
