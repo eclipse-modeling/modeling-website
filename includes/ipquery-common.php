@@ -252,7 +252,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $showbuglist, $showobsolete, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $isFormatted, $showbuglist, $showobsolete, $sortBy, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 
 	if ($showbuglist)
@@ -394,15 +394,15 @@ function doIPQueryPage()
 			<a name="Note"></a><h6>Data Filters</h6>
 			<ul>
 <?php			if (!$showobsolete) { 
-					print '<li><a href="?showobsolete'  . ($component ? "&amp;component=" . $component : "") . '">Show Obsolete Patches</a></li>';
+					print '<li><a href="?showobsolete'  . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy . '">Show Obsolete Patches</a></li>';
 				} 
 				else
 				{
-					print '<li><a href="?' .  ($component ? "&amp;component=" . $component : "") . '">Hide Obsolete Patches</a></li>';
+					print '<li><a href="?' .  ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy . '">Hide Obsolete Patches</a></li>';
 				}?>
 				<p>
-				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View unformatted data</a></li>
-				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : ""); ?>">View bugs only</a></li>
+				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy; ?>">View unformatted data</a></li>
+				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy; ?>">View bugs only</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
