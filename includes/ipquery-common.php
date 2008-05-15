@@ -70,7 +70,7 @@ function doIPQuery()
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							profiles.userid = attachments.submitter_id AND 
-							bugs.product_id = $product_id), 
+							bugs.product_id = $product_id) as a, 
 					(SELECT 
 							longdescs.thetext AS description,
 							bugs.bug_id,
@@ -88,7 +88,7 @@ function doIPQuery()
 							bugs.product_id = $product_id AND 
 							profiles.userid = longdescs.who AND 
 							longdescs.bug_id = bugs.bug_id AND 
-							longdescs.thetext like '%[contrib %email=%]%')
+							longdescs.thetext like '%[contrib %email=%]%') AS b
 					ORDER BY
 							$order");
 													
