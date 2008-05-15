@@ -240,7 +240,7 @@ function doProductIDQuery()
 	}
 
 	while($myrow = mysql_fetch_assoc($rs)) {
-		print $myrow['id'] . ", " . $myrow['component'] . "\n";
+		print $myrow['id'] . ", " . $myrow['name'] . "\n";
 	}
 	
 	$dbc->disconnect();
