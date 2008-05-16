@@ -12,7 +12,13 @@ $options = array (
 		"1.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50"
 	),
 
-	"Mapfile_Rule_Default" => 1, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
+	/* define a regular expression to be used to collect the most recent 
+	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
+	 * and /home/www-data/build/requests/dependencies.urls.txt 
+	 * */ 	
+	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|[ISR]200.*/emf-sdo-xsd-SDK-|mdt-uml2-SDK|[ISR]200.*/mdt-ocl-.*SDK-|[ISR]200.*",
+
+	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
 	"EmailDefault" => "radek.dvorak@borland.com", // prefil email contact box with comma-sep'd list
 
