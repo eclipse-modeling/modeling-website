@@ -6,29 +6,42 @@ ob_start();
 ?>
 <div id="midcolumn">
 
-<h1>IP Log</h1>
-<p>Overall IP log, listing all committers and contributors:</p>
-<ul>
-	<li><?php print $projName; ?> <a href="eclipse-project-ip-log.csv">IP Log</a></li>
-</ul>
+	<div class="homeitem">
+		<h3>Generated IP Log</h3>
+		<p>New for Ganymede, the IP log can now be generated from Bugzilla. There are two version available:</p>
+		
+		<ul>
+			<li><a href="http://www.eclipse.org/<?php print $PR; ?>/project-info/ipquery.php">Modeling IP Log</a> (note <a href="http://www.eclipse.org/<?php print $PR; ?>/project-info/ipquery.php#Note">Data Inclusion limitations</a>)</li>
+			<li><a href="http://www.eclipse.org/projects/ip_log.php?projectid=<?php print str_replace("/",".",$PR); ?>">Foundation IP Log</a> (under development -- see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=220977">bug 220977</a>)</li>
+		</ul>			
+		
+	</div>
+	
+	<div class="homeitem">
+		<h3>Static IP Log(s)</h3>
+		<p>Overall IP log, listing all committers and contributors. <b style='color:red'>These are most likely out of date.</b></p>
+		<ul>
+			<li><?php print $projName; ?> <a href="eclipse-project-ip-log.csv">IP Log</a></li>
+		</ul>
+		
+		<?php 
+		$out = "";
+		$out .= " 
+		<p>Individual per-component IP Logs:</p>
+		
+		<ul>";
+		$gotOne=false;
+		foreach ($projects as $name => $prefix){
+			$out .= '<li>' . $name . (is_file($prefix.'/eclipse-project-ip-log.csv') ? ' <a href="'.$prefix.'/eclipse-project-ip-log.csv">IP Log</a>' : ': <i>n/a</i>') . '</li>';
+			$gotOne = $gotOne || is_file($prefix.'/eclipse-project-ip-log.csv') ? true : false;	
+		}
+		$out .= "</ul>";
+		if ($gotOne)
+		{
+			print $out;
+		}
 
-<?php 
-$out = "";
-$out .= " 
-<p>Individual per-component IP Logs:</p>
-
-<ul>";
-$gotOne=false;
-foreach ($projects as $name => $prefix){
-	$out .= '<li>' . $name . (is_file($prefix.'/eclipse-project-ip-log.csv') ? ' <a href="'.$prefix.'/eclipse-project-ip-log.csv">IP Log</a>' : ': <i>n/a</i>') . '</li>';
-	$gotOne = $gotOne || is_file($prefix.'/eclipse-project-ip-log.csv') ? true : false;	
-}
-$out .= "</ul>";
-if ($gotOne)
-{
-	print $out;
-}
-
+print "</div>\n";
 print "</div>\n";
 
 $html = ob_get_contents();
