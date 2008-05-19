@@ -61,13 +61,13 @@ else
 	print "<h1>New " . strtoupper($topProj) . " Component Build: ". $componentName . "</h1>\n";
 }
 
+if (!isset ($_POST["process"]) || !$_POST["process"] == "build") {
+	print showBuildsInProgress(); 
+} 
+
 if (is_array($projects) && sizeof($projects) > 1)
 {
 	print doSelectProject($projectArray, $proj, $nomenclature, "homeitem3col", $showAll, $showMax, $sortBy);
-}
-
-if (!isset ($_POST["process"]) || !$_POST["process"] == "build") {
-	print showBuildsInProgress(); 
 } ?>
 <div class="homeitem3col">
 <h3>Run A Build</h3>
@@ -1103,14 +1103,14 @@ function showBuildsInProgress()
 	}
 	if ($inprogress) { 
 		print '	
-	<div style="padding-left: 20px; padding-right: 25px"><div style="border:red 2px dashed; padding: 10px">
+	<div class="homeitem3col" style="border:red 2px dashed; padding: 10px; padding-right: 0px">
 	The following builds are currently in progress on this server.
 	<ul>
 '; 
 		foreach ($build_processes as $bp) { 
 			if (trim($bp))
 			{
-				print "<li>"; 
+				print "<li style='border:0px'>"; 
 				$alltokens = tokenize($bp); # function defined in ../includes/scripts.php # print_r($alltokens);
 				$tokens = array("proj", "sub", "version", "branch", "buildType", "buildTimestamp", "basebuilderBranch");
 				foreach ($tokens as $t)
@@ -1125,7 +1125,7 @@ function showBuildsInProgress()
 		}
 		print '
 	</ul>
-	</div></div>
+	</div>
 ';
 	}	
 }
