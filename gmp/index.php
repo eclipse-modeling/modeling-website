@@ -18,7 +18,7 @@ ob_start();
 				exemplary tools for select domain models which illustrate its capabilities. 
 				</td>
 				 <td align="right">
-					<img src="images/logo_banner.png" />
+					<img src="http://www.eclipse.org/modeling/gmf/images/logo_banner.png" />
 				</td>
 			</tr>
 		</table><hr/>
@@ -55,7 +55,7 @@ ob_start();
  				<td colspan="2"><p>Well, if you've taken a look at the <a target="_blank" href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">Getting Started with UML2</a> article and had trouble visualizing the model, GMF can help. On the left is the generated environment for working with a domain model (any EMF-based model), while on the right is a view of a graphical editor generated with GMF. To see more of what you can do with GMF, click the thumbnails below or <a href="./gallery/index.php">this link</a> to visit our gallery.</p>
  				</td>
  			</tr>
- 			<tr><td colspan="2" align="center"><a href="./gallery/index.php"><img src="./images/gallery_thumb.png"/></a></td></tr>
+ 			<tr><td colspan="2" align="center"><a href="./gallery/index.php"><img src="http://www.eclipse.org/modeling/gmf/images/gallery_thumb.png"/></a></td></tr>
  			<tr><td align="center"><b>Before GMF</b></td><td align="center"><b>After GMF</b></td></tr>
  			</table>
 		</div>
@@ -81,14 +81,14 @@ ob_start();
 		
 	<div class="sideitem">
 		<h6>News</h6>
-		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/modeling/gmf/news/news.xml")); ?>
+		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "http://www.eclipse.org/modeling/gmf/news/news.xml")); ?>
 		<ul>
-			<li><a href="/modeling/gmf/news-whatsnew.php">Older news</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmf/news-whatsnew.php">Older news</a></li>
 		</ul>
 	</div>
 
 	<div class="sideitem">
-		<h6><a href="/modeling/gmf/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
+		<h6><a href="/modeling/gmf/feeds/"><img style="float:right" alt="Build Feeds" src="http://www.eclipse.org/modeling/images/rss-atom10.gif"/></a>
 		<?php 
 		$tmp = array_flip($projects);
 		print ($tmp && isset($tmp[$proj]) && $tmp[$proj] ? $tmp[$proj] . " " : "");
@@ -96,7 +96,7 @@ ob_start();
 		Build News</h6>
 		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
 		<ul>
-			<li><a href="/modeling/gmf/news-whatsnew.php#build">Other build news</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmf/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
 	</div>
 
@@ -110,6 +110,6 @@ $pageTitle = "Graphical Modeling Framework";
 $pageKeywords = "eclipse,project,graphical,modeling,model-driven";
 $pageAuthor = "Richard C. Gronback, Nick Boldt";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://www.eclipse.rog/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
