@@ -1125,9 +1125,9 @@ function showBuildsInProgress()
 					$url = preg_replace("#.+/build#", "", $alltokens["buildDir"]);
 					print " :: <a href=\"" . $url . "\">Build Artifacts</a>";
 				}
-				else
+				else if (isset($alltokens["testDir"]))
 				{
-					print "$bp";
+					print "Test in progress: " . $alltokens["testDir"];
 				}
 				print "</li>";
 				unset($alltokens);
