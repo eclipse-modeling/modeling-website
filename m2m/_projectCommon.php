@@ -49,7 +49,7 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("qvtoml","qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("atl"); //components without newsgroup
 $nomailinglist = array("atl"); //components without mailinglist
 $incubating = array("qvtoml", "qvtr"); // components that are incubating
