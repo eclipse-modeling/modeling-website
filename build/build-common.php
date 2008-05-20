@@ -1115,7 +1115,7 @@ function showBuildsInProgress()
 				$tokens = array("proj", "sub", "version", "branch", "buildType", "buildTimestamp", "basebuilderBranch");
 				foreach ($tokens as $t)
 				{
-					if (in_array($t, $alltokens))
+					if (isset($alltokens[$t]))
 					{
 						print " <acronym title=\"$t\">" . $alltokens[$t] . "</acronym>";
 					}				
