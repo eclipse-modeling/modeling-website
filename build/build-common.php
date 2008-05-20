@@ -1092,7 +1092,8 @@ function getBranches($options)
 
 function showBuildsInProgress() 
 {
-	$build_processes = explode("\n", exec("ps ax --forest | grep -v grep | grep /start.sh")); 
+	$build_processes = array();
+	exec("ps ax --forest | grep -v grep | grep /start.sh", $build_processes); 
 	$inprogress = false;
 	foreach ($build_processes as $bp) { 
 		if (trim($bp))
