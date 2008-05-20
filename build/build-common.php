@@ -1120,8 +1120,15 @@ function showBuildsInProgress()
 						print " <acronym title=\"$t\">" . $alltokens[$t] . "</acronym>";
 					}				
 				}
-				$url = preg_replace("#.+/build#", "", $alltokens["buildDir"]);
-				print " :: <a href=\"" . $url . "\">Build Artifacts</a>";
+				if (isset($alltokens["buildDir"]))
+				{
+					$url = preg_replace("#.+/build#", "", $alltokens["buildDir"]);
+					print " :: <a href=\"" . $url . "\">Build Artifacts</a>";
+				}
+				else
+				{
+					print "$bp";
+				}
 				print "</li>";
 				unset($alltokens);
 			} 
