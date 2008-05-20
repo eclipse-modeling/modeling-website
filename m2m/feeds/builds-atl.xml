@@ -4,11 +4,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>atl Builds</title>
   <link href="http://download.eclipse.org/modeling/m2m/feeds/builds-atl.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-05-15T12:38:46Z</updated>
+  <updated>2008-05-20T09:03:26Z</updated>
   <author>
     <name>atl Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2m/feeds/builds-atl.xml</id>
+  <entry>
+    <title>[announce] atl 2.0.0RC1 (S200805200346) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2m/downloads/?project=atl&amp;showAll=1&amp;hlbuild=S200805200346#S200805200346"/>
+    <id>http://www.eclipse.org/modeling/m2m/downloads/?project=atl&amp;showAll=1&amp;hlbuild=S200805200346#S200805200346</id>
+    <updated>2008-05-20T09:03:26Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805200346" href="http://www.eclipse.org/modeling/m2m/downloads/?project=atl&amp;showAll=1&amp;hlbuild=S200805200346#S200805200346" type="S" version="2.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/atl/downloads/drops/2.0.0/S200805200346/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2m/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2m/downloads/?project=atl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2m/news/relnotes.php?project=atl&amp;version=S200805200346
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2m-atl-SDK-2.0.0RC1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/atl/downloads/drops/2.0.0/S200805200346/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080516-1333/eclipse-SDK-I20080516-1333-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emft/compare/downloads/drops/0.8.0/I200805060349/emft-compare-SDK-incubation-0.8.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20080427194908/orbit-S20080427194908.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805191800/emf-sdo-xsd-SDK-2.4.0RC1.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/S200805191920/mdt-uml2-SDK-2.2.0RC1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] atl I200805150641 (2.0.0.I200805150641) is available</title>
     <link href="http://www.eclipse.org/modeling/m2m/downloads/?project=atl&amp;showAll=1&amp;hlbuild=I200805150641#I200805150641"/>
