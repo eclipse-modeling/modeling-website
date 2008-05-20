@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emft/updates/interim/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/updates/interim/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emft/updates/interim/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- TENEO 0.8.0 I200805200858 (Incubation) -->
+	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858" name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858">
+		<description>
+EMFT TENEO SDK (Incubation) 0.8.0 I200805200858: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200805200858-077-7w311916311969" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200805200858-077-7w311916311969.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200805200858-07c-AgI99m9XI99mXm" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200805200858-07c-AgI99m9XI99mXm.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200805200858-07M-8-LA3YThMLRT6kJLa1QEVVFG" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200805200858-07M-8-LA3YThMLRT6kJLa1QEVVFG.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200805200858-08--DUUEFDEsUEFDtD" url="features/org.eclipse.emf.teneo.source_0.8.0.v200805200858-08--DUUEFDEsUEFDtD.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200805200858-08--DUUEFDEsUEFDtD" url="features/org.eclipse.emf.teneo_0.8.0.v200805200858-08--DUUEFDEsUEFDtD.jar" patch="false">
+		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
+	</feature>
+
+</site>
