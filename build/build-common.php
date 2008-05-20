@@ -1115,9 +1115,12 @@ function showBuildsInProgress()
 				$tokens = array("proj", "sub", "version", "branch", "buildType", "buildTimestamp", "basebuilderBranch");
 				foreach ($tokens as $t)
 				{
-					print " <acronym title=\"$t\">" . $alltokens[$t] . "</acronym>";				
+					if (in_array($t, $alltokens))
+					{
+						print " <acronym title=\"$t\">" . $alltokens[$t] . "</acronym>";
+					}				
 				}
-				$url = str_replace($alltokens["writableBuildRoot"]. "/build", "", $alltokens["buildDir"]);
+				$url = preg_replace("#.+/build#", "", $alltokens["buildDir"]);
 				print " :: <a href=\"" . $url . "\">Build Artifacts</a>";
 				print "</li>";
 				unset($alltokens);
