@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.60 2008/05/08 04:46:55 nickb Exp $
+// $Id: scripts.php,v 1.61 2008/05/20 17:45:33 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -683,8 +683,15 @@ function tokenize($in) # split a shell command into flag/value pairs
 	$pairs["cmd"] = $bits[0];
 	for ($i=1; $i<sizeof($bits); $i++)
 	{
-		$pair = explode(" ", $bits[$i]); 
-		$pairs[$pair[0]] = $pair[1]; 			
+		$pair = explode(" ", $bits[$i]);
+		if (isset($pair[0]) && isset($pair[1]))
+		{ 
+			$pairs[$pair[0]] = $pair[1];
+		}
+		else if (isset($pair[0]))
+		{ 
+			$pairs[$pair[0]] = "";
+		} 			
 	}
 	return $pairs;
 } 
