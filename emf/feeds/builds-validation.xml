@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>validation Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-validation.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-05-13T21:26:19Z</updated>
+  <updated>2008-05-21T16:55:30Z</updated>
   <author>
     <name>validation Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-validation.xml</id>
+  <entry>
+    <title>[announce] validation 1.2.0RC1 (S200805201850) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200805201850#S200805201850"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200805201850#S200805201850</id>
+    <updated>2008-05-21T16:55:30Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805201850" href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200805201850#S200805201850" type="S" version="1.2.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/validation/downloads/drops/1.2.0/S200805201850/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=validation</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=validation&amp;version=S200805201850
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-validation-SDK-1.2.0RC1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/validation/downloads/drops/1.2.0/S200805201850/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080516-1333/eclipse-SDK-I20080516-1333-linux-gtk.tar.gz</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805201049/emf-sdo-xsd-SDK-2.4.0RC1.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/S200805201800/mdt-ocl-all-SDK-1.2.0RC1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] validation I200805131635 (1.2.0.I200805131635) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=I200805131635#I200805131635"/>
