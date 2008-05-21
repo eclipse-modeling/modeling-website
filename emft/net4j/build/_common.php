@@ -22,7 +22,7 @@ $options = array (
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "stepper@esc-net.de", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "stepper@esc-net.de,smcduff@hotmail.com,mtaal@elver.org", // prefil email contact box with comma-sep'd list
 	
 	"Users" => array("estepper","estepper",null) /* build user, eclipse cvs user, IES cvs user */
 );
