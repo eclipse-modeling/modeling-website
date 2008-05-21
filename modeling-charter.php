@@ -130,7 +130,7 @@ development.</p>
 					</li>
 					<li>Business Process Modeling Notation (BPMN)</li>
 					<li>Business Process Definition Metamodel (BPDM)</li>
-				  	<li>XML Schema Infoset Model (XSD)</li>
+				  	<li>XML Schema Definition (XSD)</li>
 				</ul>
 				
 				<h3>Domain-Specific Modeling</h3>
