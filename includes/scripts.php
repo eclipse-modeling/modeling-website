@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.61 2008/05/20 17:45:33 nickb Exp $
+// $Id: scripts.php,v 1.62 2008/05/22 18:55:47 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -677,7 +677,7 @@ function tokenize($in) # split a shell command into flag/value pairs
 	 * -buildDir /home/www-data/build/modeling/gmf/gmf/downloads/drops/2.1.0/I200805072353 
 	 * -writableBuildRoot /home/www-data -buildTimestamp 200805072353 
 	 * -email gmf-releng@eclipse.org,nickboldt@gmail.com,max.feldman@borland.com,anthonyh@ca.ibm.com 
-	 * -basebuilderBranch M7_34 
+	 * -basebuilderBranch RC1_34 
 	 */
 	$bits = explode(" -", $in);
 	$pairs["cmd"] = $bits[0];
