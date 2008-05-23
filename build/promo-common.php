@@ -193,13 +193,13 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td colspan="3">&#160;</td>
 				<td>
-				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Resolved Bugs to Verified? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Verifying_Resolved_Bugs">-bugzonly</a>)</p>
+				<p><input type="checkbox" name="build_Close_Bugz_Only" value="Yes" onclick="doOnclickBugzonly(this.checked)"> Move Resolved Bugs to Verified? (<a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automated_.27Fix_available_in_....27_Bugzilla_Comments">-bugzonly</a>)</p>
 				</td>
 				<td width="300"><small><a id="divToggle_bugzonly" name="divToggle_bugzonly" href="javascript:toggleDetails('bugzonly')">[+]</a></small>
 					<div id="divDetail_bugzonly" name="divDetail_bugzonly" style="display:none;border:0">
 					<small>
 					If checked, this flag will NOT promote your build. Instead, it will perform an update of Bugzilla, adding comments to bugs closed for the selected build.
-					See <a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Verifying_Resolved_Bugs">Automatically Verifying Resolved Bugs</a> for details.
+					See <a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automated_.27Fix_available_in_....27_Bugzilla_Comments">Automated 'Fix available in ...' Bugzilla Comments</a> for details.
 					</small>
 					</div>
 				</td>
