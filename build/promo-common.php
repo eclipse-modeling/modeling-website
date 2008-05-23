@@ -198,7 +198,8 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td width="300"><small><a id="divToggle_bugzonly" name="divToggle_bugzonly" href="javascript:toggleDetails('bugzonly')">[+]</a></small>
 					<div id="divDetail_bugzonly" name="divDetail_bugzonly" style="display:none;border:0">
 					<small>
-					This currently only works on the emf.torolab server. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=191571">bug 191571</a>.
+					If checked, this flag will NOT promote your build. Instead, it will perform an update of Bugzilla, adding comments to bugs closed for the selected build.
+					See <a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Automatically_Verifying_Resolved_Bugs">Automatically Verifying Resolved Bugs</a> for details.
 					</small>
 					</div>
 				</td>
