@@ -89,7 +89,7 @@ if (!isset($options))
 else
 {
 	$options = array_merge($options, loadOptionsFromFile($dependenciesURLsFile));
-	$options["BranchIES"] = array ("HEAD","R3_2_maintenance");
+	$options["BranchIES"] = array ("HEAD","R3_3_maintenance");
 	$options["RunTests"] = array ("JUnit Tests=JUnit");
 }
 $options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
