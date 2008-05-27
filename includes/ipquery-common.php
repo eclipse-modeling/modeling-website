@@ -342,7 +342,7 @@ function doIPQueryPage()
 			<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 			{
 				print "<table>\n" .
-						"<tr><th>Name</th><th>Location</th><th>License</th><th>Usage</th></tr>\n";
+						"<tr><th>Name</th><th>Location</th><th>License</th><th>Usage</th><th><acronym title=\"Contribution Questionnaires, if known\">CQ</acronym></tr>\n";
 				$bgcol = "#FFFFEE";
 				foreach ($third_party as $tp)
 				{
@@ -353,6 +353,7 @@ function doIPQueryPage()
 						"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
 						"<td>" . $bits[2] . "</td>" .
 						"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
+						"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "") . "</td>" .
 						"</tr>\n";
 				}
 				print "</table>";
@@ -465,5 +466,10 @@ function pretty_print($in, $split, $num)
 		$out .= $bits[$i];
 	}
 	return "<acronym title=\"$in\">$out</acronym>";
+}
+
+function cqlink($num)
+{
+	return "<acronym title=\"Contribution Questionnaire #$num\"><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=$num\">$num</a></acronym>";
 }
 ?>
