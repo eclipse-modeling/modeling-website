@@ -1,5 +1,12 @@
 <?php
-require_once ("../../../includes/buildServer-common.php");
+if (is_file("../../../includes/buildServer-common.php"))
+{
+	require_once ("../../../includes/buildServer-common.php");
+}
+else if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-common.php"))
+{
+	require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-common.php");
+}
 
 $options = array (
 	"BaseBuilderBranch" => "RC1_34",
