@@ -30,10 +30,24 @@ ob_start();
 		<p>Individual per-component IP Logs:</p>
 		
 		<ul>";
-		$gotOne=false;
-		foreach ($projects as $name => $prefix){
-			$out .= '<li>' . $name . (is_file($prefix.'/eclipse-project-ip-log.csv') ? ' <a href="'.$prefix.'/eclipse-project-ip-log.csv">IP Log</a>' : ': <i>n/a</i>') . '</li>';
-			$gotOne = $gotOne || is_file($prefix.'/eclipse-project-ip-log.csv') ? true : false;	
+		$gotOne = false;
+		$tries = array("/eclipse-project-ip-log.csv", "/project-info/eclipse-project-ip-log.csv");
+		foreach ($projects as $name => $prefix)
+		{
+			$gotThis = false;
+			foreach ($tries as $try)
+			{
+				if (!$gotThis && is_file($prefix.$try))
+				{
+					$out .= '<li>' . $name . ' <a href="'.$prefix.$try.'">IP Log</a>' . '</li>';
+					$gotThis=true;
+				}
+				$gotOne = $gotOne || is_file($prefix.$try) ? true : false;
+			}
+			if (!$gotThis)
+			{
+				$out .= '<li>' . $name . ': <i>n/a</i>' . '</li>';
+			}
 		}
 		$out .= "</ul>";
 		if ($gotOne)
