@@ -46,8 +46,7 @@ function wmysql_query($sql, $c = -1)
 
 		if (!($res = mysql_query($sql, $c)))
 		{
-			$res = mysql_error($c) . ($c !== $connect ? " (stats db, not modeling)" : "");
-			print "<div class=\"qerror\">" . $res . "</div>\n";
+			print "<div class=\"qerror\">" . mysql_error($c) . ($c !== $connect ? " (stats db, not modeling)" : "") . "</div>\n";
 		}
 	}
 	return $res;

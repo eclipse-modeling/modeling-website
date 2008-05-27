@@ -143,7 +143,7 @@ $result = wmysql_query($sql);
 
 $count = wmysql_query("SELECT FOUND_ROWS()"); //mysql_num_rows() doesn't do what we want here
 $rows = 0;
-if ($count && is_numeric($count))
+if ($count)
 {
 	$row = mysql_fetch_row($count);
 	$rows = $row[0];
@@ -231,14 +231,7 @@ $App->AddExtraHtmlHeader('<script type="text/javascript" src="/modeling/includes
 if (isset($_GET["totalonly"]))
 {
 	header("Content-Type: text/plain");
-	if ($count && !is_numeric($count))
-	{
-		print $count . "\n";
-	}
-	else
-	{	
-		print $rows . "\n";
-	}
+	print $rows . "\n";
 }
 else if (isset($_GET["showbuglist"]))
 {
