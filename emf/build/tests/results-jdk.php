@@ -1,6 +1,7 @@
 <?php
 $pre = "../../";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
+require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/emf/emf/build/_common.php");
 internalUseOnly();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/emf/downloads/extras-emf.php");
 ob_start();
@@ -27,22 +28,20 @@ $hadLoadDirSimpleError=1;
 			exit;
 	}
 
-	$buildOptionsFile = $pre."build.options.txt"; // read only
-
 	if (!$showMax) { $showMax = 10; } // max # of builds to show on the page
 	$showBuildsIfDirNotExist = 0;
 
 	$debug=-1;
 
-	// get options file data
-	$options = loadOptionsFromFile($buildOptionsFile);
-	$options["BuildType"] = array(
-			"Release=R",
-			"Stable=S",
-			"Integration=I",
-			"Maintenance=M",
-			"Nightly=N|selected"
-	);
+	if (!isset($options))
+	{
+		$options = array();
+	}
+	else
+	{
+		$options = array_merge($options, loadOptionsFromFile($dependenciesURLsFile));
+	}
+	$options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
 	//if ($debug>0) { w("OPTIONS:",1); wArr($options,"<br>",true,""); w("<hr noshade size=1 />"); }
 
