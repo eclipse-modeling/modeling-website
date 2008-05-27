@@ -341,19 +341,31 @@ function doIPQueryPage()
 			<ul>
 			<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
 			{
+				$hasComponent = false;
+				foreach ($third_party as $tp)
+				{
+					$bits = explode(",", $tp);
+					if (isset($bits[5]))
+					{
+						$hasComponent = true;
+						break;
+					}
+				}
+					
 				print "<table>\n" .
-						"<tr><th>Name</th><th>Location</th><th>License</th><th>Usage</th><th><acronym title=\"Contribution Questionnaires, if known\">CQ</acronym></tr>\n";
+						"<tr>" . ($hasComponent ? "<th>Component</th>" : "") . "<th>Name</th><th>Location</th><th>License</th><th>Usage</th><th><acronym title=\"Contribution Questionnaires, if known\">CQ</acronym></tr>\n";
 				$bgcol = "#FFFFEE";
 				foreach ($third_party as $tp)
 				{
 					$bits = explode(",", $tp);
 					$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 					print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-						"<td>" . $bits[0] . "</td>" .
+						($hasComponent ? "<td>" . (isset($bits[5]) ? "<a href=\"http://www.eclipse.org/$PR/?project=" . trim($bits[5]) . "\">" . trim($bits[5]) . "</a>" : "") . "</td>" : "") .
+						"<td>" . (isset($bits[4]) ? cqlink(trim($bits[4]), $bits[0]) : $bits[0]) . "</td>" .
 						"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
 						"<td>" . $bits[2] . "</td>" .
 						"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
-						"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "") . "</td>" .
+						"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "?") . "</td>" .
 						"</tr>\n";
 				}
 				print "</table>";
@@ -468,8 +480,8 @@ function pretty_print($in, $split, $num)
 	return "<acronym title=\"$in\">$out</acronym>";
 }
 
-function cqlink($num)
+function cqlink($num, $label = "")
 {
-	return "<acronym title=\"Contribution Questionnaire #$num\"><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=$num\">$num</a></acronym>";
+	return "<acronym title=\"Contribution Questionnaire #$num\"><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=$num\">" . ($label ? $label : $num) . "</a></acronym>";
 }
 ?>
