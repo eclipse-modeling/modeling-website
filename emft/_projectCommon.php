@@ -77,7 +77,7 @@ $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
 $hasmoved = array(
-	#"teneo" => "emf", "net4j" => "emf",	"cdo" => "emf", 
+	"teneo" => "emf", "net4j" => "emf",	"cdo" => "emf", 
 	"query" => "emf", "transaction" => "emf", "validation" => "emf",
 	"eodm" => "mdt", "ocl" => "mdt",
 	"jet" => "m2t", "jeteditor" => "m2t"); // components which have moved, and to where
