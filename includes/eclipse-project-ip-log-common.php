@@ -6,6 +6,14 @@ ob_start();
 ?>
 <div id="midcolumn">
 	<h1>IP Log</h1>
+	
+	<p>It is <a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Maintaining_Your_IP_Log">everyone</a>'s responsibility to keep these logs up to date. Details below.	
+	<blockquote><ul>
+	<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Maintaining_Your_IP_Log">Maintaining Your IP Log</a></li>
+	<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing/IP_Log">IP Log Rules</a></li>
+	<li><a href="http://www.eclipse.org/projects/dev_process/ip-process-in-cartoons.php">IP Process</a></li>
+	<li><a href="http://www.eclipse.org/legal/EclipseLegalProcessPoster.pdf">Due Diligence / Legal Processes</a></li>
+	</ul></blockquote>
 
 	<div class="homeitem3col">
 		<h3>Generated IP Log</h3>
@@ -76,6 +84,17 @@ if (isset($incubating) && sizeof($incubating) > 0)
    <h6>Committers &amp; Contributors</h6>
    <ul><li><a href="http://www.eclipse.org/<?php print $PR; ?>/project-info/team.php">Meet The Team</a></li></ul>
 </div>
+
+<div class="sideitem">
+	<h6>See Also</h6>
+	<ul>
+	<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing#Maintaining_Your_IP_Log">Maintaining Your IP Log</a></li>
+	<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng/Releasing/IP_Log">IP Log Rules</a></li>
+	<li><a href="http://www.eclipse.org/projects/dev_process/ip-process-in-cartoons.php">IP Process</a></li>
+	<li><a href="http://www.eclipse.org/legal/EclipseLegalProcessPoster.pdf">Due Diligence / Legal Processes</a></li>
+	</ul>
+</div>
+	
 </div>
 <?php
 
