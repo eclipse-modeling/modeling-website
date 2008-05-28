@@ -5,8 +5,9 @@ $projName = strtoupper(preg_replace("#.+/#","",$PR));
 ob_start();
 ?>
 <div id="midcolumn">
+	<h1>IP Log</h1>
 
-	<div class="homeitem">
+	<div class="homeitem3col">
 		<h3>Generated IP Log</h3>
 		<p>New for Ganymede, the IP log can now be generated from Bugzilla. There are two version available:</p>
 		
@@ -17,7 +18,7 @@ ob_start();
 		
 	</div>
 	
-	<div class="homeitem">
+	<div class="homeitem3col">
 		<h3>Static IP Log(s)</h3>
 		<p>Overall IP log, listing all committers and contributors. <b style='color:red'>These are most likely out of date.</b></p>
 		<ul>
@@ -46,7 +47,7 @@ ob_start();
 			}
 			if (!$gotThis)
 			{
-				$out .= '<li>' . $name . ': <i>n/a</i>' . '</li>';
+				#$out .= '<li>' . $name . ': <i>n/a</i>' . '</li>';
 			}
 		}
 		$out .= "</ul>";
@@ -57,6 +58,26 @@ ob_start();
 
 print "</div>\n";
 print "</div>\n";
+
+print "<div id=\"rightcolumn\">\n";
+
+if (isset($incubating) && sizeof($incubating) > 0)
+{ ?>
+<div class="sideitem">
+   <h6>Incubation</h6>
+   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
+   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img
+        align="center" src="http://www.eclipse.org/images/egg-incubation.png"
+        border="0" /></a></div>
+ </div>
+<?php } ?>
+
+<div class="sideitem">
+   <h6>Committers &amp; Contributors</h6>
+   <ul><li><a href="http://www.eclipse.org/<?php print $PR; ?>/project-info/team.php">Meet The Team</a></li></ul>
+</div>
+</div>
+<?php
 
 $html = ob_get_contents();
 ob_end_clean();
