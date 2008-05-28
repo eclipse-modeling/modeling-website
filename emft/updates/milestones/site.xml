@@ -596,6 +596,43 @@ EMFT COMPARE SDK (Incubation) 0.8.0RC1 S200805210311: contains runtime, source, 
 		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC1 S200805210311"/>
 	</feature>
 
+	<!-- CDO 1.0.0RC2 S200805281310 -->
+	<category-def label="EMFT CDO SDK 1.0.0RC2 S200805281310" name="EMFT CDO SDK 1.0.0RC2 S200805281310">
+		<description>
+EMFT CDO SDK 1.0.0RC2 S200805281310: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.cdo.doc" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.doc_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.examples.source_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.examples" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.examples_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.sdk_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.server.source_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.server_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.source" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo.source_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo" version="1.0.0.v200805281310" url="features/org.eclipse.emf.cdo_1.0.0.v200805281310.jar" patch="false">
+		<category name="EMFT CDO SDK 1.0.0RC2 S200805281310"/>
+	</feature>
+
 	<!-- CDO 0.8.0RC1b S200805230607 (Incubation) -->
 	<category-def label="EMFT CDO SDK (Incubation) 0.8.0RC1b S200805230607" name="EMFT CDO SDK (Incubation) 0.8.0RC1b S200805230607">
 		<description>
