@@ -17,6 +17,12 @@ else
 $projct = preg_replace("#^/#", "", $proj);
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
+if (isset($projct) && isset($hasmoved) && is_array($hasmoved) && array_key_exists($projct,$hasmoved))
+{
+	header("Location: http://www.eclipse.org/modeling/" . $hasmoved[$projct] . "/downloads/?" . $_SERVER["QUERY_STRING"]);
+	exit;
+}
+
 $numzips = isset($extraZips) ? 0 - sizeof($extraZips) : 0; // if extra zips (new zips added later), reduce the "required" count when testing a build
 if (isset($dls[$proj]) && is_array($dls[$proj]))
 {
