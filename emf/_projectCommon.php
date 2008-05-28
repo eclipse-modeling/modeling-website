@@ -36,34 +36,40 @@ $cvsprojs = array (); /* should always be empty */
 $cvscoms = array(
 	"org.eclipse.emf" => array (
 		"emf" => "org.eclipse.emf",
-		"sdo" => "org.eclipse.emf.ecore.sdo",
+
 		"query" => "org.eclipse.emf.query",
-		"transaction" => "org.eclipse.emf.transaction",
 		"validation" => "org.eclipse.emf.validation",
+		"transaction" => "org.eclipse.emf.transaction",
 		"emfqtv" => "org.eclipse.emf.emfqtv",
-		"net4j" => "org.eclipse.emf.net4j",
+
 		"teneo" => "org.eclipse.emf.teneo",
 		"cdo" => "org.eclipse.emf.cdo",
+		"net4j" => "org.eclipse.emf.net4j",
+
+		"sdo" => "org.eclipse.emf.ecore.sdo",
 	)
 );
 
 $projects = array(
 	"EMF (Core)" => "emf",
+
 	"Model Query" => "query",
-	"Model Transaction" => "transaction",
 	"Validation Framework" => "validation",
+	"Model Transaction" => "transaction",
 	"QTV All-In-One" => "emfqtv",
+
 	"Teneo" => "teneo",
 	"CDO" => "cdo",
 	"Net4j" => "net4j",
+
 	"SDO" => "sdo",
 );
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array("sdo","query","transaction","validation", "emfqtv", "net4j","teneo","cdo"); //components without newsgroup
-$nomailinglist = array("sdo","query","transaction","validation", "emfqtv", "net4j","teneo","cdo"); //components without mailinglist
-$incubating = array(); // components which are incubating - EMF will never have incubating components -- see EMFT
+$nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup =   array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "sdo"); //components without newsgroup
+$nomailinglist = array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "sdo"); //components without mailinglist
+$incubating =    array(); // components which are incubating - EMF will never have incubating components -- see EMFT
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
