@@ -1,1 +1,1 @@
-<?php require_once ("_common.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/build/promo-common.php"); ?>
+<?php header("Location: /modeling/emf/net4j/build/promo.php"); ?>
