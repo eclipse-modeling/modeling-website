@@ -112,6 +112,43 @@ EMFT SEARCH SDK (Incubation) 0.7.0M7 S200805070244: contains runtime, source, an
 		<category name="EMFT SEARCH SDK (Incubation) 0.7.0M7 S200805070244"/>
 	</feature>
 
+	<!-- NET4J 1.0.0RC2 S200805280914 -->
+	<category-def label="EMFT NET4J SDK 1.0.0RC2 S200805280914" name="EMFT NET4J SDK 1.0.0RC2 S200805280914">
+		<description>
+EMFT NET4J SDK 1.0.0RC2 S200805280914: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.net4j.db.source" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.db.source_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.db" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.db_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.doc" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.doc_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples.source" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.examples.source_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.examples_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.sdk" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.sdk_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.source" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.source_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui.source" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.ui.source_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui" version="1.0.0.v200805280914" url="features/org.eclipse.net4j.ui_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+	<feature id="org.eclipse.net4j" version="1.0.0.v200805280914" url="features/org.eclipse.net4j_1.0.0.v200805280914.jar" patch="false">
+		<category name="EMFT NET4J SDK 1.0.0RC2 S200805280914"/>
+	</feature>
+
 	<!-- NET4J 0.8.0RC1b S200805230547 (Incubation) -->
 	<category-def label="EMFT NET4J SDK (Incubation) 0.8.0RC1b S200805230547" name="EMFT NET4J SDK (Incubation) 0.8.0RC1b S200805230547">
 		<description>
