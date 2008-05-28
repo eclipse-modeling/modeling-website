@@ -311,6 +311,16 @@ if (isset($incubating) && in_array($projct, $incubating))
 <?php
 }
 
+if (is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/eclipse-project-ip-log.php"))
+{
+print<<<EOHTML
+<div class="sideitem">
+	<h6>IP Log</h6>
+	<p>See committer/contributor <a href="/$PR/eclipse-project-ip-log.php">IP log</a>.</p>
+</div>
+EOHTML;
+}
+
 print "</div>\n";
 
 
