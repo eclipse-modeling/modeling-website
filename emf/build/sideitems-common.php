@@ -12,7 +12,7 @@ function sidebar()
 		<ul>
 			<li>EMF: <a href="/emf/build/">Build</a>,
 					 <a href="/emf/build/promo.php">Promote</a></li>
-			<li>QTV: <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/">Build</a>,
+			<li>Others: <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/">Build</a>,
 					 <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/promo.php">Promote</a></li>
 			<li><a href="/modeling/emf/downloads/?project=<?php print $projct && $projct != "emf" ? $projct : "query"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
 		</ul>
@@ -29,8 +29,8 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Info</h6>
 		<ul>
-			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=Core,Doc,Edit,Mapping,Releng,SDO,Edit,Tools,Website,XML%2FXMI,XSD" : "EMF&amp;component=" . $projct; ?>&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
-			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=Core,Doc,Edit,Mapping,Releng,SDO,Edit,Tools,Website,XML%2FXMI,XSD" : "EMF&amp;component=" . $projct; ?>&amp;bug_status=RESOLVED&changedin=7">Resolved Bugs This Week</a></li>
+			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=CDO,Core,Doc,Edit,Mapping,Net4j,Releng,SDO,Edit,Teneo,Tools,Website,XML%2FXMI,XSD" : "EMF&amp;component=" . $projct; ?>&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
+			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=<?php print $projct == "emf" ? "EMF,MDT&amp;component=CDO,Core,Doc,Edit,Mapping,Net4j,Releng,SDO,Edit,Teneo,Tools,Website,XML%2FXMI,XSD" : "EMF&amp;component=" . $projct; ?>&amp;bug_status=RESOLVED&changedin=7">Resolved Bugs This Week</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=branch%3A+HEAD+days%3A+7">Development This Week</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/searchcvs.php?q=branch%3A+R+days%3A+7">Maintenance This Week</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/downloads/stats.php">Download Stats</a></li>

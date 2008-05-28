@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>net4j Builds</title>
+  <link href="http://download.eclipse.org/modeling/emft/feeds/builds-net4j.xml" rel="self" type="application/atom+xml"/>
+  <updated>2008-05-28T19:05:17Z</updated>
+  <author>
+    <name>net4j Build Team</name>
+  </author>
+  <id>http://download.eclipse.org/modeling/emft/feeds/builds-net4j.xml</id>
+  <entry>
+    <title>[announce] net4j 1.0.0RC2 (S200805280914) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805280914#S200805280914"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805280914#S200805280914</id>
+    <updated>2008-05-28T19:05:17Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805280914" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805280914#S200805280914" type="S" version="1.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/1.0.0/S200805280914/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200805280914
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-1.0.0RC2.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/1.0.0/S200805280914/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC2-200805230100/eclipse-SDK-3.4RC2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20080512184123/orbit-S20080512184123.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0RC1b (S200805230547) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805230547#S200805230547"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805230547#S200805230547</id>
+    <updated>2008-05-23T15:43:54Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805230547" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805230547#S200805230547" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805230547/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200805230547
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0RC1b.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805230547/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC1-200805161333/eclipse-SDK-3.4RC1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0RC1a (S200805211234) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805211234#S200805211234"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805211234#S200805211234</id>
+    <updated>2008-05-21T18:31:37Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805211234" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805211234#S200805211234" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805211234/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200805211234
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0RC1a.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805211234/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC1-200805161333/eclipse-SDK-3.4RC1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0RC1 (S200805210300) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805210300#S200805210300"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805210300#S200805210300</id>
+    <updated>2008-05-21T08:40:42Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805210300" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805210300#S200805210300" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805210300/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200805210300
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0RC1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805210300/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080516-1333/eclipse-SDK-I20080516-1333-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0M7 (S200805081211) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805081211#S200805081211"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805081211#S200805081211</id>
+    <updated>2008-05-08T16:32:43Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200805081211" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200805081211#S200805081211" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805081211/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200805081211
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0M7.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200805081211/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M7-200805020100/eclipse-SDK-3.4M7-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0M6 (S200804140554) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200804140554#S200804140554"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200804140554#S200804140554</id>
+    <updated>2008-04-14T10:13:41Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200804140554" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200804140554#S200804140554" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200804140554/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200804140554
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0M6.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200804140554/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6a-200804091425/eclipse-SDK-3.4M6a-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200803090420 (0.8.0.I200803090420) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200803090420#I200803090420"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200803090420#I200803090420</id>
+    <updated>2008-03-09T08:57:17Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200803090420" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200803090420#I200803090420" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200803090420/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200803090420
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200803090420.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200803090420/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080305-1100/eclipse-SDK-I20080305-1100-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0M5 (S200802181356) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200802181356#S200802181356"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200802181356#S200802181356</id>
+    <updated>2008-02-18T19:33:14Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200802181356" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200802181356#S200802181356" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200802181356/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200802181356
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0M5.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200802181356/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M5-200802071530/eclipse-SDK-3.4M5-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200801030445 (0.8.0.I200801030445) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200801030445#I200801030445"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200801030445#I200801030445</id>
+    <updated>2008-01-03T11:50:55Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200801030445" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200801030445#I200801030445" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200801030445/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200801030445
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200801030445.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200801030445/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M4-200712131700/eclipse-SDK-3.4M4-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.8.0M4 (S200712171422) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200712171422#S200712171422"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200712171422#S200712171422</id>
+    <updated>2007-12-17T21:48:27Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200712171422" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200712171422#S200712171422" type="S" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200712171422/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=S200712171422
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-0.8.0M4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/S200712171422/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M4-200712131700/eclipse-SDK-3.4M4-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200711141103 (0.8.0.I200711141103) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711141103#I200711141103"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711141103#I200711141103</id>
+    <updated>2007-11-14T16:38:12Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200711141103" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711141103#I200711141103" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711141103/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200711141103
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200711141103.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711141103/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/eclipse-SDK-3.4M2-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200711071151 (0.8.0.I200711071151) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711071151#I200711071151"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711071151#I200711071151</id>
+    <updated>2007-11-12T21:08:18Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200711071151" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711071151#I200711071151" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711071151/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200711071151
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200711071151.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711071151/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/eclipse-SDK-3.4M2-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200711011326 (0.8.0.I200711011326) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711011326#I200711011326"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711011326#I200711011326</id>
+    <updated>2007-11-01T18:42:32Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200711011326" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200711011326#I200711011326" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711011326/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200711011326
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200711011326.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200711011326/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/eclipse-SDK-3.4M2-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200710170556 (0.8.0.I200710170556) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710170556#I200710170556"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710170556#I200710170556</id>
+    <updated>2007-10-17T10:59:41Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200710170556" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710170556#I200710170556" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200710170556/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200710170556
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-incubation-I200710170556.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200710170556/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1-200709211145/eclipse-SDK-3.3.1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j I200710101632 (0.8.0.I200710101632) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710101632#I200710101632"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710101632#I200710101632</id>
+    <updated>2007-10-10T21:54:14Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200710101632" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200710101632#I200710101632" type="I" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200710101632/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://download.eclipse.org/modeling/emft/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;version=I200710101632
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-I200710101632.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.8.0/I200710101632/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1-200709211145/eclipse-SDK-3.3.1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.7.2 (R200610271244) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610271244#R200610271244"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610271244#R200610271244</id>
+    <updated>2006-11-21T21:14:05Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610271244" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610271244#R200610271244" type="R" version="0.7.2">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.2/R200610271244/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j#net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.2
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-0.7.2.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.2/R200610271244/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.7.1 (R200610021152) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610021152#R200610021152"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610021152#R200610021152</id>
+    <updated>2006-11-21T21:15:46Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200610021152" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200610021152#R200610021152" type="R" version="0.7.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.1/R200610021152/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j#net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.1
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-0.7.1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.1/R200610021152/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/R200609210005/emf-sdo-xsd-SDK-2.2.1.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/eclipse-SDK-3.2.1-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+  <entry>
+    <title>[announce] net4j 0.7.0 (R200609251348) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200609251348#R200609251348"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200609251348#R200609251348</id>
+    <updated>2006-11-21T21:10:53Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200609251348" href="http://www.eclipse.org/modeling/emft/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200609251348#R200609251348" type="R" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.0/R200609251348/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/?project=net4j</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=net4j#net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=net4j&amp;amp;version=0.7.0
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-net4j-SDK-0.7.0.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/net4j/downloads/drops/0.7.0/R200609251348/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.2.1/S200609210005/emf-sdo-xsd-SDK-2.2.1RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20060921-0945/eclipse-SDK-M20060921-0945-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
+</feed>

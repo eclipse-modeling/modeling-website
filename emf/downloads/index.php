@@ -91,6 +91,7 @@ $filePreStatic = array(
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
+if ($isBuildServer) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/build/sideitems-common.php"; }
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();
@@ -106,7 +107,7 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
 if ($projct)
 {
-	$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="' . (false===strpos($trans[$projct], "EMF") ? "EMF " : "") . $trans[$projct] . ' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/' . $PR . '/feeds/builds-' . $projct . '.xml"/>' . "\n");
+	$App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="' . (false===strpos($trans[$projct], "EMF") ? "EMF - " : "") . $trans[$projct] . ' Build Feed" href="http://www.eclipse.org/downloads/download.php?file=/' . $PR . '/feeds/builds-' . $projct . '.xml"/>' . "\n");
 }
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
