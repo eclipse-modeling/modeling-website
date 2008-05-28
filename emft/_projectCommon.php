@@ -51,17 +51,21 @@ $cvscoms = array(
 
 $projects = array(
 	"Compare" => "compare",
-	"CDO" => "cdo",
 	"Ecore Tools" => "ecoretools",
-	"Modeling Workflow" => "mwe",
-	"Net4j" => "net4j",
-	"Search" => "search",
-	"Teneo" => "teneo",
-    // no builds yet
-	"JCR Management" => "jcrm",
 	"Mint" => "mint",
-	"Temporality" => "temporality",
+	"Search" => "search",
+	
+	"Modeling Workflow" => "mwe",
+
+	// graduated
+	"Teneo" => "teneo",
+	"CDO" => "cdo",
+	"Net4j" => "net4j",
+
+    // no builds yet
 	"EMF4Net" => "emf4net",
+	"JCR Management" => "jcrm",
+	"Temporality" => "temporality",
 );
 
 $bugcoms = array_flip($projects);
@@ -73,6 +77,7 @@ $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
 $hasmoved = array(
+	#"teneo" => "emf", "net4j" => "emf",	"cdo" => "emf", 
 	"query" => "emf", "transaction" => "emf", "validation" => "emf",
 	"eodm" => "mdt", "ocl" => "mdt",
 	"jet" => "m2t", "jeteditor" => "m2t"); // components which have moved, and to where
@@ -96,13 +101,18 @@ $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projecti
 $Nav->addNavSeparator($projectName, "$rooturl/");
 foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	if (!isset($hasmoved[$projects[$z]]))
+	if (in_array($projects[$z], $nodownloads))
 	{
-		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
+		$Nav->addCustomNav("<acronym title='$z has no downloads yet.'><i style='color:gray'>" . $z . "</i></acronym>", "$rooturl/?project=$projects[$z]", "_self",  2);
+		
+	}
+	else if (isset($hasmoved[$projects[$z]]))
+	{
+		$Nav->addCustomNav("<acronym title='$z has graduated to " . strtoupper($hasmoved[$projects[$z]]) . ".'><i style='color:silver'>" . $z . "</i></acronym>", "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
 	}
 	else
 	{
-		$Nav->addCustomNav($z, "http://www.eclipse.org/modeling/" . $hasmoved[$projects[$z]] . "/?project=" . $projects[$z], "_self", 2);
+		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self",  2);
 	}
 }
 

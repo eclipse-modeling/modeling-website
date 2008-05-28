@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="June 04, 2008" showOn="whatsnew">
+	Teneo, CDO, and Net4j <a href="http://www.eclipse.org/projects/whatsnew.php">graduate</a> to <a href="http://www.eclipse.org/modeling/emf/">Eclipse Modeling Framework (EMF)</a> as part of the <a href="http://www.eclipse.org/projects/whatsnew.php">Ganymede Release Review</a>.
+</news>
 <news date="June 07, 2007" showOn="whatsnew">
 	JET Editor has been merged into <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">M2T-JET</a>.
 </news>
@@ -22,4 +25,4 @@
 	<a href="http://www.eclipse.org/modeling/mdt/eodm/docs/articles/EODM_Documentation/">EODM Initial Documentation</a> is available !
 </news>
 </doc>
-<!-- $Id: news.xml,v 1.4 2007/11/16 06:06:25 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.5 2008/05/28 20:35:30 nickb Exp $ -->
