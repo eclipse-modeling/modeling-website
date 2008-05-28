@@ -104,13 +104,13 @@ $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.emf/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html?root=Modeling_Project&amp;view=co", "_self", 2);
 if (!$proj || $proj == "emf" || $proj == "sdo")
 {
-	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-FAQ", "_self", 2);
+	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF/FAQ", "_self", 2);
 	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=" . ($proj?$proj:"emf") . "&amp;version=HEAD", "_self", 2);
 	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=project%3A+org.eclipse.emf".($proj=="sdo"?".ecore.sdo":"")."+days%3A+7", "_self", 2);
 }
 else
 {
-	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF-FAQ", "_self", 2);
+	$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF/FAQ", "_self", 2);
 	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
 	$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.emf.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 }
