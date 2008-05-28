@@ -123,6 +123,7 @@ rsort($branches);
 $buildTypes = getBuildTypes($branches, $buildtypes);
 
 $builds = getBuildsFromDirs();
+$releases = array();
 if ($sortBy != "date")
 {
 
