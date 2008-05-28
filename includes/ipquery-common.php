@@ -252,7 +252,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $isFormatted, $showbuglist, $showobsolete, $sortBy, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $incubating, $isFormatted, $showbuglist, $showobsolete, $sortBy, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
 
 	if ($showbuglist)
@@ -379,6 +379,16 @@ function doIPQueryPage()
 	</div>
 	
 	<div id="rightcolumn">
+	
+<?php if (isset($incubating)) { ?>
+	<div class="sideitem">
+	   <h6>Incubation</h6>
+	   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
+	   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img
+	        align="center" src="http://www.eclipse.org/images/egg-incubation.png"
+	        border="0" /></a></div>
+	 </div>
+<?php } ?>	
 		<div class="sideitem">
 			<h6>Committers (Section 1)</h6>
 			<ul>
