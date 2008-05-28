@@ -14,21 +14,11 @@ ob_start();
 	print "<div class=\"homeitem\">\n";
 
 	print "<h3>Old Projects</h3>\n"; 
-	print "<p>Looking for an old EMFT project? The following projects have moved or graduated:</p>\n";
+	print "<p>Looking for an old EMFT project? The following projects graduate as part of <a href=\"http://wiki.eclipse.org/Ganymede\">Ganymede</a>:</p>\n";
 	print "<ul id=\"oldprojs\">\n";
 	print '<li>Teneo graduates to <a href="http://www.eclipse.org/modeling/emf/?project=teneo#teneo">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
 	print '<li>Net4j graduates to <a href="http://www.eclipse.org/modeling/emf/?project=net4j#net4j">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
 	print '<li>CDO graduates to <a href="http://www.eclipse.org/modeling/emf/?project=cdo#cdo">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-
-	print '<li>Query has graduated  to <a href="http://www.eclipse.org/modeling/emf/?project=query#query">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-	print '<li>Transaction has graduated  to <a href="http://www.eclipse.org/modeling/emf/?project=transaction#transaction">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-	print '<li>Validation has graduated  to <a href="http://www.eclipse.org/modeling/emf/?project=validation#validation">Eclipse Modeling Framework (EMF)</a>.</li>'."\n";
-
-	print '<li>EODM has moved to <a href="http://www.eclipse.org/modeling/mdt/?project=eodm#eodm">Modeling Development Tools (MDT)</a>.</li>'."\n";
-	print '<li>OCL has graduated  to <a href="http://www.eclipse.org/modeling/mdt/?project=ocl#ocl">Modeling Development Tools (MDT)</a>.</li>'."\n";
-	print '<li>JET has moved to <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">Model To Text (M2T)</a>.</li>'."\n";
-	print '<li>JET Editor has been merged into <a href="http://www.eclipse.org/modeling/m2t/?project=jet#jet">M2T-JET</a>.</li>'."\n"; 	
-
 	print "</ul>\n";
 
 	print "</div>\n";
