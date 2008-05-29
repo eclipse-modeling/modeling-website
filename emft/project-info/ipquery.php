@@ -48,7 +48,7 @@ $third_party = array(
 	"org.apache.commons.logging 1.0.4.v200701082340, Orbit, Apache License 2.0, , 1526",
 	"Apache Commons Line Interface 1.0, Orbit, Apache License 2.0, , 1527",
 	"jpox-1.1.7.jar 1.1.7, , Apache 2.0, , 1555",
-	"jdo2-api-2.0.jar 2.0, , Apache 2.0, , 1556", // not being distributed required for build
+	"jdo2-api-2.0.jar 2.0, , Apache 2.0, not distributed; required for build, 1556",
 	"JMS Spec 1.1 (Glassfish) (PB CQ1614), CDDL, , , 1769",
 	"jackrabbit-jcr-rmi Jar 1.3, Orbit, , , 1858",
 	"JavaCC from CVS (20070207) 4.0+, , New BSD, , 1863",
