@@ -37,32 +37,29 @@ $cvscoms = array(
 	"org.eclipse.emf" => array (
 		"emf" => "org.eclipse.emf",
 
+		"cdo" => "org.eclipse.emf.cdo",
 		"query" => "org.eclipse.emf.query",
-		"validation" => "org.eclipse.emf.validation",
 		"transaction" => "org.eclipse.emf.transaction",
 		"emfqtv" => "org.eclipse.emf.emfqtv",
-
-		"teneo" => "org.eclipse.emf.teneo",
-		"cdo" => "org.eclipse.emf.cdo",
 		"net4j" => "org.eclipse.emf.net4j",
-
 		"sdo" => "org.eclipse.emf.ecore.sdo",
+		"teneo" => "org.eclipse.emf.teneo",
+		"validation" => "org.eclipse.emf.validation",
+
 	)
 );
 
 $projects = array(
 	"EMF (Core)" => "emf",
 
-	"Model Query" => "query",
-	"Validation Framework" => "validation",
-	"Model Transaction" => "transaction",
-	"QTV All-In-One" => "emfqtv",
-
-	"Teneo" => "teneo",
 	"CDO" => "cdo",
+	"Model Query" => "query",
+	"Model Transaction" => "transaction",
 	"Net4j" => "net4j",
-
+	"QTV All-In-One" => "emfqtv",
 	"SDO" => "sdo",
+	"Teneo" => "teneo",
+	"Validation Framework" => "validation",
 );
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
