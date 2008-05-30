@@ -134,7 +134,7 @@ org.eclipse.ocl,231515,Adolfo Sanchez-Barbudo Herrera,5,cdamus
 
 Section 3 (Third Party Software),,,,
 
-Name,Location,License,Usage,
-LPG Java Runtime v1.0,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
-LPG Java Runtime v1.0,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
-LPG Java Runtime v1.1,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+CQ,Component,Library Name,CVS Location,License,Usage,
+(No longer in use) 303,OCL,LPG Java Runtime v1.0,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
+(No longer in use) 303,OCL,LPG Java Runtime v1.0,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+1081,OCL,LPG Java Runtime v1.1,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
