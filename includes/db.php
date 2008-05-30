@@ -13,7 +13,7 @@ foreach ($accessfiles as $z)
 	if (is_file("$writableRoot$z"))
 	{
 		require_once("$writableRoot$z");
-		ini_set("display_errors","0"); // ini_set("display_errors","1"); ini_set('error_reporting', E_ALL);
+		ini_set("display_errors","0"); // ini_set("display_errors","1"); ini_set('error_reporting', E_ALL); // show more debug echo
 		if ($tmp = mysql_connect($dbhost, $dbuser, $dbpass))
 		{
 			$connect = $tmp;
@@ -22,7 +22,7 @@ foreach ($accessfiles as $z)
 		}
 		else
 		{
-			print "<div class=\"qerror\">" . mysql_error($connect) . "; [$z]" . "</div>";
+			print "<div class=\"qerror\">" . mysql_error($connect) . "</div>"; // . "; [$z]" // show the filename that's being loaded
 		}
  		ini_set("display_errors","1");
 	}
