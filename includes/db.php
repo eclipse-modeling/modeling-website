@@ -13,11 +13,11 @@ foreach ($accessfiles as $z)
 	if (is_file("$writableRoot$z"))
 	{
 		require_once("$writableRoot$z");
-		ini_set("display_errors","0");
+		ini_set("display_errors","1"); ini_set('error_reporting', E_ALL);
 		if ($tmp = mysql_connect($dbhost, $dbuser, $dbpass))
 		{
 			$connect = $tmp;
-			mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error($connect));
+			mysql_select_db((isset($db) && $db ? $db : "modeling"), $connect) or die(mysql_error($connect)."; [$z]");
 			break;
 		}
 		else
