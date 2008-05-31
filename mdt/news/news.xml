@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="May 13, 2008" showOn="whatsnew">
+    A new <a href="http://wiki.eclipse.org/MDT-Papyrus-Proposal">Papyrus</a> component has been proposed.
+</news>
 <news date="April 9, 2008" showOn="whatsnew">
 	<a href="http://www.eclipse.org/modeling/mdt/uml2/docs/tutorials/EclipseCon2008_Tutorial_Creating_Robust_Scalable_DSL_with_UML.html">EclipseCon 2008 "Creating Robust Scalable DSL's with UML" Tutorial</a> tutorial now available.
 </news>
@@ -173,6 +176,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.27 2008/04/09 20:46:11 jbruck Exp $ -->
+<!-- $Id: news.xml,v 1.28 2008/05/31 02:46:54 khussey Exp $ -->
 
 </doc>
