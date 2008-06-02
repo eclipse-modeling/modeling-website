@@ -9,8 +9,8 @@ foreach ($projects as $name => $suf) {
 		$newsgroups[$name] = array("modeling.emf.".$suf);
 	}
 }
-if (array_key_exists("EMF", $newsgroups)) { unset($newsgroups["EMF"]); } /* override */ 
-$newsgroups["EMF (incl. Query, Transaction, Validation, SDO)"] = array("tools.emf"); /* override */
+if (array_key_exists("EMF (Core)", $newsgroups)) { unset($newsgroups["EMF (Core)"]); } /* override */ 
+$newsgroups["EMF"] = array("tools.emf"); /* override */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
 
 $mailinglists = array();
@@ -20,8 +20,8 @@ foreach ($projects as $name => $suf) {
 		$mailinglists[$name] = array("emf-".$suf.".dev");
 	}
 }
-if (array_key_exists("EMF", $mailinglists)) { unset($mailinglists["EMF"]); } /* override */ 
-$mailinglists["EMF (incl. Query, Transaction, Validation, SDO)"] = array("emf-dev"); /* override */
+if (array_key_exists("EMF (Core)", $mailinglists)) { unset($mailinglists["EMF (Core)"]); } /* override */ 
+$mailinglists["EMF"] = array("emf-dev"); /* override */
 $mailinglists["XSD"] = array("emf-dev", "mdt-xsd.dev"); /* override */
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/newsgroup-mailing-list-common.php");
