@@ -58,8 +58,5 @@ $third_party = array(
 );
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
-if (isset($_GET["ganymede"]))
-{
-	$components = array("search", "compare", "ecoretools", "mint");
-}
+if (isset($_GET["ganymede"])){ $components = array("search", "compare", "ecoretools", "mint", "teneo", "net4j", "cdo"); }
 doIPQueryPage(); ?>
