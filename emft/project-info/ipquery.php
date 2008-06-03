@@ -1,36 +1,39 @@
 <?php
 $product_id = 42; # EMFT
 $committers = array( # taken from http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emft
-	"lbigearde",
-	"jlescot", 
-	"estepper", 
-	"rbihler", 
-	"nickb",
-	"cbrun",
-	"sboehme",
-	"gcannente",
-	"jcote",
-	"seberle",
-	"pfriese",
-	"mgarcia",
-	"lgoubet",
-	"jlescot",
-	"emerks",
-	"pnehrer",
-	"pschonbac",
-	"mtaal",
-	"ttonelli",
-	"cdaly",
-	"sefftinge",
-	"bkolb",
-	"drizov",
-	"dsciamma",
-	"jkohnlein",
-	"jmusset",
-	"ssmith",
-	"kthoms",
-	"atoulme",
-	"mvoelter",
+	"emerks", // PMC
+	"nickb", // releng
+
+	"rbihler", // emf4net
+	"sboehme", // jrcm
+	"jcote", // temporality 
+	"pfriese", // mwe
+	"mgarcia", // emfatic
+	"pschonbac", // mwe 
+	"ttonelli", // servus
+	"cdaly", // emfatic
+	"sefftinge", // mwe
+	"bkolb", // mwe
+	"drizov", // emf4net
+	"jkohnlein", // mwe
+	"kthoms", // mwe
+	"mvoelter", // mwe
+
+	"lbigearde", // search
+	"cbrun", // compare
+	"jmusset", // compare
+	"lgoubet", // compare
+	"atoulme", // compare
+	"jlescot", // ecore tools
+	"gcannente", // ecore tools
+	"dsciamma", // ecore tools
+	"pnehrer", // mint
+	"mtaal", // teneo
+	"seberle", // teneo
+	"ssmith", // teneo
+	"estepper", //cdo
+	"smcduff", // cdo, temporality
+	"mtaal", // teneo, cdo, texo
 );
 
 $extra_IP = array(
@@ -58,5 +61,28 @@ $third_party = array(
 );
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
-if (isset($_GET["ganymede"])){ $components = array("search", "compare", "ecoretools", "mint", "teneo", "net4j", "cdo"); }
+if (isset($_GET["ganymede"])){ 
+	$components = array("search", "compare", "ecoretools", "mint", 
+						"teneo", "net4j", "cdo"); 
+	$committers = array(
+		"emerks", // PMC
+		"nickb", // releng
+		
+		"lbigearde", // search
+		"cbrun", // compare
+		"jmusset", // compare
+		"lgoubet", // compare
+		"atoulme", // compare
+		"jlescot", // ecore tools
+		"gcannente", // ecore tools
+		"dsciamma", // ecore tools
+		"pnehrer", // mint
+		"mtaal", // teneo
+		"seberle", // teneo
+		"ssmith", // teneo
+		"estepper", //cdo
+		"smcduff", // cdo, temporality
+		"mtaal", // teneo, cdo, texo
+	); 
+}
 doIPQueryPage(); ?>

@@ -10,6 +10,12 @@ $committers = array(
 	"bportier",
 	"khussey",
 	"cdamus",
+	"estepper",
+	"smcduff",
+	"mtaal", 
+	"seberle",
+	"ssmith",
+	
 );
 
 $extra_IP = array(
