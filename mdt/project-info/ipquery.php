@@ -35,4 +35,6 @@ $third_party = array(
 	"LPG Java Runtime v1.1,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle",
 );
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); doIPQueryPage(); ?>
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
+if (isset($_GET["ganymede"])){ $components = array("ocl", "uml2", "uml2tools", "xsd"); }
+doIPQueryPage(); ?>
