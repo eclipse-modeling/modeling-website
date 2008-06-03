@@ -10,16 +10,41 @@ $showobsolete = isset($_GET["showobsolete"]);
 $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "bugid";
-$component = isset($_GET["component"]) ? preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"])) : ""; 
+
+$components = array();
+if (isset($_GET["component"]))
+{
+	$components = array(preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"])));
+}
+else if (isset($_GET["components"]))
+{
+	$components = $_GET["components"];
+	foreach ($components as $i => $c)
+	{
+		$components[$i] = preg_replace("#[%\\\"\';]+#", "", urldecode($c));
+	}
+}
+
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
 {
 	$sortBy = "bugid";
 }
  
+function getComponentQueryString()
+{
+	global $components;
+	$componentQueryString = "";
+	foreach ($components as $component)
+	{
+		$componentQueryString .= "&amp;components[]=" . urlencode($component);	
+	}
+	return $componentQueryString;
+}
+
 function doIPQuery()
 {
-	global $bugClass, $product_id, $sortBy, $component, $showbuglist, $showobsolete;
+	global $bugClass, $product_id, $sortBy, $components, $showbuglist, $showobsolete;
 	$data = array();
 	if (!is_file($bugClass)) 
 	{
@@ -28,6 +53,14 @@ function doIPQuery()
 	else
 	{
 	
+		$componentSQL = "";
+		foreach ($components as $component)
+		{
+			$componentSQL .= $componentSQL ? "OR " : ""; 
+			$componentSQL .= "components.name = '$component' ";	
+		}
+		$componentSQL = $componentSQL ? "(" . $componentSQL . ") AND " : "";
+
 		# Connect to database
 		$dbc 	= new DBConnectionBugs();
 		$dbh 	= $dbc->connect();
@@ -66,7 +99,7 @@ function doIPQuery()
 							attachments.bug_id = bugs.bug_id AND 
 							attachments.attach_id = attach_data.id AND 
 							components.id = bugs.component_id AND
-							" . ($component ? "components.name = '$component' AND " : "") . " 
+							" . $componentSQL . " 
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							profiles.userid = attachments.submitter_id AND 
@@ -86,7 +119,7 @@ function doIPQuery()
 							longdescs, bugs, components, keywords, profiles 
 					WHERE
 							components.id = bugs.component_id AND   
-							" . ($component ? "components.name = '$component' AND " : "") . " 
+							" . $componentSQL . " 
 							bugs.bug_id = keywords.bug_id AND 
 							keywords.keywordid = 22 AND 
 							bugs.product_id = $product_id AND 
@@ -122,17 +155,16 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
-	
-
-	global $sortBy, $component, $showobsolete;
+	global $sortBy, $showobsolete;
+	$componentQueryString = getComponentQueryString();
 	$cnt = 0;
 	if ($isFormatted)
 	{	
 		print "		<table>\n			<tr>" .
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "component" ? " style='text-decoration:underline'" : "") . " href='?sortBy=component" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugid" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugid" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></acronym></th>" . 
-				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . ($component ? "&amp;component=" . $component : "") . ($showobsolete ? "&amp;showobsolete" : "") . "'>Size</a></acronym></th>" . 
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "component" ? " style='text-decoration:underline'" : "") . " href='?sortBy=component" . $componentQueryString . ($showobsolete ? "&amp;showobsolete" : "") . "'>Component</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "bugid" ? " style='text-decoration:underline'" : "") . " href='?sortBy=bugid" . $componentQueryString . ($showobsolete ? "&amp;showobsolete" : "") . "'>Bug #</a></acronym></th>" .
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "contact" ? " style='text-decoration:underline'" : "") . " href='?sortBy=contact" . $componentQueryString . ($showobsolete ? "&amp;showobsolete" : "") . "'>Contributor</a></acronym></th>" . 
+				"<th><acronym title=\"click to sort\"><a" . ($sortBy == "size" ? " style='text-decoration:underline'" : "") . " href='?sortBy=size" . $componentQueryString . ($showobsolete ? "&amp;showobsolete" : "") . "'>Size</a></acronym></th>" . 
 				"<th>Description</th></tr>\n";
 	}
 	$bgcol = "#FFFFEE";
@@ -148,7 +180,8 @@ function printIPQuery($data, $isFormatted = true)
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($component && $component == $myrow['component'] ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . ($component && $component == $myrow['component'] ? "" : "&amp;component=" . urlencode($myrow['component'])) . "\">" . $myrow['component'] . "</a></acronym></td>" .
+					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($componentQueryString && strstr($componentQueryString, $myrow['component'])!==false ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . 
+					(strstr($componentQueryString, $myrow['component'])!==false ? str_replace("&amp;component=" . urlencode($myrow['component']), "", $componentQueryString) : $componentQueryString) . "\">" . $myrow['component'] . "</a></acronym></td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? pretty_size($myrow['size']) : "") . "</td>" .
@@ -252,8 +285,10 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $incubating, $isFormatted, $showbuglist, $showobsolete, $sortBy, $component, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $incubating, $isFormatted, $showbuglist, $components, $showobsolete, $sortBy, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
 	sort($committers); reset($committers);
+
+	$componentQueryString = getComponentQueryString();
 
 	if ($showbuglist)
 	{
@@ -359,14 +394,17 @@ function doIPQueryPage()
 				{
 					$bits = explode(",", $tp);
 					$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-					print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-						($hasComponent ? "<td>" . (isset($bits[5]) ? "<a href=\"http://www.eclipse.org/$PR/?project=" . trim($bits[5]) . "\">" . trim($bits[5]) . "</a>" : "") . "</td>" : "") .
-						"<td>" . (isset($bits[4]) ? cqlink(trim($bits[4]), $bits[0]) : $bits[0]) . "</td>" .
-						"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
-						"<td>" . $bits[2] . "</td>" .
-						"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
-						"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "?") . "</td>" .
-						"</tr>\n";
+					if (sizeof($components) < 1 || (isset($bits[5]) && in_array(trim($bits[5]), $components)))
+					{
+						print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
+							($hasComponent ? "<td>" . (isset($bits[5]) ? "<a href=\"http://www.eclipse.org/$PR/?project=" . trim($bits[5]) . "\">" . trim($bits[5]) . "</a>" : "") . "</td>" : "") .
+							"<td>" . (isset($bits[4]) ? cqlink(trim($bits[4]), $bits[0]) : $bits[0]) . "</td>" .
+							"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
+							"<td>" . $bits[2] . "</td>" .
+							"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
+							"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "?") . "</td>" .
+							"</tr>\n";
+					}
 				}
 				print "</table>";
 			} 
@@ -417,15 +455,15 @@ function doIPQueryPage()
 			<a name="Note"></a><h6>Data Filters</h6>
 			<ul>
 <?php			if (!$showobsolete) { 
-					print '<li><a href="?showobsolete'  . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy . '">Show Obsolete Patches</a></li>';
+					print '<li><a href="?showobsolete'  . $componentQueryString . '&amp;sortBy=' . $sortBy . '">Show Obsolete Patches</a></li>';
 				} 
 				else
 				{
-					print '<li><a href="?' .  ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy . '">Hide Obsolete Patches</a></li>';
+					print '<li><a href="?' . $componentQueryString . '&amp;sortBy=' . $sortBy . '">Hide Obsolete Patches</a></li>';
 				}?>
 				<p>
-				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy; ?>">View unformatted data</a></li>
-				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . ($component ? "&amp;component=" . $component : "") . '&amp;sortBy=' . $sortBy; ?>">View bugs only</a></li>
+				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . $componentQueryString . '&amp;sortBy=' . $sortBy; ?>">View unformatted data</a></li>
+				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . $componentQueryString . '&amp;sortBy=' . $sortBy; ?>">View bugs only</a></li>
 			</ul>
 		</div>
 		<div class="sideitem">

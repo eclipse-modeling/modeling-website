@@ -57,4 +57,9 @@ $third_party = array(
 	"wsdl4j-1.6.2.jar 1.6.2, Orbit, , , 2300"
 );
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); doIPQueryPage(); ?>
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
+if (isset($_GET["ganymede"]))
+{
+	$components = array("search", "compare", "ecoretools", "mint");
+}
+doIPQueryPage(); ?>
