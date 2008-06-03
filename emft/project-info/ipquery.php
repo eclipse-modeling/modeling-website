@@ -1,39 +1,51 @@
 <?php
 $product_id = 42; # EMFT
 $committers = array( # taken from http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emft
-	"emerks", // PMC
-	"nickb", // releng
+	"emerks" => "PMC",
+	"nickb" => "releng",
 
-	"rbihler", // emf4net
-	"sboehme", // jrcm
-	"jcote", // temporality 
-	"pfriese", // mwe
-	"mgarcia", // emfatic
-	"pschonbac", // mwe 
-	"ttonelli", // servus
-	"cdaly", // emfatic
-	"sefftinge", // mwe
-	"bkolb", // mwe
-	"drizov", // emf4net
-	"jkohnlein", // mwe
-	"kthoms", // mwe
-	"mvoelter", // mwe
+	"drizov" => "emf4net",
+	"rbihler" => "emf4net",
+	"mboettger" => "emf4net",
+	
+	"sboehme" => "jrcm",
+	
+	"jcote" => "temporality",
+	 
+	"ttonelli" => "servus",
+	
+	"mgarcia" => "emfatic",
+	"cdaly" => "emfatic",
 
-	"lbigearde", // search
-	"cbrun", // compare
-	"jmusset", // compare
-	"lgoubet", // compare
-	"atoulme", // compare
-	"jlescot", // ecore tools
-	"gcannente", // ecore tools
-	"dsciamma", // ecore tools
-	"pnehrer", // mint
-	"mtaal", // teneo
-	"seberle", // teneo
-	"ssmith", // teneo
-	"estepper", //cdo
-	"smcduff", // cdo, temporality
-	"mtaal", // teneo, cdo, texo
+	//"ahaase" => "mwe",
+	//"fallilaire" => "mwe",
+	"pfriese" => "mwe",
+	"pschonbac" => "mwe",
+	"sefftinge" => "mwe",
+	"bkolb" => "mwe",
+	//"jkohnlein" => "mwe",
+	//"kthoms" => "mwe",
+	//"mvoelter" => "mwe",
+
+	"lbigearde" => "search",
+
+	"cbrun" => "compare",
+	//"jmusset" => "compare",
+	"lgoubet" => "compare",
+	//"atoulme" => "compare",
+
+	"jlescot" => "ecoretools",
+	"gcannente" => "ecoretools",
+	"dsciamma" => "ecoretools",
+
+	"pnehrer" => "mint",
+
+	//"seberle" => "teneo",
+	//"ssmith" => "teneo",
+	"mtaal" => "teneo, cdo, texo",
+
+	"estepper" => "net4j, cdo",
+	"smcduff" => "cdo, temporality",
 );
 
 $extra_IP = array(
@@ -64,25 +76,6 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php
 if (isset($_GET["ganymede"])){ 
 	$components = array("search", "compare", "ecoretools", "mint", 
 						"teneo", "net4j", "cdo"); 
-	$committers = array(
-		"emerks", // PMC
-		"nickb", // releng
-		
-		"lbigearde", // search
-		"cbrun", // compare
-		"jmusset", // compare
-		"lgoubet", // compare
-		"atoulme", // compare
-		"jlescot", // ecore tools
-		"gcannente", // ecore tools
-		"dsciamma", // ecore tools
-		"pnehrer", // mint
-		"mtaal", // teneo
-		"seberle", // teneo
-		"ssmith", // teneo
-		"estepper", //cdo
-		"smcduff", // cdo, temporality
-		"mtaal", // teneo, cdo, texo
-	); 
+	$committers = filterCommitters($committers, $components); 
 }
 doIPQueryPage(); ?>

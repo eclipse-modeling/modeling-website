@@ -286,7 +286,7 @@ function doProductIDQuery()
 function doIPQueryPage()
 {
 	global $incubating, $isFormatted, $showbuglist, $components, $showobsolete, $sortBy, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
-	sort($committers); reset($committers);
+	ksort($committers); reset($committers);
 
 	$componentQueryString = getComponentQueryString();
 
@@ -313,7 +313,7 @@ function doIPQueryPage()
 	{
 		header("Content-type: text/plain\n\n");
 		print "Committers (Section 1)\n";
-		foreach ($committers as $committer)
+		foreach ($committers as $committer => $componentList)
 		{
 			print $committer."\n";
 		}
@@ -398,7 +398,7 @@ function doIPQueryPage()
 					{
 						print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 							($hasComponent ? "<td>" . (isset($bits[5]) ? "<a href=\"http://www.eclipse.org/$PR/?project=" . trim($bits[5]) . "\">" . trim($bits[5]) . "</a>" : "") . "</td>" : "") .
-							"<td>" . (isset($bits[4]) ? cqlink(trim($bits[4]), $bits[0]) : $bits[0]) . "</td>" .
+							"<td>" . cqlink(isset($bits[4]) ? trim($bits[4]) : "", $bits[0]) . "</td>" .
 							"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
 							"<td>" . $bits[2] . "</td>" .
 							"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
@@ -430,11 +430,13 @@ function doIPQueryPage()
 		<div class="sideitem">
 			<h6>Committers (Section 1)</h6>
 			<ul>
-	<?php foreach ($committers as $committer) 
+	<?php foreach ($committers as $committer => $componentList) 
 	{
-		print "<li><a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a></li>\n";
+		print "<li>" . ($componentList ? "<acronym title=\"$componentList\">" : "") . 
+			"<a href=\"/$PR/searchcvs.php?q=author:$committer\">$committer</a>" . ($componentList ? "</acronym>" : ""). "</li>\n";
 	} ?>
 			</ul>
+			<p align="right"><?php print sizeof($committers); ?> committers found</p>
 		</div>
 		<div class="sideitem">
 			<h6>Developers (Section 2)</h6>
@@ -493,6 +495,23 @@ function doIPQueryPage()
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 }
 
+function filterCommitters($committers, $components)
+{
+	$out = array();
+	$components[] = "PMC";
+	$components[] = "releng";
+	foreach ($components as $component)
+	{
+		foreach ($committers as $committer => $componentList)
+		{
+			if (preg_match("#$component#", $componentList))
+			{
+				$out[$committer] = $componentList;
+			}
+		}
+	}
+	return $out;
+}
 function pretty_size($bytes)
 {
 	$sufs= array (
@@ -530,6 +549,8 @@ function pretty_print($in, $split, $num)
 
 function cqlink($num, $label = "")
 {
-	return "<acronym title=\"Contribution Questionnaire #$num\"><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=$num\">" . ($label ? $label : $num) . "</a></acronym>";
+	return $num ? 
+		"<acronym title=\"Contribution Questionnaire #$num\"><a href=\"https://dev.eclipse.org/ipzilla/show_bug.cgi?id=$num\">" . ($label ? $label : $num) . "</a></acronym>" :
+		($label ? "<acronym title=\"Contribution Questionnaire Search\"><a href=\"https://dev.eclipse.org/ipzilla/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=" . urlencode($label) . "&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=\">" . $label . "</a></acronym>" : $num);
 }
 ?>
