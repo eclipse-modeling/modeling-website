@@ -5,14 +5,14 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-scripts.p
 if (is_array($projects) && (!isset($proj) || !$proj))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
-	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :	
-		(isset($defaultProj) ? $defaultProj : "")); # default
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :	""); # default
 }
 else
 {
 	$proj = "";
 }
 
+if (!$proj && isset($defaultProj)) { $proj = $defaultProj; }
 $projct = preg_replace("#^/#", "", $proj);
 $topProj = preg_replace("#.+/(.+)#","$1", $PR);
 
