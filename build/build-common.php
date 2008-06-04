@@ -170,11 +170,15 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
 						</tr>
@@ -182,12 +186,10 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>
 							</td>
 						</tr>
 						<tr>
@@ -865,6 +867,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"17teneo" => "emf-teneo-|emft-teneo-",
 		"16compare" => "emft-compare-",
 		"15uml2tools" => "mdt-uml2tools-",
 		"14ecoretools" => "emft-ecoretools-",
@@ -872,7 +875,7 @@ function findCatg($url) {
 		"12wtp" => "wtp-",
 		"11gmf" => "GMF-|gmf-",
 		"10gef" => "GEF-",
-		"09net4j" => "emft-net4j-",
+		"09net4j" => "emf-net4j-|emft-net4j-",
 		"08validation" => "emf-validation-|emft-validation-",
 		"07transaction" => "emf-transaction-|emft-transaction-",
 		"06query" => "emf-query-|emft-query-",
