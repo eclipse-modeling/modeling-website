@@ -132,7 +132,7 @@ else
 }
 
 $vpicker_all = $vpicker;
-$version_requested = isset($_GET["version"]) ? $_GET["version"] : "";
+$version_requested = isset($_GET["version"]) ? $_GET["version"] : "HEAD";
 if (!isset($_GET["version"]) || (preg_match("/^\d\.\d\.x$/", $_GET["version"]) && !isset($streams[$_GET["version"]])))
 {
 	if (sizeof($vpicker) > 0)
