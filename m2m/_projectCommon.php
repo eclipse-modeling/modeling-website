@@ -1,7 +1,7 @@
 <?php
-
 $PR = "modeling/m2m";
 $projectName = "M2M";
+$defaultProj = "/atl";
 
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"]));
 $isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";

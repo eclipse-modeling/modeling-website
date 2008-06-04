@@ -1,9 +1,9 @@
 <?php
-
 $Nav->setLinkList(null);
 
 $PR = "modeling/m2t";
 $projectName = "M2T";
+$defaultProj = "/jet";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;

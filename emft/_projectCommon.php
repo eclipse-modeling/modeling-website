@@ -3,6 +3,7 @@ $Nav->setLinkList(null);
 
 $PR = "modeling/emft";
 $projectName = "EMFT";
+$defaultProj = "/compare";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
