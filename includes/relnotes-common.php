@@ -33,23 +33,23 @@ if (file_exists($f)) { include_once($f); }
 
 $projectsf = array_flip(array_diff($projects, $extraprojects, $nodownloads)); // suppress entries if no downloads or extra project (like qtv-all-in-one)
 $components = components($cvscoms);
-$projectAndVersion = "?project=$projct&amp;version=" . htmlspecialchars($_GET["version"]);
+$projectAndVersion = "?project=$projct" . (isset($_GET["version"]) ? "&amp;version=" . htmlspecialchars($_GET["version"]) : "");
 
 /* set defaults */
 $cvscom = "";
-$tmp = array_keys($cvsprojs);
+$tmp = array_keys($cvsprojs); 
 if (sizeof($tmp) > 0)
 {
-	$proj = $tmp[0];
-	$cvsproj = $cvsprojs[$tmp[0]];
+	$proj = (isset($defaultProj)) ? preg_replace("#^/#", "", $defaultProj) : $tmp[0];
+	$cvsproj = $cvsprojs[$proj];
 }
 else
 {
-	$tmp = array_keys($cvscoms);
-	$tmp2 = array_keys($cvscoms[$tmp[0]]);
-	$proj = $tmp2[0];
+	$tmp = array_keys($cvscoms); #print "tmp="; print_r($tmp); print "<br/>";
+	$tmp2 = array_keys($cvscoms[$tmp[0]]); #print "tmp2="; print_r($tmp2); print "<br/>";
+	$proj = (isset($defaultProj)) ? preg_replace("#^/#", "", $defaultProj) : $tmp2[0];
 	$cvsproj = $tmp[0];
-	$cvscom = $cvscoms[$tmp[0]][$tmp2[0]];
+	$cvscom = $cvscoms[$cvsproj][$proj];
 }
 
 $typeFilter = "";
@@ -68,7 +68,6 @@ if (isset($_GET["types"]) && preg_match("#[RIMS,]+#", $_GET["types"]))
 }
 
 pick_project($proj, $cvsproj, $cvsprojs, $cvscom, $cvscoms, $components);
-
 ob_start();
 
 $header = "";
@@ -133,7 +132,7 @@ else
 }
 
 $vpicker_all = $vpicker;
-$version_requested = $_GET["version"];
+$version_requested = isset($_GET["version"]) ? $_GET["version"] : "";
 if (!isset($_GET["version"]) || (preg_match("/^\d\.\d\.x$/", $_GET["version"]) && !isset($streams[$_GET["version"]])))
 {
 	if (sizeof($vpicker) > 0)
@@ -395,7 +394,8 @@ function release_notes($vpicker, $cvsproj, $cvscom, $cvsprojs, $components, $pro
 	else
 	{
 		//TODO: don't say 'nothing found' if past releases exist
-		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $projectsf[$proj] $version</h3><p>" . ($connect ? "No builds found for $projectsf[$proj] $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n" . "</div>\n";
+		$label = isset($projectsf[$proj]) ? $projectsf[$proj] : "";
+		$header .= "<div class=\"homeitem3col\">\n<h3>No builds found for $label $version</h3><p>" . ($connect ? "No builds found for $label $version. Try <a href=\"http://www.eclipse.org/modeling/mdt/searchcvs.php?q=file%3A$proj+days%3A7\">Search CVS</a> instead or choose another branch/version." : "Error: could not connect to database!") . "</p>\n" . "</div>\n";
 	}
 	return array($header, $releaseContents, $tnum);
 }
@@ -588,7 +588,7 @@ function version_picker($vpicker, $rbuild, $version, $preversion, $cvsproj, $cvs
 	$out .= "<input type=\"submit\" value=\"Go!\"/>\n";
 	$out .= "</p>\n";
 
-	$out .= "<input type=\"hidden\" value=\"" . $_GET["types"] . "\" name=\"types\"/>\n";
+	$out .= "<input type=\"hidden\" value=\"" . (isset($_GET["types"]) ? $_GET["types"] : "") . "\" name=\"types\"/>\n";
 	$out .= "</form>\n";
 	$out .= "</div>\n";
 
