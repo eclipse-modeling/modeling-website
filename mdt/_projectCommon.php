@@ -71,8 +71,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
 $regs = null;
 
-if (!isset($_GET["project"]) || !$_GET["project"]) { $_GET["project"] = "uml2"; } # default to uml2
-
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
 $projct= preg_replace("#^/#", "", $proj);
 
