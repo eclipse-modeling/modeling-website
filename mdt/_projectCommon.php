@@ -1,5 +1,4 @@
 <?php
-
 $Nav->setLinkList(null);
 
 $PR = "modeling/mdt";

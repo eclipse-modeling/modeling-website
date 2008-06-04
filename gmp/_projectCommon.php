@@ -3,6 +3,7 @@ $Nav->setLinkList(null);
 
 $PR = "modeling/gmf";
 $projectName = "GMF";
+$defaultProj = "/gmf";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
