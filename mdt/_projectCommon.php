@@ -4,6 +4,7 @@ $Nav->setLinkList(null);
 
 $PR = "modeling/mdt";
 $projectName = "MDT";
+$defaultProj = "/uml2";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
@@ -72,6 +73,7 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 $regs = null;
 
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
+if (!$proj) $proj = $defaultProj;
 $projct= preg_replace("#^/#", "", $proj);
 
 $buildtypes = array(

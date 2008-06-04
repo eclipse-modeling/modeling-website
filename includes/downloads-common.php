@@ -2,12 +2,11 @@
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-scripts.php");
 
-if (is_array($projects))
+if (is_array($projects) && (!isset($proj) || !$proj))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
-	$tmp = array_keys($projectArray);
-	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :
-		(sizeof($tmp) > 0 && isset($projectArray[$tmp[0]]) ? $projectArray[$tmp[0]] : ""));
+	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :	
+		(isset($defaultProj) ? $defaultProj : "")); # default
 }
 else
 {
