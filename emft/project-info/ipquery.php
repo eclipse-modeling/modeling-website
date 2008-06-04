@@ -40,12 +40,9 @@ $committers = array( # taken from http://www.eclipse.org/projects/project_summar
 
 	"pnehrer" => "mint",
 
-	//"seberle" => "teneo",
-	//"ssmith" => "teneo",
-	"mtaal" => "teneo, cdo, texo",
+	"mtaal" => "texo",
 
-	"estepper" => "net4j, cdo",
-	"smcduff" => "cdo, temporality",
+	"smcduff" => "temporality",
 );
 
 $extra_IP = array(
@@ -86,8 +83,7 @@ $third_party = array(
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 if (isset($_GET["ganymede"])){ 
-	$components = array("search", "compare", "ecoretools", "mint", 
-						"teneo", "net4j", "cdo"); 
+	$components = array("search", "compare", "ecoretools", "mint"); 
 	$committers = filterCommitters($committers, $components); 
 }
 doIPQueryPage(); ?>
