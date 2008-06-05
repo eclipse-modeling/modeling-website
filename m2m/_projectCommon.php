@@ -52,7 +52,7 @@ $extraprojects = array(); //components with only downloads, no info yet, "pretty
 $nodownloads = array("qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("atl"); //components without newsgroup
 $nomailinglist = array("atl"); //components without mailinglist
-$incubating = array("qvtoml", "qvtr"); // components that are incubating
+$incubating = array("qvtr"); // components that are incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
