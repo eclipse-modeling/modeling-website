@@ -1,41 +1,17 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-	#*****************************************************************************
-	#
-	# index.php
-	#
-	# Author: 		Richard Gronback
-	# Date:			2008-02-12
-	#
-	# Description: Amalgam project introductory page
-	#
-	#
-	#****************************************************************************
-	
-	#
-	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Amalgam";
-	$pageKeywords	= "modeling,packaging";
-	$pageAuthor		= "Richard Gronback";
-	
-	# Add page-specific Nav bars here
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
-	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
-	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-	# End: page-specific settings
-	#
-		
-	# Paste your HTML content between the EOHTML markers!	
-	$html = <<<EOHTML
+ob_start();
+?>
 
 	<div id="midcolumn">
 		<table width="100%">
 		<tr><td>&nbsp;</td></tr>
 			<tr>
 				<td align="top">
-				The Amalgamation project will provide improved packaging, integration, and usability of Modeling project components. See
+				The Amalgamation project provides improved packaging, integration, and usability of Modeling project components. See
 				the project <a href="http://www.eclipse.org/proposals/amalgamation/">proposal</a> for more detail until this website becomes fully operational.
 				</td>
 			</tr>
@@ -76,9 +52,14 @@
 	</div>
 </div>
 
-EOHTML;
+<?php
+$html = ob_get_contents();
+ob_end_clean();
 
+$pageTitle = "Graphical Modeling Framework";
+$pageKeywords = "eclipse,project,graphical,modeling,model-driven";
+$pageAuthor = "Richard C. Gronback, Nick Boldt";
 
-	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://www.eclipse.rog/modeling/includes/index.css"/>' . "\n");
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
