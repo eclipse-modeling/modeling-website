@@ -110,6 +110,6 @@ $pageTitle = "Graphical Modeling Framework";
 $pageKeywords = "eclipse,project,graphical,modeling,model-driven";
 $pageAuthor = "Richard C. Gronback, Nick Boldt";
 
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://www.eclipse.rog/modeling/includes/index.css"/>' . "\n");
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://www.eclipse.org/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
