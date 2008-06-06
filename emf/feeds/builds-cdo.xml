@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>cdo Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-cdo.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-05-28T19:20:56Z</updated>
+  <updated>2008-06-06T07:23:24Z</updated>
   <author>
     <name>cdo Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-cdo.xml</id>
+  <entry>
+    <title>[announce] cdo 1.0.0RC3 (S200806060222) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=S200806060222#S200806060222"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=S200806060222#S200806060222</id>
+    <updated>2008-06-06T07:23:24Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806060222" href="http://www.eclipse.org/modeling/emf/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=S200806060222#S200806060222" type="S" version="1.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/cdo/downloads/drops/1.0.0/S200806060222/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=cdo</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=cdo&amp;version=S200806060222
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-cdo-SDK-1.0.0RC3.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/cdo/downloads/drops/1.0.0/S200806060222/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC3-200805301730/eclipse-SDK-3.4RC3-linux-gtk.tar.gz</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200806021643/emf-sdo-xsd-SDK-2.4.0RC3.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/net4j/downloads/drops/1.0.0/S200806051609/emf-net4j-SDK-1.0.0RC3a.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/teneo/downloads/drops/1.0.0/S200806030430/emft-teneo-SDK-1.0.0RC3.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] cdo 1.0.0RC2 (S200805281310) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=cdo&amp;showAll=1&amp;hlbuild=S200805281310#S200805281310"/>
