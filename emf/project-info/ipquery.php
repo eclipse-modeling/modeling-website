@@ -10,7 +10,7 @@ $committers = array(
 	"cdamus" => "query, validation, transaction",
 	"estepper" => "net4j, cdo",
 	"smcduff" => "cdo",
-	"mtaal" => "teneo", 
+	"mtaal" => "teneo, cdo", 
 	"seberle" => "teneo",
 	"ssmith" => "teneo",
 	
