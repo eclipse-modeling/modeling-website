@@ -8,7 +8,7 @@ $committers = array( # taken from http://www.eclipse.org/projects/project_summar
 	"rbihler" => "emf4net",
 	"mboettger" => "emf4net",
 	
-	"sboehme" => "jrcm",
+	"sboehme" => "jcrm",
 	
 	"jcote" => "temporality",
 	 
@@ -49,7 +49,7 @@ $extra_IP = array(
 );
 
 $third_party = array(
-	"Apache Commons Logging Jar 1.0.4, Orbit, Apache 2.0, ?, 224, ?",
+	"Apache Commons Logging Jar 1.0.4, Orbit, Apache 2.0, ?, 224, ",
 
 	"JavaCC from CVS (20070207) 4.0+, , New BSD, , 1863, emfatic",
 	"ANTLR runtime 3.0 (PB CQ1921), Orbit, , , 2218, emfatic",
@@ -81,9 +81,8 @@ $third_party = array(
 	//"Apache Tomcat 3.2.4, Historical Approval, Apache 2.0, moved to M2T per CQ 2335, 336, jet",
 );
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 if (isset($_GET["ganymede"])){ 
 	$components = array("search", "compare", "ecoretools", "mint"); 
-	$committers = filterCommitters($committers, $components); 
 }
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 doIPQueryPage(); ?>

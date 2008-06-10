@@ -11,8 +11,8 @@ $isFormatted = !isset($_GET["unformatted"]);
 $debug = isset($_GET["debug"]);
 $sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact|size#", $_GET["sortBy"], $m) ? $m[0] : "bugid";
 
-$components = array();
-if (isset($_GET["component"]))
+$components = !isset($components) ? array() : $components;
+if (isset($_GET["component"]) && $_GET["component"])
 {
 	$components = array(preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"])));
 }
@@ -21,9 +21,17 @@ else if (isset($_GET["components"]))
 	$components = $_GET["components"];
 	foreach ($components as $i => $c)
 	{
-		$components[$i] = preg_replace("#[%\\\"\';]+#", "", urldecode($c));
+		if ($c)
+		{
+			$components[$i] = preg_replace("#[%\\\"\';]+#", "", urldecode($c));
+		}
+		else
+		{
+			unset($components[$i]);
+		}
 	}
 }
+$committers = filterCommitters($committers, $components);
 
 $showbuglist = isset($_GET["showbuglist"]);
 if ($showbuglist) 
@@ -155,7 +163,7 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
-	global $sortBy, $showobsolete;
+	global $sortBy, $showobsolete, $components;
 	$componentQueryString = getComponentQueryString();
 	$cnt = 0;
 	if ($isFormatted)
@@ -179,9 +187,12 @@ function printIPQuery($data, $isFormatted = true)
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
+			$thisComponent = sizeof($components) == 1 && $components[0] == $myrow['component'];
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-					"<td><acronym title=\"click to filter/unfilter\"><a style=\"font-size:8px;" . ($componentQueryString && strstr($componentQueryString, $myrow['component'])!==false ? "text-decoration:underline" : "") . "\" href=\"?sortBy=$sortBy" . ($showobsolete ? "&amp;showobsolete" : "") . 
-					(strstr($componentQueryString, $myrow['component'])!==false ? str_replace("&amp;component=" . urlencode($myrow['component']), "", $componentQueryString) : $componentQueryString) . "\">" . $myrow['component'] . "</a></acronym></td>" .
+					"<td><acronym title=\"click to filter/unfilter this component\">" .
+						"<a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). ($thisComponent ? "" : "&amp;component=" . $myrow['component']) . "\">" . $myrow['component'] . "</a></acronym> " .
+						"<a href=\"http://www.eclipse.org/$PR/?project=" . $myrow['component'] . "\"><img src=\"/modeling/images/link-out.png\"/></a>" . 
+					"</td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
 					"<td>" . (isset($myrow['size']) && $myrow['size'] ? pretty_size($myrow['size']) : "") . "</td>" .
@@ -335,7 +346,11 @@ function doIPQueryPage()
 		{
 			foreach ($third_party as $tp)
 			{
-				print "$tp\n";
+				$bits = explode(",", $tp);
+				if (sizeof($components) < 1 || (isset($bits[5]) && in_array(trim($bits[5]), $components)))
+				{
+					print "$tp\n";
+				}
 			}
 		}
 		exit;
@@ -393,16 +408,20 @@ function doIPQueryPage()
 				foreach ($third_party as $tp)
 				{
 					$bits = explode(",", $tp);
+					$bits[4] = trim($bits[4]);
+					$bits[5] = trim($bits[5]);
 					$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
-					if (sizeof($components) < 1 || (isset($bits[5]) && in_array(trim($bits[5]), $components)))
+					if (sizeof($components) < 1 || (isset($bits[5]) && in_array($bits[5], $components)))
 					{
 						print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
-							($hasComponent ? "<td>" . (isset($bits[5]) ? "<a href=\"http://www.eclipse.org/$PR/?project=" . trim($bits[5]) . "\">" . trim($bits[5]) . "</a>" : "") . "</td>" : "") .
-							"<td>" . cqlink(isset($bits[4]) ? trim($bits[4]) : "", $bits[0]) . "</td>" .
+							($hasComponent ? "<td>" . (isset($bits[5]) && $bits[5] ? 
+								"<acronym title=\"click to filter/unfilter this component\"><a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && $components[0] == $bits[5] ? "" : "&amp;component=" . $bits[5]) . "\">" . $bits[5] . "</a></acronym> " .
+								"<a href=\"http://www.eclipse.org/$PR/?project=" . $bits[5] . "\"><img src=\"/modeling/images/link-out.png\"/></a>" : "") . "</td>" : "") .
+							"<td>" . cqlink(isset($bits[4]) && $bits[4] ? $bits[4] : "", $bits[0]) . "</td>" .
 							"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
 							"<td>" . $bits[2] . "</td>" .
 							"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
-							"<td align=\"right\">" . (isset($bits[4]) ? cqlink(trim($bits[4])) : "?") . "</td>" .
+							"<td align=\"right\">" . (isset($bits[4]) && $bits[4] ? cqlink($bits[4]) : "?") . "</td>" .
 							"</tr>\n";
 					}
 				}
@@ -456,16 +475,12 @@ function doIPQueryPage()
 		<div class="sideitem">
 			<a name="Note"></a><h6>Data Filters</h6>
 			<ul>
-<?php			if (!$showobsolete) { 
-					print '<li><a href="?showobsolete'  . $componentQueryString . '&amp;sortBy=' . $sortBy . '">Show Obsolete Patches</a></li>';
-				} 
-				else
-				{
-					print '<li><a href="?' . $componentQueryString . '&amp;sortBy=' . $sortBy . '">Hide Obsolete Patches</a></li>';
-				}?>
+				<li><a href="?<?php print $componentQueryString . '&amp;sortBy=' . $sortBy . (!$showobsolete ? '&amp;showobsolete">Show' : '">Hide') ?> Obsolete Patches</a></li>
 				<p>
 				<li><a href="?unformatted<?php print ($showobsolete ? "&amp;showobsolete" : "") . $componentQueryString . '&amp;sortBy=' . $sortBy; ?>">View unformatted data</a></li>
 				<li><a href="?showbuglist<?php print ($showobsolete ? "&amp;showobsolete" : "") . $componentQueryString . '&amp;sortBy=' . $sortBy; ?>">View bugs only</a></li>
+				<p>
+				<li><a href="?<?php print ($showobsolete ? "showobsolete&amp;" : "") . 'sortBy=' . $sortBy . (isset($_GET["ganymede"]) ? '">Show all components' : '&amp;ganymede">Show Ganymede components'); ?></a></li>
 			</ul>
 		</div>
 		<div class="sideitem">
@@ -497,6 +512,10 @@ function doIPQueryPage()
 
 function filterCommitters($committers, $components)
 {
+	if (!isset($components) || sizeof($components) < 1)
+	{
+		return $committers;
+	}
 	$out = array();
 	$components[] = "PMC";
 	$components[] = "releng";

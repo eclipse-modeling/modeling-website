@@ -22,9 +22,8 @@ $third_party = array(
 	"Tomcat 3.2.4, Historical Approval, Apache 2.0, moved to M2T per CQ 2335, 336, jet",
 );
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 if (isset($_GET["ganymede"])){ 
 	$components = array("jet"); 
-	$committers = filterCommitters($committers, $components); 
 }
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 doIPQueryPage(); ?>

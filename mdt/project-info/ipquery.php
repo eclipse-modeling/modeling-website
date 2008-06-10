@@ -34,9 +34,8 @@ $third_party = array(
 	
 );
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 if (isset($_GET["ganymede"])){ 
 	$components = array("ocl", "uml2", "uml2tools", "xsd"); 
-	$committers = filterCommitters($committers, $components);
 } 
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); 
 doIPQueryPage(); ?>
