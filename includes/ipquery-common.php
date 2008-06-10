@@ -163,7 +163,7 @@ function doIPQuery()
 
 function printIPQuery($data, $isFormatted = true)
 {
-	global $sortBy, $showobsolete, $components;
+	global $sortBy, $showobsolete, $components, $PR;
 	$componentQueryString = getComponentQueryString();
 	$cnt = 0;
 	if ($isFormatted)
