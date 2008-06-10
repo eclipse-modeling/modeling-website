@@ -187,11 +187,10 @@ function printIPQuery($data, $isFormatted = true)
 				$bgcol = $bgcol == "#EEEEFF" ? "#FFFFEE" : "#EEEEFF";
 			}
 			list($shortname, $email) = getContributor($myrow['contact']);
-			$thisComponent = sizeof($components) == 1 && $components[0] == $myrow['component'];
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 					"<td><acronym title=\"click to filter/unfilter this component\">" .
-						"<a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). ($thisComponent ? "" : "&amp;component=" . $myrow['component']) . "\">" . $myrow['component'] . "</a></acronym> " .
-						"<a href=\"http://www.eclipse.org/$PR/?project=" . $myrow['component'] . "\"><img src=\"/modeling/images/link-out.png\"/></a>" . 
+						"<a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && strtolower($components[0]) == strtolower($myrow['component']) ? "" : "&amp;component=" . strtolower($myrow['component'])) . "\">" . $myrow['component'] . "</a></acronym> " .
+						"<a href=\"http://www.eclipse.org/$PR/?project=" . strtolower($myrow['component']) . "\"><img src=\"/modeling/images/link-out.png\"/></a>" . 
 					"</td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
 					"<td><acronym title=\"" . $email . "\">$shortname</acronym></td>" .
