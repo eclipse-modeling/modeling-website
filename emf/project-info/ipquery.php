@@ -2,15 +2,18 @@
 $product_id = 8; # EMF 
 $committers = array(
  	# taken from http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emf
-	"davidms" => "emf, core, edit, tools, xml/xmi, sdo",
-	"emerks" => "PMC, emf, core, edit, tools, xml/xmi, sdo",
-	"marcelop" => "emf, core, edit, tools, xml/xmi, sdo, releng",
-	"nickb" => "emf, core, edit, tools, xml/xmi, sdo, releng",
-	"khussey" => "emf, core, edit, tools, xml/xmi",
+	"davidms" 	  => "emf, core, doc, edit, mapping, tools, xml/xmi, sdo",
+	"emerks" => "PMC, emf, core, doc, edit, mapping, tools, xml/xmi, sdo",
+	"marcelop" 	  => "emf, core, doc, edit, mapping, tools, xml/xmi, sdo, releng",
+	"nickb" 	  => "emf, core, doc, edit, mapping, tools, xml/xmi, sdo, releng",
+	"khussey" 	  => "emf, core, doc, edit, mapping, tools, xml/xmi",
+	
 	"cdamus" => "query, validation, transaction",
+
 	"estepper" => "net4j, cdo",
 	"smcduff" => "cdo",
 	"mtaal" => "teneo, cdo", 
+
 	"seberle" => "teneo",
 	"ssmith" => "teneo",
 	
@@ -39,6 +42,6 @@ $third_party = array(
 	
 );
 if (isset($_GET["emf"])){ 
-	$components = array("emf, core, edit, tools, xml/xmi"); 
+	$components = array("emf, core, doc, edit, mapping, tools, xml/xmi"); 
 } 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); doIPQueryPage(); ?>
