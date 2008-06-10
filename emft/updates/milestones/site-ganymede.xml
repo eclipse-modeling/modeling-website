@@ -236,23 +236,23 @@ EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354: contains runtime, sourc
 		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
 	</feature>
 
-	<!-- COMPARE 0.8.0RC3 S200806030805 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805" name="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805">
+	<!-- COMPARE 0.8.0RC4 S200806101153 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153" name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153">
 		<description>
-EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805: contains runtime, source, and documentation.
+EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200806030805" url="features/org.eclipse.emf.compare.doc_0.8.0.v200806030805.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805"/>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200806101153" url="features/org.eclipse.emf.compare.doc_0.8.0.v200806101153.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200806030805" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200806030805.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805"/>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200806101153" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200806101153.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200806030805" url="features/org.eclipse.emf.compare.source_0.8.0.v200806030805.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805"/>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200806101153" url="features/org.eclipse.emf.compare.source_0.8.0.v200806101153.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare" version="0.8.0.v200806030805" url="features/org.eclipse.emf.compare_0.8.0.v200806030805.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC3 S200806030805"/>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200806101153" url="features/org.eclipse.emf.compare_0.8.0.v200806101153.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153"/>
 	</feature>
 
 	<!-- CDO 1.0.0RC2 S200805281310 -->
@@ -482,25 +482,6 @@ EMFT ECORETOOLS SDK (Incubation) 0.8.0RC2 S200805280748: contains runtime, sourc
 	</feature>
 	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200805280748-07k-BcMAAwAeMwAqYw" url="features/org.eclipse.emf.ecoretools_0.8.0.v200805280748-07k-BcMAAwAeMwAqYw.jar" patch="false">
 		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC2 S200805280748"/>
-	</feature>
-
-	<!-- COMPARE 0.8.0RC2 S200805280727 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727" name="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727">
-		<description>
-EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200805280727" url="features/org.eclipse.emf.compare.doc_0.8.0.v200805280727.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200805280727" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200805280727.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200805280727" url="features/org.eclipse.emf.compare.source_0.8.0.v200805280727.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare" version="0.8.0.v200805280727" url="features/org.eclipse.emf.compare_0.8.0.v200805280727.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 0.8.0RC2 S200805280727"/>
 	</feature>
 
 </site>
