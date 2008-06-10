@@ -189,7 +189,7 @@ function printIPQuery($data, $isFormatted = true)
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 					"<td><acronym title=\"click to filter/unfilter this component\">" .
-						"<a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && strtolower($components[0]) == strtolower($myrow['component']) ? "" : "&amp;component=" . strtolower($myrow['component'])) . "\">" . $myrow['component'] . "</a></acronym> " .
+						"<a style=\"font-size:8px\" href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && strtolower($components[0]) == strtolower($myrow['component']) ? "" : "&amp;component=" . strtolower($myrow['component'])) . "\">" . strtolower($myrow['component']) . "</a></acronym> " .
 						"<a href=\"http://www.eclipse.org/$PR/?project=" . strtolower($myrow['component']) . "\"><img src=\"/modeling/images/link-out.png\"/></a>" . 
 					"</td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
