@@ -14,7 +14,7 @@ $sortBy = isset($_GET["sortBy"]) && preg_match("#component|bugid|contact|size#",
 $components = !isset($components) ? array() : $components;
 if (isset($_GET["component"]) && $_GET["component"])
 {
-	$components = array(preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"])));
+	$components = array(strtolower(preg_replace("#[%\\\"\';]+#", "", urldecode($_GET["component"]))));
 }
 else if (isset($_GET["components"]))
 {
@@ -23,7 +23,7 @@ else if (isset($_GET["components"]))
 	{
 		if ($c)
 		{
-			$components[$i] = preg_replace("#[%\\\"\';]+#", "", urldecode($c));
+			$components[$i] = strtolower(preg_replace("#[%\\\"\';]+#", "", urldecode($c)));
 		}
 		else
 		{
