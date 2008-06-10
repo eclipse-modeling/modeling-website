@@ -2,11 +2,11 @@
 $product_id = 8; # EMF 
 $committers = array(
  	# taken from http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emf
-	"davidms" => "emf, sdo",
-	"emerks" => "PMC, emf, sdo",
-	"marcelop" => "emf, sdo, releng",
-	"nickb" => "emf, sdo, releng",
-	"khussey" => "emf",
+	"davidms" => "emf, core, edit, tools, xml/xmi, sdo",
+	"emerks" => "PMC, emf, core, edit, tools, xml/xmi, sdo",
+	"marcelop" => "emf, core, edit, tools, xml/xmi, sdo, releng",
+	"nickb" => "emf, core, edit, tools, xml/xmi, sdo, releng",
+	"khussey" => "emf, core, edit, tools, xml/xmi",
 	"cdamus" => "query, validation, transaction",
 	"estepper" => "net4j, cdo",
 	"smcduff" => "cdo",
