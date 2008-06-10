@@ -189,7 +189,7 @@ function printIPQuery($data, $isFormatted = true)
 			list($shortname, $email) = getContributor($myrow['contact']);
 			print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 					"<td><acronym title=\"click to filter/unfilter this component\">" .
-						"<a style=\"font-size:8px\" href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && strtolower($components[0]) == strtolower($myrow['component']) ? "" : "&amp;component=" . strtolower($myrow['component'])) . "\">" . strtolower($myrow['component']) . "</a></acronym> " .
+						"<a style=\"font-size:8px\" href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && strtolower($components[0]) == strtolower($myrow['component']) ? "" : "&amp;component=" . strtolower($myrow['component'])) . "\">" . $myrow['component'] . "</a></acronym> " .
 						"<a href=\"http://www.eclipse.org/$PR/?project=" . strtolower($myrow['component']) . "\"><img src=\"/modeling/images/link-out.png\"/></a>" . 
 					"</td>" .
 					"<td nowrap=\"nowrap\">" . doBugLink($myrow['bugid']) . "</td>" .
@@ -414,8 +414,8 @@ function doIPQueryPage()
 					{
 						print "<tr bgcolor=\"$bgcol\" align=\"top\">" .
 							($hasComponent ? "<td>" . (isset($bits[5]) && $bits[5] ? 
-								"<acronym title=\"click to filter/unfilter this component\"><a href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && $components[0] == $bits[5] ? "" : "&amp;component=" . $bits[5]) . "\">" . $bits[5] . "</a></acronym> " .
-								"<a href=\"http://www.eclipse.org/$PR/?project=" . $bits[5] . "\"><img src=\"/modeling/images/link-out.png\"/></a>" : "") . "</td>" : "") .
+								"<acronym title=\"click to filter/unfilter this component\"><a style=\"font-size:8px\" href=\"?" . 'sortBy=' . $sortBy . ($showobsolete ? "&amp;showobsolete" : ""). (sizeof($components) == 1 && $components[0] == $bits[5] ? "" : "&amp;component=" . strtolower($bits[5])) . "\">" . $bits[5] . "</a></acronym> " .
+								"<a href=\"http://www.eclipse.org/$PR/?project=" . strtolower($bits[5]) . "\"><img src=\"/modeling/images/link-out.png\"/></a>" : "") . "</td>" : "") .
 							"<td>" . cqlink(isset($bits[4]) && $bits[4] ? $bits[4] : "", $bits[0]) . "</td>" .
 							"<td>" . pretty_print($bits[1], "/", 1) . "</td>" .
 							"<td>" . $bits[2] . "</td>" .
