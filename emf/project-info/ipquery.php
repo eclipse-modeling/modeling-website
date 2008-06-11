@@ -42,6 +42,6 @@ $third_party = array(
 	
 );
 if (isset($_GET["emf"])){ 
-	$components = array("emf, core, doc, edit, mapping, tools, xml/xmi"); 
+	$components = array("emf", "core", "doc", "edit", "mapping", "tools", "xml/xmi"); 
 } 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/ipquery-common.php"); doIPQueryPage(); ?>
