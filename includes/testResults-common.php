@@ -139,7 +139,7 @@ foreach ($catgs as $num => $dirBits)
 						$results = getCompileResults($PWD . $dirBits[1] . $file);
 						$noProblems = $noProblems && !$results;
 						$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir . $dirBits[1] . $file . '">' .
-						preg_replace("/((\/@dot|doc|.jar).bin.log|_\d+\.\d+\.\d+\.v\d+)/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
+						preg_replace("/((\/@dot|\/doc|.jar).bin.log|_\d+\.\d+\.\d+\.(v\d+|HEAD))/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 					}
 				}
 				print '<li><div><b style="color:' . ($noProblems ? "green" : "red") . '">' . ($noProblems ? "0 " : "") . ($summary? $summary : $dirBits[3]) . '</b></div>' .
