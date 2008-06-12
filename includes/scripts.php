@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.63 2008/06/12 20:15:37 nickb Exp $
+// $Id: scripts.php,v 1.64 2008/06/12 20:22:19 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -139,6 +139,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			{
 				foreach (array_keys($data[$y]["tries"]) as $z)
 				{
+					debug("&#160; &#160; &#160; &#160; &#160; \$data[$y][\"tries\"][$z] = " . $data[$y]["tries"][$z],3);
 					$PWD = $data[$y]["tries"][$z];
 					if ($PWD && !PWD_check($PWD, $suf))
 					{
