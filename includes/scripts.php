@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.62 2008/05/22 18:55:47 nickb Exp $
+// $Id: scripts.php,v 1.63 2008/06/12 20:15:37 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -13,12 +13,14 @@ function PWD_debug($PWD, $suf, $str)
 
 function PWD_check($PWD, $suf)
 {
+	debug("&#160; &#160; <b>PWD = </b>$PWD; <b>suf = </b>$suf;<br/>&#160; &#160; &#160; is_dir? <b style='color:green'>" . is_dir($PWD) . "</b>; is_readable? <b style='color:green'>" . is_readable($PWD) . "</b>; is_writable? <b style='color:green'>" . is_writable($PWD) . "</b><br/>", 2);
 	return (!is_dir($PWD) || !is_readable($PWD) || ($suf == "logs" && !is_writable($PWD)));
 }
 
 function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to hide (for security purposes!)
 {
 	global $PR, $App, $isBuildServer;
+	debug ("<br/><b>PR = </b>$PR, <b>suf = </b>$suf</br>", 2);
 	$PWDs = array();
 
 	if ($doDynCheck)
@@ -38,7 +40,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 
 		if (!PWD_check($PWD, $suf) && !$isBuildServer)
 		{
-			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+			debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
 			return $PWD;
 		}
 	}
@@ -151,18 +153,19 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	$PWD="";
 
 	krsort($PWDs); reset($PWDs);
+	debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
 	foreach ($PWDs as $i => $PWD)
 	{
 		debug(" &#160; &#160; $i : $PWD", 9);
 		if (!PWD_check($PWD, $suf))
 		{
-			debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+			debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
 			return $PWD;
 		}
 	}
 
 	debug("<!-- PWD not found! -->");
-	debug("'$suf' ended up with '$PWD' (is_readable: " . is_readable($PWD) . ", is_dir: " . is_dir($PWD) . ")");
+	debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
 	return $PWD;
 }
 
