@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.65 2008/06/12 20:24:34 nickb Exp $
+// $Id: scripts.php,v 1.66 2008/06/12 20:28:48 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -13,14 +13,14 @@ function PWD_debug($PWD, $suf, $str)
 
 function PWD_check($PWD, $suf)
 {
-	debug("&#160; &#160; <b>PWD = </b>$PWD; <b>suf = </b>$suf;<br/>&#160; &#160; &#160; is_dir? <b style='color:green'>" . is_dir($PWD) . "</b>; is_readable? <b style='color:green'>" . is_readable($PWD) . "</b>; is_writable? <b style='color:green'>" . is_writable($PWD) . "</b><br/>", 2);
+	#debug ("&#160; &#160; <b>PWD = </b>$PWD; <b>suf = </b>$suf;<br/>&#160; &#160; &#160; is_dir? <b style='color:green'>" . is_dir($PWD) . "</b>; is_readable? <b style='color:green'>" . is_readable($PWD) . "</b>; is_writable? <b style='color:green'>" . is_writable($PWD) . "</b><br/>", 2);
 	return (!is_dir($PWD) || !is_readable($PWD) || ($suf == "logs" && !is_writable($PWD)));
 }
 
 function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to hide (for security purposes!)
 {
 	global $PR, $App, $isBuildServer;
-	debug ("<br/><b>PR = </b>$PR, <b>suf = </b>$suf</br>", 2);
+	#debug ("<br/><b>PR = </b>$PR, <b>suf = </b>$suf</br>", 2);
 	$PWDs = array();
 
 	if ($doDynCheck)
@@ -152,7 +152,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			{
 				foreach (array_keys($data[$y]["tries"]) as $z)
 				{
-					debug("&#160; &#160; &#160; &#160; &#160; \$data[$y][\"tries\"][$z] = " . $data[$y]["tries"][$z],3);
+					#debug("&#160; &#160; &#160; &#160; &#160; \$data[$y][\"tries\"][$z] = " . $data[$y]["tries"][$z],3);
 					$PWD = $data[$y]["tries"][$z];
 					if ($PWD && !PWD_check($PWD, $suf))
 					{
@@ -167,7 +167,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	$PWD="";
 
 	krsort($PWDs); reset($PWDs);
-	debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
+	#debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
 	foreach ($PWDs as $i => $PWD)
 	{
 		debug(" &#160; &#160; $i : $PWD", 9);
