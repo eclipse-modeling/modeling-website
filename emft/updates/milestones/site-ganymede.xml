@@ -29,6 +29,31 @@ EMFT MINT SDK 0.7.0RC4 S200806110034: contains runtime, source, and documentatio
 		<category name="EMFT MINT SDK 0.7.0RC4 S200806110034"/>
 	</feature>
 
+	<!-- ECORETOOLS 0.8.0RC4a S200806130600 (Incubation) -->
+	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600">
+		<description>
+EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.all" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools.all_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools.sdk_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.source" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools.source_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200806130600" url="features/org.eclipse.emf.ecoretools_0.8.0.v200806130600.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
+	</feature>
+
 	<!-- COMPARE 0.8.0RC4 S200806101153 (Incubation) -->
 	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153" name="EMFT COMPARE SDK (Incubation) 0.8.0RC4 S200806101153">
 		<description>
@@ -132,31 +157,6 @@ EMFT MINT SDK 0.7.0RC3 S200806040829: contains runtime, source, and documentatio
 	</feature>
 	<feature id="org.eclipse.emf.mint" version="0.7.0.v200806040829" url="features/org.eclipse.emf.mint_0.7.0.v200806040829.jar" patch="false">
 		<category name="EMFT MINT SDK 0.7.0RC3 S200806040829"/>
-	</feature>
-
-	<!-- ECORETOOLS 0.8.0RC3 S200806041354 (Incubation) -->
-	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354" name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354">
-		<description>
-EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.ecoretools.all" version="0.8.0.v200806041354-07E-3GW1HyQz07ifkKTDR8SiOkYi" url="features/org.eclipse.emf.ecoretools.all_0.8.0.v200806041354-07E-3GW1HyQz07ifkKTDR8SiOkYi.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
-	</feature>
-	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200806041354-077-7w311917152465" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200806041354-077-7w311917152465.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
-	</feature>
-	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200806041354-077-7w311917152465" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200806041354-077-7w311917152465.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
-	</feature>
-	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.8.0.v200806041354-07M-8-Kw3WbaGL9K-KhNjXhCdNBB" url="features/org.eclipse.emf.ecoretools.sdk_0.8.0.v200806041354-07M-8-Kw3WbaGL9K-KhNjXhCdNBB.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
-	</feature>
-	<feature id="org.eclipse.emf.ecoretools.source" version="0.8.0.v200806041354-07k-BcMAAwAkAYGSeY" url="features/org.eclipse.emf.ecoretools.source_0.8.0.v200806041354-07k-BcMAAwAkAYGSeY.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
-	</feature>
-	<feature id="org.eclipse.emf.ecoretools" version="0.8.0.v200806041354-07k-BcMAAwAkAYGSeY" url="features/org.eclipse.emf.ecoretools_0.8.0.v200806041354-07k-BcMAAwAkAYGSeY.jar" patch="false">
-		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC3 S200806041354"/>
 	</feature>
 
 	<!-- COMPARE 0.8.0RC4 S200806101153 (Incubation) -->
