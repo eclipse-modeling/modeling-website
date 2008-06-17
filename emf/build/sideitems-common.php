@@ -10,10 +10,13 @@ function sidebar()
 	<div class="sideitem">
 		<h6>Actions</h6>
 		<ul>
-			<li>EMF: <a href="/emf/build/">Build</a>,
+			<?php if ($isEMFserver) { ?>
+			<li><a href="/emf/build/">Build</a>,
 					 <a href="/emf/build/promo.php">Promote</a></li>
-			<li>Others: <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/">Build</a>,
+			<?php } else { ?>
+			<li><a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/">Build</a>,
 					 <a href="/modeling/emf/<?php print $projct && $projct != "emf" ? $projct : "query"; ?>/build/promo.php">Promote</a></li>
+			<?php } ?>
 			<li><a href="/modeling/emf/downloads/?project=<?php print $projct && $projct != "emf" ? $projct : "query"; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
 		</ul>
 		<hr noshade="noshade" size="1" width="90%"/>
