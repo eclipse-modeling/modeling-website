@@ -35,28 +35,34 @@ $third_party = array(
 	"Apache Commons Codec 1.3, /cvsroot/tools/org.eclipse.orbit/org.apache.commons.codec, EPL 1.0, original jar repackaged as OSGi bundle, 2339, net4j", 
 	"Apache HttpClient 3.1, /cvsroot/tools/org.eclipse.orbit/org.apache.commons.httpclient, EPL 1.0, original jar repackaged as OSGi bundle, 2340, net4j", 
 	"Apache Derby 10.1.2.1, /cvsroot/tools/org.eclipse.orbit/org.apache.derby, EPL 1.0, original jar repackaged as OSGi bundle, 2341, net4j", 
+);
 
-	# may need these according to https://bugs.eclipse.org/bugs/show_bug.cgi?id=227333#c26
-	#"hsqldb.jar, org.eclipse.net4j.db.hsqldb, , not distributed; required for build, , net4j",
-	#"mysql-connector-java-5.1.5-bin.jar, org.eclipse.net4j.db.mysql, , not distributed; required for build, , net4j",
+# added according to https://bugs.eclipse.org/bugs/show_bug.cgi?id=227333#c26
+$third_party_works_with = array(
+	"asm.jar 1.5.3, , <a href=\"http://asm.objectweb.org/license.html\">ObjectWeb License</a>, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"bcel-5.1.jar, , <a href=\"http://jakarta.apache.org/bcel/\">Apache</a>, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"commons-collections.jar 3.1?, , Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"commons-logging.jar 1.0.4?, , Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"dom4j-1.6.1.jar, , <a href=\"http://www.dom4j.org/license.html\">BSD style</a>, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"hibernate3.jar 3.2.5 GA, , LGPL 2.1, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"jpox-1.1.7.jar, org.eclipse.emf.teneo.jpox.libraries, Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, 2393, teneo",
+	"jpox-1.1.9.jar, org.eclipse.emf.teneo.jpox.libraries, Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
+	"jdo2-api-2.0.jar, , Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, 2394, teneo", 
+	"jta.jar, , <a href=\"http://java.sun.com/products/jta/index.html\">Sun Binary License</a>, used for build/test; optional at runtime; not in CVS; not shipped, , teneo",
 
-	# may need these according to https://bugs.eclipse.org/bugs/show_bug.cgi?id=227333#c26
-	#"asm.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
-	#"cglib-2.1.3.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
-	#"commons-collections-2.1.1.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
-	#"dom4j-1.6.1.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
-	#"hibernate3.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
-	#"jta.jar, org.eclipse.emf.cdo.server.hibernate.libraries, , not distributed; required for build, , cdo",
+	"asm.jar 1.5.3, org.eclipse.emf.cdo.server.hibernate.libraries, <a href=\"http://asm.objectweb.org/license.html\">ObjectWeb License</a>, used for build/test; optional at runtime; not in CVS; not shipped, 2418, cdo",
+	"cglib-2.1.3.jar, org.eclipse.emf.cdo.server.hibernate.libraries, Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, 2419, cdo",
+	"commons-collections-2.1.1.jar, org.eclipse.emf.cdo.server.hibernate.libraries, Apache 2.0, used for build/test; optional at runtime; not in CVS; not shipped, 2420, cdo",
+	"hibernate3.jar 3.2.5 GA, org.eclipse.emf.cdo.server.hibernate.libraries, LGPL 2.1, used for build/test; optional at runtime; not in CVS; not shipped, 2422, cdo",
+	"jta.jar, org.eclipse.emf.cdo.server.hibernate.libraries, <a href=\"http://java.sun.com/products/jta/index.html\">Sun Binary License</a>, used for build/test; optional at runtime; not in CVS; not shipped, 2423, cdo",
+
+	"hsqldb.jar 1.8.0.8, org.eclipse.net4j.db.hsqldb, <a href=\"http://hsqldb.org/web/hsqlLicense.html\">HSQL License</a>, used for build/test; optional at runtime; not in CVS; not shipped, 2424, net4j",
+	"mysql-connector-java-5.1.5-bin.jar, org.eclipse.net4j.db.mysql, GPL v2, used for build/test; optional at runtime; not in CVS; not shipped, 2425, net4j",
 
 	# not yet shipped or part of the build, only ref'd in CVS
 	#"spring-2.5.4/spring-beans.jar, runtime plugins dir, , not distributed; required for build, , cdo",
 	#"spring-2.5.4/spring-context.jar, runtime plugins dir, , not distributed; required for build, , cdo",
 	#"spring-2.5.4/spring-core.jar, runtime plugins dir, , not distributed; required for build, , cdo",
-
-	# for Ganymede 2008, these two are not included in delivered code; may need to re-add for Io 2009		
-	#"jpox-1.1.7.jar 1.1.7, org.eclipse.emf.teneo.jpox.libraries, Apache 2.0, not distributed; required for build, 2393, teneo",
-	#"jdo2-api-2.0.jar 2.0, , Apache 2.0, not distributed; required for build, 2394, teneo", 
-
 );
 
 if (isset($_GET["emf"])){ 

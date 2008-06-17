@@ -295,7 +295,7 @@ function doProductIDQuery()
 
 function doIPQueryPage()
 {
-	global $incubating, $isFormatted, $showbuglist, $components, $showobsolete, $sortBy, $committers, $product_id, $extra_IP, $third_party, $theme, $PR, $App, $Menu, $Nav; 
+	global $incubating, $isFormatted, $showbuglist, $components, $showobsolete, $sortBy, $committers, $product_id, $extra_IP, $third_party, $third_party_works_with, $theme, $PR, $App, $Menu, $Nav; 
 	ksort($committers); reset($committers);
 
 	$componentQueryString = getComponentQueryString();
@@ -339,20 +339,26 @@ function doIPQueryPage()
 				print "$ip\n";
 			} 
 		}
-		print "\n";
-		print "Third Party Software (Section 3)\n";
-		if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
+		$third_parties = array(
+			"Third Party Software (Section 3)" => $third_party,
+			"Third Party \"Works-With\" Software (Non-EPL, Non-Distributed)" => $third_party_works_with
+		);
+		foreach ($third_parties as $label => $third_party_arr)
 		{
-			foreach ($third_party as $tp)
+			print "\n";
+			print "$label\n";
+			if (isset($third_party_arr) && is_array($third_party_arr) && sizeof($third_party_arr) > 0)
 			{
-				$bits = explode(",", $tp);
-				if (sizeof($components) < 1 || (isset($bits[5]) && in_array(trim($bits[5]), $components)))
+				foreach ($third_party_arr as $tp)
 				{
-					print "$tp\n";
+					$bits = explode(",", $tp);
+					if (sizeof($components) < 1 || (isset($bits[5]) && in_array(trim($bits[5]), $components)))
+					{
+						print "$tp\n";
+					}
 				}
 			}
 		}
-		exit;
 	}
 	
 	$projct= preg_replace("#.+/#", "", $PR);
@@ -385,13 +391,19 @@ function doIPQueryPage()
 				print "</ul>\n";
 			} ?>
 		</div>
+<?php	$third_parties = array (
+			"Third Party Software (Section 3)" => $third_party,
+			"Third Party \"Works-With\" Software (Non-EPL, Non-Distributed)" => $third_party_works_with
+		);
+		foreach ($third_parties as $label => $third_party_arr)
+		{ ?>
 		<div class="homeitem3col">
-			<a name="section3"></a><h3>Third Party Software (Section 3)</h3>
+			<a name="section3"></a><h3><?php print $label; ?></h3>
 			<ul>
-			<?php if (isset($third_party) && is_array($third_party) && sizeof($third_party) > 0)
+			<?php if (isset($third_party_arr) && is_array($third_party_arr) && sizeof($third_party_arr) > 0)
 			{
 				$hasComponent = false;
-				foreach ($third_party as $tp)
+				foreach ($third_party_arr as $tp)
 				{
 					$bits = explode(",", $tp);
 					if (isset($bits[5]))
@@ -402,9 +414,9 @@ function doIPQueryPage()
 				}
 					
 				print "<table>\n" .
-						"<tr>" . ($hasComponent ? "<th>Component</th>" : "") . "<th>Name</th><th>Location</th><th>License</th><th>Usage</th><th><acronym title=\"Contribution Questionnaires, if known\">CQ</acronym></tr>\n";
+						"<tr>" . ($hasComponent ? "<th>Component</th>" : "") . "<th>Name &amp; Version</th><th>Location</th><th>License</th><th>Usage</th><th><acronym title=\"Contribution Questionnaires, if known\">CQ</acronym></tr>\n";
 				$bgcol = "#FFFFEE";
-				foreach ($third_party as $tp)
+				foreach ($third_party_arr as $tp)
 				{
 					$bits = explode(",", $tp);
 					$bits[4] = trim($bits[4]);
@@ -432,6 +444,7 @@ function doIPQueryPage()
 			} ?>
 			</ul>
 		</div>
+<?php 	} ?>
 	</div>
 	
 	<div id="rightcolumn">
