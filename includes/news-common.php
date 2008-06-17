@@ -1,7 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-function allnews($project, $cvsprojs, $cvscoms, $proj, $newAndNoteworthy)
+function allnews($project, $cvsprojs, $cvscoms, $proj, $newAndNoteworthy = "")
 {
 	global $App, $Nav, $Menu, $PR, $extras;
 
@@ -41,7 +41,7 @@ function allnews($project, $cvsprojs, $cvscoms, $proj, $newAndNoteworthy)
 	print "<li><a href=\"#site\">Site News</a></li>\n"; 
 	print "<li><a href=\"#build\">Build News</a></li>\n"; 
 	print "<li><a href=\"news/\">Release Notes</a></li>\n";
-	if ($newAndNoteworthy) 
+	if (isset($newAndNoteworthy) && $newAndNoteworthy) 
 	{
 		print "<li><a href=\"$newAndNoteworthy\">New And Noteworthy</a></li>\n";
 	} 
