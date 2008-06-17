@@ -396,12 +396,12 @@ function doIPQueryPage()
 			"Third Party \"Works-With\" Software (Non-EPL, Non-Distributed)" => $third_party_works_with
 		);
 		foreach ($third_parties as $label => $third_party_arr)
-		{ ?>
-		<div class="homeitem3col">
-			<a name="section3"></a><h3><?php print $label; ?></h3>
-			<ul>
-			<?php if (isset($third_party_arr) && is_array($third_party_arr) && sizeof($third_party_arr) > 0)
+		{ 
+			if (isset($third_party_arr) && is_array($third_party_arr) && sizeof($third_party_arr) > 0)
 			{
+				$cnt = 0; ?>
+		<div class="homeitem3col">
+			<a name="section3"></a><h3><?php print $label; ?></h3><?php 
 				$hasComponent = false;
 				foreach ($third_party_arr as $tp)
 				{
@@ -434,17 +434,14 @@ function doIPQueryPage()
 							"<td>" . (isset($bits[3]) ? pretty_print($bits[3], " ", 2) : "") . "</td>" .
 							"<td align=\"right\">" . (isset($bits[4]) && $bits[4] ? cqlink($bits[4]) : "?") . "</td>" .
 							"</tr>\n";
+							$cnt++;
 					}
 				}
 				print "</table>";
-			} 
-			else
-			{
-				print "<li>None.</li>\n"; 
-			} ?>
-			</ul>
-		</div>
-<?php 	} ?>
+				print '<p align="right">' . $cnt . ' records found.</p>';
+				print '</div>' . "\n\n";
+			}
+		} ?>
 	</div>
 	
 	<div id="rightcolumn">
