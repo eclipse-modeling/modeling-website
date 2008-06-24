@@ -7,6 +7,37 @@
 	</description>
 
 
+	<!-- VALIDATION 1.2.0 -->
+	<category-def label="EMF VALIDATION SDK 1.2.0" name="EMF VALIDATION SDK 1.2.0">
+		<description>
+EMF VALIDATION SDK 1.2.0: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.validation.doc" version="1.2.0.v200805130238-23-8s733I3C6D376E" url="features/org.eclipse.emf.validation.doc_1.2.0.v200805130238-23-8s733I3C6D376E.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.validation.examples.source_1.2.0.v200805130238.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.examples" version="1.2.0.v200805130238-579-AgI99m9XFU_OHh" url="features/org.eclipse.emf.validation.examples_1.2.0.v200805130238-579-AgI99m9XFU_OHh.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.ocl.source" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl.source_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.ocl" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.sdk" version="1.2.0.v200805130238-579-93L6YxTRK7HpUyFXcrJlG99e" url="features/org.eclipse.emf.validation.sdk_1.2.0.v200805130238-579-93L6YxTRK7HpUyFXcrJlG99e.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.source" version="1.2.0.v200805130238-35-9oA55S5J8H5ADM" url="features/org.eclipse.emf.validation.source_1.2.0.v200805130238-35-9oA55S5J8H5ADM.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation" version="1.2.0.v200805130238-35-9oA55S5J8H5ADM" url="features/org.eclipse.emf.validation_1.2.0.v200805130238-35-9oA55S5J8H5ADM.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.2.0"/>
+	</feature>
+
 	<!-- VALIDATION 1.1.1 -->
 	<category-def label="EMF VALIDATION SDK 1.1.1" name="EMF VALIDATION SDK 1.1.1">
 		<description>
