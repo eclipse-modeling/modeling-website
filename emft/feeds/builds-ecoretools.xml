@@ -4,11 +4,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ecoretools Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-ecoretools.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-06-13T10:26:12Z</updated>
+  <updated>2008-06-24T16:12:51Z</updated>
   <author>
     <name>ecoretools Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-ecoretools.xml</id>
+  <entry>
+    <title>[announce] ecoretools 0.8.0 (R200806130600) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=ecoretools&amp;showAll=1&amp;hlbuild=R200806130600#R200806130600"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=ecoretools&amp;showAll=1&amp;hlbuild=R200806130600#R200806130600</id>
+    <updated>2008-06-24T16:12:51Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806130600" href="http://www.eclipse.org/modeling/emft/downloads/?project=ecoretools&amp;showAll=1&amp;hlbuild=R200806130600#R200806130600" type="R" version="0.8.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/ecoretools/downloads/drops/0.8.0/R200806130600/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=ecoretools</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=ecoretools&amp;version=R200806130600
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-ecoretools-SDK-incubation-0.8.0.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/ecoretools/downloads/drops/0.8.0/R200806130600/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/eclipse-SDK-3.4-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/gef//downloads/drops/3.4.0/R200806091334/GEF-ALL-3.4.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/R200806091234/emf-sdo-xsd-SDK-2.4.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/R200806091744/emf-query-SDK-1.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.2.0/R200806091902/emf-transaction-SDK-1.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/validation/downloads/drops/1.2.0/R200806091804/emf-validation-SDK-1.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/gmf/gmf/downloads/drops/2.1.0/R200806101146/gmf-sdk-2.1.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/R200806091714/mdt-ocl-SDK-1.2.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] ecoretools 0.8.0RC4a (S200806130600) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=ecoretools&amp;showAll=1&amp;hlbuild=S200806130600#S200806130600"/>
