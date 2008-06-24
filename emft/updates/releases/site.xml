@@ -90,6 +90,25 @@ EMFT NET4J SDK (Incubation) 0.7.2: contains runtime, source, and documentation.
 		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
 	</feature>
 
+	<!-- COMPARE 0.8.0 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0" name="EMFT COMPARE SDK (Incubation) 0.8.0">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200806180301" url="features/org.eclipse.emf.compare.doc_0.8.0.v200806180301.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200806180301" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200806180301.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200806180301" url="features/org.eclipse.emf.compare.source_0.8.0.v200806180301.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200806180301" url="features/org.eclipse.emf.compare_0.8.0.v200806180301.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0"/>
+	</feature>
+
 	<!-- CDO 0.7.2 (Incubation) -->
 	<category-def label="EMFT CDO SDK (Incubation) 0.7.2" name="EMFT CDO SDK (Incubation) 0.7.2">
 		<description>
