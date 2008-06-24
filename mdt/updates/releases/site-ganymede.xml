@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/mdt/updates/releases/" mirrorsURL="http://www.eclipse.org/downloads/download.php?file=/modeling/mdt/updates/releases/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/mdt/updates/releases/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- UML2 2.2.0 -->
+	<category-def label="MDT UML2 SDK 2.2.0" name="MDT UML2 SDK 2.2.0">
+		<description>
+MDT UML2 SDK 2.2.0: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="2.2.0.v200805201350" url="features/org.eclipse.uml2.doc_2.2.0.v200805201350.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="2.2.0.v200805131030" url="features/org.eclipse.uml2.examples.source_2.2.0.v200805131030.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="2.2.0.v200805131030" url="features/org.eclipse.uml2.examples_2.2.0.v200805131030.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="2.2.0.v200805201126" url="features/org.eclipse.uml2.sdk_2.2.0.v200805201126.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="2.2.0.v200805201126" url="features/org.eclipse.uml2.source_2.2.0.v200805201126.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="2.2.0.v200805201126" url="features/org.eclipse.uml2_2.2.0.v200805201126.jar" patch="false">
+		<category name="MDT UML2 SDK 2.2.0"/>
+	</feature>
+
+</site>
