@@ -90,6 +90,28 @@ EMFT NET4J SDK (Incubation) 0.7.2: contains runtime, source, and documentation.
 		<category name="EMFT NET4J SDK (Incubation) 0.7.2"/>
 	</feature>
 
+	<!-- MINT 0.7.0 -->
+	<category-def label="EMFT MINT SDK 0.7.0" name="EMFT MINT SDK 0.7.0">
+		<description>
+EMFT MINT SDK 0.7.0: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.doc" version="0.7.0.v200806172223" url="features/org.eclipse.emf.mint.doc_0.7.0.v200806172223.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.examples" version="0.7.0.v200806172223" url="features/org.eclipse.emf.mint.examples_0.7.0.v200806172223.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.7.0.v200806172223" url="features/org.eclipse.emf.mint.sdk_0.7.0.v200806172223.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.7.0.v200806172223" url="features/org.eclipse.emf.mint.source_0.7.0.v200806172223.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.7.0.v200806172223" url="features/org.eclipse.emf.mint_0.7.0.v200806172223.jar" patch="false">
+		<category name="EMFT MINT SDK 0.7.0"/>
+	</feature>
+
 	<!-- COMPARE 0.8.0 (Incubation) -->
 	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0" name="EMFT COMPARE SDK (Incubation) 0.8.0">
 		<description>
