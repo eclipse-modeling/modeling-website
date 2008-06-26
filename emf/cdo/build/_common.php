@@ -8,11 +8,13 @@ $options = array (
 		"emft.eclipse.org=------------,------------",
 		"1.0.0=HEAD,/opt/sun-java2-5.0",
 		"2.0.0=simon_pre_0_9,/opt/sun-java2-5.0",
+		"2.0.0=simon_merge_238414,/opt/sun-java2-5.0",
 		"0.7.3=R0_7_maintenance,/opt/sun-java2-1.4",
 		
 		"build.eclipse.org=------------,------------",
 		"1.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
 		"2.0.0=simon_pre_0_9,/opt/public/common/ibm-java2-ppc-50",
+		"2.0.0=simon_merge_238414,/opt/public/common/ibm-java2-ppc-50",
 		"0.7.3=R0_7_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
 	
