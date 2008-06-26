@@ -104,7 +104,7 @@ foreach($selectedDepsList as $i => $row)
 	$bits = explode("=",$row);
 	if (!isset($bits[1])) # properties file not found in /home/www-data/build/modeling/scripts/
 	{
-		unset($selectedDepsList2); break;
+		break;
 	}
 	$selectedDepsList2[$bits[0]] = $bits[1];  
 }
