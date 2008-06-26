@@ -8,6 +8,10 @@
 	$_SERVER['DOCUMENT_ROOT'] = $isBuildDotEclipseServer ? "/opt/public/modeling" : $_SERVER['DOCUMENT_ROOT'];
 	if (!is_dir ($_SERVER['DOCUMENT_ROOT']))
 	{
+		$_SERVER['DOCUMENT_ROOT'] = $isBuildDotEclipseServer ? "/opt/public/modeling/public_html" : $_SERVER['DOCUMENT_ROOT'];
+	}
+	if (!is_dir ($_SERVER['DOCUMENT_ROOT']))
+	{
 		$_SERVER['DOCUMENT_ROOT'] = $isBuildDotEclipseServer ? "/opt/public/cbi" : $_SERVER['DOCUMENT_ROOT'];
 	}
  ?>
