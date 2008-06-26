@@ -906,6 +906,10 @@ function updateDependenciesFile($file,$lines) {
 		}
 		fclose($f);
 	}
+	else
+	{
+		print "Cannot write changes to $file!";
+	}
 }
 function displayCheckboxes($label,$options,$divSuffix="") {
 	$matches = null;
