@@ -867,6 +867,8 @@ function loadBuildConfig($file, $deps)
 		}
 		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
 		{
+			# TODO: change this to an exec to use java --version instead
+			# TODO: why is build.cfg not being found?
 			$rp = realpath($regs[2]);
 			$opts[$regs[1]] = ($rp && $rp != $regs[2] ? preg_replace("#.+/([^/]+)#", "$1", $regs[2]) . " (" . preg_replace("#.+/([^/]+)#", "$1", $rp) . ")" : preg_replace("#.+/([^/]+)#", "$1", $regs[2]));
 		}
