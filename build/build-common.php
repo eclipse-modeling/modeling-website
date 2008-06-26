@@ -715,7 +715,7 @@ else
 
 	if (!$previewOnly && $isBuildDotEclipseServer)
 	{
-		$lockfile = "/opt/public/modeling/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
+		$lockfile = "/opt/public/cbi/tmp/" . $topProj . "-" . $projct . "_" . $BR . ".lock.txt"; // mdt-eodm_2.0.0.lock.txt
 		// check if lock file exists for this build type
 		if (is_file($lockfile))
 		{
