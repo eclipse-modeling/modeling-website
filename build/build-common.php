@@ -94,13 +94,18 @@ else
 }
 $options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenance=M","Nightly=N|selected");
 
-// bug 222298: this will probably break on some servers 
+// bug 222298: this will probably break on some servers
+# TODO: make this work with cvs connection instead of -sub flag 
 $selectedDepsList = array();
 exec($workDir . "modeling/scripts/start_cron.sh -sub $projct -noSearchCVS -depsOnly", $selectedDepsList);
 $selectedDepsList2 = array(); 
 foreach($selectedDepsList as $i => $row)
 {
 	$bits = explode("=",$row);
+	if (!isset($bits[1])) # properties file not found in /home/www-data/build/modeling/scripts/
+	{
+		unset($selectedDepsList2); break;
+	}
 	$selectedDepsList2[$bits[0]] = $bits[1];  
 }
 $selectedDepsList = $selectedDepsList2; unset($selectedDepsList2); //print_r($selectedDepsList);
