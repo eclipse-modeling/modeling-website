@@ -24,7 +24,7 @@ ob_start();
 $debugb = isset($_GET["debugb"]) ? 1 : 0;
 $previewOnly = isset($_GET["previewOnly"]) ? 1 : 0;
 
-$trans = array_flip($projects);
+$trans = isset($projects) && is_array($projects) ? array_flip($projects) : array();
 
 $projctFromPath = getProjectFromPath($PR);
 
