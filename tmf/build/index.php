@@ -1,0 +1,1 @@
+<?php header("Location: /modeling/tmf/xtext/build/"); ?>
