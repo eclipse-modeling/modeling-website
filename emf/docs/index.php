@@ -19,7 +19,7 @@ print <<<EOHTML
 
 	<ul>
 		<li>
-			<div>June 16 2005</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc//references/overview/EMF.html">The Eclipse Modeling Framework Overview</a>
+			<div>July 03 2008</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html">The Eclipse Modeling Framework Overview</a>
 		</li>
 
 		<li>
@@ -596,4 +596,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.16 2008/03/25 16:15:46 davidms Exp $ -->
+<!-- $Id: index.php,v 1.17 2008/07/03 19:51:29 nickb Exp $ -->

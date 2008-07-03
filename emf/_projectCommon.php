@@ -96,7 +96,7 @@ $Nav->addCustomNav("Installation", "http://wiki.eclipse.org/EMF/Installation", "
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
-$Nav->addCustomNav("Getting Started", "http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.emf/org.eclipse.emf/doc/org.eclipse.emf.doc/references/overview/EMF.html?root=Modeling_Project&amp;view=co", "_self", 2);
+$Nav->addCustomNav("Getting Started", "http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
 $Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF/FAQ", "_self", 2);
 if (!$proj || $proj == "emf" || $proj == "sdo")
 {
