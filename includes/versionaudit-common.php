@@ -5,6 +5,7 @@
 define("LOGGER_FAIL", 0);
 define("LOGGER_OK", 1);
 define("LOGGER_INFO", 2);
+define("MYSQL", 10);
 
 require_once ("buildServer-common.php");
 
@@ -179,9 +180,11 @@ foreach ($dirs as $dir)
 				"(SELECT MIN(`buildtime`) FROM `releases` WHERE `project` = '$proj' AND `component` = '$com' AND `type` = 'R')",
 				"'2000-01-01'"
 			);
-			$result = wmysql_query("SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+			$query = "SELECT `bugid`, `cvsname`, `date` FROM `cvsfiles` NATURAL JOIN `commits` NATURAL LEFT JOIN `bugs` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")";
+			$result = wmysql_query($query);
 			if (mysql_num_rows($result) == 0)
 			{
+				logger(MYSQL, "$query\n");
 				logger(LOGGER_OK, "no commits found >= $p/$type/$plugin/ $vanityname\n");
 			}
 			else
@@ -189,7 +192,10 @@ foreach ($dirs as $dir)
 				$plugtext = $plugin;
 				if ($html)
 				{
-					$result2 = wmysql_query("SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")");
+					$query = "SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")";
+					$result2 = wmysql_query($query);
+					logger(MYSQL, "$query\n");
+					
 					$row2 = mysql_fetch_row($result2);
 					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin/ startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
 				}
