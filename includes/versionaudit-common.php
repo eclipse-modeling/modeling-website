@@ -5,7 +5,7 @@
 define("LOGGER_FAIL", 0);
 define("LOGGER_OK", 1);
 define("LOGGER_INFO", 2);
-define("MYSQL", 10);
+define("LOGGER_SQL", 10);
 
 require_once ("buildServer-common.php");
 
@@ -184,7 +184,7 @@ foreach ($dirs as $dir)
 			$result = wmysql_query($query);
 			if (mysql_num_rows($result) == 0)
 			{
-				logger(MYSQL, "$query\n");
+				logger(LOGGER_SQL, "$query\n");
 				logger(LOGGER_OK, "no commits found >= $p/$type/$plugin/ $vanityname\n");
 			}
 			else
@@ -194,7 +194,7 @@ foreach ($dirs as $dir)
 				{
 					$query = "SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")";
 					$result2 = wmysql_query($query);
-					logger(MYSQL, "$query\n");
+					logger(LOGGER_SQL, "$query\n");
 					
 					$row2 = mysql_fetch_row($result2);
 					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin/ startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
@@ -499,8 +499,9 @@ function logger($type, $msg)
 
 	$labels = array(
 		LOGGER_FAIL => "[ fail ]",
-		LOGGER_OK => "[  ok  ]",
-		LOGGER_INFO => "[ info ]"
+		LOGGER_OK =>   "[  ok  ]",
+		LOGGER_INFO => "[ info ]",
+		LOGGER_SQL =>  "[  sql ]",
 	);
 
 	if ($type <= $verbosity)
