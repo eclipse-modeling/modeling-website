@@ -169,6 +169,10 @@ foreach ($dirs as $dir)
 				continue;
 			}
 			$lastversion = preg_replace("/\.qualifier$/", "", plugin_version($lastplugdir));
+			if (is_dir($lastplugdir))
+			{
+				logger(LOGGER_INFO, "Last released version of $lastplugdir is $lastversion\n");
+			}
 
 			$p = ($com == "" ? $proj : "$proj/$com");
 
