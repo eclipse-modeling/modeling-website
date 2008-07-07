@@ -11,9 +11,9 @@ if ($isBuildDotEclipseServer)
 	}
 	
 	$docRootOverrides = array (
+		"/opt/public/modeling", # list first in order for versionaudit.php to work; mysql connection issue?
 		"/opt/public/cbi",
 		"/opt/public/modeling/public_html",
-		"/opt/public/modeling",
 		
 	);
 	foreach ($docRootOverrides as $dr)
