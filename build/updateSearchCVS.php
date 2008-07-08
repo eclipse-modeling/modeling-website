@@ -42,7 +42,7 @@ if (isset($_GET["log"]))
 	
 	exec("cat /tmp/parsecvs_web.log.txt", $logtail);
 	for ($i=sizeof($logtail)-50; $i<sizeof($logtail); $i++) {
-	        print $logtail[$i]."<br/>\n";
+		if (isset($logtail[$i]) && $logtail[$i]) print $logtail[$i]."<br/>\n";
 	}
 	print "</blockquote></div>\n";
 }
@@ -134,7 +134,7 @@ else
 	  					$fp = file($lockfile);
 	  					if (is_array($fp) && sizeof($fp)>0)
 	  					{
-							print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
+							print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start at " . date("h:ia", strtotime("+1 minute")) . ".</h3>\n";
 							print "<p>Logfile: <u>/tmp/parsecvs_web.log.txt</u></p>";
 							print "<p>Lockfile: <u>$lockfile</u></p>";
 							print "<p><small><code>".str_replace("' '","'<br/>'",preg_replace("/\ \-/","<br> -",$cmd))."</code></small></p>";
