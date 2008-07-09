@@ -92,7 +92,7 @@ else
 {
 	$options["BranchIES"] = array (
 		"HEAD",
-		"R3_3_maintenance"
+		"R3_4_maintenance"
 	);
 }
 
