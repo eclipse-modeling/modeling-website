@@ -2,7 +2,8 @@
 require_once ("../../includes/buildServer-common.php");
 
 $dirs = array(
-	"HEAD" => "/opt/public/modeling/searchcvs/cvssrc/emf-org.eclipse.emf",
+    "HEAD"             => "/opt/public/modeling/searchcvs/cvssrc/emf-org.eclipse.emf",
+    "R2_4_maintenance" => "/opt/public/modeling/searchcvs/cvssrc_branches/emf-org.eclipse.emf-R2_4_maintenance",
 	"R2_3_maintenance" => "/opt/public/modeling/searchcvs/cvssrc_branches/emf-org.eclipse.emf-R2_3_maintenance",
 	"R2_2_maintenance" => "/opt/public/modeling/searchcvs/cvssrc_branches/emf-org.eclipse.emf-R2_2_maintenance",
 	"R2_1_maintenance" => "/opt/public/modeling/searchcvs/cvssrc_branches/emf-org.eclipse.emf-R2_1_maintenance",
