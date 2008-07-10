@@ -210,6 +210,8 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
 						<tr>
 							<td colspan="2"> &#149;
+										<a href="http://download.eclipse.org/technology/dltk/downloads/">DLTK</a>,
+										<a href="http://www.eclipse.org/datatools/downloads.php">DTP</a>,
 										<a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>,
 										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>,
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
@@ -872,6 +874,8 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"19dtp" => "dtp-",
+		"18dltk" => "dltk-",
 		"17teneo" => "emf-teneo-|emft-teneo-",
 		"16compare" => "emft-compare-",
 		"15uml2tools" => "mdt-uml2tools-",

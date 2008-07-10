@@ -93,6 +93,8 @@ $deps = array(
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"uml2tools" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools\">UML2 Tools</a>",
 
+	"dltk" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
+	"dtp" => "<a href=\"http://www.eclipse.org/dtp/\">DTP</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
 	"orbit" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">Orbit</a>", "lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
