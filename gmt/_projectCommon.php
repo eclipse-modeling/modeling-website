@@ -12,6 +12,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
 $Nav->addNavSeparator("Project Home", 	"/gmt/");
 
-$App->Promotion = FALSE; # set true to enable current eclipse.org site-wide promo
+$App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
 
 ?>
