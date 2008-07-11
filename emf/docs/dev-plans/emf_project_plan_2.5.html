@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type"
     content="text/html; charset=utf-8" />
 
-    <title>Eclipse EMF and XSD - DRAFT 2.5.0 Plans</title>
+    <title>Eclipse EMF - DRAFT 2.5.0 Plans</title>
 
 
     <link rel="stylesheet" href="http://www.eclipse.org/default_style.css" type="text/css" />
@@ -17,11 +17,9 @@
    <div class="Section1">
       <h1>Eclipse Modeling Framework (EMF)
       <br />
-		Draft 2.5.0 Plans</h1> 
+		Draft 2.5.0 Plan</h1>
 
-		<h3>Including XML Schema Definition (XSD) framework</h3>
-
-      <p>Last revised <tt>$Date: 2008/07/11 16:54:28 $</tt> ( 
+      <p>Last revised <tt>$Date: 2008/07/11 17:38:00 $</tt> ( 
       <img width="12" height="12" src="../../../images/green-box.gif"
       border="0" />
 
@@ -44,7 +42,7 @@
       </p>
 
       <p>This document lays out the feature and API set for the
-      next feature release, 2.5.0, of the Eclipse Modeling Framework (EMF) and XSD projects.</p>
+      next feature release, 2.5.0, of the Eclipse Modeling Framework (EMF) project.</p>
 
       <ul type="disc">
         <li>
@@ -70,7 +68,7 @@
         </li>
 
         <li>
-          <a href="#Project">EMF and XSD Project</a>
+          <a href="#Project">EMF Project</a>
         </li>
       </ul>
 
@@ -87,7 +85,7 @@
       even if no features were to change.</p>
 
       <p>The remainder of the plan consists of plan items for the
-      projects under the EMF and XSD projects. Each
+      projects under the EMF project. Each
       plan item covers a feature or API that is to be added, or
       some aspect that is to be improved. Each plan item has its
       own entry in the 
@@ -127,27 +125,19 @@
       <p>The release deliverables are:</p>
 
       <ul type="disc">
-        <li>Source code release for EMF and XSD is available in the Eclipse.org <a href="http://www.eclipse.org/modeling/">Modeling Project</a>
+        <li>Source code release for EMF is available in the Eclipse.org <a href="http://www.eclipse.org/modeling/">Modeling Project</a>
         <a href="http://dev.eclipse.org/viewcvs/index.cgi/?root=Modeling_Project">CVS
-        repositories</a> 
-
-        for 
-        <a
+        repositories</a> for <a
         href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.emf/org.eclipse.emf/?root=Modeling_Project">
-        EMF</a>
-
-         and 
-        <a
-        href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.mdt/org.eclipse.xsd/?root=Modeling_Project">
-        XSD</a>. <ul><img width="12" height="12" src="../../../images/green-box.gif"
+        EMF</a>. <ul><img width="12" height="12" src="../../../images/green-box.gif"
       border="0" /> <b>NOTE:</b> In addition, source builds have been requested to better support linux distributions and legal code scanning.</ul></li>
 
         <li><img width="12" height="12" src="/modeling/images/green-box.gif"
-      border="0" /> EMF and XSD runtime binaries and SDK distributions
+      border="0" /> EMF runtime binaries and SDK distributions
         (downloadable). <ul><img width="12" height="12" src="../../../images/green-box.gif"
       border="0" /> <b>NOTE:</b> <a href="http://wiki.eclipse.org/EMF/EMF_2.5_Simplified_Downloads">This may be changing</a>, but is not yet committed to plan.</ul></li>
 
-        <li>EMF and XSD runtime binaries and SDK features on
+        <li>EMF runtime binaries and SDK features on
         eclipse.org update site (install via Eclipse update
         manager).</li>
 
@@ -159,7 +149,7 @@
 
       Release Milestones</h2>
 
-      <p>EMF and XSD builds are available weekly as <em>Integration
+      <p>EMF builds are available weekly as <em>Integration
       builds</em>. EMF Milestone Releases are <b>one business day</b> after the <a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_5.html#Milestones">Eclipse Milestone Releases</a>.
       </p>
 
@@ -188,7 +178,7 @@
       system. The chief dependence is on the Eclipse Platform, and
       on the Java 2 Platform that runs it.</p>
 
-      <p>The EMF and XSD 2.5.0 releases depend on the
+      <p>The EMF 2.5.0 releases depend on the
       following:</p>
 
       <ul type="disc">
@@ -198,7 +188,7 @@
 
       </ul>
 
-      <p>The 2.5.0 releases of EMF and XSD are designed to run
+      <p>The 2.5.0 releases of EMF are designed to run
       on any configuration supporting the above components.</p>
 
       <p>The Eclipse Platform runs in a variety of operating
@@ -225,7 +215,7 @@
       <p>Eclipse is designed as the basis for internationalized
       products. The user interface elements provided by the various
       Eclipse projects, including dialogs and error messages, are
-      externalized. The English strings for EMF and XSD are
+      externalized. The English strings for EMF are
       provided as the default resource bundles. Translations are
       not provided with this release. However, the plug-in fragment
       mechanism provides the means by which translations into any
@@ -240,27 +230,25 @@
 
       <h3>Compatibility of Release 2.5.0 with 2.4.0</h3>
 
-      <p>EMF and XSD 2.5.0 will be compatible with EMF and XSD 2.4.0, except in those areas noted in the 
+      <p>EMF 2.5.0 will be compatible with EMF 2.4.0, except in those areas noted in the 
       <a href="#MigrationGuide">
-        <em>EMF and XSD 2.5.0 Migration Guide.</em>
-
-      </a>.</p>
+        <em>EMF 2.5.0 Migration Guide</em></a>.</p>
 
       <p>
       <b>API Contract Compatibility:</b>
 
-      EMF and XSD 2.5.0 will be upwards contract-compatible
-      with EMF and XSD 2.4.0 except in those areas noted in the
+      EMF 2.5.0 will be upwards contract-compatible
+      with EMF 2.4.0 except in those areas noted in the
       
       <a href="#MigrationGuide">
-        <em>EMF and XSD 2.5.0 Migration Guide.</em>
+        <em>EMF 2.5.0 Migration Guide.</em>
       </a>
 
       Programs that use affected APIs and extension points will
-      need to be ported to EMF and XSD 2.5.0 APIs. Downward
+      need to be ported to EMF 2.5.0 APIs. Downward
       contract compatibility is not supported. There is no
-      guarantee that compliance with EMF and XSD 2.5.0 APIs
-      would ensure compliance with EMF and XSD 1.x APIs. Refer
+      guarantee that compliance with EMF 2.5.0 APIs
+      would ensure compliance with EMF 1.x APIs. Refer
       to 
       <em>
         <a
@@ -275,15 +263,15 @@
 
       <b>Binary (plug-in) Compatibility:</b>
 
-      EMF and XSD 2.5.0 will be upwards binary-compatible with
-      EMF and XSD 2.4.0 except in those areas noted in the 
+      EMF 2.5.0 will be upwards binary-compatible with
+      EMF 2.4.0 except in those areas noted in the 
       <a href="#MigrationGuide">
-        <em>EMF and XSD 2.5.0 Migration Guide.</em>
+        <em>EMF 2.5.0 Migration Guide.</em>
       </a>
 
       Downward plug-in compatibility is not supported: plug-ins
-      compiled against EMF and XSD 2.5.0 will likely be
-      unusable with EMF and XSD 1.x. Refer to 
+      compiled against EMF 2.5.0 will likely be
+      unusable with EMF 1.x. Refer to 
       <em>
         <a
         href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
@@ -297,8 +285,8 @@
       <p>
       <b>Source Compatibility:</b>
 
-      Source files written to use EMF and XSD 2.4.0 APIs will
-      usually compile and run successfully against EMF and XSD
+      Source files written to use EMF 2.4.0 APIs will
+      usually compile and run successfully against EMF
       2.5.0 APIs, although this cannot be guaranteed. 
       In some cases, it may be necessary to make minor changes to the
       source code to disambiguate things like imports or overloaded
@@ -309,11 +297,11 @@
       <p>
       <b>Workspace Compatibility:</b>
 
-      EMF and XSD 2.5.0 will be upwards
-      workspace-compatible with EMF and XSD 2.4.0 unless noted.
+      EMF 2.5.0 will be upwards
+      workspace-compatible with EMF 2.4.0 unless noted.
       This means that workspaces and projects created by an Eclipse
-      with EMF and XSD 2.4.0 installed can be successfully
-      opened by an Eclipse with EMF and XSD 2.5.0 installed.
+      with EMF 2.4.0 installed can be successfully
+      opened by an Eclipse with EMF 2.5.0 installed.
       This includes both hidden metadata, which is localized to a
       particular workspace, as well as metadata files found within
       a workspace project, which may propagate between workspaces
@@ -342,7 +330,7 @@
 
       for information about how to write compliant plug-ins.</p>
       
-      <p>Almost the entire EMF and XSD code is available in non-internal packages and are
+      <p>Almost the entire EMF code is available in non-internal packages and are
       assumed to be used and extended by users.  The main exception is extending the Ecore
       model itself directly (i.e., extending or implementing <tt>org.eclipse.emf.ecore.EModelElement</tt>).  There are
       no guarantees that these extensions won't be broken by changes in EMF.  If you are not sure that your code has
@@ -356,7 +344,7 @@
       <a name="MigrationGuide">
       </a>
 
-      EMF and XSD 2.5.0 Migration Guide</h3>
+      EMF 2.5.0 Migration Guide</h3>
 
       <p>At this time, there are no known issues migrating from
       2.4.0 to 2.5.0. 
@@ -372,7 +360,7 @@
       Themes</h2>
   <p><img width="12" height="12" src="/modeling/images/green-box.gif"
       border="0" /> The changes under consideration for the next release of
-      Eclipse EMF and XSD address a few major themes: </p>
+      Eclipse EMF address a few major themes: </p>
 
       <ul>
         <li>
@@ -383,7 +371,7 @@
         <li>
         <b>Release Currency</b>
 
-        - Modeling projects will maintain release currency concurrent with 3.x releases. For EMF and XSD 2.5.0, this means 
+        - Modeling projects will maintain release currency concurrent with 3.x releases. For EMF 2.5.0, this means 
         currency with Eclipse 3.5.0 and Java SE 5.0.</li>
 		
 		<li><b>Modeling Project Integration</b> 
@@ -396,12 +384,8 @@
 <p><img width="12" height="12" src="/modeling/images/green-box.gif"
       border="0" /> Additionally, the following plan items have been proposed.</p>
 <ul>        
-        <li><b>Investigate XML Schema 1.1</b>
-        - Investigate the future impact of XML Schema 1.1; likely no actual changes will be made until the final approval of the specification. 
-        Currently, the only person qualified to resolve this plan item is <a href="http://ed-merks.blogspot.com/">Ed Merks</a>, who is available for $3000/day.</li>
-
         <li><b>Build &amp; Web Infrastructure Improvements </b>
-        - Continue to improve and automate build and release processes such that they can be reused by other projects and such that developers can focus on development, rather than release engineering</li> 
+        - Continue to improve and automate build and release processes such that they can be reused by other projects and such that developers can focus on development, rather than release engineering.</li> 
 
 </ul>
 
@@ -446,9 +430,9 @@
 
       </a>
 
-     EMF and XSD Project</h2>
+     EMF Project</h2>
 
-<p>Plan items reflect new features of the EMF and XSD project, or
+<p>Plan items reflect new features of the EMF project, or
 areas where existing features will be significantly reworked.
 
 <h4><a name="Committed"> </a> Committed Items </h4>
@@ -460,11 +444,11 @@ following links:</p>
 
 <p><b>2.5.0 release:</b></p>
 <p><a 
-	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Open</a> 
+	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Open</a> 
 	| <a
-	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Resolved</a> 
+	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Resolved</a> 
 	| <a
-  href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Bugs</a>
+  href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">All Bugs</a>
 
   </p>
 
@@ -501,11 +485,11 @@ current list of these items, see the following link:</p>
 <blockquote>
 <p>Plan item bugzillas from this and previous releases:</p>
 <p><a 
-	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Open</a> 
+	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Open</a> 
 	| <a
-	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Resolved</a> 
+	href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Resolved</a> 
 	| <a
-  href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF,XSD&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Bugs</a></p>
+  href="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;short_desc_type=substring&amp;short_desc=%5BPlan+Item%5D&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id">All Bugs</a></p>
 
 </blockquote>
 
