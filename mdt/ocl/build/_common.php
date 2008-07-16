@@ -6,17 +6,20 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
-		"1.2.0=HEAD,/opt/sun-java2-5.0",
+        "1.3.0=HEAD,/opt/sun-java2-5.0",
+        "1.2.1=R1_2_maintenance,/opt/sun-java2-5.0",
 		"1.1.2=R1_1_maintenance,/opt/sun-java2-5.0",
 		#"1.0.3=R1_0_maintenance,/opt/sun-java2-1.4",
 		
 		"emft.eclipse.org=------------,------------",
-		"1.2.0=HEAD,/opt/sun-java2-5.0",
+        "1.3.0=HEAD,/opt/sun-java2-5.0",
+        "1.2.1=R1_2_maintenance,/opt/sun-java2-5.0",
 		"1.1.2=R1_1_maintenance,/opt/sun-java2-5.0",
 		#"1.0.3=R1_0_maintenance,/opt/sun-java2-1.4",
 		
 		"build.eclipse.org=------------,------------",
-		"1.2.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+        "1.3.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+        "1.2.1=R1_2_maintenance,/opt/public/common/ibm-java2-ppc-50",
 		"1.1.2=R1_1_maintenance,/opt/public/common/ibm-java2-ppc-50",
 		#"1.0.3=R1_0_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
