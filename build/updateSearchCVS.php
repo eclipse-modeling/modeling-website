@@ -13,8 +13,11 @@ internalUseOnly();
 $previewOnly = (isset($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0);
 
 # ensure that the scripts can run
-exec("chmod u+x /opt/public/modeling/searchcvs/*.sh");
-exec("chmod g+x /opt/public/modeling/searchcvs/*.sh");
+exec("chmod 775 /opt/public/modeling/searchcvs/*.sh", $result);
+if (isset($result) && $result)
+{
+	print "[$result]<br/>\n";
+}
 
 ob_start();
 print <<<HTML
@@ -226,6 +229,7 @@ if (!isset($_GET["log"]))
 	print "<h6>Latest Logged Events</h6>\n";
 	exec("cat /tmp/parsecvs_web.log.txt", $logtail);
 	$out = "";
+	$cnt=0;
 	for ($i=sizeof($logtail)-1; $i>=0; $i--) {
 		if (preg_match("#\[\d{4}.+\d+\] #",$logtail[$i]))
 		{
