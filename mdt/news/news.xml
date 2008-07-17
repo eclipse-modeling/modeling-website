@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="June 25, 2008" showOn="whatsnew">
+	The <a href="http://www.eclipse.org/modeling/mdt/">MDT Project</a> 
+	ships 4 components in <a href="http://www.eclipse.org/projects/whatsnew.php">Ganymede</a>. An <a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder">All-in-One</a> download is available.
+</news>
 <news date="May 13, 2008" showOn="whatsnew">
     A new <a href="http://wiki.eclipse.org/MDT-Papyrus-Proposal">Papyrus</a> component has been proposed.
 </news>
@@ -176,6 +180,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.28 2008/05/31 02:46:54 khussey Exp $ -->
+<!-- $Id: news.xml,v 1.29 2008/07/17 01:54:35 nickb Exp $ -->
 
 </doc>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="June 25, 2008" showOn="whatsnew">
+	The <a href="http://www.eclipse.org/modeling/emft/">EMFT Incubator</a> 
+	ships 4 components in <a href="http://www.eclipse.org/projects/whatsnew.php">Ganymede</a>. An <a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder">All-in-One</a> download is available.
+</news>
 <news date="June 04, 2008" showOn="whatsnew">
 	Teneo, CDO, and Net4j <a href="http://www.eclipse.org/projects/whatsnew.php">graduate</a> to <a href="http://www.eclipse.org/modeling/emf/">Eclipse Modeling Framework (EMF)</a> as part of the <a href="http://www.eclipse.org/projects/whatsnew.php">Ganymede Release Review</a>.
 </news>
@@ -25,4 +29,4 @@
 	<a href="http://www.eclipse.org/modeling/mdt/eodm/docs/articles/EODM_Documentation/">EODM Initial Documentation</a> is available !
 </news>
 </doc>
-<!-- $Id: news.xml,v 1.5 2008/05/28 20:35:30 nickb Exp $ -->
+<!-- $Id: news.xml,v 1.6 2008/07/17 01:54:35 nickb Exp $ -->
