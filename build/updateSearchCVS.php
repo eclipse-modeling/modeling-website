@@ -12,13 +12,6 @@ internalUseOnly();
 
 $previewOnly = (isset($_GET["previewOnly"]) && $_GET["previewOnly"] ? 1 : 0);
 
-# ensure that the scripts can run
-exec("chmod 775 /opt/public/modeling/searchcvs/*.sh", $result);
-if (isset($result) && $result)
-{
-	print "[$result]<br/>\n";
-}
-
 ob_start();
 print <<<HTML
 
