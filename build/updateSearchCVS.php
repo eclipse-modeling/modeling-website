@@ -88,7 +88,7 @@ else
 					$addedTarget = true;
 				}
 			}
-			if (isset($_GET['email']))
+			if (isset($_GET['email']) && trim($_GET['email']))
 			{
 				$cmd .= " -email " . $_GET['email'];
 			}
