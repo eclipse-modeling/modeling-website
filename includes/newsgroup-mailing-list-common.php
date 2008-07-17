@@ -123,7 +123,7 @@ ob_start();
 
 <?php
 
-// http://www.eclipse.org/search/search.cgi?q=something
+// http://www.eclipse.org/newsportal/thread.php?group=eclipse.*.*
 
 /*** side items ***/
 print <<<XML
