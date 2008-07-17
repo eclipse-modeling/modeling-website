@@ -32,11 +32,11 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>June 1 2004</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc//references/overview/EMF.Edit.html">The EMF Edit Framework Overview</a>
+			<div>June 1 2004</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.Edit.html">The EMF Edit Framework Overview</a>
 		</li>
 
 		<li>
-			<div>June 23 2005</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc//references/overview/EMF.Validation.html">The EMF Validation Framework Overview</a>
+			<div>June 23 2005</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.Validation.html">The EMF Validation Framework Overview</a>
 		</li>
 
 		<li>
@@ -60,24 +60,24 @@ print <<<EOHTML
 
 	<ul>
 		<li>
-			<div>May 31 2006</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/clibmod/clibmod.html">Tutorial: Generating an EMF Model</a>
+			<div>May 31 2006</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/clibmod/clibmod.html">Tutorial: Generating an EMF Model</a>
 		</li>
 
 		<li>
-			<div>May 31 2006</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/slibmod/slibmod.html">Tutorial: Generating an Extended EMF Model</a>
+			<div>May 31 2006</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/slibmod/slibmod.html">Tutorial: Generating an Extended EMF Model</a>
 		</li>
 
 		<li>
-			<div>May 31 2006</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/xlibmod/xlibmod.html">Tutorial: Generating an EMF Model using XML Schema</a>
+			<div>May 31 2006</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/xlibmod/xlibmod.html">Tutorial: Generating an EMF Model using XML Schema</a>
 		</li>
 
 		<li>
-			<div>Jan 3 2007</div><a target="_out" href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/jet1/jet_tutorial1.html">JET Tutorial Part 1 (Introduction to JET)</a><br/>
+			<div>Jan 3 2007</div><a target="_out" href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/jet1/jet_tutorial1.html">JET Tutorial Part 1 (Introduction to JET)</a><br/>
 			Contributed by Remko Popma
 		</li>
 
 		<li>
-			<div>Jan 3 2007</div><a target="_out" href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/jet2/jet_tutorial2.html">JET Tutorial Part 2 (Write Code that Writes Code)</a><br/>
+			<div>Jan 3 2007</div><a target="_out" href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/jet2/jet_tutorial2.html">JET Tutorial Part 2 (Write Code that Writes Code)</a><br/>
 			Contributed by Remko Popma
 		</li>
 
@@ -91,7 +91,7 @@ print <<<EOHTML
 		</li>
 
 		<li>
-			<div>June 2 2004</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.doc/tutorials/rosepkg/rosepkg.html">Specifying Package Information in Rose</a>
+			<div>June 2 2004</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/rosepkg/rosepkg.html">Specifying Package Information in Rose</a>
 		</li>
 
 		<li>
@@ -299,11 +299,11 @@ print <<<EOHTML
 
 	<ul>
 		<li>
-			<div>July 2002</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.xsd.doc/references/articles/dwtip1-scpw/index.html">Analyzing XML schemas with the Schema Infoset Model</a>
+			<div>July 2002</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.xsd.doc/references/articles/dwtip1-scpw/index.html">Analyzing XML schemas with the Schema Infoset Model</a>
 		</li>
 
 		<li>
-			<div>June 3 2005</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.xsd.doc/references/diagrams/diagrams.html">Diagrams
+			<div>June 3 2005</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.xsd.doc/references/diagrams/diagrams.html">Diagrams
 and Animations of the internals of XSD models</a>
 		</li>
 	</ul>
@@ -319,7 +319,7 @@ and Animations of the internals of XSD models</a>
 		</li>
 
 		<li>
-			<div>Oct 12 2004</div><a href="http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.emf.ecore.sdo.doc/tutorials/datagraph/datagraph.html">Tutorial: Using the SDO Data Graph Editor</a>
+			<div>Oct 12 2004</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.ecore.sdo.doc/tutorials/datagraph/datagraph.html">Tutorial: Using the SDO Data Graph Editor</a>
 		</li>
 
 		<li>
@@ -596,4 +596,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.17 2008/07/03 19:51:29 nickb Exp $ -->
+<!-- $Id: index.php,v 1.18 2008/07/17 17:53:10 nickb Exp $ -->
