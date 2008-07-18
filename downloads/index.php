@@ -89,7 +89,7 @@ function toggleDetails(id)
 		</li>
 HTML;
 		} ?>
-		<li style="padding:2px"><a href="http://www.eclipse.org/modeling/gmf/updates/">GMF Updates</a></li>
+		<li style="padding:2px"><a href="http://www.eclipse.org/modeling/gmf/downloads/">GMF Downloads</a></li>
 	</ul> 
 	</div>
 
