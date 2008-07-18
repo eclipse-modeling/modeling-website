@@ -162,6 +162,15 @@ HTML;
 	</div>
 	
 	<div class="sideitem">
+		<h6>More Modeling</h6>
+		<ul>
+			<li><a href="http://www.eclipse.org/mddi/">MDDi</a> <a href="http://www.eclipse.org/mddi/download.php">Downloads</a></li>
+			<li><a href="http://www.eclipse.org/gmt/">GMT</a> <a href="http://www.eclipse.org/gmt/download/">Downloads</a></li>
+			<li><a href="http://wiki.eclipse.org/Modeling_Corner">Modeling Corner</a></li>
+		</ul>
+	</div>
+	
+	<div class="sideitem">
 		<h6>More Info</h6>
 		<ul>
 			<li><a href="http://www.eclipse.org/downloads/packages/compare-packages">What's In The Ganymede Packages</a></li>
