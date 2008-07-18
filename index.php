@@ -32,25 +32,6 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	$pageKeywords	= "modeling, UML, UML2, MDD, MDA, model-driven";
 	$pageAuthor		= "Richard Gronback";
 	
-	# Add page-specific Nav bars here
-	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-	# $Nav->addNavSeparator("My Page Links", 	"downloads.php");
-	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
-	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
-	
-	$Nav->addNavSeparator("Downloads", "http://www.eclipse.org/downloads/index_project.php");
-	$Nav->addCustomNav("EMF", "/modeling/emf/downloads/", "_self", 3);
-	$Nav->addCustomNav("EMFT", "/modeling/emft/downloads/", "_self", 3);
-	$Nav->addCustomNav("GMF", "http://download.eclipse.org/modeling/gmf/downloads/", "_self", 3);
-	$Nav->addCustomNav("GMT", "/gmt/download/", "_self", 3);
-	$Nav->addCustomNav("MDDi", "/mddi/download.php", "_self", 3);
-	$Nav->addCustomNav("MDT", "/modeling/mdt/downloads/", "_self", 3);
-	$Nav->addCustomNav("M2M", "/m2m/", "_self", 3);
-	$Nav->addCustomNav("M2T", "/modeling/m2t/downloads/", "_self", 3);
-
-	# End: page-specific settings
-	#
-		
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
 
@@ -84,7 +65,7 @@ development technologies within the Eclipse community by providing a unified set
 			<h3>Concrete Syntax Development</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/gmf">Graphical Modeling Framework</a> (GMF) : provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
-				<li><a href="">Textual Modeling Framework</a> (TMF) : awaiting proposal.</li>
+				<li><a href="http://www.eclipse.org/modeling/tmf/">Textual Modeling Framework</a> (TMF) : awaiting proposal.</li>
 			</ul>
 		</div>
 		<div class="homeitem3col">
@@ -162,7 +143,7 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Project">Modeling Project Wiki</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Modeling Corner</a></li>
-				<li><a href="http://wiki.eclipse.org/Europa">Europa</a>, <a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
+				<li><a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>, <a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
 				<li><a href="http://www.eclipse.org/modeling/project-info/team.php">Who's Who in Modeling?</a></li>
 			</ul>
 		</div>
@@ -172,6 +153,7 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>News</h6>
 			<ul>
+				<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder">Ganymede Modeling Tools <b style="color:green">All-In-One</b> Package is available</a>.</li>
 				<li>Domain Specific Modeling <a href="http://eclipsesummit.org/summiteurope2007/index.php?page=detail/&id=32">demo</a> viewlets from <a href="http://eclipsesummit.org/summiteurope2007/index.php">Eclipse Summit Europe 2007</a> are <a href="http://www.eclipse.org/modeling/presentations/ese2007/index.php">posted</a>.</li>
 			</ul>
 		</div>
