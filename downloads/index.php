@@ -166,6 +166,7 @@ HTML;
 		<ul>
 			<li><a href="http://www.eclipse.org/mddi/">MDDi</a> <a href="http://www.eclipse.org/mddi/download.php">Downloads</a></li>
 			<li><a href="http://www.eclipse.org/gmt/">GMT</a> <a href="http://www.eclipse.org/gmt/download/">Downloads</a></li>
+			<li><a href="http://www.eclipse.org/modeling/tmf/">TMF</a> <acronym title="No downloads yet!"><span style="color:gray">Downloads</span></acronym></li>
 			<li><a href="http://wiki.eclipse.org/Modeling_Corner">Modeling Corner</a></li>
 		</ul>
 	</div>
