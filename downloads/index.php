@@ -49,7 +49,7 @@ function toggleDetails(id)
 	<h3>All-In-One Download</h3>
 	
 	<p><table cellpadding="2"><tr><td>
-		The simplest way to get started with Eclipse Modeling is to download the <a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder"><b style="color:green">All-In-One</b> Ganymede Modeling Package</a>.
+		The simplest way to get started with Eclipse Modeling is to download the <a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder"><b style="color:green">All-In-One</b> Ganymede Modeling Tools Package</a>.
 	</td><td align="right"><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder"><img border="0" src="http://www.eclipse.org/modeling/images/modeling_about.png" alt="Modeling and Model development"></a></td></tr></table> 
 	<ul>
 		<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-win32.zip">Windows 32bit</a></li>
