@@ -51,7 +51,7 @@ function toggleDetails(id)
 
 <div id="midcolumn">
 
-	<h1>Modeling Project All-In-One</h1>
+	<h1>All-In-One Solutions</h1>
 
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_all-in-one.jpg"></td>
@@ -77,7 +77,7 @@ function toggleDetails(id)
 
 	<hr noshade="noshade" size="1" width="98%"/>
 
-	<h1>Modeling Project Individual Project Downloads</h1>
+	<h1>Downloads By Project</h1>
 
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_individual.jpg"></td>
@@ -107,7 +107,7 @@ HTML;
 
 	<hr noshade="noshade" size="1" width="98%"/>
 
-	<h1>Individual Project Update Sites</h1>
+	<h1>Project Update Sites</h1>
 	
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_bleeding-edge.jpg"></td>
