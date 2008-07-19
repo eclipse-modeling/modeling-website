@@ -93,12 +93,12 @@ function toggleDetails(id)
 			$components = getComponents("$project", true);
 			print <<<HTML
 				<li style="border:0px;padding:3px">
-					<a href="http://www.eclipse.org/modeling/$project/downloads/">$projectU</a>: 
+					<a href="http://www.eclipse.org/modeling/$project/downloads/">$projectU</a>
 					$components
 				</li>
 HTML;
 		} ?>
-				<li style="padding:2px"><a href="http://www.eclipse.org/modeling/gmf/downloads/">GMF Downloads</a></li>
+				<li style="border:0px;padding:3px"><a href="http://www.eclipse.org/modeling/gmf/downloads/">GMF</a></li>
 			</ul>
 			</blockquote>
 		</p>
@@ -121,11 +121,11 @@ HTML;
 			$projectU = strtoupper($project);
 			print <<<HTML
 				<li style="border:0px;padding:3px">
-					<a href="http://www.eclipse.org/modeling/$project/updates/">$projectU Updates</a>
+					<a href="http://www.eclipse.org/modeling/$project/updates/">$projectU</a>
 				</li>
 HTML;
 		} ?>
-				<li style="padding:2px"><a href="http://www.eclipse.org/modeling/gmf/updates/">GMF Updates</a></li>
+				<li style="border:0px;padding:3px"><a href="http://www.eclipse.org/modeling/gmf/updates/">GMF</a></li>
 			</ul>
 			</blockquote>
 		</p> 
