@@ -67,7 +67,7 @@ function toggleDetails(id)
 	<br/>
 	</div>
 
-	<div class="homeitem">
+	<div class="homeitem" style="clear:none">
 	<h3>Individual Project Downloads</h3>
 	
 	<p><table cellpadding="2"><tr><td>
@@ -117,7 +117,7 @@ HTML;
 	
 	</div>
 
-	<div class="homeitem">
+	<div class="homeitem" style="clear:none">
 	<h3>Individual Project Update Sites</h3>
 	
 	<p><table cellpadding="2"><tr><td>
