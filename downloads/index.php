@@ -82,7 +82,7 @@ function toggleDetails(id)
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_individual.jpg"></td>
 		<td>
-		Or, you can download individual Modeling Project components via their download sites. 
+		Or, you can download individual components from their download sites. 
 		<p>
 			<blockquote>	
 			<ul>
@@ -111,7 +111,7 @@ HTML;
 	
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_bleeding-edge.jpg"></td>
-		<td>For bleeding edge updates, use the Modeling projects' update sites. 
+		<td>For bleeding edge updates, use one or more of these update sites. 
 		<p>
 			<blockquote>
 			<ul>
