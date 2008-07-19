@@ -34,7 +34,7 @@ $Nav->addCustomNav("TMF", "/modeling/tmf/", "_self", 3);
 
 $Nav->addNavSeparator("Downloads", "http://www.eclipse.org/modeling/downloads/");
 $Nav->addCustomNav("All-In-One Package", "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder", "_self", 2);
-$Nav->addCustomNav("Installation", "http://wiki.eclipse.org/Modeling/Installation", "_self", 2);
+$Nav->addCustomNav("Installation", "http://wiki.eclipse.org/Modeling_Project/Installation", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/Category:Modeling");
 $Nav->addCustomNav("Getting Started", "http://wiki.eclipse.org/Modeling_Documentation", "_self", 2);
