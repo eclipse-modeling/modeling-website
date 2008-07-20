@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.66 2008/06/12 20:28:48 nickb Exp $
+// $Id: scripts.php,v 1.67 2008/07/20 01:44:24 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -712,5 +712,23 @@ function tokenize($in) # split a shell command into flag/value pairs
 	}
 	return $pairs;
 } 
+
+function addGoogleAnalyticsTrackingCodeToHeader()
+{
+	global $App;
+	# Google Analytics are now allowed per bug 225166
+	$googleAnalyticsTrackingCode = <<<EOHTML
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2566337-8");
+pageTracker._initData(); 
+pageTracker._trackPageview();
+</script>
+EOHTML;
+	$App->AddExtraHtmlHeader($googleAnalyticsTrackingCode); 
+}
 
 ?>

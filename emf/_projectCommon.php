@@ -123,7 +123,6 @@ unset ($bugcoms);
 $Nav->addCustomNav("Contributors", "http://www.eclipse.org/$PR/project-info/team.php", "_self", 2);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-
+addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
-
 ?>
