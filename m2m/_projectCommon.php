@@ -115,10 +115,9 @@ if ($projct == "atl")
 	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/M2M/Atlas_Transformation_Language_(ATL)", "_self", 2);
 	$Nav->addCustomNav("Publications", "/m2m/atl/publication.php", "_self", 2);
 }
+unset ($bugcoms);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-
+addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
-
-unset ($bugcoms);
 ?>

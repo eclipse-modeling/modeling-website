@@ -11,7 +11,6 @@ $writableBuildRoot = $isBuildDotEclipseServer ? "/opt/public/modeling" : "/home/
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
 $Nav->addNavSeparator("Project Home", 	"/mddi/");
-
+addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
-
 ?>
