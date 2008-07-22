@@ -6,10 +6,11 @@ $NLpacks = array(
 );
 
 $oldrels = array(
-	"JET 0.7.2" => array("2007/02/08 11:15","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.7.2/R200702081115/"),
-	"JET 0.7.1" => array("2006/09/21 08:20","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.7.1/R200609210820/"),
-	"JET 0.7.0" => array("2006/06/26 09:42","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.7.0/R200606260942/"),
-	null,
+    "0.8.1" => "200709200945",
+    "0.8.0" => "200706201333",
+	"0.7.2" => "200702081115",
+	"0.7.1" => "200609210820",
+	"0.7.0" => "200606260942",
 	"JET Editor 0.8.0" => array("2007/03/03 00:36","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.8.0/I200703030036/"),
 	"JET Editor 0.7.2" => array("2007/01/04 22:00","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.7.2/M200701042200/"),
 	"JET Editor 0.7.0" => array("2006/10/05 02:45","http://archive.eclipse.org/modeling/m2t/jet/downloads/drops/0.7.0/R200610050245/")
