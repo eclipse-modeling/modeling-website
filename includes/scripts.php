@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.71 2008/07/24 03:11:12 nickb Exp $
+// $Id: scripts.php,v 1.72 2008/07/24 19:33:13 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -714,20 +714,9 @@ function tokenize($in) # split a shell command into flag/value pairs
 
 function addGoogleAnalyticsTrackingCodeToHeader($UA = "UA-2566337-8")
 {
+	# http://wiki.eclipse.org/Using_Phoenix#Google_Analytics
 	global $App;
-	# Google Analytics are now allowed per bug 225166
-	$googleAnalyticsTrackingCode = <<<EOHTML
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("$UA");
-pageTracker._initData(); 
-pageTracker._trackPageview();
-</script>
-EOHTML;
-	$App->AddExtraHtmlHeader($googleAnalyticsTrackingCode); 
+	$App->SetGoogleAnalyticsTrackingCode("$UA"); 
 }
 
 ?>
