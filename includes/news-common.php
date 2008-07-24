@@ -15,8 +15,8 @@ function allnews($project, $cvsprojs, $cvscoms, $proj, $newAndNoteworthy = "")
 	getNews(-1, "all");
 	print "</div>\n";
 
-	print "<a name=\"build\"></a><div class=\"homeitem3col\">\n";
-	print '<h3><a href="/'.($PR == 'technology/emft' ? 'emft' : $PR) . '/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>Build News</h3>'."\n";
+	print "<div class=\"homeitem3col\">\n";
+	print '<a name="build"></a><h3><a href="/'.($PR == 'technology/emft' ? 'emft' : $PR) . '/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>Build News</h3>'."\n";
 	build_news($cvsprojs, $cvscoms, $proj, -1);
 	print "</div>\n";
 
