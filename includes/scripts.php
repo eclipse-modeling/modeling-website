@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.70 2008/07/24 03:05:43 nickb Exp $
+// $Id: scripts.php,v 1.71 2008/07/24 03:11:12 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -309,18 +309,7 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 
 function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 {
-	global $projects, $PR, $debug;
-	if ($debug > 10)
-	{
-		foreach (array_keys($cvscoms) as $z)
-		{
-			foreach (array_keys($cvscoms[$z]) as $y)
-			{
-				print "\$cvscoms[$z][$y] = " . $cvscoms[$z][$y] . "<br/>";
-			}
-		}
-	}
-
+	global $projects, $PR;
 	$types = array(
 		"I" => "integration",
 		"M" => "maintenance",
