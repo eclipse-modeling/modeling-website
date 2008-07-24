@@ -72,7 +72,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 $regs = null;
 
 $proj = (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
-if (!$proj && isset($defaultProj)) $proj = preg_replace("#^/#", "", $defaultProj);
 $projct= preg_replace("#^/#", "", $proj);
 
 $buildtypes = array(
