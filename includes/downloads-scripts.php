@@ -920,17 +920,29 @@ function getBuildArtifacts($dir, $branchID)
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
-				preg_match("/.+-(incubation-|)([^-]+).zip/", $buildfile[$z], $reg);
+				preg_match("/.+-(incubation-|sdk_|)([^-]+).zip/", $buildfile[$z], $reg);
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
-					$vanity = trim(preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$buildID[$z]));
+					
+					$vanity = $buildID[$z];
+					$vanity = preg_replace("#(-|_|sdk_)+#"," ",$vanity);
+					$vanity = preg_replace("#(.+ downloads|downloads)+#"," ",$vanity);
+					$vanity = trim(preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$vanity));
 					if ($vanity != $reg[2])
 					{
-						$vanity = $reg[2] . " " . $vanity;
+						$vanity = str_replace("_"," ",$reg[2]) . " " . $vanity;
 					}
 				}
 				if ($vanity == " downloads") {
 					$vanity="";
 				}
+
+				# trim duplicate information
+				$vanity = str_replace("#incubation#","",$vanity);
+				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
+				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
+				# tokenize and reassemble, avoiding dupes
+				$vanityBits = explode(" ",trim($vanity));
+				$vanity=""; foreach ($vanityBits as $vb){ if (false===strstr($vanity,$vb)){ $vanity.=" $vb"; } }
 				
 				$bf = array();
 				if (preg_match("#(.+)/orbitBundles-(.+).map$#", $buildfile[$z], $bfbits))
