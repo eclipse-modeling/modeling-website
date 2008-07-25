@@ -937,7 +937,7 @@ function getBuildArtifacts($dir, $branchID)
 				}
 
 				# trim duplicate information
-				$vanity = str_replace("#incubation#","",$vanity);
+				$vanity = preg_replace("#incubation#","",$vanity);
 				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				# tokenize and reassemble, avoiding dupes
