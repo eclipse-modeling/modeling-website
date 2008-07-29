@@ -7,28 +7,6 @@
 	</description>
 
 
-	<!-- TENEO 0.8.0 I200805200858 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858" name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858">
-		<description>
-EMFT TENEO SDK (Incubation) 0.8.0 I200805200858: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200805200858-077-7w311916311969" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200805200858-077-7w311916311969.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200805200858-07c-AgI99m9XI99mXm" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200805200858-07c-AgI99m9XI99mXm.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200805200858-07M-8-LA3YThMLRT6kJLa1QEVVFG" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200805200858-07M-8-LA3YThMLRT6kJLa1QEVVFG.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200805200858-08--DUUEFDEsUEFDtD" url="features/org.eclipse.emf.teneo.source_0.8.0.v200805200858-08--DUUEFDEsUEFDtD.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200805200858-08--DUUEFDEsUEFDtD" url="features/org.eclipse.emf.teneo_0.8.0.v200805200858-08--DUUEFDEsUEFDtD.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200805200858"/>
-	</feature>
-
 	<!-- SEARCH 0.7.0RC1 I200805221155 (Incubation) -->
 	<category-def label="EMFT SEARCH SDK (Incubation) 0.7.0RC1 I200805221155" name="EMFT SEARCH SDK (Incubation) 0.7.0RC1 I200805221155">
 		<description>
@@ -88,43 +66,6 @@ EMFT SEARCH SDK (Incubation) 0.7.0RC1 I200805221155: contains runtime, source, a
 	</feature>
 	<feature id="org.eclipse.uml2.search" version="0.7.0.v200805221155" url="features/org.eclipse.uml2.search_0.7.0.v200805221155.jar" patch="false">
 		<category name="EMFT SEARCH SDK (Incubation) 0.7.0RC1 I200805221155"/>
-	</feature>
-
-	<!-- NET4J 0.8.0 I200804071452 (Incubation) -->
-	<category-def label="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452" name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452">
-		<description>
-EMFT NET4J SDK (Incubation) 0.8.0 I200804071452: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.net4j.db.source" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.db.source_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.db" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.db_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.doc" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.doc_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.examples.source" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.examples.source_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.examples" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.examples_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.sdk" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.sdk_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.source" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.source_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.ui.source" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.ui.source_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j.ui" version="0.8.0.v200804071452" url="features/org.eclipse.net4j.ui_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
-	</feature>
-	<feature id="org.eclipse.net4j" version="0.8.0.v200804071452" url="features/org.eclipse.net4j_0.8.0.v200804071452.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200804071452"/>
 	</feature>
 
 	<!-- MWE 0.7.0 I200801100355 (Incubation) -->
@@ -205,6 +146,25 @@ EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200804251303: contains runtime, source, 
 		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0 I200804251303"/>
 	</feature>
 
+	<!-- COMPARE 0.8.0 M200807291158 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158" name="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.8.0.v200807291158" url="features/org.eclipse.emf.compare.doc_0.8.0.v200807291158.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.8.0.v200807291158" url="features/org.eclipse.emf.compare.sdk_0.8.0.v200807291158.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.8.0.v200807291158" url="features/org.eclipse.emf.compare.source_0.8.0.v200807291158.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.8.0.v200807291158" url="features/org.eclipse.emf.compare_0.8.0.v200807291158.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 M200807291158"/>
+	</feature>
+
 	<!-- COMPARE 0.8.0M7 I200805060349 (Incubation) -->
 	<category-def label="EMFT COMPARE SDK (Incubation) 0.8.0M7 I200805060349" name="EMFT COMPARE SDK (Incubation) 0.8.0M7 I200805060349">
 		<description>
@@ -222,114 +182,6 @@ EMFT COMPARE SDK (Incubation) 0.8.0M7 I200805060349: contains runtime, source, a
 	</feature>
 	<feature id="org.eclipse.emf.compare" version="0.8.0.v200805060349" url="features/org.eclipse.emf.compare_0.8.0.v200805060349.jar" patch="false">
 		<category name="EMFT COMPARE SDK (Incubation) 0.8.0M7 I200805060349"/>
-	</feature>
-
-	<!-- CDO spring N200805220742 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) spring N200805220742" name="EMFT CDO SDK (Incubation) spring N200805220742">
-		<description>
-EMFT CDO SDK (Incubation) spring N200805220742: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.doc_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.examples.source_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.examples_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.sdk_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.server.hibernate.source_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.server.hibernate_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.server.source_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.server_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.source_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.weaver.source" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.weaver.source_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.weaver" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo.weaver_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo" version="0.8.0.v200805220742" url="features/org.eclipse.emf.cdo_0.8.0.v200805220742.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) spring N200805220742"/>
-	</feature>
-
-	<!-- CDO 0.8.0 I200805230125 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200805230125" name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125">
-		<description>
-EMFT CDO SDK (Incubation) 0.8.0 I200805230125: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.doc_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.examples.source_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.examples_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.sdk_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.server.hibernate.source_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.server.hibernate_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.server.source_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.server_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.source_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.weaver.source" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.weaver.source_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.weaver" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo.weaver_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo" version="0.8.0.v200805230125" url="features/org.eclipse.emf.cdo_0.8.0.v200805230125.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200805230125"/>
-	</feature>
-
-	<!-- TENEO 0.8.0 I200804231725 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725" name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725">
-		<description>
-EMFT TENEO SDK (Incubation) 0.8.0 I200804231725: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200804231725" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200804231725.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200804231725" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200804231725.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200804231725" url="features/org.eclipse.emf.teneo.source_0.8.0.v200804231725.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200804231725" url="features/org.eclipse.emf.teneo_0.8.0.v200804231725.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200804231725" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200804231725.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804231725"/>
 	</feature>
 
 	<!-- SEARCH 0.7.0 I200805031222 (Incubation) -->
@@ -393,43 +245,6 @@ EMFT SEARCH SDK (Incubation) 0.7.0 I200805031222: contains runtime, source, and 
 		<category name="EMFT SEARCH SDK (Incubation) 0.7.0 I200805031222"/>
 	</feature>
 
-	<!-- NET4J 0.8.0 I200803090420 (Incubation) -->
-	<category-def label="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420" name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420">
-		<description>
-EMFT NET4J SDK (Incubation) 0.8.0 I200803090420: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.net4j.db.source" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.db.source_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.db" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.db_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.doc" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.doc_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.examples.source" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.examples.source_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.examples" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.examples_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.sdk" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.sdk_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.source" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.source_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.ui.source" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.ui.source_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j.ui" version="0.8.0.v200803090420" url="features/org.eclipse.net4j.ui_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-	<feature id="org.eclipse.net4j" version="0.8.0.v200803090420" url="features/org.eclipse.net4j_0.8.0.v200803090420.jar" patch="false">
-		<category name="EMFT NET4J SDK (Incubation) 0.8.0 I200803090420"/>
-	</feature>
-
 	<!-- MINT 0.7.0 I200804020004 -->
 	<category-def label="EMFT MINT SDK 0.7.0 I200804020004" name="EMFT MINT SDK 0.7.0 I200804020004">
 		<description>
@@ -466,59 +281,6 @@ EMFT COMPARE SDK (Incubation) 0.8.0 I200805050346: contains runtime, source, and
 	</feature>
 	<feature id="org.eclipse.emf.compare" version="0.8.0.v200805050346" url="features/org.eclipse.emf.compare_0.8.0.v200805050346.jar" patch="false">
 		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200805050346"/>
-	</feature>
-
-	<!-- CDO 0.8.0 I200804071623 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200804071623" name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623">
-		<description>
-EMFT CDO SDK (Incubation) 0.8.0 I200804071623: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.doc_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.examples.source_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.examples_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.sdk_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.server.source_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.server_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo.source_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo" version="0.8.0.v200804071623" url="features/org.eclipse.emf.cdo_0.8.0.v200804071623.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200804071623"/>
-	</feature>
-
-	<!-- TENEO 0.8.0 I200804170735 (Incubation) -->
-	<category-def label="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735" name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735">
-		<description>
-EMFT TENEO SDK (Incubation) 0.8.0 I200804170735: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="0.8.0.v200804170735" url="features/org.eclipse.emf.teneo.doc_0.8.0.v200804170735.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="0.8.0.v200804170735" url="features/org.eclipse.emf.teneo.sdk_0.8.0.v200804170735.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="0.8.0.v200804170735" url="features/org.eclipse.emf.teneo.source_0.8.0.v200804170735.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo" version="0.8.0.v200804170735" url="features/org.eclipse.emf.teneo_0.8.0.v200804170735.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735"/>
-	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="0.8.0.v200804170735" url="features/org.eclipse.emf.teneo.examples_0.8.0.v200804170735.jar" patch="false">
-		<category name="EMFT TENEO SDK (Incubation) 0.8.0 I200804170735"/>
 	</feature>
 
 	<!-- SEARCH 0.7.0 I200805020316 (Incubation) -->
@@ -599,37 +361,6 @@ EMFT COMPARE SDK (Incubation) 0.8.0 I200805020953: contains runtime, source, and
 	</feature>
 	<feature id="org.eclipse.emf.compare" version="0.8.0.v200805020953" url="features/org.eclipse.emf.compare_0.8.0.v200805020953.jar" patch="false">
 		<category name="EMFT COMPARE SDK (Incubation) 0.8.0 I200805020953"/>
-	</feature>
-
-	<!-- CDO 0.8.0 I200803090439 (Incubation) -->
-	<category-def label="EMFT CDO SDK (Incubation) 0.8.0 I200803090439" name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439">
-		<description>
-EMFT CDO SDK (Incubation) 0.8.0 I200803090439: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.doc_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.examples.source_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.examples_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.sdk_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.server.source_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.server_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo.source_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
-	</feature>
-	<feature id="org.eclipse.emf.cdo" version="0.8.0.v200803090439" url="features/org.eclipse.emf.cdo_0.8.0.v200803090439.jar" patch="false">
-		<category name="EMFT CDO SDK (Incubation) 0.8.0 I200803090439"/>
 	</feature>
 
 </site>
