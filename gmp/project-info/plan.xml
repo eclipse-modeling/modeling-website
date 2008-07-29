@@ -18,27 +18,28 @@
     </release_deliverables>
    <release_milestones>
       <preamble><![CDATA[Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; that is, until the final 3.5 release of the Platform, upon which GMF and other projects will release simultaneously. As GMF is dependent upon the EMF, GEF, and other projects, which are scheduled to release milestones within 1 week of Platform milestones, GMF will deliver its milestones within the following week. It is anticipated that GMF will synchronize its release milestones with the Galileo release schedule.
+       ]]>
+      </preamble>
+      <milestone date="08/20/2008" milestone="M1"></milestone>
+      <milestone date="10/01/2008" milestone="M2"></milestone>
+      <milestone date="11/12/2008" milestone="M3"></milestone>
+      <milestone date="12/29/2008" milestone="M4"></milestone>
+      <milestone date="02/06/2009" milestone="M5"></milestone>
+      <milestone date="03/18/2009" milestone="M6">API freeze</milestone>
+      <milestone date="05/05/2009" milestone="M7"></milestone>
+      <milestone date="05/19/2009" milestone="RC1"></milestone>
+      <milestone date="05/26/2009" milestone="RC2"></milestone>
+      <milestone date="06/02/2009" milestone="RC3"></milestone>
+      <milestone date="06/09/2009" milestone="RC4"></milestone>
+      <milestone date="06/16/2009" milestone="RC5"></milestone>
+      <milestone date="06/28/2009" milestone="2.2.0"></milestone>
+      <postamble><![CDATA[
       GMF will produce maintenance releases to align with the Ganymede SR releases, that includes the Eclipse Platform 3.4.1 and 3.4.2 releases. GMF may produce interim maintenance releases in addition to these in order to satisfy clients requests.
 <ul><li>Friday, August 15, 2008 - GMF 2.1.1 maintenance release</li>
 <li>Friday, September 26, 2008 - GMF 2.1.2 maintenance release (Ganymede Service Release 1)</li>
 <li>Friday, February 27, 2009 - GMF 2.1.3 maintenance release (Ganymede Service Release 2)</li>
-<li>A list of issues indicated for the 2.1.x maintenance stream can be found in bugzilla, or by using links on maintenance stream build pages.</li></ul>
-      ]]>
-      </preamble>
-      <milestone date="08/20/2008" milestone="M1"/>
-      <milestone date="10/01/2008" milestone="M2"/>
-      <milestone date="11/12/2008" milestone="M3"/>
-      <milestone date="12/29/2008" milestone="M4"/>
-      <milestone date="02/06/2009" milestone="M5"/>
-      <milestone date="03/18/2009" milestone="M6"/>
-      <milestone date="05/05/2009" milestone="M7"/>
-      <milestone date="05/19/2009" milestone="RC1"/>
-      <milestone date="05/26/2009" milestone="RC2"/>
-      <milestone date="06/02/2009" milestone="RC3"/>
-      <milestone date="06/09/2009" milestone="RC4"/>
-      <milestone date="06/16/2009" milestone="RC5"/>
-      <milestone date="06/28/2009" milestone="2.2.0"/>
-      <postamble>...html...</postamble>
+<li>A list of issues indicated for the 2.1.x maintenance stream can be found in bugzilla, or by using links on maintenance stream build pages.</li></ul> 
+      ]]></postamble>
    </release_milestones>
    <target_environments>
      In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.
