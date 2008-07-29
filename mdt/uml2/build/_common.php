@@ -6,12 +6,14 @@ $options = array (
 
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
-		"2.2.0=HEAD,/opt/sun-java2-5.0",
+		"3.0.0=HEAD,/opt/sun-java2-5.0",
+		"2.2.1=R2_2_maintenance,/opt/sun-java2-5.0",
 		"2.1.1=R2_1_maintenance,/opt/sun-java2-5.0",
 		"2.0.5=R2_0_maintenance,/opt/sun-java2-1.4",
 
 		"build.eclipse.org=------------,------------",
-		"2.2.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"3.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"2.2.1=R2_2_maintenance,/opt/public/common/ibm-java2-ppc-50",
 		"2.1.1=R2_1_maintenance,/opt/public/common/ibm-java2-ppc-50",
 		"2.0.5=R2_0_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
