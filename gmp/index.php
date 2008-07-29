@@ -30,7 +30,7 @@ ob_start();
 					<li><a href="news://news.eclipse.org/eclipse.modeling.gmf" target="_blank"><b>Newsgroup</b></a> | For general questions and community discussion.</li>
 					<li><a href="http://dev.eclipse.org/mailman/listinfo/gmf-dev" target="_blank"><b>Mailing List</b></a> | For project development discussions.</li>
 					<li><a href="http://bugs.eclipse.org/bugs" target="_blank"><b>Bugs</b></a> | View <a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=GMF&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&order=Reuse+same+sort+as+last+time">all open</a> issues.</li>
-					<li><a href="http://wiki.eclipse.org/index.php/GMF_Project_Plan"><b>Project Plan</b></a> (draft for 2.1)</li>
+					<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.gmf"><b>Project Plan</b></a> (draft for 2.2.0)</li>
 		</div>
 		<div class="homeitem">
 			<h3>Events</h3>
