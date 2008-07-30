@@ -4,11 +4,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>EMF Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-07-15T23:21:38Z</updated>
+  <updated>2008-07-30T04:30:42Z</updated>
   <author>
     <name>EMF Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-emf.xml</id>
+  <entry>
+    <title>[announce] emf I200807291959 (2.5.0.I200807291959) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200807291959#I200807291959"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200807291959#I200807291959</id>
+    <updated>2008-07-30T04:30:42Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200807291959" href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=I200807291959#I200807291959" type="I" version="2.5.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.5.0/I200807291959/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=emf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=I200807291959
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-sdo-xsd-SDK-I200807291959.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/emf/downloads/drops/2.5.0/I200807291959/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/downloads/drops/I20080729-0834/eclipse-SDK-I20080729-0834-linux-gtk.tar.gz</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] emf M200807231502 (2.4.1.M200807231502) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=emf&amp;showAll=1&amp;hlbuild=M200807231502#M200807231502"/>
