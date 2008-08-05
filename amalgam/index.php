@@ -56,7 +56,7 @@ ob_start();
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Graphical Modeling Framework";
+$pageTitle = "Modeling Amalgamation Project";
 $pageKeywords = "eclipse,project,graphical,modeling,model-driven";
 $pageAuthor = "Richard C. Gronback, Nick Boldt";
 

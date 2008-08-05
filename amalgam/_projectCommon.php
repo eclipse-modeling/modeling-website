@@ -1,9 +1,9 @@
 <?php
 $Nav->setLinkList(null);
 
-$PR = "modeling/gmf";
-$projectName = "GMF";
-$defaultProj = "/gmf";
+$PR = "modeling/amalgam";
+$projectName = "Amalgam";
+$defaultProj = "/amalgam";
 
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
@@ -29,18 +29,18 @@ else
 
 /* projects/components in cvs */
 /* "proj" => "cvsname" */
-$cvsprojs = array ("gmf" => "org.eclipse.gmf"); // TODO: use this until GMF has subprojects, then switch to use $cvscoms instead; will require reorging CVS and the components in the database
+$cvsprojs = array ("amalgam" => "org.eclipse.amalgam"); 
 
 /* sub-projects/components in cvs for projects/components above (if any) */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
-/*	"org.eclipse.gmf" => array (
-		"gmf" => "org.eclipse.gmf",
+/*	"org.eclipse.amalgam" => array (
+		"amalgam" => "org.eclipse.amalgam",
 	)*/
 );
 
 $projects = array (
-	"GMF" => "gmf",
+	"Amalgam" => "amalgam",
 );
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
@@ -81,18 +81,18 @@ $Nav->addNavSeparator($projectName, "$rooturl/");
 $Nav->addCustomNav("Downloads", "$downurl/$PR/downloads/?project=$proj", "_self", 2);
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
-$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/GMF_Documentation");
-$Nav->addCustomNav("Getting Started", "http://wiki.eclipse.org/GMF_Documentation", "_self", 2);
+$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/ModelingAmalgam");
+$Nav->addCustomNav("Getting Started", "http://wiki.eclipse.org/ModelingAmalgam", "_self", 2);
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
-$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse.gmf%2F" . (false && $proj?"org.eclipse.gmf.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
-$Nav->addCustomNav("API Plan", "http://wiki.eclipse.org/GMF_Project_Plan", "_self", 2);
+$Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse.amalgam%2F" . (false && $proj?"org.eclipse.amalgam.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
+$Nav->addCustomNav("API Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://www.eclipse.org/$PR/development/");
 $Nav->addCustomNav("How To Contribute", "http://www.eclipse.org/$PR/development/", "_self", 2);
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Graphical_Modeling_Framework", "_self", 2);
-$Nav->addCustomNav("Newsgroup", "http://dev.eclipse.org/newslists/news.eclipse.modeling.gmf/maillist.html", "_self", 2);
-$Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/gmf-releng", "_self", 2);
+$Nav->addCustomNav("Newsgroup", "http://dev.eclipse.org/newslists/news.eclipse.modeling.amalgam/maillist.html", "_self", 2);
+$Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/amalgam-releng", "_self", 2);
 
 $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/Modeling_Corner", "_self", 2);
 $collist = "%26query_format%3Dadvanced&amp;column_changeddate=on&amp;column_bug_severity=on&amp;column_priority=on&amp;column_rep_platform=on&amp;column_bug_status=on&amp;column_product=on&amp;column_component=on&amp;column_version=on&amp;column_target_milestone=on&amp;column_short_short_desc=on&amp;splitheader=0";
