@@ -71,8 +71,8 @@ $html = ob_get_contents();
 ob_end_clean();
 
 $pageTitle = "Eclipse Modeling - TMF - Home";
-$pageKeywords = ""; // TODO: add something here
-$pageAuthor = "Neil Skrypuch, Nick Boldt, Sven Efftinge";
+$pageKeywords = "Xtext TCS Textual Modeling Domain-specific language DSL"; // TODO: add something here
+$pageAuthor = "Sven Efftinge, Nick Boldt";
 
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/index.css"/>' . "\n");
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
