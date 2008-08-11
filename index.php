@@ -65,7 +65,11 @@ development technologies within the Eclipse community by providing a unified set
 			<h3>Concrete Syntax Development</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/gmf">Graphical Modeling Framework</a> (GMF) : provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
-				<li><a href="http://www.eclipse.org/modeling/tmf/">Textual Modeling Framework</a> (TMF) : awaiting proposal.</li>
+				<li><a href="http://www.eclipse.org/modeling/tmf/">Textual Modeling Framework</a> (TMF) : provides tools and frameworks for developing textual syntaxes and corresponding editors based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a>.</li>
+				<ul>
+					<li><a href="http://www.eclipse.org/modeling/tmf/?project=xtext">Xtext</a> : a powerful framework/tool for developing external textual DSLs based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a>.</li>
+					<li><a href="http://www.eclipse.org/gmt/tcs/">TCS</a> : a component that enables the specification of textual concrete syntaxes for Domain-Specific Languages (DSLs) by attaching syntactic information to metamodels.</li>
+				</ul>
 			</ul>
 		</div>
 		<div class="homeitem3col">
@@ -95,6 +99,7 @@ development technologies within the Eclipse community by providing a unified set
 				<li><a href="http://www.eclipse.org/modeling/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
 					<li><a href="http://www.eclipse.org/modeling/m2t/?project=jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF. Includes an editor which provides features like syntax coloring, error highlighting and code completion.</li>
+					<li><a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand/a> : a statically-typed template language featuring polymorphic template invocation, aspect oriented programming, functional extensions, a flexible type system abstraction, model transformation and validation. Includes an editor which provides features like syntax coloring, error highlighting, navigation, refactoring and code completion.</li>
 				</ul>
 			</ul>
 		</div>
@@ -112,7 +117,6 @@ development technologies within the Eclipse community by providing a unified set
 					<li><a href="http://www.eclipse.org/gmt/am3/">Atlas MegaModel Management (AM3)</a> : the goal is to provide a practical support for modeling in the large. The objective is to deal with global resource management in a model-engineering environment. We base this activity on the concept of a "megamodel".</li>
 					<li><a href="http://www.eclipse.org/gmt/amw/">Atlas Model Weaver (AMW)</a> : a tool for representing correspondences between models. The correspondences are stored in a model, called weaving model. It is created conforming to a weaving metamodel.</li>
 					<li><a href="http://www.eclipse.org/gmt/mofscript/">MOFScript</a> : aims at developing tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models.</li>
-					<li><a href="http://www.eclipse.org/gmt/oaw/">openArchitecture Ware (oAW)</a> : a suite of tools and components assisting with model driven software development built upon a modular MDA/MDD generator framework implemented in Java(TM) supporting arbitrary import (design) formats, meta models, and output (code) formats.</li>
 					<li><a href="http://www.eclipse.org/gmt">UMLX</a> : concrete graphical syntax to complement the OMG QVT model transformation language.</li>
 					<li><a href="http://www.eclipse.org/gmt">VIATRA2</a> : aims to provide a general-purpose support for the entire life-cycle of engineering model transformations including the specification, design, execution, validation and maintenance of transformations within and between various modeling languages and domains.</li>
 					<li><a href="http://www.eclipse.org/gmt/epsilon/">Epsilon</a> : a metamodel-agnostic component for supporting model navigation, creation, and modification operations.</li>
