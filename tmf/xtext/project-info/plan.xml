@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0">
+   <release projectid="modeling.tmf.xtext" version="0.9.0"/>
+   <introduction>
+     This document lays out the feature and API set for the first release of the Xtext component,version 0.9.0, of the Eclipse Textual Modeling Framework Project.  
+     This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.
+   </introduction>
+   <release_deliverables>
+     <![CDATA[
+    The release deliverables have the same form as is found in most Eclipse projects, namely:
+<ul>
+<li>TMF Xtext source code release, available as versions tagged "R0_9" in the project's CVS repository.</li>
+<li>TMF Xtext SDK (includes runtime and tooling components, with sources, examples, and documentation) (downloadable and update site).</li>
+<li>TMF Xtext runtime binary distribution (downloadable and update site).</li>
+<li>TMF Xtext tests (downloadable and update site)</li>
+</ul>
+  ]]>
+    </release_deliverables>
+   <release_milestones>
+      <preamble><![CDATA[Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; 
+      that is, until the final 3.5 release of the Platform, upon which Xtext and other projects will release simultaneously. 
+      As Xtext is dependent upon the EMF, and other projects, which are scheduled to release milestones within 1 week of Platform milestones, 
+      Xtext will deliver its milestones within the following week. 
+      It is anticipated that Xtext will synchronize its release milestones with the Galileo release schedule.
+       ]]>
+      </preamble>
+      <milestone date="08/20/2008" milestone="M1"></milestone>
+      <milestone date="10/01/2008" milestone="M2"></milestone>
+      <milestone date="11/12/2008" milestone="M3"></milestone>
+      <milestone date="12/29/2008" milestone="M4"></milestone>
+      <milestone date="02/06/2009" milestone="M5"></milestone>
+      <milestone date="03/18/2009" milestone="M6">API freeze</milestone>
+      <milestone date="05/05/2009" milestone="M7"></milestone>
+      <milestone date="05/19/2009" milestone="RC1"></milestone>
+      <milestone date="05/26/2009" milestone="RC2"></milestone>
+      <milestone date="06/02/2009" milestone="RC3"></milestone>
+      <milestone date="06/09/2009" milestone="RC4"></milestone>
+      <milestone date="06/16/2009" milestone="RC5"></milestone>
+      <milestone date="06/28/2009" milestone="2.2.0"></milestone>
+   </release_milestones>
+   <target_environments>
+     In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.
+The Xtext project depends upon on the Platform and other projects, which are mostly "pure" Java. 
+The 3.5 release of the Eclipse Platform Project is written and compiled against version 1.4 of the Java Platform APIs, 
+and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. 
+Xtext will target the same Java version as EMF, which currently requires Java 5.
+Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. 
+Xtext will be tested and validated against a subset of those listed for the platform. 
+Those available will be presented on the project download site.
+     <internationalization>
+       The Eclipse Platform is designed as the basis for internationalized products. 
+       The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. 
+       The English strings are provided as the default resource bundles. 
+       As a result, the Xtext project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. 
+       This plan will be updated to indicate which locales will be provided and the time frame for availability.
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+     This is the first eclipse release of Xtext. 
+     This release won't be 100% compatible to the previous Xtext released at sourceforge.
+     However, there will be semi-automatic migration support.
+   </compatibility_with_previous_releases>
+   <!--themes_and_priorities>
+     <preamble>
+       A list of project requirements and agreed upon implementation time frames is found in this document. 
+       For the milestones listed in this document, a set of overall themes is used to indicate what major set of functionalities 
+       is to be concentrated on for each. These themes are presented below, 
+       while the requirements document and associated Bugzilla entries are left to those wanting more detailed information on each.
+     </preamble>
+     <theme name="Usability">
+        <description>A number of usability items related to runtime and tooling components of GMF are found in this section. A list of those plan items related to Usability can be found by searching Bugzilla for keyword=usability.</description>
+        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+         </committed>
+        <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+           </proposed>
+        <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+           </deferred>
+     </theme>
+     <theme name="Documentation">
+        <description>The community has repeatedly asked for improved documentation on the GMF project, particularly on the tooling/generation side. A major goal of this release is to provide documentation for 2.1.0 and new 2.2.0 functionality. A list of those plan items related to Documentation can be found by searching Bugzilla in the doc component.</description>
+        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+          </committed>
+        <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+           </proposed>
+        <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=GMF&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+           </deferred>
+     </theme>
+   </themes_and_priorities-->
+   <!--appendix name="Help Wanted"><![CDATA[
+    Bugzillas with a 'helpwanted' keyword are in need of contribution from the community. 
+    For the most current list of these items, see the following link: 
+    <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=TMF&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=helpwanted&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">All Open</a>
+   ]]></appendix-->	
+ </plan>
