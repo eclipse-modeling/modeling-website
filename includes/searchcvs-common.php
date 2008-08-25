@@ -168,7 +168,9 @@ if ($result)
 		$cvsroot = preg_replace("#^/cvsroot/([^\/]+)/.+#", "$1", $row["cvsname"]);
 		$file = basename($row["cvsname"], ",v");
 		$row["cvsname"] = preg_replace("#^/cvsroot/[^\/]+/(.+),v$#", "$1", $row["cvsname"]);
-		print "<li" . (preg_match("/.*\.map/", $file) ? "style=\"background-color: #EEEEEE\"" : "") . ">\n";
+		$isMap = preg_match("/.*\.map/", $file);
+		print "<li>\n";
+		print $isMap ? "<span style=\"background-color: #EEEEEE\">" : "";
 		print "<div>{$row['date']}</div>";
 		if ($row["bugid"] && !in_array($row["bugid"], $bugs))
 		{
@@ -179,7 +181,9 @@ if ($result)
 		print "<ul>\n";
 		print "<li><div>{$row['author']}</div>" . pretty_comment($row["message"], $q) . "</li>";
 		print "</ul>\n";
+		print $isMap ? "</span>" : "";
 		print "</li>\n";
+		unset($isMap);
 	}
 }
 print "</ul>\n";
