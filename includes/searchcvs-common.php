@@ -170,8 +170,8 @@ if ($result)
 		$row["cvsname"] = preg_replace("#^/cvsroot/[^\/]+/(.+),v$#", "$1", $row["cvsname"]);
 		$isMap = preg_match("/.*\.map/", $file);
 		print "<li>\n";
-		print $isMap ? "<span class=\"hl5\">" : "";
-		print "<div>" . ($isMap ? "<span class=\"hl5\">" : "") . $row['date'] . ($isMap ? "</span>" : "") . "</div>";
+		print $isMap ? "<span style=\"background-color: #aaffaa\">" : "";
+		print "<div>" . ($isMap ? "<span style=\"background-color: #aaffaa\">" : "") . $row['date'] . ($isMap ? "</span>" : "") . "</div>";
 		if ($row["bugid"] && !in_array($row["bugid"], $bugs))
 		{
 			$bugs[] = $row["bugid"];
@@ -179,8 +179,8 @@ if ($result)
 		print ($row["bugid"] ? "[<a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id={$row['bugid']}\">{$row['bugid']}</a>] " : "");
 		print "<a href=\"" . cvsfile($cvsroot, $row["cvsname"]) . "\"><abbr title=\"{$row['cvsname']}\">" . ($fullpath ? $row['cvsname'] : $file) . "</abbr></a> ({$row['branch']} " . showrev($cvsroot, $row["cvsname"], $row['revision']) . ")";
 		print "<ul>\n";
-		print "<li>" . "<div>" . ($isMap ? "<span class=\"hl5\">" : "") . $row['author'] . ($isMap ? "</span>" : "") . "</div>";
-		print ($isMap ? "<span class=\"hl5\">" : "") . pretty_comment($row["message"], $q) . ($isMap ? "</span>" : "") . "</li>";
+		print "<li>" . "<div>" . ($isMap ? "<span style=\"background-color: #aaffaa\">" : "") . $row['author'] . ($isMap ? "</span>" : "") . "</div>";
+		print ($isMap ? "<span style=\"background-color: #aaffaa\">" : "") . pretty_comment($row["message"], $q) . ($isMap ? "</span>" : "") . "</li>";
 		print "</ul>\n";
 		print $isMap ? "</span>" : "";
 		print "</li>\n";
