@@ -168,7 +168,7 @@ if ($result)
 		$cvsroot = preg_replace("#^/cvsroot/([^\/]+)/.+#", "$1", $row["cvsname"]);
 		$file = basename($row["cvsname"], ",v");
 		$row["cvsname"] = preg_replace("#^/cvsroot/[^\/]+/(.+),v$#", "$1", $row["cvsname"]);
-		print "<li>\n";
+		print "<li" . (preg_match("/.*\.map/", $file) ? "style=\"background-color: #EEEEEE\"" : "") . ">\n";
 		print "<div>{$row['date']}</div>";
 		if ($row["bugid"] && !in_array($row["bugid"], $bugs))
 		{
