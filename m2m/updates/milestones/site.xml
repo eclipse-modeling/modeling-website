@@ -7,6 +7,46 @@
 	</description>
 
 
+	<!-- QVTOML 2.0.0M1 S200808250919 -->
+	<category-def label="M2M QVTOML SDK 2.0.0M1 S200808250919" name="M2M QVTOML SDK 2.0.0M1 S200808250919">
+		<description>
+M2M QVTOML SDK 2.0.0M1 S200808250919: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.m2m.qvt.oml.common.source" version="1.0.100.v20080825-1430-4-CE_kE77c7cEQ3AMI7" url="features/org.eclipse.m2m.qvt.oml.common.source_1.0.100.v20080825-1430-4-CE_kE77c7cEQ3AMI7.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.common" version="1.0.100.v20080825-1430-4-CE_kE77c7cEQ3AMI7" url="features/org.eclipse.m2m.qvt.oml.common_1.0.100.v20080825-1430-4-CE_kE77c7cEQ3AMI7.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.doc" version="1.0.0.v20080611-1330-1--7w3119172202441" url="features/org.eclipse.m2m.qvt.oml.doc_1.0.0.v20080611-1330-1--7w3119172202441.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.editor.source" version="1.0.100.v20080825-1430-1-8Y7w3119193602541" url="features/org.eclipse.m2m.qvt.oml.editor.source_1.0.100.v20080825-1430-1-8Y7w3119193602541.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.editor" version="1.0.100.v20080825-1430-1-8Y7w3119193602541" url="features/org.eclipse.m2m.qvt.oml.editor_1.0.100.v20080825-1430-1-8Y7w3119193602541.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.examples" version="2.0.0.v20080825-1430-2--7w3119193602541" url="features/org.eclipse.m2m.qvt.oml.examples_2.0.0.v20080825-1430-2--7w3119193602541.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.runtime.source" version="1.0.100.v20080825-1430-5-CEAgI99m9kHT4DRN9" url="features/org.eclipse.m2m.qvt.oml.runtime.source_1.0.100.v20080825-1430-5-CEAgI99m9kHT4DRN9.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.runtime" version="1.0.100.v20080825-1430-5-CEAgI99m9kHT4DRN9" url="features/org.eclipse.m2m.qvt.oml.runtime_1.0.100.v20080825-1430-5-CEAgI99m9kHT4DRN9.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.sdk" version="2.0.0.v20080825-1430-7C-E8MACKz-gEQdrHN0gOdTGb2jl" url="features/org.eclipse.m2m.qvt.oml.sdk_2.0.0.v20080825-1430-7C-E8MACKz-gEQdrHN0gOdTGb2jl.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml.source" version="2.0.0.v20080825-1430-5-_7_kE77c7aDM3ALI7" url="features/org.eclipse.m2m.qvt.oml.source_2.0.0.v20080825-1430-5-_7_kE77c7aDM3ALI7.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+	<feature id="org.eclipse.m2m.qvt.oml" version="2.0.0.v20080825-1430-5-_7_kE77c7aDM3ALI7" url="features/org.eclipse.m2m.qvt.oml_2.0.0.v20080825-1430-5-_7_kE77c7aDM3ALI7.jar" patch="false">
+		<category name="M2M QVTOML SDK 2.0.0M1 S200808250919"/>
+	</feature>
+
 	<!-- QVTOML 1.0.0RC4a S200806110744 -->
 	<category-def label="M2M QVTOML SDK 1.0.0RC4a S200806110744" name="M2M QVTOML SDK 1.0.0RC4a S200806110744">
 		<description>
