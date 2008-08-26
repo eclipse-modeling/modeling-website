@@ -90,7 +90,7 @@ $Nav->addCustomNav("API Plan", "http://www.eclipse.org/projects/project-plan.php
 
 $Nav->addNavSeparator("Community", "http://www.eclipse.org/$PR/development/");
 $Nav->addCustomNav("How To Contribute", "http://www.eclipse.org/$PR/development/", "_self", 2);
-$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Graphical_Modeling_Framework", "_self", 2);
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/ModelingAmalgam", "_self", 2);
 $Nav->addCustomNav("Newsgroup", "http://dev.eclipse.org/newslists/news.eclipse.modeling.amalgam/maillist.html", "_self", 2);
 $Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/amalgam-releng", "_self", 2);
 
