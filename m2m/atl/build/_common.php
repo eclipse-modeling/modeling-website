@@ -6,11 +6,11 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
-		"2.0.0=HEAD,/opt/sun-java2-5.0",
+		"2.0.0=R2_0_maintenance,/opt/sun-java2-5.0",
 		"2.1.0=R2_1_0_dev,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
-        	"2.0.0=HEAD,/opt/sun-java2-5.0",
+        	"2.0.0=R2_0_maintenance,/opt/sun-java2-5.0",
 	),
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
