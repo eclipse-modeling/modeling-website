@@ -45,7 +45,8 @@ $cvscoms = array(
 		"ecoretools" => "org.eclipse.emf.ecoretools",
 		"temporality" => "org.eclipse.emf.temporality",
 		"mint" => "org.eclipse.emf.mint",
-		"emf4net" => "org.eclipse.emf.emf4net"
+		"emf4net" => "org.eclipse.emf.emf4net",
+		"emfatic" => "org.eclipse.emf.emfatic"
 		/* add more here */
 	)
 );
@@ -55,6 +56,7 @@ $projects = array(
 	"Ecore Tools" => "ecoretools",
 	"Mint" => "mint",
 	"Search" => "search",
+	"EMFatic" => "emfatic",
 	
 	"Modeling Workflow" => "mwe",
 
@@ -73,7 +75,7 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("coordinated","jcrm","temporality", "emf4net"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array("coordinated","jcrm","temporality", "emf4net", "emfatic"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = $projects; // ALL components are incubating
