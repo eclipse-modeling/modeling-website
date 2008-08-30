@@ -125,6 +125,7 @@ $relengs = array(
 	"cdo" => "emft-org.eclipse.emf.cdo.releng",
 	"compare" => "emft-org.eclipse.emf.compare.releng",
 	"ecoretools" => "emft-org.eclipse.emf.ecoretools.releng",
+	"emfatic" => "emft-org.eclipse.emf.emfatic.releng",
 	"mint" => "emft-org.eclipse.emf.mint.releng",
 	"mwe" => "emft-org.eclipse.emf.mwe.releng",
 	"net4j" => "emft-org.eclipse.emf.net4j.releng",
