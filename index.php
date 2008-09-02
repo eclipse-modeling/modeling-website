@@ -104,12 +104,6 @@ development technologies within the Eclipse community by providing a unified set
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3>Model Integration</h3>
-			<ul>
-				<li><a href="http://www.eclipse.org/mddi">Model Driven Development integration</a> (MDDi) : produces an extensible framework and exemplary tools dedicated to integration of modeling tools in Eclipse.</li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
 			<h3>Technology and Research</h3>
 			<ul>
 				<li><a href="http://www.eclipse.org/gmt">Generative Modeling Technologies</a> (GMT) : research-oriented project focused on producing prototypes in the area of Model Driven Engineering (MDE).</li>

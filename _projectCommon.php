@@ -26,7 +26,6 @@ $Nav->addCustomNav("EMF", "/modeling/emf/", "_self", 3);
 $Nav->addCustomNav("EMFT", "/modeling/emft/", "_self", 3);
 $Nav->addCustomNav("GMF", "/modeling/gmf/", "_self", 3);
 $Nav->addCustomNav("GMT", "/gmt/", "_self", 3);
-$Nav->addCustomNav("MDDi", "/mddi/", "_self", 3);
 $Nav->addCustomNav("MDT", "/modeling/mdt/", "_self", 3);
 $Nav->addCustomNav("M2M", "/m2m/", "_self", 3);
 $Nav->addCustomNav("M2T", "/modeling/m2t/", "_self", 3);
