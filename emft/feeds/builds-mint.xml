@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>mint Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-mint.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-08-05T03:40:35Z</updated>
+  <updated>2008-09-05T21:01:55Z</updated>
   <author>
     <name>mint Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-mint.xml</id>
+  <entry>
+    <title>[announce] mint RC1 (0.7.1.M200809051636) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636</id>
+    <updated>2008-09-05T21:01:55Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200809051636" href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636" type="M" version="0.7.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/mint/downloads/drops/0.7.1/M200809051636/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=mint</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=mint&amp;version=M200809051636
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-mint-SDK-incubation-RC1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/mint/downloads/drops/0.7.1/M200809051636/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20080827-2000/eclipse-SDK-M20080827-2000-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.1/R200808251517/emf-sdo-xsd-SDK-2.4.1.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] mint M200808042243 (0.7.1.M200808042243) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200808042243#M200808042243"/>
