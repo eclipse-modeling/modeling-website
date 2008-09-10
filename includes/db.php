@@ -10,7 +10,7 @@ $accessfiles[] = "searchcvs-dbaccess.php";
 $connect = null;
 foreach ($accessfiles as $z)
 {
-	if (is_file("$writableRoot$z"))
+	if (is_readable("$writableRoot$z"))
 	{
 		require_once("$writableRoot$z");
 		ini_set("display_errors","0"); // ini_set("display_errors","1"); ini_set('error_reporting', E_ALL); // show more debug echo
