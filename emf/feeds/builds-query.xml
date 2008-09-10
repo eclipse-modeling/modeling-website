@@ -15,7 +15,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=R200806091744#R200806091744</id>
     <updated>2008-06-24T15:17:26Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806091744" href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=R200806091744#R200806091744" type="R" version="1.2.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806091744" href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=R200806091744#R200806091744" type="R" vanityname="1.2.0" version="1.2.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/query/downloads/drops/1.2.0/R200806091744/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=query</downloads>
@@ -44,7 +44,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S200806091744#S200806091744</id>
     <updated>2008-06-10T00:12:12Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806091744" href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S200806091744#S200806091744" type="S" version="1.2.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200806091744" href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S200806091744#S200806091744" type="S" vanityname="1.2.0RC4" version="1.2.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/query/downloads/drops/1.2.0/S200806091744/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=query</downloads>

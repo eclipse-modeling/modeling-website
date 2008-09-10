@@ -15,7 +15,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200808131303#S200808131303</id>
     <updated>2008-08-13T18:51:40Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200808131303" href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200808131303#S200808131303" type="S" version="1.3.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200808131303" href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=S200808131303#S200808131303" type="S" vanityname="1.3.0M1" version="1.3.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/validation/downloads/drops/1.3.0/S200808131303/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=validation</downloads>
@@ -44,7 +44,7 @@
     <id>http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=R200808130931#R200808130931</id>
     <updated>2008-08-13T14:47:23Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_2_maintenance" datetime="200808130931" href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=R200808130931#R200808130931" type="R" version="1.2.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_2_maintenance" datetime="200808130931" href="http://www.eclipse.org/modeling/emf/downloads/?project=validation&amp;showAll=1&amp;hlbuild=R200808130931#R200808130931" type="R" vanityname="1.2.1" version="1.2.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/validation/downloads/drops/1.2.1/R200808130931/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=validation</downloads>

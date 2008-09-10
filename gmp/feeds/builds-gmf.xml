@@ -15,7 +15,7 @@
     <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200808211552#S200808211552</id>
     <updated>2008-08-21T21:23:11Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200808211552" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200808211552#S200808211552" type="S" version="2.2.0">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200808211552" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200808211552#S200808211552" type="S" vanityname="2.2.0M1" version="2.2.0">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/S200808211552/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/gmf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
@@ -87,7 +87,7 @@
     <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=R200808151718#R200808151718</id>
     <updated>2008-08-16T00:40:05Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_1_maintenance" datetime="200808151718" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=R200808151718#R200808151718" type="R" version="2.1.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_1_maintenance" datetime="200808151718" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=R200808151718#R200808151718" type="R" vanityname="2.1.1" version="2.1.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.1.1/R200808151718/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/gmf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
