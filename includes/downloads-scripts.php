@@ -1032,7 +1032,7 @@ function showArchived($oldrels)
 function getTestResultsJUnitXML($file)
 {
 	$data = array();
-	exec("head -3 $file | grep \"<testsuite\"", $data); // possibly faster than file($file), but might break on some servers
+	exec("head -3 $file | grep \"<testsuite\"", $data); // possibly faster than file($file), but might break on some servers (eg., exec() is disabled on www.eclipse.org, so warnings are thrown)
 	foreach ($data as $line)
 	{
 		// <testsuite errors="0" failures="0" ...>

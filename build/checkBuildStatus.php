@@ -6,10 +6,12 @@
  * for retrieving data from the database. This is NOT part
  * of the public web-api.
  * 
- * Run this script on www.eclipse.org; path errors if run on build.eclipse.org
+ * Run this script on your build server or on www.eclipse.org (warnings will be thrown re: exec() call in downloads-scripts.php#getTestResultsJUnitXML())
+ * TODO: fix path errors if run on build.eclipse.org
  *
- * top=name
- * project=name
+ * parent=name, eg., modeling or NONE
+ * top=name, eg., emf, gmf
+ * project=name, eg., sdo, gmf
  * version=x.y.z
  * buildID=AyyyymmddHHMM, where A = {N, I, M, S, R}
  *
