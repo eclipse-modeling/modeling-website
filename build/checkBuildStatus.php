@@ -5,6 +5,8 @@
  * The common parameter parsing module for the REST web-api
  * for retrieving data from the database. This is NOT part
  * of the public web-api.
+ * 
+ * Run this script on www.eclipse.org; path errors if run on build.eclipse.org
  *
  * top=name
  * project=name
