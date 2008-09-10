@@ -47,6 +47,28 @@ M2M QVTOML SDK 1.0.1RC1 M200809040940: contains runtime, source, and documentati
 		<category name="M2M QVTOML SDK 1.0.1RC1 M200809040940"/>
 	</feature>
 
+	<!-- ATL 2.0.1RC2 M200809100642 -->
+	<category-def label="M2M ATL SDK 2.0.1RC2 M200809100642" name="M2M ATL SDK 2.0.1RC2 M200809100642">
+		<description>
+M2M ATL SDK 2.0.1RC2 M200809100642: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.m2m.atl.doc" version="2.0.1.v200809100642" url="features/org.eclipse.m2m.atl.doc_2.0.1.v200809100642.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.1RC2 M200809100642"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.examples" version="2.0.1.v200809100642" url="features/org.eclipse.m2m.atl.examples_2.0.1.v200809100642.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.1RC2 M200809100642"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.sdk" version="2.0.1.v200809100642" url="features/org.eclipse.m2m.atl.sdk_2.0.1.v200809100642.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.1RC2 M200809100642"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.source" version="2.0.1.v200809100642" url="features/org.eclipse.m2m.atl.source_2.0.1.v200809100642.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.1RC2 M200809100642"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl" version="2.0.1.v200809100642" url="features/org.eclipse.m2m.atl_2.0.1.v200809100642.jar" patch="false">
+		<category name="M2M ATL SDK 2.0.1RC2 M200809100642"/>
+	</feature>
+
 	<!-- ATL 2.0.1RC1 M200809031227 -->
 	<category-def label="M2M ATL SDK 2.0.1RC1 M200809031227" name="M2M ATL SDK 2.0.1RC1 M200809031227">
 		<description>
