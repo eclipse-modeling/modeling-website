@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>net4j Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-net4j.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-06-24T14:49:17Z</updated>
+  <updated>2008-09-11T11:50:39Z</updated>
   <author>
     <name>net4j Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-net4j.xml</id>
+  <entry>
+    <title>[announce] net4j I200809110620 (2.0.0.I200809110620) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200809110620#I200809110620"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200809110620#I200809110620</id>
+    <updated>2008-09-11T11:50:39Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809110620" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=I200809110620#I200809110620" type="I" vanityname="I200809110620" version="2.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/2.0.0/I200809110620/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=I200809110620
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-I200809110620.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/2.0.0/I200809110620/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080903-1200/eclipse-SDK-I20080903-1200-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R20080807152315/orbit-R20080807152315.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] net4j 1.0.0 (R200806240900) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200806240900#R200806240900"/>
