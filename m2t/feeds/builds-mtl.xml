@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>mtl Builds</title>
   <link href="http://download.eclipse.org/modeling/m2t/feeds/builds-mtl.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-09-11T12:41:57Z</updated>
+  <updated>2008-09-12T18:14:25Z</updated>
   <author>
     <name>mtl Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2t/feeds/builds-mtl.xml</id>
+  <entry>
+    <title>[announce] mtl I200809121357 (0.7.0.I200809121357) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=mtl&amp;showAll=1&amp;hlbuild=I200809121357#I200809121357"/>
+    <id>http://www.eclipse.org/modeling/m2t/downloads/?project=mtl&amp;showAll=1&amp;hlbuild=I200809121357#I200809121357</id>
+    <updated>2008-09-12T18:14:25Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809121357" href="http://www.eclipse.org/modeling/m2t/downloads/?project=mtl&amp;showAll=1&amp;hlbuild=I200809121357#I200809121357" type="I" vanityname="I200809121357" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/mtl/downloads/drops/0.7.0/I200809121357/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2t/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2t/downloads/?project=mtl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=mtl&amp;version=I200809121357
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2t-mtl-SDK-incubation-I200809121357.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/mtl/downloads/drops/0.7.0/I200809121357/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20080910-1030/eclipse-SDK-M20080910-1030-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.1/R200808251517/emf-sdo-xsd-SDK-2.4.1.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.2/M200809101600/mdt-ocl-all-SDK-M200809101600.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] mtl I200809110810 (0.7.0.I200809110810) is available</title>
     <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=mtl&amp;showAll=1&amp;hlbuild=I200809110810#I200809110810"/>
