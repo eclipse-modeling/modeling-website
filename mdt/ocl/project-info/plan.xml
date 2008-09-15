@@ -138,13 +138,13 @@ specification.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CRelease+Currency%7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CRelease+Currency%7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CRelease+Currency%7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
             </deferred>
         </theme>
         <theme name="Extensibility">
@@ -157,13 +157,13 @@ of the MDT OCL language implementation and APIs.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CExtensibility7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CExtensibility%7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=%7Cgalileo%7C&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=%7CExtensibility%7C">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
             </deferred>
         </theme>
    </themes_and_priorities>
