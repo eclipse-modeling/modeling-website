@@ -221,7 +221,7 @@ print <<<EOHTML
 		<li>
 			<div>Feb 21 2007</div>Eclipse Podcast: Wayne Beaton and Ed Merks - What is EMF? What does it do? What's new?
 			<ul>
-				<li><a href="http://www.eclipse.org/downloads/download.php?file=/technology/phoenix/podcasts/Ed-Merks-21Feb07.mp3">MP3</a> (20 min, 18 MB)</li>
+				<li><a href="http://www.eclipse.org/modeling/download.php?file=/technology/phoenix/podcasts/Ed-Merks-21Feb07.mp3">MP3</a> (20 min, 18 MB)</li>
 			</ul>
 		</li>
 
@@ -596,4 +596,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.18 2008/07/17 17:53:10 nickb Exp $ -->
+<!-- $Id: index.php,v 1.19 2008/09/15 21:37:00 nickb Exp $ -->

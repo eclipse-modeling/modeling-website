@@ -65,7 +65,7 @@ if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //inte
 }
 else // all others
 {
-	$downloadScript = "http://www.eclipse.org/downloads/download.php?file=";
+	$downloadScript = "http://www.eclipse.org/modeling/download.php?file=";
 	$downloadPre = "";
 }
 
@@ -149,7 +149,7 @@ if (function_exists("doRequirements"))
 	call_user_func("doRequirements");
 }
 
-$rssfeed = "<a href=\"http://www.eclipse.org/downloads/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
+$rssfeed = "<a href=\"http://www.eclipse.org/modeling/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
 
 if (sizeof($builds) == 0 && sizeof($releases) == 0)
 {

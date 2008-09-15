@@ -13,7 +13,7 @@ $projectName = explode("/",$PR); $projectName = strtoupper($projectName[1]);
 
 if ($isWWWserver) {
 	$PWD = $App->getDownloadBasePath() . "/$PR/";
-	$jdPWD = "/downloads/download.php?file=/$PR/";
+	$jdPWD = "/modeling/download.php?file=/$PR/";
 } else {
 	$PWD = "../../../$PR/";
 	$jdPWD = $PWD;

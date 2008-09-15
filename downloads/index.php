@@ -59,10 +59,10 @@ function toggleDetails(id)
 			<p>
 			<blockquote>	
 			<ul>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-win32.zip">Windows 32bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk.tar.gz">Linux 32bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-macosx-carbon.tar.gz">Mac OSx</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-win32.zip">Windows 32bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk.tar.gz">Linux 32bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-macosx-carbon.tar.gz">Mac OSx</a></li>
 				<li style="padding:2px"><a href="http://download.eclipse.org/eclipse/downloads/">Other Platforms...</a></li>
 		
 			</ul>
