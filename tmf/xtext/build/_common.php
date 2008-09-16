@@ -20,9 +20,9 @@ $options = array (
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "jan.koehnlein@itemis.de", // prefil email contact box with comma-sep'd list: sven@efftinge.de,jan.koehnlein@itemis.de
+	"EmailDefault" => "dennis.huebner@itemis.de", // prefil email contact box with comma-sep'd list: sven@efftinge.de,jan.koehnlein@itemis.de
 
-	"Users" => array ("jkohnlein", "jkohnlein", "jkohnlein") /* build user, eclipse cvs user, IES cvs user */
+	"Users" => array ("dhubner", "dhubner", "dhubner") /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
