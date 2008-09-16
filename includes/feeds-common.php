@@ -1,5 +1,5 @@
 <?php
-require_once ("../../includes/buildServer-common.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-common.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
@@ -9,11 +9,18 @@ $Nav = new Nav();
 $Menu = new Menu();
 include ($App->getProjectCommon());
 
-$projectName = explode("/",$PR); $projectName = strtoupper($projectName[1]); 
+if (strstr($PR, "/") !== false)
+{
+	$projectName = explode("/",$PR); $projectName = strtoupper($projectName[1]);
+}
+else
+{
+	$projectName = strtoupper($PR);
+} 
 
 if ($isWWWserver) {
 	$PWD = $App->getDownloadBasePath() . "/$PR/";
-	$jdPWD = "/modeling/download.php?file=/$PR/";
+	$jdPWD = getDownloadScript() . "/$PR/";
 } else {
 	$PWD = "../../../$PR/";
 	$jdPWD = $PWD;

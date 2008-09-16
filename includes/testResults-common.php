@@ -34,7 +34,7 @@ $buildID = preg_replace("/.+\/(.+)/", "$1", $buildName);
 $subprojName = array_flip($projects); $subprojName = isset($subprojName[$projct]) ? $subprojName[$projct] : "";
 $pageTitle = $projectName . ($subprojName && $projectName != $subprojName ? ' ' . $subprojName : '') . " Build " . $buildName . " - Test Results";
 
-$linkPre = $isBuildServer ? "" : "http://www.eclipse.org/modeling/download.php?file=";
+$linkPre = $isBuildServer ? "" : getDownloadScript();
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");

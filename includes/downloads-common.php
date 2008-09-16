@@ -14,7 +14,14 @@ else
 
 if ((!$proj || $proj == "/") && isset($defaultProj)) { $proj = $defaultProj; }
 $projct = preg_replace("#^/#", "", $proj);
-$topProj = preg_replace("#.+/(.+)#","$1", $PR);
+if (strstr($PR, "/") !== false)
+{
+	list($topProj, $parentProj) = explode("/", $PR); # modeling, emf
+}
+else
+{
+	list($topProj, $parentProj) = array("NONE", $PR); # NONE, gef
+}
 
 if (isset($projct) && isset($hasmoved) && is_array($hasmoved) && array_key_exists($projct,$hasmoved))
 {
@@ -65,7 +72,7 @@ if ($isBuildServer || false != strpos($_SERVER["HTTP_HOST"], "fullmoon")) //inte
 }
 else // all others
 {
-	$downloadScript = "http://www.eclipse.org/modeling/download.php?file=";
+	$downloadScript = getdownloadScript();
 	$downloadPre = "";
 }
 
@@ -149,7 +156,7 @@ if (function_exists("doRequirements"))
 	call_user_func("doRequirements");
 }
 
-$rssfeed = "<a href=\"http://www.eclipse.org/modeling/download.php?file=/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
+$rssfeed = "<a href=\"$downloadScript/$PR/feeds/builds-$projct.xml\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
 
 if (sizeof($builds) == 0 && sizeof($releases) == 0)
 {

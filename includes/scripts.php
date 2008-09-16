@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.72 2008/07/24 19:33:13 nickb Exp $
+// $Id: scripts.php,v 1.73 2008/09/16 22:50:06 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -717,6 +717,34 @@ function addGoogleAnalyticsTrackingCodeToHeader($UA = "UA-2566337-8")
 	# http://wiki.eclipse.org/Using_Phoenix#Google_Analytics
 	global $App;
 	$App->SetGoogleAnalyticsTrackingCode("$UA"); 
+}
+
+function getDownloadScript()
+{
+	global $PR;
+	if (strstr($PR, "/") !== false)
+	{
+		list($topProj, $parentProj) = explode("/", $PR); # modeling, emf
+	}
+	else
+	{
+		list($topProj, $parentProj) = array("NONE", $PR); # NONE, gef
+	}
+	
+	# if this is a Modeling page, use /modeling/download.php;
+	# if this is a GEF page, use /gef/download.php
+	# if /foo/download.php doesn't exist, revert to /downloads/download.php
+	$dlScriptFile = $_SERVER["DOCUMENT_ROOT"] . "/" . ($topProj == "NONE" ? $parentProj : $topProj) . "/download.php";
+	#print "[$dlScriptFile =? " . is_file($dlScriptFile) . "]<br>"; 
+	if (is_file($dlScriptFile))
+	{
+		$downloadScript = "http://www.eclipse.org/" . ($topProj == "NONE" ? $parentProj : $topProj) . "/download.php?file=";
+	}
+	else
+	{
+		$downloadScript = "http://www.eclipse.org/downloads/download.php?file=";
+	}
+	return $downloadScript;
 }
 
 ?>

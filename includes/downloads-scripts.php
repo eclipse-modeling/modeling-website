@@ -892,8 +892,8 @@ function getBuildArtifacts($dir, $branchID)
 		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
 		$buildID[$z] = isset($opts["${z}BuildURL"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}BuildURL"])) : "";
 		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}File"]) ? $opts["${z}File"] : "");
-		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? "http://www.eclipse.org/modeling/download.php?file=$builddir[$z]" : $builddir[$z]) : "";
-		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? "http://www.eclipse.org/modeling/download.php?file=$buildfile[$z]" : $buildfile[$z]);
+		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
+		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
 		if ($builddir[$z]) {
 		    $havedeps[$z] = $z;
 		}
