@@ -16,6 +16,15 @@
  * buildID=AyyyymmddHHMM, where A = {N, I, M, S, R}
  *
  * All 4 values are required.
+ * 
+ * Test cases:
+ * 
+ * GEF, with top=NONE
+ * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?top=NONE&parent=tools&project=gef&buildID=I200809091900&version=3.5.0&debug=0
+ * 
+ * modeling.emf.*, on both servers:
+ * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?top=modeling&parent=emf&project=emf&buildID=N200809161300&version=2.5.0&debug=0
+ * http://emft.eclipse.org/modeling/build/checkBuildStatus.php?top=modeling&parent=emf&project=query&buildID=R200806091744&version=1.2.0&debug=0
  */
 
 ini_set('display_errors', 1); ini_set('error_reporting', E_ALL);
@@ -38,9 +47,10 @@ if ( (isset($data["parent"]) && $data["parent"] == "NONE" ) || // no parent
 }
 else
 {
-	$PR =  (isset($data["parent"]) && $data["parent"] != "NONE" ? $data["parent"] : "modeling") . "/" . $data["top"]; # modeling/mdt
+	$PR =  $data["top"] . (isset($data["parent"]) && $data["parent"] != "NONE" ? "/" . $data["parent"] : ""); # modeling/mdt
 }
 
+#print "<i>$PR</i><br>";
 $data["project"] = isset($data["project"]) ?  $data["project"] : "";
 $projct = $data["project"];
 
