@@ -180,11 +180,11 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 							</td>
 						</tr>
 						<tr>
@@ -198,19 +198,27 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							</td>
 						</tr>
 						<tr>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+							</td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+							</td>
+						</tr>
+						<tr>
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
-										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
 							</td>
 						</tr>
 						<tr>
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
 							</td>
 						</tr>
 						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
@@ -218,8 +226,6 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td colspan="2"> &#149;
 										<a href="http://download.eclipse.org/technology/dltk/downloads/">DLTK</a>,
 										<a href="http://www.eclipse.org/datatools/downloads.php">DTP</a>,
-										<a href="http://download.eclipse.org/tools/gef/downloads/">GEF</a>,
-										<a href="http://download.eclipse.org/modeling/gmf/downloads/">GMF</a>,
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
 										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
 							</td>
