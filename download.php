@@ -7,9 +7,10 @@
  * See also http://wiki.eclipse.org/Using_Phoenix#Google_Analytics
  *  
  */ 
+$QS = str_replace("&","&amp;", $_SERVER["QUERY_STRING"]);
 $html = <<<EOHTML
 <html>
-<body onload="document.location.href='/downloads/download.php?${_SERVER["QUERY_STRING"]}';"> 
+<body onload="document.location.href='/downloads/download.php?${QS}';"> 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -32,7 +33,7 @@ pageTracker._trackPageview();
 			
 <noscript>
 <p><blockquote style="margin:30px; border:2px purple dashed"><blockquote style="margin:30px">
-It seems you have Javascript disabled. <a href='/downloads/download.php?${_SERVER["QUERY_STRING"]}'>Click here to proceed to the download page</a>.
+It seems you have Javascript disabled. <a href='/downloads/download.php?${QS}'>Click here to proceed to the download page</a>.
 </blockquote></blockquote></p>
 </noscript>
 
