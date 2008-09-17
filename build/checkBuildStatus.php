@@ -19,12 +19,13 @@
  * 
  * Test cases:
  * 
- * GEF, with top=NONE
- * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?top=NONE&parent=tools&project=gef&buildID=I200809091900&version=3.5.0&debug=0
+ * GEF, with parent=NONE
+ * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?parent=NONE&top=tools&project=gef&buildID=I200809091900&version=3.5.0
  * 
  * modeling.emf.*, on both servers:
- * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?top=modeling&parent=emf&project=emf&buildID=N200809161300&version=2.5.0&debug=0
- * http://emft.eclipse.org/modeling/build/checkBuildStatus.php?top=modeling&parent=emf&project=query&buildID=R200806091744&version=1.2.0&debug=0
+ * http://emf.torolab.ibm.com/modeling/build/checkBuildStatus.php?parent=modeling&top=emf&project=emf&buildID=N200809161300&version=2.5.0
+ * http://emft.eclipse.org/modeling/build/checkBuildStatus.php?parent=modeling&top=emf&project=query&buildID=R200806091744&version=1.2.0
+ * http://emft.eclipse.org/modeling/build/checkBuildStatus.php?parent=modeling&top=gmf&project=gmf&version=2.1.2&buildID=M200809162010
  */
 
 ini_set('display_errors', 1); ini_set('error_reporting', E_ALL);
@@ -47,7 +48,7 @@ if ( (isset($data["parent"]) && $data["parent"] == "NONE" ) || // no parent
 }
 else
 {
-	$PR =  $data["top"] . (isset($data["parent"]) && $data["parent"] != "NONE" ? "/" . $data["parent"] : ""); # modeling/mdt
+	$PR =  (isset($data["parent"]) && $data["parent"] != "NONE" ? $data["parent"] . "/" : "") . $data["top"]; # modeling/mdt
 }
 
 #print "<i>$PR</i><br>";
