@@ -190,11 +190,11 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 						<tr>
 							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
 										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
 							</td>
 							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
 							</td>
 						</tr>
 						<tr>
@@ -205,6 +205,12 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
 										<a href="http://<?php print $buildServer[1]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
 										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+							</td>
+						</tr>
+						<tr>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
+							</td>
+							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
 							</td>
 						</tr>
 						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
@@ -875,6 +881,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"20xpand" => "m2t-xpand-",
 		"19dtp" => "dtp-",
 		"18dltk" => "dltk-",
 		"17teneo" => "emf-teneo-|emft-teneo-",

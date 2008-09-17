@@ -106,6 +106,7 @@ $deps = array(
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
 	"orbit" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">Orbit</a>", "lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
 	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>",
+	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
 );
 
 // TODO: move this out into the per-project or per-component pages
