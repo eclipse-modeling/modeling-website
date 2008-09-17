@@ -16,7 +16,7 @@ var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "htt
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-910670-2");
+var pageTracker = _gat._getTracker("UA-910670-2"); // www.eclipse.org
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
@@ -26,7 +26,7 @@ var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "htt
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-2566337-8");
+var pageTracker = _gat._getTracker("UA-2566337-8"); // www.eclipse.org/modeling
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
