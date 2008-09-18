@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<!--<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>-->
-<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="Xtext">
    <release projectid="modeling.tmf.xtext" version="0.7.0"/>
    <introduction>
      This document lays out the feature and API set for the first release of the Xtext component,version 0.7.0, of the Eclipse Textual Modeling Framework Project.  
