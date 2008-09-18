@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan plan-format="1.0">
-   <release projectid="modeling.tmf.xtext" version="0.9.0"/>
+<!--<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>-->
+<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
+   <release projectid="modeling.tmf.xtext" version="0.7.0"/>
    <introduction>
-     This document lays out the feature and API set for the first release of the Xtext component,version 0.9.0, of the Eclipse Textual Modeling Framework Project.  
+     This document lays out the feature and API set for the first release of the Xtext component,version 0.7.0, of the Eclipse Textual Modeling Framework Project.  
      This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.
    </introduction>
    <release_deliverables>
-     <![CDATA[
+     <html:p>
     The release deliverables have the same form as is found in most Eclipse projects, namely:
-<ul>
-<li>TMF Xtext source code release, available as versions tagged "R0_9" in the project's CVS repository.</li>
-<li>TMF Xtext SDK (includes runtime and tooling components, with sources, examples, and documentation) (downloadable and update site).</li>
-<li>TMF Xtext runtime binary distribution (downloadable and update site).</li>
-<li>TMF Xtext tests (downloadable and update site)</li>
-</ul>
-  ]]>
+<html:ul>
+<html:li>TMF Xtext source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
+<html:li>TMF Xtext SDK (includes runtime and tooling components, with sources, examples, and documentation) (downloadable and update site).</html:li>
+<html:li>TMF Xtext runtime binary distribution (downloadable and update site).</html:li>
+<html:li>TMF Xtext tests (downloadable and update site)</html:li>
+</html:ul>
+  </html:p>
     </release_deliverables>
    <release_milestones>
-      <preamble><![CDATA[Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; 
+      <preamble>
+      <html:p>Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; 
       that is, until the final 3.5 release of the Platform, upon which Xtext and other projects will release simultaneously. 
       As Xtext is dependent upon the EMF, and other projects, which are scheduled to release milestones within 1 week of Platform milestones, 
       Xtext will deliver its milestones within the following week. 
       It is anticipated that Xtext will synchronize its release milestones with the Galileo release schedule.
-       ]]>
+       </html:p>
       </preamble>
       <milestone date="08/20/2008" milestone="M1"></milestone>
       <milestone date="10/01/2008" milestone="M2"></milestone>
       <milestone date="11/12/2008" milestone="M3"></milestone>
       <milestone date="12/29/2008" milestone="M4"></milestone>
       <milestone date="02/06/2009" milestone="M5"></milestone>
-      <milestone date="03/18/2009" milestone="M6">API freeze</milestone>
+      <milestone date="03/18/2009" milestone="M6"><html:p>API freeze</html:p></milestone>
       <milestone date="05/05/2009" milestone="M7"></milestone>
       <milestone date="05/19/2009" milestone="RC1"></milestone>
       <milestone date="05/26/2009" milestone="RC2"></milestone>
@@ -87,9 +89,9 @@ Those available will be presented on the project download site.
            </deferred>
      </theme>
    </themes_and_priorities-->
-   <!--appendix name="Help Wanted"><![CDATA[
+   <!--appendix name="Help Wanted"><html:p>
     Bugzillas with a 'helpwanted' keyword are in need of contribution from the community. 
     For the most current list of these items, see the following link: 
     <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=TMF&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=helpwanted&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">All Open</a>
-   ]]></appendix-->	
+   </html:p></appendix-->	
  </plan>
