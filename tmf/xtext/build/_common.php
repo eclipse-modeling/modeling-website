@@ -6,10 +6,10 @@ $options = array (
 
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
-		"1.0.0=HEAD,/opt/sun-java2-5.0",
+		"0.7.0=HEAD,/opt/sun-java2-5.0",
 
 		"build.eclipse.org=------------,------------",
-		"1.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"0.7.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
 	),
 
 	/* define a regular expression to be used to collect the most recent 
