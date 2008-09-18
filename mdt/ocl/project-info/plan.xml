@@ -138,13 +138,13 @@ specification.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Release+Currency|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </deferred>
         </theme>
         <theme name="Extensibility">
@@ -157,13 +157,32 @@ of the MDT OCL language implementation and APIs.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=status_whiteboard&amp;type0-0-0=casesubstring&amp;value0-0-0=|galileo|&amp;field0-1-0=status_whiteboard&amp;type0-1-0=casesubstring&amp;value0-1-0=|Extensibility|">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
+            </deferred>
+        </theme>
+        <theme name="Appealing to a Broader Community">
+            <description>
+                <html:div>
+There are a few fairly routine capabilities which, historically, MDT OCL has not
+supplied because of its narrow focus on parsing and evaluating OCL text.  User
+demand shows the value of providing the EMF.Edit plug-ins, for example, as well
+as a more flexible feature structure.
+                </html:div>
+            </description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Broad Appeal&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Broad Appeal&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=Broad Appeal&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=---&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan">
             </deferred>
         </theme>
    </themes_and_priorities>
