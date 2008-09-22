@@ -4,11 +4,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>xpand Builds</title>
   <link href="http://download.eclipse.org/modeling/m2t/feeds/builds-xpand.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-09-16T12:09:11Z</updated>
+  <updated>2008-09-22T09:17:11Z</updated>
   <author>
     <name>xpand Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2t/feeds/builds-xpand.xml</id>
+  <entry>
+    <title>[announce] xpand I200809180937 (0.7.0.I200809180937) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=xpand&amp;showAll=1&amp;hlbuild=I200809180937#I200809180937"/>
+    <id>http://www.eclipse.org/modeling/m2t/downloads/?project=xpand&amp;showAll=1&amp;hlbuild=I200809180937#I200809180937</id>
+    <updated>2008-09-22T09:17:11Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809180937" href="http://www.eclipse.org/modeling/m2t/downloads/?project=xpand&amp;showAll=1&amp;hlbuild=I200809180937#I200809180937" type="I" vanityname="I200809180937" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/xpand/downloads/drops/0.7.0/I200809180937/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2t/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2t/downloads/?project=xpand</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=xpand&amp;version=I200809180937
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2t-xpand-SDK-incubation-I200809180937.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/xpand/downloads/drops/0.7.0/I200809180937/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20080903-1200/eclipse-SDK-I20080903-1200-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.1/R200808251517/emf-sdo-xsd-SDK-2.4.1.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/R200806091546/mdt-uml2-SDK-2.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R20080807152315/orbit-R20080807152315.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/compare/downloads/drops/0.8.1/R200809170340/emft-compare-SDK-incubation-R200809170340.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/mwe/downloads/drops/0.7.0/I200809111052/emft-mwe-SDK-incubation-I200809111052.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] xpand I200809160216 (0.7.0.I200809160216) is available</title>
     <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=xpand&amp;showAll=1&amp;hlbuild=I200809160216#I200809160216"/>
