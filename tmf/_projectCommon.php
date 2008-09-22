@@ -35,13 +35,13 @@ $cvsprojs = array (); /* should always be empty */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.tmf" => array (
-		"xText" => "org.eclipse.xtext",
+		"Xtext" => "org.eclipse.xtext",
 		/* add more here */
 	)
 );
 
 $projects = array(
-	"xText" => "xtext",
+	"Xtext" => "xtext",
 );
 
 $bugcoms = array_flip($projects);
