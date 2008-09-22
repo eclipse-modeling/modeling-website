@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan plan-format="1.0">
+<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
    <release projectid="modeling.amalgam" version="0.8.0"/>
    <introduction>
-     This document lays out the feature and API set for the first release of the Modeling Amalgamation Project, version 0.8.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.
+     <html:p>This document lays out the feature and API set for the first release of the Modeling Amalgamation Project, version 0.8.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
    </introduction>
    <release_deliverables>
-     <![CDATA[
-    Amalgam is different than most Eclipse projects in that its deliverables are EPP and product-based builds of several Modeling projects.  While some UI and integration code is provided, it is not made available in the traditional runtime, SDK, doc, etc. individual downloads.
-  ]]>
+     <html:p>Amalgam is different than most Eclipse projects in that its deliverables are EPP and product-based builds of several Modeling projects.  While some UI and integration code is provided, it is not made available in the traditional runtime, SDK, doc, etc. individual downloads.</html:p>
     </release_deliverables>
    <release_milestones>
-      <preamble><![CDATA[Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 3 weeks; that is, until the final 3.5 release of the Platform, upon which Amalgam and other projects will release simultaneously. As Amalgam is dependent upon the EMF, GMF, and other Modeling projects, which are scheduled to release milestones within 3 weeks of Platform milestones, Amalgam will deliver its milestones within the following week. It is anticipated that Amalgam will synchronize its release milestones with the Galileo release schedule.
-       ]]>
+      <preamble>
+      	<html:p>Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 3 weeks; that is, until the final 3.5 release of the Platform, upon which Amalgam and other projects will release simultaneously. As Amalgam is dependent upon the EMF, GMF, and other Modeling projects, which are scheduled to release milestones within 3 weeks of Platform milestones, Amalgam will deliver its milestones within the following week. It is anticipated that Amalgam will synchronize its release milestones with the Galileo release schedule.</html:p>
       </preamble>
       <milestone date="08/25/2008" milestone="M1"></milestone>
       <milestone date="10/06/2008" milestone="M2"></milestone>
@@ -30,22 +28,22 @@
       <postamble></postamble>
    </release_milestones>
    <target_environments>
-     In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.
+     <html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.
 The Amalgam project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.5 release of the Eclipse Platform Project is written and compiled against version 1.4 of the Java Platform APIs, and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. Amalgam will target the same Java version as EMF and other Modeling projects, which currently require Java 5.
-Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. GMF will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.
+Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. GMF will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.</html:p>
      <internationalization>
-       The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Amalgam project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.
+       <html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Amalgam project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform and provided by the Babel project. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
-     As this is the first release of Amalgam, no compatibility issues exist.
+     <html:p>As this is the first release of Amalgam, no compatibility issues exist.</html:p>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
      <preamble>
-       A list of project requirements and agreed upon implementation time frames is found in this document. For the milestones listed in this document, a set of overall themes is used to indicate what major set of functionalities is to be concentrated on for each. These themes are presented below, while the requirements document and associated Bugzilla entries are left to those wanting more detailed information on each.
+       <html:p>A list of project requirements and agreed upon implementation time frames is found in this document. For the milestones listed in this document, a set of overall themes is used to indicate what major set of functionalities is to be concentrated on for each. These themes are presented below, while the requirements document and associated Bugzilla entries are left to those wanting more detailed information on each.</html:p>
      </preamble>
      <theme name="Usability">
-        <description>As one of the main purposes of Amalgam is to improve usability of Modeling technologies from Eclipse, it is a major theme for this and subsequent releases.</description>
+        <description><html:p>As one of the main purposes of Amalgam is to improve usability of Modeling technologies from Eclipse, it is a major theme for this and subsequent releases.</html:p></description>
         <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
          </committed>
         <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
@@ -54,7 +52,7 @@ Eclipse Platform SDK 3.5 will be tested and validated on a number of reference p
            </deferred>
      </theme>
      <theme name="Examples">
-        <description>Another key aspect of Amalgam is to provide cross-project examples that illustrate the range of technologies used in a typical MDSD scenario.</description>
+        <description><html:p>Another key aspect of Amalgam is to provide cross-project examples that illustrate the range of technologies used in a typical MDSD scenario.</html:p></description>
         <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
           </committed>
         <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
@@ -63,7 +61,7 @@ Eclipse Platform SDK 3.5 will be tested and validated on a number of reference p
            </deferred>
      </theme>
    </themes_and_priorities>
-   <appendix name="Help Wanted"><![CDATA[
-    Bugzillas with a 'helpwanted' keyword are in need of contribution from the community. For the most current list of these items, see the following link: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=helpwanted&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">All Open</a>
-   ]]></appendix>	
+   <appendix name="Help Wanted">
+		<html:p>Bugzillas with a 'helpwanted' keyword are in need of contribution from the community. For the most current list of these items, see the following link: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=helpwanted&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">All Open</a></html:p>
+   </appendix>	
  </plan>
