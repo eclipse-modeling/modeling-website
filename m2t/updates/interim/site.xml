@@ -7,6 +7,71 @@
 	</description>
 
 
+	<!-- XPAND 0.7.0 I200809180937 (Incubation) -->
+	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200809180937" name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937">
+		<description>
+M2T XPAND SDK (Incubation) 0.7.0 I200809180937: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.xpand.doc" version="0.7.0.v200809180937" url="features/org.eclipse.xpand.doc_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xpand.sdk" version="0.7.0.v200809180937" url="features/org.eclipse.xpand.sdk_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xpand.source" version="0.7.0.v200809180937" url="features/org.eclipse.xpand.source_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xpand.ui.source" version="0.7.0.v200809180937" url="features/org.eclipse.xpand.ui.source_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xpand.ui" version="0.7.0.v200809180937" url="features/org.eclipse.xpand.ui_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xpand" version="0.7.0.v200809180937" url="features/org.eclipse.xpand_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xtend.dependencies" version="0.7.0.v200809180937" url="features/org.eclipse.xtend.dependencies_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xtend.source" version="0.7.0.v200809180937" url="features/org.eclipse.xtend.source_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xtend.ui.source" version="0.7.0.v200809180937" url="features/org.eclipse.xtend.ui.source_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xtend.ui" version="0.7.0.v200809180937" url="features/org.eclipse.xtend.ui_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+	<feature id="org.eclipse.xtend" version="0.7.0.v200809180937" url="features/org.eclipse.xtend_0.7.0.v200809180937.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809180937"/>
+	</feature>
+
+	<!-- MTL 0.7.0 I200809181315 -->
+	<category-def label="M2T MTL SDK 0.7.0 I200809181315" name="M2T MTL SDK 0.7.0 I200809181315">
+		<description>
+M2T MTL SDK 0.7.0 I200809181315: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.doc_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.examples_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.runtime_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.sdk_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.source_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+	<feature id="org.eclipse.mtl" version="0.7.0.v200809181315" url="features/org.eclipse.mtl_0.7.0.v200809181315.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	</feature>
+
 	<!-- XPAND 0.7.0 I200809160216 (Incubation) -->
 	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200809160216" name="M2T XPAND SDK (Incubation) 0.7.0 I200809160216">
 		<description>
@@ -47,29 +112,29 @@ M2T XPAND SDK (Incubation) 0.7.0 I200809160216: contains runtime, source, and do
 		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200809160216"/>
 	</feature>
 
-	<!-- MTL 0.7.0 I200809181315 -->
-	<category-def label="M2T MTL SDK 0.7.0 I200809181315" name="M2T MTL SDK 0.7.0 I200809181315">
+	<!-- MTL 0.7.0 I200809121357 -->
+	<category-def label="M2T MTL SDK 0.7.0 I200809121357" name="M2T MTL SDK 0.7.0 I200809121357">
 		<description>
-M2T MTL SDK 0.7.0 I200809181315: contains runtime, source, and documentation.
+M2T MTL SDK 0.7.0 I200809121357: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.doc_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.doc_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
-	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.examples_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.examples_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
-	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.runtime_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.runtime_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
-	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.sdk_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.sdk_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
-	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809181315" url="features/org.eclipse.mtl.source_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.source_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
-	<feature id="org.eclipse.mtl" version="0.7.0.v200809181315" url="features/org.eclipse.mtl_0.7.0.v200809181315.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
+	<feature id="org.eclipse.mtl" version="0.7.0.v200809121357" url="features/org.eclipse.mtl_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
 
 	<!-- XPAND 0.7.0 I200801101356 -->
@@ -113,31 +178,6 @@ M2T XPAND SDK 0.7.0 I200801101356: contains runtime, source, and documentation.
 	</feature>
 	<feature id="org.eclipse.xpand.examples" version="0.7.0.v200801101356" url="features/org.eclipse.xpand.examples_0.7.0.v200801101356.jar" patch="false">
 		<category name="M2T XPAND SDK 0.7.0 I200801101356"/>
-	</feature>
-
-	<!-- MTL 0.7.0 I200809121357 -->
-	<category-def label="M2T MTL SDK 0.7.0 I200809121357" name="M2T MTL SDK 0.7.0 I200809121357">
-		<description>
-M2T MTL SDK 0.7.0 I200809121357: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.doc_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
-	</feature>
-	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.examples_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
-	</feature>
-	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.runtime_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
-	</feature>
-	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.sdk_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
-	</feature>
-	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.source_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
-	</feature>
-	<feature id="org.eclipse.mtl" version="0.7.0.v200809121357" url="features/org.eclipse.mtl_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
 	</feature>
 
 	<!-- MTL 0.7.0 I200809110810 -->
