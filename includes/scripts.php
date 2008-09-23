@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.75 2008/09/23 21:16:24 nickb Exp $
+// $Id: scripts.php,v 1.76 2008/09/23 22:54:22 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -719,21 +719,18 @@ function dirsize($path)
 	return $size;
 }
 
-/* being lazy */
-if(!function_exists("pretty_size"))
+function pretty_size($bytes)
 {
-	function pretty_size($bytes)
+	$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
+	$suf = 0;
+
+	while($bytes >= 1000)
 	{
-		$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
-		$suf = 0;
-
-		while($bytes >= 1000)
-		{
-			$bytes /= 1024;
-			$suf++;
-		}
-
-		return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
+		$bytes /= 1024;
+		$suf++;
 	}
+
+	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
 }
+
 ?>
