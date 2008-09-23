@@ -49,7 +49,7 @@ ob_start();
 		<div class="sideitem">
 			<h6>Getting started</h6>
 			<ul>				
-				<li>Coming</li>
+				<li><a href="http://wiki.eclipse.org/ModelingAmalgam">Amalgam Wiki</a></li>
 			</ul>
 		</div>
 		
