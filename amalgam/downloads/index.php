@@ -17,7 +17,7 @@ ob_start();
 	<tr>
 	 <td>DSL Toolkit (I200809231534)</td>
 	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk--incubation.win32.win32.x86.zip">package</a> (196.5 MB)
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.win32.win32.x86.zip">package</a> (196.5 MB)
 	 </td>
 	 <td style="background-color: rgb(204, 255, 204);">
 	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">package</a> (232.2 MB)
