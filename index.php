@@ -119,6 +119,15 @@ development technologies within the Eclipse community by providing a unified set
 				</ul>
 			</ul>
 		</div>
+		<div class="homeitem3col">
+			<h3>Amalgam</h3>
+			<ul>
+				<li><a href="http://www.eclipse.org/modeling/amalgam">Modeling Amalgamation Project</a> (Amalgam) : provides improved packaging, integration, and usability of Modeling project components.</li>
+			</ul>
+			<ul>
+				<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder">Modeling Tools Package</a> an All-In-One package from the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes most Modeling SDKs that is maintained by the Amalgam project.</li>
+			</ul>
+		</div>
 		
 		<hr class="clearer" />
 <!--

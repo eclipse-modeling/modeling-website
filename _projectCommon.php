@@ -30,6 +30,7 @@ $Nav->addCustomNav("MDT", "/modeling/mdt/", "_self", 3);
 $Nav->addCustomNav("M2M", "/m2m/", "_self", 3);
 $Nav->addCustomNav("M2T", "/modeling/m2t/", "_self", 3);
 $Nav->addCustomNav("TMF", "/modeling/tmf/", "_self", 3);
+$Nav->addCustomNav("Amalgam", "/modeling/amalgam/", "_self", 3);
 
 $Nav->addNavSeparator("Downloads", "http://www.eclipse.org/modeling/downloads/");
 $Nav->addCustomNav("All-In-One Package", "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder", "_self", 2);
