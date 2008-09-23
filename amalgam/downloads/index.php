@@ -6,8 +6,8 @@ ob_start();
 ?>
 
 <div id="midcolumn">
-	<h1>Amalgam Packages (20080923)</h1>
-	<table border="1">
+	<h1>Amalgam Packages</h1>
+	<table border="1" width="100%">
 	<tr>
 	  <th>Package</th>
 	  <th>Windows</th>
@@ -15,19 +15,19 @@ ob_start();
 	  <th>Mac OS X</th>
 	</tr>
 	<tr>
-	 <td>DSL Toolkit</td>
+	 <td>DSL Toolkit (I200809231534)</td>
 	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.win32.x86.zip">package</a> 
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk--incubation.win32.win32.x86.zip">package</a> 
 	 </td>
 	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.linux.gtk.x86.tar.gz">package</a> 
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">package</a> 
 	 </td>
 	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.ppc.tar.gz">package</a> 
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.macosx.carbon.x86.tar.gz">package</a> 
 	 </td>
 	</tr>
 	<tr>
-	 <td>Modeler</td>
+	 <td>Modeler (I200809231520)</td>
 	 <td style="background-color: rgb(204, 255, 204);">
 	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.win32.win32.x86.zip">package</a> 
 	 </td>
