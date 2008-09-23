@@ -3,44 +3,56 @@ require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
 ob_start();
+?>
 
-/* config */
+<div id="midcolumn">
+	<h1>Amalgam Packages (20080923)</h1>
+	<table border="1">
+	<tr>
+	  <th>Package</th>
+	  <th>Windows</th>
+	  <th>Linux 32 GTK</th>
+	  <th>Mac OS X</th>
+	</tr>
+	<tr>
+	 <td>DSL Toolkit</td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.win32.x86.zip">package</a> 
+	 </td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.linux.gtk.x86.tar.gz">package</a> 
+	 </td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200808261042/dsltk-incubation.ppc.tar.gz">package</a> 
+	 </td>
+	</tr>
+	<tr>
+	 <td>Modeler</td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.win32.win32.x86.zip">package</a> 
+	 </td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.linux.gtk.x86.tar">package</a> 
+	 </td>
+	 <td style="background-color: rgb(204, 255, 204);">
+	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.macosx.carbon.x86.tar.gz">package</a> 
+	 </td>
+	</tr>
+	</table>
+</div>
 
-/* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
-$extraZips = array(
-);
+<div id="rightcolumn">
+	<br />
+	<div class="sideitem">
+	   <h6>Incubation</h6>
+	   <p>Amalgam is currently in the <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+	   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
+	        align="center" src="http://www.eclipse.org/images/egg-incubation.png" border="0"/></a>
+	   </div>
+	</div>
+</div>
 
-/* $project => sections/Project Name => (prettyname => filename) */
-/* only required if using something other than the default 4; otherwise will be generated */
-$dls = array(
-	/*"/newProj" => array(
-		"Project Name" => array( # same as value in _projectCommon.php's $projects array
-			"SDK (Runtime, Source)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
-		)
-	),*/
-	"/amalgam" => array(
-		"Amalgam" => array(
-			"DSL Toolkit" => "dsltk"
-		)
-	),
-);
-
-/* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
-/* only required if using something other than the default; otherwise will be generated */
-$filePre = array(
-	/* "/newproj" => array("gmf-newproj"), */
-	"/amalgam" => array("amalgam", "Amalgam")
-);
-
-/* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
-/* end config */
-
-if ($isBuildServer) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/amalgam/build/sideitems-common.php"; }
-require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
-
+<?php
 $html = ob_get_contents();
 ob_end_clean();
 
