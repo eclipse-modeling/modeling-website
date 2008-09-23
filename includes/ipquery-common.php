@@ -540,24 +540,6 @@ function filterCommitters($committers, $components)
 	}
 	return $out;
 }
-function pretty_size($bytes)
-{
-	$sufs= array (
-		"B",
-		"K",
-		"M",
-		"G",
-		"T",
-		"P"
-	); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
-	$suf= 0;
-	while ($bytes >= 1000)
-	{
-		$bytes /= 1024;
-		$suf++;
-	}
-	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
-}
 
 # return a string condensed down the the last $num pieces, split by $split, and wrapped with its full value as an <acronym>
 function pretty_print($in, $split, $num)

@@ -172,22 +172,4 @@ function options($args, $f)
 	print "<a href=\"" . preg_replace("#^" . $_SERVER['DOCUMENT_ROOT'] . "|/home/www-data/build#", "", $f) . "\">unformatted log (" . trim(pretty_size(filesize("$f"))) . ")</a>";
 	print "</div>\n";
 }
-function pretty_size($bytes)
-{
-	$sufs= array (
-		"B",
-		"K",
-		"M",
-		"G",
-		"T",
-		"P"
-	); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
-	$suf= 0;
-	while ($bytes >= 1000)
-	{
-		$bytes /= 1024;
-		$suf++;
-	}
-	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
-}
 ?>
