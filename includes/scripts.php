@@ -1,10 +1,11 @@
 <?php
-// $Id: scripts.php,v 1.74 2008/09/23 20:42:57 nickb Exp $
+
+// $Id: scripts.php,v 1.75 2008/09/23 21:16:24 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
 	global $debug_echoPWD;
-	if ($debug_echoPWD && is_dir($PWD) && is_readable($PWD) && ($suf != "logs" || is_writable($PWD)))
+	if($debug_echoPWD && is_dir($PWD) && is_readable($PWD) &&($suf != "logs" || is_writable($PWD)))
 	{
 		print $str;
 		$debug_echoPWD = 0;
@@ -14,7 +15,7 @@ function PWD_debug($PWD, $suf, $str)
 function PWD_check($PWD, $suf)
 {
 	#debug ("&#160; &#160; <b>PWD = </b>$PWD; <b>suf = </b>$suf;<br/>&#160; &#160; &#160; is_dir? <b style='color:green'>" . is_dir($PWD) . "</b>; is_readable? <b style='color:green'>" . is_readable($PWD) . "</b>; is_writable? <b style='color:green'>" . is_writable($PWD) . "</b><br/>", 2);
-	return (!is_dir($PWD) || !is_readable($PWD) || ($suf == "logs" && !is_writable($PWD)));
+	return(!is_dir($PWD) || !is_readable($PWD) ||($suf == "logs" && !is_writable($PWD)));
 }
 
 function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to hide (for security purposes!)
@@ -23,138 +24,70 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	#debug ("<br/><b>PR = </b>$PR, <b>suf = </b>$suf</br>", 2);
 	$PWDs = array();
 
-	if ($doDynCheck)
+	if($doDynCheck)
 	{
 		//dynamic assignments
-   		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
-   		$PWDs[] = $PWD;
-   		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
+		$PWD = $App->getDownloadBasePath() . "/$PR/" . $suf;
+		$PWDs[] = $PWD;
+		PWD_debug($PWD, $suf, "<!-- Found[1gDBP] $PWD -->");
 
 		//second dynamic assignment
-		if (PWD_check($PWD, $suf))
+		if(PWD_check($PWD, $suf))
 		{
 			$PWD = $_SERVER["DOCUMENT_ROOT"] . "/$PR/" . $suf;
-	   		$PWDs[] = $PWD;
+			$PWDs[] = $PWD;
 			PWD_debug($PWD, $suf, "<!-- Found[1DR+PR] $PWD -->");
 		}
 
-		if (!PWD_check($PWD, $suf) && !$isBuildServer)
+		if(!PWD_check($PWD, $suf) && !$isBuildServer)
 		{
 			debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
 			return $PWD;
 		}
 	}
-	$PWD="";
+	$PWD = "";
 
 	//static assignments
-	if (PWD_check($PWD, $suf))
+	if(PWD_check($PWD, $suf))
 	{
-		$servers = array(
-			"/buildbox(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build",
-			"/build\.eclipse\.org/" => "/opt/public/modeling/build",
-			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build",
-			"/emft(?:\.eclipse\.org)?/" => "/home/www-data/build",
-			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org",
-			"/fullmoon\.torolab\.ibm\.com/" => "/home/www"
-		);
+		$servers = array("/buildbox(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", "/build\.eclipse\.org/" => "/opt/public/modeling/build", "/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", "/emft(?:\.eclipse\.org)?/" => "/home/www-data/build", "/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org", "/fullmoon\.torolab\.ibm\.com/" => "/home/www");
 
-		foreach (array_keys($servers) as $z)
+		foreach(array_keys($servers) as $z)
 		{
 			$PWD = $servers[$z] . "/$PR/$suf";
-			if (preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
-		   		$PWDs[] = $PWD;
+				$PWDs[] = $PWD;
 				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
 			}
 		}
-		foreach (array_keys($servers) as $z)
+		foreach(array_keys($servers) as $z)
 		{
 			$PWD = $servers[$z] . "/$suf";
-			if (preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
-		   		$PWDs[] = $PWD;
+				$PWDs[] = $PWD;
 				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
 			}
 		}
 	}
-	$PWD="";
+	$PWD = "";
 
 	//try a default guess: /home/www, two options
-	if (PWD_check($PWD, $suf))
+	if(PWD_check($PWD, $suf))
 	{
-		$data = array(
-			4 => array(
-				"checkdir" => "/home/data/httpd/download.eclipse.org/",
-				"tries" => array(
-					"/home/data/httpd/download.eclipse.org/$suf",
-					"/home/data/httpd/download.eclipse.org/$PR/$suf",
-					"/home/data/httpd/download.eclipse.org/tools/$PR/$suf",
-					"/home/data/httpd/download.eclipse.org/technology/$PR/$suf",
+		$data = array(4 => array("checkdir" => "/home/data/httpd/download.eclipse.org/", "tries" => array("/home/data/httpd/download.eclipse.org/$suf", "/home/data/httpd/download.eclipse.org/$PR/$suf", "/home/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)), 5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/", "tries" => array("/home/data2/httpd/download.eclipse.org/$suf", "/home/data2/httpd/download.eclipse.org/$PR/$suf", "/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)), 6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/", "tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, "/home/local/data/httpd/download.eclipse.org/$suf", "/home/local/data/httpd/download.eclipse.org/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf", "/home/www/tools/$suf", "/home/www/technology/$suf", "/home/www/eclipse/$PR/$suf",)), 7 => array("checkdir" => "/var/www/", "tries" => array("/var/www/$PR/$suf", "/var/www/html/$PR/$suf", "/var/www/tools/$PR/$suf", "/var/www/technology/$PR/$suf", "/var/www/eclipse/$PR/$suf", "/var/www/html/tools/$PR/$suf", "/var/www/html/technology/$PR/$suf", "/var/www/html/eclipse/$PR/$suf",)));
 
-					"/home/www/tools/$PR/$suf",
-					"/home/www/technology/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf",
-				)
-			),
-			5 => array(
-				"checkdir" => "/home/data2/httpd/download.eclipse.org/",
-				"tries" => array(
-					"/home/data2/httpd/download.eclipse.org/$suf",
-					"/home/data2/httpd/download.eclipse.org/$PR/$suf",
-					"/home/data2/httpd/download.eclipse.org/tools/$PR/$suf",
-					"/home/data2/httpd/download.eclipse.org/technology/$PR/$suf",
-
-					"/home/www/tools/$PR/$suf",
-					"/home/www/technology/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf",
-				)
-			),
-			6 => array(
-				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
-				"tries" => array(
-				    $doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null,
-
-					"/home/local/data/httpd/download.eclipse.org/$suf",
-					"/home/local/data/httpd/download.eclipse.org/$PR/$suf",
-					"/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf",
-					"/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf",
-
-					"/home/www/tools/$PR/$suf",
-					"/home/www/technology/$PR/$suf",
-					"/home/www/eclipse/$PR/$suf",
-
-					"/home/www/tools/$suf",
-					"/home/www/technology/$suf",
-					"/home/www/eclipse/$PR/$suf",
-				)
-			),
-			7 => array(
-				"checkdir" => "/var/www/",
-				"tries" => array(
-					"/var/www/$PR/$suf",
-					"/var/www/html/$PR/$suf",
-
-					"/var/www/tools/$PR/$suf",
-					"/var/www/technology/$PR/$suf",
-					"/var/www/eclipse/$PR/$suf",
-
-					"/var/www/html/tools/$PR/$suf",
-					"/var/www/html/technology/$PR/$suf",
-					"/var/www/html/eclipse/$PR/$suf",
-				)
-			)
-		);
-
-		foreach (array_keys($data) as $y)
+		foreach(array_keys($data) as $y)
 		{
 			$PWD = $data[$y]["checkdir"];
-			if (is_dir($PWD) && is_readable($PWD))
+			if(is_dir($PWD) && is_readable($PWD))
 			{
-				foreach (array_keys($data[$y]["tries"]) as $z)
+				foreach(array_keys($data[$y]["tries"]) as $z)
 				{
 					#debug("&#160; &#160; &#160; &#160; &#160; \$data[$y][\"tries\"][$z] = " . $data[$y]["tries"][$z],3);
 					$PWD = $data[$y]["tries"][$z];
-					if ($PWD && !PWD_check($PWD, $suf))
+					if($PWD && !PWD_check($PWD, $suf))
 					{
 						PWD_debug($PWD, $suf, "<!-- Found: defaults[${y}][$z] -->");
 						$PWDs[] = $PWD;
@@ -164,14 +97,15 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			}
 		}
 	}
-	$PWD="";
+	$PWD = "";
 
-	krsort($PWDs); reset($PWDs);
+	krsort($PWDs);
+	reset($PWDs);
 	#debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
-	foreach ($PWDs as $i => $PWD)
+	foreach($PWDs as $i => $PWD)
 	{
 		debug(" &#160; &#160; $i : $PWD", 9);
-		if (!PWD_check($PWD, $suf))
+		if(!PWD_check($PWD, $suf))
 		{
 			debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
 			return $PWD;
@@ -187,14 +121,14 @@ function loadDirSimple($dir, $ext, $type) // 1D array, not 2D
 {
 	$stuff = array();
 
-	if (is_dir($dir) && is_readable($dir))
+	if(is_dir($dir) && is_readable($dir))
 	{
 		$handle = opendir($dir);
-		while (($file = readdir($handle)) !== false)
+		while(($file = readdir($handle)) !== false)
 		{
-			if (preg_match("/$ext$/", $file) && !preg_match("/^\.{1,2}$/", $file))
+			if(preg_match("/$ext$/", $file) && !preg_match("/^\.{1,2}$/", $file))
 			{
-				if (($type == "d" && is_dir("$dir/$file")) || ($type == "f" && is_file("$dir/$file")))
+				if(($type == "d" && is_dir("$dir/$file")) ||($type == "f" && is_file("$dir/$file")))
 				{
 					$stuff[] = $file;
 				}
@@ -205,9 +139,9 @@ function loadDirSimple($dir, $ext, $type) // 1D array, not 2D
 	else
 	{
 		global $hadLoadDirSimpleError;
-		if (!$hadLoadDirSimpleError)
+		if(!$hadLoadDirSimpleError)
 		{
-			$issue = (!is_dir($dir) ? "NOT FOUND" : (!is_readable($dir) ? "NOT READABLE" : "PROBLEM"));
+			$issue =(!is_dir($dir) ? "NOT FOUND" :(!is_readable($dir) ? "NOT READABLE" : "PROBLEM"));
 			print "<p>Directory ($dir) <b>$issue</b> on mirror: <b>" . $_SERVER["HTTP_HOST"] . "</b>!</p>";
 			print "<p>Please report this error to <a href=\"mailto:webmaster@eclipse.org?Subject=Directory ($dir) $issue in scripts.php::loadDirSimple() on mirror " . $_SERVER["HTTP_HOST"] . "\">webmaster@eclipse.org</a>, or make directory readable.</p>";
 			$hadLoadDirSimpleError = 1;
@@ -226,30 +160,31 @@ function wArr($arr)
 
 function w($s, $br = "") // shortcut for echo() with second parameter: "add break+newline"
 {
-	if (stristr($br, "n"))
+	if(stristr($br, "n"))
 	{
 		$br = "\n";
 	}
-	else if ($br)
-	{
-		$br = "<br/>\n";
-	}
+	else
+		if($br)
+		{
+			$br = "<br/>\n";
+		}
 
 	print $s . $br;
 }
 
-function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFmtSuf="") // allow overriding in case the file's not in /$PR/
+function getNews($lim, $key, $xml = "", $linkOnly = false, $dateFmtPre = "", $dateFmtSuf = "") // allow overriding in case the file's not in /$PR/
 {
 	global $PR;
 
-	$xml = ($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"));
+	$xml =($xml ? $xml : file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$PR/" . "news/news.xml"));
 	$news_regex = "%
-		<news\ date=\"([^\"]+)\"\ showOn=\"([^\"]+)\">.*\\n
-		(.+)\\n
-		</news>.*\\n
-		%mx";
+			<news\ date=\"([^\"]+)\"\ showOn=\"([^\"]+)\">.*\\n
+			(.+)\\n
+			</news>.*\\n
+			%mx";
 
-	if (!$xml)
+	if(!$xml)
 	{
 		print "<p><b><i>Error</i></b> Couldn't find any news!</p>\n";
 	}
@@ -257,21 +192,21 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 	$regs = null;
 	preg_match_all($news_regex, $xml, $regs);
 	$i_real = 0;
-	foreach (array_keys($regs[0]) as $i)
+	foreach(array_keys($regs[0]) as $i)
 	{
-		if ($i_real >= $lim && $lim > 0)
+		if($i_real >= $lim && $lim > 0)
 		{
 			return;
 		}
 
 		$showOn = explode(",", $regs[2][$i]);
-		if ($key == "all" || in_array($key, $showOn))
+		if($key == "all" || in_array($key, $showOn))
 		{
 			$i_real++;
 			print "<p>\n";
-			if (strtotime($regs[1][$i]) > strtotime("-3 weeks"))
+			if(strtotime($regs[1][$i]) > strtotime("-3 weeks"))
 			{
-				if (preg_match("/update/i",$regs[3][$i]))
+				if(preg_match("/update/i", $regs[3][$i]))
 				{
 					print '<img src="/modeling/images/updated.gif" alt="Updated!"/> ';
 				}
@@ -281,26 +216,28 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 				}
 
 			}
-			if (!$dateFmtPre && !$dateFmtSuf)
+			if(!$dateFmtPre && !$dateFmtSuf)
 			{
-				$app = (date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");
+				$app =(date("Y", strtotime($regs[1][$i])) < date("Y") ? ", Y" : "");
 				print date("M" . '\&\n\b\s\p\;jS' . $app, strtotime($regs[1][$i])) . ' - ' . "\n";
-			} else if ($dateFmtPre)
-			{
-				print date($dateFmtPre,strtotime($regs[1][$i]));
 			}
-			if ($linkOnly)
+			else
+				if($dateFmtPre)
+				{
+					print date($dateFmtPre, strtotime($regs[1][$i]));
+				}
+			if($linkOnly)
 			{
-				$link = preg_replace("#.+(<a .+</a>).+#","$1",$regs[3][$i]);
+				$link = preg_replace("#.+(<a .+</a>).+#", "$1", $regs[3][$i]);
 			}
 			else
 			{
 				$link = $regs[3][$i];
 			}
 			print $link;
-			if ($dateFmtSuf)
+			if($dateFmtSuf)
 			{
-				print date($dateFmtSuf,strtotime($regs[1][$i]));
+				print date($dateFmtSuf, strtotime($regs[1][$i]));
 			}
 			print "</p>\n";
 		}
@@ -310,37 +247,31 @@ function getNews($lim, $key, $xml = "", $linkOnly=false, $dateFmtPre="", $dateFm
 function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 {
 	global $projects, $PR;
-	$types = array(
-		"I" => "integration",
-		"M" => "maintenance",
-		"N" => "nightly",
-		"R" => "release",
-		"S" => "stable"
-	);
+	$types = array("I" => "integration", "M" => "maintenance", "N" => "nightly", "R" => "release", "S" => "stable");
 
-	$limit = ($limit >= 0 ? "LIMIT $limit" : "");
+	$limit =($limit >= 0 ? "LIMIT $limit" : "");
 
 	$projectsf = array_flip($cvsprojs);
-	foreach ($cvscoms as $z)
+	foreach($cvscoms as $z)
 	{
 		$projectsf = array_merge($projectsf, array_flip($z));
 	}
 	$q = array();
 
-	foreach (array_keys($cvsprojs) as $z)
+	foreach(array_keys($cvsprojs) as $z)
 	{
 		$q[$z] = "(CONVERT('$cvsprojs[$z]' USING utf8), CONVERT('' USING utf8))";
 	}
 
-	foreach (array_keys($cvscoms) as $z)
+	foreach(array_keys($cvscoms) as $z)
 	{
-		foreach (array_keys($cvscoms[$z]) as $y)
+		foreach(array_keys($cvscoms[$z]) as $y)
 		{
 			$q[$y] = "(CONVERT('$z' USING utf8), CONVERT('{$cvscoms[$z][$y]}' USING utf8))";
 		}
 	}
 
-	if ($proj && isset($q[$proj]))
+	if($proj && isset($q[$proj]))
 	{
 		$where = $q[$proj];
 	}
@@ -351,16 +282,16 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 
 	$result = wmysql_query("SELECT IF(`component` != '', `component`, `project`), `vanityname`, `branch`, CONCAT(DATE_FORMAT(`buildtime`, '%b %D '), IF(YEAR(`buildtime`) = YEAR(NOW()), '', YEAR(`buildtime`))), `type`, `buildtime` >= NOW() - INTERVAL 3 WEEK, CONCAT(`type`, DATE_FORMAT(buildtime, '%Y%m%d%H%i')) FROM `releases` WHERE (`project`, `component`) IN($where) AND `vanityname` != '0.0.0' ORDER BY `buildtime` DESC $limit");
 
-	if ($result)
+	if($result)
 	{
-		while ($row = mysql_fetch_row($result))
+		while($row = mysql_fetch_row($result))
 		{
-			$img = ($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");
+			$img =($row[5] ? "<img src=\"/modeling/images/new.gif\" alt=\"New!\"/>" : "");
 			$notes = "<a href=\"/$PR/news/relnotes.php?project=" . $projectsf[$row[0]] . "&amp;version=$row[1]\">";
 			$link = "<a href=\"/$PR/downloads/?showAll=1&amp;project=" . $projectsf[$row[0]] . "&amp;hlbuild=$row[6]#$row[6]\">";
-			$branch = ($row[2] == "HEAD" ? "" : "<i>$row[2]</i> ");
-			$type = (preg_match("/maintenance$/", $row[2]) ? "" : $types[$row[4]] . " ");
-			if ($row[4] == "R")
+			$branch =($row[2] == "HEAD" ? "" : "<i>$row[2]</i> ");
+			$type =(preg_match("/maintenance$/", $row[2]) ? "" : $types[$row[4]] . " ");
+			if($row[4] == "R")
 			{
 				print "<p>$img $row[3] - $notes" . strtoupper($projectsf[$row[0]]) . " $row[1]</a> has been released! Get it ${link}here</a>.</p>";
 			}
@@ -377,11 +308,11 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 }
 
 /* TODO: remove this when we upgrade php to >= 4.3.0 everywhere */
-if (!function_exists("file_get_contents"))
+if(!function_exists("file_get_contents"))
 {
 	function file_get_contents($file)
 	{
-		return (is_file($file) ? join("", file($file)) : "");
+		return(is_file($file) ? join("", file($file)) : "");
 	}
 }
 
@@ -390,10 +321,10 @@ function getProjectArray($projects, $extraprojects, $nodownloads, $PR) //only th
 	$pwd = getPWD();
 
 	$projs = loadDirSimple($pwd, ".*", "d"); // locally available
-	foreach ($nodownloads as $z)
+	foreach($nodownloads as $z)
 	{
 		/* php <4.2.0 returns NULL on array_search() failure, but php >=4.2.0 returns FALSE on array_search() failure, so don't check that */
-		if (is_numeric($s = array_search($z, $projs)))
+		if(is_numeric($s = array_search($z, $projs)))
 		{
 			unset($projs[$s]);
 		}
@@ -408,16 +339,16 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$vars = array("showAll", "showMax", "sortBy", "hlbuild");
 	$tmp = preg_replace("#^/#", "", $proj);
 
-	$hlbuild = (isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
+	$hlbuild =(isset($_GET["hlbuild"]) && preg_match("/^[IMNRS]\d{12}$/", $_GET["hlbuild"]) ? $_GET["hlbuild"] : "");
 
-	$out = "<div class=\"" . ($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
-	$tag = ($style == "sideitem" ? "h6" : "h3");
+	$out = "<div class=\"" .($style == "sideitem" ? "sideitem" : "homeitem3col") . "\">\n";
+	$tag =($style == "sideitem" ? "h6" : "h3");
 	$out .= "<$tag>";
-	if ($style != "sideitem" && isset($incubating) && in_array($tmp, $incubating))
+	if($style != "sideitem" && isset($incubating) && in_array($tmp, $incubating))
 	{
 		$out .= '<a href="http://www.eclipse.org/projects/what-is-incubation.php"><img style="float:right"
-		src="http://www.eclipse.org/modeling/images/egg-icon.png" alt="Validation (Incubation) Phase"
-		border="0" /></a>';
+				src="http://www.eclipse.org/modeling/images/egg-icon.png" alt="Validation (Incubation) Phase"
+				border="0" /></a>';
 	}
 	$out .= "$nomenclature selection</$tag>\n";
 	$out .= "<form action=\"" . $_SERVER["SCRIPT_NAME"] . "\" method=\"get\" id=\"subproject_form\">\n";
@@ -425,14 +356,14 @@ function doSelectProject($projectArray, $proj, $nomenclature, $style = "homeitem
 	$out .= "<label for=\"project\">$nomenclature: </label>\n";
 
 	$out .= "<select id=\"project\" name=\"project\" onchange=\"javascript:document.getElementById('subproject_form').submit()\">\n";
-	foreach ($projectArray as $k => $v)
+	foreach($projectArray as $k => $v)
 	{
 		$out .= "<option value=\"$v\">$k</option>\n";
 	}
 	$out .= "</select>\n";
-	foreach ($vars as $z)
+	foreach($vars as $z)
 	{
-		if ($$z !== "")
+		if($$z !== "")
 		{
 			$out .= "<input type=\"hidden\" name=\"$z\" value=\"" . $$z . "\"/>\n";
 		}
@@ -452,14 +383,14 @@ function project_name($proj)
 
 	$tmp = array_flip($projects);
 	$proj = preg_replace("#^/#", "", $proj);
-	return isset($tmp[$proj]) ? $tmp[$proj] : (isset($tmp[$PR]) ? $tmp[$PR] : "");
+	return isset($tmp[$proj]) ? $tmp[$proj] :(isset($tmp[$PR]) ? $tmp[$PR] : "");
 }
 
 function debug($str, $level = 0)
 {
 	global $debug;
 
-	if ($debug > $level)
+	if($debug > $level)
 	{
 		print "<div class=\"debug\">$str</div>\n";
 	}
@@ -469,19 +400,24 @@ function debug_r($str, $header = "", $footer = "", $level = 0, $isPreformatted =
 {
 	global $debug;
 
-	if ($debug > $level)
+	if($debug > $level)
 	{
-		if ($header) {
-		    print "<div class=\"debug\">"; print $header; print "</div>\n";
+		if($header)
+		{
+			print "<div class=\"debug\">";
+			print $header;
+			print "</div>\n";
 		}
 		print "<div class=\"debug\">";
 		print $isPreformatted ? "<pre><small>" : "";
 		print_r($str);
 		print $isPreformatted ? "</small></pre>" : "";
 		print "</div>\n";
-		if ($footer)
+		if($footer)
 		{
-		    print "<div class=\"debug\">"; print $footer; print "</div>\n";
+			print "<div class=\"debug\">";
+			print $footer;
+			print "</div>\n";
 		}
 	}
 }
@@ -490,18 +426,19 @@ function isAuthorized()
 {
 	global $isEMFserver, $isBuildServer;
 
-	if ($isBuildServer) {
+	if($isBuildServer)
+	{
 		return true;
 	}
 	// must be on a build server and must not be on www.eclipse.org
-	if ($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html")
+	if($isEMFserver && $_SERVER["DOCUMENT_ROOT"] != "/home/data/httpd/www.eclipse.org/html")
 	{
 		return true;
 	}
 	$server_name = domainSuffix($_SERVER["SERVER_NAME"]);
 	$host_ip = $_SERVER["SERVER_NAME"] ? gethostbyname($server_name) : null;
 	$host_name = $_SERVER["SERVER_ADDR"] ? domainSuffix(gethostbyaddr($_SERVER["SERVER_ADDR"])) : null;
-	if ($host_ip && $host_name && $host_ip == $_SERVER["SERVER_ADDR"] && $host_name == $_SERVER["SERVER_NAME"])
+	if($host_ip && $host_name && $host_ip == $_SERVER["SERVER_ADDR"] && $host_name == $_SERVER["SERVER_NAME"])
 	{
 		return true;
 	}
@@ -516,10 +453,17 @@ function domainSuffix($domain)
 function internalUseOnly()
 {
 	global $theme;
-	if (!isAuthorized())
+	if(!isAuthorized())
 	{
-		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include_once($App->getProjectCommon());
-		ob_start(); ?>
+		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
+		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
+		require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
+		$App = new App();
+		$Nav = new Nav();
+		$Menu = new Menu();
+		include_once($App->getProjectCommon());
+		ob_start();
+?>
 
 		<div id="midcolumn">
 
@@ -529,6 +473,7 @@ function internalUseOnly()
 		</div>
 		</div>
 		<?php
+
 		$html = ob_get_contents();
 		ob_end_clean();
 
@@ -541,21 +486,22 @@ function internalUseOnly()
 	}
 }
 
-function pick_project(&$proj, &$cvsproj, $cvsprojs, &$cvscom, $cvscoms, $components)
+function pick_project(& $proj, & $cvsproj, $cvsprojs, & $cvscom, $cvscoms, $components)
 {
-	if (isset($_GET["project"]))
+	if(isset($_GET["project"]))
 	{
-		if (sizeof($cvsprojs) > 0 && preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
+		if(sizeof($cvsprojs) > 0 && preg_match("/^(?:" . join("|", array_keys($cvsprojs)) . ")$/", $_GET["project"]))
 		{
 			$proj = $_GET["project"];
 			$cvsproj = $cvsprojs[$proj];
 		}
-		else if (sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
-		{
-			$proj = $_GET["project"];
-			$cvsproj = $components[$proj][0];
-			$cvscom = $components[$proj][1];
-		}
+		else
+			if(sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
+			{
+				$proj = $_GET["project"];
+				$cvsproj = $components[$proj][0];
+				$cvscom = $components[$proj][1];
+			}
 	}
 }
 
@@ -564,11 +510,11 @@ function components($cvscoms)
 {
 	$components = array();
 
-	if (isset($cvscoms) && is_array($cvscoms))
+	if(isset($cvscoms) && is_array($cvscoms))
 	{
-		foreach (array_keys($cvscoms) as $z)
+		foreach(array_keys($cvscoms) as $z)
 		{
-			foreach (array_keys($cvscoms[$z]) as $y)
+			foreach(array_keys($cvscoms[$z]) as $y)
 			{
 				/* $proj = array($cvsproj, $cvscom) */
 				$components[$y] = array($z, $cvscoms[$z][$y]);
@@ -593,7 +539,7 @@ function wikiCategoryToListItems($category)
 	$header .= "Connection: close\r\n\r\n";
 
 	$fp = fsockopen($host, 80, $errno, $errstr, 30);
-	if (!$fp)
+	if(!$fp)
 	{
 		$out .= "<li><i>$errstr ($errno)</i></li>\n";
 	}
@@ -601,7 +547,7 @@ function wikiCategoryToListItems($category)
 	{
 		fputs($fp, "GET $url HTTP/1.1\r\n");
 		fputs($fp, $header);
-		while (!feof($fp))
+		while(!feof($fp))
 		{
 			$wiki_contents .= fgets($fp, 128);
 		}
@@ -609,15 +555,15 @@ function wikiCategoryToListItems($category)
 	}
 
 	$out = "";
-	if ($wiki_contents)
+	if($wiki_contents)
 	{
 		$m = null;
-		if (preg_match("#<div id=\"mw-pages\">(.+)</div>[ \t\n]*<div class=\"printfooter\">#s", $wiki_contents, $m))
+		if(preg_match("#<div id=\"mw-pages\">(.+)</div>[ \t\n]*<div class=\"printfooter\">#s", $wiki_contents, $m))
 		{
 			$links = null;
-			if (preg_match_all("#<a href=\"([^\"]+)\" title=\"([^\"]+)\">([^<]+)</a>#", $m[1], $links, PREG_SET_ORDER))
+			if(preg_match_all("#<a href=\"([^\"]+)\" title=\"([^\"]+)\">([^<]+)</a>#", $m[1], $links, PREG_SET_ORDER))
 			{
-				foreach ($links as $z)
+				foreach($links as $z)
 				{
 					$out .= "<li><a href=\"http://wiki.eclipse.org/$z[1]\" title=\"$z[2]\">$z[3]</a></li>\n";
 				}
@@ -630,19 +576,19 @@ function wikiCategoryToListItems($category)
 function getProjectFromPath($PR)
 {
 	$m = null;
-	return preg_match("#/".$PR."/([^/]+)/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] :
-		(preg_match("#/(".$PR.")/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] : "");
+	return preg_match("#/" . $PR . "/([^/]+)/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] :(preg_match("#/(" .
+	$PR . ")/build/.+#", $_SERVER["PHP_SELF"], $m) ? $m[1] : "");
 }
 
 function cvsminus($rev)
 {
-	if (preg_match("/^1\.1$/", $rev)) // "1.10" == "1.1" returns true, curiously enough
+	if(preg_match("/^1\.1$/", $rev)) // "1.10" == "1.1" returns true, curiously enough
 	{
 		return $rev;
 	}
 	else
 	{
-		if (preg_match("/\.1$/", $rev))
+		if(preg_match("/\.1$/", $rev))
 		{
 			return preg_replace("/^(\d+\.\d+)\..+$/", "$1", $rev);
 		}
@@ -655,7 +601,7 @@ function cvsminus($rev)
 
 function changesetForm($bugid = "")
 {
-	?>
+?>
 	<form action="http://www.eclipse.org/modeling/emf/news/changeset.php" method="get" target="_blank">
 	<p>
 		<label for="bugid">Bug ID: </label><input size="7" type="text" name="bugid" id="bugid" value="<?php print $bugid; ?>"/>
@@ -674,6 +620,7 @@ function changesetForm($bugid = "")
 	</div>
 	</form>
 <?php
+
 }
 
 function tokenize($in) # split a shell command into flag/value pairs
@@ -697,32 +644,33 @@ function tokenize($in) # split a shell command into flag/value pairs
 	 */
 	$bits = explode(" -", $in);
 	$pairs["cmd"] = $bits[0];
-	for ($i=1; $i<sizeof($bits); $i++)
+	for($i = 1; $i < sizeof($bits); $i++)
 	{
 		$pair = explode(" ", $bits[$i]);
-		if (isset($pair[0]) && isset($pair[1]))
-		{ 
+		if(isset($pair[0]) && isset($pair[1]))
+		{
 			$pairs[$pair[0]] = $pair[1];
 		}
-		else if (isset($pair[0]))
-		{ 
-			$pairs[$pair[0]] = "";
-		} 			
+		else
+			if(isset($pair[0]))
+			{
+				$pairs[$pair[0]] = "";
+			}
 	}
 	return $pairs;
-} 
+}
 
 function addGoogleAnalyticsTrackingCodeToHeader($UA = "UA-2566337-8")
 {
 	# http://wiki.eclipse.org/Using_Phoenix#Google_Analytics
 	global $App;
-	$App->SetGoogleAnalyticsTrackingCode("$UA"); 
+	$App->SetGoogleAnalyticsTrackingCode("$UA");
 }
 
 function getDownloadScript()
 {
 	global $PR;
-	if (strstr($PR, "/") !== false)
+	if(strstr($PR, "/") !== false)
 	{
 		list($topProj, $parentProj) = explode("/", $PR); # modeling, emf
 	}
@@ -730,15 +678,15 @@ function getDownloadScript()
 	{
 		list($topProj, $parentProj) = array("NONE", $PR); # NONE, gef
 	}
-	
+
 	# if this is a Modeling page, use /modeling/download.php;
 	# if this is a GEF page, use /gef/download.php
 	# if /foo/download.php doesn't exist, revert to /downloads/download.php
-	$dlScriptFile = $_SERVER["DOCUMENT_ROOT"] . "/" . ($topProj == "NONE" ? $parentProj : $topProj) . "/download.php";
+	$dlScriptFile = $_SERVER["DOCUMENT_ROOT"] . "/" .($topProj == "NONE" ? $parentProj : $topProj) . "/download.php";
 	#print "[$dlScriptFile =? " . is_file($dlScriptFile) . "]<br>"; 
-	if (is_file($dlScriptFile))
+	if(is_file($dlScriptFile))
 	{
-		$downloadScript = "http://www.eclipse.org/" . ($topProj == "NONE" ? $parentProj : $topProj) . "/download.php?file=";
+		$downloadScript = "http://www.eclipse.org/" .($topProj == "NONE" ? $parentProj : $topProj) . "/download.php?file=";
 	}
 	else
 	{
@@ -748,21 +696,22 @@ function getDownloadScript()
 }
 
 /* thanks to http://www.php.net/manual/en/function.filesize.php#80995 */
-function dirsize($path){
+function dirsize($path)
+{
 	$dirsize = exec("du -s $path");
-	if ($dirsize)
+	if($dirsize)
 	{
 		$dirsize = explode(" ", $dirsize);
-		return ($dirsize[0] - 0) * 1024;
+		return($dirsize[0] - 0) * 1024;
 	}
-	if (!is_dir($path))
+	if(!is_dir($path))
 	{
 		return filesize($path);
 	}
 	$size = 0;
-	foreach (scandir($path) as $file)
+	foreach(scandir($path) as $file)
 	{
-		if ($file != '.' && $file != '..')
+		if($file != '.' && $file != '..')
 		{
 			$size += dirsize($path . '/' . $file);
 		}
@@ -770,18 +719,21 @@ function dirsize($path){
 	return $size;
 }
 
-function pretty_size($bytes)
+/* being lazy */
+if(!function_exists("pretty_size"))
 {
-	$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
-	$suf = 0;
-
-	while ($bytes >= 1000)
+	function pretty_size($bytes)
 	{
-		$bytes /= 1024;
-		$suf++;
+		$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
+		$suf = 0;
+
+		while($bytes >= 1000)
+		{
+			$bytes /= 1024;
+			$suf++;
+		}
+
+		return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
 	}
-
-	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
 }
-
 ?>
