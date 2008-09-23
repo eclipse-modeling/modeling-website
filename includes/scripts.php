@@ -1,5 +1,5 @@
 <?php
-// $Id: scripts.php,v 1.73 2008/09/16 22:50:06 nickb Exp $
+// $Id: scripts.php,v 1.74 2008/09/23 20:42:57 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -745,6 +745,43 @@ function getDownloadScript()
 		$downloadScript = "http://www.eclipse.org/downloads/download.php?file=";
 	}
 	return $downloadScript;
+}
+
+/* thanks to http://www.php.net/manual/en/function.filesize.php#80995 */
+function dirsize($path){
+	$dirsize = exec("du -s $path");
+	if ($dirsize)
+	{
+		$dirsize = explode(" ", $dirsize);
+		return ($dirsize[0] - 0) * 1024;
+	}
+	if (!is_dir($path))
+	{
+		return filesize($path);
+	}
+	$size = 0;
+	foreach (scandir($path) as $file)
+	{
+		if ($file != '.' && $file != '..')
+		{
+			$size += dirsize($path . '/' . $file);
+		}
+	}
+	return $size;
+}
+
+function pretty_size($bytes)
+{
+	$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
+	$suf = 0;
+
+	while ($bytes >= 1000)
+	{
+		$bytes /= 1024;
+		$suf++;
+	}
+
+	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
 }
 
 ?>

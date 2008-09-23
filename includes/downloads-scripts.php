@@ -530,20 +530,6 @@ function fileFound($PWD, $url, $label) //only used once
 	return $out . "<a href=\"$downloadScript$mid$url\">$label</a>";
 }
 
-function pretty_size($bytes)
-{
-	$sufs = array("B", "K", "M", "G", "T", "P"); //we shouldn't be larger than 999.9 petabytes any time soon, hopefully
-	$suf = 0;
-
-	while ($bytes >= 1000)
-	{
-		$bytes /= 1024;
-		$suf++;
-	}
-
-	return sprintf("%3.1f%s", $bytes, $sufs[$suf]);
-}
-
 function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive = false)
 {
 	global $downloadScript, $downloadPre, $PR, $proj, $projct;
@@ -821,33 +807,14 @@ function outputBuild($branch, $ID, $c)
 
 function doNoclean($dir)
 {
+	global $PR,$projct;
 	$sizeondisk = pretty_size(dirsize($dir));
-	return " <span class=\"noclean\"><acronym title=\"Failed builds do not purge temp files. Please do so manually: space is limited!\">Size on disk: $sizeondisk</acronym></span>" .
-		   " <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/>";		
+	$versionAndBuildID = explode("/",$dir); $versionAndBuildID = $versionAndBuildID[sizeof($versionAndBuildID) - 2] . "/" . $versionAndBuildID[sizeof($versionAndBuildID) - 1];
+	return " <a href=\"/$PR/$projct/build/clean.php?versionAndBuildID=$versionAndBuildID\"><span class=\"noclean\"><acronym title=\"Failed builds do not purge temp files automatically -- click here to do so!\">Size on disk: $sizeondisk</acronym></span>" .
+		   " <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/></a>";		
 }
 
-/* thanks to http://www.php.net/manual/en/function.filesize.php#80995 */
-function dirsize($path){
-	$dirsize = exec("du -s $path");
-	if ($dirsize)
-	{
-		$dirsize = explode(" ", $dirsize);
-		return ($dirsize[0] - 0) * 1024;
-	}
-	if (!is_dir($path))
-	{
-		return filesize($path);
-	}
-	$size = 0;
-	foreach (scandir($path) as $file)
-	{
-		if ($file != '.' && $file != '..')
-		{
-			$size += dirsize($path . '/' . $file);
-		}
-	}
-	return $size;
-}
+
 
 function loadBuildConfig($file, $deps)
 {

@@ -12,7 +12,8 @@ function sidebar()
 		<ul>
 		<?php if ($projct == "ocl") { ?>
 			<li>MDT: <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/">Build</a>,
-					 <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/promo.php">Promote</a></li>
+				 <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/clean.php">Clean</a>,
+				 <a href="/<?php print $PR; ?>/<?php print $projct; ?>/build/promo.php">Promote</a></li>
 			<li>QTV: <a href="/modeling/emf/query/build/">Build</a>,
 					 <a href="/modeling/emf/query/build/promo.php">Promote</a></li>
 		<?php } else { ?>
