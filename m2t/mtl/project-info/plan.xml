@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="Project Name">
+   <release projectid="modeling.m2t.mtl" version="0.7.0"/>
+   <introduction>
+     <html:div>
+     This document lays out the feature and API set for the 1.0.0 release of the M2T MTL project.  
+     The MTL component is an open source component under the Eclipse Modeling / Model-To-Text (M2T) project.
+     Its primary goal is to provide an implementation of the MOF Model-To-Text OMG standard. 
+     </html:div>
+   </introduction>
+   <release_deliverables>
+	<html:p>
+    The release deliverables have the same form as is found in most Eclipse projects, namely:
+	<html:ul>
+		<html:li>M2T MTL SDK (includes runtime and tooling components, with sources, examples, and documentation) (downloadable and update site).</html:li>
+		<html:li>M2T MTL runtime binary distribution (downloadable and update site).</html:li>
+		<html:li>M2T MTL examples (downloadable and update site)</html:li>
+		<html:li>M2T MTL tests (downloadable and update site)</html:li>
+	</html:ul>
+	</html:p>
+    </release_deliverables>
+   <release_milestones>
+      <preamble>
+         <html:div>
+         The implementation will be compliant with the core feature compliance level of the MOF Model-To-Text OMG language to start with (Galileo), then with the advanced feature compliance.
+         A first stable version (0.7) will be available in 2008 and MTL 1.0 will synchronize its release milestones with the Galileo release schedule.
+         </html:div>
+      </preamble>
+      <milestone date="9/17/2008" milestone="0.7RC1"><html:div>optional html</html:div></milestone>
+      <milestone date="10/6/2008" milestone="0.7RC2"><html:div>optional html</html:div></milestone>
+      <milestone date="10/13/2008" milestone="0.7"><html:div>optional html</html:div></milestone>
+      <milestone date="12/29/2008" milestone="1.0M4"><html:div>optional html</html:div></milestone>
+      <milestone date="2/6/2008" milestone="1.0M5"><html:div>optional html</html:div></milestone>
+      <milestone date="3/18/2008" milestone="1.0M6"><html:div>optional html</html:div></milestone>
+      <milestone date="5/5/2008" milestone="1.0M7"><html:div>optional html</html:div></milestone>
+      <milestone date="5/19/2008" milestone="1.0RC1"><html:div>optional html</html:div></milestone>
+      <milestone date="5/26/2008" milestone="1.0RC2"><html:div>optional html</html:div></milestone>
+      <milestone date="6/2/2008" milestone="1.0RC3"><html:div>optional html</html:div></milestone>
+      <milestone date="6/9/2008" milestone="1.0RC4"><html:div>optional html</html:div></milestone>
+      <milestone date="6/16/2008" milestone="1.0RC5"><html:div>optional html</html:div></milestone>
+      <milestone date="6/26/2009" milestone="1.0"/>
+      <postamble><html:div></html:div></postamble>
+   </release_milestones>
+   <target_environments>
+     <html:div>
+     The MTL project depends upon on the Platform and other projects, which are mostly "pure" Java.
+     MTL will be available on Eclipse Ganymede and Galileo. 
+     EMF is used by the MTL execution engine for accessing the models. 
+     The MDT-OCL component is reused to edit, parse, and interpret OCL as a sub-language of MTL. 
+     MTL will target the same Java version as EMF, which currently requires Java 5.
+     Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. 
+     MTL will be tested and validated against a subset of those listed for the platform. 
+     </html:div>
+     <internationalization>
+          <html:div>None of the MTL deliverables are internationalized</html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+       This is the first eclipse release of MTL.
+       The MTL 1.0 version will be compatible with the 0.7 version.
+       </html:div>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+     <preamble>
+         <html:div></html:div>
+     </preamble>
+     <theme name="Core feature compliance">
+        <description>
+        	<html:ul>
+        <html:li>Standalone Component.</html:li>
+        <html:li>Core feature compliance level of the MOF Model-To-Text language.</html:li>
+        <html:li>Template and Query support.</html:li>
+		<html:li>Text explicit mode : first MTL syntax support.</html:li>
+		<html:li>How to package a module?</html:li>
+		<html:li>MTL Runtime library.</html:li>
+			</html:ul>
+        </description>
+     </theme>
+     <theme name="Eclipse IDE components">
+        <description>
+        	<html:ul>
+        <html:li>Eclipse Builder with error detection and error marking.</html:li>
+        <html:li>Template editor with code completion and syntax highlighting.</html:li>
+        <html:li>Export a generator as a plugin wizard.</html:li>
+        <html:li>Debugger.</html:li>
+        <html:li>Documentation.</html:li>
+        <html:li>Traceability information : MTL Reflective editor to show the synchronization between the code and the model.</html:li>
+        	</html:ul>
+        </description>
+     </theme>
+	 <theme name="Integration with other Eclipse Tools">
+	    <description>
+	    	<html:ul>
+	    <html:li>Workflow facilities for MTL.</html:li>
+	    <html:li>Compatibility with QVTo.</html:li>
+	    	</html:ul>
+	    </description>
+     </theme>
+     <theme name="Advanced feature compliance">
+        <description>
+        	<html:ul>
+        <html:li>Advanced feature compliance level of the MOF Model-To-Text language.</html:li>
+        <html:li>Macro support.</html:li>
+        <html:li>Code explicit mode : second MTL syntax support.</html:li>
+        	</html:ul>
+        </description>
+     </theme>
+     <theme name="Examples">
+        <description>Examples for end-users : Python, Java</description>
+     </theme>
+   </themes_and_priorities>
+ </plan>
