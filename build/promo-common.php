@@ -178,7 +178,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>
 				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Contribute to
 				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
-					<?php displayOptions(array("ganymede", "europa"), false, 0); ?>
+					<?php displayOptions(array("galileo", "ganymede"), false, 1); ?>
 				</select></small> update site?</p>
 				</td>
 				<td width="300"><small><a id="divToggle_coordinated" name="divToggle_coordinated" href="javascript:toggleDetails('coordinated')">[+]</a></small>
