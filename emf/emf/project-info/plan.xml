@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+<plan plan-format="1.0"
+      xmlns="http://www.eclipse.org/project/plan"
+      xmlns:html="http://www.w3.org/1999/xhtml"
       name="Project Name">
-   <release projectid="modeling.emf.emf" version="2.5.0"/>
-   <introduction>
-     <html:div>
+	<release projectid="modeling.emf.emf" version="2.5.0" />
+	<introduction>
+		<html:div>
 This document lays out the feature and API set for the
 2.5.0 release of the core Eclipse Modeling Framework Core (EMF Core) project.
 This project plan inherits from the Modeling Project Plan,
 which should be referenced when consulting this individual project plan.
      </html:div>
-   </introduction>
-   <release_deliverables>
-     <html:div>
+	</introduction>
+	<release_deliverables>
+		<html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
        <ul>
-         <li>
+				<li>
 EMF Core source code release, 
 available as versions tagged with "R2_5" in the project's CVS repository.
          </li>
-         <li>
+				<li>
 EMF Core SDK,
 which includes runtime, sources, examples, and documentation,
 and is available as a download or on the update site.
          </li>
-         <li>
+				<li>
 EMF Core runtime binary distribution,
 available as a download or on the update site.
          </li>
-         <li>
+				<li>
 EMF Core tests
 available as a download.
          </li>
-       </ul>
-     </html:div>
-   </release_deliverables>
-   <release_milestones>
-      <preamble>
-         <html:div>
+			</ul>
+		</html:div>
+	</release_deliverables>
+	<release_milestones>
+		<preamble>
+			<html:div>
 Release milestones occur at roughly 6 week intervals 
 and follow the Platform release milestone by the Galileo-established +1 delta interval,
 though all effort will be made to reduce this to +1 business day.
@@ -50,47 +52,62 @@ regardless of the size of the established +1 delta interval.
 It is anticipated that EMF Core will synchronize its milestones 
 with any changes to the Galileo milestone schedule.
          </html:div>
-      </preamble>
-<milestone date="08/13/2008" milestone="M1"></milestone>
-<milestone date="09/24/2008" milestone="M2"></milestone>
-<milestone date="11/05/2008" milestone="M3"></milestone>
-<milestone date="12/17/2008" milestone="M4"></milestone>
-<milestone date="02/03/2009" milestone="M5"></milestone>
-<milestone date="03/16/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
-<milestone date="05/04/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="05/18/2009" milestone="RC1"></milestone>
-<milestone date="05/25/2009" milestone="RC2"></milestone>
-<milestone date="06/01/2009" milestone="RC3"></milestone>
-<milestone date="06/08/2009" milestone="RC4"></milestone>
-<milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.5.0"></milestone>
-      <postamble>
-        <html:div>
+		</preamble>
+		<milestone date="08/13/2008" milestone="M1">
+		</milestone>
+		<milestone date="09/24/2008" milestone="M2">
+		</milestone>
+		<milestone date="11/05/2008" milestone="M3">
+		</milestone>
+		<milestone date="12/17/2008" milestone="M4">
+		</milestone>
+		<milestone date="02/03/2009" milestone="M5">
+		</milestone>
+		<milestone date="03/16/2009" milestone="M6">
+			<html:div>API freeze</html:div>
+		</milestone>
+		<milestone date="05/04/2009" milestone="M7">
+			<html:div>Feature Freeze</html:div>
+		</milestone>
+		<milestone date="05/18/2009" milestone="RC1">
+		</milestone>
+		<milestone date="05/25/2009" milestone="RC2">
+		</milestone>
+		<milestone date="06/01/2009" milestone="RC3">
+		</milestone>
+		<milestone date="06/08/2009" milestone="RC4">
+		</milestone>
+		<milestone date="06/15/2009" milestone="RC5">
+		</milestone>
+		<milestone date="06/28/2009" milestone="2.5.0">
+		</milestone>
+		<postamble>
+			<html:div>
 EMF Core will produce maintenance releases to align with the Ganymede Service Releases
 which includes the Eclipse Platform's 3.4.1 and 3.4.2 releases.
 EMF Core may produce additional interim maintenance releases.  
 Maintenance releases will only be published if they contain new fixes.
           <ul>
-            <li>
+					<li>
 Monday, August 25, 2008 - EMF Core 2.4.1 maintenance release
             </li>
-            <li>
+					<li>
 Friday, September 26, 2008 - EMF Core 2.4.1 maintenance release for Ganymede Service Release 1.
             </li>
-            <li>
+					<li>
 Friday, February 27, 2009 - EMF Core 2.4.2 maintenance release for Ganymede Service Release 2.
             </li>
-            <li>
+					<li>
 Version numbers are subject to change should there be be any additional maintenance releases.
 A list of the issues addressed for the 2.4.x maintenance stream 
 are available in the <a href="http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=2.4.x">2.4.x release notes</a>.
             </li>
-          </ul> 
-        </html:div>
-      </postamble>
-    </release_milestones>
-    <target_environments>
-      <html:div>
+				</ul>
+			</html:div>
+		</postamble>
+	</release_milestones>
+	<target_environments>
+		<html:div>
 In order to remain current, 
 each Eclipse release targets reasonably current versions of the underlying operating environments. 
 The EMF Core project depends upon on the Platform, 
@@ -106,8 +123,8 @@ EMF Core will be tested and validated against a subset of those listed for the p
 Given that there is no operating system dependent code in EMF Core,
 it's expected that EMF Core will work anywhere the Eclipse Platform does.
      </html:div>
-     <internationalization>
-          <html:div>
+		<internationalization>
+			<html:div>
 The Eclipse Platform is designed as the basis for internationalized products. 
 The user interface elements provided by the Eclipse SDK components, 
 including dialogs and error messages,
@@ -118,19 +135,19 @@ provide English strings for them in its default bundles,
 and localize a subset of the locales offered by the Platform. 
 The download page will provide the details as the become available.
           </html:div>
-     </internationalization>
-   </target_environments>
-   <compatibility_with_previous_releases>
-       <html:div>
+		</internationalization>
+	</target_environments>
+	<compatibility_with_previous_releases>
+		<html:div>
 Compatibility of Release 2.4: 
 The EMF Core project will be developed in parallel, 
 and released simultaneously, 
 with the following project. 
          <ul>
-           <li>
+				<li>
 Eclipse Platform SDK version 3.5
            </li>
-        </ul>
+			</ul>
 Each milestone version of the EMF Core project 
 will be compatible with the corresponding milestone for this project 
 and will be delivered within the appropriate time offset.
@@ -139,20 +156,20 @@ an effort will be made to provide a build within one business day of the platfor
 The ultimate EMF Core release will be compatible with the released version of its dependencies
 and will publish binary and source compatibilities with migration guides on subsequent releases.
        </html:div>
-   </compatibility_with_previous_releases>
-   <themes_and_priorities>
-     <preamble>
-         <html:div>
+	</compatibility_with_previous_releases>
+	<themes_and_priorities>
+		<preamble>
+			<html:div>
 A list of project goals and agreed upon implementation time frames is found in this document.
 For the milestones listed in this document, 
 a set of overall themes is used to indicate what major set of functionalities is expected to be the focus of each.
 These themes are presented below, 
 while the goals of the associated Bugzilla entries are available for more detailed information.
          </html:div>
-     </preamble>
-        <theme name="Lighter, Faster and Better">
-            <description>
-                <html:div>
+		</preamble>
+		<theme name="Lighter, Faster and Better :: Open Bugs">
+			<description>
+				<html:div>
 The EMF Core project has a proven track record of quality, reliability, and extensibility
 but all these aspects can be continuously improved.
 Existing and new clients often desire more functionality from the framework
@@ -169,29 +186,51 @@ development commitments and schedules are subject to arbitrary change, slippage,
 Be sure to establish direct communication to ensure that any hard commitments 
 are seen as that by the development team itself!
                 </html:div>
-            </description>
-            <committed
-                bugzilla="TBD">
-            </committed>
-            <proposed
-                bugzilla="TBD">
-            </proposed>
-            <deferred
-                bugzilla="TBD">
-            </deferred>
-        </theme>
-   </themes_and_priorities>
-   <appendix name="Legal Notices">
-        <html:div>
-          <ul>
-            <li>
+			</description>
+			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;bug_status=ASSIGNED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">
+			</committed>
+			<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=---&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=&amp;query_based_on=">
+			</proposed>
+			<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=Future&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+			</deferred>
+		</theme>
+		<theme name="Lighter, Faster and Better :: Resolved Bugs">
+			<description>
+				<html:div>
+The EMF Core project has a proven track record of quality, reliability, and extensibility
+but all these aspects can be continuously improved.
+Existing and new clients often desire more functionality from the framework
+while long established clients generally desire mostly improvements in performance.
+Often these two are at odds since additional extensibility often has a performance cost
+and any changes, even performance boosting ones, potentially impact reliability.
+Every effort will be made to introduce new capabilities 
+so that they have negligible impact on established clients
+based on the guiding principle: 
+if you don't use it, 
+you don't pay for it.
+Because service and support has and always will take priority over new development work,
+development commitments and schedules are subject to arbitrary change, slippage, or even deferral.
+Be sure to establish direct communication to ensure that any hard commitments 
+are seen as that by the development team itself!
+                </html:div>
+			</description>
+			<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;bug_status=UNCONFIRMED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=bugs.bug_status,bugs.target_milestone,bugs.bug_id&amp;query_format=advanced&amp;field0-0-0=target_milestone&amp;type0-0-0=substring&amp;value0-0-0=2.5">
+			</committed>
+			<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=---&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+			</proposed>
+		</theme>
+	</themes_and_priorities>
+	<appendix name="Legal Notices">
+		<html:div>
+			<ul>
+				<li>
 Java is a trademark or a registered trademark of Sun Microsystems, Inc.
             </li>
-            <li>
+				<li>
 All other products or company names are mentioned for identification purposes only,
 and may be trademarks or service marks of their respective owners.
             </li>
-          </ul>
-        </html:div>
-   </appendix>
+			</ul>
+		</html:div>
+	</appendix>
 </plan>
