@@ -18,7 +18,7 @@ $dls = array(
 		)
 	),*/
 	"/xtext" => array(
-		"xText" => array(
+		"Xtext" => array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
