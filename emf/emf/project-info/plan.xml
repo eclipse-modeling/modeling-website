@@ -14,25 +14,25 @@ which should be referenced when consulting this individual project plan.
    <release_deliverables>
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
-       <html:ul>
-         <html:li>
+       <ul>
+         <li>
 EMF Core source code release, 
 available as versions tagged with "R2_5" in the project's CVS repository.
-         </html:li>
-         <html:li>
+         </li>
+         <li>
 EMF Core SDK,
 which includes runtime, sources, examples, and documentation,
 and is available as a download or on the update site.
-         </html:li>
-         <html:li>
+         </li>
+         <li>
 EMF Core runtime binary distribution,
 available as a download or on the update site.
-         </html:li>
-         <html:li>
+         </li>
+         <li>
 EMF Core tests
 available as a download.
-         </html:li>
-       </html:ul>
+         </li>
+       </ul>
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -40,13 +40,10 @@ available as a download.
          <html:div>
 Release milestones occur at roughly 6 week intervals 
 and follow the Platform release milestone by the Galileo-established +1 delta interval,
-though all effort will be made to reduce this to +1 business day.
+though all effort will be made to reduce this to +1 business day
+regardless of the size of the established +1 delta interval..
 The final EMF Core 2.5 release will available simultaneously 
 with the 3.5 release of the Platform and all the other Galileo projects.
-Because EMF Core is a dependency of so many other projects, 
-we will attempt to deliver its release milestones 
-within one business day of the Eclipse Platform,
-regardless of the size of the established +1 delta interval.
 It is anticipated that EMF Core will synchronize its milestones 
 with any changes to the Galileo milestone schedule.
          </html:div>
@@ -134,8 +131,6 @@ Eclipse Platform SDK version 3.5
 Each milestone version of the EMF Core project 
 will be compatible with the corresponding milestone for this project 
 and will be delivered within the appropriate time offset.
-Because EMF Core is a dependency of so many other projects,
-an effort will be made to provide a build within one business day of the platform.
 The ultimate EMF Core release will be compatible with the released version of its dependencies
 and will publish binary and source compatibilities with migration guides on subsequent releases.
        </html:div>
