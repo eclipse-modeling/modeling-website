@@ -14,25 +14,25 @@ which should be referenced when consulting this individual project plan.
    <release_deliverables>
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
-       <ul>
-         <li>
+       <html:ul>
+         <html:li>
 EMF Core source code release, 
 available as versions tagged with "R2_5" in the project's CVS repository.
-         </li>
-         <li>
+         </html:li>
+         <html:li>
 EMF Core SDK,
 which includes runtime, sources, examples, and documentation,
 and is available as a download or on the update site.
-         </li>
-         <li>
+         </html:li>
+         <html:li>
 EMF Core runtime binary distribution,
 available as a download or on the update site.
-         </li>
-         <li>
+         </html:li>
+         <html:li>
 EMF Core tests
 available as a download.
-         </li>
-       </ul>
+         </html:li>
+       </html:ul>
      </html:div>
    </release_deliverables>
    <release_milestones>
