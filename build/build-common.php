@@ -849,7 +849,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 			if ($urlFixed) {
 				$urlFixed = preg_replace("#.+://((fullmoon|fullmoon.+|emf.torolab.ibm.com|emft.eclipse.org|build.eclipse.org)[^/]+)/#","http://download.eclipse.org/",$urlFixed);
 				$urlFixed = preg_replace("#.+&url=([^&=]+).*#","$1",$urlFixed);
-				$urlFixed = preg_replace("#http://www.eclipse.org/downloads/download.php\?(dropFile|file)=/#","http://download.eclipse.org/",$urlFixed);
+				$urlFixed = preg_replace("#http://www.eclipse.org/([^\/]+)/download.php\?(dropFile|file)=/#","http://download.eclipse.org/",$urlFixed);
 				$urlFixed = preg_replace("#" . getDownloadScript() . "/#","http://download.eclipse.org/",$urlFixed);
 				$urlFixed = preg_replace("#download.php\?(dropFile|file)=#","",$urlFixed);
 				$chosen[] = $urlFixed;
