@@ -116,11 +116,11 @@ dependencies, in particular advances in the EMF, MDT UML2, MDT XSD, and DTP Mode
                 </html:div>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Release+Currency]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B" />
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Release+Currency]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B" />
 			<deferred
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Release+Currency]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=---&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
 		</theme>
 		<theme name="Compliance">
 			<description>
@@ -131,18 +131,18 @@ and finalized specifications, as they become available.
                 </html:div>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Compliance]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Compliance&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B" />
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Compliance]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Compliance&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B" />
 			<deferred
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=casesubstring&amp;short_desc=[Compliance]&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=---&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=galileo&amp;keywords_type=allwords&amp;keywords=plan" />
+				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;status_whiteboard_type=casesubstring&amp;status_whiteboard=Compliance&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
 		</theme>
 	</themes_and_priorities>
 	<appendix name="Legal Notices">
 		<html:div>
 <ul>
 <li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</li>
-<li>BPMN and OMG are trademarks or registered trademark of the Object Management Group™, Inc.</li>
+<li>OMG is a trademark of the Object Management Group™, Inc.</li>
 <li>All other products or company names are mentioned for identification purposes only, and
     may be trademarks or service marks of their respective owners.</li>
 </ul>
