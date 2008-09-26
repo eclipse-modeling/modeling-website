@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
-   <release projectid="modeling.amalgam" version="0.8.0"/>
+   <release projectid="modeling.amalgam" version="1.0.0"/>
    <introduction>
-     <html:p>This document lays out the feature and API set for the first release of the Modeling Amalgamation Project, version 0.8.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
+     <html:p>This document lays out the feature and API set for the first release of the Modeling Amalgamation Project, version 1.0.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
    </introduction>
    <release_deliverables>
      <html:p>Amalgam is different than most Eclipse projects in that its deliverables are EPP and product-based builds of several Modeling projects.  While some UI and integration code is provided, it is not made available in the traditional runtime, SDK, doc, etc. individual downloads.</html:p>
@@ -24,7 +24,7 @@
       <milestone date="06/04/2009" milestone="RC3"></milestone>
       <milestone date="06/11/2009" milestone="RC4"></milestone>
       <milestone date="06/18/2009" milestone="RC5"></milestone>
-      <milestone date="06/28/2009" milestone="0.8.0"></milestone>
+      <milestone date="06/28/2009" milestone="1.0.0"></milestone>
       <postamble></postamble>
    </release_milestones>
    <target_environments>
