@@ -21,7 +21,9 @@ ob_start();
 		<div class="homeitem">
 			<h3>Quick Links</h3>
 				<ul class="midlist">
-					<li>Amalgam <a href="http://wiki.eclipse.org/ModelingAmalgam">Wiki</a></li>
+					<li>Amalgam <a href="http://wiki.eclipse.org/ModelingAmalgam">Wiki</a> is the main source of information about the project.</li>
+					<li><a href="http://www.eclipse.org/modeling/amalgam/downloads/">Downloads</a> page.</li>
+					<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam">Project Plan</a> for the current release.</li>
 					<li><a href="http://www.eclipse.org/proposals/amalgamation/">Project proposal</a></li>
 		</div>
 		<div class="homeitem">
