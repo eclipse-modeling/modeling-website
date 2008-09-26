@@ -5,30 +5,30 @@
    <release projectid="modeling.emf.query" version="1.3.0"/>
    <introduction>
      <html:div>
-<p>
+<html:p>
 This document lays out the feature and API set for the
 fourth release of the EMF Model Query (EMF MQ)
 Project, version 1.3.0. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
-</p><p>
+</html:p><html:p>
 The intent for this release is to drive development by community contributions.
 No new features are planned by the project committers, but patches from the
 community will be processed as efficiently as possible.  There is no backlog of
 Bugzilla items.  If no new content is committed by the API Freeze date, then
 a termination review will be requested for this project.
-</p>
+</html:p>
      </html:div>
    </introduction>
    <release_deliverables>
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
-<ul>
-<li>EMF MQ source code release, available as versions tagged "R1_3" in the project's CVS repository.</li>
-<li>EMF MQ SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>
-<li>EMF MQ runtime binary distribution (downloadable and update site).</li>
-<li>EMF MQ tests (downloadable)</li>
-</ul>
+<html:ul>
+<html:li>EMF MQ source code release, available as versions tagged "R1_3" in the project's CVS repository.</html:li>
+<html:li>EMF MQ SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+<html:li>EMF MQ runtime binary distribution (downloadable and update site).</html:li>
+<html:li>EMF MQ tests (downloadable)</html:li>
+</html:ul>
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -60,13 +60,13 @@ releases, that includes the Eclipse Platform 3.4.1 and 3.4.2 releases.
 EMF MQ may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.  Maintenance releases will only be published
 if they have any new fixes to offer.
-<ul>
-  <li>Friday, August 15, 2008 - EMF MQ 1.2.1 maintenance release (if necessary)</li>
-  <li>Friday, September 26, 2008 - EMF MQ 1.2.2 maintenance release (Ganymede Service Release 1) (if necessary)</li>
-  <li>Friday, February 27, 2009 - EMF MQ 1.2.3 maintenance release (Ganymede Service Release 2) (if necessary)</li>
-  <li>A list of issues indicated for the 1.2.x maintenance stream can be found in
-      bugzilla, or by using links on maintenance stream build pages.</li>
-</ul> 
+<html:ul>
+  <html:li>Friday, August 15, 2008 - EMF MQ 1.2.1 maintenance release (if necessary)</html:li>
+  <html:li>Friday, September 26, 2008 - EMF MQ 1.2.2 maintenance release (Ganymede Service Release 1) (if necessary)</html:li>
+  <html:li>Friday, February 27, 2009 - EMF MQ 1.2.3 maintenance release (Ganymede Service Release 2) (if necessary)</html:li>
+  <html:li>A list of issues indicated for the 1.2.x maintenance stream can be found in
+      bugzilla, or by using links on maintenance stream build pages.</html:li>
+</html:ul> 
       </html:div></postamble>
    </release_milestones>
    <target_environments>
@@ -74,7 +74,7 @@ if they have any new fixes to offer.
 In order to remain current, each Eclipse release targets reasonably
 current versions of the underlying operating environments. The EMF Model Query
 (EMF MQ) project depends upon on the
-Platform and other projects, which are mostly "pure" Java™. The 3.5
+Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. The 3.5
 release of the Eclipse Platform Project is written and compiled
 against version 1.4 of the Java Platform APIs, and targeted to run on
 version 1.4 of the Java Runtime Environment, Standard Edition. EMF MQ
@@ -105,10 +105,10 @@ following projects. As stated above, each milestone release of the
 EMF MQ project will be compatible with the
 corresponding milestones for each of these projects, and delivered the
 appropriate offset.
-<ul>
-    <li>Eclipse Platform SDK version 3.5</li>
-    <li>Eclipse Modeling Framework (EMF) version 2.5</li>
-</ul>
+<html:ul>
+    <html:li>Eclipse Platform SDK version 3.5</html:li>
+    <html:li>Eclipse Modeling Framework (EMF) version 2.5</html:li>
+</html:ul>
 Therefore, the EMF MQ initial release will be
 compatible with these versions and will publish binary and source
 compatibilities with migration guides on subsequent releases.
@@ -148,11 +148,11 @@ availability.  No committer-driven content is planned.
    </themes_and_priorities>
    <appendix name="Legal Notices">
         <html:div>
-<ul>
-<li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</li>
-<li>All other products or company names are mentioned for identification purposes only, and
-    may be trademarks or service marks of their respective owners.</li>
-</ul>
+<html:ul>
+<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+<html:li>All other products or company names are mentioned for identification purposes only, and
+    may be trademarks or service marks of their respective owners.</html:li>
+</html:ul>
         </html:div>
    </appendix>
 </plan>
