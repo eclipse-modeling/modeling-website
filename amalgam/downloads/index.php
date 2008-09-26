@@ -29,41 +29,30 @@ ob_start();
 		</tr>
 	</table>
 	</div>
-	<hr class="clearer" />
 	
-	
-	<table border="0" width="100%">
-	<tr>
-	  <th>Package</th>
-	  <th>Windows</th>
-	  <th>Linux 32 GTK</th>
-	  <th>Mac OS X</th>
-	</tr>
-	<tr>
-	 <td>DSL Toolkit (I200809231534)</td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.win32.win32.x86.zip">package</a> (196.5 MB)
-	 </td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">package</a> (232.2 MB)
-	 </td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.macosx.carbon.x86.tar.gz">package</a> (194.7 MB)
-	 </td>
-	</tr>
-	<tr>
-	 <td>Modeler (I200809231520)</td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.win32.win32.x86.zip">package</a> (73.9 MB)
-	 </td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.linux.gtk.x86.tar">package</a> (87.6 MB)
-	 </td>
-	 <td style="background-color: rgb(204, 255, 204);">
-	   <a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.macosx.carbon.x86.tar.gz">package</a> (73.0 MB)
-	 </td>
-	</tr>
+	<div class="homeitem">
+	<table width="100%">
+		<tr>
+			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
+			<td>DSL Toolkit</td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">Linux 32bit</a></td>
+		</tr>
 	</table>
+	</div>
+	
+	<div class="homeitem">
+	<table width="100%">
+		<tr>
+			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
+			<td>Modeler</td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
+			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.linux.gtk.x86.tar">Linux 32bit</a></td>
+		</tr>
+	</table>
+	</div>
 </div>
 
 <div id="rightcolumn">
