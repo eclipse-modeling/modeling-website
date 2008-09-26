@@ -17,7 +17,7 @@ ob_start();
 		</tr>
 	</table><hr/>
 	
-	<div class="homeitem">
+	<div class="homeitem3col">
 	<table width="100%">
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
@@ -33,6 +33,7 @@ ob_start();
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">Linux 32bit</a></td>
+			<td/>
 		</tr>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
@@ -40,6 +41,7 @@ ob_start();
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200809231520/modeler-incubation.linux.gtk.x86.tar">Linux 32bit</a></td>
+			<td/>
 		</tr>
 	</table>
 	</div>
