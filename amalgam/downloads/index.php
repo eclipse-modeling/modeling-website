@@ -7,7 +7,31 @@ ob_start();
 
 <div id="midcolumn">
 	<h1>Amalgam Packages</h1>
-	<table border="1" width="100%">
+	<table width="100%">
+		<tr><td>&nbsp;</td></tr>
+		<tr>
+			<td align="top">
+			Amalgam packages come in two flavors: the Eclipse Packaging Project style in the case of the Eclipse Modeling Tools download, and custom 
+			Eclipse product bundles tailored to specific modeler audiences.  This page provides links to the latest milestone build for each.
+			</td>
+		</tr>
+	</table><hr/>
+	
+	<div class="homeitem">
+	<table width="100%">
+		<tr>
+			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
+			<td>Eclipse Modeling Tools package</td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-win32.zip">Windows</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Mac OS X</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
+		</tr>
+	</table>
+	</div>
+	
+	
+	<table border="0" width="100%">
 	<tr>
 	  <th>Package</th>
 	  <th>Windows</th>
