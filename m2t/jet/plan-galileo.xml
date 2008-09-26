@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" name="Eclipse Model-to-text (M2T) JET Component" 
+    xmlns="http://www.eclipse.org/project/plan" 
+    xmlns:html="http://www.w3.org/1999/xhtml" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.eclipse.org/project/plan http://www.eclipse.org/projects/plan.xsd ">
+   <release projectid="modeling.m2t.jet" version="1.0"/>
+   <introduction>
+     <html:div>
+     <html:p>
+     This plan covers the fourth release of the M2T JET component, to be labled 1.0.0. It describes the
+     features and API for the release. 
+     This project plan inherits from the Modeling Project Plan, which should be reference when consulting this plan.
+     This plan is a living document - it will be updated at every
+     iteration to reflect progress and changing priorities.
+     </html:p>
+     </html:div>
+   </introduction>
+   <release_deliverables>
+     <html:div>
+     <html:p>
+     The release deliverables will consist of the following components:
+     </html:p>
+     <html:ul>
+        <html:li>M2T JET Runtime</html:li>
+        <html:li>M2T JET SDK</html:li>
+        <html:li>M2T JET Editor</html:li>
+        <html:li>M2T JET Tests</html:li>
+        <html:li>M2T JET Examples</html:li>
+        <html:li>M2T JET All-in-One, combining all of the above</html:li>
+     </html:ul>
+     <html:p>Note: These components may be further refined as part of the <html:b>More Modular Implementation</html:b> theme.</html:p>
+     </html:div>
+   </release_deliverables>
+   <release_milestones>
+      <preamble>
+         <html:div>
+         <html:p>
+         The project will follow the Galileo +2 schedule as defined by the <html:a href="http://www.google.com/calendar/embed?src=e7qn66hb96fvgbnlrkfng6n0r0%40group.calendar.google.com">Google Calendar</html:a>.
+         Milestones occ at roughly 6 week intervals, and follow the Eclipse Platform milestones by approximately 2 weeks.
+         </html:p>
+         </html:div>
+      </preamble>
+      <milestone date="10/1/2008" milestone="M2"><html:div></html:div></milestone>
+      <milestone date="11/12/2008" milestone="M3"><html:div></html:div></milestone>
+      <milestone date="12/29/2008" milestone="M4"><html:div></html:div></milestone>
+      <milestone date="02/06/2009" milestone="M5"><html:div></html:div></milestone>
+      <milestone date="03/18/2009" milestone="M6"><html:div>API Freeze</html:div></milestone>
+      <milestone date="05/06/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+      <milestone date="05/19/2009" milestone="RC1"><html:div></html:div></milestone>
+      <milestone date="05/26/2009" milestone="RC2"><html:div></html:div></milestone>
+      <milestone date="06/02/2009" milestone="RC3"><html:div></html:div></milestone>
+      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
+      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
+      <milestone date="06/16/2009" milestone="RC5"><html:div></html:div></milestone>
+      <milestone date="6/26/2009" milestone="1.0"/>
+      <postamble>
+      <html:div>
+      <html:p>M2T JET will also produces maintenance releases to align with the Ganymede Service Release (SR)
+      schedule. Additional releases may be scheduled if there is client demand. The scheduled maintenance
+      releases are:</html:p>
+      <html:ul>
+      <html:li>Friday, September 26, 2008 - M2T JET 0.9.1 (Ganymede SR1)</html:li>
+      <html:li>Friday, February 27, 2008 - M2T JET 0.9.2 (Ganymede SR2)</html:li>
+      </html:ul>
+      <html:p>The 
+      <html:a href="http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=jet">M2T JET release notes page</html:a> 
+      shows the issues resolved in each release.</html:p>
+      </html:div>
+      </postamble>
+   </release_milestones>
+   <target_environments>
+     <html:div>
+     <html:p>
+        In order to remain current, each Eclipse release targets reasonably
+        current versions of the underlying operating environments. The M2T JET
+        project depends upon on the Eclipse Platform and other projects,
+        which are mostly "pure" Java<html:sup>TM</html:sup>. The 3.5
+        release of the Eclipse Platform Project is written and compiled
+        against version 1.4 of the Java Platform APIs, and targeted to run on
+        version 1.4 of the Java Runtime Environment, Standard Edition. M2T JET
+        will target the same Java version as the Eclipse Platform Project. 
+        Eclipse Platform SDK 3.5 will be tested and validated on a
+        number of reference platforms. M2T JET will be tested and validated
+        against a subset of those listed for the platform.
+     </html:p>
+     </html:div>
+     <internationalization>
+          <html:div>
+          <html:p>
+The Eclipse Platform is designed as the basis
+for internationalized products. The user interface elements provided
+by the Eclipse SDK components, including dialogs and error messages,
+are externalized. The English strings are provided as the default
+resource bundles. As a result, the M2T JET
+project will provide English strings in its default bundles and be
+localized to a subset of those locales offered by the Platform. This
+plan will be updated to indicate which locales will be provided and
+the time frame for availability.
+          </html:p>
+          </html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+       <html:p>
+Compatibility of Release 1.0.0: The M2T JET project
+will be developed in parallel, and released simultaneously, with the
+following projects: 
+</html:p>
+<html:ul>
+    <html:li>Eclipse Platform SDK version 3.5</html:li>
+    <html:li>Eclipse Modeling Framework (EMF) version 2.5</html:li>
+</html:ul>
+<html:p>
+As stated above, each milestone release of the
+M2T JET project will be compatible with the
+corresponding milestones from these projects.
+       </html:p>
+       </html:div>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+     <preamble>
+         <html:div>
+         <html:p>
+The new functionality of this release is organized into themes.
+A brief description of each theme is provided here. 
+Bugzilla entries are provided for those wanting more detailed information.
+         </html:p>
+         </html:div>
+     </preamble>
+     <theme name="More Modular Implementation">
+        <description><html:div>
+        <html:p>
+        The JET implentation is currently monolothic, requiring significant portions of the Eclipse platform
+        (Workspace, Build, Debug and JDT) as well as EMF. 
+        A more modular implementation will allow JET templates and transformations can be executed 
+        other environments environments such as OSGi applications and RCP applications.
+        As a stretch goal, support execution in only a JRE.
+        </html:p>
+        <html:p>
+        In addition, make the expression language used in a template plugable. JET currently uses XPath
+        to navigate all model types (and provides an extension framework to adapt other languages). However,
+        some model types are more naturally accessed by other languages. Examples: OCL for UML, EL for Java 
+        objects.
+        </html:p>
+        </html:div></description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Modular&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Modular&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=---">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Modular&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=Future">
+            </deferred>
+     </theme>
+     <theme name="More powerful and readable templates">
+        <description><html:div>
+        <html:p>
+        Templates are at their best when the markup does not obscure the general structure of the text 
+        being generated. 
+        This requires markup that is both minimalistic and powerful. 
+        The following features aim to move towards this goal:
+        </html:p>
+        </html:div></description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Power&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Power&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=---">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Power&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=Future">
+            </deferred>
+     </theme>
+     <theme name="More models">
+        <description><html:div>
+        <html:p>
+        Provide more in-the-box models useful for code generation in the Eclipse environment. 
+        Examples: properties file, MANIFEST.MF, Java ASTs, UML Stereotypes
+        </html:p>
+        </html:div></description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Models&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Models&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=---">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Galileo+More+Models&amp;classification=Modeling&amp;product=M2T&amp;component=Jet&amp;target_milestone=Future">
+            </deferred>
+     </theme>
+   </themes_and_priorities>
+   <appendix name="Project Graduation">
+     <html:div>
+     <html:p>
+     It is the intention of this project to 'graduate' with this release.
+     At a minimum, this will result in the use of a 1.0.0 or higher version number on all plug-ins and features, 
+     which may require clients to change dependency ranges expressed 
+     </html:p>
+     </html:div>
+   </appendix>  
+ </plan>
