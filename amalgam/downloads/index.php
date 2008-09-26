@@ -29,6 +29,7 @@ ob_start();
 		</tr>
 	</table>
 	</div>
+	<hr class="clearer" />
 	
 	
 	<table border="0" width="100%">
