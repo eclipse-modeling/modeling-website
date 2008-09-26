@@ -27,11 +27,6 @@ ob_start();
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
 		</tr>
-	</table>
-	</div>
-	
-	<div class="homeitem">
-	<table width="100%">
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td>DSL Toolkit</td>
@@ -39,11 +34,6 @@ ob_start();
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200809231534/dsltk-incubation.linux.gtk.x86.tar">Linux 32bit</a></td>
 		</tr>
-	</table>
-	</div>
-	
-	<div class="homeitem">
-	<table width="100%">
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td>Modeler</td>
@@ -53,6 +43,7 @@ ob_start();
 		</tr>
 	</table>
 	</div>
+
 </div>
 
 <div id="rightcolumn">
