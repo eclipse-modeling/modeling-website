@@ -5,29 +5,29 @@
    <release projectid="modeling.mdt.uml2" version="3.0.0"/>
    <introduction>
      <html:div>
-<p>
+<html:p>
 This document lays out the feature and API set for the
 next release of the Eclipse UML2 API (MDT UML2)
 Project, version 3.0.0. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
-</p><p>
-<i><b>Note</b> that, the next version of the UML2 API will be based on the latest version of the  UML(r) 2.2
- specification from the OMG(tm).  The changes to the specification involve API breaking changes to the UML2 API
-thereby requiring the major version to be increased to <b>3.0.0</b></i>
-</p>
+</html:p><html:p>
+<html:i><html:b>Note</html:b> that, the next version of the UML2 API will be based on the latest version of the  UML&#174; 2.2
+ specification from the OMG<html:sup>TM</html:sup>.  The changes to the specification involve API breaking changes to the UML2 API
+thereby requiring the major version to be increased to <html:b>3.0.0</html:b></html:i>
+</html:p>
      </html:div>
    </introduction>
    <release_deliverables>
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
-<ul>
-<li>MDT UML2 source code release, available as versions tagged "R3_0" in the project's CVS repository.</li>
-<li>MDT UML2 SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</li>
-<li>MDT UML2 runtime binary distribution (downloadable and update site).</li>
-<li>MDT UML2 stand-alone binary distribution (downloadable).</li>
-<li>MDT UML2 tests (downloadable)</li>
-</ul>
+<html:ul>
+<html:li>MDT UML2 source code release, available as versions tagged "R3_0" in the project's CVS repository.</html:li>
+<html:li>MDT UML2 SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+<html:li>MDT UML2 runtime binary distribution (downloadable and update site).</html:li>
+<html:li>MDT UML2 stand-alone binary distribution (downloadable).</html:li>
+<html:li>MDT UML2 tests (downloadable)</html:li>
+</html:ul>
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -60,12 +60,12 @@ MDT UML2 will produce maintenance releases to align with the Ganymede SR
 releases, that includes the Eclipse Platform 3.4.1 and 3.4.2 releases.
 MDT UML2 may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.
-<ul>
-  <li>Friday, September 26, 2008 - MDT UML2 2.2.1 maintenance release (Ganymede Service Release 1)</li>
-  <li>Friday, February 27, 2009 - MDT UML2 2.2.2 maintenance release (Ganymede Service Release 2)</li>
-  <li>A list of issues indicated for the 2.2.x maintenance stream can be found in
-      bugzilla, or by using links on maintenance stream build pages.</li>
-</ul> 
+<html:ul>
+  <html:li>Friday, September 26, 2008 - MDT UML2 2.2.1 maintenance release (Ganymede Service Release 1)</html:li>
+  <html:li>Friday, February 27, 2009 - MDT UML2 2.2.2 maintenance release (Ganymede Service Release 2)</html:li>
+  <html:li>A list of issues indicated for the 2.2.x maintenance stream can be found in
+      bugzilla, or by using links on maintenance stream build pages.</html:li>
+</html:ul> 
       </html:div></postamble>
    </release_milestones>
    <target_environments>
@@ -132,14 +132,18 @@ The MDT UML2 project will maintain currency with its
 dependencies, in particular advances in the EMF project.
                 </html:div>
             </description>
-             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BRelease+Currency%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </committed>
-	    <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BRelease+Currency%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
         </theme>
-                
+        
+        
         <theme name="UML 2.2 Compliance">
             <description>
                 <html:div>
@@ -148,12 +152,17 @@ the MDT UML2 project will maintain currency with the revised 2.2
 specification.
                 </html:div>
             </description>
-            <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BCompliance%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;known_name=UML+2.2+Compliance&amp;query_based_on=UML+2.2+Compliance&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+
+           <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </committed>
-	    <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BCompliance%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;known_name=UML+2.2+Compliance&amp;query_based_on=UML+2.2+Compliance&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
+           
         </theme>     
    
         <theme name="Community Support">
@@ -162,24 +171,29 @@ specification.
 The UML2 component is committed to supporting the community by addressing issues raised by the community.
                 </html:div>
             </description>
-         
-             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BCommunity+Support%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+                    
+	    <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Community+Support&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=%5BCommunity+Support%5D&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;priority=P1&amp;priority=P2&amp;priority=P3&amp;priority=P4&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Community+Support&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Community+Support&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
            
         </theme>     
-     </themes_and_priorities>
+  
+
+   </themes_and_priorities>
    <appendix name="Legal Notices">
         <html:div>
-<ul>
-<li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</li>
-<li>UML2 and OMG are trademarks or registered trademark of the Object Management Group(tm), Inc.</li>
-<li>All other products or company names are mentioned for identification purposes only, and
-    may be trademarks or service marks of their respective owners.</li>
-</ul>
+<html:ul>
+<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+<html:li>UML and OMG are trademarks or registered trademark of the Object Management Group<html:sup>TM</html:sup>, Inc.</html:li>
+<html:li>All other products or company names are mentioned for identification purposes only, and
+    may be trademarks or service marks of their respective owners.</html:li>
+</html:ul>
         </html:div>
    </appendix>
 </plan>
