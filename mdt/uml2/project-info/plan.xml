@@ -104,10 +104,10 @@ following projects. As stated above, each milestone release of the
 MDT UML2 project will be compatible with the
 corresponding milestones for each of these projects, and delivered the
 appropriate offset.
-<ul>
-    <li>Eclipse Platform SDK version 3.5</li>
-    <li>Eclipse Modeling Framework (EMF) version 2.5</li>
- </ul>
+<html:ul>
+    <html:li>Eclipse Platform SDK version 3.5</html:li>
+    <html:li>Eclipse Modeling Framework (EMF) version 2.5</html:li>
+ </html:ul>
 Therefore, the MDT UML2 initial release will be
 compatible with these versions and will publish binary and source
 compatibilities with migration guides on subsequent releases.
