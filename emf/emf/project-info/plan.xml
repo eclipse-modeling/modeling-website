@@ -166,10 +166,10 @@ are seen as that by the development team itself!
                 </div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=2.5&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=2.5&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
