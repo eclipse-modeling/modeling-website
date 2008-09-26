@@ -11,8 +11,9 @@ ob_start();
 		<tr><td>&nbsp;</td></tr>
 			<tr>
 				<td align="top">
-				The Amalgamation project provides improved packaging, integration, and usability of Modeling project components. See
-				the project <a href="http://www.eclipse.org/proposals/amalgamation/">proposal</a> for more detail until this website becomes fully operational.
+				The Amalgamation project provides improved packaging, integration, and usability of Modeling project components. In addition
+				to an Eclipse Modeling Tools package delivered from the Eclipse Packaging Project, the Amalgam project provides a DSL Toolkit and 
+				base Modeler package for Toolsmiths and Practitioners, respectively.
 				</td>
 			</tr>
 		</table><hr/>
@@ -20,14 +21,25 @@ ob_start();
 		<div class="homeitem">
 			<h3>Quick Links</h3>
 				<ul class="midlist">
+					<li>Amalgam <a href="http://wiki.eclipse.org/ModelingAmalgam">Wiki</a></li>
 					<li><a href="http://www.eclipse.org/proposals/amalgamation/">Project proposal</a></li>
 		</div>
 		<div class="homeitem">
 			<h3>Events</h3>
 			<ul class="midlist">
 				<li><a href="https://www.eclipsecon.org/summiteurope2008/">Eclipse Summit Europe</a> talk <a href="https://www.eclipsecon.org/submissions/ese2008/view_talk.php?id=25">Modeling Amalgam as a DSL Toolkit</a> accepted.</li>
-				<li><a href="http://www.eclipseworld.net/programday3pm.html#704">Developing and Using Domain-Specific Languages</> at <a href="http://www.eclipseworld.net/">Eclipse World 2008</a>.</li>
+				<li><a href="http://www.eclipseworld.net/programday3pm.html#704">Developing and Using Domain-Specific Languages</a> at <a href="http://www.eclipseworld.net/">Eclipse World 2008</a>.</li>
 				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=51">Eclipse Modeling Project as a DSL Toolkit</a> at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
+			</ul>
+		</div>
+		<div class="homeitem">
+			<h3>Packages</h3>
+			<ul class="midlist">
+				<li><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Eclipse Modeling Tools</a> package from the 
+				<a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> is maintained by Amalgam and contains most every Modeling project and component SDK.</li>
+				<li><a href="http://www.eclipse.org/modeling/amalgam/downloads/">DSL Toolkit</a> is a product definition that includes tooling required for a Toolsmith to produce MDSD applications.  Currently, it includes 
+				EMF, GMF, QVTO, Xpand, MWE, OCL, UML2 Tools, and Teneo components.</li>
+				<li><a href="http://www.eclipse.org/modeling/amalgam/downloads/">Modeler</a> is a product definition that includes the bare essentials for diagramming in UML and BPMN.</li>
 			</ul>
 		</div>
 		<br/>
