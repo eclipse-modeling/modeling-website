@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
-      name="EMF Core"
+      name="EMF SDO">
    <release projectid="modeling.emf.emf" version="2.5.0"/>
    <introduction>
      <div xmlns="http://www.w3.org/1999/xhtml">
 This document lays out the feature and API set for the
-2.5.0 release of the Eclipse Modeling Framework Core (EMF Core) project.
+2.5.0 release of the Eclipse Modeling Framework Service Data Object (EMF SDO) project.
 This project plan inherits from the Modeling Project Plan,
 which should be referenced when consulting this individual project plan.
      </div>
@@ -16,20 +16,20 @@ which should be referenced when consulting this individual project plan.
 The release deliverables have the same form as is found in most Eclipse projects, namely:
        <ul>
          <li>
-EMF Core source code release, 
+EMF SDO source code release, 
 available as versions tagged with "R2_5" in the project's CVS repository.
          </li>
          <li>
-EMF Core SDK,
-which includes runtime, sources, examples, and documentation,
+EMF SDO SDK,
+which includes runtime, sources, documentation,
 and is available as a download or on the update site.
          </li>
          <li>
-EMF Core runtime binary distribution,
+EMF SDO runtime binary distribution,
 available as a download or on the update site.
          </li>
          <li>
-EMF Core tests
+EMF SDO tests
 available as a download.
          </li>
        </ul>
@@ -42,9 +42,9 @@ Release milestones occur at roughly 6 week intervals
 and follow the Platform release milestone by the Galileo-established +1 delta interval,
 though all effort will be made to reduce this to +1 business day
 regardless of the size of the established +1 delta interval..
-The final EMF Core 2.5 release will available simultaneously 
+The final EMF SDO 2.5 release will available simultaneously 
 with the 3.5 release of the Platform and all the other Galileo projects.
-It is anticipated that EMF Core will synchronize its milestones 
+It is anticipated that EMF SDO will synchronize its milestones 
 with any changes to the Galileo milestone schedule.
          </div>
       </preamble>
@@ -63,24 +63,24 @@ with any changes to the Galileo milestone schedule.
 <milestone date="06/28/2009" milestone="2.5.0"></milestone>
       <postamble>
         <div xmlns="http://www.w3.org/1999/xhtml">
-EMF Core will produce maintenance releases to align with the Ganymede Service Releases
+EMF SDO will produce maintenance releases to align with the Ganymede Service Releases
 which includes the Eclipse Platform's 3.4.1 and 3.4.2 releases.
-EMF Core may produce additional interim maintenance releases.  
+EMF SDO may produce additional interim maintenance releases.  
 Maintenance releases will only be published if they contain new fixes.
           <ul>
             <li>
-Monday, August 25, 2008 - EMF Core 2.4.1 maintenance release
+Monday, August 25, 2008 - EMF SDO 2.4.1 maintenance release
             </li>
             <li>
-Friday, September 26, 2008 - EMF Core 2.4.1 maintenance release for Ganymede Service Release 1.
+Friday, September 26, 2008 - EMF SDO 2.4.1 maintenance release for Ganymede Service Release 1.
             </li>
             <li>
-Friday, February 27, 2009 - EMF Core 2.4.2 maintenance release for Ganymede Service Release 2.
+Friday, February 27, 2009 - EMF SDO 2.4.2 maintenance release for Ganymede Service Release 2.
             </li>
             <li>
 Version numbers are subject to change should there be be any additional maintenance releases.
 A list of the issues addressed for the 2.4.x maintenance stream 
-are available in the <a href="http://www.eclipse.org/modeling/emf/news/relnotes.php?project=emf&amp;version=2.4.x">2.4.x release notes</a>.
+are available in the <a href="http://www.eclipse.org/modeling/emf/news/relnotes.php?project=sdo&amp;version=2.4.x">2.4.x release notes</a>.
             </li>
           </ul> 
         </div>
@@ -90,18 +90,18 @@ are available in the <a href="http://www.eclipse.org/modeling/emf/news/relnotes.
       <div xmlns="http://www.w3.org/1999/xhtml">
 In order to remain current, 
 each Eclipse release targets reasonably current versions of the underlying operating environments. 
-The EMF Core project depends upon on the Platform, 
+The EMF SDO project depends upon on the Platform, 
 which is mostly "pure" Java™. 
 The 3.5 release of the Eclipse Platform Project 
 is written and compiled against version 1.4 of the Java Platform APIs, 
 and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. 
-EMF Core,
+EMF SDO,
 with its runtime support for generics,
 relies on Java 5. 
 Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. 
-EMF Core will be tested and validated against a subset of those listed for the platform.
-Given that there is no operating system dependent code in EMF Core,
-it's expected that EMF Core will work anywhere the Eclipse Platform does.
+EMF SDO will be tested and validated against a subset of those listed for the platform.
+Given that there is no operating system dependent code in EMF SDO,
+it's expected that EMF SDO will work anywhere the Eclipse Platform does.
      </div>
      <internationalization>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -110,7 +110,7 @@ The user interface elements provided by the Eclipse SDK components,
 including dialogs and error messages,
 are externalized. 
 The English strings are provided as the default resource bundles. 
-Similarly, the EMF Core project will externalize all its user interface elements,
+Similarly, the EMF SDO project will externalize all its user interface elements,
 provide English strings for them in its default bundles, 
 and localize a subset of the locales offered by the Platform. 
 The download page will provide the details as the become available.
@@ -120,18 +120,19 @@ The download page will provide the details as the become available.
    <compatibility_with_previous_releases>
        <div xmlns="http://www.w3.org/1999/xhtml">
 Compatibility of Release 2.4: 
-The EMF Core project will be developed in parallel, 
+The EMF SDO project will be developed in parallel, 
 and released simultaneously, 
-with the following project: 
+with the following projects:
          <ul>
            <li>
 Eclipse Platform SDK version 3.5
+Eclipse Modeling Framework Core SDK version 2.5
            </li>
         </ul>
-Each milestone version of the EMF Core project 
-will be compatible with the corresponding milestone for this project 
+Each milestone version of the EMF SDO project 
+will be compatible with the corresponding milestone for these projects
 and will be delivered within the appropriate time offset.
-The ultimate EMF Core release will be compatible with the released version of its dependencies
+The ultimate EMF SDO release will be compatible with the released version of its dependencies
 and will publish binary and source compatibilities with migration guides on subsequent releases.
        </div>
    </compatibility_with_previous_releases>
@@ -145,34 +146,27 @@ These themes are presented below,
 while the goals of the associated Bugzilla entries are available for more detailed information.
          </div>
      </preamble>
-        <theme name="Lighter, Faster and Better">
+        <theme name="Pull Back">
             <description>
                 <div xmlns="http://www.w3.org/1999/xhtml">
-The EMF Core project has a proven track record of quality, reliability, and extensibility
-but all these aspects can be continuously improved.
-Existing and new clients often desire more functionality from the framework
-while long established clients generally desire mostly improvements in performance.
-Often these two are at odds since additional extensibility often has a performance cost
-and any changes, even performance boosting ones, potentially impact reliability.
-Every effort will be made to introduce new capabilities 
-so that they have negligible impact on established clients
-based on the guiding principle: 
-if you don't use it, 
-you don't pay for it.
-Because service and support has and always will take priority over new development work,
-development commitments and schedules are subject to arbitrary change, slippage, or even deferral.
+The EMF SDO project has gained little traction.
+It may well make sense to phase out support for SDO.
+We'll discuss with the community to determine if there is any reason to provide builds for this release or in the future.
+At best we will make only minimal changes to stay current with the platform and EMF Core.
+Maintenance builds are still important to some clients.
+So please take note that development commitments and schedules are subject to arbitrary change, slippage, deferral, or even termination of the project.
 Be sure to establish direct communication to ensure that any hard commitments 
 are seen as that by the development team itself!
                 </div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=SDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=2.5&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=SDO&amp;target_milestone=2.5.0&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=SDO&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </deferred>
         </theme>
    </themes_and_priorities>
@@ -189,4 +183,4 @@ and may be trademarks or service marks of their respective owners.
           </ul>
         </div>
    </appendix>
-</plan>
+</plan> 
