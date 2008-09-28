@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="JCR Management">
+   <release projectid="modeling.emft.jcrm" version="0.8.0"/>
+   <introduction>
+     <html:div>JCRM is currently in the incubation phase and in the process to develop the community and the technology. Because of that it does not yet have release milestones.</html:div>
+   </introduction>
+   <themes_and_priorities>
+     <preamble>
+         <html:div>The prototypes for different areas of JCRM are available. One can try them out using the tutorial provided in the JCRM wiki (http://wiki.eclipse.org/JCR_Management#Try_it_out). The next step is to make it easier for users to understand JCRM and to get feedback. More concrete I will give a presentation at the Eclipse Summit Europe in November 2008, create a screencast and create a Survey Monkey survey.</html:div>
+     </preamble>
+     <theme name="Validating the project and aligning it to the Broader Community">
+        <description></description>
+        <committed bugzilla="TBD"></committed>
+        <proposed bugzilla="TBD"></proposed>
+        <deferred bugzilla="TBD"></deferred>
+     </theme>
+   </themes_and_priorities>
+   <appendix name="Legal Notices">
+		<html:div>
+			<html:ul>
+				<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+            <html:li>All other products or company names are mentioned for identification purposes only, and may be trademarks or service marks of their respective owners.</html:li>
+			</html:ul>
+		</html:div>
+	</appendix>
+ </plan>
