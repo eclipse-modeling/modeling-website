@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="Teneo">
+   <release projectid="modeling.emf.teneo" version="1.5"/>
+   <introduction>
+     <html:div>
+This document lays out the planned features for the next major release
+of the model-driven Object Relational Mapping Framework Teneo, version 1.5. This project plan inherits from the Modeling
+Project Plan, which should be referenced when consulting this
+individual project plan.
+     </html:div>
+   </introduction>
+   <release_deliverables>
+     <html:div>
+The release deliverables have the same form as is found in most Eclipse projects, namely:
+<html:ul>
+<html:li>Teneo SDK (includes Mapping Providers for different ORM Tools, Examples, Documentation and Source).</html:li>
+<html:li>Teneo Examples (contains the Teneo examples models and tutorials.</html:li>
+<html:li>Teneo Tests (contains the testcases).</html:li>
+</html:ul>
+     </html:div>
+   </release_deliverables>
+   <release_milestones>
+      <preamble>
+         <html:div>
+Release milestone occurring at roughly 6 week intervals and follow the
+Platform milestone releases by approximately 1 week; that is, until the
+final 3.5 release of the Platform, upon which Teneo and other projects
+will release simultaneously. Teneo will deliver its milestones within one week of
+the Eclipse Platform. It is anticipated that Teneo will synchronize its
+milestones with the Galileo milestone schedule.
+         </html:div>
+      </preamble>
+<milestone date="09/30/2008" milestone="M2"></milestone>
+<milestone date="11/05/2008" milestone="M3"></milestone>
+<milestone date="12/17/2008" milestone="M4"></milestone>
+<milestone date="02/03/2009" milestone="M5"></milestone>
+<milestone date="03/16/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
+<milestone date="05/04/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+<milestone date="05/18/2009" milestone="RC1"></milestone>
+<milestone date="05/25/2009" milestone="RC2"></milestone>
+<milestone date="06/01/2009" milestone="RC3"></milestone>
+<milestone date="06/08/2009" milestone="RC4"></milestone>
+<milestone date="06/15/2009" milestone="RC5"></milestone>
+<milestone date="06/28/2009" milestone="2.0"></milestone>
+      <postamble><html:div>
+Teneo will produce maintenance releases to align with the Ganymede SR
+releases, that includes the Eclipse Platform 3.4.2 release. Teneo
+will have weekly Maintenance releases to solve any issues reported in
+the previous week. Maintenance releases are only done if there are
+issues to solve.
+      </html:div></postamble>
+   </release_milestones>
+   <target_environments>
+     <html:div>
+In order to remain current, each Eclipse release targets reasonably
+current versions of the underlying operating environments. The Teneo 
+Project depends upon on the
+Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. Teneo
+will target the same Java version as EMF Core, which currently requires
+Java 5. Eclipse Platform SDK 3.5 will be tested and validated on a
+number of reference platforms. Teneo will be tested and validated
+against a subset of those listed for the platform.
+     </html:div>
+     <internationalization>
+          <html:div>
+Teneo is a runtime technology, most of the 
+components having no user interface. The remaining user interface 
+parts of Teneo are considered exemplary and thus no attention has been 
+paid to externalize them for internationalization.
+          </html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+Teneo will add support for new ORM tools in the next release. Teneo will be 
+backward compatible for the ORM tools supported in previous releases. Mapping 
+stability/backward compatibility (generated the same mapping in new releases) 
+is in this respect far more important than
+binary compatibility.
+       </html:div>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+     <preamble>
+         <html:div>
+A list of project requirements and agreed upon
+implementation time frames is found in this document. For the
+milestones listed in this document, a set of overall themes is used
+to indicate what major set of functionalities is to be concentrated
+on for each. These themes are presented below, while the requirements
+document and associated Bugzilla entries are left to those wanting
+more detailed information on each.
+         </html:div>
+     </preamble>
+        <theme name="Appealing to a Broader Community">
+            <description>
+                <html:div>
+The main theme for the upcoming release of Teneo is support for two new ORM 
+Tools: EclipseLink and DataNucleus. 
+                </html:div>
+            </description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
+        </theme>
+        <theme name="Lighter, Faster and Better">
+            <description>
+                <html:div>
+The Teneo project has a proven track record of quality, reliability, and extensibility
+but all these aspects can be continuously improved.
+Existing and new clients often desire more functionality from the framework
+while long established clients generally desire mostly improvements in performance.
+Often these two are at odds since additional extensibility often has a performance cost
+and any changes, even performance boosting ones, potentially impact reliability.
+Every effort will be made to introduce new capabilities 
+so that they have negligible impact on established clients
+based on the guiding principle: 
+if you don't use it, 
+you don't pay for it.
+Because service and support has and always will take priority over new development work,
+development commitments and schedules are subject to arbitrary change, slippage, or even deferral.
+Be sure to establish direct communication to ensure that any hard commitments 
+are seen as that by the development team itself!
+                </html:div>
+            </description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=Teneo&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
+        </theme>
+   </themes_and_priorities>
+   <appendix name="A: Legal Notices">
+        <html:div>
+<html:ul>
+<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+<html:li>All other products or company names are mentioned for identification purposes only, and
+    may be trademarks or service marks of their respective owners.</html:li>
+</html:ul>
+        </html:div>
+   </appendix>
+</plan>
