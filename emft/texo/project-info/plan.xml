@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="Texo">
+   <release projectid="modeling.emft.texo" version="1.0"/>
+   <introduction>
+     <html:div>
+This document lays out the planned features for the first release of the web
+application generation framework Texo. This project plan inherits from the Modeling
+Project Plan, which should be referenced when consulting this
+individual project plan.
+     </html:div>
+   </introduction>
+   <release_deliverables>
+     <html:div>
+The release deliverables have the same form as is found in most Eclipse projects, namely:
+<html:ul>
+<html:li>Texo SDK (Includes code generation templates, Examples, Documentation and Source).</html:li>
+<html:li>Texo Examples (contains the Texo examples models and tutorials.</html:li>
+<html:li>Texo Tests (contains the testcases).</html:li>
+</html:ul>
+     </html:div>
+   </release_deliverables>
+   <release_milestones>
+      <preamble>
+         <html:div>
+As Texo is in incubation and in its initial phases of development it will not be possible
+to release new versions with every milestone. Overall the goal is to deliver a first version 
+on M7. 
+         </html:div>
+      </preamble>
+<milestone date="09/30/2008" milestone="M2"></milestone>
+<milestone date="11/05/2008" milestone="M3"></milestone>
+<milestone date="12/17/2008" milestone="M4"></milestone>
+<milestone date="02/03/2009" milestone="M5"></milestone>
+<milestone date="03/16/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
+<milestone date="05/04/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+<milestone date="05/18/2009" milestone="RC1"></milestone>
+<milestone date="05/25/2009" milestone="RC2"></milestone>
+<milestone date="06/01/2009" milestone="RC3"></milestone>
+<milestone date="06/08/2009" milestone="RC4"></milestone>
+<milestone date="06/15/2009" milestone="RC5"></milestone>
+<milestone date="06/28/2009" milestone="2.0"></milestone>
+      <postamble><html:div>
+Texo will not have maintenance releases in this initial phase.
+      </html:div></postamble>
+   </release_milestones>
+   <target_environments>
+     <html:div>
+In order to remain current, each Eclipse release targets reasonably
+current versions of the underlying operating environments. The Texo 
+Project depends upon on the
+Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. Texo
+will target the same Java version as EMF Core, which currently requires
+Java 5. Eclipse Platform SDK 3.5 will be tested and validated on a
+number of reference platforms. Texo will be tested and validated
+against a subset of those listed for the platform.
+     </html:div>
+     <internationalization>
+          <html:div>
+Texo is mostly a development time technology which requires no
+internationalization, most of the 
+components having no user interface. The remaining user interface 
+parts of Texo are considered exemplary and thus no attention has been 
+paid to externalize them for internationalization.
+          </html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+This will be the first release of Texo.
+       </html:div>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+     <preamble>
+         <html:div>
+A list of project requirements and agreed upon
+implementation time frames is found in this document. For the
+milestones listed in this document, a set of overall themes is used
+to indicate what major set of functionalities is to be concentrated
+on for each. These themes are presented below, while the requirements
+document and associated Bugzilla entries are left to those wanting
+more detailed information on each.
+         </html:div>
+     </preamble>
+        <theme name="Appealing to a Broader Community">
+            <description>
+                <html:div>
+This is the first release of Texo. The bugzillas reflect the main development 
+activities. 
+                </html:div>
+            </description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMFT&amp;component=Texo&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
+            </committed>
+            <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMFT&amp;component=Texo&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMFT&amp;component=Texo&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
+        </theme>
+   </themes_and_priorities>
+   <appendix name="A: Legal Notices">
+        <html:div>
+<html:ul>
+<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+<html:li>All other products or company names are mentioned for identification purposes only, and
+    may be trademarks or service marks of their respective owners.</html:li>
+</html:ul>
+        </html:div>
+   </appendix>
+</plan>
