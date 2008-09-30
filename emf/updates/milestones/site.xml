@@ -214,6 +214,43 @@ EMF QUERY SDK 1.2.0RC4 S200806091744: contains runtime, source, and documentatio
 		<category name="EMF QUERY SDK 1.2.0RC4 S200806091744"/>
 	</feature>
 
+	<!-- NET4J 2.0.0M2 S200809300446 -->
+	<category-def label="EMF NET4J SDK 2.0.0M2 S200809300446" name="EMF NET4J SDK 2.0.0M2 S200809300446">
+		<description>
+EMF NET4J SDK 2.0.0M2 S200809300446: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.net4j.db.source" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.db.source_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.db" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.db_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.doc" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.doc_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples.source" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.examples.source_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.examples" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.examples_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.sdk" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.sdk_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.source" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.source_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui.source" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.ui.source_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j.ui" version="2.0.0.v200809300446" url="features/org.eclipse.net4j.ui_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+	<feature id="org.eclipse.net4j" version="2.0.0.v200809300446" url="features/org.eclipse.net4j_2.0.0.v200809300446.jar" patch="false">
+		<category name="EMF NET4J SDK 2.0.0M2 S200809300446"/>
+	</feature>
+
 	<!-- NET4J 1.0.0RC5 S200806180305 -->
 	<category-def label="EMF NET4J SDK 1.0.0RC5 S200806180305" name="EMF NET4J SDK 1.0.0RC5 S200806180305">
 		<description>
