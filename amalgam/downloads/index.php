@@ -36,7 +36,7 @@ ob_start();
 			<td/>
 			<td colspan="5">An all-in-one modeling package delivered by the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes the full SDKs for most Modeling projects.</td>
 		</tr>
-	</table>
+	</table><hr/>
 	</div>
 	
 	<div class="homeitem3col">
@@ -53,7 +53,7 @@ ob_start();
 			<td/>
 			<td colspan="5">A set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Toolsmith; that is, it provides EMF, GMF, OCL, QVT, Xpand, UML and other capabilities.</td>
 		</tr>
-	</table>
+	</table><hr/>
 	</div>
 	
 	<div class="homeitem3col">
@@ -70,7 +70,7 @@ ob_start();
 			<td/>
 			<td colspan="5">A lightweight set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Practitioner; that is, it provides UML and BPMN diagramming capabilities.</td>
 		</tr>
-	</table>
+	</table><hr/>
 	</div>
 
 </div>
