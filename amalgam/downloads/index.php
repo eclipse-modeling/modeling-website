@@ -39,9 +39,9 @@ ob_start();
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td width="200"><b>DSL Toolkit</b></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
 			<td>Not available</td>
 		</tr>
 		<tr>
@@ -52,9 +52,9 @@ ob_start();
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td width="200"><b>Modeler<b></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
-			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
+			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
 			<td>Not available</td>
 		</tr>
 		<tr>
