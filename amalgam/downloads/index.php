@@ -35,9 +35,7 @@ ob_start();
 			<td/>
 			<td colspan="5">An all-in-one modeling package delivered by the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes the full SDKs for most Modeling projects.</td>
 		</tr>
-	</table>
-	
-	<table>
+		<tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td width="200"><b>DSL Toolkit</b></td>
@@ -50,9 +48,7 @@ ob_start();
 			<td/>
 			<td colspan="5">A set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Toolsmith; that is, it provides EMF, GMF, OCL, QVT, Xpand, UML and other capabilities.</td>
 		</tr>
-	</table>
-	
-	<table>
+		<tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td width="200"><b>Modeler<b></td>
