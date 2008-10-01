@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>mwe Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-mwe.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-09-16T15:31:30Z</updated>
+  <updated>2008-10-01T07:11:08Z</updated>
   <author>
     <name>mwe Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-mwe.xml</id>
+  <entry>
+    <title>[announce] mwe M2 (0.7.0.S200810010258) is available</title>
+    <link href="http://www.eclipse.org/modeling/emft/downloads/?project=mwe&amp;showAll=1&amp;hlbuild=S200810010258#S200810010258"/>
+    <id>http://www.eclipse.org/modeling/emft/downloads/?project=mwe&amp;showAll=1&amp;hlbuild=S200810010258#S200810010258</id>
+    <updated>2008-10-01T07:11:08Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200810010258" href="http://www.eclipse.org/modeling/emft/downloads/?project=mwe&amp;showAll=1&amp;hlbuild=S200810010258#S200810010258" type="S" vanityname="M2" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/mwe/downloads/drops/0.7.0/S200810010258/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emft/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=mwe</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emft/news/relnotes.php?project=mwe&amp;version=S200810010258
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emft-mwe-SDK-incubation-M2.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/mwe/downloads/drops/0.7.0/S200810010258/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5M2-200809180100/eclipse-SDK-3.5M2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200809231800/emf-sdo-xsd-SDK-2.5.0M2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/3.0.0/S200809240156/mdt-uml2-SDK-3.0.0M2.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R20080807152315/orbit-R20080807152315.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] mwe I200809111209 (0.7.0.I200809111209) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=mwe&amp;showAll=1&amp;hlbuild=I200809111209#I200809111209"/>
