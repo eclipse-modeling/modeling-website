@@ -17,7 +17,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td align="top">
-			As you can see from the egg image to the right, Amalgam is a project in incubation.  Each of the downloads below contains code from an incubating Eclipse project or component.
+			<i>As you can see from the egg image to the right, Amalgam is a project in incubation.  Each of the downloads below <b>contains code from an incubating Eclipse project or component</b>.</i>
 			</td>
 		</tr>
 	</table><hr/>
@@ -26,7 +26,7 @@ ob_start();
 	<table width="100%">
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td><b>Eclipse Modeling Tools</b></td>
+			<td width="200"><b>Eclipse Modeling Tools</b></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-win32.zip">Windows</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Mac OS X</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></td>
@@ -37,10 +37,13 @@ ob_start();
 			<td colspan="5">An all-in-one modeling package delivered by the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes the full SDKs for most Modeling projects.</td>
 		</tr>
 	</table>
+	</div>
+	
+	<div class="homeitem3col">
 	<table>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td><b>DSL Toolkit</b></td>
+			<td width="200"><b>DSL Toolkit</b></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
@@ -51,10 +54,13 @@ ob_start();
 			<td colspan="5">A set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Toolsmith; that is, it provides EMF, GMF, OCL, QVT, Xpand, UML and other capabilities.</td>
 		</tr>
 	</table>
+	</div>
+	
+	<div class="homeitem3col">
 	<table>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td><b>Modeler<b></td>
+			<td width="200"><b>Modeler<b></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://download1.eclipse.org/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
