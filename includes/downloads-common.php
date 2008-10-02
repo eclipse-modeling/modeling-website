@@ -157,7 +157,7 @@ if (function_exists("doRequirements"))
 	call_user_func("doRequirements");
 }
 
-$rssfeed = "<a href=\"" . ($projct ? "$downloadScript/$PR/feeds/builds-$projct.xml" : "/$PR/feeds/") . "\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
+$rssfeed = "<a href=\"" . ($projct ? "$downloadScript/$PR/feeds/builds-$projct.xml" : "/$PR/feeds/builds-$PR.xml") . "\"><img style=\"float:right\" alt=\"Modeling Build Feed\" src=\"/modeling/images/rss-atom10.gif\"/></a>";
 
 if (sizeof($builds) == 0 && sizeof($releases) == 0)
 {
