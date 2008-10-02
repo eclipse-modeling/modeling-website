@@ -33,7 +33,7 @@ function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubat
 	}
 ?>
 	<div class="homeitem3col">
-		<h3>Using Eclipse 3.4M6+ (p2 Install Manager)</h3>
+		<h3>Using Eclipse 3.4's Install Manager</h3>
 		<p>To install these plugins, point your Install Manager at this site. 
 		<!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. --> 
 		</p>
@@ -62,14 +62,14 @@ EOHTML;
 		</ul>
 	</div>
 
-	<div class="homeitem3col">
-		<h3>Using Eclipse 3.4M5 (Update Manager)</h3>
+<!--	<div class="homeitem3col">
+		<h3>Using Eclipse 3.3</h3>
 		<p>To install these plugins, point your Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. </p>
 
 		<ul>
 			<li>Help &gt; Software Updates &gt; Find and Install... &gt; Search for new features to install
 										<ul>
-										<?php
+										<?php /*
 
 	foreach ($PRS as $label => $thisPR)
 	{
@@ -87,12 +87,12 @@ EOHTML;
 			$cnt++;
 		}
 		print "</li>\n";
-	}
+	} */
 ?>
 										</ul>
 			</li>
 		</ul>
-	</div>
+	</div> -->
 	</div>
 	<?php
 
