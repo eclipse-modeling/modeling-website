@@ -10,22 +10,22 @@
   </author>
   <id>http://download.eclipse.org/modeling/gmf/feeds/builds-gmf.xml</id>
   <entry>
-    <title>[announce] gmf I200809261246 (2.2.0.I200809261246) is available</title>
-    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246"/>
-    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246</id>
-    <updated>2008-10-03T01:34:37Z</updated>
+    <title>[announce] gmf 2.2.0M2 (S200809301125) is available</title>
+    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125"/>
+    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125</id>
+    <updated>2008-10-03T01:26:21Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809261246" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246" type="I" vanityname="I200809261246" version="2.2.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/I200809261246/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809301125" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125" type="S" vanityname="2.2.0M2" version="2.2.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/S200809301125/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/gmf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=I200809261246
+        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=S200809301125
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-I200809261246.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-2.2.0M2.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/I200809261246/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/S200809301125/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -46,22 +46,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] gmf 2.2.0M2 (S200809301125) is available</title>
-    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125"/>
-    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125</id>
-    <updated>2008-10-03T01:26:21Z</updated>
+    <title>[announce] gmf I200809261246 (2.2.0.I200809261246) is available</title>
+    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246"/>
+    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246</id>
+    <updated>2008-10-03T01:34:37Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809301125" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200809301125#S200809301125" type="S" vanityname="2.2.0M2" version="2.2.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/S200809301125/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200809261246" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I200809261246#I200809261246" type="I" vanityname="I200809261246" version="2.2.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/I200809261246/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/gmf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=S200809301125
+        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=I200809261246
           </releasenotes>
         <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-2.2.0M2.zip</release>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-I200809261246.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/S200809301125/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/I200809261246/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
