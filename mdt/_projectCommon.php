@@ -36,9 +36,9 @@ $cvsprojs = array (); /* should always be empty */
 $cvscoms = array (
 	"org.eclipse.mdt" => array (
 		"bpmn2" => "org.eclipse.bpmn2",
-		"eodm" => "org.eclipse.eodm",
 		"imm" => "org.eclipse.imm",
 		"ocl" => "org.eclipse.ocl",
+		"papyrus" => "org.eclipse.papyrus",
 		"sbvr" => "org.eclipse.sbvr",
 		"uml2" => "org.eclipse.uml2",
 		"uml2tools" => "org.eclipse.uml2tools",
@@ -49,9 +49,9 @@ $cvscoms = array (
 
 $projects = array (
 	"BPMN2" => "bpmn2",
-	"EODM" => "eodm",
 	"IMM" => "imm",
 	"OCL" => "ocl",
+	"Papyrus" => "eodm",
 	"SBVR" => "sbvr",
 	"UML2" => "uml2",
 	"UML2 Tools" => "uml2tools",
@@ -61,10 +61,10 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("bpmn2","imm","sbvr"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array("bpmn2","imm","sbvr"); //components without newsgroup
+$nodownloads = array("bpmn2","imm","papyrus","sbvr"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nonewsgroup = array("bpmn2","imm","papyrus","sbvr"); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
-$incubating = array("bpmn2","eodm","imm","sbvr","uml2tools"); // components which are still incubating
+$incubating = array("bpmn2","imm","papyrus","sbvr","uml2tools"); // components which are still incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
