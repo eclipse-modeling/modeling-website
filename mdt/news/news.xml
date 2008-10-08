@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
+<news date="October 8, 2008" showOn="whatsnew">
+	The EODM component has been terminated; see the <a href="http://www.eclipse.org/project-slides/EODM Termination Review.pdf">Termination Review slides</a> for details.
+</news>
+<news date="October 8, 2008" showOn="whatsnew">
+	The OCL Tools component has been terminated; see the <a href="http://www.eclipse.org/project-slides/OCL Tools Termination Review.pdf">Termination Review slides</a> for details.
+</news>
 <news date="October 1, 2008" showOn="docs,whatsnew">
     Check out what's new in the Galileo M2 milestone of the <a href="http://wiki.eclipse.org/MDT/OCL/New_and_Noteworthy/Galileo#Milestone_2">OCL</a> subcompoject.
 </news>
@@ -183,6 +189,6 @@
 	Updated <a href="http://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html">"Getting Started with UML2"</a> article is available.
 </news>
 
-<!-- $Id: news.xml,v 1.30 2008/10/02 04:43:16 cdamus Exp $ -->
+<!-- $Id: news.xml,v 1.31 2008/10/08 13:59:52 khussey Exp $ -->
 
 </doc>
