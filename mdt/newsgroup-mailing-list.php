@@ -11,6 +11,7 @@ foreach ($projects as $name => $suf) {
 }
 $newsgroups["UML2"][] = "tools.uml2"; /* add old one */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
+$newsgroups["Papyrus"] = "eclipse.papyrus"; /* override */
 
 $mailinglists = array("MDT (main)" => array("mdt.dev"));
 foreach ($projects as $name => $suf) {

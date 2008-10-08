@@ -62,7 +62,7 @@ $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("bpmn2","imm","papyrus","sbvr"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array("bpmn2","imm","papyrus","sbvr"); //components without newsgroup
+$nonewsgroup = array("bpmn2","imm","sbvr"); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = array("bpmn2","imm","papyrus","sbvr","uml2tools"); // components which are still incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
