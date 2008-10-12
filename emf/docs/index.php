@@ -357,6 +357,10 @@ and Animations of the internals of XSD models</a>
 	<ul>
 		<li><a target="_dw" href="http://www-128.ibm.com/developerworks/search/searchResults.jsp?searchType=1&amp;searchSite=dW&amp;searchScope=dW&amp;query=emf">Search developerWorks for EMF</a></li>
 
+		<li>
+			<div>December 2007</div><a target="_out" href="http://www.softwaremag.com/L.cfm?doc=1103-12/2007">MDA Goes Mainstream With the Eclipse Modeling Framework</a> (softwaremag.com)<br/>
+			Contributed by Michael Guttman and Philipp Kutter
+		</li>
 
 		<li>
 			<div>Nov 26 2007</div><a target="_dw" href="http://www.ibm.com/developerworks/library/os-eclipse-dynamicemf/">Build metamodels with dynamic EMF</a><br/>
@@ -596,4 +600,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.19 2008/09/15 21:37:00 nickb Exp $ -->
+<!-- $Id: index.php,v 1.20 2008/10/12 05:47:43 nickb Exp $ -->
