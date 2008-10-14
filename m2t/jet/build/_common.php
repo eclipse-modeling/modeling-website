@@ -9,6 +9,10 @@ $options = array (
         "1.0.0=HEAD,/opt/sun-java2-5.0",
         "0.9.2=R0_9_maintenance,/opt/sun-java2-5.0",
 
+		"emft.eclipse.org=------------,------------",
+        "1.0.0=HEAD,/opt/sun-java2-5.0",
+        "0.9.2=R0_9_maintenance,/opt/sun-java2-5.0",
+
 		"build.eclipse.org=------------,------------",
         "1.0.0=HEAD,/opt/sun-java2-5.0",
         "0.9.2=R0_9_maintenance,/opt/sun-java2-5.0",
