@@ -31,7 +31,7 @@ $dls = array(
 			"Examples PDE Wizard" => "examples-pde",
 			"Automated Tests" => "tests",
 			"Experimental Tests" => "tests-experimental",
-
+			"Xpand" => "xpand",
 		)
 	),
 );
