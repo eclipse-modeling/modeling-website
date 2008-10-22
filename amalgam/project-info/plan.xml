@@ -48,7 +48,7 @@ Those available will be presented on the Galileo download site.</html:p>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
-     <html:p>As Galileo is a collection of projects, each with its own defined compatibility policy, look to each plan linked above for details.</html:p>
+     <html:div><html:p>As Galileo is a collection of projects, each with its own defined compatibility policy, look to each plan linked above for details.</html:p></html:div>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
      <preamble>
