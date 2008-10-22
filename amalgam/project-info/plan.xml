@@ -1,67 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
-   <release projectid="modeling.amalgam" version="1.0.0"/>
+   <release projectid="eclipse.galileo" version="1.0.0"/>
    <introduction>
-     <html:p>This document lays out the feature and API set for the first release of the Modeling Amalgamation Project, version 1.0.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
+     <html:p>This document lays out the features and requirements for the Eclipse <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo Simultaneous Release</a>.</html:p>
    </introduction>
    <release_deliverables>
-     <html:p>Amalgam is different than most Eclipse projects in that its deliverables are EPP and product-based builds of several Modeling projects.  While some UI and integration code is provided, it is not made available in the traditional runtime, SDK, doc, etc. individual downloads.</html:p>
+     <html:p>Galileo will provide an artifact and content repository for those Eclipse projects listed within this plan.  Alternatively, Galileo will be available in the form 
+     of packages from the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a>, and via a p2-based custom installer (tentative).</html:p>
     </release_deliverables>
    <release_milestones>
       <preamble>
-      	<html:p>Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 3 weeks; that is, until the final 3.5 release of the Platform, upon which Amalgam and other projects will release simultaneously. As Amalgam is dependent upon the EMF, GMF, and other Modeling projects, which are scheduled to release milestones within 3 weeks of Platform milestones, Amalgam will deliver its milestones within the following week. It is anticipated that Amalgam will synchronize its release milestones with the Galileo release schedule.</html:p>
+      	<html:p>Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 
+      	3 weeks; that is, until the final 3.5 release of the Platform, upon which Galileo and other projects will release simultaneously.</html:p>
       </preamble>
-      <milestone date="08/25/2008" milestone="M1"></milestone>
-      <milestone date="10/06/2008" milestone="M2"></milestone>
-      <milestone date="11/17/2008" milestone="M3"></milestone>
-      <milestone date="01/08/2009" milestone="M4"></milestone>
-      <milestone date="02/12/2009" milestone="M5"></milestone>
-      <milestone date="03/20/2009" milestone="M6">API freeze</milestone>
-      <milestone date="05/08/2009" milestone="M7"></milestone>
-      <milestone date="05/21/2009" milestone="RC1"></milestone>
-      <milestone date="05/28/2009" milestone="RC2"></milestone>
-      <milestone date="06/04/2009" milestone="RC3"></milestone>
-      <milestone date="06/11/2009" milestone="RC4"></milestone>
-      <milestone date="06/18/2009" milestone="RC5"></milestone>
-      <milestone date="06/26/2009" milestone="1.0.0"></milestone>
-      <postamble></postamble>
+      <milestone date="10/08/2008" milestone="M2"></milestone>
+      <milestone date="11/19/2008" milestone="M3"></milestone>
+      <milestone date="01/12/2009" milestone="M4"></milestone>
+      <milestone date="02/16/2009" milestone="M5"></milestone>
+      <milestone date="03/23/2009" milestone="M6">API freeze</milestone>
+      <milestone date="05/11/2009" milestone="M7"></milestone>
+      <milestone date="05/25/2009" milestone="RC1"></milestone>
+      <milestone date="06/01/2009" milestone="RC2"></milestone>
+      <milestone date="06/08/2009" milestone="RC3"></milestone>
+      <milestone date="06/15/2009" milestone="RC4"></milestone>
+      <milestone date="06/26/2009" milestone="GA"></milestone>
+      <postamble>The following projects are included in the Galileo release and are linked to their respective project plans:
+      	<html:ul>
+	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Platform</html:a></html:li>
+	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=tools.gef">Graphical Editing Framework (GEF)</html:a></html:li>
+	   </html:ul>
+      </postamble>
    </release_milestones>
    <target_environments>
      <html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.
-The Amalgam project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.5 release of the Eclipse Platform Project is written and compiled against version 1.4 of the Java Platform APIs, and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. Amalgam will target the same Java version as EMF and other Modeling projects, which currently require Java 5.
-Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. Amalgam will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.</html:p>
+The Galileo package depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.5 release of the Eclipse Platform 
+Project is written and compiled against version 1.4 of the Java Platform APIs, and targeted to run on version 1.4 of the Java Runtime Environment, 
+Standard Edition. Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. Galileo includes additional projects 
+which currently require Java 5, such as EMF.  Therefore, Galileo will be tested and validated against a subset of those listed for the platform. 
+Those available will be presented on the Galileo download site.</html:p>
      <internationalization>
-       <html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Amalgam project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform and provided by the Babel project. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
+       <html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK 
+       components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. 
+       As a result, the Galileo will provide English strings in its default bundles and be localized to a subset of those locales offered by the Babel project. 
+       This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
-     <html:p>As this is the first release of Amalgam, no compatibility issues exist.</html:p>
+     <html:p>TBD</html:p>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
      <preamble>
-       <html:p>A list of project requirements and agreed upon implementation time frames is found in this document. For the milestones listed in this document, a set of overall themes is used to indicate what major set of functionalities is to be concentrated on for each. These themes are presented below, while the requirements document and associated Bugzilla entries are left to those wanting more detailed information on each.</html:p>
+       <html:p>The Galileo simultaneous release is a collection of Eclipse projects and therefore delivers the cumulative themes and priorities 
+       of its participants, along with a set of participation requirements.  These are listed below, while individual project status on the participation 
+       requirements can be found by examining each umbrella requirement listed below.  TODO: or, add a link to a query for each that displays a report?
+       </html:p>
      </preamble>
+     <theme name="Participation Requirements">
+        <description><html:p>Projects that are part of Galileo agree to abide by the following requirements. Note: the EMO will remove projects that do not meet the required constraints.</html:p></description>
+        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Eclipse+Foundation&amp;product=Simultaneous+Release&amp;component=Prereq&amp;version=Galileo&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;target_milestone=GA&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;priority=P1&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="/>
+        <description><html:p>Projects that are part of Galileo agree to strive to fulfill the following requirements.</html:p></description>
+        <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Eclipse+Foundation&amp;product=Simultaneous+Release&amp;component=Prereq&amp;version=Galileo&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;target_milestone=GA&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;priority=P2&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="/>
+        <description><html:p>The following requirements have been deferred for the Galileo release.</html:p></description>
+        <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Eclipse+Foundation&amp;product=Simultaneous+Release&amp;component=Prereq&amp;version=Galileo&amp;target_milestone=---&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0="/>
+     </theme>
      <theme name="Usability">
-        <description><html:p>As one of the main purposes of Amalgam is to improve usability of Modeling technologies from Eclipse, it is a major theme for this and subsequent releases.</html:p></description>
-        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-         </committed>
-        <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-           </proposed>
-        <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=usability&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-           </deferred>
-     </theme>
-     <theme name="Examples">
-        <description><html:p>Another key aspect of Amalgam is to provide cross-project examples that illustrate the range of technologies used in a typical MDSD scenario.</html:p></description>
-        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=VERIFIED&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-          </committed>
-        <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=NEW&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-           </proposed>
-        <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;component=doc&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;bug_status=RESOLVED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">
-           </deferred>
-     </theme>
+     	<description>These bugs represent Usability items identified by projects that use the <html:i>galileo</html:i> flag in Bugzilla:</description>
+     	<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=notequals&amp;value0-1-0=---" />
+     	<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=equals&amp;value0-1-0=---" />
+     	<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=notequals&amp;value0-1-0=---" />
+	 </theme>
+	 <theme name="Extensibility">
+	    <description>These bugs represent Extensibility items identified by projects that use the <html:i>galileo</html:i> flag in Bugzilla:</description>
+	 	<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=notequals&amp;value0-1-0=---" />
+	 	<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=notequals&amp;value0-1-0=---" />
+	 	<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=target_milestone&amp;type0-1-0=notequals&amp;value0-1-0=---" />
+	 </theme>
    </themes_and_priorities>
-   <appendix name="Help Wanted">
-		<html:p>Bugzillas with a 'helpwanted' keyword are in need of contribution from the community. For the most current list of these items, see the following link: <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=Amalgam&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=allwords&amp;keywords=helpwanted&amp;bug_status=NEW&amp;bug_status=REOPENED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">All Open</a></html:p>
-   </appendix>	
  </plan>
