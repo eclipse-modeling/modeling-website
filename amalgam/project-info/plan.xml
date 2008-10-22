@@ -3,11 +3,11 @@
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
    <release projectid="eclipse.galileo" version="1.0.0"/>
    <introduction>
-     <html:p>This document lays out the features and requirements for the Eclipse <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo Simultaneous Release</a>.</html:p>
+     <html:p>This document lays out the features and requirements for the Eclipse <html:a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo Simultaneous Release</html:a>.</html:p>
    </introduction>
    <release_deliverables>
      <html:p>Galileo will provide an artifact and content repository for those Eclipse projects listed within this plan.  Alternatively, Galileo will be available in the form 
-     of packages from the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a>, and via a p2-based custom installer (tentative).</html:p>
+     of packages from the <html:a href="http://www.eclipse.org/epp">Eclipse Packaging Project</html:a>, and via a p2-based custom installer (tentative).</html:p>
     </release_deliverables>
    <release_milestones>
       <preamble>
@@ -16,7 +16,7 @@
       </preamble>
       <milestone date="10/08/2008" milestone="M2"></milestone>
       <milestone date="11/19/2008" milestone="M3"></milestone>
-      <milestone date="01/12/2009" milestone="M4"></milestone>
+      <milestone date="01/12/2009" milestone="M4">Participation deadline</milestone>
       <milestone date="02/16/2009" milestone="M5"></milestone>
       <milestone date="03/23/2009" milestone="M6">API freeze</milestone>
       <milestone date="05/11/2009" milestone="M7"></milestone>
@@ -25,7 +25,7 @@
       <milestone date="06/08/2009" milestone="RC3"></milestone>
       <milestone date="06/15/2009" milestone="RC4"></milestone>
       <milestone date="06/26/2009" milestone="GA"></milestone>
-      <postamble>The following projects are included in the Galileo release and are linked to their respective project plans:
+      <postamble><html:p>The following projects are included in the Galileo release and are linked to their respective project plans:</html:p>
       	<html:ul>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=eclipse">Eclipse Platform</html:a></html:li>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=tools.gef">Graphical Editing Framework (GEF)</html:a></html:li>
@@ -56,6 +56,9 @@ Those available will be presented on the Galileo download site.</html:p>
        requirements can be found by examining each umbrella requirement listed below.  TODO: or, add a link to a query for each that displays a report?
        </html:p>
      </preamble>
-
+	 <theme name="Participation Requirements">
+      	<description><html:p>Projects that are part of Galileo agree to abide by the following requirements. Note: the EMO will remove projects that do not meet the required constraints.</html:p></description>
+        <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-"/>
+	 </theme>
    </themes_and_priorities>
  </plan>
