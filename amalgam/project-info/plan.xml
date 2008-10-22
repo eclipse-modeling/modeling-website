@@ -3,7 +3,7 @@
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
    <release projectid="eclipse.galileo" version="1.0.0"/>
    <introduction>
-     <html:p>This document lays out the features and requirements for the Eclipse <html:a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo Simultaneous Release</html:a>.</html:p>
+     <html:div><html:p>This document lays out the features and requirements for the Eclipse <html:a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo Simultaneous Release</html:a>.</html:p></html:div>
    </introduction>
    <release_deliverables>
      <html:p>Galileo will provide an artifact and content repository for those Eclipse projects listed within this plan.  Alternatively, Galileo will be available in the form 
@@ -16,10 +16,10 @@
       </preamble>
       <milestone date="10/08/2008" milestone="M2"></milestone>
       <milestone date="11/19/2008" milestone="M3"></milestone>
-      <milestone date="01/12/2009" milestone="M4">Participation deadline</milestone>
+      <milestone date="01/12/2009" milestone="M4"><html:div>Participation deadline</html:div></milestone>
       <milestone date="02/16/2009" milestone="M5"></milestone>
-      <milestone date="03/23/2009" milestone="M6">API freeze</milestone>
-      <milestone date="05/11/2009" milestone="M7"></milestone>
+      <milestone date="03/23/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
+      <milestone date="05/11/2009" milestone="M7"><html:div>Feature freeze</html:div></milestone>
       <milestone date="05/25/2009" milestone="RC1"></milestone>
       <milestone date="06/01/2009" milestone="RC2"></milestone>
       <milestone date="06/08/2009" milestone="RC3"></milestone>
