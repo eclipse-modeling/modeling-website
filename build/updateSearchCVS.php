@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/scripts.php");
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
-$isBuildServer = (preg_match("/^(emft|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
+$isBuildServer = (preg_match("/^(emft|modeling|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 internalUseOnly(); 
 
 # use this script to kick parsecvs.sh for a given set of project folders
