@@ -37,6 +37,14 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
+	"/xpand" => array(
+		"Xpand" => array(
+			"SDK (Runtime, Source, Examples)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		)
+	),
 );
 
 /* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
