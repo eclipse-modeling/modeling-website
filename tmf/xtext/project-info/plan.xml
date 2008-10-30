@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Project Name">
-  <release projectid="modeling.mdt" version="Galileo"/>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="TMF Xtext">
+  <release projectid="modeling.tmf.xtext" version="Galileo"/>
   <introduction>
     <html:div>
       <html:p>
@@ -45,14 +45,6 @@ The release deliverables have the same form as is found in most Eclipse projects
       <milestone date="06/09/2009" milestone="RC4"></milestone>
       <milestone date="06/16/2009" milestone="RC5"></milestone>
       <milestone date="06/28/2009" milestone="1.0.0"></milestone>
-    <postamble>
-      <html:div>
-MDT will produce maintenance releases to align with the Ganymede SR releases, 
-that includes the Eclipse Platform 3.4.1 and 3.4.2 releases. MDT may produce 
-interim maintenance releases in addition to these in order to satisfy client 
-requests.
-      </html:div>
-    </postamble>
   </release_milestones>
   <target_environments>
     <html:div>
@@ -78,10 +70,7 @@ The Eclipse Platform is designed as the basis for internationalized products.
   <compatibility_with_previous_releases>
     <html:div>
 Compatibility of Galileo Release: The Xtext project will be developed in 
-parallel, and released simultaneously, with the following projects. As stated 
-above, each milestone release of the MDT project will be compatible with the 
-corresponding milestones for each of these projects, and delivered the 
-appropriate offset.
+parallel, and released simultaneously, with the following projects.
       <html:ul>
         <html:li>Eclipse Platform SDK version 3.5</html:li>
         <html:li>Eclipse Modeling Framework (EMF) version 2.5</html:li>
