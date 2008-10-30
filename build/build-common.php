@@ -97,7 +97,10 @@ $options["BuildType"] = array("Release=R","Stable=S","Integration=I","Maintenanc
 // bug 222298: this will probably break on some servers
 # TODO: make this work with cvs connection instead of -sub flag 
 $selectedDepsList = array();
+# for this to work, need /home/www-data/build/modeling/scripts/promoteToEclipse.$projct.properties
+# can use /home/www-data/build/modeling/scripts/getPromotePropertiesFromCVS.sh to grab latest version from CVS
 exec($workDir . "modeling/scripts/start_cron.sh -sub $projct -noSearchCVS -depsOnly", $selectedDepsList);
+#print $workDir . "modeling/scripts/start_cron.sh -sub $projct -noSearchCVS -depsOnly<br/>"; print_r($selectedDepsList);
 $selectedDepsList2 = array(); 
 foreach($selectedDepsList as $i => $row)
 {
