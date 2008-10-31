@@ -99,7 +99,7 @@ development technologies within the Eclipse community by providing a unified set
 				<li><a href="http://www.eclipse.org/modeling/m2t/">Model to Text Transformation</a> (M2T) : focuses on technologies for transforming models into text (typically language source code and the resources it consumes)</li>
 				<ul>
 					<li><a href="http://www.eclipse.org/modeling/m2t/?project=jet">Java Emitter Templates</a> (JET) : provides code generation framework & facilities that are used by EMF. Includes an editor which provides features like syntax coloring, error highlighting and code completion.</li>
-					<li><a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand/a> : a statically-typed template language featuring polymorphic template invocation, aspect oriented programming, functional extensions, a flexible type system abstraction, model transformation and validation. Includes an editor which provides features like syntax coloring, error highlighting, navigation, refactoring and code completion.</li>
+					<li><a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> : a statically-typed template language featuring polymorphic template invocation, aspect oriented programming, functional extensions, a flexible type system abstraction, model transformation and validation. Includes an editor which provides features like syntax coloring, error highlighting, navigation, refactoring and code completion.</li>
 				</ul>
 			</ul>
 		</div>
