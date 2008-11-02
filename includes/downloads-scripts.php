@@ -136,8 +136,8 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 
 	if (!$ziplabel)
 	{
-		$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
-		$ziplabel = preg_replace("/(.+)\-([^\-]+)(\.zip)/", "$2", $zips_in_folder[0]); // grab first entry
+		$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip|\.tar\.gz)", "f");
+		$ziplabel = preg_replace("/(.+)\-([^\-]+)(\.zip|\.tar\.gz)/", "$2", $zips_in_folder[0]); // grab first entry
 	}
 
 	$cnt=-1; // for use with static prefix list
@@ -197,6 +197,11 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 						$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 						$tries[] = "$branch/$ID/$pre2$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 						$tries[] = "$branch/$ID/$filePre$ux-incubation-$ziplabel.zip"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						// -------------------
+						$tries[] = "$branch/$ID/$pre2$filePre$ux-$ziplabel.tar.gz"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$filePre$ux-$ziplabel.tar.gz"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$pre2$filePre$ux-incubation-$ziplabel.tar.gz"; // for compatibilty with uml2, where there's no "runtime" value in $ux
+						$tries[] = "$branch/$ID/$filePre$ux-incubation-$ziplabel.tar.gz"; // for compatibilty with uml2, where there's no "runtime" value in $ux
 					}
 				}
 				$outNotFound = "<i><b>$pre2</b>$filePre";
@@ -207,7 +212,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 				{
 					$outNotFound .= $u[0];
 				}
-				$outNotFound .= "-$ziplabel.zip ...</i>";
+				$outNotFound .= "-$ziplabel ...</i>";
 				$out = "";
 				foreach ($tries as $y)
 				{
@@ -290,8 +295,9 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	if (!$icon && (is_file("$PWD${path}index.html") || is_file("$PWD${path}index.php")))
 	{
 		$indexHTML = is_file("$PWD${path}index.html") ? file_get_contents("$PWD${path}index.html") : "";
-		$zips = loadDirSimple($PWD . $path, ".zip", "f"); // get files count
-		$md5s = is_dir($PWD . $path . "/checksum") ? loadDirSimple($PWD . $path . "/checksum", ".zip.md5", "f") : loadDirSimple($PWD . $path, ".zip.md5", "f"); // get files count
+		$zips = loadDirSimple($PWD . $path, "(\.zip|\.tar\.gz)", "f"); // get files count
+		$md5s = is_dir($PWD . $path . "/checksum") ? loadDirSimple($PWD . $path . "/checksum", "(\.zip\.md5|\.tar\.gz\.md5)", "f") : 
+			loadDirSimple($PWD . $path, "(\.zip\.md5|\.tar\.gz\.md5)", "f"); // get files count
 
 		if ((sizeof($zips) >= $numzips && sizeof($md5s) >= $numzips))
 		{
@@ -757,9 +763,9 @@ function outputBuild($branch, $ID, $c)
 	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR;
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
-	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip)", "f");
+	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip|\.tar\.gz)", "f");
 	$ziplabel = (sizeof($zips_in_folder) < 1) ? $ID :
-		preg_replace("/(.+)\-([^\-]+)(\.zip)/", "$2", $zips_in_folder[0]); // grab first entry
+		preg_replace("/(.+)\-([^\-]+)(\.zip|\.tar\.gz)/", "$2", $zips_in_folder[0]); // grab first entry
 
 	// generalize for any relabelled build, thus 2.0.1/M200405061234/*-2.0.2.zip is possible; label = 2.0.2
 	$IDlabel = $ziplabel;
@@ -887,7 +893,7 @@ function getBuildArtifacts($dir, $branchID)
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
-				preg_match("/.+-(incubation-|sdk_|)([^-]+).zip/", $buildfile[$z], $reg);
+				preg_match("/.+-(incubation-|sdk_|)([^-]+)(\.zip|\.tar\.gz)/", $buildfile[$z], $reg);
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
 					
 					$vanity = $buildID[$z];
