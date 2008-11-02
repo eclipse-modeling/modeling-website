@@ -35,7 +35,7 @@ $cvsprojs = array (); /* should always be empty */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array(
 	"org.eclipse.tmf" => array (
-		"Xtext" => "org.eclipse.xtext",
+		"xtext" => "org.eclipse.xtext",
 		/* add more here */
 	)
 );
