@@ -4,11 +4,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>UML2 Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-10-08T16:42:51Z</updated>
+  <updated>2008-11-03T16:41:51Z</updated>
   <author>
     <name>UML2 Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-uml2.xml</id>
+  <entry>
+    <title>[announce] uml2 I200811031108 (3.0.0.I200811031108) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200811031108#I200811031108"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200811031108#I200811031108</id>
+    <updated>2008-11-03T16:41:51Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200811031108" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200811031108#I200811031108" type="I" vanityname="I200811031108" version="3.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/3.0.0/I200811031108/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2&amp;version=I200811031108
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2-SDK-I200811031108.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2/downloads/drops/3.0.0/I200811031108/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20081028-2000/eclipse-SDK-I20081028-2000-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/I200810291305/emf-sdo-xsd-SDK-I200810291305.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] uml2 I200810071911 (3.0.0.I200810071911) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2&amp;showAll=1&amp;hlbuild=I200810071911#I200810071911"/>
