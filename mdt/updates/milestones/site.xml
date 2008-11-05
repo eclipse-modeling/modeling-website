@@ -51,6 +51,31 @@ MDT UML2TOOLS SDK (Incubation) 0.8.0RC4 S200806112132: contains runtime, source,
 		<category name="MDT UML2TOOLS SDK (Incubation) 0.8.0RC4 S200806112132"/>
 	</feature>
 
+	<!-- UML2 3.0.0M3 S200811051048 -->
+	<category-def label="MDT UML2 SDK 3.0.0M3 S200811051048" name="MDT UML2 SDK 3.0.0M3 S200811051048">
+		<description>
+MDT UML2 SDK 3.0.0M3 S200811051048: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.uml2.doc" version="3.0.0.v200810311430" url="features/org.eclipse.uml2.doc_3.0.0.v200810311430.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples.source" version="3.0.0.v20081007-1910" url="features/org.eclipse.uml2.examples.source_3.0.0.v20081007-1910.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+	<feature id="org.eclipse.uml2.examples" version="3.0.0.v20081007-1910" url="features/org.eclipse.uml2.examples_3.0.0.v20081007-1910.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+	<feature id="org.eclipse.uml2.sdk" version="3.0.0.v200811051030" url="features/org.eclipse.uml2.sdk_3.0.0.v200811051030.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+	<feature id="org.eclipse.uml2.source" version="3.0.0.v200811051030" url="features/org.eclipse.uml2.source_3.0.0.v200811051030.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+	<feature id="org.eclipse.uml2" version="3.0.0.v200811051030" url="features/org.eclipse.uml2_3.0.0.v200811051030.jar" patch="false">
+		<category name="MDT UML2 SDK 3.0.0M3 S200811051048"/>
+	</feature>
+
 	<!-- OCL 1.3.0M2 S200809241410 -->
 	<category-def label="MDT OCL SDK 1.3.0M2 S200809241410" name="MDT OCL SDK 1.3.0M2 S200809241410">
 		<description>
