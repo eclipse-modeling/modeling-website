@@ -7,35 +7,35 @@
 	</description>
 
 
-	<!-- VALIDATION 1.3.0M2 S200809241617 -->
-	<category-def label="EMF VALIDATION SDK 1.3.0M2 S200809241617" name="EMF VALIDATION SDK 1.3.0M2 S200809241617">
+	<!-- VALIDATION 1.3.0M3 S200811051210 -->
+	<category-def label="EMF VALIDATION SDK 1.3.0M3 S200811051210" name="EMF VALIDATION SDK 1.3.0M3 S200811051210">
 		<description>
-EMF VALIDATION SDK 1.3.0M2 S200809241617: contains runtime, source, and documentation.
+EMF VALIDATION SDK 1.3.0M3 S200811051210: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.validation.doc" version="1.3.0.v200809221827-25-8s733I3K775I7G" url="features/org.eclipse.emf.validation.doc_1.3.0.v200809221827-25-8s733I3K775I7G.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.doc" version="1.3.0.v200809221827-25-8s733I4C5_5G9C" url="features/org.eclipse.emf.validation.doc_1.3.0.v200809221827-25-8s733I4C5_5G9C.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.examples.source" version="1.3.0.v200809221827" url="features/org.eclipse.emf.validation.examples.source_1.3.0.v200809221827.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.examples" version="1.3.0.v200809221827-57B-AgI99m9jGKBaKj" url="features/org.eclipse.emf.validation.examples_1.3.0.v200809221827-57B-AgI99m9jGKBaKj.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.examples" version="1.3.0.v200809221827-57B-AgI99mBTCIDmRY" url="features/org.eclipse.emf.validation.examples_1.3.0.v200809221827-57B-AgI99mBTCIDmRY.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.ocl.source" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl.source_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.ocl.source" version="1.2.0.v200805130238-12-7w311922132965" url="features/org.eclipse.emf.validation.ocl.source_1.2.0.v200805130238-12-7w311922132965.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.ocl" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.ocl" version="1.2.0.v200805130238-12-7w311922132965" url="features/org.eclipse.emf.validation.ocl_1.2.0.v200805130238-12-7w311922132965.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.sdk" version="1.3.0.v200809221827-57B-93O6YxTVL6J5VlIpdyJlG99e" url="features/org.eclipse.emf.validation.sdk_1.3.0.v200809221827-57B-93O6YxTVL6J5VlIpdyJlG99e.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.sdk" version="1.3.0.v200809221827-57B-93QEOI5bKkifRfOkz-rS6uE9" url="features/org.eclipse.emf.validation.sdk_1.3.0.v200809221827-57B-93QEOI5bKkifRfOkz-rS6uE9.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.source" version="1.3.0.v200809221827-36-9oA55S5N9C6GCR" url="features/org.eclipse.emf.validation.source_1.3.0.v200809221827-36-9oA55S5N9C6GCR.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation.source" version="1.3.0.v200809221827-378-9oA55S885A8SJG" url="features/org.eclipse.emf.validation.source_1.3.0.v200809221827-378-9oA55S885A8SJG.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation" version="1.3.0.v200809221827-36-9oA55S5N9C6GCR" url="features/org.eclipse.emf.validation_1.3.0.v200809221827-36-9oA55S5N9C6GCR.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
+	<feature id="org.eclipse.emf.validation" version="1.3.0.v200809221827-378-9oA55S885A8SJG" url="features/org.eclipse.emf.validation_1.3.0.v200809221827-378-9oA55S885A8SJG.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M3 S200811051210"/>
 	</feature>
 
 	<!-- VALIDATION 1.2.0RC4 S200806091804 -->
@@ -489,35 +489,35 @@ EMF CDO SDK 1.0.0RC5 S200806180411: contains runtime, source, and documentation.
 		<category name="EMF CDO SDK 1.0.0RC5 S200806180411"/>
 	</feature>
 
-	<!-- VALIDATION 1.3.0M1 S200808131303 -->
-	<category-def label="EMF VALIDATION SDK 1.3.0M1 S200808131303" name="EMF VALIDATION SDK 1.3.0M1 S200808131303">
+	<!-- VALIDATION 1.3.0M2 S200809241617 -->
+	<category-def label="EMF VALIDATION SDK 1.3.0M2 S200809241617" name="EMF VALIDATION SDK 1.3.0M2 S200809241617">
 		<description>
-EMF VALIDATION SDK 1.3.0M1 S200808131303: contains runtime, source, and documentation.
+EMF VALIDATION SDK 1.3.0M2 S200809241617: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.validation.doc" version="1.2.1.v200808131313-2308s733I3F6D484_" url="features/org.eclipse.emf.validation.doc_1.2.1.v200808131313-2308s733I3F6D484_.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation.doc" version="1.3.0.v200809221827-25-8s733I3K775I7G" url="features/org.eclipse.emf.validation.doc_1.3.0.v200809221827-25-8s733I3K775I7G.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.validation.examples.source_1.2.0.v200805130238.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation.examples.source" version="1.3.0.v200809221827" url="features/org.eclipse.emf.validation.examples.source_1.3.0.v200809221827.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.examples" version="1.2.0.v200805130238-579-AgI99m9XFU_OHh" url="features/org.eclipse.emf.validation.examples_1.2.0.v200805130238-579-AgI99m9XFU_OHh.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation.examples" version="1.3.0.v200809221827-57B-AgI99m9jGKBaKj" url="features/org.eclipse.emf.validation.examples_1.3.0.v200809221827-57B-AgI99m9jGKBaKj.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.ocl.source" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl.source_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.ocl" version="1.2.0.v200805130238-11-7w311916241349" url="features/org.eclipse.emf.validation.ocl_1.2.0.v200805130238-11-7w311916241349.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.sdk" version="1.2.1.v200808131313-579093L7YxTRK7HvUuHZYnJlG99e" url="features/org.eclipse.emf.validation.sdk_1.2.1.v200808131313-579093L7YxTRK7HvUuHZYnJlG99e.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation.sdk" version="1.3.0.v200809221827-57B-93O6YxTVL6J5VlIpdyJlG99e" url="features/org.eclipse.emf.validation.sdk_1.3.0.v200809221827-57B-93O6YxTVL6J5VlIpdyJlG99e.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.source" version="1.2.0.v200805130238-35-9oA55S5M8D6BBN" url="features/org.eclipse.emf.validation.source_1.2.0.v200805130238-35-9oA55S5M8D6BBN.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation.source" version="1.3.0.v200809221827-36-9oA55S5N9C6GCR" url="features/org.eclipse.emf.validation.source_1.3.0.v200809221827-36-9oA55S5N9C6GCR.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation" version="1.2.0.v200805130238-35-9oA55S5M8D6BBN" url="features/org.eclipse.emf.validation_1.2.0.v200805130238-35-9oA55S5M8D6BBN.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.3.0M1 S200808131303"/>
+	<feature id="org.eclipse.emf.validation" version="1.3.0.v200809221827-36-9oA55S5N9C6GCR" url="features/org.eclipse.emf.validation_1.3.0.v200809221827-36-9oA55S5N9C6GCR.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.3.0M2 S200809241617"/>
 	</feature>
 
 	<!-- VALIDATION 1.2.0RC3 S200806031653 -->
