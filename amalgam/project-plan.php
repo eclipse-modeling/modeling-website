@@ -82,6 +82,9 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx</span><?php
 } else {
 
+	$projectid = null;
+	$project = null;
+		
 	if( isset($_REQUEST['projectid']) ) {
 		$projectid = $matches[1];
 		$project = new ProjectInfoData($projectid);
@@ -93,12 +96,7 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 	} else {
 		$url = $_REQUEST['planurl']
 	}
-	?>test<?php
 
-	/*
-	 * If the parameter is a projectid, look up the url in the meta-data database
-	 */
-	$url = $project->projectplanurls[0];
 	/*
 	 * Verify that the url is pointing to eclipse.org to prevent cross-site attacks
 	 */
