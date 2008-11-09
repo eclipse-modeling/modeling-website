@@ -82,7 +82,7 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx or ?planurl=xxx</span><?php
 } else {
 	
-	if( issset($_REQUEST['projectid']) ) {
+	if( isset($_REQUEST['projectid']) ) {
 		$projectid = $matches[1];
 		$project = new ProjectInfoData($projectid);
 		$pageTitle .= $projectid;
