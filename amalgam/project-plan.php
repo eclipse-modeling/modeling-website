@@ -75,10 +75,10 @@ h3 {
 </style>
 <?php
 /*
- * Must have a ?projectid=xxx
+ * Must have a ?projectid=xxx or ?planurl=http://www.eclipse.org/xxx
  */
 preg_match('/^([a-z.0-9\-_]+)$/', $_REQUEST['projectid'], $matches);
-if(!isset($matches[1])) {
+if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx</span><?php
 } else {
 	$projectid = $matches[1];
