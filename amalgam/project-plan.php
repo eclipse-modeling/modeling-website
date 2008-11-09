@@ -139,6 +139,14 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 			 		}
 				}
 			} else {
+				if (isset($_REQUEST['planurl'])) {
+					$releases = $xml->getElementsByTagName( "release" );
+					$release = $releases->item(0)->nodeValue;
+					$projectid = $release->getAttribute( "projectid" );
+					$project = new ProjectInfoData($projectid);
+					$pageTitle .= $projectid;
+				}
+				
 				$projectname = $project->projectnames[0];
 
 				// ----------------------------------------------------------------------------
