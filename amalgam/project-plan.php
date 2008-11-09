@@ -81,10 +81,6 @@ preg_match('/^([a-z.0-9\-_]+)$/', $_REQUEST['projectid'], $matches);
 if(!isset($matches[1]) && !$_REQUEST['planurl']) {
 	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx or ?planurl=xxx</span><?php
 } else {
-	$projectid = null;
-	$url = null;
-	$project = null;
-	$pageTitle = null;
 	
 	if( $_REQUEST['projectid'] ) {
 		$projectid = $matches[1];
