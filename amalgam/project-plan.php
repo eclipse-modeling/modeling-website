@@ -78,7 +78,7 @@ h3 {
  * Must have a ?projectid=xxx or ?planurl=http://www.eclipse.org/xxx
  */
 preg_match('/^([a-z.0-9\-_]+)$/', $_REQUEST['projectid'], $matches);
-if(true) {
+if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx or ?planurl=xxx</span><?php
 } else {
 	
@@ -140,11 +140,11 @@ if(true) {
 				}
 			} else {
 				if (isset($_REQUEST['planurl'])) {
-					$releases = $xml->getElementsByTagName( "release" );
+			/*		$releases = $xml->getElementsByTagName( "release" );
 					$release = $releases->item(0)->nodeValue;
 					$projectid = $release->getAttribute( "projectid" );
 					$project = new ProjectInfoData($projectid);
-					$pageTitle .= $projectid;
+					$pageTitle .= $projectid; */
 				}
 			
 				$projectname = $project->projectnames[0];
