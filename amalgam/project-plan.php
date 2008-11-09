@@ -75,30 +75,24 @@ h3 {
 </style>
 <?php
 /*
- * Must have a ?projectid=xxx or ?planurl=http://www.eclipse.org/xxx
+ * Must have a ?projectid=xxx
  */
 preg_match('/^([a-z.0-9\-_]+)$/', $_REQUEST['projectid'], $matches);
-if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
-	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx or ?planurl=xxx</span><?php
+if(!isset($matches[1])) {
+	?><span style="background-color: #FFCCCC; font-weight: bold; font-size: 150%">Error: unable to display project plan without a ?projectid=xxx</span><?php
 } else {
-	
-	if( isset($_REQUEST['projectid']) ) {
-		$projectid = $matches[1];
-		$project = new ProjectInfoData($projectid);
-		$pageTitle .= $projectid;
-		/*
-		 * If the parameter is a projectid, look up the url in the meta-data database
-		 */
-		$url = $project->projectplanurls[0];
-	} else {
-		$url = $_REQUEST['planurl']
-	}
-	
+	$projectid = $matches[1];
+	$project = new ProjectInfoData($projectid);
+	$pageTitle .= $projectid;
+	/*
+	 * If the parameter is a projectid, look up the url in the meta-data database
+	 */
+	$url = $project->projectplanurls[0];
 	/*
 	 * Verify that the url is pointing to eclipse.org to prevent cross-site attacks
 	 */
 	if( preg_match("/^\w+:/", $url) && substr($url,0,23) != 'http://www.eclipse.org/'  ) {
-		show_error_page( 'the project plan url" (' . $url . ') does not refer to an http://www.eclipse.org/ page.', $projectid );
+		show_error_page( 'the project meta-data "projectplanurl" (' . $url . ') does not refer to an http://www.eclipse.org/ page.', $projectid );
 	} elseif(preg_match('/project-plan.php/i', $url)) {
 		show_error_page( 'This project has bad meta-data: it points back to this page in an infinite loop.  
 			Please open a bug against the project website to correct this condition.
@@ -130,7 +124,7 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 			if( $xml === false ) {
 			 	$contents = @file_get_contents( $url );
 			 	if( !$contents ) {
-			 		show_error_page( 'the project plan url (' . $url . ') points to an empty file.', $projectid );
+			 		show_error_page( 'the project meta-data "projectplanurl" (' . $url . ') points to an empty file.', $projectid );
 			 	} else {
 			 		if( preg_match( "/&(?<!amp;)/", $contents ) ) {
 			 			show_error_page( 'the file appears to have at least one naked &amp;s in bugzilla urls: &amp;s must be escaped as &amp;amp; to be valid XML.', $projectid );
@@ -139,14 +133,6 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 			 		}
 				}
 			} else {
-				if (isset($_REQUEST['planurl'])) {
-			/*		$releases = $xml->getElementsByTagName( "release" );
-					$release = $releases->item(0)->nodeValue;
-					$projectid = $release->getAttribute( "projectid" );
-					$project = new ProjectInfoData($projectid);
-					$pageTitle .= $projectid; */
-				}
-			
 				$projectname = $project->projectnames[0];
 
 				// ----------------------------------------------------------------------------
