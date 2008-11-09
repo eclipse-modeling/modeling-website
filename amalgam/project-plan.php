@@ -147,6 +147,10 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 				}
 				
 				$projectname = $project->projectnames[0];
+				
+				if (isset($_REQUEST['component'])) {
+					$projectname .=  ' (' . $_REQUEST['component'] . ')'
+				}
 
 				// ----------------------------------------------------------------------------
 				// OUTPUT
