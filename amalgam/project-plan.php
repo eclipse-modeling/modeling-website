@@ -141,7 +141,7 @@ if(!isset($matches[1]) && !isset($_REQUEST['planurl'])) {
 			} else {
 				if (isset($_REQUEST['planurl'])) {
 					$releases = $xml->getElementsByTagName( "release" );
-					$projectid = $release->item(0)->getAttribute( "projectid" );
+					$projectid = $releases->item(0)->getAttribute( "projectid" );
 					$project = new ProjectInfoData($projectid);
 					$pageTitle .= $projectid;
 				}
