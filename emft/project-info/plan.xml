@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="EMFT">
+  <release projectid="modeling.emf" version="Galileo"/>
+  <introduction>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+This document lays out the feature and API set for the
+Galileo release of the Eclipse Modeling Framework Technology project,
+which comprises individual component plans.
+      <ul>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO">CDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core">Core</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j">Net4j</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query">Query</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO">SDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo">Teneo</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction">Transaction</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation">Validation</a>
+        </li>
+      </ul>
+This project plan inherits from the <a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling">Modeling Project Plan</a>,
+which should be referenced when consulting this individual project plan.
+    </div>
+  </introduction>
+  <release_deliverables>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+The release deliverables for EMF comprise those of the components.
+      <ul>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#release_deliverables">CDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#release_deliverables">Core</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#release_deliverables">Net4j</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#release_deliverables">Query</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#release_deliverables">SDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#release_deliverables">Teneo</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#release_deliverables">Transaction</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#release_deliverables">Validation</a>
+        </li>
+      </ul>
+    </div>
+  </release_deliverables>
+  <release_milestones>
+    <milestone date="08/13/2008" milestone="M1"></milestone>
+    <milestone date="09/24/2008" milestone="M2"></milestone>
+    <milestone date="11/05/2008" milestone="M3"></milestone>
+    <milestone date="12/17/2008" milestone="M4"></milestone>
+    <milestone date="02/03/2009" milestone="M5"></milestone>
+    <milestone date="03/16/2009" milestone="M6"><div xmlns="http://www.w3.org/1999/xhtml">API freeze</div></milestone>
+    <milestone date="05/04/2009" milestone="M7"><div xmlns="http://www.w3.org/1999/xhtml">Feature Freeze</div></milestone>
+    <milestone date="05/18/2009" milestone="RC1"></milestone>
+    <milestone date="05/25/2009" milestone="RC2"></milestone>
+    <milestone date="06/01/2009" milestone="RC3"></milestone>
+    <milestone date="06/08/2009" milestone="RC4"></milestone>
+    <milestone date="06/15/2009" milestone="RC5"></milestone>
+    <milestone date="06/28/2009" milestone="Galileo"></milestone>
+    <postamble>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+The release milestones for EMF comprise those of the components.
+        <ul>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#release_milestones">CDO</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#release_milestones">Core</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#release_milestones">Net4j</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#release_milestones">Query</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#release_milestones">SDO</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#release_milestones">Teneo</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#release_milestones">Transaction</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#release_milestones">Validation</a>
+          </li>
+        </ul>
+      </div>
+    </postamble>
+  </release_milestones>
+  <target_environments>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+The target environments for EMF comprise those of the components.
+      <ul>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#target_environments">CDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#target_environments">Core</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#target_environments">Net4j</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#target_environments">Query</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#target_environments">SDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#target_environments">Teneo</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#target_environments">Transaction</a>
+        </li>
+        <li>
+         <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#target_environments">Validation</a>
+        </li>
+      </ul>
+    </div>
+    <internationalization>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+The internationalization plans for EMF comprise those of the components above.
+      </div>
+    </internationalization>
+  </target_environments>
+  <compatibility_with_previous_releases>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+The compatibility efforts for EMF comprise those of the components.
+      <ul>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#compatibility">CDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#compatibility">Core</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#compatibility">Net4j</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#compatibility">Query</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#compatibility">SDO</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#compatibility">Teneo</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#compatibility">Transaction</a>
+        </li>
+        <li>
+          <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#compatibility">Validation</a>
+        </li>
+      </ul>
+    </div>
+  </compatibility_with_previous_releases>
+  <themes_and_priorities>
+    <preamble>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+The themes and priorities for EMF comprise those of the components.
+        <ul>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#themes_and_priorities">CDO</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#themes_and_priorities">Core</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#themes_and_priorities">Net4j</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#themes_and_priorities">Query</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#themes_and_priorities">SDO</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#themes_and_priorities">Teneo</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#themes_and_priorities">Transaction</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#themes_and_priorities">Validation</a>
+          </li>
+        </ul>
+      </div>
+    </preamble>
+  </themes_and_priorities>
+  <appendix name="Legal Notices">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <ul>
+        <li>
+Java is a trademark or a registered trademark of Sun Microsystems, Inc.
+        </li>
+        <li>
+All other products or company names are mentioned for identification purposes only,
+and may be trademarks or service marks of their respective owners.
+        </li>
+      </ul>
+    </div>
+  </appendix>
+</plan>
