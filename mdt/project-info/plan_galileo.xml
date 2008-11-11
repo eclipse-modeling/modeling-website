@@ -16,59 +16,66 @@ individual project plan.
     <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/bpmn2/project-info/plan_0_7.xml&amp;component=BPMN2">BPMN2</html:a>
         <html:ul>
-          <html:li>MDT BPMN2 source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
-          <html:li>MDT BPMN2 SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT BPMN2 runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT BPMN2 tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/imm/project-info/plan_0_7.xml&amp;component=IMM">IMM</html:a>
         <html:ul>
-          <html:li>MDT IMM source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
-          <html:li>MDT IMM SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT IMM runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT IMM tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/ocl/project-info/plan.xml&amp;component=OCL">OCL</html:a>
         <html:ul>
-          <html:li>MDT OCL source code release, available as versions tagged "R1_3" in the project's CVS repository.</html:li>
-          <html:li>MDT OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT OCL runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT OCL tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R1_3" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/sbvr/project-info/plan_0_7.xml&amp;component=SBVR">SBVR</html:a>
         <html:ul>
-          <html:li>MDT SBVR source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
-          <html:li>MDT SBVR SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT SBVR runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT SBVR tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan.xml&amp;component=UML2">UML2</html:a>
         <html:ul>
-          <html:li>MDT UML2 source code release, available as versions tagged "R3_0" in the project's CVS repository.</html:li>
-          <html:li>MDT UML2 SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT UML2 runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT UML2 tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R3_0" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2tools/project-info/plan.xml&amp;component=UML2Tools">UML2 Tools</html:a>
         <html:ul>
-          <html:li>MDT UML2 Tools source code release, available as versions tagged "R0_9" in the project's CVS repository.</html:li>
-          <html:li>MDT UML2 Tools SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT UML2 Tools runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT UML2 Tools tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R0_9" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>Tools tests (downloadable)</html:li>
         </html:ul>
       </html:p>
       <html:p>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/xsd/project-info/plan.xml&amp;component=XSD">XSD</html:a>
         <html:ul>
-          <html:li>MDT XSD source code release, available as versions tagged "R2_5" in the project's CVS repository.</html:li>
-          <html:li>MDT XSD SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>MDT XSD runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>MDT XSD tests (downloadable)</html:li>
+          <html:li>source code release, available as versions tagged "R2_5" in the project's CVS repository.</html:li>
+          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
     </html:div>
