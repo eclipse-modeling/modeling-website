@@ -86,7 +86,7 @@ function toggleDetails(id)
 		<p>
 			<blockquote>	
 			<ul>
-<?php 	$projects = array("emf","emft","mdt","m2m","m2t");
+<?php 	$projects = array("emf","emft","mdt","m2m","m2t","tmf");
 		foreach ($projects as $project)
 		{ 
 			$projectU = strtoupper($project);
@@ -115,7 +115,7 @@ HTML;
 		<p>
 			<blockquote>
 			<ul>
-<?php 	$projects = array("emf","emft","mdt","m2m","m2t");
+<?php 	$projects = array("emf","emft","mdt","m2m","m2t","tmf");
 		foreach ($projects as $project)
 		{ 
 			$projectU = strtoupper($project);
@@ -153,9 +153,7 @@ HTML;
 	<div class="sideitem">
 		<h6>More Modeling</h6>
 		<ul>
-			<li><a href="http://www.eclipse.org/mddi/">MDDi</a> <a href="http://www.eclipse.org/mddi/download.php">Downloads</a></li>
 			<li><a href="http://www.eclipse.org/gmt/">GMT</a> <a href="http://www.eclipse.org/gmt/download/">Downloads</a></li>
-			<li><a href="http://www.eclipse.org/modeling/tmf/">TMF</a> <acronym title="No downloads yet!"><span style="color:gray">Downloads</span></acronym></li>
 			<li><a href="http://wiki.eclipse.org/Modeling_Corner">Modeling Corner</a></li>
 		</ul>
 	</div>
