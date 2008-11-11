@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site
-      mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/tmf/updates/interim/site.xml&amp;format=xml">
-   <description url="http://download.eclipse.org/modeling/tmf/updates/interim/site.xml">
-      To install these plugins, point Eclipse at this site.
-   </description>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/tmf/updates/interim/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/tmf/updates/interim/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/tmf/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/tmf/updates/interim/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- XTEXT 0.7.0 M200811110736 -->
+	<category-def label="TMF XTEXT SDK 0.7.0 M200811110736" name="TMF XTEXT SDK 0.7.0 M200811110736">
+		<description>
+TMF XTEXT SDK 0.7.0 M200811110736: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.xtext.docs.feature" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.docs.feature_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.examples.feature" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.examples.feature_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.examples.source" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.examples.source_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.runtime.feature" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.runtime.feature_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.runtime.source" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.runtime.source_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.sdk.feature" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.sdk.feature_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+	<feature id="org.eclipse.xtext.sdk.source" version="0.7.0.v200811110736" url="features/org.eclipse.xtext.sdk.source_0.7.0.v200811110736.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 M200811110736"/>
+	</feature>
+
+	<!-- XTEXT 0.7.0 I200810290511 -->
+	<category-def label="TMF XTEXT SDK 0.7.0 I200810290511" name="TMF XTEXT SDK 0.7.0 I200810290511">
+		<description>
+TMF XTEXT SDK 0.7.0 I200810290511: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.xtext.docs.feature" version="0.7.0.v200810290511" url="features/org.eclipse.xtext.docs.feature_0.7.0.v200810290511.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 I200810290511"/>
+	</feature>
+	<feature id="org.eclipse.xtext.runtime.feature" version="0.7.0.v200810290511" url="features/org.eclipse.xtext.runtime.feature_0.7.0.v200810290511.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 I200810290511"/>
+	</feature>
+	<feature id="org.eclipse.xtext.sdk.feature" version="0.7.0.v200810290511" url="features/org.eclipse.xtext.sdk.feature_0.7.0.v200810290511.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 I200810290511"/>
+	</feature>
+	<feature id="org.eclipse.xtext.examples.feature" version="0.7.0.v200810290511" url="features/org.eclipse.xtext.examples.feature_0.7.0.v200810290511.jar" patch="false">
+		<category name="TMF XTEXT SDK 0.7.0 I200810290511"/>
+	</feature>
+
 </site>
