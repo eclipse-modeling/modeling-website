@@ -173,7 +173,7 @@ more detailed information on each.
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.3.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
-    <theme>
+    <theme name="">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan.xml&amp;component=UML2">UML2</html:a>
@@ -213,7 +213,7 @@ more detailed information on each.
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
-    <theme>
+    <theme name=" ">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/imm/project-info/plan_0_7.xml&amp;component=IMM">IMM</html:a>
@@ -223,7 +223,7 @@ more detailed information on each.
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
-    <theme>
+    <theme name="  ">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/sbvr/project-info/plan_0_7.xml&amp;component=SBVR">SBVR</html:a>
@@ -233,7 +233,7 @@ more detailed information on each.
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
-    <theme>
+    <theme name="   ">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan.xml&amp;component=UML2">UML2</html:a>
@@ -253,7 +253,7 @@ more detailed information on each.
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Community+Support&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;target_milestone=3.0.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Community+Support&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
-    <theme>
+    <theme name="    ">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/xsd/project-info/plan.xml&amp;component=XSD">XSD</html:a>
