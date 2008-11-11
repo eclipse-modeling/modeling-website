@@ -17,7 +17,28 @@ which should be referenced when consulting this individual project plan.
 The release deliverables for EMF comprise those of the components.
        <ul>
          <li>
-<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#release_deliverables">Core</a>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/cdo/project-info/plan.xml&amp;component=CDO#release_deliverables">CDO</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/emf/project-info/plan.xml&amp;component=Core#release_deliverables">Core</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/net4j/project-info/plan.xml&amp;component=Net4j#release_deliverables">Net4j</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/query/project-info/plan.xml&amp;component=Query#release_deliverables">Query</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/sdo/project-info/plan.xml&amp;component=SDO#release_deliverables">SDO</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/teneo/project-info/plan.xml&amp;component=Teneo#release_deliverables">Teneo</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/transaction/project-info/plan.xml&amp;component=Transaction#release_deliverables">Transaction</a>
+         </li>
+         <li>
+           <a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/emf/validation/project-info/plan.xml&amp;component=Validation#release_deliverables">Validation</a>
          </li>
        </ul>
      </div>
@@ -40,7 +61,7 @@ The release milestones for EMF comprise those of the components.
 <milestone date="06/01/2009" milestone="RC3"></milestone>
 <milestone date="06/08/2009" milestone="RC4"></milestone>
 <milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.5.0"></milestone>
+<milestone date="06/28/2009" milestone="Galileo"></milestone>
       <postamble>
         <div xmlns="http://www.w3.org/1999/xhtml">
           <ul>
