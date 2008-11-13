@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emft/updates/milestones/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/updates/milestones/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emft/updates/milestones/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- ECORETOOLS 0.9.0M3 S200811130830 (Incubation) -->
+	<category-def label="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830" name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830">
+		<description>
+EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.ecoretools.all" version="0.9.0.v200811130830" url="features/org.eclipse.emf.ecoretools.all_0.9.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.doc" version="0.8.0.v200811130830" url="features/org.eclipse.emf.ecoretools.doc_0.8.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.examples" version="0.8.0.v200811130830" url="features/org.eclipse.emf.ecoretools.examples_0.8.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.sdk" version="0.9.0.v200811130830" url="features/org.eclipse.emf.ecoretools.sdk_0.9.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools.source" version="0.9.0.v200811130830" url="features/org.eclipse.emf.ecoretools.source_0.9.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecoretools" version="0.9.0.v200811130830" url="features/org.eclipse.emf.ecoretools_0.9.0.v200811130830.jar" patch="false">
+		<category name="EMFT ECORETOOLS SDK (Incubation) 0.9.0M3 S200811130830"/>
+	</feature>
+
+</site>
