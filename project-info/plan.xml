@@ -38,7 +38,7 @@
       <milestone date="06/15/2009" milestone="RC4"></milestone>
       <milestone date="06/26/2009" milestone="GA"></milestone>
 
-      <postamble><html:p>The following projects are included in the Modeling release and are linked to their respective project plans:</html:p>
+      <postamble><html:p>The following projects/components are included in the Modeling contribution to the <html:a href="">Galileo</html:a> simultaneous release and are linked to their respective plans:</html:p>
       	<html:ul>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.emf">Eclipse Modeling Framework (EMF)</html:a></html:li>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.gmf">Graphical Modeling Framework (GMF)</html:a></html:li>
@@ -47,8 +47,11 @@
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.m2t">Model-to-Text Transformation (M2T)</html:a></html:li>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.tmf">Textual Modeling Framework (TMF)</html:a></html:li>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.emft">Eclipse Modeling Framework Technology (EMFT)</html:a></html:li>
-	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.gmt">Generative Modeling Technologies (GMT)</html:a></html:li>
 	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam">Modeling Amalgamation Project (Amalgam)</html:a></html:li>
+	   </html:ul>
+	   <html:p>Additionally, the Modeling project contains the following projects/components:</html:p>
+      	<html:ul>
+	      <html:li><html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.gmt">Generative Modeling Technologies (GMT)</html:a></html:li>
 	   </html:ul>
       </postamble>
    </release_milestones>
