@@ -25,41 +25,68 @@ ob_start();
 	<table width="100%">
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td width="200"><b>Eclipse Modeling Tools</b></td>
+			<td colspan="5" width="200"><b>Eclipse Modeling Tools</b></td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5">An all-in-one modeling package delivered by the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes the full SDKs for most Modeling projects. Based on the Ganymede SR1 release.</td>
+		</tr>
+		<tr>
+			<td/>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-win32.zip">Windows</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Mac OS X</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
 		</tr>
-		<tr>
-			<td/>
-			<td colspan="5">An all-in-one modeling package delivered by the <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes the full SDKs for most Modeling projects.</td>
-		</tr>
 		<tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td width="200"><b>DSL Toolkit</b></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.win32.win32.x86.zip">Windows</a></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/dsltk/downloads/drops/I200810010804/dsltk-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
-			<td>Not available</td>
+			<td colspan="5" width="200"><b>DSL Toolkit</b></td>
 		</tr>
 		<tr>
 			<td/>
 			<td colspan="5">A set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Toolsmith; that is, it provides EMF, GMF, OCL, QVT, Xpand, UML and other capabilities.</td>
 		</tr>
+		<tr>
+			<td/>
+			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081115-0914/index.php">I20081115-0914</a></td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5"><a href="">coming soon</a></td>
+		</tr>
 		<tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td width="200"><b>Modeler<b></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.win32.win32.x86.zip">Windows</a></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.macosx.carbon.x86.tar.gz">Mac OS X</a></td>
-			<td><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/amalgam/modeler/downloads/drops/I200810010804/modeler-incubation.linux.gtk.x86.tar.gz">Linux 32bit</a></td>
-			<td>Not available</td>
+			<td colspan="5" width="200"><b>Modeler<b></td>
 		</tr>
 		<tr>
 			<td/>
 			<td colspan="5">A lightweight set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Practitioner; that is, it provides UML and BPMN diagramming capabilities.</td>
+		</tr>
+		tr>
+			<td/>
+			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081115-0914/index.php">I20081115-0914</a></td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
+		</tr>
+		<tr>
+			<td/>
+			<td colspan="5"><a href="">coming soon</a></td>
 		</tr>
 	</table>
 
