@@ -38,7 +38,7 @@ ob_start();
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
 		</tr>
-		<tr/>
+		<tr/><tr/><tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td colspan="5" width="200"><b>DSL Toolkit</b></td>
@@ -63,7 +63,7 @@ ob_start();
 			<td/>
 			<td colspan="5"><a href="">coming soon</a></td>
 		</tr>
-		<tr/>
+		<tr/><tr/><tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td colspan="5" width="200"><b>Modeler<b></td>
@@ -72,7 +72,7 @@ ob_start();
 			<td/>
 			<td colspan="5">A lightweight set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Practitioner; that is, it provides UML and BPMN diagramming capabilities.</td>
 		</tr>
-		tr>
+		<tr>
 			<td/>
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
 		</tr>
