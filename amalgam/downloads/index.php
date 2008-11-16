@@ -61,7 +61,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="5"><a href="">coming soon</a></td>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081115-1537/index.php">I20081115-1537</a></td>
 		</tr>
 		<tr/><tr/><tr/>
 		<tr>
@@ -86,7 +86,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="5"><a href="">coming soon</a></td>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081115-1537/index.php">coming soon</a></td>
 		</tr>
 	</table>
 
