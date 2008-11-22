@@ -575,41 +575,41 @@ EMF CDO SDK 2.0.0 I200811041537: contains runtime, source, and documentation.
 		<category name="EMF CDO SDK 2.0.0 I200811041537"/>
 	</feature>
 
-	<!-- CDO 1.0.3 M200811030639 -->
-	<category-def label="EMF CDO SDK 1.0.3 M200811030639" name="EMF CDO SDK 1.0.3 M200811030639">
+	<!-- CDO 1.0.4 M200811211613 -->
+	<category-def label="EMF CDO SDK 1.0.4 M200811211613" name="EMF CDO SDK 1.0.4 M200811211613">
 		<description>
-EMF CDO SDK 1.0.3 M200811030639: contains runtime, source, and documentation.
+EMF CDO SDK 1.0.4 M200811211613: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.doc_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.doc" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.doc_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.examples.source_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.examples" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.examples_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.sdk_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.sdk_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.source_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.server" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.source_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.cdo" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo_1.0.4.v200811211613.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
 	</feature>
 
 	<!-- VALIDATION 1.3.0 I200811021725 -->
@@ -1149,41 +1149,41 @@ EMF CDO SDK 2.0.0 I200810161652: contains runtime, source, and documentation.
 		<category name="EMF CDO SDK 2.0.0 I200810161652"/>
 	</feature>
 
-	<!-- CDO 1.0.2 -->
-	<category-def label="EMF CDO SDK 1.0.2" name="EMF CDO SDK 1.0.2">
+	<!-- CDO 1.0.3 M200811030639 -->
+	<category-def label="EMF CDO SDK 1.0.3 M200811030639" name="EMF CDO SDK 1.0.3 M200811030639">
 		<description>
-EMF CDO SDK 1.0.2: contains runtime, source, and documentation.
+EMF CDO SDK 1.0.3 M200811030639: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.doc_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.doc" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.doc_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples.source_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.examples" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.sdk_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.sdk_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.source_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.server" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.source_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.cdo" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo_1.0.3.v200811030639.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
 	</feature>
 
 	<!-- VALIDATION 1.3.0 I200809221437 -->
@@ -1692,41 +1692,41 @@ EMF CDO SDK 2.0.0 I200810160352: contains runtime, source, and documentation.
 		<category name="EMF CDO SDK 2.0.0 I200810160352"/>
 	</feature>
 
-	<!-- CDO 1.0.1 -->
-	<category-def label="EMF CDO SDK 1.0.1" name="EMF CDO SDK 1.0.1">
+	<!-- CDO 1.0.2 -->
+	<category-def label="EMF CDO SDK 1.0.2" name="EMF CDO SDK 1.0.2">
 		<description>
-EMF CDO SDK 1.0.1: contains runtime, source, and documentation.
+EMF CDO SDK 1.0.2: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.doc_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.doc" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.doc_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.examples.source_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples.source_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.examples_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.examples" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.sdk_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.sdk_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.source_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.source_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.server" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.source_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.source_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo_1.0.1.v200810131635.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.1"/>
+	<feature id="org.eclipse.emf.cdo" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo_1.0.2.v200810161605.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.2"/>
 	</feature>
 
 </site>
