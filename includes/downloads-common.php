@@ -109,23 +109,6 @@ $deps = array(
 	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
 );
 
-// TODO: move this out into the per-project or per-component pages
-/* shortname => array("product", "component") */
-$bugzilla_pairs = array(
-	"emf" => array("EMF", ""),
-	"gmf" => array("GMF", ""),
-	"xsd" => array("MDT", "XSD"),
-	"ocl" => array("MDT", "OCL"),
-	"eodm" => array("MDT", "EODM"),
-	"uml2" => array("MDT", "UML2"),
-	"uml2tools" => array("MDT", "UML2%20Tools"),
-	"compare" => array("EMFT", "Compare"),
-	"teneo" => array("EMFT", "Teneo"),
-	"cdo" => array("EMFT", "CDO"),
-	"net4j" => array("EMFT", "NET4J"),
-	"mwe" => array("EMFT", "MWE"),
-);
-
 print "<div id=\"midcolumn\">\n";
 print "<h1>Downloads</h1>\n";
 
@@ -262,14 +245,10 @@ print "<li><a href=\"http://www.eclipse.org/$PR/faq.php\">FAQs</a></li>\n";
 print "<li><a href=\"#archives\">Archived Releases</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/modeling/downloads/build-types.php\">About Build Types</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/modeling/downloads/verifyMD5.php\">Using md5 Files</a></li>\n";
-if (isset($bugzilla_pairs[$projct]))
-{
-	print "<li><a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?product={$bugzilla_pairs[$projct][0]}&amp;component={$bugzilla_pairs[$projct][1]}&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED\">Open Bugs</a></li>\n";
-}
-else
-{
-	print "<li><a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?product=$topProj&amp;component=$projct&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED\">Open Bugs</a></li>\n";
-}
+
+print "<li><a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?" . 
+	($parentProj != "NONE" && $parentProj != "" && $parentProj != $projct ? "product=$parentProj&amp;component=$projct" : "product=$projct") . 
+	"&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED\">Open Bugs</a></li>\n";
 print "<li><a href=\"http://www.eclipse.org/$PR/news/relnotes.php?project=$projct&amp;version=HEAD\">Release Notes</a></li>\n";
 print "</ul>\n";
 print "</div>\n";
