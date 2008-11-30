@@ -61,7 +61,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081129-0641/index.php">I20081129-0641</a></td>
 		</tr>
 		<tr/><tr/><tr/>
 		<tr>
