@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emft/updates/interim/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/updates/interim/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emft/updates/interim/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- COMPARE 0.9.0 I200812010352 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352" name="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352">
+		<description>
+EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.compare.doc" version="0.9.0.v200812010352" url="features/org.eclipse.emf.compare.doc_0.9.0.v200812010352.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.sdk" version="0.9.0.v200812010352" url="features/org.eclipse.emf.compare.sdk_0.9.0.v200812010352.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare.source" version="0.9.0.v200812010352" url="features/org.eclipse.emf.compare.source_0.9.0.v200812010352.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352"/>
+	</feature>
+	<feature id="org.eclipse.emf.compare" version="0.9.0.v200812010352" url="features/org.eclipse.emf.compare_0.9.0.v200812010352.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 0.9.0 I200812010352"/>
+	</feature>
+
+</site>
