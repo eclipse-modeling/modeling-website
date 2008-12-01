@@ -23,6 +23,7 @@ $extraZips = array(
 	"emf-sdo-runtime", # deprecated
 	"emf-runtime", "sdo-runtime", # new EMF 2.4.0M5 x 2
 	"emf-sourcedoc", "sdo-sourcedoc", "xsd-sourcedoc", # new EMF 2.4.0M5 x 3
+	"emf-xsd-SDK", "emf-xsd-Models", "emf-xsd-Automated-Tests", "emf-xsd-Examples", # new EMF 2.5.0M4 x 4
 	"sdo-sourcedoc", "sdo-runtime", "emf-sdo-xsd-SDK", "emf-sdo-xsd-Automated-Tests", "emf-sdo-xsd-Examples", # deprecated EMF 2.5.0M4 x 5
 );
 
