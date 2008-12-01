@@ -91,7 +91,7 @@ foreach ($options["BranchAndJDK"] as $br)
 	$dir = "$PWD/$BR";
 	if (is_dir($dir))
 	{
-		$buildIDs = loadDirSimple($dir, "([MISR]+\d{12})", "d"); // include N builds
+		$buildIDs = loadDirSimple($dir, "([NMISR]+\d{12})", "d"); // include N builds
 		foreach ($buildIDs as $k => $bid)
 		{
 			$buildIDs2[substr($bid, 1) . substr($bid, 0, 1)] = $BR . "/" . $bid
