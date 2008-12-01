@@ -17,14 +17,31 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
 $extraZips = array(
-	"emf-sdo-xsd-Standalone", # deprecated
-	"emf-sdo-xsd-Models", # new
-	"emf-sdo-SDK", "xsd-SDK", # deprecated x 2
-	"emf-sdo-runtime", # deprecated
-	"emf-runtime", "sdo-runtime", # new EMF 2.4.0M5 x 2
-	"emf-sourcedoc", "sdo-sourcedoc", "xsd-sourcedoc", # new EMF 2.4.0M5 x 3
-	"emf-xsd-SDK", "emf-xsd-Models", "emf-xsd-Automated-Tests", "emf-xsd-Examples", # new EMF 2.5.0M4 x 4
-	"sdo-sourcedoc", "sdo-runtime", "emf-sdo-xsd-SDK", "emf-sdo-xsd-Automated-Tests", "emf-sdo-xsd-Examples", # deprecated EMF 2.5.0M4 x 5
+	"emf-xsd-SDK", 
+	"emf-xsd-Models", 
+	"emf-xsd-Automated-Tests", 
+	"emf-xsd-Examples", # new 2.5.0M4 x 4
+	
+	"emf-sdo-xsd-SDK", 
+	"emf-sdo-xsd-Standalone",
+	"emf-sdo-xsd-Models", 
+	"emf-sdo-xsd-Automated-Tests", 
+	"emf-sdo-xsd-Examples", 
+						# deprecated 2.5.0M4 x 5
+	
+	"emf-sdo-SDK", 
+	"emf-sdo-runtime", 	# deprecated 2.5.0M4 x 2
+
+	"emf-runtime", 
+	"emf-sourcedoc", 	# new 2.4.0M5 x 2
+	
+	"sdo-runtime", 
+	"sdo-sourcedoc", 	# deprecated 2.5.0M4 x 2
+
+	"xsd-SDK", 			# deprecated 2.4.0M5
+	"xsd-sourcedoc", 	# new EMF 2.4.0M5 x 2
+	"sdo-runtime",		
+	"sdo-sourcedoc",  	# new EMF 2.4.0M5 x 2
 );
 
 /* config */
@@ -54,20 +71,22 @@ $dls = array(
 			"Automated Tests" => "Automated-Tests",	# deprecated EMF 2.5.0M4
 			"Examples" => "Examples"				# deprecated EMF 2.5.0M4
 		),
-		"EMF" => array(
+		"EMF and SDO" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK", 	# deprecated EMF 2.4.0M5
-			"Runtimes" => "runtime",					# deprecated EMF 2.4.0M5
-			"EMF Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
-			"EMF Runtime" => "runtime",					# new EMF 2.4.0M5
+			"Runtimes" => "runtime",				# deprecated EMF 2.4.0M5
+		),
+		"EMF" => array(
+			"EMF Runtime" => "runtime",				# new EMF 2.4.0M5
+			"EMF Sources + Docs" => "sourcedoc",	# new EMF 2.4.0M5
 		),
 		"SDO" => array(
-			"SDO Sources + Docs" => "sourcedoc",		# deprecated EMF 2.5.0M4
-			"SDO Runtime" => "runtime"					# deprecated EMF 2.5.0M4
+			"SDO Runtime" => "runtime",				# deprecated EMF 2.5.0M4
+			"SDO Sources + Docs" => "sourcedoc",	# deprecated EMF 2.5.0M4
 		),
 		"XSD" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
+			"Runtime" => "runtime",
 			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
-			"Runtime" => "runtime"
 		)
 	),
 );
@@ -97,6 +116,7 @@ $filePreStatic = array(
 		
 		"emf-sdo",		# deprecated EMF 2.4.0M5
 		"emf-sdo",		# deprecated EMF 2.4.0M5
+		
 		"emf",			# new EMF 2.4.0M5
 		"emf",			# new EMF 2.4.0M5
 
