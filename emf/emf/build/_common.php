@@ -40,7 +40,7 @@ $options = array (
 	"2.5.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
 	"2.4.2=R2_4_maintenance,/opt/public/common/ibm-java2-ppc-50",
 	"2.3.3=R2_3_maintenance,/opt/public/common/ibm-java2-ppc-50",
-	"2.2.5=R2_2_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142",
+	"2.2.6=R2_2_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142",
 	"2.1.4=R2_1_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142",
 	"2.0.7=R2_0_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // 178681
 	),
