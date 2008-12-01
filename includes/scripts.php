@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.76 2008/09/23 22:54:22 nickb Exp $
+// $Id: scripts.php,v 1.77 2008/12/01 21:17:04 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -50,7 +50,13 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	//static assignments
 	if(PWD_check($PWD, $suf))
 	{
-		$servers = array("/buildbox(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", "/build\.eclipse\.org/" => "/opt/public/modeling/build", "/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", "/emft(?:\.eclipse\.org)?/" => "/home/www-data/build", "/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org", "/fullmoon\.torolab\.ibm\.com/" => "/home/www");
+		$servers = array(
+			"/buildbox(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", 
+			"/build\.eclipse\.org/" => "/opt/public/modeling/build", 
+			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", 
+			"/(emft|modeling)(?:\.eclipse\.org)?/" => "/home/www-data/build", 
+			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org", 
+			"/fullmoon\.torolab\.ibm\.com/" => "/home/www");
 
 		foreach(array_keys($servers) as $z)
 		{
@@ -76,7 +82,21 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	//try a default guess: /home/www, two options
 	if(PWD_check($PWD, $suf))
 	{
-		$data = array(4 => array("checkdir" => "/home/data/httpd/download.eclipse.org/", "tries" => array("/home/data/httpd/download.eclipse.org/$suf", "/home/data/httpd/download.eclipse.org/$PR/$suf", "/home/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)), 5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/", "tries" => array("/home/data2/httpd/download.eclipse.org/$suf", "/home/data2/httpd/download.eclipse.org/$PR/$suf", "/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)), 6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/", "tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, "/home/local/data/httpd/download.eclipse.org/$suf", "/home/local/data/httpd/download.eclipse.org/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf", "/home/www/tools/$suf", "/home/www/technology/$suf", "/home/www/eclipse/$PR/$suf",)), 7 => array("checkdir" => "/var/www/", "tries" => array("/var/www/$PR/$suf", "/var/www/html/$PR/$suf", "/var/www/tools/$PR/$suf", "/var/www/technology/$PR/$suf", "/var/www/eclipse/$PR/$suf", "/var/www/html/tools/$PR/$suf", "/var/www/html/technology/$PR/$suf", "/var/www/html/eclipse/$PR/$suf",)));
+		$data = array(
+			4 => array(
+				"checkdir" => "/home/data/httpd/download.eclipse.org/", 
+				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", "/home/data/httpd/download.eclipse.org/$PR/$suf", "/home/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)
+			), 
+			5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/", 
+				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", "/home/data2/httpd/download.eclipse.org/$PR/$suf", "/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)
+			), 
+			6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/", 
+				"tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, "/home/local/data/httpd/download.eclipse.org/$suf", "/home/local/data/httpd/download.eclipse.org/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf", "/home/www/tools/$suf", "/home/www/technology/$suf", "/home/www/eclipse/$PR/$suf",)
+			), 
+			7 => array("checkdir" => "/var/www/", 
+				"tries" => array("/var/www/$PR/$suf", "/var/www/html/$PR/$suf", "/var/www/tools/$PR/$suf", "/var/www/technology/$PR/$suf", "/var/www/eclipse/$PR/$suf", "/var/www/html/tools/$PR/$suf", "/var/www/html/technology/$PR/$suf", "/var/www/html/eclipse/$PR/$suf",)
+			)
+		);
 
 		foreach(array_keys($data) as $y)
 		{
