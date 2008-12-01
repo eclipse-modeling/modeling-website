@@ -35,8 +35,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $files = array(
 	"org.eclipse.emf" => array(
 		"" => array(
-			"/emf-sdo-xsd-(Standalone|SDK)-.+\.zip$",
-			"/emf-sdo-(SDK|runtime)-.+\.zip$",
+			"/emf(-sdo|)-xsd-(Standalone|SDK)-.+\.zip$",
+			"/emf(-sdo|)-(SDK|runtime)-.+\.zip$",
 			"/org\.eclipse\.emf\.ecore_.+\.jar$"
 		),
 		"org.eclipse.emf.query" => array(

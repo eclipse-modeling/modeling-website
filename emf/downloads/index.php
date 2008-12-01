@@ -23,6 +23,7 @@ $extraZips = array(
 	"emf-sdo-runtime", # deprecated
 	"emf-runtime", "sdo-runtime", # new EMF 2.4.0M5 x 2
 	"emf-sourcedoc", "sdo-sourcedoc", "xsd-sourcedoc", # new EMF 2.4.0M5 x 3
+	"sdo-sourcedoc", "sdo-runtime", "emf-sdo-xsd-SDK", # deprecated EMF 2.5.0M4 x 3
 );
 
 /* config */
@@ -39,20 +40,28 @@ $dls = array(
 		)
 	),*/
 	"/emf" => array(
-		"EMF, SDO, and XSD" => array(
+		"EMF and XSD" => array(
 			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
-			"Standalone" => "Standalone",			# deprecated EMF 2.3.0
-			"Models" => "Models",
+			"Models" => "Models",					
 			"Automated Tests" => "Automated-Tests",
 			"Examples" => "Examples"
 		),
-		"EMF and SDO" => array(
+		"EMF, SDO, and XSD" => array(
+			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.5.0M4
+			"Standalone" => "Standalone",			# deprecated EMF 2.3.0
+			"Models" => "Models",					# deprecated EMF 2.5.0M4
+			"Automated Tests" => "Automated-Tests",	# deprecated EMF 2.5.0M4
+			"Examples" => "Examples"				# deprecated EMF 2.5.0M4
+		),
+		"EMF" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK", 	# deprecated EMF 2.4.0M5
 			"Runtimes" => "runtime",					# deprecated EMF 2.4.0M5
 			"EMF Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
 			"EMF Runtime" => "runtime",					# new EMF 2.4.0M5
-			"SDO Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
-			"SDO Runtime" => "runtime"					# new EMF 2.4.0M5
+		),
+		"SDO" => array(
+			"SDO Sources + Docs" => "sourcedoc",		# deprecated EMF 2.5.0M4
+			"SDO Runtime" => "runtime"					# deprecated EMF 2.5.0M4
 		),
 		"XSD" => array(
 			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
@@ -74,17 +83,25 @@ $filePre = array(
 /* alternate method for specifying prefixes - static list */
 $filePreStatic = array(
 	"/emf" => array(
-		"emf-sdo-xsd",
+		"emf-xsd",
+		"emf-xsd",
+		"emf-xsd",
+		"emf-xsd",
+
+		"emf-sdo-xsd",	# deprecated EMF 2.5.0M4
 		"emf-sdo-xsd",	# deprecated EMF 2.3.0
-		"emf-sdo-xsd",
-		"emf-sdo-xsd",
-		"emf-sdo-xsd",
+		"emf-sdo-xsd",	# deprecated EMF 2.5.0M4
+		"emf-sdo-xsd",	# deprecated EMF 2.5.0M4
+		"emf-sdo-xsd",	# deprecated EMF 2.5.0M4
+		
 		"emf-sdo",		# deprecated EMF 2.4.0M5
 		"emf-sdo",		# deprecated EMF 2.4.0M5
 		"emf",			# new EMF 2.4.0M5
 		"emf",			# new EMF 2.4.0M5
-		"sdo",			# new EMF 2.4.0M5
-		"sdo",			# new EMF 2.4.0M5
+
+		"sdo",			# new EMF 2.4.0M5, deprecated EMF 2.5.0M4
+		"sdo",			# new EMF 2.4.0M5, deprecated EMF 2.5.0M4
+		
 		"xsd",			# deprecated EMF 2.4.0M5
 		"xsd",			# new EMF 2.4.0M5
 		"xsd"

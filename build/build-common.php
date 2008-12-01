@@ -908,7 +908,7 @@ function findCatg($url) {
 		"05ocl" => "mdt-ocl-|emft-ocl-",
 		"04orbit" => "orbit-|orbitBundles-",
 		"03uml2" => "mdt-uml2-|uml2-",
-		"02emf" => "emf-sdo-xsd-",
+		"02emf" => "emf-runtime-|emf-xsd-|emf-sdo-xsd-",
 		"01eclipse" => "eclipse-",
 		"99other" => "/"
 	);
