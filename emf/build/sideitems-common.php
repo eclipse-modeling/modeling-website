@@ -19,7 +19,8 @@ function sidebar()
 				<a href="/modeling/emf/<?php print $projct; ?>/build/clean.php">Clean</a>,
 				<a href="/modeling/emf/<?php print $projct; ?>/build/promo.php">Promote</a>
 			</li>
-			<li><a href="/modeling/emf/downloads/?project=<?php print $projct; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a></li>
+			<li><a href="/modeling/emf/downloads/?project=<?php print $projct; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date">See Recent Builds</a>
+			   (<a href="/modeling/emf/downloads/?project=<?php print $projct; ?>&amp;showAll=0&amp;showMax=5&amp;sortBy=date&amp;light">Light</a>)</li>
 		</ul>
 		<hr noshade="noshade" size="1" width="90%"/>
 		<ul>
