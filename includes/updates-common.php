@@ -63,7 +63,7 @@ EOHTML;
 	</div>
 <?php if ($siteXMLsEclipse33 && is_array($siteXMLsEclipse33) && sizeof($siteXMLsEclipse33 > 0)) { ?>
 	<div class="homeitem3col">
-		<h3>Using Eclipse 3.3</h3>
+		<h3>Using Eclipse 3.3's Update Manager</h3>
 		<p>To install these plugins, point your Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. </p>
 
 		<ul>
