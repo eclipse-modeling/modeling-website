@@ -6,7 +6,7 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"))
+function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"), $siteXMLsEclipse33 = array())
 {
 	global $App, $Nav, $Menu, $theme, $PR;
 	$PRS = array (
@@ -61,15 +61,15 @@ EOHTML;
 			</li>
 		</ul>
 	</div>
-
-<!--	<div class="homeitem3col">
+<?php if ($siteXMLsEclipse33 && is_array($siteXMLsEclipse33) && sizeof($siteXMLsEclipse33 > 0)) { ?>
+	<div class="homeitem3col">
 		<h3>Using Eclipse 3.3</h3>
 		<p>To install these plugins, point your Update Manager at this site. For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. </p>
 
 		<ul>
 			<li>Help &gt; Software Updates &gt; Find and Install... &gt; Search for new features to install
 										<ul>
-										<?php /*
+										<?php
 
 	foreach ($PRS as $label => $thisPR)
 	{
@@ -79,7 +79,7 @@ EOHTML;
 											* Name: <b>$label Update Site</b><br/>
 EOHTML;
 		$cnt=0;
-		foreach ($siteXMLs as $type => $sitexml)
+		foreach ($siteXMLsEclipse33 as $type => $sitexml)
 		{
 			print !$cnt ? "* URL: " : "&#160;&#160;&#160;&#160;&#160;(or): ";
 			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b>";
@@ -87,12 +87,14 @@ EOHTML;
 			$cnt++;
 		}
 		print "</li>\n";
-	} */
+	}
 ?>
 										</ul>
 			</li>
 		</ul>
-	</div> -->
+	</div>
+<?php } ?>
+
 	</div>
 	<?php
 
