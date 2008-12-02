@@ -1,4 +1,10 @@
 <?php
+
+echo "This page is disabled by request of <a href='https://bugs.eclipse.org/bugs/show_bug.cgi?id=250820'>bug 250820</a>. We apologize for the inconvenience.";
+exit;
+
+########################################################################
+
 require_once ("../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
