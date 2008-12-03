@@ -100,50 +100,50 @@ EMF VALIDATION SDK 1.2.0 I200805131635: contains runtime, source, and documentat
 		<category name="EMF VALIDATION SDK 1.2.0 I200805131635"/>
 	</feature>
 
-	<!-- TRANSACTION 1.3.0 I200811251717 -->
-	<category-def label="EMF TRANSACTION SDK 1.3.0 I200811251717" name="EMF TRANSACTION SDK 1.3.0 I200811251717">
+	<!-- TRANSACTION 1.3.0 I200812021717 -->
+	<category-def label="EMF TRANSACTION SDK 1.3.0 I200812021717" name="EMF TRANSACTION SDK 1.3.0 I200812021717">
 		<description>
-EMF TRANSACTION SDK 1.3.0 I200811251717: contains runtime, source, and documentation.
+EMF TRANSACTION SDK 1.3.0 I200812021717: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB" url="features/org.eclipse.emf.emfqtv.all.sdk_1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.3.0.v200809221833-377-9-FL4TAnOGFYaj-ukspq6mT-" url="features/org.eclipse.emf.emfqtv.all.sdk_1.3.0.v200809221833-377-9-FL4TAnOGFYaj-ukspq6mT-.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.emfqtv.all" version="1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc" url="features/org.eclipse.emf.emfqtv.all_1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.emfqtv.all" version="1.3.0.v200809221833-67D-_sS9SMQSL8OUYqGolrT-2KEc" url="features/org.eclipse.emf.emfqtv.all_1.3.0.v200809221833-67D-_sS9SMQSL8OUYqGolrT-2KEc.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200809221833-24-8s733I4_3C5G8D" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200809221833-24-8s733I4_3C5G8D.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200809221833-248Y8s733I55685EBE" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200809221833-248Y8s733I55685EBE.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.0.v200811200008" url="features/org.eclipse.emf.transaction.examples.source_1.2.0.v200811200008.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.100.v200811301658" url="features/org.eclipse.emf.transaction.examples.source_1.2.100.v200811301658.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.examples" version="1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES" url="features/org.eclipse.emf.transaction.examples_1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction.examples" version="1.2.100.v200811301658-35_78xD4E7HBFXCXKZ8NES" url="features/org.eclipse.emf.transaction.examples_1.2.100.v200811301658-35_78xD4E7HBFXCXKZ8NES.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.sdk" version="1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e" url="features/org.eclipse.emf.transaction.sdk_1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction.sdk" version="1.3.0.v200809221833-67G-96UG7_JQOyfRSmSz-3-alG99" url="features/org.eclipse.emf.transaction.sdk_1.3.0.v200809221833-67G-96UG7_JQOyfRSmSz-3-alG99.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction.source" version="1.3.0.v200811200008-25-8s733I55655GCI" url="features/org.eclipse.emf.transaction.source_1.3.0.v200811200008-25-8s733I55655GCI.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.transaction" version="1.3.0.v200811200008-25-8s733I55655GCI" url="features/org.eclipse.emf.transaction_1.3.0.v200811200008-25-8s733I55655GCI.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200809221833-12-7w311922162755" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200809221833-12-7w311922162755.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200805130238.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200805130238-35-9oA55S6G6E7MDR" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200805130238-35-9oA55S6G6E7MDR.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200811200008-25-8s733I55655GCI" url="features/org.eclipse.emf.workspace.source_1.3.0.v200811200008-25-8s733I55655GCI.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
-	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
+	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200811200008-25-8s733I55655GCI" url="features/org.eclipse.emf.workspace_1.3.0.v200811200008-25-8s733I55655GCI.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200812021717"/>
 	</feature>
 
 	<!-- TRANSACTION 1.2.3 M200810041403 -->
@@ -656,50 +656,50 @@ EMF VALIDATION SDK 1.2.0 I200804301835: contains runtime, source, and documentat
 		<category name="EMF VALIDATION SDK 1.2.0 I200804301835"/>
 	</feature>
 
-	<!-- TRANSACTION 1.3.0 I200811192212 -->
-	<category-def label="EMF TRANSACTION SDK 1.3.0 I200811192212" name="EMF TRANSACTION SDK 1.3.0 I200811192212">
+	<!-- TRANSACTION 1.3.0 I200811251717 -->
+	<category-def label="EMF TRANSACTION SDK 1.3.0 I200811251717" name="EMF TRANSACTION SDK 1.3.0 I200811251717">
 		<description>
-EMF TRANSACTION SDK 1.3.0 I200811192212: contains runtime, source, and documentation.
+EMF TRANSACTION SDK 1.3.0 I200811251717: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB" url="features/org.eclipse.emf.emfqtv.all.sdk_1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.emfqtv.all" version="1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc" url="features/org.eclipse.emf.emfqtv.all_1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200809221833-24-8s733I4_3C5G8D" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200809221833-24-8s733I4_3C5G8D.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.0.v200811200008" url="features/org.eclipse.emf.transaction.examples.source_1.2.0.v200811200008.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.examples" version="1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES" url="features/org.eclipse.emf.transaction.examples_1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.sdk" version="1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e" url="features/org.eclipse.emf.transaction.sdk_1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200809221833-12-7w311922162755" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200809221833-12-7w311922162755.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200805130238.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200805130238-35-9oA55S6G6E7MDR" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200805130238-35-9oA55S6G6E7MDR.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811251717"/>
 	</feature>
 
 	<!-- TRANSACTION 1.2.1 M200807301731 -->
@@ -1230,50 +1230,50 @@ EMF VALIDATION SDK 1.2.0 I200804231835: contains runtime, source, and documentat
 		<category name="EMF VALIDATION SDK 1.2.0 I200804231835"/>
 	</feature>
 
-	<!-- TRANSACTION 1.3.0 I200811021821 -->
-	<category-def label="EMF TRANSACTION SDK 1.3.0 I200811021821" name="EMF TRANSACTION SDK 1.3.0 I200811021821">
+	<!-- TRANSACTION 1.3.0 I200811192212 -->
+	<category-def label="EMF TRANSACTION SDK 1.3.0 I200811192212" name="EMF TRANSACTION SDK 1.3.0 I200811192212">
 		<description>
-EMF TRANSACTION SDK 1.3.0 I200811021821: contains runtime, source, and documentation.
+EMF TRANSACTION SDK 1.3.0 I200811192212: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.3.0.v200809221833-377-9-FL4TAnEsz-nmjIgIuknPhP" url="features/org.eclipse.emf.emfqtv.all.sdk_1.3.0.v200809221833-377-9-FL4TAnEsz-nmjIgIuknPhP.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB" url="features/org.eclipse.emf.emfqtv.all.sdk_1.3.0.v200809221833-377-9-FL4TAnEsz-pWjEfpnBnHZB.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.emfqtv.all" version="1.3.0.v200809221833-67D-_sS9SMOeLxLYRtGslrT-2KEc" url="features/org.eclipse.emf.emfqtv.all_1.3.0.v200809221833-67D-_sS9SMOeLxLYRtGslrT-2KEc.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.emfqtv.all" version="1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc" url="features/org.eclipse.emf.emfqtv.all_1.3.0.v200809221833-67D-_sS9SMQSL8OUV6GobbT-2KEc.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200809221833-24-8s733I3H5_5I7C" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200809221833-24-8s733I3H5_5I7C.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200809221833-24-8s733I4_3C5G8D" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200809221833-24-8s733I4_3C5G8D.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.transaction.examples.source_1.2.0.v200805130238.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.0.v200811200008" url="features/org.eclipse.emf.transaction.examples.source_1.2.0.v200811200008.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.examples" version="1.2.0.v200805130238-35-8xD4E7FKAfBVEY8NES" url="features/org.eclipse.emf.transaction.examples_1.2.0.v200805130238-35-8xD4E7FKAfBVEY8NES.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction.examples" version="1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES" url="features/org.eclipse.emf.transaction.examples_1.2.0.v200811200008-35-8xD4E7GGBcBTBY8NES.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.sdk" version="1.3.0.v200809221833-67G-96U7itYcPFR0UhQFw-JlG99e" url="features/org.eclipse.emf.transaction.sdk_1.3.0.v200809221833-67G-96U7itYcPFR0UhQFw-JlG99e.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction.sdk" version="1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e" url="features/org.eclipse.emf.transaction.sdk_1.3.0.v200809221833-67G-96U7itaMPBQWN9Q8nnJlG99e.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction.source" version="1.3.0.v200809221833-25-8s733I55375ICI" url="features/org.eclipse.emf.transaction.source_1.3.0.v200809221833-25-8s733I55375ICI.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.transaction" version="1.3.0.v200809221833-25-8s733I55375ICI" url="features/org.eclipse.emf.transaction_1.3.0.v200809221833-25-8s733I55375ICI.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.transaction" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.transaction_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200809221833-12-7w31191_332944" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200809221833-12-7w31191_332944.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200809221833-12-7w311922162755" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200809221833-12-7w311922162755.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200805130238" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200805130238.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200805130238-35-9oA55S6G6E7MDR" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200805130238-35-9oA55S6G6E7MDR.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200809221833-25-8s733I55375ICI" url="features/org.eclipse.emf.workspace.source_1.3.0.v200809221833-25-8s733I55375ICI.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace.source_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
-	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200809221833-25-8s733I55375ICI" url="features/org.eclipse.emf.workspace_1.3.0.v200809221833-25-8s733I55375ICI.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.3.0 I200811021821"/>
+	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200811200008-25-8s733I554D5G8A" url="features/org.eclipse.emf.workspace_1.3.0.v200811200008-25-8s733I554D5G8A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.3.0 I200811192212"/>
 	</feature>
 
 	<!-- TRANSACTION 1.2.1 M200807161540 -->
