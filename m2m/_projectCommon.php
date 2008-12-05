@@ -88,10 +88,9 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
-#$Nav->addNavSeparator("Documentation", "$rooturl/docs.php?project=$proj");
-#$Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
+$Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/Model_to_Model_Transformation_(M2M)");
+$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.m2m", "_self", 2);
 #$Nav->addCustomNav("Plan", "$rooturl/docs/plans/m2m_project_plan_1_1.html", "_self", 2);
-
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse." . strtolower($projectName) . "%2F" . ($proj?"org.eclipse.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
 

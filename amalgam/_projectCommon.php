@@ -84,9 +84,9 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/ModelingAmalgam");
 $Nav->addCustomNav("Getting Started", "http://wiki.eclipse.org/ModelingAmalgam", "_self", 2);
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
+$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam", "_self", 2);
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=file%3A+org.eclipse.amalgam%2F" . (false && $proj?"org.eclipse.amalgam.".$proj."%2F":"") . "+days%3A+7", "_self", 2);
-$Nav->addCustomNav("API Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://www.eclipse.org/$PR/development/");
 $Nav->addCustomNav("How To Contribute", "http://www.eclipse.org/$PR/development/", "_self", 2);

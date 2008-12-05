@@ -98,6 +98,7 @@ $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Getting Started", "http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
 $Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF/FAQ", "_self", 2);
+$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.emf", "_self", 2);
 if (!$proj || $proj == "emf" || $proj == "sdo")
 {
 	$Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=" . ($proj?$proj:"emf") . "&amp;version=HEAD", "_self", 2);

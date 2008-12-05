@@ -38,7 +38,7 @@ $Nav->addCustomNav("Installation", "http://wiki.eclipse.org/Modeling_Project/Ins
 
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/Category:Modeling");
 $Nav->addCustomNav("Getting Started", "http://wiki.eclipse.org/Modeling_Documentation", "_self", 2);
-$Nav->addCustomNav("Project Plan", "http://wiki.eclipse.org/Modeling_Project_Plan", "_self", 2);
+$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling", "_self", 2);
 $Nav->addCustomNav("Search CVS", "http://www.eclipse.org/$PR/searchcvs.php?q=days%3A+7", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");

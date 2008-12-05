@@ -71,15 +71,6 @@ ob_start();
 		<p>Have a look, post your comments, submit a link, or just read what others have written. <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Details here</a>.</p>
 	</div>
 
-	<div class="sideitem">
-		<h6>Plans</h6>
-		<ul>
-			<li><a href="http://wiki.eclipse.org/index.php/Ganymede">Ganymede 3.4 Plan</a></li>
-			<li><a href="http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_4.html">Eclipse 3.4 Plan</a></li>
-			<li><a href="http://wiki.eclipse.org/EMF#Plans">EMF Plans</a>
-		</ul>
-	</div>
-
 	<a name="related"></a>
 	<div class="sideitem">
 		<h6>Related links</h6>
