@@ -22,6 +22,7 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 $Nav->setLinkList(null);
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling", "_self", 1);
 $Nav->addNavSeparator("Modeling", "/modeling/");
+$Nav->addCustomNav("Amalgam", "/modeling/amalgam/", "_self", 3);
 $Nav->addCustomNav("EMF", "/modeling/emf/", "_self", 3);
 $Nav->addCustomNav("EMFT", "/modeling/emft/", "_self", 3);
 $Nav->addCustomNav("GMF", "/modeling/gmf/", "_self", 3);
@@ -30,7 +31,6 @@ $Nav->addCustomNav("MDT", "/modeling/mdt/", "_self", 3);
 $Nav->addCustomNav("M2M", "/m2m/", "_self", 3);
 $Nav->addCustomNav("M2T", "/modeling/m2t/", "_self", 3);
 $Nav->addCustomNav("TMF", "/modeling/tmf/", "_self", 3);
-$Nav->addCustomNav("Amalgam", "/modeling/amalgam/", "_self", 3);
 
 $Nav->addNavSeparator("Downloads", "http://www.eclipse.org/modeling/downloads/");
 $Nav->addCustomNav("All-In-One Package", "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder", "_self", 2);
