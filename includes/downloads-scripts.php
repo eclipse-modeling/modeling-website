@@ -815,7 +815,7 @@ function outputBuild($branch, $ID, $c)
 
 function createUpdateSiteFileLink($PWD, $branch, $ID) 
 {
-	$updateZip = loadDirSimple("$PWD/$branch/$ID/", "(.+Update.+\.zip|\.tar\.gz)", "f");
+	$updateZip = loadDirSimple("$PWD/$branch/$ID/", "(.+Update.+\.zip|.+Update.+\.tar\.gz)", "f");
 	if (is_array($updateZip) && sizeof($updateZip) > 0)
 	{
 		$out = fileFound("$PWD/", "$branch/$ID/" . $updateZip[0], "<b style=\"color:green\"><acronym title=\"All-In-One Archived Update Site\">All-In-One Update Site</acronym></b>", false, 
