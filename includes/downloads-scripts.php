@@ -518,7 +518,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 		);
 }
 
-function fileFound($PWD, $url, $label) //only used once
+function fileFound($PWD, $url, $label, $md5AlignRight = true, $icon = null) 
 {
 	global $isBuildServer, $downloadScript, $downloadPre, $PR, $proj, $isTools, $isTech;
 
@@ -529,11 +529,12 @@ function fileFound($PWD, $url, $label) //only used once
 	{
 		if (is_file($PWD.$md5file))
 		{
-			$out .= "<div>" . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isBuildServer ? "" : "http://download.eclipse.org") .
-"$mid$md5file\">md5</a>)</div>"; break;
+			$out .= ($md5AlignRight ? "<div>" : "&nbsp;&nbsp;") . pretty_size(filesize("$PWD$url")) . " (<a href=\"" . ($isBuildServer ? "" : "http://download.eclipse.org") .
+"$mid$md5file\">md5</a>)" . ($md5AlignRight ? "</div>" : ""); break;
 		}
 	}
-	return $out . "<a href=\"$downloadScript$mid$url\">$label</a>";
+	return $md5AlignRight ? $out . "<a href=\"$downloadScript$mid$url\">$label</a>" : 
+		"<a href=\"$downloadScript$mid$url\">$icon</a>&nbsp;<a href=\"$downloadScript$mid$url\">$label</a>" . $out;
 }
 
 function doNLSLinksList($packs, $cols, $subcols, $packSuf, $folder, $isArchive = false)
@@ -786,6 +787,7 @@ function outputBuild($branch, $ID, $c)
 		"&amp;project=$projct#$ID\">" .
 		"<img alt=\"Link to this build\" src=\"/modeling/images/link.png\"/>" .
 		"</a>" .
+		createUpdateSiteFileLink($PWD, $branch, $ID) .
 		((isset($opts["noclean"]) && $opts["noclean"]) || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? doNoclean("$PWD/$branch/$ID") : "");
 		
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
@@ -811,6 +813,20 @@ function outputBuild($branch, $ID, $c)
 	return $ret;
 }
 
+function createUpdateSiteFileLink($PWD, $branch, $ID) 
+{
+	$updateZip = loadDirSimple("$PWD/$branch/$ID/", "(.+Update.+\.zip|\.tar\.gz)", "f");
+	if (is_array($updateZip) && sizeof($updateZip) > 0)
+	{
+		$out = fileFound("$PWD/", "$branch/$ID/" . $updateZip[0], "<b style=\"color:green\"><acronym title=\"All-In-One Archived Update Site\">All-In-One Update Site</acronym></b>", false, 
+			"<acronym title=\"All-In-One Archived Update Site\"><img border=\"0\" width=\"16\" height=\"16\" alt=\"Click to download archived update site\" src=\"/modeling/images/icon-save.gif\"/></acronym>");
+		if ($out)
+		{
+			return "&nbsp; &nbsp;" . $out;
+		}
+	}
+	return "";
+}
 function doNoclean($dir)
 {
 	global $PR,$projct;
@@ -819,8 +835,6 @@ function doNoclean($dir)
 	return " <a href=\"/$PR/$projct/build/clean.php?versionAndBuildID=$versionAndBuildID\"><span class=\"noclean\"><acronym title=\"Failed builds do not purge temp files automatically -- click here to do so!\">Size on disk: $sizeondisk</acronym></span>" .
 		   " <img alt=\"Purge releng materials before promoting this build!\" src=\"/modeling/images/bug.png\"/></a>";		
 }
-
-
 
 function loadBuildConfig($file, $deps)
 {
