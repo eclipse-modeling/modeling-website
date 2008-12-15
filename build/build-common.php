@@ -915,6 +915,8 @@ function findCatg($url) {
 		"04orbit" => "orbit-|orbitBundles-",
 		"03uml2" => "mdt-uml2-|uml2-",
 		"02emf" => "emf-runtime-|emf-xsd-|emf-sdo-xsd-",
+		"01eclipsecvsclient" => "eclipse-CVS-Client-",
+		"01eclipseplatform" => "eclipse-platform-",
 		"01eclipse" => "eclipse-",
 		"99other" => "/"
 	);
