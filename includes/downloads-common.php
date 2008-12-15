@@ -104,9 +104,12 @@ $deps = array(
 	"dtp" => "<a href=\"http://www.eclipse.org/dtp/\">DTP</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
+	"rse" => "<a href=\"http://www.eclipse.org/dsdp/tm/\">TM &amp; RSE</a>",
 	"orbit" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">Orbit</a>", "lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
 	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>",
 	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
+	"xtext" => "<a href=\"http://www.eclipse.org/modeling/tmf/?project=xtext#xtext\">Xtext</a>",
+	
 );
 
 print "<div id=\"midcolumn\">\n";

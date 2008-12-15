@@ -169,7 +169,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					for multiple selections)</small>
 					<table>
 						<tr><td><b>Public</b></td><td><b>Mirror</b></td></tr>
-						<?php $buildServer = array("www.eclipse.org","emf.torolab.ibm.com","emft.eclipse.org","build.eclipse.org"); ?>
+						<?php $buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org"); ?>
 						<tr>
 							<td> &#149; <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
 							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
@@ -219,9 +219,11 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 							</td>
 						</tr>
 						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
+							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
+										<a href="http://<?php print $buildServer[0]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
 							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>
+							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
+										<a href="http://<?php print $buildServer[2]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
 							</td>
 						</tr>
 						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
@@ -230,6 +232,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 										<a href="http://download.eclipse.org/technology/dltk/downloads/">DLTK</a>,
 										<a href="http://www.eclipse.org/datatools/downloads.php">DTP</a>,
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
+										<a href="http://download.eclipse.org/dsdp/tm/downloads/">TM &amp; RSE</a>,
 										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
 							</td>
 						</tr>
