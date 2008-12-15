@@ -898,7 +898,8 @@ function findCatg($url) {
 		"21xtext" => "tmf-xtext-",
 		"20xpand" => "m2t-xpand-",
 		"19dtp" => "dtp-|dtp_",
-		"18dltk" => "dltk-",
+		"18dltk-core" => "dltk-core-",
+		"18dltk-rse" => "dltk-rse-",
 		"17teneo" => "emf-teneo-|emft-teneo-",
 		"16compare" => "emft-compare-",
 		"15uml2tools" => "mdt-uml2tools-",
@@ -915,9 +916,9 @@ function findCatg($url) {
 		"04orbit" => "orbit-|orbitBundles-",
 		"03uml2" => "mdt-uml2-|uml2-",
 		"02emf" => "emf-runtime-|emf-xsd-|emf-sdo-xsd-",
-		"01eclipsecvsclient" => "eclipse-CVS-Client-",
-		"01eclipseplatform" => "eclipse-platform-",
-		"01eclipse" => "eclipse-",
+		"01eclipse-cvs-client" => "eclipse-CVS-Client-",
+		"01eclipse-platform" => "eclipse-platform-",
+		"01eclipse-sdk" => "eclipse-SDK-",
 		"99other" => "/"
 	);
 	foreach ($matches as $catg => $match) {
