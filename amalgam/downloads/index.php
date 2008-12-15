@@ -67,6 +67,10 @@ ob_start();
 			<td/>
 			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
 		</tr>
+		<tr>
+			<td/>
+			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081214-2121/index.php">I20081214-2121</a></td>
+		</tr>
 		<tr/><tr/><tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
