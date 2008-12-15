@@ -890,8 +890,11 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"23rse" => "RSE-",
+		"22xsd" => "xsd-",
+		"21xtext" => "tmf-xtext-",
 		"20xpand" => "m2t-xpand-",
-		"19dtp" => "dtp-",
+		"19dtp" => "dtp-|dtp_",
 		"18dltk" => "dltk-",
 		"17teneo" => "emf-teneo-|emft-teneo-",
 		"16compare" => "emft-compare-",
