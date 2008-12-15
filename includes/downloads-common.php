@@ -86,6 +86,7 @@ $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
 
 	"emf" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=emf#emf\">EMF</a>",
+	"emfruntime" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=emf#emf\">EMF</a>",
 	"net4j" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=net4j#net4j\">Net4j</a>",
 	"query" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=query#query\">Query</a>",
 	"teneo" => "<a href=\"http://www.eclipse.org/modeling/emf/?project=teneo#teneo\">Teneo</a>",
@@ -100,7 +101,8 @@ $deps = array(
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"uml2tools" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools\">UML2 Tools</a>",
 
-	"dltk" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
+	"dltkcore" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
+	"dltkrse" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
 	"dtp" => "<a href=\"http://www.eclipse.org/dtp/\">DTP</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
@@ -109,6 +111,7 @@ $deps = array(
 	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>",
 	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
 	"xtext" => "<a href=\"http://www.eclipse.org/modeling/tmf/?project=xtext#xtext\">Xtext</a>",
+	"xsdruntime" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=xsd#xsd\">XSD</a>",
 	
 );
 
