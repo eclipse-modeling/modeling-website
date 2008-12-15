@@ -101,6 +101,7 @@ $deps = array(
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
 	"uml2tools" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2tools#uml2tools\">UML2 Tools</a>",
 
+	"dltk" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
 	"dltkcore" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (Core)",
 	"dltkrse" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (RSE)",
 	"dtp" => "<a href=\"http://www.eclipse.org/dtp/\">DTP</a>",
