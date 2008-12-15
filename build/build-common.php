@@ -916,9 +916,7 @@ function findCatg($url) {
 		"04orbit" => "orbit-|orbitBundles-",
 		"03uml2" => "mdt-uml2-|uml2-",
 		"02emf" => "emf-runtime-|emf-xsd-|emf-sdo-xsd-",
-		"01eclipse-cvs-client" => "eclipse-CVS-Client-",
-		"01eclipse-platform" => "eclipse-platform-",
-		"01eclipse-sdk" => "eclipse-SDK-",
+		"01eclipse" => "eclipse-SDK-",
 		"99other" => "/"
 	);
 	foreach ($matches as $catg => $match) {
