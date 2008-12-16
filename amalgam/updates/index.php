@@ -12,7 +12,9 @@ ob_start();
 			<tr>
 				<td align="top">
 				The Amalgamation project provides product-based <a href="http://www.eclipse.org/modeling/amalgam/downloads/">downloads</a>.  A p2 repository is produced for each 
-				build and is accessible from the build's download page.  For example, entering the following URL for DSL Toolkit build I20081215-1608 to install any of its features or bundles: <a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/">http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/</a>
+				build and is accessible from the build's download page.  
+				<br/><br/>
+				For example, enter the following URL for DSL Toolkit build I20081215-1608 to install any of its features or bundles: <a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/">http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/</a>
 				</td>
 			</tr>
 		</table><hr/>
@@ -23,6 +25,18 @@ ob_start();
 		<hr class="clearer" />
 		
 	</div>	 
+	
+	<div id="rightcolumn">
+		<br />
+		<div class="sideitem">
+		   <h6>Incubation</h6>
+		   <p>Amalgam is currently in the <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
+		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
+		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" border="0"/></a>
+		   </div>
+		</div>
+		   
+	</div>
 	
 </div>
 
