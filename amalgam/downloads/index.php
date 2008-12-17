@@ -71,9 +71,9 @@ ob_start();
 		</tr>
 		<tr>
 			<th/>
-			<th>Milestone</th>
+			<th align="left">Milestone</th>
 			<th/>
-			<th>Integration</th>
+			<th align="left">Integration</th>
 			<th/><th/>
 		</tr>
 		<tr>
@@ -111,9 +111,9 @@ ob_start();
 		</tr>
 		<tr>
 			<th/>
-			<th>Milestone</th>
+			<th align="left">Milestone</th>
 			<th/>
-			<th>Integration</th>
+			<th align="left">Integration</th>
 			<th/><th/>
 		</tr>
 		<tr>
@@ -128,7 +128,7 @@ ob_start();
 			<td/>
 			<td>N/A</td>
 			<td/>
-			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
 			<td/><td/>
 		</tr>
 		<tr>
@@ -137,16 +137,16 @@ ob_start();
 		</tr>
 		<tr>
 			<th/>
-			<th>Milestone</th>
+			<th align="left">Milestone</th>
 			<th/>
-			<th>Integration</th>
+			<th align="left">Integration</th>
 			<th/><th/>
 		</tr>
 		<tr>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20081216-1634/index.php">1.0M3</a></td>
 			<td/>
-			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
 			<td/><td/>
 		</tr>
 	</table>
