@@ -52,49 +52,69 @@ ob_start();
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
 		</tr>
 		<tr>
-			<th></th><th colspan="2" align="left">Milestone</th><th/><th colspan="2" align="left">Integration</th>
+			<th/>
+			<th>Milestone</th>
+			<th/>
+			<th>Integration</th>
+			<th/><th/>
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="2">N/A</td>
+			<td>N/A</td>
 			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
+			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
 		</tr>
 		<tr>
-			<th></th><th colspan="2" align="left">Milestone</th><th/><th colspan="2" align="left">Integration</th>
+			<th/>
+			<th>Milestone</th>
+			<th/>
+			<th>Integration</th>
+			<th/><th/>
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20081216-1634/index.php">1.0M3</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20081216-1634/index.php">1.0M3</a></td>
 			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
+			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="2">N/A</td>
+			<td>N/A</td>
 			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081129-0641/index.php">I20081129-0641</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081129-0641/index.php">I20081129-0641</a></td>
+			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="2">N/A</td>
+			<td>N/A</td>
 			<td/>
 			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
+			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="2">N/A</td>
+			<td>N/A</td>
 			<td/>
 			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1953/index.php">I20081215-1953</a></td>
+			<td/><td/>
 		</tr>
 		<tr/><tr/><tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
 			<td colspan="5" width="200"><b>Modeler<b></td>
+		</tr>
+		<tr>
+			<th/>
+			<th>Milestone</th>
+			<th/>
+			<th>Integration</th>
+			<th/><th/>
 		</tr>
 		<tr>
 			<td/>
@@ -106,15 +126,28 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
+			<td>N/A</td>
+			<td/>
 			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
+			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
 		</tr>
 		<tr>
+			<th/>
+			<th>Milestone</th>
+			<th/>
+			<th>Integration</th>
+			<th/><th/>
+		</tr>
+		<tr>
+			<td/>
+			<td>N/A</td>
 			<td/>
 			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
+			<td/><td/>
 		</tr>
 	</table>
 
