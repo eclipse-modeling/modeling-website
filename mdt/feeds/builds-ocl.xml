@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ocl Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml" rel="self" type="application/atom+xml"/>
-  <updated>2008-12-09T22:05:46Z</updated>
+  <updated>2008-12-17T20:45:13Z</updated>
   <author>
     <name>ocl Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-ocl.xml</id>
+  <entry>
+    <title>[announce] ocl 1.3.0M4 (S200812171440) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200812171440#S200812171440"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200812171440#S200812171440</id>
+    <updated>2008-12-17T20:45:13Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200812171440" href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=S200812171440#S200812171440" type="S" vanityname="1.3.0M4" version="1.3.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.3.0/S200812171440/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=ocl</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=ocl&amp;version=S200812171440
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-ocl-all-SDK-1.3.0M4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/ocl/downloads/drops/1.3.0/S200812171440/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/eclipse-SDK-3.5M4-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200812151800/emf-xsd-SDK-2.5.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20081025033911/orbit-S20081025033911.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/mdt/uml2/downloads/drops/3.0.0/S200812161215/mdt-uml2-SDK-3.0.0M4.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] ocl I200812091600 (1.3.0.I200812091600) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=ocl&amp;showAll=1&amp;hlbuild=I200812091600#I200812091600"/>
