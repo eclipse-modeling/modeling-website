@@ -60,7 +60,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
-			<td/>
+			<td>n/a</td>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
 			<td/>
@@ -126,7 +126,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
-			<td/>
+			<td>n/a</td>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
 			<td/>
