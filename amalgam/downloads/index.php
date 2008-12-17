@@ -53,9 +53,9 @@ ob_start();
 		</tr>
 		<tr>
 			<th/>
-			<th>Milestone</th>
+			<th align="left">Milestone</th>
 			<th/>
-			<th>Integration</th>
+			<th align="left">Integration</th>
 			<th/><th/>
 		</tr>
 		<tr>
