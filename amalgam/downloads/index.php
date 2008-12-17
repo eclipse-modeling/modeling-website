@@ -60,7 +60,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td>N/A</td>
+			<td/>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
 			<td/><td/>
@@ -85,21 +85,21 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td>N/A</td>
+			<td/>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081129-0641/index.php">I20081129-0641</a></td>
 			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
-			<td>N/A</td>
+			<td/>
 			<td/>
 			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
 			<td/><td/>
 		</tr>
 		<tr>
 			<td/>
-			<td>N/A</td>
+			<td/>
 			<td/>
 			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1953/index.php">I20081215-1953</a></td>
 			<td/><td/>
@@ -125,8 +125,15 @@ ob_start();
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
 		</tr>
 		<tr>
+			<th/>
+			<th align="left">Milestone</th>
+			<th/>
+			<th align="left">Integration</th>
+			<th/><th/>
+		</tr>
+		<tr>
 			<td/>
-			<td>N/A</td>
+			<td/>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081126-0759/index.php">I20081126-0759</a></td>
 			<td/><td/>
