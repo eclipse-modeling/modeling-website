@@ -52,8 +52,13 @@ ob_start();
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
 		</tr>
 		<tr>
+			<th></th><th colspan="2">Milestone</th><th/><th colspan="2">Integration</th>
+		</tr>
+		<tr>
 			<td/>
-			<td colspan="5"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
+			<td colspan="2"/>
+			<td/>
+			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
 		</tr>
 		<tr>
 			<td/>
