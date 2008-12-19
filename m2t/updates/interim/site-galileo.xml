@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/m2t/updates/interim/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/m2t/updates/interim/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/m2t/updates/interim/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- MTL 0.8.0M4 I200812191016 -->
+	<category-def label="M2T MTL SDK 0.8.0M4 I200812191016" name="M2T MTL SDK 0.8.0M4 I200812191016">
+		<description>
+M2T MTL SDK 0.8.0M4 I200812191016: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.mtl.doc" version="0.8.0.v200812191016" url="features/org.eclipse.mtl.doc_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+	<feature id="org.eclipse.mtl.examples" version="0.8.0.v200812191016" url="features/org.eclipse.mtl.examples_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+	<feature id="org.eclipse.mtl.runtime" version="0.8.0.v200812191016" url="features/org.eclipse.mtl.runtime_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+	<feature id="org.eclipse.mtl.sdk" version="0.8.0.v200812191016" url="features/org.eclipse.mtl.sdk_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+	<feature id="org.eclipse.mtl.source" version="0.8.0.v200812191016" url="features/org.eclipse.mtl.source_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+	<feature id="org.eclipse.mtl" version="0.8.0.v200812191016" url="features/org.eclipse.mtl_0.8.0.v200812191016.jar" patch="false">
+		<category name="M2T MTL SDK 0.8.0M4 I200812191016"/>
+	</feature>
+
+</site>
