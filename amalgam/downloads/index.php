@@ -80,28 +80,7 @@ ob_start();
 			<td/><td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20081216-1634/index.php">1.0M3</a></td>
 			<td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
-			<td/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td/>
-			<td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081129-0641/index.php">I20081129-0641</a></td>
-			<td/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td/>
-			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
-			<td/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td/>
-			<td/>
-			<td colspan="2"><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1953/index.php">I20081215-1953</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1953/index.php">I20081215-1953</a></td>
 			<td/>
 		</tr>
 		<tr/><tr/><tr/>
