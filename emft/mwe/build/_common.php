@@ -11,12 +11,13 @@ $options = array (
 		"build.eclipse.org=------------,------------",
 		"0.7.0=HEAD,/opt/public/common/ibm-java2-ppc-50"
 	),
+	"regex" => "[ISR]200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|[SR]200.*/emf-sdo-xsd-SDK-|[SR]200.*/mdt-uml2-SDK-|[SR]200.*/orbit-R*",
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "b.kolb@kolbware.de", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "dennis.huebner@itemis.de", // prefil email contact box with comma-sep'd list
 	
-	"Users" => array("bkolb","bkolb",null) /* build user, eclipse cvs user, IES cvs user */
+	"Users" => array("dhubner","dhubner",null) /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
