@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="Project Name">
-   <release projectid="modeling.m2t.mtl" version="0.7.0"/>
+   <release projectid="modeling.m2t.mtl" version="0.8.0"/>
    <introduction>
      <html:div>
      This document lays out the feature and API set for the 1.0.0 release of the M2T MTL project.  
