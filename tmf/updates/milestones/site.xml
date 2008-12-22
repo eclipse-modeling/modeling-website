@@ -7,6 +7,34 @@
 	</description>
 
 
+	<!-- XTEXT 0.7.0M4 S200812220322 (Incubation) -->
+	<category-def label="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322" name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322">
+		<description>
+TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.xtext.docs" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.docs_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.examples.source" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.examples.source_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.examples" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.examples_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.runtime.source" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.runtime.source_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.runtime" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.runtime_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.sdk.source" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.sdk.source_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+	<feature id="org.eclipse.xtext.sdk" version="0.7.0.v200812220322" url="features/org.eclipse.xtext.sdk_0.7.0.v200812220322.jar" patch="false">
+		<category name="TMF XTEXT SDK (Incubation) 0.7.0M4 S200812220322"/>
+	</feature>
+
 	<!-- XTEXT 0.7.0M3 S200811120839 -->
 	<category-def label="TMF XTEXT SDK 0.7.0M3 S200811120839" name="TMF XTEXT SDK 0.7.0M3 S200811120839">
 		<description>
