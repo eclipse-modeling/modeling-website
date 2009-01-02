@@ -59,13 +59,13 @@ $dls = array(
 	),*/
 	"/emf" => array(
 		"EMF and XSD" => array(
-			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
+			"<img alt=\"All-In-One SDK Zip\" src=\"/modeling/images/dl-icon-aio-sdk.gif\"/> <b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
 			"Models" => "Models",					
 			"Automated Tests" => "Automated-Tests",
 			"Examples" => "Examples"
 		),
 		"EMF, SDO, and XSD" => array(
-			"<b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.5.0M4
+			"<img alt=\"All-In-One SDK Zip\" src=\"/modeling/images/dl-icon-aio-sdk.gif\"/> <b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.5.0M4
 			"Standalone" => "Standalone",			# deprecated EMF 2.3.0
 			"Models" => "Models",					# deprecated EMF 2.5.0M4
 			"Automated Tests" => "Automated-Tests",	# deprecated EMF 2.5.0M4

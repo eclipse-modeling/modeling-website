@@ -61,30 +61,32 @@ function doRequirements()
 <div class="homeitem3col">
 	<h3>Getting Started</h3>
 		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest
-		<b style="color:green">All-In-One SDK</b> bundle, which includes source, runtime and docs
-		for EMF, SDO, and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (now part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT</a> project).
-		<?php echo $isUpdate ? "" : 'Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Update Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
+		<img alt="All-In-One SDK Zip" src="/modeling/images/dl-icon-aio-sdk.gif"/> <b style="color:green">All-In-One SDK</b> bundle, which includes source, runtime and docs
+		for EMF and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT</a> project).
+		<?php echo $isUpdate ? "" : 'Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Install Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
 
 	<h2 style="padding-left:10px">Minimum Requirements</h2>
 	<table cellpadding="2" cellspacing="4" border="0" style="padding-left:10px">
 	<tr align="left"><th>EMF</th><th><a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a><a href="<?php echo $reqNotePrefix; ?>#req_note_1">*</a></th><th>Java</th>
 		<th>Notes</th>
 	</tr>
-	<tr><td>2.4</td><td>3.4</td><td>5.0</td>
+	<tr><td>2.5<a href="<?php echo $reqNotePrefix; ?>#req_note_2">**</a></td><td>3.5</td><td>5.0</td>
 		<td rowspan="5" valign="top">
 			<ul>
 				<li style="border:0;padding:1px"><a name="req_note_1">*</a> Eclipse is only required for EMF's tools.
 					For runtime-only use, only a JRE is required.</li>
-				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.3.x contains significant, though binary compatible,
+				<li style="border:0;padding:1px"><a name="req_note_2">**</a> EMF 2.5.x <a href="http://bugs.eclipse.org/251402">no longer includes SDO</a>.</li>
+				<li style="border:0;padding:1px"><a name="req_note_3">***</a> EMF 2.3.x contains significant, though binary compatible,
 					<a href="http://www.eclipse.org/modeling/emf/docs/#whatsnew">changes from previous releases</a>.</li>
-				<li style="border:0;padding:1px"><a name="req_note_3">***</a> If you are using Sun's 1.4 JRE, please see
+				<li style="border:0;padding:1px"><a name="req_note_4">****</a> If you are using Sun's 1.4 JRE, please see
 					<a href="http://wiki.eclipse.org/MDT/XSD/FAQ/Sun_JDK14_Crimson_DOM">this note</a>.</li>
 			</ul>
 		</td>
 	</tr>
-	<tr><td>2.3<a href="<?php echo $reqNotePrefix; ?>#req_note_2">**</a></td><td>3.3</td><td>5.0</td></tr>
-	<tr><td>2.2</td><td>3.2</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_3">***</a></td></tr>
-	<tr><td>2.1</td><td>3.1</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_3">***</a></td></tr>
+	<tr><td>2.4</td><td>3.4</td><td>5.0</td>
+	<tr><td>2.3<a href="<?php echo $reqNotePrefix; ?>#req_note_3">***</a></td><td>3.3</td><td>5.0</td></tr>
+	<tr><td>2.2</td><td>3.2</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_4">****</a></td></tr>
+	<tr><td>2.1</td><td>3.1</td><td>1.4.2<a href="<?php echo $reqNotePrefix; ?>#req_note_4">****</a></td></tr>
 	<tr><td>2.0</td><td>3.0</td><td>1.3.1</td></tr>
 	</table>
 </div>

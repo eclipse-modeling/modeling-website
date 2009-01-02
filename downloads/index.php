@@ -55,14 +55,18 @@ function toggleDetails(id)
 
 	<p><table cellpadding="2"><tr valign="top">
 		<td><img src="/modeling/images/modeling_install_all-in-one.jpg"></td>
-		<td>The simplest way to get started with Eclipse Modeling is to download the <br/><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymeder"><b style="color:green">All-In-One</b> Ganymede Modeling Tools Package</a>.		
+		<td>The simplest way to get started with Eclipse Modeling is to download the <br/>
+		<a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymedesr1">
+		<img alt="All-In-One Bundle including Eclipse and required dependencies" src="/modeling/images/dl-icon-aio-bundle.gif"/> <b style="color:green">All-In-One</b> 
+		Ganymede SR1 
+		Modeling Tools Package</a>.
 			<p>
 			<blockquote>	
 			<ul>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-win32.zip">Windows 32bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk.tar.gz">Linux 32bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></li>
-				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/R/eclipse-modeling-ganymede-incubation-macosx-carbon.tar.gz">Mac OSx</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-win32.zip">Windows 32bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk.tar.gz">Linux 32bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></li>
+				<li style="border:0px;padding:2px"><a href="http://www.eclipse.org/modeling/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Mac OSx</a></li>
 				<li style="padding:2px"><a href="http://download.eclipse.org/eclipse/downloads/">Other Platforms...</a></li>
 		
 			</ul>
@@ -70,7 +74,7 @@ function toggleDetails(id)
 			</p>
 			<p>
 				If you already have Eclipse installed, you can update it using the <br/>
-				<a href="http://download.eclipse.org/releases/ganymede/"><b style="color:green">All-In-One</b> Ganymede Update Site</a>. 
+				<a href="http://download.eclipse.org/releases/ganymede/"><img alt="Archived Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> <b style="color:green">All-In-One</b> Ganymede Update Site</a>. 
 			</p>
 		</td>
 	</tr></table></p>

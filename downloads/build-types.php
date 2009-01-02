@@ -5,23 +5,34 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 ob_start(); ?>
 <div id="midcolumn">
 	<div class="homeitem3col">
-		<h3>Zip Bundle Types</h3>
+		<h3>File Types</h3>
 		
 		<ul>
+		<li><div style="float:right"><img alt="All-In-One Bundle including Eclipse and required dependencies" src="/modeling/images/dl-icon-aio-bundle.gif"/> </div><b style="color:green">All-In-One Bundle</b> - Some projects may produce an aggregate zip or bundle, containing SDK, requirements, and the Eclipse platform. Where applicable, choose the version that matches your platform (eg., Windows, Linux GTK, Mac OS X). 
+		[<a href="http://eclipse.org/modeling/downloads/">Modeling</a>, <a href="http://www.eclipse.org/pdt/downloads/">PDT</a>]</li> 
+
+		<li><div style="float:right"><img alt="All-In-One SDK Zip" src="/modeling/images/dl-icon-aio-sdk.gif"/> </div><b style="color:green">All-In-One SDK</b> - 
+		Some projects may produce multiple SDKs. This composite SDK will thus contain multiple SDKs in one convenient download. 
+		[<a href="http://www.eclipse.org/modeling/emf/downloads/">EMF</a>, <a href="http://www.eclipse.org/gef/downloads/">GEF</a>]</li>
+
+		<li><div style="float:right"><img alt="Archived Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> </div><b style="color:green">Archived Update Site</b> - 
+		These zips contains the an archived update site for a single build, including all features and plugins from the runtime and SDK. To install, download the zip then point Eclipse's Install Manager at this <b>Local</b> Update Site, then select the features you want to install. [<a href="http://wiki.eclipse.org/Modeling_Project/Installation">Modeling</a>, <a href="http://wiki.eclipse.org/PDT/Installation">PDT</a>]</li>
+
 		<li><b>SDK</b> - 
-		These zips are the developer's SDK. They contain the runtime plugins, source and documentation for developers that want to extend and 
-		use EMF, SDO and XSD. This can also be installed via <a href="http://www.eclipse.org/modeling/emf/updates/">Update Manager</a>.</li>
+		These zips are for developers wishing to extend the project. They contain the runtime plugins, source and documentation to assist in using, developing, building on top of the project. The contents of this zip can also be obtained from a remote, archived, or local update site.</li>
 		<li><b>Runtime</b> - 
-		These zips are the normal EMF, SDO and XSD installations. They contain only the features and plugins. There is no source, documentation or 
-		developer files. They are to be used for normal customer installation.</li>
-		<li><b>Standalone</b> - 
-		It seems that there is life outside Eclipse. These zips were created to simplify the use of EMF in this scenario. Each zip contains a "readme" document that explains its purpose and how you can use its contents.</li>
-		<li><b>Models</b> - 
-		It seems that there is life outside Eclipse. These zip were created to simplify the use of EMF in this scenario. Each zip contains a "readme" document that explains its purpose and how you can use its contents.</li>
-		<li><b>Automated Tests</b> - 
-		These zips contain the JUnit tests for the EMF, SDO and XSD plugins.</li>
+		Runtime zips contain only the features and plugins required to run the project as an end-user. There is no source, documentation or 
+		developer files. They are to be used for normal customer installation. The contents of this zip can also be obtained from a remote, archived, or local update site.</li>
 		<li><b>Examples</b> - 
-		These zips contains the examples for EMF, SDO and XSD. It includes source and can be imported into the workspace as an existing project. This can also be installed via <a href="http://www.eclipse.org/modeling/emf/updates/">Update Manager</a>.</li>
+		These zips contains examples, including source and can be imported into the workspace as an existing project. Examples may also be included in the SDK feature, and thus SDK zip, or may be contained separately, at the project's discretion.</li>
+
+		<li><b>Automated Tests</b> - 
+		These zips contain the project's automated JUnit tests, along with the plugins required to run them with Eclipse.</li>
+
+		<li><b>Standalone</b> - 
+		It seems that there is life outside Eclipse. These zips were created to simplify the use of EMF in this scenario. Each zip contains a "readme" document that explains its purpose and how you can use its contents. [<a href="http://www.eclipse.org/modeling/emf/downloads/">EMF</a>]</li>
+		<li><b>Models</b> - 
+		It seems that there is life outside Eclipse. These zip were created to simplify the use of EMF in this scenario. Each zip contains a "readme" document that explains its purpose and how you can use its contents. [<a href="http://www.eclipse.org/modeling/emf/downloads/">EMF</a>]</li>
 		</ul>
 		
 	</div>
