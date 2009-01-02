@@ -16,7 +16,8 @@ ob_start(); ?>
 		[<a href="http://www.eclipse.org/modeling/emf/downloads/">EMF</a>, <a href="http://www.eclipse.org/gef/downloads/">GEF</a>]</li>
 
 		<li><div style="float:right"><img alt="Archived Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> </div><b style="color:green">Archived Update Site</b> - 
-		These zips contains the an archived update site for a single build, including all features and plugins from the runtime and SDK. To install, download the zip then point Eclipse's Install Manager at this <b>Local</b> Update Site, then select the features you want to install. [<a href="http://wiki.eclipse.org/Modeling_Project/Installation">Modeling</a>, <a href="http://wiki.eclipse.org/PDT/Installation">PDT</a>]</li>
+		These zips contains the an archived update site for a single build, including all features and plugins from the runtime and SDK. 
+		To install, download the zip, point Eclipse's Install Manager at this <b>Local</b> Update Site, and select the features you want to install. [<a href="http://wiki.eclipse.org/Modeling_Project/Installation">Modeling</a>, <a href="http://wiki.eclipse.org/PDT/Installation">PDT</a>]</li>
 
 		<li><b>SDK</b> - 
 		These zips are for developers wishing to extend the project. They contain the runtime plugins, source and documentation to assist in using, developing, building on top of the project. The contents of this zip can also be obtained from a remote, archived, or local update site.</li>
