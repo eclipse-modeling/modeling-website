@@ -35,6 +35,18 @@ ob_start();
 	</div>
 
 	<div class="sideitem">
+		<h6>Buy The Book</h6>
+		
+		<p align="center">
+			<a href="http://www.informit.com/store/product.aspx?isbn=9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
+		</p>
+		<ul>
+		<li><a href="http://www.informit.com/store/product.aspx?isbn=9780321331885">View Details &amp; Order</a>
+		<li><a href="/modeling/emf/images/book/EMF-2nd-Ed-Covers-Large.jpg">View Front &amp; Back Covers</a>
+		</ul>
+	</div>
+
+	<div class="sideitem">
 		<h6>News</h6>
 		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/modeling/emft/news/news.xml")); ?>
 		<ul>
@@ -75,9 +87,10 @@ ob_start();
 			<a href="http://wiki.eclipse.org/index.php/Category:M2T">M2T</a></li>
 			<li><a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">Using Update Manager</a></li>
 			<li><a href="http://www.eclipse.org/newsgroups/">Eclipse newsgroups</a></li>
-			<li><a href="http://wiki.eclipse.org/index.php/EMFT_Procedures">EMFT Build &amp; Promote</a></li>
+			<li><a href="http://wiki.eclipse.org/Modeling_Project_Releng">EMFT Release Engineering</a></li>
 		</ul>
 	</div>
+
 </div>
 <?php
 $html = ob_get_contents();
