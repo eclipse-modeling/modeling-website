@@ -130,7 +130,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
-			<td>n/a</td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090107-0844/index.php">1.0M4</a></td>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
 			<td/>
