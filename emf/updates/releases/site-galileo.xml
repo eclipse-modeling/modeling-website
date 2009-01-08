@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/emf/updates/releases/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/emf/updates/releases/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/emf/updates/releases/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- TENEO 1.0.2 -->
+	<category-def label="EMF TENEO SDK 1.0.2" name="EMF TENEO SDK 1.0.2">
+		<description>
+EMF TENEO SDK 1.0.2: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200901081641-1-07w311_12192752" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200901081641-1-07w311_12192752.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200901081641-4-3_kE77g7A7cAUMA" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200901081641-4-3_kE77g7A7cAUMA.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200901081641-3-287D4JELbabMYObLWf3_udVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200901081641-3-287D4JELbabMYObLWf3_udVVFG.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200901081641-78-77DUUEFLEMFDMz0kM" url="features/org.eclipse.emf.teneo.source_1.0.1.v200901081641-78-77DUUEFLEMFDMz0kM.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.2"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200901081641-78-77DUUEFLEMFDMz0kM" url="features/org.eclipse.emf.teneo_1.0.1.v200901081641-78-77DUUEFLEMFDMz0kM.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.2"/>
+	</feature>
+
+</site>
