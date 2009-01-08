@@ -114,6 +114,9 @@ $deps = array(
 	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
 	"xtext" => "<a href=\"http://www.eclipse.org/modeling/tmf/?project=xtext#xtext\">Xtext</a>",
 	"xsdruntime" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=xsd#xsd\">XSD</a>",
+	"qvto" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
+	"qvtoml" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
+
 	
 );
 
