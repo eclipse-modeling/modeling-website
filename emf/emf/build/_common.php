@@ -9,7 +9,7 @@ else if (is_file($_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-com
 }
 
 $options = array (
-	"BaseBuilderBranch" => "RC2_34",
+	"BaseBuilderBranch" => "R35_M4",
 
 	"BranchAndJDK" => array (
 	"emf.torolab.ibm.com=------------,------------",
