@@ -426,11 +426,11 @@ function setNote(val)
 	// defined statically -- replace this in _common.php using \$options[regex]
     note = document.getElementById('note');
 	if (val == "net4j")
-		note.innerHTML = "Requires 1 SDK: Eclipse"
+		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Orbit"
+	else if (val == "cdo")
+		note.innerHTML = "Requires 5 SDKs: Eclipse, EMF, Orbit, Net4j, Teneo"
 	else if (val == "eodm" || val == "compare" || val == "teneo")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
-	else if (val == "cdo")
-		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Net4j"
 	else if (val == "mwe")
 		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Orbit, WTP"
 	else if (val == "search")
