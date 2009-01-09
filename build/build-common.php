@@ -428,7 +428,7 @@ function setNote(val)
 	if (val == "net4j")
 		note.innerHTML = "Requires 3 SDKs: Eclipse, EMF, Orbit"
 	else if (val == "cdo")
-		note.innerHTML = "Requires 5 SDKs: Eclipse, EMF, Orbit, Net4j, Teneo"
+		note.innerHTML = "Requires 4 SDKs: Eclipse, EMF, Net4j, Teneo"
 	else if (val == "eodm" || val == "compare" || val == "teneo")
 		note.innerHTML = "Requires 2 SDKs: Eclipse & EMF"
 	else if (val == "mwe")
