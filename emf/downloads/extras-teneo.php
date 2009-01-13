@@ -1,4 +1,10 @@
 <?php
+// archives releases
+$oldrels = array(
+	"1.0.1" => "200809231814",
+	"1.0.0" => "200806111928",
+);
+
 function doRequirements()
 {
 ?>
