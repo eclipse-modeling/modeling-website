@@ -896,7 +896,7 @@ function findCatg($url) {
 	$matches = array(
 		"24qvto" => "m2m-qvtoml-",
 		"23rse" => "RSE-",
-		"22xsd" => "xsd-",
+		"22xsd" => "xsd-runtime|xsd-SDK",
 		"21xtext" => "tmf-xtext-",
 		"20xpand" => "m2t-xpand-",
 		"19dtp" => "dtp-|dtp_",
