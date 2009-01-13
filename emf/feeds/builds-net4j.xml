@@ -39,50 +39,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] net4j 1.0.5SR1 (1.0.x.R200901090620) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620</id>
+    <title>[announce] net4j 1.0.5SR1 (S200901090620) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200901090620#S200901090620"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200901090620#S200901090620</id>
     <updated>2009-01-09T14:25:47Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200901090620" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620" type="R" vanityname="1.0.5SR1" version="1.0.x">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/R200901090620/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200901090620" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=S200901090620#S200901090620" type="S" vanityname="1.0.5SR1" version="1.0.5">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.5/S200901090620/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200901090620
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=S200901090620
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.5SR1.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/R200901090620/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/M20090107-0800/eclipse-SDK-M20090107-0800-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20081025033911/orbit-S20081025033911.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
-    <title>[announce] net4j 1.0.5SR1 (1.0.x.R200901090620) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620</id>
-    <updated>2009-01-09T14:20:11Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200901090620" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200901090620#R200901090620" type="R" vanityname="1.0.5SR1" version="1.0.x">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/R200901090620/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/emf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200901090620
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.5SR1.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/R200901090620/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.5/S200901090620/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -151,22 +123,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] net4j 1.0.4 (1.0.x.M200811211457) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811211457#M200811211457"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811211457#M200811211457</id>
+    <title>[announce] net4j 1.0.4 (R200811211457) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811211457#R200811211457"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811211457#R200811211457</id>
     <updated>2008-11-22T09:37:28Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200811211457" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811211457#M200811211457" type="M" vanityname="1.0.4" version="1.0.x">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/M200811211457/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200811211457" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811211457#R200811211457" type="R" vanityname="1.0.4" version="1.0.4">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.4/R200811211457/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=M200811211457
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200811211457
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.4.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/M200811211457/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.4/R200811211457/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -235,22 +207,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] net4j 1.0.3 (1.0.x.M200811030609) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811030609#M200811030609"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811030609#M200811030609</id>
+    <title>[announce] net4j 1.0.3 (R200811030609) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811030609#R200811030609"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811030609#R200811030609</id>
     <updated>2008-11-03T12:12:10Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200811030609" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200811030609#M200811030609" type="M" vanityname="1.0.3" version="1.0.x">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/M200811030609/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200811030609" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200811030609#R200811030609" type="R" vanityname="1.0.3" version="1.0.3">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.3/R200811030609/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=M200811030609
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200811030609
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.3.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.x/M200811030609/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.3/R200811030609/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -263,22 +235,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] net4j 1.0.2 (M200810161426) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810161426#M200810161426"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810161426#M200810161426</id>
+    <title>[announce] net4j 1.0.2 (R200810161426) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810161426#R200810161426"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810161426#R200810161426</id>
     <updated>2008-10-16T19:08:47Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200810161426" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810161426#M200810161426" type="M" vanityname="1.0.2" version="1.0.2">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.2/M200810161426/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200810161426" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810161426#R200810161426" type="R" vanityname="1.0.2" version="1.0.2">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.2/R200810161426/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=M200810161426
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200810161426
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.2.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.2/M200810161426/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.2/R200810161426/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
@@ -347,22 +319,22 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] net4j 1.0.1 (M200810131537) is available</title>
-    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810131537#M200810131537"/>
-    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810131537#M200810131537</id>
+    <title>[announce] net4j 1.0.1 (R200810131537) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810131537#R200810131537"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810131537#R200810131537</id>
     <updated>2008-10-13T21:09:37Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200810131537" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=M200810131537#M200810131537" type="M" vanityname="1.0.1" version="1.0.1">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.1/M200810131537/" log="buildlog.txt" map="directory.txt"/>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_0_maintenance" datetime="200810131537" href="http://www.eclipse.org/modeling/emf/downloads/?project=net4j&amp;showAll=1&amp;hlbuild=R200810131537#R200810131537" type="R" vanityname="1.0.1" version="1.0.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.1/R200810131537/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emf/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=net4j</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=M200810131537
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=net4j&amp;version=R200810131537
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-net4j-SDK-1.0.1.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.1/M200810131537/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/net4j/downloads/drops/1.0.1/R200810131537/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>
