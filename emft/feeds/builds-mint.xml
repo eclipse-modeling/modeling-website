@@ -94,12 +94,12 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] mint RC1 (0.7.1.M200809051636) is available</title>
+    <title>[announce] mint 0.7.1RC1 (M200809051636) is available</title>
     <link href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636"/>
     <id>http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636</id>
     <updated>2008-09-05T21:01:55Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200809051636" href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636" type="M" version="0.7.1">
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R0_7_maintenance" datetime="200809051636" href="http://www.eclipse.org/modeling/emft/downloads/?project=mint&amp;showAll=1&amp;hlbuild=M200809051636#M200809051636" type="M" vanityname="0.7.1RC1" version="0.7.1">
         <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emft/mint/downloads/drops/0.7.1/M200809051636/" log="buildlog.txt" map="directory.txt"/>
         <update>http://download.eclipse.org/modeling/emft/updates/</update>
         <downloads>http://www.eclipse.org/modeling/emft/downloads/?project=mint</downloads>
