@@ -16,11 +16,11 @@ $options = array (
 	* matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	* and /home/www-data/build/requests/dependencies.urls.txt 
 	* */
-	"regex" => "[ISR]200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|[SR]200.*/emf-runtime-|[SR]200.*/emf-sdo-xsd-SDK-|[SR]200.*/mdt-uml2-SDK-|[ISR]200.*/emft-mwe-SDK-|[SR]200.*/orbit-R*",
+	"regex" => "[ISR]200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|[SR]200.*/emf-runtime-|[SR]200.*/emf-sdo-xsd-SDK-|[SR]200.*/mdt-uml2-SDK-|[MISR]200.*/emft-mwe-SDK-|[SR]200.*/orbit-R*",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "dennis.huebner@itemis.de", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "xtext-dev@eclipse.org", // prefil email contact box with comma-sep'd list
 
 	"Users" => array (
 		"dhubner",
