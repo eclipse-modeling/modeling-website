@@ -18,7 +18,7 @@ $rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
 $downurl = ($isBuildServer ? "" : "http://www.eclipse.org");
 $bugurl = "https://bugs.eclipse.org";
 
-if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText)$/", $_GET["skin"], $regs))
+if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Lazarus|Miasma|Modern|OldStyle|Phoenix|PhoenixTest|PlainText|Nova)$/", $_GET["skin"], $regs))
 {
 	$theme = $regs[1];
 }
