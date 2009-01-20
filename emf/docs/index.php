@@ -154,6 +154,10 @@ print <<<EOHTML
 
 	<ul>
 		<li>
+			<div>Jan 20 2009</div><a href="http://wiki.eclipse.org/EMF/EMF_2.5/Minimal_EObject_Implementation"><u>Minimal EObject Implementation</u> (2.5.0.I200901201800)</a>
+		</li>
+
+		<li>
 			<div>Jan 22 2008</div><a href="http://wiki.eclipse.org/EMF/EMF_2.4/Packaging_Changes"><u>EMF 2.4 Packaging Changes</u> (2.4.0.I200801221930)</a>
 		</li>
 
@@ -600,4 +604,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.20 2008/10/12 05:47:43 nickb Exp $ -->
+<!-- $Id: index.php,v 1.21 2009/01/20 19:55:31 davidms Exp $ -->
