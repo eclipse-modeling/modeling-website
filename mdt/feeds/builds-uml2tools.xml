@@ -4,11 +4,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>uml2tools Builds</title>
   <link href="http://download.eclipse.org/modeling/mdt/feeds/builds-uml2tools.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-01-06T23:40:01Z</updated>
+  <updated>2009-01-21T17:23:27Z</updated>
   <author>
     <name>uml2tools Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/mdt/feeds/builds-uml2tools.xml</id>
+  <entry>
+    <title>[announce] uml2tools I200901211149 (0.9.0.I200901211149) is available</title>
+    <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=I200901211149#I200901211149"/>
+    <id>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=I200901211149#I200901211149</id>
+    <updated>2009-01-21T17:23:27Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200901211149" href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=I200901211149#I200901211149" type="I" vanityname="I200901211149" version="0.9.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.9.0/I200901211149/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/mdt/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/mdt/news/relnotes.php?project=uml2tools&amp;version=I200901211149
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">mdt-uml2tools-SDK-incubation-I200901211149.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/mdt/uml2tools/downloads/drops/0.9.0/I200901211149/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/eclipse-SDK-3.5M4-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200812151800/emf-xsd-SDK-2.5.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/R200806091744/emf-query-SDK-1.2.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/gmf/gmf/downloads/drops/2.2.0/I200901150958/gmf-sdk-I200901150958.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/m2m/qvtoml/downloads/drops/2.0.0/S200812290749/m2m-qvtoml-SDK-2.0.0M4.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/3.0.0/S200812221002/mdt-uml2-SDK-3.0.0M4a.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/gef/downloads/drops/3.5.0/S200812171720/GEF-SDK-3.5.0M4.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/transaction/downloads/drops/1.3.0/S200812171545/emf-transaction-SDK-1.3.0M4.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emf/validation/downloads/drops/1.3.0/S200812171513/emf-validation-SDK-1.3.0M4.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/gmf/gmf/downloads/drops/2.2.0/S200812311042/gmf-sdk-2.2.0M4a.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.3.0/S200812171440/mdt-ocl-SDK-1.3.0M4.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] uml2tools 0.9.0M4 (S200901061801) is available</title>
     <link href="http://www.eclipse.org/modeling/mdt/downloads/?project=uml2tools&amp;showAll=1&amp;hlbuild=S200901061801#S200901061801"/>
