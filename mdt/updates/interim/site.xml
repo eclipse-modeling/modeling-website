@@ -7,32 +7,32 @@
 	</description>
 
 
-	<!-- UML2TOOLS 0.9.0 I200812300846 (Incubation) -->
-	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846">
+	<!-- UML2TOOLS 0.9.0 I200901211149 (Incubation) -->
+	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149">
 		<description>
-MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846: contains runtime, source, and documentation.
+MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200812300846" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200901211149" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200812300846" url="features/org.eclipse.uml2.diagram_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200901211149" url="features/org.eclipse.uml2.diagram_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.def.source" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.def.source_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2tools.def.source" version="0.9.0.v200901211149" url="features/org.eclipse.uml2tools.def.source_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.def" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.def_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2tools.def" version="0.9.0.v200901211149" url="features/org.eclipse.uml2tools.def_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200812300846" url="features/org.eclipse.uml2tools.examples_0.8.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200901211149" url="features/org.eclipse.uml2tools.examples_0.8.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200901211149" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools_0.9.0.v200812300846.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	<feature id="org.eclipse.uml2tools" version="0.9.0.v200901211149" url="features/org.eclipse.uml2tools_0.9.0.v200901211149.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200901211149"/>
 	</feature>
 
 	<!-- UML2TOOLS 0.8.0 N200806041931 (Incubation) -->
@@ -283,26 +283,32 @@ MDT OCL SDK 1.2.0 I200805131600: contains runtime, source, and documentation.
 		<category name="MDT OCL SDK 1.2.0 I200805131600"/>
 	</feature>
 
-	<!-- UML2TOOLS 0.9.0 I200812300426 (Incubation) -->
-	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426">
+	<!-- UML2TOOLS 0.9.0 I200812300846 (Incubation) -->
+	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846">
 		<description>
-MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426: contains runtime, source, and documentation.
+MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200812300426" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200812300426.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
+	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200812300846" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
 	</feature>
-	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200812300426" url="features/org.eclipse.uml2.diagram_0.9.0.v200812300426.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
+	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200812300846" url="features/org.eclipse.uml2.diagram_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200812300426" url="features/org.eclipse.uml2tools.examples_0.8.0.v200812300426.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
+	<feature id="org.eclipse.uml2tools.def.source" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.def.source_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200812300426" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200812300426.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
+	<feature id="org.eclipse.uml2tools.def" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.def_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools" version="0.9.0.v200812300426" url="features/org.eclipse.uml2tools_0.9.0.v200812300426.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
+	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200812300846" url="features/org.eclipse.uml2tools.examples_0.8.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
+	</feature>
+	<feature id="org.eclipse.uml2tools" version="0.9.0.v200812300846" url="features/org.eclipse.uml2tools_0.9.0.v200812300846.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300846"/>
 	</feature>
 
 	<!-- UML2TOOLS 0.8.1 M200807170715 (Incubation) -->
@@ -444,26 +450,26 @@ MDT OCL SDK 1.2.3 M200811021306: contains runtime, source, and documentation.
 		<category name="MDT OCL SDK 1.2.3 M200811021306"/>
 	</feature>
 
-	<!-- UML2TOOLS 0.9.0 I200812120859 (Incubation) -->
-	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859">
+	<!-- UML2TOOLS 0.9.0 I200812300426 (Incubation) -->
+	<category-def label="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426" name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426">
 		<description>
-MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859: contains runtime, source, and documentation.
+MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200812120859" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200812120859.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859"/>
+	<feature id="org.eclipse.uml2.diagram.source" version="0.9.0.v200812300426" url="features/org.eclipse.uml2.diagram.source_0.9.0.v200812300426.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
 	</feature>
-	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200812120859" url="features/org.eclipse.uml2.diagram_0.9.0.v200812120859.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859"/>
+	<feature id="org.eclipse.uml2.diagram" version="0.9.0.v200812300426" url="features/org.eclipse.uml2.diagram_0.9.0.v200812300426.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200812120859" url="features/org.eclipse.uml2tools.examples_0.8.0.v200812120859.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859"/>
+	<feature id="org.eclipse.uml2tools.examples" version="0.8.0.v200812300426" url="features/org.eclipse.uml2tools.examples_0.8.0.v200812300426.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200812120859" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200812120859.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859"/>
+	<feature id="org.eclipse.uml2tools.sdk" version="0.9.0.v200812300426" url="features/org.eclipse.uml2tools.sdk_0.9.0.v200812300426.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
 	</feature>
-	<feature id="org.eclipse.uml2tools" version="0.9.0.v200812120859" url="features/org.eclipse.uml2tools_0.9.0.v200812120859.jar" patch="false">
-		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812120859"/>
+	<feature id="org.eclipse.uml2tools" version="0.9.0.v200812300426" url="features/org.eclipse.uml2tools_0.9.0.v200812300426.jar" patch="false">
+		<category name="MDT UML2TOOLS SDK (Incubation) 0.9.0 I200812300426"/>
 	</feature>
 
 	<!-- UML2TOOLS 0.8.1 M200807091048 (Incubation) -->
