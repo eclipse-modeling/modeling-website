@@ -84,26 +84,26 @@ EMF TRANSACTION SDK 1.2.0 I200805141131: contains runtime, source, and documenta
 		<category name="EMF TRANSACTION SDK 1.2.0 I200805141131"/>
 	</feature>
 
-	<!-- TENEO 1.0.2 M200812170122 -->
-	<category-def label="EMF TENEO SDK 1.0.2 M200812170122" name="EMF TENEO SDK 1.0.2 M200812170122">
+	<!-- TENEO 1.0.1 M200810130237 -->
+	<category-def label="EMF TENEO SDK 1.0.1 M200810130237" name="EMF TENEO SDK 1.0.1 M200810130237">
 		<description>
-EMF TENEO SDK 1.0.2 M200812170122: contains runtime, source, and documentation.
+EMF TENEO SDK 1.0.1 M200810130237: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200812170122-1-07w311923281233" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200812170122-1-07w311923281233.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.2 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200810130237-1-07w311921241348" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200810130237-1-07w311921241348.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200810130237"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200812170122-4-3_kE77cAEAY7AEE" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200812170122-4-3_kE77cAEAY7AEE.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.2 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200810130237-4-3_kE77cA7AI7EIY" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200810130237-4-3_kE77cA7AI7EIY.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200810130237"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200812170122-3-287D4JDMcbZMMVjSJUTeeEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200812170122-3-287D4JDMcbZMMVjSJUTeeEVVFG.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.2 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200810130237-3-287D4JDMabVMLWURrVgnFEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200810130237-3-287D4JDMabVMLWURrVgnFEVVFG.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200810130237"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200812170122-78-77DUUEFDMUN6EMUU" url="features/org.eclipse.emf.teneo.source_1.0.1.v200812170122-78-77DUUEFDMUN6EMUU.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.2 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200810130237-78-77DUUEFDMEMcEUd6" url="features/org.eclipse.emf.teneo.source_1.0.1.v200810130237-78-77DUUEFDMEMcEUd6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200810130237"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200812170122-78-77DUUEFDMUN6EMUU" url="features/org.eclipse.emf.teneo_1.0.1.v200812170122-78-77DUUEFDMUN6EMUU.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.2 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200810130237-78-77DUUEFDMEMcEUd6" url="features/org.eclipse.emf.teneo_1.0.1.v200810130237-78-77DUUEFDMEMcEUd6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200810130237"/>
 	</feature>
 
 	<!-- QUERY 1.2.0 I200805131626 -->
@@ -137,78 +137,205 @@ EMF QUERY SDK 1.2.0 I200805131626: contains runtime, source, and documentation.
 		<category name="EMF QUERY SDK 1.2.0 I200805131626"/>
 	</feature>
 
-	<!-- NET4J 1.0.4 M200811211457 -->
-	<category-def label="EMF NET4J SDK 1.0.4 M200811211457" name="EMF NET4J SDK 1.0.4 M200811211457">
+	<!-- NET4J 1.0.1 -->
+	<category-def label="EMF NET4J SDK 1.0.1" name="EMF NET4J SDK 1.0.1">
 		<description>
-EMF NET4J SDK 1.0.4 M200811211457: contains runtime, source, and documentation.
+EMF NET4J SDK 1.0.1: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.net4j.db.source" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.db.source_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.db.source" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.db.source_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.db" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.db_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.db" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.db_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.doc" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.doc_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.doc" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.doc_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples.source" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.examples.source_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.examples.source" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.examples.source_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.examples_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.examples" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.examples_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.sdk" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.sdk_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.sdk" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.sdk_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.source" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.source_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.source" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.source_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui.source" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.ui.source_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.ui.source" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.ui.source_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui" version="1.0.4.v200811211457" url="features/org.eclipse.net4j.ui_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j.ui" version="1.0.1.v200810131537" url="features/org.eclipse.net4j.ui_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
-	<feature id="org.eclipse.net4j" version="1.0.4.v200811211457" url="features/org.eclipse.net4j_1.0.4.v200811211457.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.4 M200811211457"/>
+	<feature id="org.eclipse.net4j" version="1.0.1.v200810131537" url="features/org.eclipse.net4j_1.0.1.v200810131537.jar" patch="false">
+		<category name="EMF NET4J SDK 1.0.1"/>
 	</feature>
 
-	<!-- CDO 1.0.4 M200811211613 -->
-	<category-def label="EMF CDO SDK 1.0.4 M200811211613" name="EMF CDO SDK 1.0.4 M200811211613">
+	<!-- EMF 2.4.2 M200901211230 -->
+	<category-def label="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)" name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)">
 		<description>
-EMF CDO SDK 1.0.4 M200811211613: contains runtime, source, and documentation.
+EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD): contains runtime, source, documentation and examples.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.doc_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.ecore.sdo.edit" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo.edit_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.examples.source_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.ecore" version="2.4.2.v200901211230" url="features/org.eclipse.emf.ecore_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.examples_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.examples" version="2.4.0.v200901211230" url="features/org.eclipse.emf.examples_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.sdk_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.common.ui" version="2.4.0.v200901211230" url="features/org.eclipse.emf.common.ui_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.ecore.sdo.sdk" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo.sdk_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.ecore.sdo.editor" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo.editor_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server.source_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.xsd.mapping" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.mapping_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.server_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.codegen.ui" version="2.4.0.v200901211230" url="features/org.eclipse.emf.codegen.ui_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo.source_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf.source" version="2.4.2.v200901211230" url="features/org.eclipse.emf.source_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.4.v200811211613" url="features/org.eclipse.emf.cdo_1.0.4.v200811211613.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.4 M200811211613"/>
+	<feature id="org.eclipse.emf" version="2.4.2.v200901211230" url="features/org.eclipse.emf_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo.source_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.doc" version="2.4.1.v200901211230" url="features/org.eclipse.emf.doc_2.4.1.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.editor" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.editor_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping.ecore.editor" version="2.4.0.v200901211230" url="features/org.eclipse.emf.mapping.ecore.editor_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.4.0.v200901211230" url="features/org.eclipse.emf.ecore.sdo.doc_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.edit" version="2.4.1.v200901211230" url="features/org.eclipse.emf.ecore.edit_2.4.1.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.sdk" version="2.4.2.v200901211230" url="features/org.eclipse.xsd.sdk_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.edit" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.edit_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.converter" version="2.4.1.v200901211230" url="features/org.eclipse.emf.converter_2.4.1.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ecore.ui" version="2.4.1.v200901211230" url="features/org.eclipse.emf.codegen.ecore.ui_2.4.1.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen" version="2.4.0.v200901211230" url="features/org.eclipse.emf.codegen_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ecore" version="2.4.2.v200901211230" url="features/org.eclipse.emf.codegen.ecore_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.sdk" version="2.4.2.v200901211230" url="features/org.eclipse.emf.sdk_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.databinding" version="1.0.0.v200901211230" url="features/org.eclipse.emf.databinding_1.0.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd" version="2.4.2.v200901211230" url="features/org.eclipse.xsd_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.examples.source" version="2.4.0.v200901211230" url="features/org.eclipse.emf.examples.source_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.databinding.edit" version="1.0.0.v200901211230" url="features/org.eclipse.emf.databinding.edit_1.0.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping.ecore" version="2.4.0.v200901211230" url="features/org.eclipse.emf.mapping.ecore_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.doc" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.doc_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.mapping.editor" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.mapping.editor_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.common" version="2.4.0.v200901211230" url="features/org.eclipse.emf.common_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping.ui" version="2.4.0.v200901211230" url="features/org.eclipse.emf.mapping.ui_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping" version="2.4.0.v200901211230" url="features/org.eclipse.emf.mapping_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.editor" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.editor_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.ecore.converter" version="2.4.0.v200901211230" url="features/org.eclipse.xsd.ecore.converter_2.4.0.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.source" version="2.4.2.v200901211230" url="features/org.eclipse.xsd.source_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.edit.ui" version="2.4.2.v200901211230" url="features/org.eclipse.emf.edit.ui_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.all" version="2.4.2.v200901211230" url="features/org.eclipse.emf.all_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.edit" version="2.4.2.v200901211230" url="features/org.eclipse.emf.edit_2.4.2.v200901211230.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901211230 (EMF + SDO + XSD)"/>
+	</feature>
+
+	<!-- CDO 1.0.1 -->
+	<category-def label="EMF CDO SDK 1.0.1" name="EMF CDO SDK 1.0.1">
+		<description>
+EMF CDO SDK 1.0.1: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.cdo.doc" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.doc_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.examples.source_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.examples" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.examples_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.sdk_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server.source_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.server" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.server_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo.source" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo.source_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.cdo" version="1.0.1.v200810131635" url="features/org.eclipse.emf.cdo_1.0.1.v200810131635.jar" patch="false">
+		<category name="EMF CDO SDK 1.0.1"/>
 	</feature>
 
 	<!-- VALIDATION 1.2.0 I200804301835 -->
@@ -288,26 +415,26 @@ EMF TRANSACTION SDK 1.2.0 I200805131645: contains runtime, source, and documenta
 		<category name="EMF TRANSACTION SDK 1.2.0 I200805131645"/>
 	</feature>
 
-	<!-- TENEO 1.0.1 M200812170122 -->
-	<category-def label="EMF TENEO SDK 1.0.1 M200812170122" name="EMF TENEO SDK 1.0.1 M200812170122">
+	<!-- TENEO 1.0.1 M200809231814 -->
+	<category-def label="EMF TENEO SDK 1.0.1 M200809231814" name="EMF TENEO SDK 1.0.1 M200809231814">
 		<description>
-EMF TENEO SDK 1.0.1 M200812170122: contains runtime, source, and documentation.
+EMF TENEO SDK 1.0.1 M200809231814: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200812170122-1-07w311923281233" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200812170122-1-07w311923281233.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200809231814-1-07w31191_342925" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200809231814-1-07w31191_342925.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809231814"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200812170122-4-3_kE77cAEAY7AEE" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200812170122-4-3_kE77cAEAY7AEE.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200809231814-4-3_kE77c7gEIAcAM" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200809231814-4-3_kE77c7gEIAcAM.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809231814"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200812170122-3-287D4JDMcbZMMVjSJUTeeEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200812170122-3-287D4JDMcbZMMVjSJUTeeEVVFG.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200809231814-3-287D4JDLjcVMaOYaxcMWuEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200809231814-3-287D4JDLjcVMaOYaxcMWuEVVFG.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809231814"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200812170122-78-77DUUEFDMUN6EMUU" url="features/org.eclipse.emf.teneo.source_1.0.1.v200812170122-78-77DUUEFDMUN6EMUU.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200809231814-78-77DUUEFDFLUcNDMk" url="features/org.eclipse.emf.teneo.source_1.0.1.v200809231814-78-77DUUEFDFLUcNDMk.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809231814"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200812170122-78-77DUUEFDMUN6EMUU" url="features/org.eclipse.emf.teneo_1.0.1.v200812170122-78-77DUUEFDMUN6EMUU.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812170122"/>
+	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200809231814-78-77DUUEFDFLUcNDMk" url="features/org.eclipse.emf.teneo_1.0.1.v200809231814-78-77DUUEFDFLUcNDMk.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809231814"/>
 	</feature>
 
 	<!-- QUERY 1.2.0 I200803281756 -->
@@ -341,78 +468,131 @@ EMF QUERY SDK 1.2.0 I200803281756: contains runtime, source, and documentation.
 		<category name="EMF QUERY SDK 1.2.0 I200803281756"/>
 	</feature>
 
-	<!-- NET4J 1.0.3 M200811030609 -->
-	<category-def label="EMF NET4J SDK 1.0.3 M200811030609" name="EMF NET4J SDK 1.0.3 M200811030609">
+	<!-- EMF 2.4.2 M200901021607 -->
+	<category-def label="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)" name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)">
 		<description>
-EMF NET4J SDK 1.0.3 M200811030609: contains runtime, source, and documentation.
+EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD): contains runtime, source, documentation and examples.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.net4j.db.source" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.db.source_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.xsd.sdk" version="2.4.2.v200901021607" url="features/org.eclipse.xsd.sdk_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.db" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.db_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.xsd.edit" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.edit_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.doc" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.doc_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.converter" version="2.4.1.v200901021607" url="features/org.eclipse.emf.converter_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples.source" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.examples.source_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.codegen.ecore.ui" version="2.4.1.v200901021607" url="features/org.eclipse.emf.codegen.ecore.ui_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.examples_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.edit.ui" version="2.4.1.v200901021607" url="features/org.eclipse.emf.edit.ui_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.sdk" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.sdk_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.codegen" version="2.4.0.v200901021607" url="features/org.eclipse.emf.codegen_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.source" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.source_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.codegen.ecore" version="2.4.2.v200901021607" url="features/org.eclipse.emf.codegen.ecore_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui.source" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.ui.source_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.edit" version="2.4.1.v200901021607" url="features/org.eclipse.emf.edit_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui" version="1.0.3.v200811030609" url="features/org.eclipse.net4j.ui_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.sdk" version="2.4.2.v200901021607" url="features/org.eclipse.emf.sdk_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j" version="1.0.3.v200811030609" url="features/org.eclipse.net4j_1.0.3.v200811030609.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.3 M200811030609"/>
+	<feature id="org.eclipse.emf.databinding" version="1.0.0.v200901021607" url="features/org.eclipse.emf.databinding_1.0.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-
-	<!-- CDO 1.0.3 M200811030639 -->
-	<category-def label="EMF CDO SDK 1.0.3 M200811030639" name="EMF CDO SDK 1.0.3 M200811030639">
-		<description>
-EMF CDO SDK 1.0.3 M200811030639: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.doc_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.xsd" version="2.4.2.v200901021607" url="features/org.eclipse.xsd_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.examples.source" version="2.4.0.v200901021607" url="features/org.eclipse.emf.examples.source_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.examples_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.databinding.edit" version="1.0.0.v200901021607" url="features/org.eclipse.emf.databinding.edit_1.0.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.sdk_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.mapping.ecore" version="2.4.0.v200901021607" url="features/org.eclipse.emf.mapping.ecore_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.xsd.doc" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.doc_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.xsd.mapping.editor" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.mapping.editor_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.common" version="2.4.0.v200901021607" url="features/org.eclipse.emf.common_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.server_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.mapping.ui" version="2.4.0.v200901021607" url="features/org.eclipse.emf.mapping.ui_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo.source_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.emf.mapping" version="2.4.0.v200901021607" url="features/org.eclipse.emf.mapping_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.3.v200811030639" url="features/org.eclipse.emf.cdo_1.0.3.v200811030639.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.3 M200811030639"/>
+	<feature id="org.eclipse.xsd.editor" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.editor_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.ecore.converter" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.ecore.converter_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.source" version="2.4.2.v200901021607" url="features/org.eclipse.xsd.source_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.all" version="2.4.2.v200901021607" url="features/org.eclipse.emf.all_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.edit" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo.edit_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore" version="2.4.2.v200901021607" url="features/org.eclipse.emf.ecore_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.examples" version="2.4.0.v200901021607" url="features/org.eclipse.emf.examples_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.common.ui" version="2.4.0.v200901021607" url="features/org.eclipse.emf.common.ui_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.sdk" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo.sdk_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.editor" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo.editor_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.mapping" version="2.4.0.v200901021607" url="features/org.eclipse.xsd.mapping_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ui" version="2.4.0.v200901021607" url="features/org.eclipse.emf.codegen.ui_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.source" version="2.4.2.v200901021607" url="features/org.eclipse.emf.source_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf" version="2.4.2.v200901021607" url="features/org.eclipse.emf_2.4.2.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo.source_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.doc" version="2.4.1.v200901021607" url="features/org.eclipse.emf.doc_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.editor" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.editor_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping.ecore.editor" version="2.4.0.v200901021607" url="features/org.eclipse.emf.mapping.ecore.editor_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.4.0.v200901021607" url="features/org.eclipse.emf.ecore.sdo.doc_2.4.0.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.edit" version="2.4.1.v200901021607" url="features/org.eclipse.emf.ecore.edit_2.4.1.v200901021607.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200901021607 (EMF + SDO + XSD)"/>
 	</feature>
 
 	<!-- VALIDATION 1.2.0 I200804231835 -->
@@ -492,100 +672,153 @@ EMF TRANSACTION SDK 1.2.0 I200804301845: contains runtime, source, and documenta
 		<category name="EMF TRANSACTION SDK 1.2.0 I200804301845"/>
 	</feature>
 
-	<!-- TENEO 1.0.1 M200812071700 -->
-	<category-def label="EMF TENEO SDK 1.0.1 M200812071700" name="EMF TENEO SDK 1.0.1 M200812071700">
+	<!-- TENEO 1.0.1 M200809211527 -->
+	<category-def label="EMF TENEO SDK 1.0.1 M200809211527" name="EMF TENEO SDK 1.0.1 M200809211527">
 		<description>
-EMF TENEO SDK 1.0.1 M200812071700: contains runtime, source, and documentation.
+EMF TENEO SDK 1.0.1 M200809211527: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200812071700-1-07w311923182811" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200812071700-1-07w311923182811.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812071700"/>
+	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200809211527-1-07w31191_322638" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200809211527-1-07w31191_322638.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809211527"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200812071700-4-3_kE77cAE7YAY77" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200812071700-4-3_kE77cAE7YAY77.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812071700"/>
+	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200809211527-4-3_kE77c7gEAAQEY" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200809211527-4-3_kE77c7gEAAQEY.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809211527"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200812071700-3-287D4JDMcaZNSShLPbAOOEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200812071700-3-287D4JDMcaZNSShLPbAOOEVVFG.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812071700"/>
+	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.1.v200809211527-3-287D4JDLjcTMXPZaed2fFEVVFG" url="features/org.eclipse.emf.teneo.sdk_1.0.1.v200809211527-3-287D4JDLjcTMXPZaed2fFEVVFG.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809211527"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200812071700-78-77DUUEFDMUF6N6EE" url="features/org.eclipse.emf.teneo.source_1.0.1.v200812071700-78-77DUUEFDMUF6N6EE.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812071700"/>
+	<feature id="org.eclipse.emf.teneo.source" version="1.0.1.v200809211527-78-77DUUEFDFLUMMsV6" url="features/org.eclipse.emf.teneo.source_1.0.1.v200809211527-78-77DUUEFDFLUMMsV6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809211527"/>
 	</feature>
-	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200812071700-78-77DUUEFDMUF6N6EE" url="features/org.eclipse.emf.teneo_1.0.1.v200812071700-78-77DUUEFDMUF6N6EE.jar" patch="false">
-		<category name="EMF TENEO SDK 1.0.1 M200812071700"/>
+	<feature id="org.eclipse.emf.teneo" version="1.0.1.v200809211527-78-77DUUEFDFLUMMsV6" url="features/org.eclipse.emf.teneo_1.0.1.v200809211527-78-77DUUEFDFLUMMsV6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.0.1 M200809211527"/>
 	</feature>
 
-	<!-- NET4J 1.0.2 -->
-	<category-def label="EMF NET4J SDK 1.0.2" name="EMF NET4J SDK 1.0.2">
+	<!-- EMF 2.4.2 M200812101743 -->
+	<category-def label="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)" name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)">
 		<description>
-EMF NET4J SDK 1.0.2: contains runtime, source, and documentation.
+EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD): contains runtime, source, documentation and examples.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.net4j.db.source" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.db.source_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.edit" version="2.4.1.v200812101743" url="features/org.eclipse.emf.edit_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.db" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.db_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.sdk" version="2.4.2.v200812101743" url="features/org.eclipse.emf.sdk_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.doc" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.doc_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.databinding" version="1.0.0.v200812101743" url="features/org.eclipse.emf.databinding_1.0.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples.source" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.examples.source_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd" version="2.4.2.v200812101743" url="features/org.eclipse.xsd_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.examples" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.examples_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.examples.source" version="2.4.0.v200812101743" url="features/org.eclipse.emf.examples.source_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.sdk" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.sdk_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.databinding.edit" version="1.0.0.v200812101743" url="features/org.eclipse.emf.databinding.edit_1.0.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.source" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.source_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.mapping.ecore" version="2.4.0.v200812101743" url="features/org.eclipse.emf.mapping.ecore_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui.source" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.ui.source_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd.doc" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.doc_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j.ui" version="1.0.2.v200810161426" url="features/org.eclipse.net4j.ui_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd.mapping.editor" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.mapping.editor_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.net4j" version="1.0.2.v200810161426" url="features/org.eclipse.net4j_1.0.2.v200810161426.jar" patch="false">
-		<category name="EMF NET4J SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.common" version="2.4.0.v200812101743" url="features/org.eclipse.emf.common_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-
-	<!-- CDO 1.0.2 -->
-	<category-def label="EMF CDO SDK 1.0.2" name="EMF CDO SDK 1.0.2">
-		<description>
-EMF CDO SDK 1.0.2: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.cdo.doc" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.doc_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.mapping.ui" version="2.4.0.v200812101743" url="features/org.eclipse.emf.mapping.ui_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.mapping" version="2.4.0.v200812101743" url="features/org.eclipse.emf.mapping_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.examples" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.examples_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd.editor" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.editor_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.sdk" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.sdk_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd.ecore.converter" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.ecore.converter_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.xsd.source" version="2.4.2.v200812101743" url="features/org.eclipse.xsd.source_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.hibernate" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.hibernate_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.all" version="2.4.2.v200812101743" url="features/org.eclipse.emf.all_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.ecore.sdo.edit" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo.edit_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.server" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.server_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.ecore" version="2.4.2.v200812101743" url="features/org.eclipse.emf.ecore_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo.source" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo.source_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.examples" version="2.4.0.v200812101743" url="features/org.eclipse.emf.examples_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
-	<feature id="org.eclipse.emf.cdo" version="1.0.2.v200810161605" url="features/org.eclipse.emf.cdo_1.0.2.v200810161605.jar" patch="false">
-		<category name="EMF CDO SDK 1.0.2"/>
+	<feature id="org.eclipse.emf.common.ui" version="2.4.0.v200812101743" url="features/org.eclipse.emf.common.ui_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.sdk" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo.sdk_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.editor" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo.editor_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.mapping" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.mapping_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ui" version="2.4.0.v200812101743" url="features/org.eclipse.emf.codegen.ui_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.source" version="2.4.2.v200812101743" url="features/org.eclipse.emf.source_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf" version="2.4.2.v200812101743" url="features/org.eclipse.emf_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.source" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo.source_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.doc" version="2.4.1.v200812101743" url="features/org.eclipse.emf.doc_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.editor" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.editor_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.mapping.ecore.editor" version="2.4.0.v200812101743" url="features/org.eclipse.emf.mapping.ecore.editor_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.sdo.doc" version="2.4.0.v200812101743" url="features/org.eclipse.emf.ecore.sdo.doc_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.ecore.edit" version="2.4.1.v200812101743" url="features/org.eclipse.emf.ecore.edit_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.sdk" version="2.4.2.v200812101743" url="features/org.eclipse.xsd.sdk_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.xsd.edit" version="2.4.0.v200812101743" url="features/org.eclipse.xsd.edit_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.converter" version="2.4.1.v200812101743" url="features/org.eclipse.emf.converter_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ecore.ui" version="2.4.1.v200812101743" url="features/org.eclipse.emf.codegen.ecore.ui_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.edit.ui" version="2.4.1.v200812101743" url="features/org.eclipse.emf.edit.ui_2.4.1.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen" version="2.4.0.v200812101743" url="features/org.eclipse.emf.codegen_2.4.0.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
+	</feature>
+	<feature id="org.eclipse.emf.codegen.ecore" version="2.4.2.v200812101743" url="features/org.eclipse.emf.codegen.ecore_2.4.2.v200812101743.jar" patch="false">
+		<category name="EMF SDK 2.4.2 M200812101743 (EMF + SDO + XSD)"/>
 	</feature>
 
 </site>
