@@ -32,6 +32,59 @@ M2T MTL SDK 0.7.0 I200809181315: contains runtime, source, and documentation.
 		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
 	</feature>
 
+	<!-- JET 0.9.2 M200901261704 (Incubation) -->
+	<category-def label="M2T JET SDK (Incubation) 0.9.2 M200901261704" name="M2T JET SDK (Incubation) 0.9.2 M200901261704">
+		<description>
+M2T JET SDK (Incubation) 0.9.2 M200901261704: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.all" version="0.9.2.v200809290937-17H15Hi6J2_iCqnbMXyYZ_Z7J59" url="features/org.eclipse.jet.all_0.9.2.v200809290937-17H15Hi6J2_iCqnbMXyYZ_Z7J59.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="0.9.0.v20080516-178-7w31191633" url="features/org.eclipse.jet.doc_0.9.0.v20080516-178-7w31191633.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="0.9.0.v20080516-17807w311A12372813" url="features/org.eclipse.jet.editor_0.9.0.v20080516-17807w311A12372813.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet.examples" version="0.8.0.v20080211-178-7w31191322" url="features/org.eclipse.jet.examples_0.8.0.v20080211-178-7w31191322.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="0.9.2.v200809290937-17Y385Ue8djXGNtNVUY6I48" url="features/org.eclipse.jet.sdk_0.9.2.v200809290937-17Y385Ue8djXGNtNVUY6I48.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="0.9.2.v200809290937" url="features/org.eclipse.jet.source_0.9.2.v200809290937.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="0.9.2.v200809290937-27I39oB55V5CBO5H37" url="features/org.eclipse.jet_0.9.2.v200809290937-27I39oB55V5CBO5H37.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
+	</feature>
+
+	<!-- MTL 0.7.0 I200809121357 -->
+	<category-def label="M2T MTL SDK 0.7.0 I200809121357" name="M2T MTL SDK 0.7.0 I200809121357">
+		<description>
+M2T MTL SDK 0.7.0 I200809121357: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.doc_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.examples_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.runtime_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.sdk_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.source_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+	<feature id="org.eclipse.mtl" version="0.7.0.v200809121357" url="features/org.eclipse.mtl_0.7.0.v200809121357.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	</feature>
+
 	<!-- JET 1.0.0 I200810311003 (Incubation) -->
 	<category-def label="M2T JET SDK (Incubation) 1.0.0 I200810311003" name="M2T JET SDK (Incubation) 1.0.0 I200810311003">
 		<description>
@@ -88,29 +141,29 @@ M2T JET SDK (Incubation) 0.9.2 M200901061621: contains runtime, source, and docu
 		<category name="M2T JET SDK (Incubation) 0.9.2 M200901061621"/>
 	</feature>
 
-	<!-- MTL 0.7.0 I200809121357 -->
-	<category-def label="M2T MTL SDK 0.7.0 I200809121357" name="M2T MTL SDK 0.7.0 I200809121357">
+	<!-- MTL 0.7.0 I200809110810 -->
+	<category-def label="M2T MTL SDK 0.7.0 I200809110810" name="M2T MTL SDK 0.7.0 I200809110810">
 		<description>
-M2T MTL SDK 0.7.0 I200809121357: contains runtime, source, and documentation.
+M2T MTL SDK 0.7.0 I200809110810: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.doc_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.doc_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
-	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.examples_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.examples_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
-	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.runtime_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.runtime_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
-	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.sdk_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.sdk_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
-	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809121357" url="features/org.eclipse.mtl.source_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.source_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
-	<feature id="org.eclipse.mtl" version="0.7.0.v200809121357" url="features/org.eclipse.mtl_0.7.0.v200809121357.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809121357"/>
+	<feature id="org.eclipse.mtl" version="0.7.0.v200809110810" url="features/org.eclipse.mtl_0.7.0.v200809110810.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
 	</feature>
 
 	<!-- JET 0.9.2 M200812161309 (Incubation) -->
@@ -139,59 +192,6 @@ M2T JET SDK (Incubation) 0.9.2 M200812161309: contains runtime, source, and docu
 	</feature>
 	<feature id="org.eclipse.jet" version="0.9.2.v200809290937-17H29oA55S6F9M2414" url="features/org.eclipse.jet_0.9.2.v200809290937-17H29oA55S6F9M2414.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.9.2 M200812161309"/>
-	</feature>
-
-	<!-- MTL 0.7.0 I200809110810 -->
-	<category-def label="M2T MTL SDK 0.7.0 I200809110810" name="M2T MTL SDK 0.7.0 I200809110810">
-		<description>
-M2T MTL SDK 0.7.0 I200809110810: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.doc_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.examples_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.runtime_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.sdk_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809110810" url="features/org.eclipse.mtl.source_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-	<feature id="org.eclipse.mtl" version="0.7.0.v200809110810" url="features/org.eclipse.mtl_0.7.0.v200809110810.jar" patch="false">
-		<category name="M2T MTL SDK 0.7.0 I200809110810"/>
-	</feature>
-
-	<!-- JET 0.9.2 M200810271229 (Incubation) -->
-	<category-def label="M2T JET SDK (Incubation) 0.9.2 M200810271229" name="M2T JET SDK (Incubation) 0.9.2 M200810271229">
-		<description>
-M2T JET SDK (Incubation) 0.9.2 M200810271229: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.jet.all" version="0.9.2.v200809290937-07G13Gi5I-Zi_pncLWsOXTY455_" url="features/org.eclipse.jet.all_0.9.2.v200809290937-07G13Gi5I-Zi_pncLWsOXTY455_.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet.doc" version="0.9.0.v20080516-078-7w31191633" url="features/org.eclipse.jet.doc_0.9.0.v20080516-078-7w31191633.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet.editor" version="0.9.0.v20080516-078-7w31191337" url="features/org.eclipse.jet.editor_0.9.0.v20080516-078-7w31191337.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet.examples" version="0.8.0.v20080211-078-7w31191322" url="features/org.eclipse.jet.examples_0.8.0.v20080211-078-7w31191322.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet.sdk" version="0.9.2.v200809290937-07X382Te6djWFMrNWSX3449" url="features/org.eclipse.jet.sdk_0.9.2.v200809290937-07X382Te6djWFMrNWSX3449.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet.source" version="0.9.2.v200809290937" url="features/org.eclipse.jet.source_0.9.2.v200809290937.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
-	</feature>
-	<feature id="org.eclipse.jet" version="0.9.2.v200809290937-17H19oA55S6D_N2338" url="features/org.eclipse.jet_0.9.2.v200809290937-17H19oA55S6D_N2338.jar" patch="false">
-		<category name="M2T JET SDK (Incubation) 0.9.2 M200810271229"/>
 	</feature>
 
 </site>
