@@ -116,8 +116,7 @@ $deps = array(
 	"xsdruntime" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=xsd#xsd\">XSD</a>",
 	"qvto" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
 	"qvtoml" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
-
-	
+	"eclipselink" => "<a href=\"http://www.eclipse.org/eclipselink/\">EclipseLink</a>",
 );
 
 print "<div id=\"midcolumn\">\n";

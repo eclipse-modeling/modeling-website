@@ -234,6 +234,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
 										<a href="http://download.eclipse.org/dsdp/tm/downloads/">TM &amp; RSE</a>,
 										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
+										<a href="http://www.eclipse.org/eclipselink/downloads/">EclipseLink</a>
 							</td>
 						</tr>
 					</table>
@@ -894,6 +895,7 @@ function getDependencyURLs($chosen, $entered, $file) {
 */
 function findCatg($url) {
 	$matches = array(
+		"25eclipselink" => "eclipselink-",
 		"24qvto" => "m2m-qvtoml-",
 		"23rse" => "RSE-",
 		"22xsd" => "xsd-runtime|xsd-SDK",
