@@ -111,6 +111,15 @@ print <<<EOHTML
 	<h3>Books, Guides, and References</h3>
 	<ul>
 		<li>
+			<div>January 27 2008</div><a href="http://refcardz.dzone.com/refcardz/essential-emf">Essential EMF, DZone Refcard</a>
+		</li>
+
+		<li>
+			<div>December 16 2008</div>EMF Book: <a target="_out" href="http://www.informit.com/store/product.aspx?isbn=9780321331885">Eclipse Modeling Framework</a>, 2nd Edition<br/>
+			<a target="_out" href="http://www.informit.com/store/product.aspx?isbn=9780321331885">Free online version with book purchase</a>
+		</li>
+
+		<li>
 			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a> (Overview and Developer's Guide)<br/>
 			<a target="_out" href="http://www.awprofessional.com/content/images/0131425420/samplechapter/budinskych02.pdf">Chapter 2 Sample</a> (PDF)
 		</li>
@@ -193,6 +202,13 @@ print <<<EOHTML
 	<h3>Presentations &amp; Workshops</h3>
 
 	<ul>
+		<li>
+			<div>Jan 30 2009</div>Scale, Share and Store your Models with CDO 2.0
+			<ul>
+				<li><a href="http://live.eclipse.org/node/635">Webinar</a> (features sound, video and chat transcript)</li>
+			</ul>
+		</li>
+
 		<li>
 			<div>March 17 2008</div>EclipseCon 2008 - Fundamentals of the Eclipse Modeling Framework
 			<ul>
@@ -604,4 +620,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.21 2009/01/20 19:55:31 davidms Exp $ -->
+<!-- $Id: index.php,v 1.22 2009/01/30 08:04:39 nickb Exp $ -->
