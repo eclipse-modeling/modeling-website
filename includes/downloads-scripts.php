@@ -478,7 +478,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 	}
 	if ($errors == 0 && $failures == 0 && $warnings == 0 && !$result)
 	{
-		$out .= "Success";
+		$out .= "OK";
 	}
 	else
 	{
@@ -779,7 +779,7 @@ function outputBuild($branch, $ID, $c)
 	$ret .= "<div>" . $buildResults[0] .  join("", preg_replace("/^(.+)$/", "<span>$1</span>", $extraTestsResults[0])) . "</div>";
 	$ret .= "<a href=\"javascript:toggle('r$ID')\">" .
 		"<i>" . ($sortBy == "date" && $IDlabel != $branch ? "$branch / " : "") . "$IDlabel</i> " .
-		"(" . IDtoDateStamp($ID, !$isBuildServer) . ")" .
+		"(" . IDtoDateStamp($ID, 2) . ")" .
 		"</a>" .
 		"<a name=\"$ID\"></a> " .
 		"<a href=\"?showAll=1&amp;hlbuild=$ID" .
@@ -1002,7 +1002,7 @@ function showArchived($oldrels)
 		}
 		else if (!is_array($oldrels[$z]))
 		{
-			print "<li><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]/\">$z</a> (" . IDtoDateStamp($oldrels[$z], 0) . ")</li>\n";
+			print "<li style=''><a href=\"http://archive.eclipse.org/$PR$proj/downloads/drops/$z/R$oldrels[$z]/\">$z</a> (" . IDtoDateStamp($oldrels[$z], 2) . ")</li>\n";
 		}
 		else // optional syntax with hardcoded datestamp and URL, like for old EMF/SDO/XSD 1.x builds
 		{
