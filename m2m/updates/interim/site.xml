@@ -127,6 +127,28 @@ M2M QVTOML SDK (Incubation) 1.0.0 I200805192020: contains runtime, source, and d
 		<category name="M2M QVTOML SDK (Incubation) 1.0.0 I200805192020"/>
 	</feature>
 
+	<!-- ATL 3.0.0 I200901301143 -->
+	<category-def label="M2M ATL SDK 3.0.0 I200901301143" name="M2M ATL SDK 3.0.0 I200901301143">
+		<description>
+M2M ATL SDK 3.0.0 I200901301143: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.m2m.atl.doc" version="3.0.0.v200901301143" url="features/org.eclipse.m2m.atl.doc_3.0.0.v200901301143.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0 I200901301143"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.examples" version="3.0.0.v200901301143" url="features/org.eclipse.m2m.atl.examples_3.0.0.v200901301143.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0 I200901301143"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.sdk" version="3.0.0.v200901301143" url="features/org.eclipse.m2m.atl.sdk_3.0.0.v200901301143.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0 I200901301143"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.source" version="3.0.0.v200901301143" url="features/org.eclipse.m2m.atl.source_3.0.0.v200901301143.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0 I200901301143"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl" version="3.0.0.v200901301143" url="features/org.eclipse.m2m.atl_3.0.0.v200901301143.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0 I200901301143"/>
+	</feature>
+
 	<!-- ATL 2.0.2 M200811190931 -->
 	<category-def label="M2M ATL SDK 2.0.2 M200811190931" name="M2M ATL SDK 2.0.2 M200811190931">
 		<description>
