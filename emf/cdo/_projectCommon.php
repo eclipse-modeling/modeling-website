@@ -83,7 +83,8 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
-$Nav->addNavSeparator($projectName, "$rooturl/");
+$Nav->addCustomNav("CDO Home", $rooturl, "", 1);
+$Nav->addNavSeparator(Resources, "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
