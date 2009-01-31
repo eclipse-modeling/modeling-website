@@ -18,7 +18,7 @@ ob_start();
 <div id="midcolumn">
 	<h1>CDO Model Repository</h1>
 	<p>CDO is both a technology for distributed shared EMF models and a fast server-based O/R mapping solution.</p>
-	<p><?php echo $theme; ?></p>
+	<p><?php echo "$theme"; ?></p>
 </div>
 
 <div id="rightcolumn">
