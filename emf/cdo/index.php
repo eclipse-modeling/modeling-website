@@ -12,9 +12,6 @@ $Menu = new Menu();
 include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
-$Nav->setLinkList(null);
-$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
-
 ob_start();
 ?>
 
