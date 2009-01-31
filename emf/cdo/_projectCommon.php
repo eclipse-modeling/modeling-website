@@ -83,7 +83,7 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
-$Nav->addCustomNav("CDO Home", $rooturl, "" , 0);
+$Nav->addCustomNav("CDO Home", "$rooturl/", "" , 0);
 $Nav->addNavSeparator(Resources, "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
