@@ -67,12 +67,12 @@ ob_start();
 		</ul>
 	</div>
 	
-	/*<?php
-	if ($isEMFserver)
+	<?php
+	/*if ($isEMFserver)
 	{
 		include_once($_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php");
-	}
-	?>*/
+	}*/
+	?>
 
 </div>
 <?php
