@@ -18,9 +18,6 @@ ob_start();
 <div id="midcolumn">
 	<h1>CDO Model Repository</h1>
 	<img style="float:right" src="/modeling/emf/images/emf_logo.png" alt=""/>
-	<?php
-	include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/index-common.php");
-	?>
 </div>
 
 <div id="rightcolumn">
@@ -67,13 +64,6 @@ ob_start();
 		</ul>
 	</div>
 	
-	<?php
-	/*if ($isEMFserver)
-	{
-		include_once($_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php");
-	}*/
-	?>
-
 </div>
 <?php
 $html = ob_get_contents();
