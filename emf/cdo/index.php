@@ -1,21 +1,18 @@
 <?php
 	
 require_once ("../../includes/buildServer-common.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");  $App = new App(); 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  $Nav = new Nav();
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");  $Menu = new Menu(); 
 
-$App = new App(); 
-$Nav = new Nav();
-$Menu = new Menu(); 
+$Nav->setLinkList(null);
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
-	
 ob_start();
 ?>
 
 <div id="midcolumn">
 	<h1>CDO Model Repository</h1>
-	<img style="float:right" src="/modeling/emf/images/emf_logo.png" alt=""/>
 </div>
 
 <div id="rightcolumn">
@@ -36,14 +33,6 @@ ob_start();
 		<ul>
 			<li><a href="/<?php print $PR; ?>/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
-	</div>
-
-	<div class="sideitem">
-		<h6>Modeling Corner</h6>
-		<p>Want to <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">contribute</a> models, projects, files, ideas, utilities, or code to 
-		<a href="http://www.eclipse.org/modeling/emf/">EMF</a> or any other part of the <a href="http://www.eclipse.org/modeling/">Modeling Project</a>? 
-		Now you can!</p>
-		<p>Have a look, post your comments, submit a link, or just read what others have written. <a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Details here</a>.</p>
 	</div>
 
 	<a name="related"></a>
