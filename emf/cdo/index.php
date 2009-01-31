@@ -11,8 +11,6 @@ $Menu = new Menu();
 
 include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
-/*
-*/
 	
 ob_start();
 ?>
