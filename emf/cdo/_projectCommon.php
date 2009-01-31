@@ -83,6 +83,7 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 $Nav->addNavSeparator($projectName, "$rooturl/");
 
