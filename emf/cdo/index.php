@@ -1,4 +1,3 @@
-
 <?php
 	
 require_once ("../../includes/buildServer-common.php");
@@ -13,6 +12,7 @@ $Menu = new Menu();
 include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
+	
 ob_start();
 ?>
 
