@@ -22,14 +22,6 @@ ob_start();
 <div id="rightcolumn">
 
 	<div class="sideitem">
-		<h6>News</h6>
-		<?php getNews(4, "whatsnew"); ?>
-		<ul>
-			<li><a href="/<?php print $PR; ?>/news-whatsnew.php">Older news</a></li>
-		</ul>
-	</div>
-
-	<div class="sideitem">
 		<h6><a href="/modeling/emf/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
 		<?php echo $tmp && array_key_exists($proj,$tmp) && $tmp[$proj] ? $tmp[$proj] . " " : ""; ?>Build News</h6>
 		<?php /* suppress SDO events */
