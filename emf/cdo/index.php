@@ -69,15 +69,10 @@ ob_start();
 $html = ob_get_contents();
 ob_end_clean();
 
-$trans = array_flip($projects);
 $pageTitle = "Eclipse Modeling - EMF - CDO Model Repository";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Eike Stepper";
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/index.css\"/>\n");
-/*if ($projct) 
-{
-    $App->AddExtraHtmlHeader('<link type="application/rss+xml" rel="alternate" title="EMF '.$trans[$projct].' Build Feed" href="http://www.eclipse.org/modeling/download.php?file=/'.$PR.'/feeds/builds-'.$projct.'.xml"/>' . "\n");
-}*/
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
