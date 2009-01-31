@@ -1,12 +1,8 @@
 <?php
 	
 require_once ("../../includes/buildServer-common.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");  $App = new App(); 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  $Nav = new Nav();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");  $Menu = new Menu(); 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-$Nav->setLinkList(null);
-$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
 ob_start();
 ?>
