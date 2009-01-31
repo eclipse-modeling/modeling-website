@@ -85,7 +85,7 @@ $buildtypes = array(
 
 $Nav->addCustomNav("CDO Home", "$rooturl", "__SEPARATOR", 1);
 $Nav->addNavSeparator("Documentation", "$rooturl");
-$Nav->addCustomNav("Downloads", "$_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
+$Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
 $Nav->addNavSeparator("Resources", "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
