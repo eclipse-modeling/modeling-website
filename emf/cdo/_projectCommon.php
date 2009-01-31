@@ -83,7 +83,7 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
-$Nav->addCustomNav("CDO Home", "$rooturl", "__SEPARATOR", 1);
+$Nav->addCustomNav("CDO Home", "project_summary.php", "", 1);
 $Nav->addNavSeparator("Documentation", "$rooturl");
 $Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
 $Nav->addNavSeparator("Resources", "$rooturl/resources");
