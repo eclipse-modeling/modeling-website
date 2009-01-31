@@ -85,7 +85,7 @@ $buildtypes = array(
 
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 $Nav->addCustomNav("CDO Home", "$rooturl/", "" , 1);
-$Nav->addNavSeparator(Resources, "$rooturl/resources");
+$Nav->addNavSeparator("Resources", "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
