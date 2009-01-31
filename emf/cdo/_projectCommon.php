@@ -1,5 +1,6 @@
 <?php
 $Nav->setLinkList(null);
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
 $PR = "modeling/emf/cdo";
 $projectName = "CDO";
@@ -32,7 +33,6 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 $regs = null;
 $proj = "cdo";
 
-$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 $Nav->addNavSeparator($projectName, "$rooturl/");
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
