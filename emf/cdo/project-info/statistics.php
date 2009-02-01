@@ -39,9 +39,10 @@ if ($result && mysql_num_rows($result) > 0)
 	print "</table><br/><br/>\n";
 
 	print '<h1>Commits</h1>';
-	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
+	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
 	if ($branches && mysql_num_rows($branches) > 0)
 	{
+		$totalCommits = 0;
 		$totalPlus = 0;
 		$totalMinus = 0;
 		$totalSum = 0;
@@ -49,9 +50,10 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
-			'<td><b>Plus</b></td>' .
-			'<td><b>Minus</b></td>' .
-			'<td><b>Sum</b></td>' .
+			'<td><b>Commits</b></td>' .
+			'<td><b>LOC +</b></td>' .
+			'<td><b>LOC -</b></td>' .
+			'<td><b>LOC Sum</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
@@ -59,11 +61,13 @@ if ($result && mysql_num_rows($result) > 0)
 			$sum = $branch[1] + $branch[2];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
-			'<td>' . $branch[1] . ' LOC</td>' .
-			'<td>' . $branch[2] . ' LOC</td>' .
-			'<td>' . $sum . ' LOC</td>' .
+			'<td>' . $branch[3] . '</td>' .
+			'<td>' . $branch[1] . '</td>' .
+			'<td>' . $branch[2] . '</td>' .
+			'<td>' . $sum . '</td>' .
 			'</tr>' . "\n";
 
+			$totalCommits += $branch[3];
 			$totalPlus += $branch[1];
 			$totalMinus += $branch[2];
 			$totalSum += $sum;
@@ -71,9 +75,10 @@ if ($result && mysql_num_rows($result) > 0)
 
 		print '<tr>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>' . $totalPlus . ' LOC</b></td>' .
-			'<td><b>' . $totalMinus . ' LOC</b></td>' .
-			'<td><b>' . $totalSum . ' LOC</b></td>' .
+			'<td><b>' . $totalCommits . '</b></td>' .
+			'<td><b>' . $totalPlus . '</b></td>' .
+			'<td><b>' . $totalMinus . '</b></td>' .
+			'<td><b>' . $totalSum . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
