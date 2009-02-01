@@ -89,7 +89,7 @@ $buildtypes = array(
 function formatDate($date)
 {
 	if (is_string($date)) $date = strtotime($date);
-	return date("Y-M-D", $date);
+	return date("Y-m-d", $date);
 }
 
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);

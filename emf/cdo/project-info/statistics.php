@@ -65,15 +65,17 @@ if ($result && mysql_num_rows($result) > 0)
 		{
 			$sum = $branch[1] + $branch[2];
 			$lpc = $sum / $branch[3];
+			$from = formatDate($branch[4]);
+			$until = formatDate($branch[5]);
 
 			print '<tr><td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>';
-			if ($branch[4] == $branch[5])
+			if ($from == $until)
 			{
-				print '<td colspan="2">' . formatDate($branch[4]) . '</td>';
+				print '<td colspan="2">' . $from . '</td>';
 			}
 			else
 			{
-				print '<td>' . formatDate($branch[4]) . '</td><td>' . formatDate($branch[5]) . '</td>';
+				print '<td>' . $from . '</td><td>' . $until . '</td>';
 			}
 
 			print '<td>' . $branch[3] . '</td>' .
