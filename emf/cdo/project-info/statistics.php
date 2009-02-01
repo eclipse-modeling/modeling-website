@@ -96,9 +96,10 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
+	}
 
-		print '<h1>Bugzilla Activity</h1>';
-		$bugs = wmysql_query("SELECT " .
+	print '<h1>Bugzilla Activity</h1>';
+	$bugs = wmysql_query("SELECT " .
 			"BugID, " .
 			"SUM(LinesPlus) AS Added, " . 
 			"SUM(LinesMinus) AS Removed, " . 
@@ -111,14 +112,14 @@ if ($result && mysql_num_rows($result) > 0)
 			"GROUP BY BugID " . 
 			"ORDER BY BugID");
 
-		if ($bugs && mysql_num_rows($bugs) > 0)
-		{
-			$rows = mysql_num_rows($bugs);
-			$totalSum = 0;
-			$totalLPF = 0;
+	if ($bugs && mysql_num_rows($bugs) > 0)
+	{
+		$rows = mysql_num_rows($bugs);
+		$totalSum = 0;
+		$totalLPF = 0;
 
-			print '<p><table border="1" width="100%" align="right">' . "\n";
-			print '<tr>' .
+		print '<p><table border="1" width="100%" align="right">' . "\n";
+		print '<tr>' .
 				'<td align="left"><b>ID</b></td>' .
 				'<td align="left"><b>Summary</b></td>' .
 				'<td><b>Begin</b></td>' .
@@ -128,14 +129,14 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td><b>&empty;</b></td>' .
 				'</tr>' . "\n";
 
-			while ($bug = mysql_fetch_row($bugs))
-			{
-				$sum = $bug[1] + $bug[2];
-				$lpf = $sum / $bug[3];
-				$begin = formatDate($bug[4]);
-				$days = daysBetween($bug[4], $bug[5]);
+		while ($bug = mysql_fetch_row($bugs))
+		{
+			$sum = $bug[1] + $bug[2];
+			$lpf = $sum / $bug[3];
+			$begin = formatDate($bug[4]);
+			$days = daysBetween($bug[4], $bug[5]);
 
-				print '<tr>' .
+			print '<tr>' .
 					'<td align="left"><a href="' . $bugurl . '/' . $bug[0] . '">' . $bug[0] . '</a></td>' .
 					'<td>' . $bug[6] . '</td>' .
 					'<td>' . $begin . '</td>' .
@@ -145,11 +146,11 @@ if ($result && mysql_num_rows($result) > 0)
 					'<td>' . round($lpf) . '</td>' .
 					'</tr>' . "\n";
 
-				$totalSum += $sum;
-				$totalLPF += $lpf;
-			}
+			$totalSum += $sum;
+			$totalLPF += $lpf;
+		}
 
-			print '<tr>' .
+		print '<tr>' .
 				'<td>&nbsp;</td>' .
 				'<td>&nbsp;</td>' .
 				'<td>&nbsp;</td>' .
@@ -158,17 +159,17 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td><b>' . $totalSum . '</b></td>' .
 				'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 				'</tr>' . "\n";
-			print "</table><br/><br/>\n";
-		}
+		print "</table><br/><br/>\n";
 	}
+}
 
-	########################################################################
-	print '</div>';
-	$html= ob_get_contents();
-	ob_end_clean();
+########################################################################
+print '</div>';
+$html= ob_get_contents();
+ob_end_clean();
 
-	$pageKeywords= "";
-	$pageAuthor= "Eike Stepper";
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, "Eclipse Modeling - " . $pageTitle, $html);
-	?>
+$pageKeywords= "";
+$pageAuthor= "Eike Stepper";
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, "Eclipse Modeling - " . $pageTitle, $html);
+?>
