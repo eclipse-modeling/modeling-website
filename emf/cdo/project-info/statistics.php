@@ -45,7 +45,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"SUM(LinesMinus) AS Removed, " . 
 		"COUNT(date) AS Commits, " . 
 		"MIN(date) AS FromDate, " . 
-		"MAX(date) AS UntilDate " . 
+		"MAX(date) AS UntilDate, " . 
 		"COUNT(fid) AS Files, " . 
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
