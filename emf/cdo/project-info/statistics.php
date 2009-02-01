@@ -44,12 +44,12 @@ if ($result && mysql_num_rows($result) > 0)
 		"SUM(LinesPlus) AS Added, " . 
 		"SUM(LinesMinus) AS Removed, " . 
 		"COUNT(date) AS Commits, " . 
-		"MIN(date) AS From, " . 
-		"MAX(date) AS Until " . 
+		"MIN(date) AS FromDate, " . 
+		"MAX(date) AS UntilDate " . 
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
 		"GROUP BY Branch " . 
-		"ORDER BY From");
+		"ORDER BY FromDate");
 
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)

@@ -96,8 +96,8 @@ function daysBetween($from, $until)
 {
 	if (is_string($from)) $from = strtotime($from);
 	if (is_string($until)) $until = strtotime($until);
-	$offset = floor($until) - floor($from) + 1; 
-	return $offset / 60 / 60 / 24;
+	$offset = floor($until / 86400) - floor($from / 86400) + 1; 
+	return $offset;
 }
 
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
