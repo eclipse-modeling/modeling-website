@@ -16,32 +16,60 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-$tables = wmysql_query("SHOW TABLES;");
-if ($tables && mysql_num_rows($tables) > 0)
+if (isset($_GET["table"]))
 {
-	while ($table = mysql_fetch_row($tables))
+	print '<h1>' . $_GET["table"] . '</h1>' . "\n";
+	$result = wmysql_query("SELECT * FROM " . $_GET["table"] . ";");
+	if ($result && mysql_num_rows($result) > 0)
 	{
-		print "<h1>" . $table[0] . "</h1>\n";
-		$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
-		if ($fields && mysql_num_rows($fields) > 0)
+		print '<table border="1"><tr>' ."\n";
+		for ($index = 0; $index < mysql_num_fields($result); $index++) {
+			print "<th>" . mysql_field_name($result, $index) . "</th>\n";
+		}
+
+		print "</tr>\n";
+		while ($row = mysql_fetch_row($result))
 		{
-			print '<table border="1"><tr>' ."\n";
-			for ($index = 0; $index < mysql_num_fields($fields); $index++) {
-				print "<th" . ($index==1 ? ' width="200">' : ">") . mysql_field_name($fields, $index) . "</th>\n";
+			print "<tr>\n";
+			for ($index = 0; $index < mysql_num_fields($result); $index++) {
+				print "<td>" . $row[$index] . "</td>\n";
 			}
 
 			print "</tr>\n";
-			while ($field = mysql_fetch_row($fields))
+		}
+
+		print "</table><br>\n";
+	}
+}
+else
+{
+	$tables = wmysql_query("SHOW TABLES;");
+	if ($tables && mysql_num_rows($tables) > 0)
+	{
+		while ($table = mysql_fetch_row($tables))
+		{
+			print '<h1><a href="mysql.php?table=' . $table[0] . '">' . $table[0] . '</a></h1>' . "\n";
+			$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
+			if ($fields && mysql_num_rows($fields) > 0)
 			{
-				print "<tr>\n";
+				print '<table border="1"><tr>' ."\n";
 				for ($index = 0; $index < mysql_num_fields($fields); $index++) {
-					print "<td>" . $field[$index] . "</td>\n";
+					print "<th" . ($index==1 ? ' width="200">' : ">") . mysql_field_name($fields, $index) . "</th>\n";
 				}
 
 				print "</tr>\n";
-			}
+				while ($field = mysql_fetch_row($fields))
+				{
+					print "<tr>\n";
+					for ($index = 0; $index < mysql_num_fields($fields); $index++) {
+						print "<td>" . $field[$index] . "</td>\n";
+					}
 
-			print "</table><br>\n";
+					print "</tr>\n";
+				}
+
+				print "</table><br>\n";
+			}
 		}
 	}
 }

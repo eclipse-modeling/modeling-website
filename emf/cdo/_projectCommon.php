@@ -99,7 +99,7 @@ $Nav->addNavSeparator("Tools", "$rooturl/tools");
 $Nav->addCustomNav("MYSQL Tables", "$rooturl/tools/mysql.php", "", 1);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-# addGoogleAnalyticsTrackingCodeToHeader();
+addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
 	
 ?>
