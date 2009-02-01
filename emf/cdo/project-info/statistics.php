@@ -65,6 +65,7 @@ if ($result && mysql_num_rows($result) > 0)
 		{
 			$sum = $branch[1] + $branch[2];
 			$lpc = $sum / $branch[3];
+			
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
 			'<td>' . $App->getFormattedDate($branch[4], "short") . '</td>' .
