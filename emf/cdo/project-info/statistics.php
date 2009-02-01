@@ -39,7 +39,6 @@ if ($result && mysql_num_rows($result) > 0)
 			'</td></tr>' . "\n";
 	print "</table>\n";
 	
-	print '<p/>';
 	$branches = wmysql_query("SELECT " .
 		"Branch, " .
 		"SUM(LinesPlus) AS Added, " . 
@@ -58,7 +57,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Branch' : ' Branches') . '</h1>';
+		print '<h1/><h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Branch' : ' Branches') . '</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
@@ -100,7 +99,6 @@ if ($result && mysql_num_rows($result) > 0)
 		print "</table>\n";
 	}
 
-	print '<p/>';
 	$bugs = wmysql_query("SELECT " .
 			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
@@ -119,7 +117,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Bugzilla' : ' Bugzillas') . '</h1>';
+		print '<h1/><h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Bugzilla' : ' Bugzillas') . '</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 				'<td align="left"><b>Bugzilla</b></td>' .
