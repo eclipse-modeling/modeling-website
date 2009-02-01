@@ -107,7 +107,7 @@ if ($result && mysql_num_rows($result) > 0)
 			"MAX(date) AS UntilDate, " . 
 			"Title " . 
 			"FROM commits JOIN bugs JOIN bugdescs " . 
-			"WHERE Author = '" . $row[0] . "' AND commit.fid = bugs.fid AND bugs.fid = bugdescs.fid " . 
+			"WHERE Author = '" . $row[0] . "' AND commit.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
 			"GROUP BY BugID " . 
 			"ORDER BY BugID");
 
