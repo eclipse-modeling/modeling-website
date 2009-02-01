@@ -104,11 +104,12 @@ if ($result && mysql_num_rows($result) > 0)
 			"SUM(LinesPlus) AS Added, " . 
 			"SUM(LinesMinus) AS Removed, " . 
 			"COUNT(commits.fid) AS Files, " . 
-			"Title " . 
+			"Title, " . 
+			"MAX(date) AS UntilDate " . 
 			"FROM commits JOIN bugs JOIN bugdescs " . 
 			"WHERE Author = '" . $row[0] . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
 			"GROUP BY BugID " . 
-			"ORDER BY BugID");
+			"ORDER BY UntilDate DESC");
 
 	if ($bugs && mysql_num_rows($bugs) > 0)
 	{
