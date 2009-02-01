@@ -17,6 +17,7 @@ print '<div id="midcolumn">';
 ########################################################################
 
 print '<h1>Meet The ' . $projectName . 'Team</h1>';
+$email_all = null;
 
 $result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail FROM developers WHERE Role LIKE '%$comp%' ORDER BY SUBSTRING_INDEX(Name,' ',-1)");
 if ($result && mysql_num_rows($result) > 0)
@@ -37,9 +38,24 @@ if ($result && mysql_num_rows($result) > 0)
 		($row[7] ? '<a href="mailto:' . $row[7] . '?subject=[CDO] "><img border="0" src="/modeling/emf/cdo/images/email.gif" alt="EMail"/></a>&nbsp;' : "") .
 		($row[0] ? '<a href="statistics.php?committerid=' .$row[0] . '"><img border="0" src="/modeling/emf/cdo/images/statistics.gif" alt="Statistics"/></a>&nbsp;' : "") .
 			'</td></tr>' . "\n";
+
+		if ($row[7])
+		{
+			if (!$email_all)
+			{
+				$email_all .= ",";
+			}
+				
+			$email_all .= $row[7];
+		}
 	}
 
 	print "</table>\n";
+}
+
+if ($email_all)
+{
+	print '<a href="mailto:' . $email_all . '?subject=[CDO] "><img border="0" src="/modeling/emf/cdo/images/email_all.gif" alt="EMail All"/></a>';
 }
 
 ########################################################################
