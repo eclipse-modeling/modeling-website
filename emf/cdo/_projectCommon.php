@@ -49,7 +49,7 @@ $cvscoms = array(
 		"teneo" => "org.eclipse.emf.teneo",
 		"validation" => "org.eclipse.emf.validation",
 
-	)
+)
 );
 
 $projects = array(
@@ -86,8 +86,14 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
+function formatDate($date)
+{
+	if (is_string($date)) $date = strtotime($date);
+	return date("Y-M-D", $date);
+}
+
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
-	
+
 $Nav->addNavSeparator("CDO", "$rooturl");
 $Nav->addCustomNav("Team", "$rooturl/project-info/team.php", "", 1);
 $Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
@@ -101,5 +107,5 @@ $Nav->addCustomNav("MYSQL Tables", "$rooturl/tools/mysql.php", "", 1);
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
 addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
-	
+
 ?>

@@ -52,13 +52,13 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
-			'<td width="100"><b>From</b></td>' .
-			'<td width="100"><b>Until</b></td>' .
-			'<td width="100"><b>Commits</b></td>' .
-			'<td width="100"><b>Added</b></td>' .
-			'<td width="100"><b>Removed</b></td>' .
-			'<td width="100"><b>LOC</b></td>' .
-			'<td width="100"><b>LOC / Commit</b></td>' .
+			'<td><b>From</b></td>' .
+			'<td><b>Until</b></td>' .
+			'<td><b>Commits</b></td>' .
+			'<td><b>Added</b></td>' .
+			'<td><b>Removed</b></td>' .
+			'<td><b>LOC</b></td>' .
+			'<td><b>LOC / Commit</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
@@ -69,11 +69,11 @@ if ($result && mysql_num_rows($result) > 0)
 			print '<tr><td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>';
 			if ($branch[4] == $branch[5])
 			{
-				print '<td colspan="2">' . $App->getFormattedDate($branch[4], "short") . '</td>';
+				print '<td colspan="2">' . formatDate($branch[4]) . '</td>';
 			}
 			else
 			{
-				print '<td>' . $App->getFormattedDate($branch[4], "short") . '</td><td>' . $App->getFormattedDate($branch[5], "short") . '</td>';
+				print '<td>' . formatDate($branch[4]) . '</td><td>' . formatDate($branch[5]) . '</td>';
 			}
 
 			print '<td>' . $branch[3] . '</td>' .
