@@ -47,8 +47,8 @@ if ($result && mysql_num_rows($result) > 0)
 		"COUNT(fid) AS Files, " . 
 		"MIN(date) AS FromDate, " . 
 		"MAX(date) AS UntilDate " . 
-		"FROM commits " . 
-		"WHERE Author = '" . $author . "' " . 
+		"FROM commits JOIN cvsfiles " . 
+		"WHERE Author = '" . $author . "' AND commits.fid = cvsfiles.fid AND cvsfiles.component = 'org.eclipse.emf.cdo' " . 
 		"GROUP BY Branch " . 
 		"ORDER BY UntilDate DESC");
 
