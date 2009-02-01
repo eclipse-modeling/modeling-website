@@ -94,11 +94,11 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>&sum; ' . $totalCommits . '</b></td>' .
-			'<td><b>&sum; ' . $totalPlus . '</b></td>' .
-			'<td><b>&sum; ' . $totalMinus . '</b></td>' .
-			'<td><b>&sum; ' . $totalSum . '</b></td>' .
-			'<td><b>&empty; ' . round($totalLPC / $rows) . '</b></td>' .
+			'<td><b>&sum;&nbsp;' . $totalCommits . '</b></td>' .
+			'<td><b>&sum;&nbsp;' . $totalPlus . '</b></td>' .
+			'<td><b>&sum;&nbsp;' . $totalMinus . '</b></td>' .
+			'<td><b>&sum;&nbsp;' . $totalSum . '</b></td>' .
+			'<td><b>&empty;&nbsp;' . round($totalLPC / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
