@@ -32,7 +32,7 @@ if ($result && mysql_num_rows($result) > 0)
 		($row[1] ? $row[1] . "<br/>" : "") .
 		($row[2] ? $row[2] . "<br/>" : "") .
 		($row[3] ? $row[3] . "<br/>" : "") .
-		($row[6] ? $row[6] . "<br/>" : "") .
+		($row[6] ? '<a href="' . $_SERVER["PHP_SELF"] . "?committerid=" .  $row[6] .">" . $row[6] . "</a><br/>" : "") .
 			'</td></tr>' . "\n";
 	}
 
