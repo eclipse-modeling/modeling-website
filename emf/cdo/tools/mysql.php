@@ -44,7 +44,7 @@ if ($tables && mysql_num_rows($tables) > 0)
 				print "</tr>\n";
 			}
 
-			print "</table>\n";
+			print "</table><br>\n";
 		}
 	}
 }
