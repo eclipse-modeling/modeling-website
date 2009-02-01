@@ -52,7 +52,8 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
-			'<td><b>Dates</b></td>' .
+			'<td><b>From</b></td>' .
+			'<td><b>Until</b></td>' .
 			'<td><b>Commits</b></td>' .
 			'<td><b>Added</b></td>' .
 			'<td><b>Removed</b></td>' .
@@ -66,7 +67,8 @@ if ($result && mysql_num_rows($result) > 0)
 			$lpc = $sum / $branch[3];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
-			'<td>' . $App->getFormattedDateRange($branch[4], $branch[5], "short") . '</td>' .
+			'<td>' . $App->getFormattedDate($branch[4], "short") . '</td>' .
+			'<td>' . $App->getFormattedDate($branch[4], "short") . '</td>' .
 			'<td>' . $branch[3] . '</td>' .
 			'<td>' . $branch[1] . '</td>' .
 			'<td>' . $branch[2] . '</td>' .
@@ -82,6 +84,7 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 
 		print '<tr>' .
+			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td><b>&sum; ' . $totalCommits . '</b></td>' .
