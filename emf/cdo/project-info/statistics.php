@@ -63,8 +63,8 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>Begin</b></td>' .
 			'<td><b>Days</b></td>' .
 			'<td><b>Files</b></td>' .
-			'<td><b>LOC</b></td>' .
-			'<td><b>LOC / File</b></td>' .
+			'<td><b>Lines</b></td>' .
+			'<td><b>&empty;</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
@@ -92,8 +92,8 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>&sum;&nbsp;' . $totalSum . '</b></td>' .
-			'<td><b>&empty;&nbsp;' . round($totalLPF / $rows) . '</b></td>' .
+			'<td><b>' . $totalSum . '</b></td>' .
+			'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
