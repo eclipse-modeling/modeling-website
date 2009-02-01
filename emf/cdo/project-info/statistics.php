@@ -65,11 +65,11 @@ if ($result && mysql_num_rows($result) > 0)
 			$lpc = $sum / $branch[3];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
-			'<td>' . number_format($branch[3], 0) . '</td>' .
-			'<td>' . number_format($branch[1], 0) . '</td>' .
-			'<td>' . number_format($branch[2], 0) . '</td>' .
-			'<td>' . number_format($sum, 0) . '</td>' .
-			'<td>' . number_format($lpc, 2) . '</td>' .
+			'<td>' . $branch[3] . '</td>' .
+			'<td>' . $branch[1] . '</td>' .
+			'<td>' . $branch[2] . '</td>' .
+			'<td>' . $sum . '</td>' .
+			'<td>' . round($lpc) . '</td>' .
 			'</tr>' . "\n";
 
 			$totalCommits += $branch[3];
@@ -81,11 +81,11 @@ if ($result && mysql_num_rows($result) > 0)
 
 		print '<tr>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>' . number_format($totalCommits, 0) . '</b></td>' .
-			'<td><b>' . number_format($totalPlus, 0) . '</b></td>' .
-			'<td><b>' . number_format($totalMinus, 0) . '</b></td>' .
-			'<td><b>' . number_format($totalSum, 0) . '</b></td>' .
-			'<td><b>&empty; ' . number_format($totalLPC / $rows, 2) . '</b></td>' .
+			'<td><b>' . $totalCommits . '</b></td>' .
+			'<td><b>' . $totalPlus . '</b></td>' .
+			'<td><b>' . $totalMinus . '</b></td>' .
+			'<td><b>' . $totalSum . '</b></td>' .
+			'<td><b>&empty; ' . round($totalLPC / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
