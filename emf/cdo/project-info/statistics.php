@@ -40,37 +40,43 @@ if ($result && mysql_num_rows($result) > 0)
 
 	print '<h1>Commits</h1>';
 	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
-	if ($branches && mysql_num_rows($branches) > 0)
+	$rows = mysql_num_rows($branches);
+	if ($branches && $rows > 0)
 	{
 		$totalCommits = 0;
 		$totalPlus = 0;
 		$totalMinus = 0;
 		$totalSum = 0;
+		$totalLPC = 0;
 
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
 			'<td><b>Commits</b></td>' .
-			'<td><b>LOC +</b></td>' .
-			'<td><b>LOC -</b></td>' .
-			'<td><b>LOC Sum</b></td>' .
+			'<td><b>LOC+</b></td>' .
+			'<td><b>LOC-</b></td>' .
+			'<td><b>LOC</b></td>' .
+			'<td><b>LOC / Commit</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
 		{
 			$sum = $branch[1] + $branch[2];
+			$lpc = $sum / $branch[3];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
 			'<td>' . $branch[3] . '</td>' .
 			'<td>' . $branch[1] . '</td>' .
 			'<td>' . $branch[2] . '</td>' .
 			'<td>' . $sum . '</td>' .
+			'<td>' . $lpc . '</td>' .
 			'</tr>' . "\n";
 
 			$totalCommits += $branch[3];
 			$totalPlus += $branch[1];
 			$totalMinus += $branch[2];
 			$totalSum += $sum;
+			$totalLPC += $lpc;
 		}
 
 		print '<tr>' .
@@ -79,6 +85,7 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>' . $totalPlus . '</b></td>' .
 			'<td><b>' . $totalMinus . '</b></td>' .
 			'<td><b>' . $totalSum . '</b></td>' .
+			'<td><b>' . ($totalLPC / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
