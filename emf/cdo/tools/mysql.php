@@ -16,11 +16,28 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
+function query($sql)
+{
+	$dbname = "modeling";
+	if (isset($_GET["dbname"]))
+	{
+		$dbname = $_GET["dbname"];
+	}
+	
+	if ($dbname == "modeling")
+	{
+		return wmysql_query($sql);
+	}
+	
+	global $App;
+	return $App->sql($sql, $dbname);
+}
+
 if (isset($_GET["table"]))
 {
 	$pageTitle = $_GET["table"];
 	print '<h1>' . $_GET["table"] . '</h1>' . "\n";
-	$result = wmysql_query("SELECT * FROM " . $_GET["table"] . ";");
+	$result = query("SELECT * FROM " . $_GET["table"] . ";");
 	if ($result && mysql_num_rows($result) > 0)
 	{
 		print '<table border="1"><tr>' ."\n";
@@ -45,17 +62,17 @@ if (isset($_GET["table"]))
 else
 {
 	$pageTitle = "MYSQL Tables";
-	$tables = wmysql_query("SHOW TABLES;");
+	$tables = query("SHOW TABLES;");
 	if ($tables && mysql_num_rows($tables) > 0)
 	{
 		while ($table = mysql_fetch_row($tables))
 		{
-			$result = wmysql_query("SELECT COUNT(*) FROM " . $table[0] . ";");
+			$result = query("SELECT COUNT(*) FROM " . $table[0] . ";");
 			$row = mysql_fetch_row($result);
 			$count = $row[0];
 			
 			print '<h1><a href="' . $_SERVER["PHP_SELF"] . '?table=' . $table[0] . '">' . $table[0] . '</a> (' . $count . ')</h1>' . "\n";
-			$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
+			$fields = query("DESCRIBE " . $table[0] . ";");
 			if ($fields && mysql_num_rows($fields) > 0)
 			{
 				print '<table border="1"><tr>' ."\n";
