@@ -85,7 +85,7 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>' . number_format($totalPlus, 0) . '</b></td>' .
 			'<td><b>' . number_format($totalMinus, 0) . '</b></td>' .
 			'<td><b>' . number_format($totalSum, 0) . '</b></td>' .
-			'<td><b>' . number_format($totalLPC / $rows, 2) . '</b></td>' .
+			'<td><b>&empty; ' . number_format($totalLPC / $rows, 2) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
