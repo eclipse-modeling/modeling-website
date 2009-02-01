@@ -13,24 +13,21 @@ include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
+print<<<EOHTML
+<div id="midcolumn">
+	<h1>Meet The $projectName Team</h1>
+EOHTML;
+
 $result = wmysql_query("SHOW TABLES;");
-print "1<br>";
 if ($result && mysql_num_rows($result) > 0)
 {
-	print "2<br>";
 	while ($row = mysql_fetch_row($result))
 	{
-		print "3<br>";
 		print "<p>" . $row[1] . "</p>";
 		print "<p>" . $row[2] . "</p>";
 		print "<p>" . $row[3] . "</p>";
 	}
 }
-
-print<<<EOHTML
-<div id="midcolumn">
-	<h1>Meet The $projectName Team</h1>
-EOHTML;
 
 $query = "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
 		"WHERE project LIKE '%$comp' ORDER BY SUBSTRING_INDEX(Name,' ',-1)";
