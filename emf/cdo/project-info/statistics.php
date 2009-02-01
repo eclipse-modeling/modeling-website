@@ -54,8 +54,6 @@ if ($result && mysql_num_rows($result) > 0)
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
 	{
-		$totalPlus = 0;
-		$totalMinus = 0;
 		$totalSum = 0;
 		$totalLPF = 0;
 
@@ -65,8 +63,6 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>Begin</b></td>' .
 			'<td><b>Days</b></td>' .
 			'<td><b>Files</b></td>' .
-			'<td><b>Added</b></td>' .
-			'<td><b>Removed</b></td>' .
 			'<td><b>LOC</b></td>' .
 			'<td><b>LOC / File</b></td>' .
 			'</tr>' . "\n";
@@ -83,14 +79,10 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td>' . $begin . '</td>' .
 				'<td>' . $days . '</td>' .
 				'<td>' . $branch[3] . '</td>' .
-				'<td>' . $branch[1] . '</td>' .
-				'<td>' . $branch[2] . '</td>' .
 				'<td>' . $sum . '</td>' .
 				'<td>' . round($lpf) . '</td>' .
 				'</tr>' . "\n";
 
-			$totalPlus += $branch[1];
-			$totalMinus += $branch[2];
 			$totalSum += $sum;
 			$totalLPF += $lpf;
 		}
@@ -100,8 +92,6 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>&sum;&nbsp;' . $totalPlus . '</b></td>' .
-			'<td><b>&sum;&nbsp;' . $totalMinus . '</b></td>' .
 			'<td><b>&sum;&nbsp;' . $totalSum . '</b></td>' .
 			'<td><b>&empty;&nbsp;' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
