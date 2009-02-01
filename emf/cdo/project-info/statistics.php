@@ -119,7 +119,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalLPF = 0;
 
 		print '<h1>&nbsp;</h1>';
-		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Bugzilla' : ' Bugzillas') . '</h1>';
+		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Bugzilla' : ' Bugzillas') . ' (Only HEAD)</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 				'<td align="left"><b>Bugzilla</b></td>' .
