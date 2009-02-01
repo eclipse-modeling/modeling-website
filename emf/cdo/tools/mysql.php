@@ -18,6 +18,7 @@ print '<div id="midcolumn">';
 
 if (isset($_GET["table"]))
 {
+	$pageTitle = $_GET["table"];
 	print '<h1>' . $_GET["table"] . '</h1>' . "\n";
 	$result = wmysql_query("SELECT * FROM " . $_GET["table"] . ";");
 	if ($result && mysql_num_rows($result) > 0)
@@ -43,6 +44,7 @@ if (isset($_GET["table"]))
 }
 else
 {
+	$pageTitle = "MYSQL Tables";
 	$tables = wmysql_query("SHOW TABLES;");
 	if ($tables && mysql_num_rows($tables) > 0)
 	{
@@ -79,7 +81,6 @@ print '</div>';
 $html= ob_get_contents();
 ob_end_clean();
 
-$pageTitle= "Eclipse Modeling - " . ($projectName && $projct != "modeling" ? $projectName . " -" : "") . " Meet The Team";
 $pageKeywords= "";
 $pageAuthor= "Eike Stepper";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
