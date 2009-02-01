@@ -14,10 +14,13 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
 $result = wmysql_query("SHOW TABLES;");
+print "1<br>";
 if ($result && mysql_num_rows($result) > 0)
 {
+	print "2<br>";
 	while ($row = mysql_fetch_row($result))
 	{
+		print "3<br>";
 		print "<p>" . $row . "</p>";
 	}
 }
