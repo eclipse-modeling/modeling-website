@@ -43,10 +43,9 @@ if ($result && mysql_num_rows($result) > 0)
 		"Branch, " .
 		"SUM(LinesPlus) AS Added, " . 
 		"SUM(LinesMinus) AS Removed, " . 
-		"COUNT(date) AS Commits, " . 
+		"COUNT(fid) AS Files, " . 
 		"MIN(date) AS FromDate, " . 
-		"MAX(date) AS UntilDate, " . 
-		"COUNT(fid) AS Files " . 
+		"MAX(date) AS UntilDate " . 
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
 		"GROUP BY Branch " . 
@@ -55,11 +54,10 @@ if ($result && mysql_num_rows($result) > 0)
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
 	{
-		$totalCommits = 0;
 		$totalPlus = 0;
 		$totalMinus = 0;
 		$totalSum = 0;
-		$totalLPC = 0;
+		$totalLPF = 0;
 
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
@@ -67,17 +65,16 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>Begin</b></td>' .
 			'<td><b>Days</b></td>' .
 			'<td><b>Files</b></td>' .
-			'<td><b>Commits</b></td>' .
 			'<td><b>Added</b></td>' .
 			'<td><b>Removed</b></td>' .
 			'<td><b>LOC</b></td>' .
-			'<td><b>LOC / Commit</b></td>' .
+			'<td><b>LOC / File</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
 		{
 			$sum = $branch[1] + $branch[2];
-			$lpc = $sum / $branch[3];
+			$lpf = $sum / $branch[3];
 			$begin = formatDate($branch[4]);
 			$days = daysBetween($branch[4], $branch[5]);
 
@@ -85,19 +82,17 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
 				'<td>' . $begin . '</td>' .
 				'<td>' . $days . '</td>' .
-				'<td>' . $branch[6] . '</td>' .
 				'<td>' . $branch[3] . '</td>' .
 				'<td>' . $branch[1] . '</td>' .
 				'<td>' . $branch[2] . '</td>' .
 				'<td>' . $sum . '</td>' .
-				'<td>' . round($lpc) . '</td>' .
+				'<td>' . round($lpf) . '</td>' .
 				'</tr>' . "\n";
 
-			$totalCommits += $branch[3];
 			$totalPlus += $branch[1];
 			$totalMinus += $branch[2];
 			$totalSum += $sum;
-			$totalLPC += $lpc;
+			$totalLPF += $lpf;
 		}
 
 		print '<tr>' .
@@ -105,11 +100,10 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>&sum;&nbsp;' . $totalCommits . '</b></td>' .
 			'<td><b>&sum;&nbsp;' . $totalPlus . '</b></td>' .
 			'<td><b>&sum;&nbsp;' . $totalMinus . '</b></td>' .
 			'<td><b>&sum;&nbsp;' . $totalSum . '</b></td>' .
-			'<td><b>&empty;&nbsp;' . round($totalLPC / $rows) . '</b></td>' .
+			'<td><b>&empty;&nbsp;' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
