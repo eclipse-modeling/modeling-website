@@ -27,7 +27,7 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<tr><td width="25%" height="130" align="center" valign="top">' .
 		($row[5] && (preg_match("#https+://#", $row[5]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[5])) ?
 				'<img border="0" src="' . $row[5] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
-				"</td><td align="left" valign="top">" . 
+				'</td><td align="left" valign="top">' . 
 		($row[4] ? '<a href="' . $row[4] . '">' . $row[0] . '</a>' : $row[0]) .	'<br/>' .
 		($row[1] ? $row[1] . "<br/>" : "") .
 		($row[2] ? $row[2] . "<br/>" : "") .
