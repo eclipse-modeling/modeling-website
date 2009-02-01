@@ -46,6 +46,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"COUNT(date) AS Commits, " . 
 		"MIN(date) AS FromDate, " . 
 		"MAX(date) AS UntilDate " . 
+		"COUNT(fid) AS Files, " . 
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
 		"GROUP BY Branch " . 
@@ -65,6 +66,7 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td align="left"><b>Branch</b></td>' .
 			'<td><b>Begin</b></td>' .
 			'<td><b>Days</b></td>' .
+			'<td><b>Files</b></td>' .
 			'<td><b>Commits</b></td>' .
 			'<td><b>Added</b></td>' .
 			'<td><b>Removed</b></td>' .
@@ -83,6 +85,7 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
 				'<td>' . $begin . '</td>' .
 				'<td>' . $days . '</td>' .
+				'<td>' . $branch[6] . '</td>' .
 				'<td>' . $branch[3] . '</td>' .
 				'<td>' . $branch[1] . '</td>' .
 				'<td>' . $branch[2] . '</td>' .
@@ -98,6 +101,7 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 
 		print '<tr>' .
+			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
