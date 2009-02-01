@@ -18,18 +18,16 @@ print '<div id="midcolumn">';
 
 print '<h1>Meet The ' . $projectName . 'Team</h1>';
 
-$query = "SELECT Name, Role, Company, Location, Website, PhotoURL, CommitterID FROM developers WHERE Role LIKE '%$comp%' ORDER BY SUBSTRING_INDEX(Name,' ',-1)";
-
-$result = wmysql_query($query);
+$result = wmysql_query("SELECT Name, Role, Company, Location, Website, PhotoURL, CommitterID FROM developers WHERE Role LIKE '%$comp%' ORDER BY SUBSTRING_INDEX(Name,' ',-1)");
 if ($result && mysql_num_rows($result) > 0)
 {
 	print '<p><table border="0" width="100%">' . "\n";
 	while ($row = mysql_fetch_row($result))
 	{
-		print '<tr><td width="33%" height="200" align="center" valign="top">' .
+		print '<tr><td width="25%" height="130" align="center" valign="top">' .
 		($row[5] && (preg_match("#https+://#", $row[5]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[5])) ?
 				'<img border="0" src="' . $row[5] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
-				"</td><td>" . 
+				"</td><td align="left" valign="top">" . 
 		($row[4] ? '<a href="' . $row[4] . '">' . $row[0] . '</a>' : $row[0]) .	'<br/>' .
 		($row[1] ? $row[1] . "<br/>" : "") .
 		($row[2] ? $row[2] . "<br/>" : "") .
