@@ -48,10 +48,10 @@ if ($result && mysql_num_rows($result) > 0)
 
 		print '<p><table border="1" width="100%">' . "\n";
 		print '<tr>' .
-			'<td>Branch</td>' .
-			'<td align="right">Plus</td>' .
-			'<td align="right">Minus</td>' .
-			'<td align="right">Sum</td>' .
+			'<td><b>Branch</b></td>' .
+			'<td align="right"><b>Plus</b></td>' .
+			'<td align="right"><b>Minus</b></td>' .
+			'<td align="right"><b>Sum</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
@@ -70,10 +70,10 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 
 		print '<tr>' .
-			'<td>=</td>' .
-			'<td align="right">' . $totalPlus . ' LOC</td>' .
-			'<td align="right">' . $totalMinus . ' LOC</td>' .
-			'<td align="right">' . $totalSum . ' LOC</td>' .
+			'<td>&nbsp;</td>' .
+			'<td align="right"><b>' . $totalPlus . ' LOC</b></td>' .
+			'<td align="right"><b>' . $totalMinus . ' LOC</b></td>' .
+			'<td align="right"><b>' . $totalSum . ' LOC</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
