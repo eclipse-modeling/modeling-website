@@ -44,7 +44,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"Branch, " .
 		"SUM(LinesPlus) AS Added, " . 
 		"SUM(LinesMinus) AS Removed, " . 
-		"COUNT(fid) AS Files, " . 
+		"COUNT(commits.fid) AS Files, " . 
 		"MIN(date) AS FromDate, " . 
 		"MAX(date) AS UntilDate " . 
 		"FROM commits JOIN cvsfiles " . 
