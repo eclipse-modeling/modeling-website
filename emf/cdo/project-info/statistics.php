@@ -135,7 +135,7 @@ if ($result && mysql_num_rows($result) > 0)
 			$lpf = $sum / $bug[3];
 
 			print '<tr>' .
-					'<td align="left"><a href="' . $bugurl . '/' . $bug[0] . '">' . $bug[0] . '</a></td>' .
+					'<td align="left"><a href="' . $bugurl . '/' . $bug[0] . '" target="_blank">' . $bug[0] . '</a></td>' .
 					'<td>' . $bug[4] . '</td>' .
 					'<td>' . $bug[3] . '</td>' .
 					'<td>' . $sum . '</td>' .
