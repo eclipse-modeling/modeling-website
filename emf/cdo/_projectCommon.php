@@ -5,6 +5,9 @@ $PR = "modeling/emf/cdo";
 $projectName = "CDO";
 $defaultProj = "/cdo";
 
+$proj = "emf";
+$comp = "cdo";
+
 $isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"])) || (preg_match("/^(emft|modeling)\.eclipse\.org$/", $_SERVER["SERVER_NAME"]));
 $isBuildServer = (preg_match("/^(emft|modeling|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
