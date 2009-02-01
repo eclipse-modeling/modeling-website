@@ -16,9 +16,10 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-print '<h1>Meet The ' . $projectName . 'Team</h1>';
-$email_all = null;
+$pageTitle = 'Meet The ' . $projectName . 'Team';
+print '<h1>' . $pageTitle . '</h1>';
 
+$email_all = null;
 $result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail FROM developers WHERE Role LIKE '%$comp%' ORDER BY SUBSTRING_INDEX(Name,' ',-1)");
 if ($result && mysql_num_rows($result) > 0)
 {
@@ -45,7 +46,7 @@ if ($result && mysql_num_rows($result) > 0)
 			{
 				$email_all .= ",";
 			}
-				
+
 			$email_all .= $row[7];
 		}
 	}
@@ -63,9 +64,8 @@ print '</div>';
 $html= ob_get_contents();
 ob_end_clean();
 
-$pageTitle= "Eclipse Modeling - " . ($projectName && $projct != "modeling" ? $projectName . " -" : "") . " Meet The Team";
 $pageKeywords= "";
 $pageAuthor= "Eike Stepper";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="http://' . ($isBuildServer ? $_SERVER["SERVER_NAME"] : "www.eclipse.org") . '/modeling/includes/downloads.css"/>' . "\n");
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, "Eclipse Modeling - " . $pageTitle, $html);
 ?>
