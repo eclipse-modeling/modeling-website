@@ -39,7 +39,7 @@ if ($result && mysql_num_rows($result) > 0)
 	print "</table><br/><br/>\n";
 
 	print '<h1>CVS Activity</h1>';
-	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
+	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date), MIN(date), MAX(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
 	{
@@ -52,6 +52,7 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
+			'<td><b>Dates</b></td>' .
 			'<td><b>Commits</b></td>' .
 			'<td><b>Added</b></td>' .
 			'<td><b>Removed</b></td>' .
@@ -65,6 +66,7 @@ if ($result && mysql_num_rows($result) > 0)
 			$lpc = $sum / $branch[3];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
+			'<td>' . $App->getFormattedDateRange($branch[4], $branch[5], "short") . '</td>' .
 			'<td>' . $branch[3] . '</td>' .
 			'<td>' . $branch[1] . '</td>' .
 			'<td>' . $branch[2] . '</td>' .
@@ -80,6 +82,7 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 
 		print '<tr>' .
+			'<td>&nbsp;</td>' .
 			'<td>&nbsp;</td>' .
 			'<td><b>&sum; ' . $totalCommits . '</b></td>' .
 			'<td><b>&sum; ' . $totalPlus . '</b></td>' .
