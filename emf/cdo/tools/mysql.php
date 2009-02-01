@@ -1,6 +1,6 @@
 <?php
 
-require_once ("../../../includes/buildServer-common.php");
+require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php");
@@ -16,30 +16,37 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-print '<h1>Meet The ' . $projectName . 'Team</h1>';
 
-$query = "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
-		"WHERE project LIKE '%$comp' ORDER BY SUBSTRING_INDEX(Name,' ',-1)";
+print '<h1>The MYSQL Tables</h1>';
 
-$result = wmysql_query($query);
-if ($result && mysql_num_rows($result) > 0)
+$tables = wmysql_query("SHOW TABLES;");
+if ($tables && mysql_num_rows($tables) > 0)
 {
-	print '<p><table border="0" width="100%">' . "\n";
-	while ($row = mysql_fetch_row($result))
+	while ($table = mysql_fetch_row($tables))
 	{
-		# [did, CommitterID, Name, Email, Role, Company, Location, Website, PhotoURL]
-		print '<tr><td width="33%" height="200" align="center" valign="top">' .
-		($row[5] && (preg_match("#https+://#", $row[5]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[5])) ?
-				'<img border="0" src="' . $row[5] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
-				"</td><td>" . 
-		($row[4] ? '<a href="' . $row[4] . '">' . $row[0] . '</a>' : $row[0]) .	'<br/>' .
-		($row[1] ? $row[1] . "<br/>" : "") .
-		($row[2] ? $row[2] . "<br/>" : "") .
-		($row[3] ? $row[3] . "<br/>" : "") .
-			'</td></tr>' . "\n";
+		print "<h2>" . $table[0] . "</h2>\n";
+		$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
+		if ($fields && mysql_num_rows($fields) > 0)
+		{
+			print "<table><tr>\n";
+			print "<th>Field Name</th>\n";
+			print "<th>?</th>\n";
+			print "<th>?</th>\n";
+			print "<th>?</th>\n";
+			print "</tr>\n";
+			while ($field = mysql_fetch_row($fields))
+			{
+				print "<tr>\n";
+				print "<td>" . $field[0] . "</td>\n";
+				print "<td>" . $field[1] . "</td>\n";
+				print "<td>" . $field[2] . "</td>\n";
+				print "<td>" . $field[3] . "</td>\n";
+				print "</tr>\n";
+			}
+				
+			print "</table>\n";
+		}
 	}
-
-	print "</table>\n";
 }
 
 ########################################################################

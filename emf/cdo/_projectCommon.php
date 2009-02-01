@@ -95,6 +95,9 @@ $Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downl
 $Nav->addNavSeparator("Resources", "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
+$Nav->addNavSeparator("Tools", "$rooturl/tools");
+$Nav->addCustomNav("MYSQL Tables", "$rooturl/tools/mysql.php", "", 1);
+
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
 # addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo

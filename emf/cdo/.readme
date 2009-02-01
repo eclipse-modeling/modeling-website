@@ -3,4 +3,4 @@ http://emft.eclipse.org/modeling/emf/cdo/
 
 emft.eclipse.org:
 cd /var/www/html/modeling/emf/cdo; 
-cvs up -P
+cvs -q up -dP

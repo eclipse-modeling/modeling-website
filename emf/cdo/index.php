@@ -13,15 +13,15 @@ include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
+print '<div id="midcolumn">';
+########################################################################
 ?>
 
-<div id="midcolumn">
-	<h1>CDO Model Repository</h1>
-	<p>CDO is both a technology for distributed shared EMF models and a fast server-based O/R mapping solution.</p>
+<h1>CDO Model Repository</h1>
+<p>CDO is both a technology for distributed shared EMF models and a fast server-based O/R mapping solution.</p>
 </div>
 
 <div id="rightcolumn">
-
 	<div class="sideitem">
 		<h6><a href="/modeling/emf/feeds/"><img style="float:right" alt="Build Feeds" src="/modeling/images/rss-atom10.gif"/></a>
 		<?php echo $tmp && array_key_exists($proj,$tmp) && $tmp[$proj] ? $tmp[$proj] . " " : ""; ?>Build News</h6>
@@ -47,9 +47,10 @@ ob_start();
 			<li><a href="http://www.eclipse.org/newsgroups">Eclipse newsgroups</a></li>
 		</ul>
 	</div>
-	
-</div>
 <?php
+
+########################################################################
+print '</div>';
 $html = ob_get_contents();
 ob_end_clean();
 
