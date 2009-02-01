@@ -38,6 +38,7 @@ if ($result && mysql_num_rows($result) > 0)
 	($row[6] ? '<a href="' . $row[6] . '" target="_blank"><img border="0" src="/modeling/emf/cdo/images/website.gif" alt="Web Site"/></a>&nbsp;' : "") .
 			'</td></tr>' . "\n";
 	print "</table>\n";
+	print '<br/><br/>';
 
 	$branches = wmysql_query("SELECT " .
 		"Branch, " .
@@ -57,7 +58,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<br/><br/><h1>Commited To ' . $rows . ' Branches</h1>';
+		print '<h1>Commited To ' . $rows . ($rows == 1 ? ' Branch' : 'Branches') . '</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
@@ -99,6 +100,7 @@ if ($result && mysql_num_rows($result) > 0)
 		print "</table><br/><br/>\n";
 	}
 
+	print '<br/><br/>';
 	$bugs = wmysql_query("SELECT " .
 			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
@@ -117,7 +119,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<br/><br/><h1>Commited To ' . $rows . ' Bugzillas</h1>';
+		print '<h1>Commited To ' . $rows . ($rows == 1 ? ' Bugzilla' : 'Bugzillas') . '</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 				'<td align="left"><b>Bugzilla</b></td>' .
