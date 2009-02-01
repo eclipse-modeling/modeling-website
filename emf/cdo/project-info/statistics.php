@@ -38,7 +38,7 @@ if ($result && mysql_num_rows($result) > 0)
 			'</td></tr>' . "\n";
 	print "</table><br/><br/>\n";
 
-	print '<h1>Commits</h1>';
+	print '<h1>CVS Activity</h1>';
 	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
@@ -65,11 +65,11 @@ if ($result && mysql_num_rows($result) > 0)
 			$lpc = $sum / $branch[3];
 			print '<tr>' .
 			'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
-			'<td>' . $branch[3] . '</td>' .
-			'<td>' . $branch[1] . '</td>' .
-			'<td>' . $branch[2] . '</td>' .
-			'<td>' . $sum . '</td>' .
-			'<td>' . $lpc . '</td>' .
+			'<td>' . number_format($branch[3], 0) . '</td>' .
+			'<td>' . number_format($branch[1], 0) . '</td>' .
+			'<td>' . number_format($branch[2], 0) . '</td>' .
+			'<td>' . number_format($sum, 0) . '</td>' .
+			'<td>' . number_format($lpc, 2) . '</td>' .
 			'</tr>' . "\n";
 
 			$totalCommits += $branch[3];
@@ -81,11 +81,11 @@ if ($result && mysql_num_rows($result) > 0)
 
 		print '<tr>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>' . $totalCommits . '</b></td>' .
-			'<td><b>' . $totalPlus . '</b></td>' .
-			'<td><b>' . $totalMinus . '</b></td>' .
-			'<td><b>' . $totalSum . '</b></td>' .
-			'<td><b>' . ($totalLPC / $rows) . '</b></td>' .
+			'<td><b>' . number_format($totalCommits, 0) . '</b></td>' .
+			'<td><b>' . number_format($totalPlus, 0) . '</b></td>' .
+			'<td><b>' . number_format($totalMinus, 0) . '</b></td>' .
+			'<td><b>' . number_format($totalSum, 0) . '</b></td>' .
+			'<td><b>' . number_format($totalLPC / $rows, 2) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
 	}
