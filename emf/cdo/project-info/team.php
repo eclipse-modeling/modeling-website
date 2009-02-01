@@ -24,7 +24,7 @@ if ($result && mysql_num_rows($result) > 0)
 	}
 }
 
-print '<h1>Meet The ' . $projectName . '' Team</h1>';
+print '<h1>Meet The ' . $projectName .  Team</h1>';
 
 $query = "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
 		"WHERE project LIKE '%$comp' ORDER BY SUBSTRING_INDEX(Name,' ',-1)";
