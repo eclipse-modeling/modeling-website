@@ -46,7 +46,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"COUNT(date) AS Commits, " . 
 		"MIN(date) AS FromDate, " . 
 		"MAX(date) AS UntilDate, " . 
-		"COUNT(fid) AS Files, " . 
+		"COUNT(fid) AS Files " . 
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
 		"GROUP BY Branch " . 
