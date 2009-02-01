@@ -100,7 +100,7 @@ if ($result && mysql_num_rows($result) > 0)
 
 	print '<h1>Bugzilla Activity</h1>';
 	$bugs = wmysql_query("SELECT " .
-			"BugID, " .
+			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
 			"SUM(LinesMinus) AS Removed, " . 
 			"COUNT(fid) AS Files, " . 
