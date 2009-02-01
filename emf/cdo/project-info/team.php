@@ -28,11 +28,11 @@ if ($result && mysql_num_rows($result) > 0)
 		($row[1] && (preg_match("#https+://#", $row[1]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[1])) ?
 				'<img border="0" src="' . $row[1] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
 				'</td><td align="left" valign="top">' . 
-		($row[2] ? $row[2] . "<br/>" : "") .
+		($row[2] ? "<b>" . $row[2] . "</b><br/>" : "") .
 		($row[3] ? $row[3] . "<br/>" : "") .
 		($row[4] ? $row[4] . "<br/>" : "") .
 		'<br/>' . "\n" .
-		($row[5] ? $row[5] . "<br/>" : "") .
+		($row[5] ? "<em>" . $row[5] . "</em><br/>" : "") .
 		($row[6] ? '<a href="' . $row[6] . '"><img border="0" src="/modeling/emf/cdo/images/website.gif"/></a>&nbsp;' : "") .
 		($row[7] ? '<a href="' . $row[7] . '"><img border="0" src="/modeling/emf/cdo/images/email.gif"/></a>&nbsp;' : "") .
 		($row[0] ? '<a href="' . $_SERVER["PHP_SELF"] . "?committerid=" .$row[0] . '"><img border="0" src="/modeling/emf/cdo/images/statistics.gif"/></a>&nbsp;' : "") .
