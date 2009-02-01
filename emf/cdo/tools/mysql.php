@@ -25,7 +25,7 @@ if ($tables && mysql_num_rows($tables) > 0)
 		$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
 		if ($fields && mysql_num_rows($fields) > 0)
 		{
-			print "<table border="1"><tr>\n";
+			print '<table border="1"><tr>\n';
 			for ($index = 0; $index < mysql_num_fields($fields); $index++) {
 				print "<th>" . mysql_field_name($fields, $index) . "</th>\n";
 			}
