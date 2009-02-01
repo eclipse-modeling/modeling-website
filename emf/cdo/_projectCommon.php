@@ -96,7 +96,7 @@ $Nav->addNavSeparator("Resources", "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-addGoogleAnalyticsTrackingCodeToHeader();
+# addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
 	
 ?>
