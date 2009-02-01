@@ -49,7 +49,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"FROM commits " . 
 		"WHERE Author = '" . $row[0] . "' " . 
 		"GROUP BY Branch " . 
-		"ORDER BY FromDate");
+		"ORDER BY UntilDate DESC");
 
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
