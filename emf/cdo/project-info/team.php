@@ -16,7 +16,7 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-$pageTitle = 'Meet The ' . $projectName . 'Team';
+$pageTitle = 'Meet The ' . $projectName . ' Team';
 print '<h1>' . $pageTitle . '</h1>';
 
 $email_all = null;
