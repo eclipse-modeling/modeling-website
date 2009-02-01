@@ -50,7 +50,7 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 	}
 
-	print "</table>\n";
+	print "</table><br/><br/>\n";
 }
 
 if ($email_all)
