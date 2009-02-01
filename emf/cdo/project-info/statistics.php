@@ -81,10 +81,10 @@ if ($result && mysql_num_rows($result) > 0)
 
 		print '<tr>' .
 			'<td>&nbsp;</td>' .
-			'<td><b>' . $totalCommits . '</b></td>' .
-			'<td><b>' . $totalPlus . '</b></td>' .
-			'<td><b>' . $totalMinus . '</b></td>' .
-			'<td><b>' . $totalSum . '</b></td>' .
+			'<td><b>&sum; ' . $totalCommits . '</b></td>' .
+			'<td><b>&sum; ' . $totalPlus . '</b></td>' .
+			'<td><b>&sum; ' . $totalMinus . '</b></td>' .
+			'<td><b>&sum; ' . $totalSum . '</b></td>' .
 			'<td><b>&empty; ' . round($totalLPC / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table><br/><br/>\n";
