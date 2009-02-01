@@ -41,7 +41,7 @@ if ($result && mysql_num_rows($result) > 0)
 
 		if ($row[7])
 		{
-			if (!$email_all)
+			if ($email_all != null)
 			{
 				$email_all .= ",";
 			}
