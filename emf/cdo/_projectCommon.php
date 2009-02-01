@@ -89,7 +89,7 @@ $buildtypes = array(
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 	
 $Nav->addNavSeparator("CDO", "$rooturl");
-$Nav->addCustomNav("Team", "project-info/team.php?project=cdo", "", 1);
+$Nav->addCustomNav("Team", "$rooturl/project-info/team.php?project=cdo", "", 1);
 $Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
 
 $Nav->addNavSeparator("Resources", "$rooturl/resources");

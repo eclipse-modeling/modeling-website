@@ -20,7 +20,8 @@ print<<<EOHTML
 EOHTML;
 
 $query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
-		"WHERE committer = 1 AND project LIKE '%$comp' ORDER BY SUBSTRING_INDEX(Name,' ',-1)";
+		"WHERE committer = 1";
+# AND project LIKE '%$comp' ORDER BY SUBSTRING_INDEX(Name,' ',-1)
 
 $result= wmysql_query($query);
 if ($result && mysql_num_rows($result) > 0)
