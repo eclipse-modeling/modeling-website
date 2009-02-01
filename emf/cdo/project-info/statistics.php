@@ -58,6 +58,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalLPF = 0;
 
 		print '<h1>&nbsp;</h1>';
+		print '<div class="homeitem">';
 		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Branch' : ' Branches') . '</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
@@ -98,6 +99,7 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
 		print "</table>\n";
+		print '</div>';
 	}
 
 	$bugs = wmysql_query("SELECT " .
@@ -119,6 +121,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalLPF = 0;
 
 		print '<h1>&nbsp;</h1>';
+		print '<div class="homeitem">';
 		print '<h1>Committed In ' . $rows . ' ' . $projectName . ($rows == 1 ? ' Bugzilla' : ' Bugzillas') . ' (Only <a href="commits.php?committerid='. $_GET["committerid"] . '&branch=HEAD">HEAD</a>)</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
@@ -154,6 +157,7 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 				'</tr>' . "\n";
 		print "</table>\n";
+		print '</div>';
 	}
 }
 
