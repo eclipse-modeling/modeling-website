@@ -18,7 +18,7 @@ if ($result && mysql_num_rows($result) > 0)
 {
 	while ($row = mysql_fetch_row($result))
 	{
-		print "<p>" . $row[1] "</p>";
+		print "<p>" . $row[1] . "</p>";
 	}
 }
 
