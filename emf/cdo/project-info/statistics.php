@@ -39,7 +39,18 @@ if ($result && mysql_num_rows($result) > 0)
 	print "</table><br/><br/>\n";
 
 	print '<h1>CVS Activity</h1>';
-	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus), COUNT(date), MIN(date), MAX(date) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
+	$branches = wmysql_query("SELECT " .
+		"Branch, " .
+		"SUM(LinesPlus) AS Added, " . 
+		"SUM(LinesMinus) AS Removed, " . 
+		"COUNT(date) AS Commits, " . 
+		"MIN(date) AS From, " . 
+		"MAX(date) AS Until " . 
+		"FROM commits " . 
+		"WHERE Author = '" . $row[0] . "' " . 
+		"GROUP BY Branch " . 
+		"ORDER BY From");
+
 	$rows = mysql_num_rows($branches);
 	if ($branches && $rows > 0)
 	{
