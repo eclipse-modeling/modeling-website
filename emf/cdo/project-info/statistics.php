@@ -53,8 +53,8 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
 			'<td><b>Commits</b></td>' .
-			'<td><b>LOC+</b></td>' .
-			'<td><b>LOC-</b></td>' .
+			'<td><b>Added</b></td>' .
+			'<td><b>Removed</b></td>' .
 			'<td><b>LOC</b></td>' .
 			'<td><b>LOC / Commit</b></td>' .
 			'</tr>' . "\n";
