@@ -32,7 +32,7 @@ if ($result && mysql_num_rows($result) > 0)
 		($row[3] ? $row[3] . "<br/>" : "") .
 		($row[4] ? $row[4] . "<br/>" : "") .
 		($row[5] ? "<br/>" . $row[5] : "") .
-		'</td><td>' . "\n";
+		'</td><td>' . "\n" .
 		($row[0] ? $row[0] . "<br/>" : "") .
 		($row[6] ? '<a href="' . $row[6] . '"><img border="0" src="/modeling/emf/cdo/images/website.gif"/></a>&nbsp;" : "") .
 		($row[7] ? '<a href="' . $row[7] . '"><img border="0" src="/modeling/emf/cdo/images/email.gif"/></a>&nbsp;" : "") .
