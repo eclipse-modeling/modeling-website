@@ -28,22 +28,22 @@ if ($tables && mysql_num_rows($tables) > 0)
 		$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
 		if ($fields && mysql_num_rows($fields) > 0)
 		{
-			print "<table><tr>\n";
-			print "<th>Field Name</th>\n";
-			print "<th>?</th>\n";
-			print "<th>?</th>\n";
-			print "<th>?</th>\n";
+			print "<table border=1><tr>\n";
+			for ($index = 0; $index < mysql_num_fields($fields); $index++) {
+				print "<th>" . mysql_field_name($fields, $index) . "</th>\n";
+			}
+
 			print "</tr>\n";
 			while ($field = mysql_fetch_row($fields))
 			{
 				print "<tr>\n";
-				print "<td>" . $field[0] . "</td>\n";
-				print "<td>" . $field[1] . "</td>\n";
-				print "<td>" . $field[2] . "</td>\n";
-				print "<td>" . $field[3] . "</td>\n";
+				for ($index = 0; $index < mysql_num_fields($fields); $index++) {
+					print "<td>" . $field[$index] . "</td>\n";
+				}
+
 				print "</tr>\n";
 			}
-				
+
 			print "</table>\n";
 		}
 	}
