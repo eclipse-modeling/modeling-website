@@ -16,68 +16,9 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-$result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail FROM developers WHERE CommitterID = '" . $_GET["committerid"] . "'");
-if ($result && mysql_num_rows($result) > 0)
-{
-	$row = mysql_fetch_row($result);
-	$pageTitle = $projectName . ' Statistics For ' . $row[2];
+print '<h1>' . $_GET["committerid"] . '</h1>';
+print '<h1>' . $_GET["branch"] . '</h1>';
 
-	print '<h1>' . $pageTitle . '</h1>';
-	print '<p><table border="0" width="100%">' . "\n";
-	print '<tr><td width="25%" height="130" align="center" valign="top">' .
-	($row[1] && (preg_match("#https+://#", $row[1]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[1])) ?
-				'<img border="0" src="' . $row[1] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
-				'</td><td align="left" valign="top">' . 
-	($row[2] ? "<b>" . $row[2] . "</b><br/>" : "") .
-	($row[3] ? $row[3] . "<br/>" : "") .
-	($row[4] ? $row[4] . "<br/>" : "") .
-		'<br/>' . "\n" .
-	($row[5] ? "<i>" . $row[5] . "</i><br/>" : "") .
-	($row[7] ? '<a href="mailto:' . $row[7] . '?subject=[CDO] "><img border="0" src="/modeling/emf/cdo/images/email.gif" alt="EMail"/></a>&nbsp;' : "") .
-	($row[6] ? '<a href="' . $row[6] . '" target="_blank"><img border="0" src="/modeling/emf/cdo/images/website.gif" alt="Web Site"/></a>&nbsp;' : "") .
-			'</td></tr>' . "\n";
-	print "</table><br/><br/>\n";
-
-	print '<h1>Commits</h1>';
-	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
-	if ($branches && mysql_num_rows($branches) > 0)
-	{
-		$totalPlus = 0;
-		$totalMinus = 0;
-		$totalSum = 0;
-
-		print '<p><table border="1" width="100%" align="right">' . "\n";
-		print '<tr>' .
-			'<td align="left"><b>Branch</b></td>' .
-			'<td><b>Plus</b></td>' .
-			'<td><b>Minus</b></td>' .
-			'<td><b>Sum</b></td>' .
-			'</tr>' . "\n";
-			
-		while ($branch = mysql_fetch_row($branches))
-		{
-			$sum = $branch[1] + $branch[2];
-			print '<tr>' .
-			'<td align="left">' . $branch[0] . '</td>' .
-			'<td>' . $branch[1] . ' LOC</td>' .
-			'<td>' . $branch[2] . ' LOC</td>' .
-			'<td>' . $sum . ' LOC</td>' .
-			'</tr>' . "\n";
-
-			$totalPlus += $branch[1];
-			$totalMinus += $branch[2];
-			$totalSum += $sum;
-		}
-
-		print '<tr>' .
-			'<td>&nbsp;</td>' .
-			'<td><b>' . $totalPlus . ' LOC</b></td>' .
-			'<td><b>' . $totalMinus . ' LOC</b></td>' .
-			'<td><b>' . $totalSum . ' LOC</b></td>' .
-			'</tr>' . "\n";
-		print "</table><br/><br/>\n";
-	}
-}
 
 ########################################################################
 print '</div>';
