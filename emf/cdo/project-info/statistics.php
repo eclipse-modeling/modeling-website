@@ -20,6 +20,7 @@ $result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, R
 if ($result && mysql_num_rows($result) > 0)
 {
 	$row = mysql_fetch_row($result);
+	$author = $row[0];
 	$pageTitle = $projectName . ' Statistics For ' . $row[2];
 
 	print '<h1>' . $pageTitle . '</h1>';
@@ -47,7 +48,7 @@ if ($result && mysql_num_rows($result) > 0)
 		"MIN(date) AS FromDate, " . 
 		"MAX(date) AS UntilDate " . 
 		"FROM commits " . 
-		"WHERE Author = '" . $row[0] . "' " . 
+		"WHERE Author = '" . $author . "' " . 
 		"GROUP BY Branch " . 
 		"ORDER BY UntilDate DESC");
 
@@ -57,6 +58,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
+		print '<h1>Commited To ' . $rows . ' Branches</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
@@ -98,7 +100,6 @@ if ($result && mysql_num_rows($result) > 0)
 		print "</table><br/><br/>\n";
 	}
 
-	print '<h1>Bugzilla Activity</h1>';
 	$bugs = wmysql_query("SELECT " .
 			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
@@ -107,7 +108,7 @@ if ($result && mysql_num_rows($result) > 0)
 			"Title, " . 
 			"MAX(date) AS UntilDate " . 
 			"FROM commits JOIN bugs JOIN bugdescs " . 
-			"WHERE Author = '" . $row[0] . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
+			"WHERE Author = '" . $author . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
 			"GROUP BY BugID " . 
 			"ORDER BY UntilDate DESC");
 
@@ -117,9 +118,10 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
+		print '<h1>Commited To ' . $rows . ' Bugzillas</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
-				'<td align="left"><b>ID</b></td>' .
+				'<td align="left"><b>Bugzilla</b></td>' .
 				'<td align="left"><b>Summary</b></td>' .
 				'<td><b>Files</b></td>' .
 				'<td><b>Lines</b></td>' .
