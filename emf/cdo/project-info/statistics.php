@@ -103,7 +103,7 @@ if ($result && mysql_num_rows($result) > 0)
 			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
 			"SUM(LinesMinus) AS Removed, " . 
-			"COUNT(fid) AS Files, " . 
+			"COUNT(commit.fid) AS Files, " . 
 			"MIN(date) AS FromDate, " . 
 			"MAX(date) AS UntilDate, " . 
 			"Title " . 
