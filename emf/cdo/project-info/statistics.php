@@ -104,8 +104,6 @@ if ($result && mysql_num_rows($result) > 0)
 			"SUM(LinesPlus) AS Added, " . 
 			"SUM(LinesMinus) AS Removed, " . 
 			"COUNT(commits.fid) AS Files, " . 
-			"MIN(date) AS FromDate, " . 
-			"MAX(date) AS UntilDate, " . 
 			"Title " . 
 			"FROM commits JOIN bugs JOIN bugdescs " . 
 			"WHERE Author = '" . $row[0] . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
@@ -122,8 +120,6 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<tr>' .
 				'<td align="left"><b>ID</b></td>' .
 				'<td align="left"><b>Summary</b></td>' .
-				'<td><b>Begin</b></td>' .
-				'<td><b>Days</b></td>' .
 				'<td><b>Files</b></td>' .
 				'<td><b>Lines</b></td>' .
 				'<td><b>&empty;</b></td>' .
@@ -133,14 +129,10 @@ if ($result && mysql_num_rows($result) > 0)
 		{
 			$sum = $bug[1] + $bug[2];
 			$lpf = $sum / $bug[3];
-			$begin = formatDate($bug[4]);
-			$days = daysBetween($bug[4], $bug[5]);
 
 			print '<tr>' .
 					'<td align="left"><a href="' . $bugurl . '/' . $bug[0] . '">' . $bug[0] . '</a></td>' .
-					'<td>' . $bug[6] . '</td>' .
-					'<td>' . $begin . '</td>' .
-					'<td>' . $days . '</td>' .
+					'<td>' . $bug[4] . '</td>' .
 					'<td>' . $bug[3] . '</td>' .
 					'<td>' . $sum . '</td>' .
 					'<td>' . round($lpf) . '</td>' .
@@ -151,8 +143,6 @@ if ($result && mysql_num_rows($result) > 0)
 		}
 
 		print '<tr>' .
-				'<td>&nbsp;</td>' .
-				'<td>&nbsp;</td>' .
 				'<td>&nbsp;</td>' .
 				'<td>&nbsp;</td>' .
 				'<td>&nbsp;</td>' .
