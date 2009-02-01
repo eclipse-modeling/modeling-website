@@ -50,7 +50,11 @@ else
 	{
 		while ($table = mysql_fetch_row($tables))
 		{
-			print '<h1><a href="mysql.php?table=' . $table[0] . '">' . $table[0] . '</a></h1>' . "\n";
+			$result = wmysql_query("SELECT COUNT(*) FROM " . $table[0] . ";");
+			$row = mysql_fetch_row($result);
+			$count = $row[0];
+			
+			print '<h1><a href="mysql.php?table=' . $table[0] . '">' . $table[0] . '</a> (' . $count . ')</h1>' . "\n";
 			$fields = wmysql_query("DESCRIBE " . $table[0] . ";");
 			if ($fields && mysql_num_rows($fields) > 0)
 			{
