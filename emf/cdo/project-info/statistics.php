@@ -38,8 +38,8 @@ if ($result && mysql_num_rows($result) > 0)
 	($row[6] ? '<a href="' . $row[6] . '" target="_blank"><img border="0" src="/modeling/emf/cdo/images/website.gif" alt="Web Site"/></a>&nbsp;' : "") .
 			'</td></tr>' . "\n";
 	print "</table>\n";
-	print '<br/><br/>';
-
+	
+	print '<p/>';
 	$branches = wmysql_query("SELECT " .
 		"Branch, " .
 		"SUM(LinesPlus) AS Added, " . 
@@ -97,10 +97,10 @@ if ($result && mysql_num_rows($result) > 0)
 			'<td><b>' . $totalSum . '</b></td>' .
 			'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 			'</tr>' . "\n";
-		print "</table><br/><br/>\n";
+		print "</table>\n";
 	}
 
-	print '<br/><br/>';
+	print '<p/>';
 	$bugs = wmysql_query("SELECT " .
 			"bugdescs.bugid, " .
 			"SUM(LinesPlus) AS Added, " . 
@@ -153,7 +153,7 @@ if ($result && mysql_num_rows($result) > 0)
 				'<td><b>' . $totalSum . '</b></td>' .
 				'<td><b>' . round($totalLPF / $rows) . '</b></td>' .
 				'</tr>' . "\n";
-		print "</table><br/><br/>\n";
+		print "</table>\n";
 	}
 }
 

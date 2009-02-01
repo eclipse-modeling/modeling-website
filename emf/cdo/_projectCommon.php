@@ -104,7 +104,7 @@ $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projecti
 
 $Nav->addNavSeparator("CDO", "$rooturl");
 $Nav->addCustomNav("Team", "$rooturl/project-info/team.php", "", 1);
-$Nav->addCustomNav("Downloads", $_SERVER["DOCUMENT_ROOT"] . "/modeling/emf/downloads/?project=cdo", "", 1);
+$Nav->addCustomNav("Downloads", "/modeling/emf/downloads/?project=cdo", "", 1);
 
 $Nav->addNavSeparator("Resources", "$rooturl/resources");
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/CDO", "", 1);
