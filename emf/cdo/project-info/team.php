@@ -13,6 +13,14 @@ include($App->getProjectCommon());
 include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
 ob_start();
+$result= wmysql_query("SHOW TABLES;");
+if ($result && mysql_num_rows($result) > 0)
+{
+	while ($row = mysql_fetch_row($result))
+	{
+		print "<p>" . $row[1] "</p>";
+	}
+}
 
 print<<<EOHTML
 <div id="midcolumn">
