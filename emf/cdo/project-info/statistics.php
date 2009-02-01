@@ -16,9 +16,6 @@ ob_start();
 print '<div id="midcolumn">';
 ########################################################################
 
-$pageTitle = 'Meet The ' . $projectName . 'Team';
-print '<h1>' . $pageTitle . '</h1>';
-
 $result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail FROM developers WHERE CommitterID = '" . $_GET["committerid"] . "'");
 if ($result && mysql_num_rows($result) > 0)
 {

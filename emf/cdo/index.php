@@ -15,9 +15,11 @@ include($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 ob_start();
 print '<div id="midcolumn">';
 ########################################################################
+
+$pageTitle = 'CDO Model Repository';
+print '<h1>' . $pageTitle . '</h1>';
 ?>
 
-<h1>CDO Model Repository</h1>
 <p>CDO is both a technology for distributed shared EMF models and a fast server-based O/R mapping solution.</p>
 </div>
 
@@ -54,10 +56,9 @@ print '</div>';
 $html = ob_get_contents();
 ob_end_clean();
 
-$pageTitle = "Eclipse Modeling - EMF - CDO Model Repository";
 $pageKeywords = ""; // TODO: add something here
 $pageAuthor = "Eike Stepper";
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/index.css\"/>\n");
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, "Eclipse Modeling - " . $pageTitle, $html);
 ?>
