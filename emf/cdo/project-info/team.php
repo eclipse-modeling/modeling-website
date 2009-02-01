@@ -1,1 +1,1 @@
-<?php include_once "../../includes/team-common.php"; ?>
+<?php include_once "../../../includes/team-common.php"; ?>
