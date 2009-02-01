@@ -37,9 +37,8 @@ if ($result && mysql_num_rows($result) > 0)
 	($row[7] ? '<a href="mailto:' . $row[7] . '?subject=[CDO] "><img border="0" src="/modeling/emf/cdo/images/email.gif" alt="EMail"/></a>&nbsp;' : "") .
 	($row[6] ? '<a href="' . $row[6] . '" target="_blank"><img border="0" src="/modeling/emf/cdo/images/website.gif" alt="Web Site"/></a>&nbsp;' : "") .
 			'</td></tr>' . "\n";
-	print "</table><br/><br/>\n";
+	print "</table>\n";
 
-	print '<h1>CVS Activity</h1>';
 	$branches = wmysql_query("SELECT " .
 		"Branch, " .
 		"SUM(LinesPlus) AS Added, " . 
@@ -58,7 +57,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<h1>Commited To ' . $rows . ' Branches</h1>';
+		print '<br/><br/><h1>Commited To ' . $rows . ' Branches</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
@@ -118,7 +117,7 @@ if ($result && mysql_num_rows($result) > 0)
 		$totalSum = 0;
 		$totalLPF = 0;
 
-		print '<h1>Commited To ' . $rows . ' Bugzillas</h1>';
+		print '<br/><br/><h1>Commited To ' . $rows . ' Bugzillas</h1>';
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 				'<td align="left"><b>Bugzilla</b></td>' .
