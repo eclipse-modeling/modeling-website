@@ -52,13 +52,13 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
-			'<td width="80"><b>From</b></td>' .
-			'<td width="80"><b>Until</b></td>' .
-			'<td><b>Commits</b></td>' .
-			'<td><b>Added</b></td>' .
-			'<td><b>Removed</b></td>' .
-			'<td><b>LOC</b></td>' .
-			'<td><b>LOC / Commit</b></td>' .
+			'<td width="100"><b>From</b></td>' .
+			'<td width="100"><b>Until</b></td>' .
+			'<td width="100"><b>Commits</b></td>' .
+			'<td width="100"><b>Added</b></td>' .
+			'<td width="100"><b>Removed</b></td>' .
+			'<td width="100"><b>LOC</b></td>' .
+			'<td width="100"><b>LOC / Commit</b></td>' .
 			'</tr>' . "\n";
 			
 		while ($branch = mysql_fetch_row($branches))
