@@ -108,8 +108,8 @@ if ($result && mysql_num_rows($result) > 0)
 			"COUNT(commits.fid) AS Files, " . 
 			"Title, " . 
 			"MAX(date) AS UntilDate " . 
-			"FROM commits JOIN bugs JOIN bugdescs " . 
-			"WHERE Author = '" . $author . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid " . 
+			"FROM commits JOIN bugs JOIN bugdescs JOIN cvsfiles " . 
+			"WHERE Author = '" . $author . "' AND commits.fid = bugs.fid AND bugs.bugid = bugdescs.bugid AND commits.fid = cvsfiles.fid AND cvsfiles.component = 'org.eclipse.emf.cdo' " . 
 			"GROUP BY BugID " . 
 			"ORDER BY UntilDate DESC");
 
