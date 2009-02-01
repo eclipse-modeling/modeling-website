@@ -21,7 +21,7 @@ if ($result && mysql_num_rows($result) > 0)
 {
 	$row = mysql_fetch_row($result);
 	$pageTitle = $projectName . ' Statistics For ' . $row[2];
-	
+
 	print '<h1>' . $pageTitle . '</h1>';
 	print '<p><table border="0" width="100%">' . "\n";
 	print '<tr><td width="25%" height="130" align="center" valign="top">' .
@@ -35,9 +35,48 @@ if ($result && mysql_num_rows($result) > 0)
 	($row[5] ? "<i>" . $row[5] . "</i><br/>" : "") .
 	($row[7] ? '<a href="mailto:' . $row[7] . '?subject=[CDO] "><img border="0" src="/modeling/emf/cdo/images/email.gif" alt="EMail"/></a>&nbsp;' : "") .
 	($row[6] ? '<a href="' . $row[6] . '" target="_blank"><img border="0" src="/modeling/emf/cdo/images/website.gif" alt="Web Site"/></a>&nbsp;' : "") .
-	($row[0] ? '<a href="statistics.php?committerid=' .$row[0] . '"><img border="0" src="/modeling/emf/cdo/images/statistics.gif" alt="Statistics"/></a>&nbsp;' : "") .
 			'</td></tr>' . "\n";
 	print "</table><br/><br/>\n";
+
+	print '<h1>Commits</h1>';
+	$branches = wmysql_query("SELECT Branch, SUM(LinesPlus), SUM(LinesMinus) FROM commits WHERE Author = '" . $row[0] . "' GROUP BY Branch ORDER BY Branch");
+	if ($branches && mysql_num_rows($branches) > 0)
+	{
+		$totalPlus = 0;
+		$totalMinus = 0;
+		$totalSum = 0;
+
+		print '<p><table border="0" width="100%">' . "\n";
+		print '<tr>' .
+			'<td>Branch</td>' .
+			'<td>Lines +</td>' .
+			'<td>Lines -</td>' .
+			'<td>Lines Sum</td>' .
+			'</tr>' . "\n";
+			
+		while ($branch = mysql_fetch_row($branches))
+		{
+			$sum = $branch[1] + $branch[2];
+			print '<tr>' .
+			'<td>' . $branch[0] . '</td>' .
+			'<td>' . $branch[1] . '</td>' .
+			'<td>' . $branch[2] . '</td>' .
+			'<td>' . $sum . '</td>' .
+			'</tr>' . "\n";
+
+			$totalPlus += $branch[1];
+			$totalMinus += $branch[2];
+			$totalSum += $sum;
+		}
+
+		print '<tr>' .
+			'<td>=</td>' .
+			'<td>' . $totalPlus . '</td>' .
+			'<td>' . $totalMinus . '</td>' .
+			'<td>' . $totalSum . '</td>' .
+			'</tr>' . "\n";
+		print "</table><br/><br/>\n";
+	}
 }
 
 ########################################################################
