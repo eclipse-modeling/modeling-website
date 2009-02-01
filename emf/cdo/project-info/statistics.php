@@ -52,8 +52,8 @@ if ($result && mysql_num_rows($result) > 0)
 		print '<p><table border="1" width="100%" align="right">' . "\n";
 		print '<tr>' .
 			'<td align="left"><b>Branch</b></td>' .
-			'<td><b>From</b></td>' .
-			'<td><b>Until</b></td>' .
+			'<td><b>Begin</b></td>' .
+			'<td><b>Days</b></td>' .
 			'<td><b>Commits</b></td>' .
 			'<td><b>Added</b></td>' .
 			'<td><b>Removed</b></td>' .
@@ -65,25 +65,19 @@ if ($result && mysql_num_rows($result) > 0)
 		{
 			$sum = $branch[1] + $branch[2];
 			$lpc = $sum / $branch[3];
-			$from = formatDate($branch[4]);
-			$until = formatDate($branch[5]);
+			$begin = formatDate($branch[4]);
+			$days = $branch[5] - $branch[4] + 1;
 
-			print '<tr><td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>';
-			if ($from == $until)
-			{
-				print '<td colspan="2">' . $from . '</td>';
-			}
-			else
-			{
-				print '<td>' . $from . '</td><td>' . $until . '</td>';
-			}
-
-			print '<td>' . $branch[3] . '</td>' .
-			'<td>' . $branch[1] . '</td>' .
-			'<td>' . $branch[2] . '</td>' .
-			'<td>' . $sum . '</td>' .
-			'<td>' . round($lpc) . '</td>' .
-			'</tr>' . "\n";
+			print '<tr>' .
+				'<td align="left"><a href="commits.php?committerid='. $_GET["committerid"] . '&branch=' . $branch[0] . '">' . $branch[0] . '</a></td>' .
+				'<td>' . $begin . '</td>' .
+				'<td>' . $days . '</td>' .
+				'<td>' . $branch[3] . '</td>' .
+				'<td>' . $branch[1] . '</td>' .
+				'<td>' . $branch[2] . '</td>' .
+				'<td>' . $sum . '</td>' .
+				'<td>' . round($lpc) . '</td>' .
+				'</tr>' . "\n";
 
 			$totalCommits += $branch[3];
 			$totalPlus += $branch[1];
