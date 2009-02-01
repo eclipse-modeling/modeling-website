@@ -92,6 +92,14 @@ function formatDate($date)
 	return date("Y-m-d", $date);
 }
 
+function daysBetween($from, $until)
+{
+	if (is_string($from)) $from = strtotime($from);
+	if (is_string($until)) $until = strtotime($until);
+	$offset = $until - $from; 
+	return floor($offset/60/60/24);
+}
+
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
 
 $Nav->addNavSeparator("CDO", "$rooturl");
