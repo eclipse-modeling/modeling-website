@@ -36,6 +36,7 @@ function query($sql)
 
 if (isset($_GET["table"]))
 {
+	$defrecords = 100;
 	$pageTitle = $_GET["table"];
 	print '<h1>' . $_GET["table"] . '</h1>' . "\n";
 
@@ -43,7 +44,7 @@ if (isset($_GET["table"]))
 	if ($result && mysql_num_rows($result) > 0)
 	{
 		$page = getParameter("page", 0);
-		$records = getParameter("records", 100);
+		$records = getParameter("records", $defrecords);
 
 		print '<table border="1"><tr>' ."\n";
 		print "<th>&nbsp;</th>\n";
@@ -64,6 +65,12 @@ if (isset($_GET["table"]))
 			}
 
 			print "</tr>\n";
+		}
+
+		if ($offset < mysql_num_rows($result) - 1)
+		{
+			print '<tr><td colspan="' . (1 + mysql_num_fields($result)) . '" align="center"><a href="' .
+			$_SERVER["PHP_SELF"] . '?table=' . $table . '&page=' . ($page + 1) . ($records == $defrecords ? '' : '$records=' . $records);
 		}
 
 		print "</table><br/>\n";
