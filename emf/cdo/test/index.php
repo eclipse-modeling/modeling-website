@@ -17,8 +17,8 @@ print '<div id="midcolumn">';
 ########################################################################
 
 $pageTitle = 'Test Page';
-print '<h1>' . $pageTitle . '</h1>';
-print $_SERVER["PHP_SELF"];
+print "<h1>" . $pageTitle . "</h1>\n";
+print $_SERVER["PHP_SELF"] . "<br/>\n";
 require_once("include.php"); 
 
 ########################################################################
