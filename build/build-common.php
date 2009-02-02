@@ -128,7 +128,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			</tr>
 
 			<tr>
-				<td><img src="/modeling/images/numbers/1.gif" /></td>
+				<td><img width="27" src="/modeling/images/numbers/1.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Branch, Subproject &amp; Type</b></td>
 				<td>&#160;</td>
@@ -150,12 +150,12 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			<tr>
 				<td colspan="4"></td>
 				<td colspan="2">
-					<small><acronym title="Show all deps / show only selected deps"><a href="javascript:toggleDependencies()">Toggle Selection</a></acronym> | <acronym title="Define a regex in _common.php to use this"><a href="javascript:resetLatestDependencies()">Reset Latest Dependencies</a></acronym></small> 
+					<span style="font-size:x-small"><acronym title="Show all deps / show only selected deps"><a href="javascript:toggleDependencies()">Toggle Selection</a></acronym> | <acronym title="Define a regex in _common.php to use this"><a href="javascript:resetLatestDependencies()">Reset Latest Dependencies</a></acronym></span> 
 				</td>
 			</tr>
 
 			<tr valign="top">
-				<td><img src="/modeling/images/numbers/2.gif" /></td>
+				<td><img width="27" src="/modeling/images/numbers/2.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Dependency URLs</b><br>
 <!--
@@ -164,135 +164,63 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 #	downloads-common.php ($deps array), and
 #   build-common.php (<b>Dependency URLs</b> & function findCatg())
 -->
-					<small>
-					choose URLs (use <em>CTRL</em> <br>
-					for multiple selections)</small>
-					<table>
-						<tr><td><b>Public</b></td><td><b>Mirror</b></td></tr>
-						<?php $buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org"); ?>
-						<tr>
-							<td> &#149; <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
-							<td> &#149; <a href="http://fullmoon/downloads/">Eclipse</a></td>
-						</tr>
-						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
-							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
-							</td>
-						</tr>
-						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
-							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>,<br/>
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
-							</td>
-						</tr>
-						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
-							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[1]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
-							</td>
-						</tr>
-						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
-							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
-							</td>
-						</tr>
-						<tr>
-							<td> &#149; <a href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
-										<a href="http://<?php print $buildServer[0]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
-							</td>
-							<td> &#149; <a href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
-										<a href="http://<?php print $buildServer[2]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
-							</td>
-						</tr>
-						<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
-						<tr>
-							<td colspan="2"> &#149;
-										<a href="http://download.eclipse.org/technology/dltk/downloads/">DLTK</a>,
-										<a href="http://www.eclipse.org/datatools/downloads.php">DTP</a>,
-										<a href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
-										<a href="http://download.eclipse.org/dsdp/tm/downloads/">TM &amp; RSE</a>,
-										<a href="http://download.eclipse.org/webtools/downloads/">WTP</a>
-										<a href="http://www.eclipse.org/eclipselink/downloads/">EclipseLink</a>
-							</td>
-						</tr>
-					</table>
-            <p><small>&#160;&#160;-- AND/OR --</small></p>
+					<span style="font-size:x-small">
+					choose URLs <br/>(use <i>CTRL</i> <br>
+					for multiple selections - see links at right)</span>
+
+            <p><span style="font-size:x-small">&#160;</span></p>
+            <p><span style="font-size:x-small">- AND/OR -</span></p>
 				</td>
 				<td>&#160;</td>
 				<td colspan=2>
-				<small>
+				<span style="font-size:x-small">
 				<select multiple="multiple" style="font-size:9px" name="build_Dependencies_URL[]" size="18" onchange="showfullURL(this.options[this.selectedIndex].value);">
 				<?php displayURLs($options["DependenciesURL"]); ?>
 				</select></td>
 			</tr>
 			<tr valign="top">
 				<td colspan=2>&#160;</td>
-				<td><small>
-					paste full URL(s), one per<br>
-					line or comma separated<br>
-					(new values will be stored)</small>
+				<td><span style="font-size:x-small">paste full URL(s), one per line or comma separated (new values will be stored)</span>
 				</td>
 				<td>&#160;</td>
 				<td colspan=2>
-				<textarea name="build_Dependencies_URL_New" cols="50" rows="4"></textarea>
+				<textarea name="build_Dependencies_URL_New" cols="35" rows="4"></textarea>
 				</td>
 			</tr>
 			<tr><td colspan="6">&#160;</td></tr>
 
 			<tr>
-				<td rowspan="1" valign="top"><a name="step3"></a><img src="/modeling/images/numbers/3.gif" /></td>
+				<td rowspan="1" valign="top"><a name="step3"></a><img width="27" src="/modeling/images/numbers/3.gif" /></td>
 				<td rowspan="1">&#160;</td>
 				<td colspan=1><a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">Basebuilder</a> Branch:</td>
 				<td>&#160;</td>
 				<td><input size="15" name="build_basebuilder_branch" value="<?php echo $options["BaseBuilderBranch"]; ?>">
 				</td>
-				<td width="350"><small><a id="divToggle_relengBasebuilder" name="divToggle_relengBasebuilder" href="javascript:toggleDetails('relengBasebuilder')">[+]</a></small>
+				<td width="350"><span style="font-size:x-small"><a id="divToggle_relengBasebuilder" name="divToggle_relengBasebuilder" href="javascript:toggleDetails('relengBasebuilder')">[+]</a></span>
 					<div id="divDetail_relengBasebuilder" name="divDetail_relengBasebuilder" style="display:none;border:0">
-					<small>
+					<span style="font-size:x-small">
 					Enter Tag or Branch, eg.,
 						<acronym title="Eclipse 3.5.x">R35_M4</acronym>,
 						<acronym title="Eclipse 3.4.x">RC2_34</acronym>,
 						<acronym title="Eclipse 3.3.x">v20070614</acronym>,
 						<acronym title="Eclipse 3.2.x">r322_v20070104</acronym>,
 						<acronym title="Eclipse 3.1.x">R3_1_maintenance</acronym> :: <a href="http://wiki.eclipse.org/index.php/Platform-releng-basebuilder">wiki</a>
-					</small>
+					</span>
 					</div>
 				</td>
 			</tr>
 
 			<tr>
-				<td valign="top" rowspan="2" valign="top"><img src="/modeling/images/numbers/4.gif" /></td>
+				<td valign="top" rowspan="2" valign="top"><img width="27" src="/modeling/images/numbers/4.gif" /></td>
 				<td rowspan="2">&#160;</td>
-				<td><b>Build Alias</b><br><small>required for S and R builds</small></td>
+				<td><b>Build Alias</b><br><span style="font-size:x-small">required for S and R builds</span></td>
 				<td>&#160;</td>
 				<td><input name="build_Build_Alias" size=8></td>
-				<td width="300"><small><a id="divToggle_buildAlias" name="divToggle_buildAlias" href="javascript:toggleDetails('buildAlias')">[+]</a></small>
+				<td width="300"><span style="font-size:x-small"><a id="divToggle_buildAlias" name="divToggle_buildAlias" href="javascript:toggleDetails('buildAlias')">[+]</a></span>
 					<div id="divDetail_buildAlias" name="divDetail_buildAlias" style="display:none;border:0">
-					<small>
+					<span style="font-size:x-small">
 					Eg., to label a milestone as "0.7.0M4" instead of "S200712120000". You must include the version -- "M4" is not valid.
-					</small>
+					</span>
 					</div>
 				</td>
 			</tr>
@@ -307,10 +235,10 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 						displayOptions($options["MapfileRule"]); ?>
 				</select>
 				</td>
-				<td><small><a id="divToggle_MapfileRule" name="divToggle_MapfileRule" href="javascript:toggleDetails('MapfileRule')">[+]</a></small>
+				<td><span style="font-size:x-small"><a id="divToggle_MapfileRule" name="divToggle_MapfileRule" href="javascript:toggleDetails('MapfileRule')">[+]</a></span>
 				<div id="divDetail_MapfileRule" name="divDetail_MapfileRule" style="display:none;border:0">
-				<table><tr valign="top"><td><small>Use Map</small></td><td><small> : </small></td><td><small>Extract static <?php echo $projct; ?>.map file from CVS and use that for build. Tag(s) listed in mapfile MUST EXIST ALREADY.</small></td></tr>
-						<tr valign="top"><td><small>Generate Map</small></td><td><small> : </small></td><td><small>Generate map file using branch (eg., R1_0_maintenance).</small></td></tr>
+				<table><tr valign="top"><td><span style="font-size:x-small">Use Map</span></td><td><span style="font-size:x-small"> : </span></td><td><span style="font-size:x-small">Extract static <?php echo $projct; ?>.map file from CVS and use that for build. Tag(s) listed in mapfile MUST EXIST ALREADY.</span></td></tr>
+						<tr valign="top"><td><span style="font-size:x-small">Generate Map</span></td><td><span style="font-size:x-small"> : </span></td><td><span style="font-size:x-small">Generate map file using branch (eg., R1_0_maintenance).</span></td></tr>
 				</table>
 				</div>
 				</td>
@@ -320,7 +248,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 
 
 			<tr>
-				<td rowspan="1"><img src="/modeling/images/numbers/5.gif" /></td>
+				<td rowspan="1"><img width="27" src="/modeling/images/numbers/5.gif" /></td>
 				<td rowspan="1">&#160;</td>
 				<td><b>Run Tests</b></td>
 				<td>&#160;</td>
@@ -328,27 +256,27 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td colspan="1">
 				<?php displayCheckboxes("build_Run_Tests",$options["RunTests"]); ?>
 				</td>
-				<td width="300"><small><a id="divToggle_RunTests" name="divToggle_RunTests" href="javascript:toggleDetails('RunTests')">[+]</a></small>
+				<td width="300"><span style="font-size:x-small"><a id="divToggle_RunTests" name="divToggle_RunTests" href="javascript:toggleDetails('RunTests')">[+]</a></span>
 					<div id="divDetail_RunTests" name="divDetail_RunTests" style="display:none;border:0">
-					<small>
+					<span style="font-size:x-small">
 					If yes to JUnit Tests, tests will be performed during build
 				to validate results and will be refected in build results on
 				download page and build detail pages.
-					</small>
+					</span>
 					</div>
 				</td>
 			</tr>
 
 			<tr>
-				<td><img src="/modeling/images/numbers/6.gif" /></td>
+				<td><img width="27" src="/modeling/images/numbers/6.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Email?</b></td>
 				<td>&#160;</td>
 				<td colspan="1"><input name="build_Email" size="25" value="<?php echo $options["EmailDefault"]; ?>"/></td>
-				<td width="300"><small><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></small>
+				<td width="300"><span style="font-size:x-small"><a id="divToggle_email" name="divToggle_email" href="javascript:toggleDetails('email')">[+]</a></span>
 					<div id="divDetail_email" name="divDetail_email" style="display:none;border:0">
-					<small>Add your email (or comma-separated emails) to be notified when done.
-					</small>
+					<span style="font-size:x-small">Add your email (or comma-separated emails) to be notified when done.
+					</span>
 					</div>
 				</td>
 			</tr>
@@ -358,29 +286,32 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td colspan="6"><hr noshade size=1/></td>
 			</tr>
 			<tr valign="top">
-				<td><img src="/modeling/images/numbers/6.gif" /></td>
+				<td>&#160;</td>
 				<td>&#160;</td>
 				<td colspan="5"><table>
 					<tr>
 						<td colspan=3><b>Debug Options:</b></td>
 					</tr>
 					<tr>
-						<td colspan=1>org.eclipse.*.common.releng branch:<br><small>-commonRelengBranch</small></td>
+						<td colspan=1 nowrap>org.eclipse.*.common.releng branch:<br><span style="font-size:x-small">-commonRelengBranch</span></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_common_releng_branch" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_common_releng_branch" value=""></td><td nowrap><span style="font-size:x-small"> Enter Tag/Branch/Version, eg.,<br/>build_200409171617, R1_0_maintenance</span></td>
 					</tr>
+					<tr><td colspan="3"><span style="font-size:small">&#160;</span></td>
 					<tr>
-						<td colspan=1>org.eclipse.*.releng branch:<br><small>-projRelengBranch</small></td>
+						<td colspan=1>org.eclipse.*.releng branch:<br><span style="font-size:x-small">-projRelengBranch</span></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_proj_releng_branch" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_proj_releng_branch" value=""></td><td><span style="font-size:x-small"> Enter Tag/Branch/Version, eg.,<br/>build_200409171617, R1_0_maintenance</span></td>
 					</tr>
+					<tr><td colspan="3"><span style="font-size:small">&#160;</span></td>
 					<tr>
-						<td colspan=1>org.eclipse.* branch:<br><small>-branch</small></td>
+						<td colspan=1>org.eclipse.* branch:<br><span style="font-size:x-small">-branch</span></td>
 						<td>&#160;</td>
-						<td><input size="15" name="build_Branch_Override" value=""></td><td><small> Enter Tag/Branch/Version, eg., build_200409171617, R1_0_maintenance</small></td>
+						<td><input size="15" name="build_Branch_Override" value=""></td><td><span style="font-size:x-small"> Enter Tag/Branch/Version, eg.,<br/>build_200409171617, R1_0_maintenance</span></td>
 					</tr>
+					<tr><td colspan="3"><span style="font-size:small">&#160;</span></td>
 					<tr>
-						<td colspan=1>Keep tempfiles?<br><small>-noclean</small></td>
+						<td colspan=1>Keep tempfiles?<br><span style="font-size:x-small">-noclean</span></td>
 						<td>&#160;</td>
 						<td><input type="checkbox" name="build_noclean" value="Y" checked></td>
 					</tr>
@@ -388,6 +319,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			</tr>
 <?php } ?>
 
+			<tr><td colspan="3"><span style="font-size:small">&#160;</span></td>
 			<tr>
 				<td>&#160;</td>
 				<td colspan=2 align=center><input type="button" value="<?php if ($previewOnly) { print "Preview Only"; } else { print "Build"; } ?>" onclick="doSubmit()"></td>
@@ -669,7 +601,7 @@ else
 				$val = $k == "build_Dependencies_URL_New" ? $newDependencies : $v;
 				print "<li>";
 				print (is_array($val) ?
-				"<b>" . $lab . ":</b>" . "<ul>\n<li><small>" . join("</small></li>\n<li><small>", $val) . "</small></li>\n</ul>\n" :
+				"<b>" . $lab . ":</b>" . "<ul>\n<li><span style=\"font-size:x-small\">" . join("</span></li>\n<li><span style=\"font-size:x-small\">", $val) . "</span></li>\n</ul>\n" :
 				"<div>" . $val . "</div>" . "<b>" . $lab . ":</b>");
 				print "</li>\n";
 				$i++;
@@ -719,7 +651,7 @@ else
 		print '</div><div class="homeitem3col">'."\n";
 		print "<h3>Build Command (Preview Only)</h3>\n";
 		if (!$isBuildDotEclipseServer){
-			print "<p><small><code>$preCmd</code></small></p>";
+			print "<p><span style=\"font-size:x-small\"><code>$preCmd</code></span></p>";
 		}
 	}
 	else if (!$isBuildDotEclipseServer)
@@ -728,7 +660,7 @@ else
 	}
 	if ($previewOnly)
 	{
-		print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+		print "<p><span style=\"font-size:x-small\"><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></span></p>";
 	}
 	else if (!$isBuildDotEclipseServer)
 	{
@@ -744,12 +676,12 @@ else
 			print '</div><div class="homeitem3col">'."\n";
 			print "<h3><b style=\"color:orange;background-color:white\">&#160;WARNING!&#160;</b> Another build is already in progress.</h3>\n";
 			print "<p>Lockfile: <u>$lockfile</u></p>";
-			print "<p><small><code>";
+			print "<p><span style=\"font-size:x-small\"><code>";
 			foreach (file($lockfile) as $line)
 			{
 				print "$line\n";
 			}
-			print "</code></small></p>";
+			print "</code></span></p>";
 
 		}
 		else // create lockfile
@@ -764,13 +696,13 @@ else
 			{
 				print "<h3><b style=\"color:green;background-color:white\">&#160;OK!&#160;</b> Build will start in one minute.</h3>\n";
 				print "<p>Lockfile: <u>$lockfile</u></p>";
-				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+				print "<p><span style=\"font-size:x-small\"><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></span></p>";
 			}
 			else
 			{
 				print "<h3><b style=\"color:red;background-color:white\">&#160;ERROR!&#160;</b> Could not write to lockfile!</h3>\n";
 				print "<p>Lockfile: <u>$lockfile</u></p>";
-				print "<p><small><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></small></p>";
+				print "<p><span style=\"font-size:x-small\"><code>".preg_replace("/\ \-/","<br> -",$cmd)."</code></span></p>";
 			}
 		}
 		if (is_file($lockfile))
@@ -807,6 +739,108 @@ if ($isBuildServer && function_exists("sidebar"))
 {
 	sidebar();
 }
+
+print "<div class=\"sideitem\">\n";
+print "<h6>Dependencies</h6>\n";
+print "<ul>\n";
+print <<<EOHTML
+	<table>
+		<tr><td><b style="font-size:small">Public</b></td><td><b style="font-size:small">Mirror</b></td></tr>
+		<?php $buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org"); ?>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
+			<td> &#149; <a style="font-size:x-small" href="http://fullmoon/downloads/">Eclipse</a></td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[1]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
+						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
+						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr><td colspan="2"><hr noshade="noshade" size="1" width="100%"/></td>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td colspan="2"> &#149;
+						<a style="font-size:x-small" href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
+						<a style="font-size:x-small" href="http://www.eclipse.org/eclipselink/downloads/">EclipseLink</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"> &#149;
+						<a style="font-size:x-small" href="http://download.eclipse.org/technology/dltk/downloads/">DLTK</a>,
+						<a style="font-size:x-small" href="http://www.eclipse.org/datatools/downloads.php">DTP</a>,
+						<a style="font-size:x-small" href="http://download.eclipse.org/dsdp/tm/downloads/">RSE</a>,
+						<a style="font-size:x-small" href="http://download.eclipse.org/webtools/downloads/">WTP</a>
+			</td>
+		</tr>
+	</table>
+EOHTML;
+print "</ul>\n";
+print "</div>\n";
 
 print "</div>\n";
 
