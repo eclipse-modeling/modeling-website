@@ -759,9 +759,9 @@ print <<<EOHTML
 						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 			</td>
 			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[1]}/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+						<a style="font-size:x-small" href="http://${buildServer[1]}/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+						<a style="font-size:x-small" href="http://${buildServer[1]}/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+						<a style="font-size:x-small" href="http://${buildServer[1]}/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 			</td>
 		</tr>
 		<tr>
@@ -792,7 +792,7 @@ print <<<EOHTML
 			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
 						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[1]}/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
 						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
 			</td>
 		</tr>
