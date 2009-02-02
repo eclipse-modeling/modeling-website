@@ -743,81 +743,81 @@ if ($isBuildServer && function_exists("sidebar"))
 print "<div class=\"sideitem\">\n";
 print "<h6>Dependencies</h6>\n";
 print "<ul>\n";
+$buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org");
 print <<<EOHTML
 	<table>
 		<tr><td><b style="font-size:small">Public</b></td><td><b style="font-size:small">Mirror</b></td></tr>
-		<?php $buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org"); ?>
 		<tr>
 			<td> &#149; <a style="font-size:x-small" href="http://download.eclipse.org/eclipse/downloads/">Eclipse</a></td>
 			<td> &#149; <a style="font-size:x-small" href="http://fullmoon/downloads/">Eclipse</a></td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[1]; ?>/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
-			</td>
-		</tr>
-		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
-			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
-			</td>
-		</tr>
-		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
-		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
-			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[1]}/modeling/emf/downloads/?project=emf&amp;showAll=&amp;sortBy=date&amp;hlbuild=0#latest">EMF</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=query&amp;sortBy=date&amp;hlbuild=0#latest">MQ</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=transaction&amp;sortBy=date&amp;hlbuild=0#latest">MT</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=validation&amp;sortBy=date&amp;hlbuild=0#latest">VF</a>
 			</td>
 		</tr>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=net4j&amp;sortBy=date&amp;hlbuild=0#latest">Net4j</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emf/downloads/?project=teneo&amp;sortBy=date&amp;hlbuild=0#latest">Teneo</a>,
 			</td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[1]; ?>/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=ecoretools&amp;sortBy=date&amp;hlbuild=0#latest">Ecore Tools</a>
 			</td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
-			</td>
-		</tr>
-		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
-			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[1]}/gef/downloads/?sortBy=date&amp;hlbuild=0#latest">GEF</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/gmf/downloads/?sortBy=date&amp;hlbuild=0#latest">GMF</a>
 			</td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
-						<a style="font-size:x-small" href="http://<?php print $buildServer[0]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
-						<a style="font-size:x-small" href="http://<?php print $buildServer[2]; ?>/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/mdt/downloads/?project=ocl&amp;sortBy=date&amp;hlbuild=0#latest">OCL</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/mdt/downloads/?project=uml2&amp;sortBy=date&amp;hlbuild=0#latest">UML2</a>
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/mdt/downloads/?project=uml2tools&amp;sortBy=date&amp;hlbuild=0#latest">UML2 Tools</a>
+			</td>
+		</tr>
+		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
 			</td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
