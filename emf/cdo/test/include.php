@@ -1,4 +1,4 @@
 <?php
 
-print $_SERVER["PHP_SELF"];
+print $_SERVER["PHP_SELF"] . "<br/>\n";
 ?>
