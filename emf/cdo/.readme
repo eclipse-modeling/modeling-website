@@ -3,3 +3,6 @@ http://emft.eclipse.org/modeling/emf/cdo/
 
 emft.eclipse.org:
 cd /var/www/html/modeling/emf/cdo; cvs -q up -dP
+
+estepper@emft:/var/www/html/modeling/emf/cdo $ 
+cvs -d :pserver:anonymous@dev.eclipse.org:/cvsroot/modeling checkout -d psf org.eclipse.emf/org.eclipse.emf.cdo/develop/setup/psf
