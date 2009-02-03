@@ -20,7 +20,9 @@ $pageTitle = 'Meet The ' . $projectName . ' Team';
 print '<h1>' . $pageTitle . '</h1>';
 
 $email_all = null;
-$result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail FROM developers WHERE Role LIKE '%$comp%' ORDER BY SUBSTRING_INDEX(Name,' ',-1)");
+$result = wmysql_query("SELECT CommitterID, PhotoURL, Name, Company, Location, Role, Website, EMail " .
+	"FROM developers WHERE Role LIKE '%$comp%' ORDER BY did");
+
 if ($result && mysql_num_rows($result) > 0)
 {
 	print '<p><table border="0" width="100%">' . "\n";
