@@ -57,6 +57,17 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),*/
+	"/teneo" => array(
+		"Teneo Hibernate" => array( # same as value in _projectCommon.php's $projects array
+			"SDK (Runtime, Source)" => "SDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
+		),
+		"Teneo EclipseLink" => array( # same as value in _projectCommon.php's $projects array
+			"SDK (Runtime, Source)" => "SDK"
+		)
+	),
 	"/emf" => array(
 		"EMF and XSD" => array(
 			"<img alt=\"All-In-One SDK Zip\" src=\"/modeling/images/dl-icon-aio-sdk.gif\"/> <b style=\"color:green\">All-In-One SDK</b> (Runtime, Source, Doc)" => "SDK",
@@ -102,6 +113,14 @@ $filePre = array(
 );
 /* alternate method for specifying prefixes - static list */
 $filePreStatic = array(
+	"/teneo" => array(
+		"emf-teneo",
+		"emf-teneo",
+		"emf-teneo",
+		"emf-teneo",
+
+		"emf-teneo-eclipselink"
+	),
 	"/emf" => array(
 		"emf-xsd",
 		"emf-xsd",
