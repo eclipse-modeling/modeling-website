@@ -12,7 +12,7 @@ $options = array (
 		"0.7.0=HEAD,/opt/sun-java2-5.0",
 		
 	),
-	/* define a regular expression to be used to collect the most recent 
+	/*define a regular expression to be used to collect the most recent 
 	* matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	* and /home/www-data/build/requests/dependencies.urls.txt 
 	* */
