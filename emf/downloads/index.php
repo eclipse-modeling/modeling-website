@@ -67,7 +67,8 @@ $dls = array(
 		"Teneo EclipseLink" => array( # same as value in _projectCommon.php's $projects array
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
-			"Examples" => "examples"
+			"Examples" => "examples",
+			"Automated Tests" => "automated-tests"
 		)
 	),
 	"/emf" => array(
@@ -121,6 +122,7 @@ $filePreStatic = array(
 		"emf-teneo",
 		"emf-teneo",
 
+		"emf-teneo-eclipselink",
 		"emf-teneo-eclipselink",
 		"emf-teneo-eclipselink",
 		"emf-teneo-eclipselink"
