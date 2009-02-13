@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.77 2008/12/01 21:17:04 nickb Exp $
+// $Id: scripts.php,v 1.78 2009/02/13 02:15:40 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -489,7 +489,8 @@ function internalUseOnly()
 
 		<div class="homeitem3col">
 		<h3>For Internal Use Only</h3>
-		<p>Sorry, this script must be run from a sanctioned build server. Contact Nick Boldt (codeslave[at]ca[dot]ibm[dot]com) for details.</p>
+		<p>Sorry, this script must be run from a sanctioned build server. Contact <a href="http://wiki.eclipse.org/User:Nickb">Nick Boldt</a> 
+		or your project lead for details.</p>
 		</div>
 		</div>
 		<?php
