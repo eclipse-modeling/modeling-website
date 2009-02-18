@@ -135,6 +135,13 @@ ob_start();
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20081206-0905/index.php">I20081206-0905</a></td>
 			<td/>
 		</tr>
+		<tr>
+			<td/><td/>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090214-0743/index.php">1.0M5</a></td>
+			<td/>
+			<td/>
+			<td/>
+		</tr>
 	</table>
 
 </div>
