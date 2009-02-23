@@ -158,12 +158,6 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><img width="27" src="/modeling/images/numbers/2.gif" /></td>
 				<td>&#160;</td>
 				<td><b>Dependency URLs</b><br>
-<!--
-# See also:
-#	genBuildDetails.sh (depNames array),
-#	downloads-common.php ($deps array), and
-#   build-common.php (<b>Dependency URLs</b> & function findCatg())
--->
 					<span style="font-size:x-small">
 					choose URLs <br/>(use <i>CTRL</i> <br>
 					for multiple selections - see links at right)</span>
@@ -245,8 +239,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			</tr>
 
 			<tr><td colspan="6">&#160;</td></tr>
-
-
+			
 			<tr>
 				<td rowspan="1"><img width="27" src="/modeling/images/numbers/5.gif" /></td>
 				<td rowspan="1">&#160;</td>
@@ -744,6 +737,12 @@ print "<div class=\"sideitem\">\n";
 print "<h6>Dependencies</h6>\n";
 print "<ul>\n";
 $buildServer = array("www.eclipse.org","modeling.eclipse.org","emft.eclipse.org","build.eclipse.org");
+
+/* See also:
+	 genBuildDetails.sh (depNames array),
+	 downloads-common.php ($deps array), and
+     build-common.php (<b style="font-size:small">Mirror</b> & function findCatg())
+*/
 print <<<EOHTML
 	<table>
 		<tr><td><b style="font-size:small">Public</b></td><td><b style="font-size:small">Mirror</b></td></tr>
@@ -775,10 +774,18 @@ print <<<EOHTML
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
 			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=mint&amp;sortBy=date&amp;hlbuild=0#latest">Mint</a>,
 			</td>
 			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=compare&amp;sortBy=date&amp;hlbuild=0#latest">Compare</a>,
-						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=mint&amp;sortBy=date&amp;hlbuild=0#latest">Mint</a>,
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/emft/downloads/?project=search&amp;sortBy=date&amp;hlbuild=0#latest">Search</a>,
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=mwe&amp;sortBy=date&amp;hlbuild=0#latest">MWE</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/emft/downloads/?project=search&amp;sortBy=date&amp;hlbuild=0#latest">Search</a>,
 			</td>
 		</tr>
 		<tr>
@@ -813,11 +820,17 @@ print <<<EOHTML
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
 		<tr>
-			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
-						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/m2t/downloads/?project=mtl&amp;sortBy=date&amp;hlbuild=0#latest">MTL</a>,
+						<a style="font-size:x-small" href="http://${buildServer[0]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>, 
 			</td>
-			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
-						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/m2t/downloads/?project=mtl&amp;sortBy=date&amp;hlbuild=0#latest">MTL</a>,
+						<a style="font-size:x-small" href="http://${buildServer[2]}/modeling/m2t/downloads/?project=xpand&amp;sortBy=date&amp;hlbuild=0#latest">Xpand</a>,
+			</td>
+		</tr>
+		<tr>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[0]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
+			</td>
+			<td> &#149; <a style="font-size:x-small" href="http://${buildServer[2]}/modeling/tmf/downloads/?project=xtext&amp;sortBy=date&amp;hlbuild=0#latest">Xtext</a>
 			</td>
 		</tr>
 		<tr><td colspan="2"><span style="font-size:small">&#160;</span></td>
@@ -826,7 +839,8 @@ print <<<EOHTML
 		<tr>
 			<td colspan="2"> &#149;
 						<a style="font-size:x-small" href="http://download.eclipse.org/tools/orbit/downloads/">Orbit</a>,
-						<a style="font-size:x-small" href="http://www.eclipse.org/eclipselink/downloads/">EclipseLink</a>
+						<a style="font-size:x-small" href="http://www.eclipse.org/eclipselink/downloads/">EclipseLink</a>,
+						<a style="font-size:x-small" href="http://www.eclipse.org/subversive/downloads.php">Subversive</a>
 			</td>
 		</tr>
 		<tr>
@@ -925,10 +939,14 @@ function getDependencyURLs($chosen, $entered, $file) {
 /* See also:
 	 genBuildDetails.sh (depNames array),
 	 downloads-common.php ($deps array), and
-     build-common.php (<b>Dependency URLs</b> & function findCatg())
+     build-common.php (<b style="font-size:small">Mirror</b> & function findCatg())
 */
 function findCatg($url) {
 	$matches = array(
+		"29mtl" => "m2t-mtl-",
+		"28mint" => "emft-mint-",
+		"27search" => "emft-search-",
+		"26subversive" => "Subversive-",
 		"25eclipselink" => "eclipselink-",
 		"24qvto" => "m2m-qvtoml-",
 		"23rse" => "RSE-",

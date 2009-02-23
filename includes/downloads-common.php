@@ -80,7 +80,7 @@ else // all others
 /* See also:
 	 genBuildDetails.sh (depNames array),
 	 downloads-common.php ($deps array), and
-     build-common.php (<b>Dependency URLs</b> & function findCatg())
+     build-common.php (<b style="font-size:small">Mirror</b> & function findCatg())
 */
 $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
@@ -96,6 +96,8 @@ $deps = array(
 	"compare" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=compare#compare\">Compare</a>",
 	"mwe" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=mwe#mwe\">MWE</a>",
 	"ocltools" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=ocltools#ocltools\">OCL Tools</a>",
+	"mint" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=mint#mint\">Mint</a>",
+	"search" => "<a href=\"http://www.eclipse.org/modeling/emft/?project=search#search\">Search</a>",
 
 	"ocl" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=ocl#ocl\">OCL</a>",
 	"uml2" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=uml2#uml2/\">UML2</a>",
@@ -111,12 +113,14 @@ $deps = array(
 	"orbit" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">Orbit</a>", "lpg" => "<a href=\"http://download.eclipse.org/tools/orbit/downloads/\">LPG</a>",
 	"wtp" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a>",
 	"wtpwst" => "<a href=\"http://www.eclipse.org/wtp/\">WTP</a> (WST)",
+	"mtl" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=mtl#mtl\">MTL</a>",
 	"xpand" => "<a href=\"http://www.eclipse.org/modeling/m2t/?project=xpand#xpand/\">Xpand</a>",
 	"xtext" => "<a href=\"http://www.eclipse.org/modeling/tmf/?project=xtext#xtext\">Xtext</a>",
 	"xsdruntime" => "<a href=\"http://www.eclipse.org/modeling/mdt/?project=xsd#xsd\">XSD</a>",
 	"qvto" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
 	"qvtoml" => "<a href=\"http://www.eclipse.org/modeling/m2m/?project=qvtoml#qvtoml\">Operational QVT</a>",
 	"eclipselink" => "<a href=\"http://www.eclipse.org/eclipselink/\">EclipseLink</a>",
+	"subversive" => "<a href=\"http://www.eclipse.org/subversive/\">Subversive</a>",
 );
 
 print "<div id=\"midcolumn\">\n";
