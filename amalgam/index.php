@@ -7,18 +7,14 @@ ob_start();
 ?>
 
 	<div id="midcolumn">
-		<table width="100%">
-		<tr><td>&nbsp;</td></tr>
-			<tr>
-				<td align="top">
+		<h1>Modeling Amalgamation Project</h1>
+		<p>
 				The Amalgamation project provides improved packaging, integration, and usability of Modeling project components. In addition
 				to an Eclipse Modeling Tools package delivered from the Eclipse Packaging Project, the Amalgam project provides a DSL Toolkit and 
 				base Modeler package for Toolsmiths and Practitioners, respectively.
-				</td>
-			</tr>
-		</table><hr/>
+		</p>
 		
-		<div class="homeitem">
+		<div class="homeitem" style="clear: both">
 			<h3>Quick Links</h3>
 				<ul class="midlist">
 					<li>Amalgam <a href="http://wiki.eclipse.org/ModelingAmalgam">Wiki</a> is the main source of information about the project.</li>
@@ -26,7 +22,7 @@ ob_start();
 					<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam">Project Plan</a> for the current release.</li>
 					<li><a href="http://www.eclipse.org/proposals/amalgamation/">Project proposal</a></li>
 		</div>
-		<div class="homeitem">
+		<div class="homeitem" style="clear: both">
 			<h3>Events</h3>
 			<ul class="midlist">
 				<li><a href="http://www.eclipsecon.org/2009/">EclipseCon 2009</a> tutorial <a href="http://www.eclipsecon.org/2009/sessions?id=443">Domain-Specific Language Development using Modeling Amalgam</a> accepted.</li>
@@ -35,7 +31,7 @@ ob_start();
 				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=51">Eclipse Modeling Project as a DSL Toolkit</a> at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
 			</ul>
 		</div>
-		<div class="homeitem">
+		<div class="homeitem" style="clear: both">
 			<h3>Packages</h3>
 			<ul class="midlist">
 				<li><a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/ganymede/SR1/eclipse-modeling-ganymede-SR1-incubation-macosx-carbon.tar.gz">Eclipse Modeling Tools</a> package from the 
