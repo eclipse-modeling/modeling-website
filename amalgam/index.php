@@ -29,6 +29,7 @@ ob_start();
 		<div class="homeitem">
 			<h3>Events</h3>
 			<ul class="midlist">
+				<li><a href="http://www.eclipsecon.org/2009/">EclipseCon 2009</a> tutorial <a href="http://www.eclipsecon.org/2009/sessions?id=443">Domain-Specific Language Development using Modeling Amalgam</a> accepted.</li>
 				<li><a href="https://www.eclipsecon.org/summiteurope2008/">Eclipse Summit Europe</a> talk <a href="https://www.eclipsecon.org/submissions/ese2008/view_talk.php?id=25">Modeling Amalgam as a DSL Toolkit</a> accepted.</li>
 				<li><a href="http://www.eclipseworld.net/programday3pm.html#704">Developing and Using Domain-Specific Languages</a> at <a href="http://www.eclipseworld.net/">Eclipse World 2008</a>.</li>
 				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=51">Eclipse Modeling Project as a DSL Toolkit</a> at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
