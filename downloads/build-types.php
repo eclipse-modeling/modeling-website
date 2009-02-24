@@ -1,12 +1,10 @@
 <?php
-require_once ("../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
-
 ob_start(); ?>
 <div id="midcolumn">
 	<div class="homeitem3col">
 		<h3>File Types</h3>
-		
+	
 		<ul>
 		<li><div style="float:right"><img alt="All-In-One Bundle including Eclipse and required dependencies" src="/modeling/images/dl-icon-aio-bundle.gif"/> </div><b style="color:green">All-In-One Bundle</b> - Some projects may produce an aggregate zip or bundle, containing SDK, requirements, and the Eclipse platform. Where applicable, choose the version that matches your platform (eg., Windows, Linux GTK, Mac OS X). 
 		[<a href="http://eclipse.org/modeling/downloads/">Modeling</a>, <a href="http://www.eclipse.org/pdt/downloads/">PDT</a>]</li> 
@@ -88,17 +86,10 @@ ob_start(); ?>
 		useful to developers actually working on this project.
 		<b>Note:</b> Nightly builds are produced only as requested, and not necessarily every night, by developers to build what was in HEAD.</li>
 		</ul>
-
 	</div>
-
 </div>
 <?php
 $html = ob_get_contents();
 ob_end_clean();
-
-$pageTitle = "Eclipse Modeling - Build Types";
-$pageKeywords = ""; 
-$pageAuthor = "Neil Skrypuch";
-
-$App->generatePage("Phoenix", $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$App->generatePage("Nova", $Menu, $Nav, "Neil Skrypuch, Nick Boldt", "", "Eclipse Modeling - Build Types", $html);
 ?>
