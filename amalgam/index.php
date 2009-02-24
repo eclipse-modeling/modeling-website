@@ -60,6 +60,14 @@ ob_start();
 		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" border="0"/></a>
 		   </div>
 		</div>
+		
+		<div class="sideitem">
+			<h6>DSL Toolkit Book</h6>
+			
+			<p align="center">
+				<a href="http://www.informit.com/store/product.aspx?isbn=0321580540"><img src="http://www.informit.com/ShowCover.aspx?isbn=0321580540&type=f"/></a>
+			</p>
+		</div>
 		   
 		<div class="sideitem">
 			<h6>Getting started</h6>
@@ -71,7 +79,6 @@ ob_start();
 		<div class="sideitem">
 			<h6>What's New</h6>
 			<ul> 
-				<li>Book draft <a href="http://my.safaribooksonline.com/9780321591364">Eclipse Modeling Project: A Domain-Specific Language Toolkit</a> available on Safari rough cuts.
 				<li>Amalgam DSL Toolkit and Modeler <a href="http://www.eclipse.org/modeling/amalgam/downloads/">downloads</a> available</li>
 			    <li>January 30, 2008 - Amalgamation project <a href="http://www.eclipse.org/proposals/amalgamation/">created</a></li>
 			</ul>
