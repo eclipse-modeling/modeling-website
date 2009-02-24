@@ -80,7 +80,7 @@ ob_start();
 			</ul>
 		</div>
 	</div>
-</div>
+
 
 <?php
 $html = ob_get_contents();
