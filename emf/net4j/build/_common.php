@@ -11,18 +11,20 @@ $options = array (
 		"1.0.8=R1_0_maintenance,/opt/sun-java2-5.0",
 		"1.0.9=R1_0_maintenance,/opt/sun-java2-5.0",
 		
-		"build.eclipse.org=------------,------------",
-		"2.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
-		"1.0.7=R1_0_maintenance,/opt/public/common/ibm-java2-ppc-50",
-		"1.0.8=R1_0_maintenance,/opt/public/common/ibm-java2-ppc-50",
-		"1.0.9=R1_0_maintenance,/opt/public/common/ibm-java2-ppc-50"
+		"modeling.eclipse.org=------------,------------",
+		"2.0.0=HEAD,/opt/sun-java2-5.0",
+		"1.0.7=R1_0_maintenance,/opt/sun-java2-5.0",
+		"1.0.8=R1_0_maintenance,/opt/sun-java2-5.0",
+		"1.0.9=R1_0_maintenance,/opt/sun-java2-5.0",
 	),
 	
 	/* define a regular expression to be used to collect the most recent 
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|2.5.0/[ISR]200.*/emf-xsd-SDK-|2.5.0/[ISR]200.*/emf-sdo-xsd-SDK-|orbit-",
+	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|" .
+			"2.5.0/[ISR]200.*/emf-xsd-SDK-|" .
+			"orbit-",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
