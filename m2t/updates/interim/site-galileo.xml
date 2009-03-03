@@ -7,47 +7,47 @@
 	</description>
 
 
-	<!-- XPAND 0.7.0 I200902191437 (Incubation) -->
-	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200902191437" name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437">
+	<!-- XPAND 0.7.0 I200903030415 (Incubation) -->
+	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200903030415" name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415">
 		<description>
-M2T XPAND SDK (Incubation) 0.7.0 I200902191437: contains runtime, source, and documentation.
+M2T XPAND SDK (Incubation) 0.7.0 I200903030415: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.xpand.examples" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.examples_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.examples" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.examples_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand.sdk" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.sdk_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.sdk" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.sdk_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand.source" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.source_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.source" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.source_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand.ui.source" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.ui.source_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.ui.source" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.ui.source_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand.ui" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.ui_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.ui" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.ui_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand" version="0.7.0.v200902191437" url="features/org.eclipse.xpand_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand" version="0.7.0.v200903030415" url="features/org.eclipse.xpand_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xtend.dependencies" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.dependencies_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xtend.dependencies" version="0.7.0.v200903030415" url="features/org.eclipse.xtend.dependencies_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xtend.source" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.source_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xtend.source" version="0.7.0.v200903030415" url="features/org.eclipse.xtend.source_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xtend.ui.source" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.ui.source_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xtend.ui.source" version="0.7.0.v200903030415" url="features/org.eclipse.xtend.ui.source_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xtend.ui" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.ui_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xtend.ui" version="0.7.0.v200903030415" url="features/org.eclipse.xtend.ui_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xtend" version="0.7.0.v200902191437" url="features/org.eclipse.xtend_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xtend" version="0.7.0.v200903030415" url="features/org.eclipse.xtend_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
-	<feature id="org.eclipse.xpand.doc" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.doc_0.7.0.v200902191437.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
+	<feature id="org.eclipse.xpand.doc" version="0.7.0.v200903030415" url="features/org.eclipse.xpand.doc_0.7.0.v200903030415.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200903030415"/>
 	</feature>
 
 	<!-- MTL 0.8.0M5 I200902061058 -->
@@ -128,47 +128,47 @@ M2T JET SDK (Incubation) 1.0.0 I200901290852: contains runtime, source, and docu
 		<category name="M2T JET SDK (Incubation) 1.0.0 I200901290852"/>
 	</feature>
 
-	<!-- XPAND 0.7.0 I200902121838 (Incubation) -->
-	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200902121838" name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838">
+	<!-- XPAND 0.7.0 I200902191437 (Incubation) -->
+	<category-def label="M2T XPAND SDK (Incubation) 0.7.0 I200902191437" name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437">
 		<description>
-M2T XPAND SDK (Incubation) 0.7.0 I200902121838: contains runtime, source, and documentation.
+M2T XPAND SDK (Incubation) 0.7.0 I200902191437: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.xpand.examples" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.examples_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.examples" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.examples_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand.sdk" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.sdk_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.sdk" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.sdk_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand.source" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.source_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.source" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.source_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand.ui.source" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.ui.source_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.ui.source" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.ui.source_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand.ui" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.ui_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.ui" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.ui_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand" version="0.7.0.v200902121838" url="features/org.eclipse.xpand_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand" version="0.7.0.v200902191437" url="features/org.eclipse.xpand_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xtend.dependencies" version="0.7.0.v200902121838" url="features/org.eclipse.xtend.dependencies_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xtend.dependencies" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.dependencies_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xtend.source" version="0.7.0.v200902121838" url="features/org.eclipse.xtend.source_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xtend.source" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.source_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xtend.ui.source" version="0.7.0.v200902121838" url="features/org.eclipse.xtend.ui.source_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xtend.ui.source" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.ui.source_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xtend.ui" version="0.7.0.v200902121838" url="features/org.eclipse.xtend.ui_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xtend.ui" version="0.7.0.v200902191437" url="features/org.eclipse.xtend.ui_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xtend" version="0.7.0.v200902121838" url="features/org.eclipse.xtend_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xtend" version="0.7.0.v200902191437" url="features/org.eclipse.xtend_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
-	<feature id="org.eclipse.xpand.doc" version="0.7.0.v200902121838" url="features/org.eclipse.xpand.doc_0.7.0.v200902121838.jar" patch="false">
-		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902121838"/>
+	<feature id="org.eclipse.xpand.doc" version="0.7.0.v200902191437" url="features/org.eclipse.xpand.doc_0.7.0.v200902191437.jar" patch="false">
+		<category name="M2T XPAND SDK (Incubation) 0.7.0 I200902191437"/>
 	</feature>
 
 	<!-- MTL 0.8.0M5 I200902031309 -->
