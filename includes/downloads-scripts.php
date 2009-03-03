@@ -761,7 +761,14 @@ function toPlainTextSummaries($summary)
 
 function outputBuild($branch, $ID, $c)
 {
-	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR;
+	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR, $hiddenBuilds;
+	
+	# suppress hidden builds
+	if (in_array("$PWD/$branch/$ID",$hiddenBuilds))
+	{
+		debug("Build $PWD/$branch/$ID is hidden, pending mirror replication.", 1);
+		return "";
+	}
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
 	$zips_in_folder = loadDirSimple("$PWD/$branch/$ID/", "(\.zip|\.tar\.gz)", "f");

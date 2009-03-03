@@ -143,7 +143,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td><b>Build Version,<br/>ID &amp; Branch</b></td>
 				<td>&#160;</td>
 				<td colspan=2>
-				<select style="font-size:9px" name="build_Version_Build_ID_And_Branch" size="8">
+				<select style="font-size:9px" name="build_Version_Build_ID_And_Branch" size="8" onchange="doBranchSelected(this)">
 					<?php displayOptions($buildIDs,false,0); ?>
 				</select></td>
 			</tr>
@@ -220,6 +220,22 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 			</tr>
 			<tr>
 				<td colspan="3">&#160;</td>
+				<td><p>
+				<small><select style="font-size:9px" name="build_Visibility" size="1">
+					<?php displayOptions(array("Show", "Hide", "Unhide"), false, 0); ?> 
+				</select></small> build?</p>
+				</td>
+				<td width="300"><small><a id="divToggle_hideOrShow" name="divToggle_hideOrShow" href="javascript:toggleDetails('hideOrShow')">[+]</a></small>
+					<div id="divDetail_hideOrShow" name="divDetail_hideOrShow" style="display:none;border:0">
+					<small>
+					<b style="color:red">Hide</b> a build from the downloads page to allow it time to mirror, or <b style="color:blue">Show</b> it immediately. 
+					Or, <b style="color:green">Unhide</b> a build by removing its path from the list in /www/<?php echo $PR; ?>/downloads/hidden.txt 
+					</small>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">&#160;</td>
 				<td>
 				<p><input type="checkbox" name="build_FORCE" value="Y" onclick=""> Allow republishing? 
 					(<a href="javascript:checkReleaseExists(true)">-FORCE</a>)</p>
@@ -237,7 +253,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 
 			<tr>
 				<td>&#160;</td>
-				<td><b>Announce?</td>
+				<td valign='top'><b>Announce?</td>
 				<td>&#160;</td>
 				<td><p><input type="checkbox" name="build_Announce_In_Newsgroup" value="Yes" checked="checked"> Announce In Newsgroup?</p></td>
 				<td width="300"><small><a id="divToggle_announce" name="divToggle_announce" href="javascript:toggleDetails('announce')">[+]</a></small>
@@ -295,6 +311,11 @@ function doSubmit() {
 	}
 }
 
+function doBranchSelected(field) {
+  val=field.options[field.selectedIndex].text;
+  document.forms.promoForm.build_Visibility.options.selectedIndex=(val.indexOf("/R20")>=0)?1:0;
+}
+
 function toggleDetails(id)
 {
   toggle=document.getElementById("divToggle_" + id);
@@ -338,6 +359,7 @@ function doOnclickBugzonly(booln) {
 		build_Store_SDK_As_Dependency.disabled=booln;
 		build_FORCE.disabled=booln;
 		build_Announce_In_Newsgroup.disabled=booln;
+		build_Visibility.disabled=booln;
 		build_Email.disabled=booln;
 	}
 }
@@ -347,6 +369,7 @@ onload=loadSelects;
 function loadSelects() {
 	with (document.forms.promoForm) {
 		build_Version_Build_ID_And_Branch.selectedIndex=0;
+		doBranchSelected(build_Version_Build_ID_And_Branch);
 	}
 }
 </script>
@@ -429,6 +452,7 @@ else
 	(isset($_POST["build_Store_SDK_As_Dependency"]) && $_POST["build_Store_SDK_As_Dependency"] != "" ? ' -addSDK ' . $dependenciesURLsFile : '') .
 	(isset($_POST["build_Update_IES_Map_File"]) && $_POST["build_Update_IES_Map_File"]   != "" ? '' : ' -noIES') .
 	(isset($_POST["build_Announce_In_Newsgroup"]) && $_POST["build_Announce_In_Newsgroup"] != "" ? ' -announce' : '') .
+	(isset($_POST["build_Visibility"]) && $_POST["build_Visibility"] != "Show" ? ' -' . strtolower($_POST["build_Visibility"]) : '') .
 	(isset($_POST["build_Update_Coordinated_Update_Site"]) && $_POST["build_Update_Coordinated_Update_Site"] != "" ? ' -coordsite ' . $_POST["build_Coordinated_Site_Name"] : '') .
 	(isset($_POST["build_Email"]) && $_POST["build_Email"] != "" ? ' -email ' . $_POST["build_Email"] : '') .
 	(isset($_POST["build_FORCE"]) && $_POST["build_FORCE"] != "" ? ' -FORCE' : '') .
