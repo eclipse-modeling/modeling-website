@@ -764,10 +764,15 @@ function outputBuild($branch, $ID, $c)
 	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR, $hiddenBuilds;
 	
 	# suppress hidden builds for public server
-	if (!$isBuildServer && in_array("$PR/$branch/$ID",$hiddenBuilds))
+	if (!$isBuildServer)
 	{
-		debug("Build $PR/$branch/$ID is hidden, pending mirror replication.", 1);
-		return "";
+		foreach ($hiddenBuilds as $hb) {
+			if (trim($hb) == "$PR/$branch/$ID")
+			{
+				debug("Build $PR/$branch/$ID is hidden, pending mirror replication.", 1);
+				return "";
+			}
+		}
 	}
 	$pre2 = (is_dir("$PWD/$branch/$ID/eclipse/$ID/") ? "eclipse/$branch/$ID/" : "");
 
