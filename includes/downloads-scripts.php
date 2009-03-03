@@ -763,8 +763,8 @@ function outputBuild($branch, $ID, $c)
 {
 	global $PWD, $isBuildServer, $dls, $filePre, $proj, $showBuildResults, $sortBy, $projct, $jdk14testsPWD, $jdk50testsPWD, $jdk60testsPWD, $testsPWD, $deps, $PR, $hiddenBuilds;
 	
-	# suppress hidden builds
-	if (in_array("$PWD/$branch/$ID",$hiddenBuilds))
+	# suppress hidden builds for public server
+	if (!$isBuildServer && in_array("$PR/downloads/drops/$branch/$ID",$hiddenBuilds))
 	{
 		debug("Build $PWD/$branch/$ID is hidden, pending mirror replication.", 1);
 		return "";
