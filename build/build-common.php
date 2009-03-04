@@ -194,7 +194,7 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 					<div id="divDetail_relengBasebuilder" name="divDetail_relengBasebuilder" style="display:none;border:0">
 					<span style="font-size:x-small">
 					Enter Tag or Branch, eg.,
-						<acronym title="Eclipse 3.5.x">R35_M4</acronym>,
+						<acronym title="Eclipse 3.5.x">R35_M5</acronym>,
 						<acronym title="Eclipse 3.4.x">RC2_34</acronym>,
 						<acronym title="Eclipse 3.3.x">v20070614</acronym>,
 						<acronym title="Eclipse 3.2.x">r322_v20070104</acronym>,
