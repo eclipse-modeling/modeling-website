@@ -36,7 +36,7 @@ $cvsprojs = array (); /* should always be empty */
 $cvscoms = array (
 	"org.eclipse.m2t" => array (
 		"jet" => "org.eclipse.jet",
-		"mtl" => "org.eclipse.mtl",
+		"acceleo" => "org.eclipse.acceleo",
 		"xpand" => "org.eclipse.xpand",
 		"m2tcore" => "org.eclipse.m2t.core",
 		"m2tshared" => "org.eclipse.m2t.shared"
@@ -46,7 +46,7 @@ $cvscoms = array (
 
 $projects = array (
 	"JET" => "jet",
-	"MTL" => "mtl",
+	"Acceleo" => "acceleo",
 	"Xpand" => "xpand",
 	"M2T Core" => "m2tcore",
 	"M2T Shared" => "m2tshared"
@@ -56,9 +56,9 @@ $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("m2tcore","m2tshared"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array("jet","mtl","xpand","m2tcore","m2tshared"); //components without newsgroup
-$nomailinglist = array("jet","mtl","xpand","m2tcore","m2tshared"); //components without mailinglist
-$incubating = array("jet","mtl","xpand","m2tcore","m2tshared"); // components which are still incubating
+$nonewsgroup = array("jet","acceleo","xpand","m2tcore","m2tshared"); //components without newsgroup
+$nomailinglist = array("jet","acceleo","xpand","m2tcore","m2tshared"); //components without mailinglist
+$incubating = array("jet","acceleo","xpand","m2tcore","m2tshared"); // components which are still incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
