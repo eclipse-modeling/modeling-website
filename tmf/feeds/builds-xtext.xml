@@ -4,11 +4,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Xtext Builds</title>
   <link href="http://download.eclipse.org/modeling/tmf/feeds/builds-xtext.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-03-11T18:49:48Z</updated>
+  <updated>2009-03-14T18:35:31Z</updated>
   <author>
     <name>Xtext Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/tmf/feeds/builds-.xml</id>
+  <entry>
+    <title>[announce] xtext I200903141352 (0.7.0.I200903141352) is available</title>
+    <link href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903141352#I200903141352"/>
+    <id>http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903141352#I200903141352</id>
+    <updated>2009-03-14T18:35:31Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200903141352" href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903141352#I200903141352" type="I" vanityname="I200903141352" version="0.7.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/tmf/xtext/downloads/drops/0.7.0/I200903141352/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/tmf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/tmf/downloads/?project=xtext</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/tmf/news/relnotes.php?project=xtext&amp;version=I200903141352
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">tmf-xtext-SDK-incubation-I200903141352.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/tmf/xtext/downloads/drops/0.7.0/I200903141352/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/eclipse-SDK-3.5M5-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200902031500/emf-runtime-2.5.0M5.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20090307012903/orbit-S20090307012903.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/compare/downloads/drops/0.9.0/S200902090555/emft-compare-SDK-incubation-0.9.0M5.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/emft/mwe/downloads/drops/0.7.0/N200903121530/emft-mwe-SDK-incubation-N200903121530.zip</dependency>
+          <dependency>http://emft.eclipse.org/modeling/m2t/xpand/downloads/drops/0.7.0/N200903121701/m2t-xpand-SDK-incubation-N200903121701.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] xtext I200903111305 (0.7.0.I200903111305) is available</title>
     <link href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903111305#I200903111305"/>
