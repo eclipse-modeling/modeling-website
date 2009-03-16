@@ -17,7 +17,8 @@ $options = array (
 	/* define a regular expression to be used to collect the most recent 
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
-	 * */
+	 *
+	 */
 	"regex" => "[SR]-3.5.*200.*/eclipse-SDK-|[SR]200.*/emf-runtime-|[NMISR]200.*/m2t-xpand-|[NMISR]200.*/emft-mwe-SDK-|[SR]200.*/orbit-R*",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
