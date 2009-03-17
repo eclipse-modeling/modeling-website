@@ -1,1 +1,0 @@
-<?php header("Location: /modeling/mdt/uml2/build/"); ?>

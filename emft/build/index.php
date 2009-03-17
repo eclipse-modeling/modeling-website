@@ -1,1 +1,0 @@
-<?php header("Location: /modeling/emft/compare/build/"); ?>

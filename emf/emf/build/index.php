@@ -1,1 +1,0 @@
-<?php /* eventually, move emf build page here */ header("Location: /emf/build/"); ?>

@@ -1,1 +1,0 @@
-<?php header("Location: /modeling/m2m/atl/build/"); ?>

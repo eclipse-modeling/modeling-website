@@ -1,1 +1,0 @@
-<?php header("Location: http://wiki.eclipse.org/Graphical_Modeling_Framework_FAQ"); ?>

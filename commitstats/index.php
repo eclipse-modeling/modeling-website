@@ -1,1 +1,0 @@
-<?php header("Location: http://emf.torolab.ibm.com/commitstats/"); ?>

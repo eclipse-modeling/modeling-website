@@ -1,1 +1,0 @@
-<?php include_once("../includes/eclipse-project-ip-log-common.php"); ?>
