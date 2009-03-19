@@ -80,7 +80,7 @@ ob_start();
 			<td/><td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20090101-1511/index.php">1.0M4</a></td>
 			<td/>
-			<td>n/a</td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090319-0644/index.php">I20090319-0644</a></td>
 			<td/>
 		</tr>
 		<tr>
