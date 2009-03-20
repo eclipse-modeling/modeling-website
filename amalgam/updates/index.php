@@ -14,7 +14,7 @@ ob_start();
 				The Amalgamation project provides product-based <a href="http://www.eclipse.org/modeling/amalgam/downloads/">downloads</a>.  A p2 repository is produced for each 
 				build and is accessible from the build's download page.  
 				<br/><br/>
-				For example, enter the following URL for DSL Toolkit build I20081215-1608 to install any of its features or bundles: <a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/">http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081215-1608/</a>
+				For example, enter the following URL for DSL Toolkit build I20081128-0606 to install any of its features or bundles: <a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/">http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/</a>
 				</td>
 			</tr>
 		</table><hr/>
