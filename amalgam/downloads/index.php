@@ -130,14 +130,14 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090107-0844/index.php">1.0M4</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090214-0743/index.php">1.0M5</a></td>
 			<td/>
 			<td>n/a</td>
 			<td/>
 		</tr>
 		<tr>
 			<td/><td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090214-0743/index.php">1.0M5</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090320-2131/index.php">1.0M6</a></td>
 			<td/>
 			<td/>
 			<td/>
