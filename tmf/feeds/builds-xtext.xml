@@ -41,37 +41,6 @@
     </summary>
   </entry>
   <entry>
-    <title>[announce] xtext 0.7.0M6 (S200903170819) is available</title>
-    <link href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=S200903170819#S200903170819"/>
-    <id>http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=S200903170819#S200903170819</id>
-    <updated>2009-03-17T13:45:28Z</updated>
-    <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200903170819" href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=S200903170819#S200903170819" type="S" vanityname="0.7.0M6" version="0.7.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/tmf/xtext/downloads/drops/0.7.0/S200903170819/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/tmf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/tmf/downloads/?project=xtext</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/tmf/news/relnotes.php?project=xtext&amp;version=S200903170819
-          </releasenotes>
-        <releases>
-          <release arch="ALL" os="ALL" type="SDK" ws="ALL">tmf-xtext-SDK-incubation-0.7.0M6.zip</release>
-        </releases>
-        <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/tmf/xtext/downloads/drops/0.7.0/S200903170819/testResults.php" type="junit">
-            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
-          </test>
-        </tests>
-        <dependencies>
-          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5M6-200903130100/eclipse-SDK-3.5M6-linux-gtk.tar.gz</dependency>
-          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200903161215/emf-runtime-2.5.0M6.zip</dependency>
-          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20090307012903/orbit-S20090307012903.zip</dependency>
-          <dependency>http://emft.eclipse.org/modeling/emft/mwe/downloads/drops/0.7.0/S200903161748/emft-mwe-SDK-incubation-0.7.0M6.zip</dependency>
-          <dependency>http://emft.eclipse.org/modeling/m2t/xpand/downloads/drops/0.7.0/S200903170701/m2t-xpand-SDK-incubation-0.7.0M6.zip</dependency>
-        </dependencies>
-        <coordinated status=""/>
-      </build>
-    </summary>
-  </entry>
-  <entry>
     <title>[announce] xtext I200903160447 (0.7.0.I200903160447) is available</title>
     <link href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903160447#I200903160447"/>
     <id>http://www.eclipse.org/modeling/tmf/downloads/?project=xtext&amp;showAll=1&amp;hlbuild=I200903160447#I200903160447</id>
