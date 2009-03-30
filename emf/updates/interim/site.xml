@@ -284,6 +284,40 @@ EMF TRANSACTION SDK 1.1.3 M200804111405: contains runtime, source, and documenta
 		<category name="EMF TRANSACTION SDK 1.1.3 M200804111405"/>
 	</feature>
 
+	<!-- TENEO 1.1.0 M200903300517 -->
+	<category-def label="EMF TENEO SDK 1.1.0 M200903300517" name="EMF TENEO SDK 1.1.0 M200903300517">
+		<description>
+EMF TENEO SDK 1.1.0 M200903300517: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.teneo.doc" version="1.0.1.v200903300517-2-07w311A14411628" url="features/org.eclipse.emf.teneo.doc_1.0.1.v200903300517-2-07w311A14411628.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.eclipselink.examples" version="1.0.0.v200903300517-4--9oB55W5EE55K8Q" url="features/org.eclipse.emf.teneo.eclipselink.examples_1.0.0.v200903300517-4--9oB55W5EE55K8Q.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.eclipselink.sdk" version="1.0.0.v200903300517-3--84F24RAXeKLeLrjRV-3iPS_IJ" url="features/org.eclipse.emf.teneo.eclipselink.sdk_1.0.0.v200903300517-3--84F24RAXeKLeLrjRV-3iPS_IJ.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.eclipselink.source" version="1.0.0.v200903300517-7A-1F7RZHIXHhhHHz-RF" url="features/org.eclipse.emf.teneo.eclipselink.source_1.0.0.v200903300517-7A-1F7RZHIXHhhHHz-RF.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.eclipselink" version="1.0.0.v200903300517-7A-1F7RZHIXHhhHHz-RF" url="features/org.eclipse.emf.teneo.eclipselink_1.0.0.v200903300517-7A-1F7RZHIXHhhHHz-RF.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.examples" version="1.0.1.v200903300517-5-3AkF77g7JJ77RBZ" url="features/org.eclipse.emf.teneo.examples_1.0.1.v200903300517-5-3AkF77g7JJ77RBZ.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.sdk" version="1.0.4.v200903300517-4-7888F4KFMddUM_PphXW2YGFWWG" url="features/org.eclipse.emf.teneo.sdk_1.0.4.v200903300517-4-7888F4KFMddUM_PphXW2YGFWWG.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo.source" version="1.0.4.v200903300517-79-77EVVFGMFccFFsO6" url="features/org.eclipse.emf.teneo.source_1.0.4.v200903300517-79-77EVVFGMFccFFsO6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+	<feature id="org.eclipse.emf.teneo" version="1.0.4.v200903300517-79-77EVVFGMFccFFsO6" url="features/org.eclipse.emf.teneo_1.0.4.v200903300517-79-77EVVFGMFccFFsO6.jar" patch="false">
+		<category name="EMF TENEO SDK 1.1.0 M200903300517"/>
+	</feature>
+
 	<!-- TENEO 1.0.4 M200903300400 -->
 	<category-def label="EMF TENEO SDK 1.0.4 M200903300400" name="EMF TENEO SDK 1.0.4 M200903300400">
 		<description>
