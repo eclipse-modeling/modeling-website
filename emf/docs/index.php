@@ -377,6 +377,10 @@ and Animations of the internals of XSD models</a>
 	<ul>
 		<li><a target="_dw" href="http://www-128.ibm.com/developerworks/search/searchResults.jsp?searchType=1&amp;searchSite=dW&amp;searchScope=dW&amp;query=emf">Search developerWorks for EMF</a></li>
 
+		<li><div>April 2008</div><a target="_dw" href="ihttp://www.ibm.com/developerworks/library/os-eclipse-emfmetamodel/index.html?S_TACT=105AGX44&S_CMP=EDU">Metamodeling with EMF: Generating concrete, reusable Java snippets</a><br/>
+			Contributed by Ken McNeill
+		</li>
+
 		<li>
 			<div>December 2007</div><a target="_out" href="http://www.softwaremag.com/L.cfm?doc=1103-12/2007">MDA Goes Mainstream With the Eclipse Modeling Framework</a> (softwaremag.com)<br/>
 			Contributed by Michael Guttman and Philipp Kutter
@@ -620,4 +624,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.22 2009/01/30 08:04:39 nickb Exp $ -->
+<!-- $Id: index.php,v 1.23 2009/04/03 22:08:05 nickb Exp $ -->
