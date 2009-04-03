@@ -600,7 +600,19 @@ print <<<EOHTML
 	</ul>
 </div>
 
-<div class="sideitem">
+        <div class="sideitem">
+                <h6>Buy The Book</h6>
+
+                <p align="center">
+                        <a href="http://www.informit.com/store/product.aspx?isbn=9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
+                </p>
+                <ul>
+                <li><a href="http://www.informit.com/store/product.aspx?isbn=9780321331885">View Details &amp; Order</a>
+                <li><a href="/modeling/emf/images/book/EMF-2nd-Ed-Covers-Large.jpg">View Front &amp; Back Covers</a>
+                </ul>
+        </div>
+
+<!-- <div class="sideitem">
 	<h6>Eclipse Wiki</h6>
 	<ul>
 EOHTML;
@@ -608,7 +620,7 @@ $wikiContents = wikiCategoryToListItems("EMF");
 print $wikiContents;
 print <<<EOHTML
 	</ul>
-</div>
+</div> -->
 EOHTML;
 
 print "</div>\n";
@@ -624,4 +636,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.23 2009/04/03 22:08:05 nickb Exp $ -->
+<!-- $Id: index.php,v 1.24 2009/04/03 22:13:17 nickb Exp $ -->
