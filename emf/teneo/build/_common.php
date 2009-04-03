@@ -7,12 +7,12 @@ $options = array (
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
 		"1.1.0=HEAD,/opt/sun-java2-5.0",
-		"1.0.4=HEAD,/opt/sun-java2-5.0",
+		"1.0.4=TENEO1_0_4,/opt/sun-java2-5.0",
 		"0.7.5=R0_7_maintenance,/opt/sun-java2-1.4",
 		
 		"build.eclipse.org=------------,------------",
 		"1.1.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
-		"1.0.4=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		"1.0.4=TENEO1_0_4,/opt/public/common/ibm-java2-ppc-50",
 		"0.7.5=R0_7_maintenance,/opt/public/stp/apps/IBMJava2-ppc-142" // bug 178681
 	),
 	
