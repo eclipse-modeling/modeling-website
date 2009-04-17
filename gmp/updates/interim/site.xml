@@ -71,68 +71,68 @@ GMF SDK 2.2.0 N200903131042: contains runtime, source, and documentation.
 		<category name="GMF SDK 2.2.0 N200903131042"/>
 	</feature>
 
-	<!-- GMF 2.2.0 I200904141928 -->
-	<category-def label="GMF SDK 2.2.0 I200904141928" name="GMF SDK 2.2.0 I200904141928">
+	<!-- GMF 2.2.0 I200904161928 -->
+	<category-def label="GMF SDK 2.2.0 I200904161928" name="GMF SDK 2.2.0 I200904161928">
 		<description>
-GMF SDK 2.2.0 I200904141928: contains runtime, source, and documentation.
+GMF SDK 2.2.0 I200904161928: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.gmf.xpand" version="2.0.0.v20090317-0630-7879-CcNBC-BVFh7PmL_" url="features/org.eclipse.gmf.xpand_2.0.0.v20090317-0630-7879-CcNBC-BVFh7PmL_.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.doc" version="1.2.1.v20090114-0940-3218s733L355B13LB3" url="features/org.eclipse.gmf.doc_1.2.1.v20090114-0940-3218s733L355B13LB3.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples.pde" version="1.2.0.v20090114-0940-318Z8s733L384A14J93" url="features/org.eclipse.gmf.examples.pde_1.2.0.v20090114-0940-318Z8s733L384A14J93.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples" version="1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ" url="features/org.eclipse.gmf.examples_1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation.source_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY" url="features/org.eclipse.gmf.runtime.thirdparty_1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.sdk.experimental.source" version="1.1.1.v20090114-0940" url="features/org.eclipse.gmf.sdk.experimental.source_1.1.1.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20090114-0940-7A3BiEdsPnSWlE2jyCHk1dd1gZ" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20090114-0940-7A3BiEdsPnSWlE2jyCHk1dd1gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Waw9lPsgrv" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Waw9lPsgrv.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4WawCkRsgrv" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4WawCkRsgrv.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.source" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ" url="features/org.eclipse.gmf.source_1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental.source" version="1.0.0.v20090114-0940" url="features/org.eclipse.gmf.tests.experimental.source_1.0.0.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental" version="1.0.0.v20090114-0940-7A38Z8s733L375F14L98" url="features/org.eclipse.gmf.tests.experimental_1.0.0.v20090114-0940-7A38Z8s733L375F14L98.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.source" version="2.0.0.v20090203-0819" url="features/org.eclipse.gmf.tests.source_2.0.0.v20090203-0819.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4wwJj8i7" url="features/org.eclipse.gmf.tests_2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4wwJj8i7.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltjd4_P7d_p" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltjd4_P7d_p.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltjd4_P7d_p" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltjd4_P7d_p.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 	<feature id="org.eclipse.gmf" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ" url="features/org.eclipse.gmf_1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904141928"/>
+		<category name="GMF SDK 2.2.0 I200904161928"/>
 	</feature>
 
 	<!-- GMF 2.1.3 M200901221632 -->
@@ -254,68 +254,68 @@ GMF SDK 2.1.0 I200806100911: contains runtime, source, and documentation.
 		<category name="GMF SDK 2.1.0 I200806100911"/>
 	</feature>
 
-	<!-- GMF 2.2.0 I200904101130 -->
-	<category-def label="GMF SDK 2.2.0 I200904101130" name="GMF SDK 2.2.0 I200904101130">
+	<!-- GMF 2.2.0 I200904141928 -->
+	<category-def label="GMF SDK 2.2.0 I200904141928" name="GMF SDK 2.2.0 I200904141928">
 		<description>
-GMF SDK 2.2.0 I200904101130: contains runtime, source, and documentation.
+GMF SDK 2.2.0 I200904141928: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.gmf.xpand" version="2.0.0.v20090317-0630-7879-CcNBC-BVFd7PmLb" url="features/org.eclipse.gmf.xpand_2.0.0.v20090317-0630-7879-CcNBC-BVFd7PmLb.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.xpand" version="2.0.0.v20090317-0630-7879-CcNBC-BVFh7PmL_" url="features/org.eclipse.gmf.xpand_2.0.0.v20090317-0630-7879-CcNBC-BVFh7PmL_.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.doc" version="1.2.1.v20090114-0940-3218s733L355B13LB3" url="features/org.eclipse.gmf.doc_1.2.1.v20090114-0940-3218s733L355B13LB3.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples.pde" version="1.2.0.v20090114-0940-318Z8s733L384A14J93" url="features/org.eclipse.gmf.examples.pde_1.2.0.v20090114-0940-318Z8s733L384A14J93.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples" version="1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ" url="features/org.eclipse.gmf.examples_1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation.source_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY" url="features/org.eclipse.gmf.runtime.thirdparty_1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.sdk.experimental.source" version="1.1.1.v20090114-0940" url="features/org.eclipse.gmf.sdk.experimental.source_1.1.1.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20090114-0940-7A3BiEdsPnSWkE4jyKHi1dd1gZ" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20090114-0940-7A3BiEdsPnSWkE4jyKHi1dd1gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20090114-0940-7A3BiEdsPnSWlE2jyCHk1dd1gZ" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20090114-0940-7A3BiEdsPnSWlE2jyCHk1dd1gZ.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav8lLqgmv" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav8lLqgmv.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Waw9lPsgrv" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Waw9lPsgrv.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.source" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ" url="features/org.eclipse.gmf.source_1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.source" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ" url="features/org.eclipse.gmf.source_1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental.source" version="1.0.0.v20090114-0940" url="features/org.eclipse.gmf.tests.experimental.source_1.0.0.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental" version="1.0.0.v20090114-0940-7A38Z8s733L375F14L98" url="features/org.eclipse.gmf.tests.experimental_1.0.0.v20090114-0940-7A38Z8s733L375F14L98.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.source" version="2.0.0.v20090203-0819" url="features/org.eclipse.gmf.tests.source_2.0.0.v20090203-0819.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4w-Jj8i7" url="features/org.eclipse.gmf.tests_2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4w-Jj8i7.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4wwJj8i7" url="features/org.eclipse.gmf.tests_2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4wwJj8i7.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5YP7d_p.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
-	<feature id="org.eclipse.gmf" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ" url="features/org.eclipse.gmf_1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904101130"/>
+	<feature id="org.eclipse.gmf" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ" url="features/org.eclipse.gmf_1.1.1.v20090114-0940-7d8B0FXwkKwFal7UHcI7_8wm6gZ.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904141928"/>
 	</feature>
 
 	<!-- GMF 2.1.3 M200810232110 -->
@@ -437,68 +437,68 @@ GMF SDK 2.1.0 I200806100656: contains runtime, source, and documentation.
 		<category name="GMF SDK 2.1.0 I200806100656"/>
 	</feature>
 
-	<!-- GMF 2.2.0 I200904031729 -->
-	<category-def label="GMF SDK 2.2.0 I200904031729" name="GMF SDK 2.2.0 I200904031729">
+	<!-- GMF 2.2.0 I200904101130 -->
+	<category-def label="GMF SDK 2.2.0 I200904101130" name="GMF SDK 2.2.0 I200904101130">
 		<description>
-GMF SDK 2.2.0 I200904031729: contains runtime, source, and documentation.
+GMF SDK 2.2.0 I200904101130: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.gmf.xpand" version="2.0.0.v20090317-0630-7879-CcNBC-BUFb7OtKU" url="features/org.eclipse.gmf.xpand_2.0.0.v20090317-0630-7879-CcNBC-BUFb7OtKU.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.xpand" version="2.0.0.v20090317-0630-7879-CcNBC-BVFd7PmLb" url="features/org.eclipse.gmf.xpand_2.0.0.v20090317-0630-7879-CcNBC-BVFd7PmLb.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.doc" version="1.2.1.v20090114-0940-3218s733L355B13LB3" url="features/org.eclipse.gmf.doc_1.2.1.v20090114-0940-3218s733L355B13LB3.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples.pde" version="1.2.0.v20090114-0940-318Z8s733L384A14J93" url="features/org.eclipse.gmf.examples.pde_1.2.0.v20090114-0940-318Z8s733L384A14J93.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples" version="1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ" url="features/org.eclipse.gmf.examples_1.2.0.v20090114-0940-7B7H8ZF8NcJKhJtKn9TQeJ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation.source_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.notation" version="1.1.1.v20090114-0940-33-8s733L3B3915H73" url="features/org.eclipse.gmf.runtime.notation_1.1.1.v20090114-0940-33-8s733L3B3915H73.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.1.0.v20090114-0940-7F85-FC7sRT9SYqDRdPC.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY" url="features/org.eclipse.gmf.runtime.thirdparty_1.1.0.v20090114-0940-7M8W4FGpAacxcD0cc0fY.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.sdk.experimental.source" version="1.1.1.v20090114-0940" url="features/org.eclipse.gmf.sdk.experimental.source_1.1.1.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20090114-0940-7A3BiEdsPnSWkE4jyKHi1dd1gZ" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20090114-0940-7A3BiEdsPnSWkE4jyKHi1dd1gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav4lJofot" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav4lJofot.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.sdk" version="2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav8lLqgmv" url="features/org.eclipse.gmf.sdk_2.2.0.v20090114-0940-7C7B3BLunT1tiiquB4Wav8lLqgmv.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf.source" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6QHcE7Q8wm6gZ" url="features/org.eclipse.gmf.source_1.1.1.v20090114-0940-7d8B0FXwkKwFal6QHcE7Q8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.source" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ" url="features/org.eclipse.gmf.source_1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental.source" version="1.0.0.v20090114-0940" url="features/org.eclipse.gmf.tests.experimental.source_1.0.0.v20090114-0940.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.experimental" version="1.0.0.v20090114-0940-7A38Z8s733L375F14L98" url="features/org.eclipse.gmf.tests.experimental_1.0.0.v20090114-0940-7A38Z8s733L375F14L98.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.source" version="2.0.0.v20090203-0819" url="features/org.eclipse.gmf.tests.source_2.0.0.v20090203-0819.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd3xsJj8i7" url="features/org.eclipse.gmf.tests_2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd3xsJj8i7.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.tests" version="2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4w-Jj8i7" url="features/org.eclipse.gmf.tests_2.0.0.v20090203-0819-7U7Z8ZFHlEcfOd4w-Jj8i7.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltj_5SP6kZj" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltj_5SP6kZj.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.tooling.source" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r" url="features/org.eclipse.gmf.tooling.source_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltj_5SP6kZj" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltj_5SP6kZj.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf.tooling" version="2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r" url="features/org.eclipse.gmf.tooling_2.2.0.v20090317-0630-7c7GFBVFK_Qiltja5UP7d_r.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
-	<feature id="org.eclipse.gmf" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6QHcE7Q8wm6gZ" url="features/org.eclipse.gmf_1.1.1.v20090114-0940-7d8B0FXwkKwFal6QHcE7Q8wm6gZ.jar" patch="false">
-		<category name="GMF SDK 2.2.0 I200904031729"/>
+	<feature id="org.eclipse.gmf" version="1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ" url="features/org.eclipse.gmf_1.1.1.v20090114-0940-7d8B0FXwkKwFal6THcG7V8wm6gZ.jar" patch="false">
+		<category name="GMF SDK 2.2.0 I200904101130"/>
 	</feature>
 
 	<!-- GMF 2.1.2 M200809112022 -->
