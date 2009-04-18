@@ -90,6 +90,13 @@ ob_start();
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090320-0729/index.php">I20090320-0729</a></td>
 			<td/>
 		</tr>
+		<tr>
+			<td/><td/>
+			<td> </td>
+			<td/>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090417-1945/index.php">I20090417-1945</a></td>
+			<td/>
+		</tr>
 		<tr/><tr/><tr/>
 		<tr>
 			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
