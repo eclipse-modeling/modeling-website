@@ -66,32 +66,32 @@ M2T JET SDK (Incubation) 0.9.2 M200901261704: contains runtime, source, and docu
 		<category name="M2T JET SDK (Incubation) 0.9.2 M200901261704"/>
 	</feature>
 
-	<!-- ACCELEO 0.8.0 I200904090854 -->
-	<category-def label="M2T ACCELEO SDK 0.8.0 I200904090854" name="M2T ACCELEO SDK 0.8.0 I200904090854">
+	<!-- ACCELEO 0.8.0 I200904271221 -->
+	<category-def label="M2T ACCELEO SDK 0.8.0 I200904271221" name="M2T ACCELEO SDK 0.8.0 I200904271221">
 		<description>
-M2T ACCELEO SDK 0.8.0 I200904090854: contains runtime, source, and documentation.
+M2T ACCELEO SDK 0.8.0 I200904271221: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.acceleo.doc" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.doc_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.doc" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.doc_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.examples" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.examples_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.examples" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.examples_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.runtime" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.runtime_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.runtime" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.runtime_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.sdk" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.sdk_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.sdk" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.sdk_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.source" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.source_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.source" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.source_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.ui.capabilities" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.ui.capabilities_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo.ui.capabilities_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
-	<feature id="org.eclipse.acceleo" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo_0.8.0.v200904090854.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	<feature id="org.eclipse.acceleo" version="0.8.0.v200904271221" url="features/org.eclipse.acceleo_0.8.0.v200904271221.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904271221"/>
 	</feature>
 
 	<!-- MTL 0.7.0 I200809181315 -->
@@ -176,6 +176,34 @@ M2T JET SDK (Incubation) 0.9.2 M200901061621: contains runtime, source, and docu
 	</feature>
 	<feature id="org.eclipse.jet" version="0.9.2.v200809290937-17H29oA55T5E8M2727" url="features/org.eclipse.jet_0.9.2.v200809290937-17H29oA55T5E8M2727.jar" patch="false">
 		<category name="M2T JET SDK (Incubation) 0.9.2 M200901061621"/>
+	</feature>
+
+	<!-- ACCELEO 0.8.0 I200904090854 -->
+	<category-def label="M2T ACCELEO SDK 0.8.0 I200904090854" name="M2T ACCELEO SDK 0.8.0 I200904090854">
+		<description>
+M2T ACCELEO SDK 0.8.0 I200904090854: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.acceleo.doc" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.doc_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.examples" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.examples_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.runtime" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.runtime_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.sdk" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.sdk_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.source" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.source_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo.ui.capabilities_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
+	</feature>
+	<feature id="org.eclipse.acceleo" version="0.8.0.v200904090854" url="features/org.eclipse.acceleo_0.8.0.v200904090854.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.8.0 I200904090854"/>
 	</feature>
 
 	<!-- MTL 0.7.0 I200809121357 -->
