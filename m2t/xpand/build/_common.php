@@ -20,7 +20,7 @@ $options = array (
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "dennis.huebner@itemis.de", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "alle-ki@itemis.de", // prefil email contact box with comma-sep'd list
 
 	"Users" => array (
 		"dhubner",
