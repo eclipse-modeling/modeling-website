@@ -23,7 +23,7 @@ $options = array (
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "alle-ki@itemis.de", // prefil email contact box with comma-sep'd list: xtext-dev@eclipse.org
+	"EmailDefault" => dennis.huebner@itemis.de", // prefil email contact box with comma-sep'd list: xtext-dev@eclipse.org
 	//the email above will be also used if cron autobuild fails
 	"Users" => array (
 		"dhubner",
