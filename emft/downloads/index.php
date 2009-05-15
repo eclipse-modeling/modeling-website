@@ -25,6 +25,16 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),
+	"/compare" => array(
+        "EMF Compare" => array(
+            "SDK (Runtime, Source)" => "SDK",
+            "Runtime" => "runtime",
+            "Subversive Integration" => "subversive-integration",
+            "Examples" => "examples",
+            "Automated Tests" => "automated-tests"
+        )
+    ),
+	
 );
 
 /* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
