@@ -94,7 +94,7 @@ ob_start();
 			<td/><td/>
 			<td> </td>
 			<td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090417-1945/index.php">I20090417-1945</a></td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090518-2058/index.php">I20090518-2058</a></td>
 			<td/>
 		</tr>
 		<tr/><tr/><tr/>
