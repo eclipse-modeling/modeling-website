@@ -7,26 +7,26 @@
 	</description>
 
 
-	<!-- MINT 0.8.0M7 S200905201026 -->
-	<category-def label="EMFT MINT SDK 0.8.0M7 S200905201026" name="EMFT MINT SDK 0.8.0M7 S200905201026">
+	<!-- MINT 0.8.0RC1 S200905201614 -->
+	<category-def label="EMFT MINT SDK 0.8.0RC1 S200905201614" name="EMFT MINT SDK 0.8.0RC1 S200905201614">
 		<description>
-EMFT MINT SDK 0.8.0M7 S200905201026: contains runtime, source, and documentation.
+EMFT MINT SDK 0.8.0RC1 S200905201614: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.mint.sdk" version="0.8.0.v200905201026" url="features/org.eclipse.emf.mint.sdk_0.8.0.v200905201026.jar" patch="false">
-		<category name="EMFT MINT SDK 0.8.0M7 S200905201026"/>
+	<feature id="org.eclipse.emf.mint.source" version="0.8.0.v200905201614" url="features/org.eclipse.emf.mint.source_0.8.0.v200905201614.jar" patch="false">
+		<category name="EMFT MINT SDK 0.8.0RC1 S200905201614"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.source" version="0.8.0.v200905201026" url="features/org.eclipse.emf.mint.source_0.8.0.v200905201026.jar" patch="false">
-		<category name="EMFT MINT SDK 0.8.0M7 S200905201026"/>
+	<feature id="org.eclipse.emf.mint.examples" version="0.8.0.v200905201614" url="features/org.eclipse.emf.mint.examples_0.8.0.v200905201614.jar" patch="false">
+		<category name="EMFT MINT SDK 0.8.0RC1 S200905201614"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.examples" version="0.8.0.v200905201026" url="features/org.eclipse.emf.mint.examples_0.8.0.v200905201026.jar" patch="false">
-		<category name="EMFT MINT SDK 0.8.0M7 S200905201026"/>
+	<feature id="org.eclipse.emf.mint.doc" version="0.8.0.v200905201614" url="features/org.eclipse.emf.mint.doc_0.8.0.v200905201614.jar" patch="false">
+		<category name="EMFT MINT SDK 0.8.0RC1 S200905201614"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.doc" version="0.8.0.v200905201026" url="features/org.eclipse.emf.mint.doc_0.8.0.v200905201026.jar" patch="false">
-		<category name="EMFT MINT SDK 0.8.0M7 S200905201026"/>
+	<feature id="org.eclipse.emf.mint" version="0.8.0.v200905201614" url="features/org.eclipse.emf.mint_0.8.0.v200905201614.jar" patch="false">
+		<category name="EMFT MINT SDK 0.8.0RC1 S200905201614"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint" version="0.8.0.v200905201026" url="features/org.eclipse.emf.mint_0.8.0.v200905201026.jar" patch="false">
-		<category name="EMFT MINT SDK 0.8.0M7 S200905201026"/>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.8.0.v200905201614" url="features/org.eclipse.emf.mint.sdk_0.8.0.v200905201614.jar" patch="false">
+		<category name="EMFT MINT SDK 0.8.0RC1 S200905201614"/>
 	</feature>
 
 </site>
