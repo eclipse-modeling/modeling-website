@@ -114,14 +114,7 @@ ob_start();
 			<td/><td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090521-1418">1.0M7</a></td>
 			<td/>
-			<td></td>
-			<td/>
-		</tr>
-		<tr>
-			<td/><td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/I20090521-1330/index.php">I20090521-1330</a></td>
-			<td/>
-			<td/>
 			<td/>
 		</tr>
 	</table>
