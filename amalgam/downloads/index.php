@@ -101,24 +101,6 @@ ob_start();
 		</tr>
 		<tr>
 			<td/>
-			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
-		</tr>
-		<tr>
-			<th/><th/>
-			<th align="left">Milestone</th>
-			<th/>
-			<th align="left">Integration</th>
-			<th/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td>n/a</td>
-			<td/>
-			<td>n/a</td>
-			<td/>
-		</tr>
-		<tr>
-			<td/>
 			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
 		</tr>
 		<tr>
@@ -130,7 +112,7 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
-			<td>n/a</td>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090521-1418">1.0M7</a></td>
 			<td/>
 			<td></td>
 			<td/>
