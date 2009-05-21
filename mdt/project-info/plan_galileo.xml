@@ -16,36 +16,9 @@ individual project plan.
     <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
       <html:p>
-        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/bpmn2/project-info/plan_0_7.xml&amp;component=BPMN2">BPMN2</html:a>
-        <html:ul>
-          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
-          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>tests (downloadable)</html:li>
-        </html:ul>
-      </html:p>
-      <html:p>
-        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/imm/project-info/plan_0_7.xml&amp;component=IMM">IMM</html:a>
-        <html:ul>
-          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
-          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>tests (downloadable)</html:li>
-        </html:ul>
-      </html:p>
-      <html:p>
         <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/ocl/project-info/plan.xml&amp;component=OCL">OCL</html:a>
         <html:ul>
           <html:li>source code release, available as versions tagged "R1_3" in the project's CVS repository.</html:li>
-          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>runtime binary distribution (downloadable and update site).</html:li>
-          <html:li>tests (downloadable)</html:li>
-        </html:ul>
-      </html:p>
-      <html:p>
-        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/sbvr/project-info/plan_0_7.xml&amp;component=SBVR">SBVR</html:a>
-        <html:ul>
-          <html:li>source code release, available as versions tagged "R0_7" in the project's CVS repository.</html:li>
           <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
           <html:li>runtime binary distribution (downloadable and update site).</html:li>
           <html:li>tests (downloadable)</html:li>
@@ -213,36 +186,6 @@ more detailed information on each.
     <theme name="Compliance">
       <description>
         <html:div>
-          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/bpmn2/project-info/plan_0_7.xml&amp;component=BPMN2">BPMN2</html:a>
-        </html:div>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
-    </theme>
-    <theme name=" ">
-      <description>
-        <html:div>
-          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/imm/project-info/plan_0_7.xml&amp;component=IMM">IMM</html:a>
-        </html:div>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=IMM&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
-    </theme>
-    <theme name="  ">
-      <description>
-        <html:div>
-          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/sbvr/project-info/plan_0_7.xml&amp;component=SBVR">SBVR</html:a>
-        </html:div>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
-    </theme>
-    <theme name="   ">
-      <description>
-        <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan.xml&amp;component=UML2">UML2</html:a>
         </html:div>
       </description>
@@ -279,16 +222,6 @@ more detailed information on each.
       <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=UML2Tools&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=UML2Tools&amp;target_milestone=0.9.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=UML2Tools&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
-    </theme>
-    <theme name="Sample Tools">
-      <description>
-        <html:div>
-          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/sbvr/project-info/plan_0_7.xml&amp;component=SBVR">SBVR</html:a>
-        </html:div>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Sample+Tools&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Sample+Tools&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;target_milestone=0.7.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-" />
-      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Sample+Tools&amp;classification=Modeling&amp;product=MDT&amp;component=SBVR&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-" />
     </theme>
   </themes_and_priorities>
   <appendix name="Legal Notices">
