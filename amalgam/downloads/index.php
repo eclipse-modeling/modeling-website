@@ -78,6 +78,13 @@ ob_start();
 		</tr>
 		<tr>
 			<td/><td/>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20090521-0858/index.php">1.0M7</a></td>
+			<td/>
+			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090521-0635/index.php">I20090521-0635</a></td>
+			<td/>
+		</tr>
+		<tr>
+			<td/><td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20090320-2131/index.php">1.0M6</a></td>
 			<td/>
 			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20090417-1945/index.php">I20090417-1945</a></td>
@@ -107,7 +114,7 @@ ob_start();
 			<td/><td/>
 			<td>n/a</td>
 			<td/>
-			<td></td>
+			<td>n/a</td>
 			<td/>
 		</tr>
 		<tr>
