@@ -7,26 +7,26 @@
 	</description>
 
 
-	<!-- ATL 3.0.0RC1b S200905191349 -->
-	<category-def label="M2M ATL SDK 3.0.0RC1b S200905191349" name="M2M ATL SDK 3.0.0RC1b S200905191349">
+	<!-- ATL 3.0.0RC2 S200905260429 -->
+	<category-def label="M2M ATL SDK 3.0.0RC2 S200905260429" name="M2M ATL SDK 3.0.0RC2 S200905260429">
 		<description>
-M2M ATL SDK 3.0.0RC1b S200905191349: contains runtime, source, and documentation.
+M2M ATL SDK 3.0.0RC2 S200905260429: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.m2m.atl.doc" version="3.0.0.v200905191349" url="features/org.eclipse.m2m.atl.doc_3.0.0.v200905191349.jar" patch="false">
-		<category name="M2M ATL SDK 3.0.0RC1b S200905191349"/>
+	<feature id="org.eclipse.m2m.atl.doc" version="3.0.0.v200905260429" url="features/org.eclipse.m2m.atl.doc_3.0.0.v200905260429.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0RC2 S200905260429"/>
 	</feature>
-	<feature id="org.eclipse.m2m.atl.examples" version="3.0.0.v200905191349" url="features/org.eclipse.m2m.atl.examples_3.0.0.v200905191349.jar" patch="false">
-		<category name="M2M ATL SDK 3.0.0RC1b S200905191349"/>
+	<feature id="org.eclipse.m2m.atl.examples" version="3.0.0.v200905260429" url="features/org.eclipse.m2m.atl.examples_3.0.0.v200905260429.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0RC2 S200905260429"/>
 	</feature>
-	<feature id="org.eclipse.m2m.atl.sdk" version="3.0.0.v200905191349" url="features/org.eclipse.m2m.atl.sdk_3.0.0.v200905191349.jar" patch="false">
-		<category name="M2M ATL SDK 3.0.0RC1b S200905191349"/>
+	<feature id="org.eclipse.m2m.atl.sdk" version="3.0.0.v200905260429" url="features/org.eclipse.m2m.atl.sdk_3.0.0.v200905260429.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0RC2 S200905260429"/>
 	</feature>
-	<feature id="org.eclipse.m2m.atl.source" version="3.0.0.v200905191349" url="features/org.eclipse.m2m.atl.source_3.0.0.v200905191349.jar" patch="false">
-		<category name="M2M ATL SDK 3.0.0RC1b S200905191349"/>
+	<feature id="org.eclipse.m2m.atl.source" version="3.0.0.v200905260429" url="features/org.eclipse.m2m.atl.source_3.0.0.v200905260429.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0RC2 S200905260429"/>
 	</feature>
-	<feature id="org.eclipse.m2m.atl" version="3.0.0.v200905191349" url="features/org.eclipse.m2m.atl_3.0.0.v200905191349.jar" patch="false">
-		<category name="M2M ATL SDK 3.0.0RC1b S200905191349"/>
+	<feature id="org.eclipse.m2m.atl" version="3.0.0.v200905260429" url="features/org.eclipse.m2m.atl_3.0.0.v200905260429.jar" patch="false">
+		<category name="M2M ATL SDK 3.0.0RC2 S200905260429"/>
 	</feature>
 
 </site>
