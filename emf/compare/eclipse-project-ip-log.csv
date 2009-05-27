@@ -5,11 +5,16 @@ cbrun,,,,
 lgoubet,,,,
 jmusset,,,,
 atoulme,,,,
+meysholdt,,,,
 
 Section 2 (Developers),,,,
 
 Component,Bug #,Contributor,Size,Committer
 org.eclipse.emf.compare.examples.export.xslt,196438,Adam Flinton,1164,lgoubet
+org.eclipse.emf.compare,238423,Dimitrios Kolovos,small,lgoubet
+org.eclipse.emf.compare,241385,Tobias Jaehnel,18000,cbrun
+org.eclipse.emf.compare,262928,Moritz Eysholdtl,927000,cbrun
+
 
 Section 3 (Third Party Software),,,,
 
