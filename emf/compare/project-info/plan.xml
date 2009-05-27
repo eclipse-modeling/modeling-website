@@ -141,6 +141,15 @@ while the goals of the associated Bugzilla entries are available for more detail
                 The EMF Compare project will provide all the required "must do's " to exit it's incubation status.
                 </html:div>
             </description>
+              <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </committed>          
+                <proposed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </proposed>
+            <deferred
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+            </deferred>
         </theme>
         <theme name="Graphical Modelers Integration">
             <description>
@@ -153,10 +162,10 @@ while the goals of the associated Bugzilla entries are available for more detail
                 bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=241385">
             </committed>          
                 <proposed
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </proposed>
             <deferred
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </deferred>
         </theme>
         <theme name="Patch Model">
@@ -171,10 +180,10 @@ while the goals of the associated Bugzilla entries are available for more detail
                 bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=262928">
             </committed>         
                  <proposed
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </proposed>
             <deferred
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </deferred>
         </theme>
         <theme name="ResourceSet Matching">
@@ -187,10 +196,10 @@ while the goals of the associated Bugzilla entries are available for more detail
                 bugzilla="https://bugs.eclipse.org/bugs/show_bug.cgi?id=256582">
             </committed>       
                 <proposed
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </proposed>
             <deferred
-                bugzilla="TBD">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
             </deferred>
          </theme>
    </themes_and_priorities>
