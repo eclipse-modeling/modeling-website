@@ -22,6 +22,7 @@ $extraZips = array(
 $dls = array(
 	/*"/newProj" => array(
 		"Project Name" => array( # same as value in _projectCommon.php's $projects array
+			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
@@ -30,6 +31,7 @@ $dls = array(
 	),*/
 	"/jet" => array(
 		"JET" => array(
+			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Editor" => "editor",
@@ -39,6 +41,7 @@ $dls = array(
 	),
 	"/xpand" => array(
 		"Xpand" => array(
+			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
