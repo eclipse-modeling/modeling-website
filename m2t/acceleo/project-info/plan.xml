@@ -25,22 +25,22 @@
       <preamble>
          <html:div>
          The implementation will be compliant with the core feature compliance level of the MOF Model-To-Text OMG language to start with (Galileo), then with the advanced feature compliance.
-         A first stable version (0.7) will be available in 2008 and Acceleo 1.0 will synchronize its release milestones with the Galileo release schedule.
+         A first stable version (0.7) will be available in 2008 and Acceleo 0.8 will synchronize its release milestones with the Galileo release schedule.
          </html:div>
       </preamble>
       <milestone date="9/17/2008" milestone="0.7RC1"><html:div>optional html</html:div></milestone>
       <milestone date="10/6/2008" milestone="0.7RC2"><html:div>optional html</html:div></milestone>
       <milestone date="10/13/2008" milestone="0.7"><html:div>optional html</html:div></milestone>
-      <milestone date="12/29/2008" milestone="1.0M4"><html:div>optional html</html:div></milestone>
-      <milestone date="2/6/2008" milestone="1.0M5"><html:div>optional html</html:div></milestone>
-      <milestone date="3/18/2008" milestone="1.0M6"><html:div>optional html</html:div></milestone>
-      <milestone date="5/5/2008" milestone="1.0M7"><html:div>optional html</html:div></milestone>
-      <milestone date="5/19/2008" milestone="1.0RC1"><html:div>optional html</html:div></milestone>
-      <milestone date="5/26/2008" milestone="1.0RC2"><html:div>optional html</html:div></milestone>
-      <milestone date="6/2/2008" milestone="1.0RC3"><html:div>optional html</html:div></milestone>
-      <milestone date="6/9/2008" milestone="1.0RC4"><html:div>optional html</html:div></milestone>
-      <milestone date="6/16/2008" milestone="1.0RC5"><html:div>optional html</html:div></milestone>
-      <milestone date="6/26/2009" milestone="1.0"/>
+      <milestone date="12/29/2008" milestone="0.8M4"><html:div>optional html</html:div></milestone>
+      <milestone date="2/6/2008" milestone="0.8M5"><html:div>optional html</html:div></milestone>
+      <milestone date="3/18/2008" milestone="0.8M6"><html:div>optional html</html:div></milestone>
+      <milestone date="5/5/2008" milestone="0.8M7"><html:div>optional html</html:div></milestone>
+      <milestone date="5/19/2008" milestone="0.8RC1"><html:div>optional html</html:div></milestone>
+      <milestone date="5/26/2008" milestone="0.8RC2"><html:div>optional html</html:div></milestone>
+      <milestone date="6/2/2008" milestone="0.8RC3"><html:div>optional html</html:div></milestone>
+      <milestone date="6/9/2008" milestone="0.8RC4"><html:div>optional html</html:div></milestone>
+      <milestone date="6/16/2008" milestone="0.8RC5"><html:div>optional html</html:div></milestone>
+      <milestone date="6/26/2009" milestone="0.8"/>
       <postamble><html:div></html:div></postamble>
    </release_milestones>
    <target_environments>
@@ -60,7 +60,7 @@
    <compatibility_with_previous_releases>
        <html:div>
        This is the first eclipse release of Acceleo.
-       The acceleo 1.0 version will be compatible with the 0.7 version.
+       The acceleo 0.8 version will be compatible with the 0.7 version.
        </html:div>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
