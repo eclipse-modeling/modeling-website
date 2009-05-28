@@ -127,6 +127,7 @@ $filePreStatic = array(
 		"emf-teneo",
 		"emf-teneo",
 		"emf-teneo",
+		"emf-teneo",
 
 		"emf-teneo-eclipselink",
 		"emf-teneo-eclipselink",

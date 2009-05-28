@@ -8,7 +8,7 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
-	"gmf-examples-pde", "GMF-examples-pde", "gmf-xpand"
+	"gmf-examples-pde", "GMF-examples-pde", "gmf-xpand", "gmf-gmf-Update"
 );
 
 /* $project => sections/Project Name => (prettyname => filename) */
@@ -42,7 +42,7 @@ $dls = array(
 /* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
 	/* "/newproj" => array("gmf-newproj"), */
-	"/gmf" => array("gmf", "GMF")
+	"/gmf" => array("gmf", "GMF", "gmf-gmf")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */

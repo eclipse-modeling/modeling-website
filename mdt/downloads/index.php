@@ -68,6 +68,7 @@ $filePre = array(
 
 $filePreStatic = array(
 	"/xsd" => array(
+		"emf-xsd",		# new EMF 2.4.0M5
 		"xsd",			# deprecated EMF 2.4.0M5
 		"xsd",			# new EMF 2.4.0M5
 		"xsd"
