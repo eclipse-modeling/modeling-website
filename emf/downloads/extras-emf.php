@@ -60,10 +60,11 @@ function doRequirements()
 ?>
 <div class="homeitem3col">
 	<h3>Getting Started</h3>
-		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest
-		<img alt="All-In-One SDK Zip" src="/modeling/images/dl-icon-aio-sdk.gif"/> <b style="color:green">All-In-One SDK</b> bundle, which includes source, runtime and docs
+		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest<br/>
+		<acronym title="Archived Update Site"><img alt="Archived All-In-One p2 Repo Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> <b style="color:green">All-In-One Update Site</b></acronym>, 
+		which includes source, runtime and docs<br/>
 		for EMF and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT</a> project).
-		<?php echo $isUpdate ? "" : 'Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Install Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
+		<?php echo $isUpdate ? "" : '<br/><br/>Or, use Eclipse\'s <a href="/'.$PR.'/updates/">Install Manager</a>. '; ?> See also the <a href="http://wiki.eclipse.org/index.php/EMF-FAQ#What_version_of_Eclipse_do_I_need_for_EMF.2C_SDO_and_XSD.3F_Which_EMF_version_will_run_on_my_Eclipse_version.3F">FAQ</a> &amp; <a href="http://wiki.eclipse.org/index.php/EMF_2.3_JVM_Requirements">JVM Reqs</a>.</p>
 
 	<p>&nbsp;</p>
 	<h2 style="padding-left:10px">Minimum Requirements</h2>

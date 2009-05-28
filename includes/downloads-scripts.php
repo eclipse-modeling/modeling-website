@@ -151,6 +151,7 @@ function createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePreProj, $ziplabe
 		// set default
 		$flip = array_flip($projects);
 		$dls[$proj] = array($flip[$projct] => array(
+			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
@@ -799,7 +800,6 @@ function outputBuild($branch, $ID, $c)
 		"&amp;project=$projct#$ID\">" .
 		"<img alt=\"Link to this build\" src=\"/modeling/images/link.png\"/>" .
 		"</a>" .
-		createUpdateSiteFileLink($PWD, $branch, $ID) .
 		((isset($opts["noclean"]) && $opts["noclean"]) || is_dir("$PWD/$branch/$ID/eclipse/$ID") ? doNoclean("$PWD/$branch/$ID") : "");
 		
 	$ret .= "<ul id=\"r$ID\"" . (($c == 0 && !isset($_GET["hlbuild"])) || isset($_GET["hlbuild"]) && $ID == $_GET["hlbuild"] ? "" : " style=\"display: none\"") . ">\n";
@@ -825,19 +825,6 @@ function outputBuild($branch, $ID, $c)
 	return $ret;
 }
 
-function createUpdateSiteFileLink($PWD, $branch, $ID) 
-{
-	$updateZip = loadDirSimple("$PWD/$branch/$ID/", "(.+Update.+\.zip|.+Update.+\.tar\.gz)", "f");
-	if (is_array($updateZip) && sizeof($updateZip) > 0)
-	{
-		$out = fileFound("$PWD/", "$branch/$ID/" . $updateZip[0], "<acronym title=\"Archived Update Site\"><img border=\"0\" width=\"32\" height=\"16\" alt=\"Click to download archived update site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/></acronym>", false);
-		if ($out)
-		{
-			return "&nbsp; &nbsp;" . $out;
-		}
-	}
-	return "";
-}
 function doNoclean($dir)
 {
 	global $PR,$projct;
