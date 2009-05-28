@@ -40,9 +40,25 @@ $dls = array(
 
 /* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
 /* only required if using something other than the default; otherwise will be generated */
-$filePre = array(
+$filePreStatic = array(
 	/* "/newproj" => array("gmf-newproj"), */
-	"/gmf" => array("gmf", "GMF", "gmf-gmf")
+	"/gmf" => array("gmf", "gmf-gmf", "GMF"),
+);
+
+/* alternate method for specifying prefixes - static list */
+$filePreStatic = array(
+	/* "/newproj" => array("gmf-newproj"), */
+	"/gmf" => array(
+		"gmf-gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+		"gmf", 
+	)
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
