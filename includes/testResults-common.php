@@ -25,7 +25,7 @@ if (preg_match("#/(tools|technology)/#", $PWD, $m))
 	$isTools = $m[1] == "tools";
 	$isTech = $m[1] == "technology";
 }
-if ($debug > 10) print "PR=$PR, proj=$proj, projct=$projct, isTools=$isTools, isTech=$isTech<br/>";
+#if ($debug > 10) print "PR=$PR, proj=$proj, projct=$projct, isTools=$isTools, isTech=$isTech<br/>";
 
 $projectDownloadsPagePath = "/" . $PR . "/downloads";
 $buildName = isset($_GET["ID"]) && preg_match("#\d+\.\d+\.\d+/[NIMSR]\d{12}#",$_GET["ID"]) ? $_GET["ID"] : "";
