@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.78 2009/02/13 02:15:40 nickb Exp $
+// $Id: scripts.php,v 1.79 2009/05/28 22:23:09 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -83,19 +83,58 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	if(PWD_check($PWD, $suf))
 	{
 		$data = array(
-			4 => array(
+		4 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/", 
-				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", "/home/data/httpd/download.eclipse.org/$PR/$suf", "/home/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)
-			), 
-			5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/", 
-				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", "/home/data2/httpd/download.eclipse.org/$PR/$suf", "/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", "/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf",)
-			), 
-			6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/", 
-				"tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, "/home/local/data/httpd/download.eclipse.org/$suf", "/home/local/data/httpd/download.eclipse.org/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf", "/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf", "/home/www/tools/$PR/$suf", "/home/www/technology/$PR/$suf", "/home/www/eclipse/$PR/$suf", "/home/www/tools/$suf", "/home/www/technology/$suf", "/home/www/eclipse/$PR/$suf",)
-			), 
-			7 => array("checkdir" => "/var/www/", 
-				"tries" => array("/var/www/$PR/$suf", "/var/www/html/$PR/$suf", "/var/www/tools/$PR/$suf", "/var/www/technology/$PR/$suf", "/var/www/eclipse/$PR/$suf", "/var/www/html/tools/$PR/$suf", "/var/www/html/technology/$PR/$suf", "/var/www/html/eclipse/$PR/$suf",)
-			)
+				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", 
+				"/home/data/httpd/download.eclipse.org/$PR/$suf", 
+				"/home/data/httpd/download.eclipse.org/tools/$suf", 
+				"/home/data/httpd/download.eclipse.org/tools/$PR/$suf", 
+				"/home/data/httpd/download.eclipse.org/technology/$suf", 
+				"/home/data/httpd/download.eclipse.org/technology/$PR/$suf", 
+		
+				"/home/www/tools/$PR/$suf", 
+				"/home/www/technology/$PR/$suf", 
+				"/home/www/eclipse/$PR/$suf",)
+		),
+		5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/",
+				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
+				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
+				"/home/data2/httpd/download.eclipse.org/tools/$suf", 
+				"/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", 
+				"/home/data2/httpd/download.eclipse.org/technology/$suf", 
+				"/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", 
+				
+				"/home/www/tools/$PR/$suf", 
+				"/home/www/technology/$PR/$suf", 
+				"/home/www/eclipse/$PR/$suf",)
+		),
+		6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/",
+				"tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, 
+				"/home/local/data/httpd/download.eclipse.org/$suf", 
+				"/home/local/data/httpd/download.eclipse.org/$PR/$suf", 
+				"/home/local/data/httpd/download.eclipse.org/tools/$suf", 
+				"/home/local/data/httpd/download.eclipse.org/tools/$PR/$suf", 
+				"/home/local/data/httpd/download.eclipse.org/technology/$suf", 
+				"/home/local/data/httpd/download.eclipse.org/technology/$PR/$suf", 
+				
+				"/home/www/tools/$PR/$suf",
+				"/home/www/technology/$PR/$suf", 
+				"/home/www/eclipse/$PR/$suf", 
+				"/home/www/tools/$suf", 
+				"/home/www/technology/$suf", 
+				"/home/www/eclipse/$PR/$suf",)
+		),
+		7 => array("checkdir" => "/var/www/",
+				"tries" => array("/var/www/$PR/$suf", 
+				"/var/www/html/$PR/$suf", 
+				"/var/www/tools/$PR/$suf", 
+				"/var/www/technology/$PR/$suf", 
+				"/var/www/eclipse/$PR/$suf", 
+
+				"/var/www/html/tools/$PR/$suf", 
+				"/var/www/html/technology/$PR/$suf", 
+				"/var/www/html/eclipse/$PR/$suf",)
+		)
 		);
 
 		foreach(array_keys($data) as $y)
@@ -112,29 +151,29 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 						PWD_debug($PWD, $suf, "<!-- Found: defaults[${y}][$z] -->");
 						$PWDs[] = $PWD;
 						break 2;
-					}
 				}
 			}
 		}
 	}
-	$PWD = "";
+}
+$PWD = "";
 
-	krsort($PWDs);
-	reset($PWDs);
-	#debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
-	foreach($PWDs as $i => $PWD)
+krsort($PWDs);
+reset($PWDs);
+#debug_r($PWDs, "<hr>PWDs: ", "<hr>", 2);
+foreach($PWDs as $i => $PWD)
+{
+	debug(" &#160; &#160; $i : $PWD", 9);
+	if(!PWD_check($PWD, $suf))
 	{
-		debug(" &#160; &#160; $i : $PWD", 9);
-		if(!PWD_check($PWD, $suf))
-		{
-			debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
-			return $PWD;
-		}
+		debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
+		return $PWD;
 	}
+}
 
-	debug("<!-- PWD not found! -->");
-	debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
-	return $PWD;
+debug("<!-- PWD not found! -->");
+debug("'$suf' ended up with '$PWD' (is_readable: <b style='color:green'>" . is_readable($PWD) . "</b>, is_dir: <b style='color:green'>" . is_dir($PWD) . "</b>)");
+return $PWD;
 }
 
 function loadDirSimple($dir, $ext, $type) // 1D array, not 2D
@@ -185,10 +224,10 @@ function w($s, $br = "") // shortcut for echo() with second parameter: "add brea
 		$br = "\n";
 	}
 	else
-		if($br)
-		{
-			$br = "<br/>\n";
-		}
+	if($br)
+	{
+		$br = "<br/>\n";
+	}
 
 	print $s . $br;
 }
@@ -242,10 +281,10 @@ function getNews($lim, $key, $xml = "", $linkOnly = false, $dateFmtPre = "", $da
 				print date("M" . '\&\n\b\s\p\;jS' . $app, strtotime($regs[1][$i])) . ' - ' . "\n";
 			}
 			else
-				if($dateFmtPre)
-				{
-					print date($dateFmtPre, strtotime($regs[1][$i]));
-				}
+			if($dateFmtPre)
+			{
+				print date($dateFmtPre, strtotime($regs[1][$i]));
+			}
 			if($linkOnly)
 			{
 				$link = preg_replace("#.+(<a .+</a>).+#", "$1", $regs[3][$i]);
@@ -314,11 +353,11 @@ function build_news($cvsprojs, $cvscoms, $proj, $limit = 4)
 			if($row[4] == "R")
 			{
 				print "<p>$img $row[3] - $notes" . strtoupper($projectsf[$row[0]]) . " $row[1]</a> has been released! Get it ${link}here</a>.</p>";
-			}
-			else
-			{
-				print "<p>$img $row[3] - " . strtoupper($projectsf[$row[0]]) . " $branch${type}build $notes$row[1]</a> is available for ${link}download</a>.</p>";
-			}
+		}
+		else
+		{
+			print "<p>$img $row[3] - " . strtoupper($projectsf[$row[0]]) . " $branch${type}build $notes$row[1]</a> is available for ${link}download</a>.</p>";
+}
 		}
 	}
 	else
@@ -483,16 +522,17 @@ function internalUseOnly()
 		$Menu = new Menu();
 		include_once($App->getProjectCommon());
 		ob_start();
-?>
+		?>
 
-		<div id="midcolumn">
+<div id="midcolumn">
 
-		<div class="homeitem3col">
-		<h3>For Internal Use Only</h3>
-		<p>Sorry, this script must be run from a sanctioned build server. Contact <a href="http://wiki.eclipse.org/User:Nickb">Nick Boldt</a> 
-		or your project lead for details.</p>
-		</div>
-		</div>
+<div class="homeitem3col">
+<h3>For Internal Use Only</h3>
+<p>Sorry, this script must be run from a sanctioned build server.
+Contact <a href="http://wiki.eclipse.org/User:Nickb">Nick Boldt</a> or
+your project lead for details.</p>
+</div>
+</div>
 		<?php
 
 		$html = ob_get_contents();
@@ -517,12 +557,12 @@ function pick_project(& $proj, & $cvsproj, $cvsprojs, & $cvscom, $cvscoms, $comp
 			$cvsproj = $cvsprojs[$proj];
 		}
 		else
-			if(sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
-			{
-				$proj = $_GET["project"];
-				$cvsproj = $components[$proj][0];
-				$cvscom = $components[$proj][1];
-			}
+		if(sizeof($components) > 0 && preg_match("/^(?:" . join("|", array_keys($components)) . ")$/", $_GET["project"]))
+		{
+			$proj = $_GET["project"];
+			$cvsproj = $components[$proj][0];
+			$cvscom = $components[$proj][1];
+		}
 	}
 }
 
@@ -622,46 +662,47 @@ function cvsminus($rev)
 
 function changesetForm($bugid = "")
 {
-?>
-	<form action="http://www.eclipse.org/modeling/emf/news/changeset.php" method="get" target="_blank">
-	<p>
-		<label for="bugid">Bug ID: </label><input size="7" type="text" name="bugid" id="bugid" value="<?php print $bugid; ?>"/>
-		<input type="submit" value="Go!"/>
-	</p>
-	<p><a href="javascript:void(0)" onclick="javascript:this.style.display = 'none'; document.getElementById('changesetinfo').style.display = 'block';">How does this work?</a></p>
-	<div id="changesetinfo" style="display: none">
-		<p>
-			Use this form to generate a bash shell script which can be run against the projects and plugins in your workspace to produce a patch file
-			showing all changes for a given bug.
-		</p>
-		<p>
-			The requested bug must be indexed in the <a href="http://www.eclipse.org/modeling/searchcvs.php?q=190525">Search CVS</a> database.
-			Download the generated script for more information. If the script is empty, then the bug was not found.
-		</p>
-	</div>
-	</form>
-<?php
+	?>
+<form action="http://www.eclipse.org/modeling/emf/news/changeset.php"
+	method="get" target="_blank">
+<p><label for="bugid">Bug ID: </label><input size="7" type="text"
+	name="bugid" id="bugid" value="<?php print $bugid; ?>" /> <input
+	type="submit" value="Go!" /></p>
+<p><a href="javascript:void(0)"
+	onclick="javascript:this.style.display = 'none'; document.getElementById('changesetinfo').style.display = 'block';">How
+does this work?</a></p>
+<div id="changesetinfo" style="display: none">
+<p>Use this form to generate a bash shell script which can be run
+against the projects and plugins in your workspace to produce a patch
+file showing all changes for a given bug.</p>
+<p>The requested bug must be indexed in the <a
+	href="http://www.eclipse.org/modeling/searchcvs.php?q=190525">Search
+CVS</a> database. Download the generated script for more information. If
+the script is empty, then the bug was not found.</p>
+</div>
+</form>
+	<?php
 
 }
 
 function tokenize($in) # split a shell command into flag/value pairs
 {
-	/* 17722 ? Ss 0:00 /bin/bash /home/www-data/build/modeling/scripts/start.sh -proj gmf 
-	 * -sub gmf -version 2.1.0 -branch HEAD 
-	 * -URL http://download.eclipse.org/eclipse/downloads/drops/S-3.4M7-200805020100/eclipse-SDK-3.4M7-linux-gtk.tar.gz 
-	 * -URL http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805052017/emf-sdo-xsd-SDK-2.4.0M7.zip 
-	 * -URL http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/S200805052208/mdt-uml2-SDK-2.2.0M7.zip 
-	 * -URL http://download.eclipse.org/tools/orbit/downloads/drops/S20080427194908/orbitBundles-S20080427194908.map 
-	 * -URL http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/S200805061053/mdt-ocl-SDK-1.2.0M7.zip 
-	 * -URL http://emft.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/S200805061125/emf-query-SDK-1.2.0M7.zip 
-	 * -URL http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.2.0/S200805061205/emf-transaction-SDK-1.2.0M7.zip 
-	 * -URL http://emft.eclipse.org/modeling/emf/validation/downloads/drops/1.2.0/S200805061125/emf-validation-SDK-1.2.0M7.zip 
-	 * -URL http://download.eclipse.org/tools/gef/downloads/drops/3.4.0/S200804291800/GEF-ALL-3.4.0M7.zip -antTarget run 
-	 * -mapfileRule use-false -buildType I -javaHome /opt/sun-java2-5.0 -downloadsDir /home/www-data/build/downloads 
-	 * -buildDir /home/www-data/build/modeling/gmf/gmf/downloads/drops/2.1.0/I200805072353 
-	 * -writableBuildRoot /home/www-data -buildTimestamp 200805072353 
-	 * -email gmf-releng@eclipse.org,nickboldt@gmail.com,max.feldman@borland.com,anthonyh@ca.ibm.com 
-	 * -basebuilderBranch RC1_34 
+	/* 17722 ? Ss 0:00 /bin/bash /home/www-data/build/modeling/scripts/start.sh -proj gmf
+	 * -sub gmf -version 2.1.0 -branch HEAD
+	 * -URL http://download.eclipse.org/eclipse/downloads/drops/S-3.4M7-200805020100/eclipse-SDK-3.4M7-linux-gtk.tar.gz
+	 * -URL http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.4.0/S200805052017/emf-sdo-xsd-SDK-2.4.0M7.zip
+	 * -URL http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/2.2.0/S200805052208/mdt-uml2-SDK-2.2.0M7.zip
+	 * -URL http://download.eclipse.org/tools/orbit/downloads/drops/S20080427194908/orbitBundles-S20080427194908.map
+	 * -URL http://emft.eclipse.org/modeling/mdt/ocl/downloads/drops/1.2.0/S200805061053/mdt-ocl-SDK-1.2.0M7.zip
+	 * -URL http://emft.eclipse.org/modeling/emf/query/downloads/drops/1.2.0/S200805061125/emf-query-SDK-1.2.0M7.zip
+	 * -URL http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.2.0/S200805061205/emf-transaction-SDK-1.2.0M7.zip
+	 * -URL http://emft.eclipse.org/modeling/emf/validation/downloads/drops/1.2.0/S200805061125/emf-validation-SDK-1.2.0M7.zip
+	 * -URL http://download.eclipse.org/tools/gef/downloads/drops/3.4.0/S200804291800/GEF-ALL-3.4.0M7.zip -antTarget run
+	 * -mapfileRule use-false -buildType I -javaHome /opt/sun-java2-5.0 -downloadsDir /home/www-data/build/downloads
+	 * -buildDir /home/www-data/build/modeling/gmf/gmf/downloads/drops/2.1.0/I200805072353
+	 * -writableBuildRoot /home/www-data -buildTimestamp 200805072353
+	 * -email gmf-releng@eclipse.org,nickboldt@gmail.com,max.feldman@borland.com,anthonyh@ca.ibm.com
+	 * -basebuilderBranch RC1_34
 	 */
 	$bits = explode(" -", $in);
 	$pairs["cmd"] = $bits[0];
@@ -673,10 +714,10 @@ function tokenize($in) # split a shell command into flag/value pairs
 			$pairs[$pair[0]] = $pair[1];
 		}
 		else
-			if(isset($pair[0]))
-			{
-				$pairs[$pair[0]] = "";
-			}
+		if(isset($pair[0]))
+		{
+			$pairs[$pair[0]] = "";
+		}
 	}
 	return $pairs;
 }
@@ -704,7 +745,7 @@ function getDownloadScript()
 	# if this is a GEF page, use /gef/download.php
 	# if /foo/download.php doesn't exist, revert to /downloads/download.php
 	$dlScriptFile = $_SERVER["DOCUMENT_ROOT"] . "/" .($topProj == "NONE" ? $parentProj : $topProj) . "/download.php";
-	#print "[$dlScriptFile =? " . is_file($dlScriptFile) . "]<br>"; 
+	#print "[$dlScriptFile =? " . is_file($dlScriptFile) . "]<br>";
 	if(is_file($dlScriptFile))
 	{
 		$downloadScript = "http://www.eclipse.org/" .($topProj == "NONE" ? $parentProj : $topProj) . "/download.php?file=";
