@@ -1,7 +1,10 @@
 <?php
 
 $oldrels = array(
-	//"2.0.2" => array("2008/02/25 02:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0.2-200802250200"),
+	"2.1.2" => "200809171625",
+	"2.1.1" => "200808151718",
+	"2.1.0" => "200806121402",
+	"2.0.2" => array("2008/02/25 02:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0.2-200802250200"),
 	"2.0.1" => array("2007/09/28 00:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0.1-200709280000"),
 	"2.0.0" => array("2007/06/21 00:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-2.0-200706210000"),
 	"1.0.3" => array("2007/02/09 19:00","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/R-1.0.3-200702091900"),
