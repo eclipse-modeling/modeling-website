@@ -11,11 +11,19 @@ Component,Bug #,Contributor,Size,Committer
 
 org.eclipse.emf.teneo,216658,Jason Henriksen,small,mtaal
 org.eclipse.emf.teneo,244179,Johannes Quast,small,mtaal
-org.eclipse.emf.teneo,265783,Tom Schindl,small,mtaal
 org.eclipse.emf.teneo,270298,Hasan Ceylan,small,mtaal
-
 
 Section 3 (Third Party Software),,,,
 
-No third party libaries are distributed with Teneo
+Third-Party Code 
+239 	Apache Log4j Version: 1.2.8 	Apache License, 2.0 	
+2341 	Apache Derby Version: 10.1.2.1 (PB CQ1187) (using Orbit CQ2159) 	Apache License, 2.0 	
 
+Pre-Req Dependencies
+2418  	asm.jar Version: 1.5.3 (PB CQ1605)  	New BSD license  	works with
+2419 	cglib-2.1.3.jar Version: 2.1.3 	Apache License, 2.0 	works with
+2420 	commons-collections-2.1.1.jar Version: 2.1.1 	Apache License, 2.0 	works with
+2421 	dom4j-1.6.1.jar Version: 1.6.1 	based on Apache 1.1 	works with
+2422 	hibernate3.jar Version: 3.2.5 GA 	GNU Library or 'Lesser' General Public License (LGPL) 	works with
+2424 	hsqldb.jar Version: 1.8.0.8 	New BSD license 	works with
+2436 	commons-logging.jar Version: 1.0.4 	Apache License, 2.0 	works with
