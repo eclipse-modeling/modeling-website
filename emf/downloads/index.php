@@ -53,7 +53,7 @@ $extraZips = array(
 $dls = array(
 	/*"/newProj" => array(
 		"Project Name" => array( # same as value in _projectCommon.php's $projects array
-			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
@@ -62,7 +62,7 @@ $dls = array(
 	),*/
 	"/teneo" => array(
 		"Teneo Hibernate" => array( # same as value in _projectCommon.php's $projects array
-			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
@@ -76,14 +76,14 @@ $dls = array(
 	),
 	"/emf" => array(
 		"EMF and XSD" => array(
-			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"<img alt=\"All-In-One SDK Zip\" src=\"/modeling/images/dl-icon-aio-sdk.gif\"/> All-In-One SDK (Runtime, Source, Doc)" => "SDK",
 			"Models" => "Models",					
 			"Automated Tests" => "Automated-Tests",
 			"Examples" => "Examples"
 		),
 		"EMF, SDO, and XSD" => array(
-			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"<img alt=\"All-In-One SDK Zip\" src=\"/modeling/images/dl-icon-aio-sdk.gif\"/> All-In-One SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.5.0M4
 			"Standalone" => "Standalone",			# deprecated EMF 2.3.0
 			"Models" => "Models",					# deprecated EMF 2.5.0M4
