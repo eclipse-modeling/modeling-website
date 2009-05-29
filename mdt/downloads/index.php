@@ -65,17 +65,7 @@ $filePre = array(
 	"/eodm" => array("emft-eodm","mdt-eodm"),
 	"/uml2" => array("uml2","mdt-uml2"),
 	"/ocl" => array("emft-ocl","mdt-ocl"),
-	"/xsd" => array("xsd","mdt-xsd")
-);
-
-$filePreStatic = array(
-	"/xsd" => array(
-		"emf-xsd",		# new EMF 2.4.0M5
-		"emf-sdo-xsd",	# deprecated EMF 2.4.0M5
-		"xsd",			# deprecated EMF 2.4.0M5
-		"xsd",			# new EMF 2.4.0M5
-		"xsd"
-	)
+	"/xsd" => array("xsd","mdt-xsd", "emf-xsd", "emf-sdo-xsd")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
