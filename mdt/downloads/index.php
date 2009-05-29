@@ -11,6 +11,7 @@ $extraZips = array(
 	"mdt-ocl-standalone",
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
+	"emf-sdo-xsd-sourcedoc", # never existed
 );
 
 /* config */
