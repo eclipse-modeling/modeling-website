@@ -49,7 +49,6 @@ $dls = array(
 	"/xsd" => array(
 		"XSD" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source, Doc)" => "SDK",	# deprecated EMF 2.4.0M5
 			"Sources + Docs" => "sourcedoc",		# new EMF 2.4.0M5
 			"Runtime" => "runtime" //,
