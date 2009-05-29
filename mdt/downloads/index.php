@@ -6,6 +6,8 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added mid-stream) */
 $extraZips = array(
+	"emf-xsd-Update",
+	"emf-sdo-xsd-Update",
 	"mdt-ocl-standalone",
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
