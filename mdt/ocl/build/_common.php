@@ -28,14 +28,14 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|" . 
+	"regex" => "I200.*/eclipse-SDK-.*-linux-gtk.tar.gz|[SR]-.*200.*/eclipse-SDK-.*-linux-gtk.tar.gz|" . 
 			"2\.5\..+/[ISR]200.*/emf-xsd-SDK-|" .
 			"3\.0\..+/[ISR]200.*/mdt-uml2-SDK|" .
 			"orbit-",
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "nickboldt@gmail.com", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "aigdalov@borland.com", // prefil email contact box with comma-sep'd list
 	
 	"Users" => array("nickb","nickb",NULL) /* build user, eclipse cvs user, IES cvs user */
 );
