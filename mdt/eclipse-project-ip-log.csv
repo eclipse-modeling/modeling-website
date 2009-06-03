@@ -1,6 +1,7 @@
 Section 1 (Committers),,,,
 
 dev.eclipse.org Login,,,,
+aigdalov,,,,
 ashidqie,,,,
 cdamus,,,,
 cmcgee,,,,
@@ -172,7 +173,7 @@ org.eclipse.xsd,258835,Valentin Baciu,30,emerks
 
 Section 3 (Third Party Software),,,,
 
-CQ,Component,Library Name,CVS Location,License,Usage,
-(No longer in use) 303,OCL,LPG Java Runtime v1.0,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
-(No longer in use) 303,OCL,LPG Java Runtime v1.0,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
-1081,OCL,LPG Java Runtime v1.1,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+Component,Library Name,CQ,CVS Location,License,Usage,
+OCL,LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
+OCL,LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+OCL,LPG Java Runtime v1.1,1081,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
