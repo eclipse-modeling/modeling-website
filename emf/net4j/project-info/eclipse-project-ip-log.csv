@@ -11,6 +11,7 @@ adietisheim,,,,
 Section 2 (Developers),,,,
 
 Component,Bug #,Contributor,Size,Committer
+modeling.emf.net4j,277808,Kai Schlamp,small,estepper
 
 Section 3 (Third Party Software),,,,
 
@@ -20,6 +21,7 @@ Apache Commons Codec,2339,http://www.eclipse.org/orbit,Apache License 2.0,reuse
 Apache Commons HttpClient,2340,http://www.eclipse.org/orbit,Apache License 2.0,reuse
 Apache Derby,2341,http://www.eclipse.org/orbit,Apache License 2.0,reuse
 HSQLDB,2424,http://hsqldb.org,New BSD license,workswith
+H2,3377,http://www.h2database.com,EPL,workswith
 MySQL Connector/J,2425,http://dev.mysql.com/downloads/connector,GPL,workswith
 PostgreSQL,3375,http://www.postgresql.org,New BSD license,workswith
 Objectivity 9,3290,http://www.objectivity.com,other,workswith
