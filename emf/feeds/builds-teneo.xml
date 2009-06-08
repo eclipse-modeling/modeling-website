@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>teneo Builds</title>
   <link href="http://download.eclipse.org/modeling/emft/feeds/builds-teneo.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-06-02T04:54:52Z</updated>
+  <updated>2009-06-08T21:11:45Z</updated>
   <author>
     <name>teneo Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emft/feeds/builds-teneo.xml</id>
+  <entry>
+    <title>[announce] teneo 1.1.0RC4 (S200906081526) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=teneo&amp;showAll=1&amp;hlbuild=S200906081526#S200906081526"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=teneo&amp;showAll=1&amp;hlbuild=S200906081526#S200906081526</id>
+    <updated>2009-06-08T21:11:45Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200906081526" href="http://www.eclipse.org/modeling/emf/downloads/?project=teneo&amp;showAll=1&amp;hlbuild=S200906081526#S200906081526" type="S" vanityname="1.1.0RC4" version="1.1.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/teneo/downloads/drops/1.1.0/S200906081526/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=teneo</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=teneo&amp;version=S200906081526
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-teneo-SDK-1.1.0RC4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/teneo/downloads/drops/1.1.0/S200906081526/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5RC4-200906051444/eclipse-SDK-3.5RC4-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/S200906080927/emf-xsd-SDK-2.5.0RC4.zip</dependency>
+          <dependency>http://emft.eclipse.org/downloads/eclipselink-plugins-1.1.1v20090430-p2.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] teneo 1.1.0RC3 (S200906012353) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=teneo&amp;showAll=1&amp;hlbuild=S200906012353#S200906012353"/>
