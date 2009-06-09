@@ -986,13 +986,15 @@ function getBuildArtifacts($dir, $branchID)
 		$version = (isset($opts["buildAlias"]) ? $opts["buildAlias"] : (preg_match("#(.+)/([IM]\d+)#", $branchID, $matches) ? $matches[2]: "HEAD"));
 		$ret .= "<li><a href=\"http://www.eclipse.org/$PR/news/relnotes.php?project=$projct&amp;version=$version\">Changes In This Build</a></li>\n";
 		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
+		$details2 = array();
 		foreach (array_keys($details) as $label)
 		{
 			if (is_file("$dir/$branchID/" . $details[$label]))
 			{
-				$details[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
+				$details2[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
 			}
 		}
+		$details = $details2; unset($details2);
 		$ret .= "<li>" . join(", ", $details) . "</li>\n";
 		$ret .= "</ul>\n";
 		$ret .= "</li>\n";
