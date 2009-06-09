@@ -842,7 +842,13 @@ function loadBuildConfig($file, $deps)
 	foreach ($lines as $z)
 	{
 		$regs = null;
+		// Modeling build style
 		if (preg_match("/^((?:" . join("|", array_keys($deps)) . ")(?:DownloadURL|File|BuildURL))=(.{2,})$/", $z, $regs))
+		{
+			$opts[$regs[1]] = $regs[2];
+		}
+		// Athena build style
+		else if (preg_match("/^(.+\.download\.url|.+\.file|.+\.buildurl)=(.{2,})$/", $z, $regs))
 		{
 			$opts[$regs[1]] = $regs[2];
 		}
@@ -850,7 +856,7 @@ function loadBuildConfig($file, $deps)
 		{
 			$opts[$regs[1]] = trim($regs[2]);
 		}
-		else if (preg_match("#^(javaHome)=(.+)$#", $z, $regs))
+		else if (preg_match("#^(javaHome|JAVA_HOME|java.home)=(.+)$#", $z, $regs))
 		{
 			# TODO: change this to an exec to use java --version instead
 			# TODO: why is build.cfg not being found?
@@ -870,6 +876,8 @@ function getBuildArtifacts($dir, $branchID)
 	$file = "$dir/$branchID/build.cfg";
 	$havedeps = array();
 	$opts = loadBuildConfig($file, $deps);
+	
+	// Modeling build style
 	foreach (array_keys($deps) as $z)
 	{
 		$builddir[$z] = (isset($opts["${z}DownloadURL"]) ? $opts["${z}DownloadURL"] : ""). (isset($opts["${z}BuildURL"]) ? $opts["${z}BuildURL"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
@@ -883,7 +891,24 @@ function getBuildArtifacts($dir, $branchID)
 		    $havedeps[$z] = $z;
 		}
 	}
-
+	
+	// Athena build style
+	foreach (array_keys($opts) as $y)
+	{
+		preg_match("/^(.+)(\.download\.url|.+\.file|.+\.buildurl)$/", $y, $regs);
+		$z = $regs[1];
+		$builddir[$z] = (isset($opts["${z}.download.url"]) ? $opts["${z}.download.url"] : ""). (isset($opts["${z}.build.url"]) ? $opts["${z}.build.url"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
+		# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
+		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
+		$buildID[$z] = isset($opts["${z}.build.url"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}.build.url"])) : "";
+		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
+		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
+		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
+		if ($builddir[$z]) {
+		    $havedeps[$z] = $z;
+		}
+	}
+	
 	$ret = "";
 
 	if (is_array($havedeps))
@@ -901,7 +926,9 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<ul>\n";
 		if (sizeof($opts) > 0)
 		{
-			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>" . ucwords(str_replace("-", " ", $opts["javaHome"])) . "</li>" : "");
+			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>" . ucwords(str_replace("-", " ", $opts["javaHome"])) . "</li>" : 
+						(isset($opts["JAVA_HOME"]) && $opts["JAVA_HOME"] ? "<li>" . ucwords(str_replace("-", " ", $opts["JAVA_HOME"])) . "</li>" : "")
+					);
 			foreach (array_keys($havedeps) as $z)
 			{
 				$vanity = $buildID[$z];
@@ -961,7 +988,10 @@ function getBuildArtifacts($dir, $branchID)
 		$ret .= "<li><a href=\"" . ($isBuildServer ? "" : "http://www.eclipse.org") . "/$PR/downloads/testResults.php?hl=1&amp;project=$projct&amp;ID=$branchID\">Test Results &amp; Compile Logs</a></li>\n";
 		foreach (array_keys($details) as $label)
 		{
-			$details[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
+			if (is_file("$dir/$branchID/" . $details[$label]))
+			{
+				$details[$label] = preg_replace("/^(.+)$/", "<a href=\"$link$mid$branchID/$1\">$label</a>", $details[$label]);
+			}
 		}
 		$ret .= "<li>" . join(", ", $details) . "</li>\n";
 		$ret .= "</ul>\n";
