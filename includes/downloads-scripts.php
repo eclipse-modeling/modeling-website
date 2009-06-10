@@ -871,8 +871,8 @@ function getBuildArtifacts($dir, $branchID)
 {
 	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct, $isTools, $isTech;
 
-	$PR2 = ($isTools ? "tools/$PR" : ($isTech ? "technology/$PR" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef
-	$mid = "$downloadPre/$PR2" . ($proj != "/" && $PR2 == $PR ? $proj : "") . "/downloads/drops/";
+	$PR2 = ($isTools ? "tools/$proj" : ($isTech ? "technology/$proj" : "$PR")); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef, but also modeling/emf
+	$mid = "$downloadPre/$PR2" . ($proj != "/" && $PR2 == $proj ? $proj : "") . "/downloads/drops/";
 	$file = "$dir/$branchID/build.cfg";
 	$havedeps = array();
 	$opts = loadBuildConfig($file, $deps);
