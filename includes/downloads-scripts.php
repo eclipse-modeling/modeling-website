@@ -850,6 +850,7 @@ function loadBuildConfig($file, $deps)
 		// Athena build style
 		else if (preg_match("/^(.+\.download\.url|.+\.file|.+\.buildurl)=(.{2,})$/", $z, $regs))
 		{
+			#print "[ " . $regs[1] . " = " . $regs[2] . " ]<br/>";
 			$opts[$regs[1]] = $regs[2];
 		}
 		else if (preg_match("#^(buildAlias|noclean)=(.+)$#", $z, $regs))
@@ -893,19 +894,22 @@ function getBuildArtifacts($dir, $branchID)
 	}
 	
 	// Athena build style
+	$eclipseDownloadURL=$opts["eclipse.download.url"];
 	foreach (array_keys($opts) as $y)
 	{
-		preg_match("/^(.+)(\.download\.url|.+\.file|.+\.buildurl)$/", $y, $regs);
-		$z = $regs[1];
-		$builddir[$z] = (isset($opts["${z}.download.url"]) ? $opts["${z}.download.url"] : ""). (isset($opts["${z}.build.url"]) ? $opts["${z}.build.url"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
-		# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
-		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
-		$buildID[$z] = isset($opts["${z}.build.url"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}.build.url"])) : "";
-		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
-		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
-		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
-		if ($builddir[$z]) {
-		    $havedeps[$z] = $z;
+		preg_match("/^(.+)\.buildurl$/", $y, $regs); $z = $regs[1];
+		if ($z)
+		{
+			$builddir[$z] = $eclipseDownloadURL. (isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
+			# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
+			# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
+			$buildID[$z] = isset($opts["${z}.buildurl"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}.buildurl"])) : "";
+			$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
+			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
+			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
+			if ($builddir[$z]) {
+			    $havedeps[$z] = $z;
+			}
 		}
 	}
 	
@@ -927,7 +931,9 @@ function getBuildArtifacts($dir, $branchID)
 		if (sizeof($opts) > 0)
 		{
 			$ret .= (isset($opts["javaHome"]) && $opts["javaHome"] ? "<li>" . ucwords(str_replace("-", " ", $opts["javaHome"])) . "</li>" : 
-						(isset($opts["JAVA_HOME"]) && $opts["JAVA_HOME"] ? "<li>" . ucwords(str_replace("-", " ", $opts["JAVA_HOME"])) . "</li>" : "")
+						(isset($opts["JAVA_HOME"]) && $opts["JAVA_HOME"] ? "<li>" . ucwords(str_replace("-", " ", $opts["JAVA_HOME"])) . "</li>" : 
+							(isset($opts["java.home"]) && $opts["java.home"] ? "<li>" . ucwords(str_replace("-", " ", $opts["java.home"])) . "</li>" : "")
+						)
 					);
 			foreach (array_keys($havedeps) as $z)
 			{
@@ -954,7 +960,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				# tokenize and reassemble, avoiding dupes
 				$vanityBits = explode(" ",trim($vanity));
-				$vanity=""; foreach ($vanityBits as $vb){ if (false===strstr($vanity,$vb)){ $vanity.=" $vb"; } }
+				$vanity=""; foreach ($vanityBits as $vb){ if ($vb && false===strstr($vanity,$vb)){ $vanity.=" $vb"; } }
 				
 				$bf = array();
 				if (preg_match("#(.+)/orbitBundles-(.+).map$#", $buildfile[$z], $bfbits))
@@ -967,7 +973,7 @@ function getBuildArtifacts($dir, $branchID)
 					$bf[] = $buildfile[$z]; // zip
 					$bf[] = $bfbits[1] . "/orbitBundles-" . $bfbits[2] . ".map";
 				}
-				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":"")."$deps[$z] " . 
+				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":""). ($deps[$z]?$deps[$z]:ucwords(str_replace("."," ",$z))) . " " . 
 					($z == "orbit" ? "<a href=\"{$bf[0]}\">$vanity</a> (<a href=\"{$bf[1]}\">map</a>)" : "<a href=\"{$buildfile[$z]}\">$vanity</a>") . 
 				"</li>\n";
 			}
