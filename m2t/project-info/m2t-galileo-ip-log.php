@@ -32,12 +32,6 @@ ob_start();
 ?>      
 
 <h1>Approved IP Log for modeling.m2t - Galileo Release (xpand 0.7, acceleo 0.8, jet 1.0)</h1>
-<div style="color: gray">
-This tentative IP Log is generated dynamically from automatically collected project information.
-This information has not been vetted for accuracy by the Eclipse Foundation and may not represent
-the true state of the IP of this project(s). Please refer to the official approved IP Log(s) associated with
-the official release(s) of this project(s) for more information.
-</div>
 
 <h2>Licenses</h2>
 
@@ -137,7 +131,7 @@ the official release(s) of this project(s) for more information.
 <p/>
 <p><em>No pre-req dependencies</em></p>
 <h2>Committers</h2>
-<div style="margin-bottom: 10px">This table lists everyone who is, or ever has been, a committer.
+<div>This table lists everyone who is, or ever has been, a committer.
         The only reasons to remove someone from this list are (i) if they never
         were a committer, (ii) it is a bogus listing such as 'root', or (iii) all
         the code that person wrote is now obsolete and no longer being shipped.
@@ -225,7 +219,7 @@ the official release(s) of this project(s) for more information.
         </tr>
     </table>
 <p>
-<div style="margin-bottom: 10px">This table lists committers who do not appear to have committed any code or
+<div>This table lists committers who do not appear to have committed any code or
         files to the project. This is a 'best-guess' table based on the commits explorer
         data. If someone listed here actually has committed code, please correct the
         table by making them active.</div>
@@ -275,7 +269,7 @@ the official release(s) of this project(s) for more information.
             </table>
     <p>
     <h2>Contributors and Their Contributions</h2>
-<div style="margin-bottom: 10px">
+<div>
     This table lists, by contributor and then by bug #, all the non-committer contributions.
     This section is probably the weakest of the automated data gathering because there are 
     so many bugs and so many different ways that people have noted contributions over time.<p>
