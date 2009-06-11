@@ -40,15 +40,6 @@ the official release(s) of this project(s) for more information.
 </div>
 
 <h2>Licenses</h2>
-<div style="margin-bottom: 10px">
-    Send email to 
-    <a href="mailto:emo-ip-team@eclipse.org">the Eclipse Legal team</a> to request changes
-    to the licenses.
-    </div>
-
-        <ul>
-            <li>Eclipse Public License, 1.0</li>
-        </ul>
 
 <h2>Third-Party Code</h2>
 <div style="margin-bottom: 10px">
@@ -62,7 +53,7 @@ the official release(s) of this project(s) for more information.
 
     <table border="1" cellpadding="3" cellspacing="0">
 <tr>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">CQ</th>
+<th >CQ</th>
 <th bordercolor="#7A79A7" bgcolor="#7A79A7">Third-Party Code</th>
 <th bordercolor="#7A79A7" bgcolor="#7A79A7">License</th>
 <th bordercolor="#7A79A7" bgcolor="#7A79A7">Use</th>
