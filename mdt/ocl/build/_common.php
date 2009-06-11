@@ -2,7 +2,7 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "R35_M5",
+	"BaseBuilderBranch" => "R35_RC4",
 	
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
@@ -37,7 +37,7 @@ $options = array (
 
 	"EmailDefault" => "aigdalov@borland.com", // prefil email contact box with comma-sep'd list
 	
-	"Users" => array("nickb","nickb",NULL) /* build user, eclipse cvs user, IES cvs user */
+	"Users" => array("aigdalov","aigdalov",NULL) /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
