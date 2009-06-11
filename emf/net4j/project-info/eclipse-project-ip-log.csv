@@ -16,12 +16,12 @@ modeling.emf.net4j,277808,Kai Schlamp,small,estepper
 Section 3 (Third Party Software),,,,
 
 Name,CQ,Location,License,Usage
-JMS Spec 1.1,2338,/cvsroot/modeling/org.eclipse.emf/org.eclipse.emf.net4j/examples/org.eclipse.net4j.jms.api/lib/jms.jar,dual license where the EPL-compatible CDDL is one option,reuse
-Apache Commons Codec,2339,http://www.eclipse.org/orbit,Apache License 2.0,reuse
-Apache Commons HttpClient,2340,http://www.eclipse.org/orbit,Apache License 2.0,reuse
-Apache Derby,2341,http://www.eclipse.org/orbit,Apache License 2.0,reuse
-HSQLDB,2424,http://hsqldb.org,New BSD license,workswith
-H2,3377,http://www.h2database.com,EPL,workswith
-MySQL Connector/J,2425,http://dev.mysql.com/downloads/connector,GPL,workswith
-PostgreSQL,3375,http://www.postgresql.org,New BSD license,workswith
-Objectivity 9,3290,http://www.objectivity.com,other,workswith
+JMS Spec 1.1,2338,/cvsroot/modeling/org.eclipse.emf/org.eclipse.emf.net4j/examples/org.eclipse.net4j.jms.api/lib/jms.jar,CDDL,reuse
+Apache Commons Codec 1.3-2.0,2339,http://www.eclipse.org/orbit,Apache License 2.0,reuse
+Apache Commons HttpClient 3.0-4.0,2340,http://www.eclipse.org/orbit,Apache License 2.0,reuse
+Apache Derby 10.1.2,2341,http://www.eclipse.org/orbit,Apache License 2.0,reuse through Orbit
+HSQLDB 1.8-2.0,2424,http://hsqldb.org,New BSD license,workswith
+H2 1.1-1.2,3377,http://www.h2database.com,EPL,workswith
+MySQL Connector/J 5.0-6.0,2425,http://dev.mysql.com/downloads/connector,GPL,workswith
+PostgreSQL 8.3-9.0,3375,http://www.postgresql.org,New BSD license,workswith
+Objectivity 9,3290,http://www.objectivity.com,https://download.objectivity.com/licenseAgreement.htm,workswith
