@@ -42,21 +42,13 @@ the official release(s) of this project(s) for more information.
 <h2>Licenses</h2>
 
 <h2>Third-Party Code</h2>
-<div style="margin-bottom: 10px">
-    Corrections to the third-party code tables are made by adding or removing keywords
-    to the CQs themselves. See <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log#Third-Party_Code">the 
-    how to instructions</a> for more information
-    about which keywords correspond to which tables. Send email to 
-    <a href="mailto:emo-ip-team@eclipse.org">the Eclipse Legal team</a> to request changes
-    to the keywords.
-    </div>
 
     <table border="1" cellpadding="3" cellspacing="0">
 <tr>
-<th >CQ</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Third-Party Code</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">License</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Use</th>
+<th>CQ</th>
+<th>Third-Party Code</th>
+<th>License</th>
+<th>Use</th>
 </tr>
 <tr>
     <td><a href="https://dev.eclipse.org/ipzilla/show_bug.cgi?id=336">336</a></td>
@@ -142,7 +134,7 @@ the official release(s) of this project(s) for more information.
     <td>unmodified binary </td>
     </tr>
     </table>
-<p>
+<p/>
 <p><em>No pre-req dependencies</em></p>
 <h2>Committers</h2>
 <div style="margin-bottom: 10px">This table lists everyone who is, or ever has been, a committer.
@@ -156,11 +148,11 @@ the official release(s) of this project(s) for more information.
 
 <table border="1" cellpadding="3" cellspacing="0">
 <tr>
-        <th colspan="2" bordercolor="#7A79A7" bgcolor="#7A79A7">Past and
+        <th colspan="2">Past and
         Present Active</th>
     </tr>
-<tr><th bordercolor="#7A79A7" bgcolor="#7A79A7">Name</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Organization</th>
+<tr><th>Name</th>
+<th>Organization</th>
 </tr>
 <tr>
     <td>andre Arnold</td>
@@ -238,18 +230,15 @@ the official release(s) of this project(s) for more information.
         data. If someone listed here actually has committed code, please correct the
         table by making them active.</div>
     
-    <div style="float:right;width:150px;border-style:dashed;border-width:thin;border-color:red;padding:5px">
 
-        Consider using the <a href="http://portal.eclipse.org">portal</a>
-        to remove <b>Never Active</b> committers.   </div>
 
 <table border="1" cellpadding="3" cellspacing="0">
 <tr>
-        <th colspan="2" bordercolor="#7A79A7" bgcolor="#7A79A7">Never
+        <th colspan="2">Never
         Active</th>
     </tr>
-<tr><th bordercolor="#7A79A7" bgcolor="#7A79A7">Name</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Organization</th>
+<tr><th>Name</th>
+<th>Organization</th>
 </tr>
 <tr>
         <td>Chris Aniszczyk</td>
@@ -314,9 +303,9 @@ the official release(s) of this project(s) for more information.
     <table border="1" cellpadding="3" cellspacing="0">
 
 <tr>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Bug</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Size</th>
-<th bordercolor="#7A79A7" bgcolor="#7A79A7">Description</th>
+<th>Bug</th>
+<th>Size</th>
+<th>Description</th>
 </tr>
 <tr><td colspan="3" style="background-color: #DDDDDD">Freddy&nbsp;Allilaire (obeo.fr)</td>
 
