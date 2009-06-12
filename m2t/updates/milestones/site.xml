@@ -115,6 +115,34 @@ M2T MTL SDK 0.7.0RC2 S200811141439: contains runtime, source, and documentation.
 		<category name="M2T MTL SDK 0.7.0RC2 S200811141439"/>
 	</feature>
 
+	<!-- JET 1.0.0RC5 S200906120945 -->
+	<category-def label="M2T JET SDK 1.0.0RC5 S200906120945" name="M2T JET SDK 1.0.0RC5 S200906120945">
+		<description>
+M2T JET SDK 1.0.0RC5 S200906120945: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.all" version="1.0.0.HEAD-4--7D22T-HJsgz-jNZtqmVKLlC9" url="features/org.eclipse.jet.all_1.0.0.HEAD-4--7D22T-HJsgz-jNZtqmVKLlC9.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v200906120900-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v200906120900-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="1.0.0.v200906120945-2--7w311A17231A11" url="features/org.eclipse.jet.doc_1.0.0.v200906120945-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="1.0.0.v200906120945-2--7w311A17231A11" url="features/org.eclipse.jet.editor_1.0.0.v200906120945-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="1.0.0.v200906120945-4--866ClIsREOmSfOJKkB8" url="features/org.eclipse.jet.sdk_1.0.0.v200906120945-4--866ClIsREOmSfOJKkB8.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="1.0.0.v200906120945" url="features/org.eclipse.jet.source_1.0.0.v200906120945.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="1.0.0.v200906120945-508ZAkF77g7VBF7g77" url="features/org.eclipse.jet_1.0.0.v200906120945-508ZAkF77g7VBF7g77.jar" patch="false">
+		<category name="M2T JET SDK 1.0.0RC5 S200906120945"/>
+	</feature>
+
 	<!-- JET 0.9.2RC1 S200902041513 (Incubation) -->
 	<category-def label="M2T JET SDK (Incubation) 0.9.2RC1 S200902041513" name="M2T JET SDK (Incubation) 0.9.2RC1 S200902041513">
 		<description>
