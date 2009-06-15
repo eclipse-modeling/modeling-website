@@ -107,50 +107,50 @@ MDT UML2 SDK 2.2.2RC2a S200902101440: contains runtime, source, and documentatio
 		<category name="MDT UML2 SDK 2.2.2RC2a S200902101440"/>
 	</feature>
 
-	<!-- OCL 1.3.0RC4 S200906081649 -->
-	<category-def label="MDT OCL SDK 1.3.0RC4 S200906081649" name="MDT OCL SDK 1.3.0RC4 S200906081649">
+	<!-- OCL 1.3.0RC5 S200906151742 -->
+	<category-def label="MDT OCL SDK 1.3.0RC5 S200906151742" name="MDT OCL SDK 1.3.0RC5 S200906151742">
 		<description>
-MDT OCL SDK 1.3.0RC4 S200906081649: contains runtime, source, and documentation.
+MDT OCL SDK 1.3.0RC5 S200906151742: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.ocl.doc" version="1.2.1.v200901271800-208_7w311A12382911" url="features/org.eclipse.emf.ocl.doc_1.2.1.v200901271800-208_7w311A12382911.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+	<feature id="org.eclipse.emf.ocl.doc" version="1.2.1.v200901271800-208_7w311A17262341" url="features/org.eclipse.emf.ocl.doc_1.2.1.v200901271800-208_7w311A17262341.jar" patch="false">
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.emf.ocl.examples.source" version="1.3.0.v200901271800" url="features/org.eclipse.emf.ocl.examples.source_1.3.0.v200901271800.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.emf.ocl.examples" version="1.3.0.v200901271800-478-9oB55W58BQ8T55" url="features/org.eclipse.emf.ocl.examples_1.3.0.v200901271800-478-9oB55W58BQ8T55.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
-	<feature id="org.eclipse.emf.ocl.sdk" version="1.3.0.v200901271800-7B7CAAABVTmSOXXZl5c6h9lX-vDE" url="features/org.eclipse.emf.ocl.sdk_1.3.0.v200901271800-7B7CAAABVTmSOXXZl5c6h9lX-vDE.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+	<feature id="org.eclipse.emf.ocl.sdk" version="1.3.0.v200901271800-7B7CAAABVTmSOXXZlAg3f3i_-vDE" url="features/org.eclipse.emf.ocl.sdk_1.3.0.v200901271800-7B7CAAABVTmSOXXZlAg3f3i_-vDE.jar" patch="false">
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.emf.ocl.source" version="1.1.101.v200901271800-208_7w311A12382911" url="features/org.eclipse.emf.ocl.source_1.1.101.v200901271800-208_7w311A12382911.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.emf.ocl" version="1.1.101.v200901271800-208_7w311A12382911" url="features/org.eclipse.emf.ocl_1.1.101.v200901271800-208_7w311A12382911.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
-	<feature id="org.eclipse.ocl.all.sdk" version="1.3.0.v200901271800-787B8aA3PRRgQUXlKrYh3z-vedIm" url="features/org.eclipse.ocl.all.sdk_1.3.0.v200901271800-787B8aA3PRRgQUXlKrYh3z-vedIm.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+	<feature id="org.eclipse.ocl.all.sdk" version="1.3.0.v200901271800-787B8aA3PRRgQUXlKwbe1tshdIma" url="features/org.eclipse.ocl.all.sdk_1.3.0.v200901271800-787B8aA3PRRgQUXlKwbe1tshdIma.jar" patch="false">
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.ocl.all" version="1.3.0.v200901271800-538_7EABvvDECkLUJeNYLC2" url="features/org.eclipse.ocl.all_1.3.0.v200901271800-538_7EABvvDECkLUJeNYLC2.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
-	<feature id="org.eclipse.ocl.doc" version="1.3.0.v200901271800-35-8s733L357H5J33" url="features/org.eclipse.ocl.doc_1.3.0.v200901271800-35-8s733L357H5J33.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+	<feature id="org.eclipse.ocl.doc" version="1.3.0.v200901271800-35-8s733L3A6F5D63" url="features/org.eclipse.ocl.doc_1.3.0.v200901271800-35-8s733L3A6F5D63.jar" patch="false">
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.ocl.source" version="1.3.0.v200901271800-46-9oB55V5I9P8M65" url="features/org.eclipse.ocl.source_1.3.0.v200901271800-46-9oB55V5I9P8M65.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.ocl.uml.source" version="2.0.0.v200901271800-3--7w311A16382511" url="features/org.eclipse.ocl.uml.source_2.0.0.v200901271800-3--7w311A16382511.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.ocl.uml" version="2.0.0.v200901271800-3--7w311A16382511" url="features/org.eclipse.ocl.uml_2.0.0.v200901271800-3--7w311A16382511.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 	<feature id="org.eclipse.ocl" version="1.3.0.v200901271800-46-9oB55V5I9P8M65" url="features/org.eclipse.ocl_1.3.0.v200901271800-46-9oB55V5I9P8M65.jar" patch="false">
-		<category name="MDT OCL SDK 1.3.0RC4 S200906081649"/>
+		<category name="MDT OCL SDK 1.3.0RC5 S200906151742"/>
 	</feature>
 
 	<!-- OCL 1.2.3RC2 S200902101708 -->
