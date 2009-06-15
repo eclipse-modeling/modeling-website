@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.79 2009/05/28 22:23:09 nickb Exp $
+// $Id: scripts.php,v 1.80 2009/06/15 16:43:32 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -440,9 +440,17 @@ function project_name($proj)
 {
 	global $projects, $PR;
 
-	$tmp = array_flip($projects);
-	$proj = preg_replace("#^/#", "", $proj);
-	return isset($tmp[$proj]) ? $tmp[$proj] :(isset($tmp[$PR]) ? $tmp[$PR] : "");
+	if (isset($projects)) 
+	{
+		$tmp = array_flip($projects);
+		$proj = preg_replace("#^/#", "", $proj);
+		return isset($tmp[$proj]) ? $tmp[$proj] :(isset($tmp[$PR]) ? $tmp[$PR] : "");
+	}
+	else
+	{
+		return strtoupper($proj);
+	}
+		
 }
 
 function debug($str, $level = 0)
