@@ -109,6 +109,8 @@ $deps = array(
 	"dltk" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a>",
 	"dltkcore" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (Core)",
 	"dltkrse" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (RSE)",
+	"dltkmylyn" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (Mylyn)",
+	"dltktests" => "<a href=\"http://www.eclipse.org/dltk/\">DLTK</a> (Tests)",
 	"dtp" => "<a href=\"http://www.eclipse.org/dtp/\">DTP</a>",
 	"gef" => "<a href=\"http://www.eclipse.org/gef/\">GEF</a>",
 	"gmf" => "<a href=\"http://www.eclipse.org/gmf/\">GMF</a>",
