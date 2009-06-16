@@ -174,38 +174,38 @@ EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600: contains runtime, sour
 		<category name="EMFT ECORETOOLS SDK (Incubation) 0.8.0RC4a S200806130600"/>
 	</feature>
 
-	<!-- COMPARE 1.0.0RC5 S200906160459 (Incubation) -->
-	<category-def label="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459" name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459">
+	<!-- COMPARE 1.0.0RC5b S200906160908 (Incubation) -->
+	<category-def label="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908" name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908">
 		<description>
-EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459: contains runtime, source, and documentation.
+EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.compare.all" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.all_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.all" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.all_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.doc" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.doc_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.doc" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.doc_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.sdk" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.sdk_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.sdk" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.sdk_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.source" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.source_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.source" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.source_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.team.subversive.source" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.team.subversive.source_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.team.subversive.source" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.team.subversive.source_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.team.subversive" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.team.subversive_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.team.subversive" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.team.subversive_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.ui.capabilities.source" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.ui.capabilities.source_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.ui.capabilities.source" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.ui.capabilities.source_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare.ui.capabilities" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare.ui.capabilities_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare.ui.capabilities" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare.ui.capabilities_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
-	<feature id="org.eclipse.emf.compare" version="1.0.0.v200906160459" url="features/org.eclipse.emf.compare_1.0.0.v200906160459.jar" patch="false">
-		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5 S200906160459"/>
+	<feature id="org.eclipse.emf.compare" version="1.0.0.v200906160908" url="features/org.eclipse.emf.compare_1.0.0.v200906160908.jar" patch="false">
+		<category name="EMFT COMPARE SDK (Incubation) 1.0.0RC5b S200906160908"/>
 	</feature>
 
 	<!-- COMPARE 0.9.0RC4 S200906090441 (Incubation) -->
