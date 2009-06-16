@@ -68,35 +68,35 @@ EMFT SEARCH SDK (Incubation) 0.7.0M5d S200902171017: contains runtime, source, a
 		<category name="EMFT SEARCH SDK (Incubation) 0.7.0M5d S200902171017"/>
 	</feature>
 
-	<!-- MWE 0.7.0RC4 S200906091110 (Incubation) -->
-	<category-def label="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110" name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110">
+	<!-- MWE 0.7.0RC5 S200906160748 (Incubation) -->
+	<category-def label="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748" name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748">
 		<description>
-EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110: contains runtime, source, and documentation.
+EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.mwe.core.source" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.core.source_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.core.source" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.core.source_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.core" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.core_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.core" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.core_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.doc" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.doc_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.doc" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.doc_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.examples.source" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.examples.source_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.examples.source" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.examples.source_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.examples" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.examples_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.examples" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.examples_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.sdk" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.sdk_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.sdk" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.sdk_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.ui.source" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.ui.source_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.ui.source" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.ui.source_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
-	<feature id="org.eclipse.emf.mwe.ui" version="0.7.0.v200906091110" url="features/org.eclipse.emf.mwe.ui_0.7.0.v200906091110.jar" patch="false">
-		<category name="EMFT MWE SDK (Incubation) 0.7.0RC4 S200906091110"/>
+	<feature id="org.eclipse.emf.mwe.ui" version="0.7.0.v200906160748" url="features/org.eclipse.emf.mwe.ui_0.7.0.v200906160748.jar" patch="false">
+		<category name="EMFT MWE SDK (Incubation) 0.7.0RC5 S200906160748"/>
 	</feature>
 
 	<!-- MINT 0.7.0RC5 S200806172223 -->
