@@ -10,8 +10,8 @@ $options = array (
 		"2.0.1=R2_0_maintenance,/opt/sun-java2-5.0",
 
 		"modeling.eclipse.org=------------,------------",
-		"2.0.0=HEAD,/opt/sun-java2-5.0",
-		"2.0.1=R2_0_maintenance,/opt/sun-java2-5.0",
+		"2.0.0=HEAD,/opt/sun-java2-6.0_64",
+		"2.0.1=R2_0_maintenance,/opt/sun-java2-6.0_64",
 		
 		"build.eclipse.org=------------,------------",
 		"2.0.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
