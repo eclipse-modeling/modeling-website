@@ -15,7 +15,7 @@ $options = array (
         
         "modeling.eclipse.org=------------,------------",
         "2.3.0=HEAD,/opt/sun-java2-5.0",
-        "2.2.x=R2_2_maintenance,/opt/sun-java2-5.0",
+        "2.2.x=R2_2_maintenance,/opt/sun-java2-6.0_64",
 	),
 
 	/* define a regular expression to be used to collect the most recent 
