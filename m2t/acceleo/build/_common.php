@@ -2,7 +2,7 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "R35_M5",
+	"BaseBuilderBranch" => "R35_M7",
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
@@ -15,6 +15,9 @@ $options = array (
 		"0.8.0=HEAD,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
+		"0.8.0=HEAD,/opt/sun-java2-5.0",
+		
+		"modeling.eclipse.org=------------,------------",
 		"0.8.0=HEAD,/opt/sun-java2-5.0",
 	),
 	
