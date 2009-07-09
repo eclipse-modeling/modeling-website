@@ -9,6 +9,11 @@ $options = array (
 		"1.1.1=HEAD,/opt/sun-java2-5.0",
 		"1.0.4=TENEO1_0_4,/opt/sun-java2-5.0",
 		"0.7.5=R0_7_maintenance,/opt/sun-java2-1.4",
+
+		"modeling.eclipse.org=------------,------------",
+		"1.1.1=HEAD,/opt/sun-java2-5.0",
+		"1.0.4=TENEO1_0_4,/opt/sun-java2-5.0",
+		"0.7.5=R0_7_maintenance,/opt/sun-java2-1.4",
 		
 		"build.eclipse.org=------------,------------",
 		"1.1.1=HEAD,/opt/public/common/ibm-java2-ppc-50",
