@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>qvtoml Builds</title>
   <link href="http://download.eclipse.org/modeling/m2m/feeds/builds-qvtoml.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-07-02T12:48:15Z</updated>
+  <updated>2009-07-12T20:55:38Z</updated>
   <author>
     <name>qvtoml Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2m/feeds/builds-qvtoml.xml</id>
+  <entry>
+    <title>[announce] qvtoml M200907071818 (2.0.1.M200907071818) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2m/downloads/?project=qvtoml&amp;showAll=1&amp;hlbuild=M200907071818#M200907071818"/>
+    <id>http://www.eclipse.org/modeling/m2m/downloads/?project=qvtoml&amp;showAll=1&amp;hlbuild=M200907071818#M200907071818</id>
+    <updated>2009-07-12T20:55:38Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_0_maintenance" datetime="200907071818" href="http://www.eclipse.org/modeling/m2m/downloads/?project=qvtoml&amp;showAll=1&amp;hlbuild=M200907071818#M200907071818" type="M" vanityname="M200907071818" version="2.0.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/qvtoml/downloads/drops/2.0.1/M200907071818/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2m/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2m/downloads/?project=qvtoml</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2m/news/relnotes.php?project=qvtoml&amp;version=M200907071818
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2m-qvtoml-SDK-M200907071818.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/qvtoml/downloads/drops/2.0.1/M200907071818/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/eclipse-SDK-3.5-linux-gtk-x86_64.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/R200906151043/emf-xsd-SDK-2.5.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.3.0/R200906151742/mdt-ocl-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/3.0.0/R200906151558/mdt-uml2-SDK-3.0.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] qvtoml I200907020802 (2.0.1.I200907020802) is available</title>
     <link href="http://www.eclipse.org/modeling/m2m/downloads/?project=qvtoml&amp;showAll=1&amp;hlbuild=I200907020802#I200907020802"/>
