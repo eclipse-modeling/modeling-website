@@ -6,10 +6,10 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
-		"0.7.0=HEAD,/opt/sun-java2-5.0",
+		"0.7.1=HEAD,/opt/sun-java2-5.0",
 		
 		"build.eclipse.org=------------,------------",
-		"0.7.0=HEAD,/opt/public/common/ibm-java2-ppc-50"
+		"0.7.1=HEAD,/opt/public/common/ibm-java2-ppc-50"
 	),
 	"regex" => "[SR]-3.5.*200.*/eclipse-SDK-.*-linux-gtk|[NMISR]200.*/emf-runtime-|[SR]200.*/orbit-R*",
 	
