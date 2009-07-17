@@ -12,13 +12,19 @@ $options = array (
 		"0.7.0=R0_7_maintenance,/opt/sun-java2-5.0",
 		
 		"emft.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/sun-java2-5.0",
-		
-		"build.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/sun-java2-5.0",
+		"0.8.0=R0_8_maintenance,/opt/sun-java2-5.0",
 		
 		"modeling.eclipse.org=------------,------------",
-		"0.8.0=HEAD,/opt/sun-java2-5.0",
+		"0.8.0=R0_8_maintenance,/opt/sun-java2-5.0",
+		
+		"emft.eclipse.org=------------,------------",
+		"0.9.0=HEAD,/opt/sun-java2-5.0",
+		
+		"build.eclipse.org=------------,------------",
+		"0.9.0=HEAD,/opt/sun-java2-5.0",
+		
+		"modeling.eclipse.org=------------,------------",
+		"0.9.0=HEAD,/opt/sun-java2-5.0",
 	),
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
