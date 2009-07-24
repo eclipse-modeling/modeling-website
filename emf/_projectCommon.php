@@ -38,6 +38,7 @@ $cvscoms = array(
 		"emf" => "org.eclipse.emf",
 
 		"cdo" => "org.eclipse.emf.cdo",
+		"compare" => "org.eclipse.emf.compare",
 		"query" => "org.eclipse.emf.query",
 		"transaction" => "org.eclipse.emf.transaction",
 		"emfqtv" => "org.eclipse.emf.emfqtv",
@@ -53,6 +54,7 @@ $projects = array(
 	"EMF (Core)" => "emf",
 
 	"CDO" => "cdo",
+	"Compare" => "compare",
 	"Model Query" => "query",
 	"Model Transaction" => "transaction",
 	"Net4j" => "net4j",
@@ -64,8 +66,8 @@ $projects = array(
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup =   array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "sdo"); //components without newsgroup
-$nomailinglist = array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "sdo"); //components without mailinglist
+$nonewsgroup =   array("query","transaction","validation","emfqtv", "net4j","teneo","cdo","compare", "sdo"); //components without newsgroup
+$nomailinglist = array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "compare", "sdo"); //components without mailinglist
 $incubating =    array(); // components which are incubating - EMF will never have incubating components -- see EMFT
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
