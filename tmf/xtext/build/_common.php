@@ -8,6 +8,9 @@ $options = array (
 		"emft.eclipse.org=------------,------------",
 		"0.7.1=HEAD,/opt/sun-java2-5.0",
 
+		"modeling.eclipse.org=------------,------------",
+        "0.7.1=HEAD,/opt/sun-java2-5.0",
+        
 		"build.eclipse.org=------------,------------",
 		"0.7.1=HEAD,/opt/public/common/ibm-java2-ppc-50",
 
