@@ -959,7 +959,7 @@ function findCatg($url) {
 		"18dltk-tests" => "dltk-core-Automated_Tests-",
 		"18dltk-mylyn" => "dltk-mylyn-",
 		"17teneo" => "emf-teneo-|emft-teneo-",
-		"16compare" => "emft-compare-",
+		"16compare" => "emf-compare-|emft-compare-",
 		"15uml2tools" => "mdt-uml2tools-",
 		"14ecoretools" => "emft-ecoretools-",
 		"13mwe" => "emft-mwe-",
