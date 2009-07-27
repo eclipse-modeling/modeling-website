@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.87 2009/07/27 15:59:49 nickb Exp $
+// $Id: scripts.php,v 1.88 2009/07/27 16:02:10 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -55,52 +55,16 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			"/build\.eclipse\.org/" => "/opt/public/modeling/build", 
 			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", 
 			"/(emft|modeling)(?:\.eclipse\.org)?/" => "/home/www-data/build", 
-			"/download1\.eclipse\.org/" => "/home/data/httpd/download.eclipse.org", # /home/local/data/httpd is now empty 
+			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org", 
 			"/fullmoon\.torolab\.ibm\.com/" => "/home/www");
 
-		foreach(array_keys($servers) as $z)
-		{
-			$PWD = $servers[$z] . "/technology/$PR/$suf";
-			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
-			{
-				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat1] -->");
-			}
-		}
-		foreach(array_keys($servers) as $z)
-		{
-			$PWD = $servers[$z] . "/technology/$suf";
-			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
-			{
-				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
-			}
-		}
-		foreach(array_keys($servers) as $z)
-		{
-			$PWD = $servers[$z] . "/tools/$PR/$suf";
-			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
-			{
-				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat3] -->");
-			}
-		}
-		foreach(array_keys($servers) as $z)
-		{
-			$PWD = $servers[$z] . "/tools/$suf";
-			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
-			{
-				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat4] -->");
-			}
-		}
 		foreach(array_keys($servers) as $z)
 		{
 			$PWD = $servers[$z] . "/$PR/$suf";
 			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
 				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat5] -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
 			}
 		}
 		foreach(array_keys($servers) as $z)
@@ -109,7 +73,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
 				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat6] -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
 			}
 		}
 	}
@@ -132,9 +96,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
 		),
-		// dir is empty, do not check
-		5 => array(
-				"checkdir" => "/home/data2/httpd/download.eclipse.org/",
+		5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/",
 				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
 				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
 				"/home/data2/httpd/download.eclipse.org/tools/$suf", 
@@ -146,16 +108,8 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
 		),
-		// dir is empty, do not check
-		6 => array(
-				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
-				"tries" => array(
-				$doDynCheck ? $App->getDownloadBasePath() . $suf : null, 
-				$doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, 
-				$doDynCheck ? $App->getDownloadBasePath() . "/tools/" . $suf : null, 
-				$doDynCheck ? $App->getDownloadBasePath() . "/tools/$PR/" . $suf : null, 
-				$doDynCheck ? $App->getDownloadBasePath() . "/technology/" . $suf : null, 
-				$doDynCheck ? $App->getDownloadBasePath() . "/technology/$PR/" . $suf : null, 
+		6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/",
+				"tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, 
 				"/home/local/data/httpd/download.eclipse.org/$suf", 
 				"/home/local/data/httpd/download.eclipse.org/$PR/$suf", 
 				"/home/local/data/httpd/download.eclipse.org/tools/$suf", 
