@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.86 2009/07/27 15:53:30 nickb Exp $
+// $Id: scripts.php,v 1.87 2009/07/27 15:59:49 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -133,7 +133,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/eclipse/$PR/$suf",)
 		),
 		// dir is empty, do not check
-		/*5 => array(
+		5 => array(
 				"checkdir" => "/home/data2/httpd/download.eclipse.org/",
 				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
 				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
@@ -169,7 +169,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/tools/$suf", 
 				"/home/www/technology/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
-		),*/
+		),
 		7 => array("checkdir" => "/var/www/",
 				"tries" => array("/var/www/$PR/$suf", 
 				"/var/www/html/$PR/$suf", 
