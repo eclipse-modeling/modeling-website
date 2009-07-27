@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.83 2009/07/27 15:36:34 nickb Exp $
+// $Id: scripts.php,v 1.84 2009/07/27 15:42:55 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -55,7 +55,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			"/build\.eclipse\.org/" => "/opt/public/modeling/build", 
 			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", 
 			"/(emft|modeling)(?:\.eclipse\.org)?/" => "/home/www-data/build", 
-			"/download1\.eclipse\.org/" => "/home/data/httpd/download.eclipse.org", // local/data/httpd is empty, use data/httpd 
+			"/download1\.eclipse\.org/" => "/home/data/httpd/download.eclipse.org", # /home/local/data/httpd is now empty 
 			"/fullmoon\.torolab\.ibm\.com/" => "/home/www");
 
 		foreach(array_keys($servers) as $z)
@@ -83,7 +83,8 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	if(PWD_check($PWD, $suf))
 	{
 		$data = array(
-		4 => array(
+		// dir is empty, do not check
+		/*4 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/", 
 				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", 
 				"/home/data/httpd/download.eclipse.org/$PR/$suf", 
@@ -96,24 +97,29 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
 		),
-		
-		// this checkdir is now empty, so it should not be used anymore
-		/*5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/",
+		// dir is empty, do not check
+		5 => array(
+				"checkdir" => "/home/data2/httpd/download.eclipse.org/",
 				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
 				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
 				"/home/data2/httpd/download.eclipse.org/tools/$suf", 
 				"/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", 
 				"/home/data2/httpd/download.eclipse.org/technology/$suf", 
 				"/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", 
-
+				
 				"/home/www/tools/$PR/$suf", 
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
 		),*/
-				
-		// this checkdir is now empty, so it should not be used anymore
-		/*6 => array("checkdir" => "/home/local/data/httpd/download.eclipse.org/",
-				"tries" => array($doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, 
+		6 => array(
+				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
+				"tries" => array(
+				$doDynCheck ? $App->getDownloadBasePath() . $suf : null, 
+				$doDynCheck ? $App->getDownloadBasePath() . "/$PR/" . $suf : null, 
+				$doDynCheck ? $App->getDownloadBasePath() . "/tools/" . $suf : null, 
+				$doDynCheck ? $App->getDownloadBasePath() . "/tools/$PR/" . $suf : null, 
+				$doDynCheck ? $App->getDownloadBasePath() . "/technology/" . $suf : null, 
+				$doDynCheck ? $App->getDownloadBasePath() . "/technology/$PR/" . $suf : null, 
 				"/home/local/data/httpd/download.eclipse.org/$suf", 
 				"/home/local/data/httpd/download.eclipse.org/$PR/$suf", 
 				"/home/local/data/httpd/download.eclipse.org/tools/$suf", 
@@ -127,7 +133,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/tools/$suf", 
 				"/home/www/technology/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
-		),*/
+		),
 		7 => array("checkdir" => "/var/www/",
 				"tries" => array("/var/www/$PR/$suf", 
 				"/var/www/html/$PR/$suf", 
