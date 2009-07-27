@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.85 2009/07/27 15:45:35 nickb Exp $
+// $Id: scripts.php,v 1.86 2009/07/27 15:53:30 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -60,11 +60,47 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 
 		foreach(array_keys($servers) as $z)
 		{
+			$PWD = $servers[$z] . "/technology/$PR/$suf";
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			{
+				$PWDs[] = $PWD;
+				PWD_debug($PWD, $suf, "<!-- Found[3stat1] -->");
+			}
+		}
+		foreach(array_keys($servers) as $z)
+		{
+			$PWD = $servers[$z] . "/technology/$suf";
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			{
+				$PWDs[] = $PWD;
+				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
+			}
+		}
+		foreach(array_keys($servers) as $z)
+		{
+			$PWD = $servers[$z] . "/tools/$PR/$suf";
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			{
+				$PWDs[] = $PWD;
+				PWD_debug($PWD, $suf, "<!-- Found[3stat3] -->");
+			}
+		}
+		foreach(array_keys($servers) as $z)
+		{
+			$PWD = $servers[$z] . "/tools/$suf";
+			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
+			{
+				$PWDs[] = $PWD;
+				PWD_debug($PWD, $suf, "<!-- Found[3stat4] -->");
+			}
+		}
+		foreach(array_keys($servers) as $z)
+		{
 			$PWD = $servers[$z] . "/$PR/$suf";
 			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
 				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat] -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat5] -->");
 			}
 		}
 		foreach(array_keys($servers) as $z)
@@ -73,7 +109,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			if(preg_match($z, $_SERVER["HTTP_HOST"]) && !PWD_check($PWD, $suf))
 			{
 				$PWDs[] = $PWD;
-				PWD_debug($PWD, $suf, "<!-- Found[3stat2] -->");
+				PWD_debug($PWD, $suf, "<!-- Found[3stat6] -->");
 			}
 		}
 	}
