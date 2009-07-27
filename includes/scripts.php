@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.80 2009/06/15 16:43:32 nickb Exp $
+// $Id: scripts.php,v 1.81 2009/07/27 15:27:51 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -83,7 +83,21 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	if(PWD_check($PWD, $suf))
 	{
 		$data = array(
-		4 => array(
+		// this checkdir is now empty, so it should not be used anymore
+		/*4 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/",
+				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
+				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
+				"/home/data2/httpd/download.eclipse.org/tools/$suf", 
+				"/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", 
+				"/home/data2/httpd/download.eclipse.org/technology/$suf", 
+				"/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", 
+
+				"/home/www/tools/$PR/$suf", 
+				"/home/www/technology/$PR/$suf", 
+				"/home/www/eclipse/$PR/$suf",)
+		),*/
+				
+		5 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/", 
 				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", 
 				"/home/data/httpd/download.eclipse.org/$PR/$suf", 
@@ -92,18 +106,6 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/data/httpd/download.eclipse.org/technology/$suf", 
 				"/home/data/httpd/download.eclipse.org/technology/$PR/$suf", 
 		
-				"/home/www/tools/$PR/$suf", 
-				"/home/www/technology/$PR/$suf", 
-				"/home/www/eclipse/$PR/$suf",)
-		),
-		5 => array("checkdir" => "/home/data2/httpd/download.eclipse.org/",
-				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
-				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
-				"/home/data2/httpd/download.eclipse.org/tools/$suf", 
-				"/home/data2/httpd/download.eclipse.org/tools/$PR/$suf", 
-				"/home/data2/httpd/download.eclipse.org/technology/$suf", 
-				"/home/data2/httpd/download.eclipse.org/technology/$PR/$suf", 
-				
 				"/home/www/tools/$PR/$suf", 
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
