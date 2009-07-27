@@ -19,15 +19,16 @@ print <<<EOHTML
 
 	<ul>
 		<li>
+			<div>July 27 2009</div>EMF Book: <a target="_out" href="http://www.informit.com/title/9780321331885">Eclipse Modeling Framework</a>, Second Edition<br/>
+			<a target="_out" href="http://wiki.eclipse.org/EMF_Book_Errata">Errata</a>
+		</li>
+
+		<li>
 			<div>July 03 2008</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html">The Eclipse Modeling Framework Overview</a>
 		</li>
 
 		<li>
-			<div>February 25 2008</div>EMF Book: <a target="_out" href="http://safari.informit.com/9780321331885">Eclipse Modeling Framework</a> (Overview and Developer's Guide), Second Edition (Rough Cut)
-		</li>
-
-		<li>
-			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a> (Overview and Developer's Guide), First Edition<br/>
+			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a>, First Edition<br/>
 			<a target="_out" href="http://www.awprofessional.com/content/images/0131425420/samplechapter/budinskych02.pdf">Chapter 2 Sample</a> (PDF)
 		</li>
 
@@ -111,16 +112,16 @@ print <<<EOHTML
 	<h3>Books, Guides, and References</h3>
 	<ul>
 		<li>
+			<div>July 27 2009</div>EMF Book: <a target="_out" href="http://www.informit.com/title/9780321331885">Eclipse Modeling Framework</a>, Second Edition<br/>
+			<a target="_out" href="http://wiki.eclipse.org/EMF_Book_Errata">Errata</a>
+		</li>
+
+		<li>
 			<div>January 27 2008</div><a href="http://refcardz.dzone.com/refcardz/essential-emf">Essential EMF, DZone Refcard</a>
 		</li>
 
 		<li>
-			<div>December 16 2008</div>EMF Book: <a target="_out" href="http://www.informit.com/store/product.aspx?isbn=9780321331885">Eclipse Modeling Framework</a>, 2nd Edition<br/>
-			<a target="_out" href="http://www.informit.com/store/product.aspx?isbn=9780321331885">Free online version with book purchase</a>
-		</li>
-
-		<li>
-			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a> (Overview and Developer's Guide)<br/>
+			<div>August 12 2004</div>EMF Book: <a target="_out" href="http://www.awprofessional.com/titles/0131425420">Eclipse Modeling Framework</a>, First Edition<br/>
 			<a target="_out" href="http://www.awprofessional.com/content/images/0131425420/samplechapter/budinskych02.pdf">Chapter 2 Sample</a> (PDF)
 		</li>
 
@@ -608,11 +609,12 @@ print <<<EOHTML
                 <h6>Buy The Book</h6>
 
                 <p align="center">
-                        <a href="http://www.informit.com/store/product.aspx?isbn=9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
+                        <a href="http://www.informit.com/title/9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
                 </p>
                 <ul>
-                <li><a href="http://www.informit.com/store/product.aspx?isbn=9780321331885">View Details &amp; Order</a>
+                <li><a href="http://www.informit.com/title/9780321331885">View Details &amp; Order</a>
                 <li><a href="/modeling/emf/images/book/EMF-2nd-Ed-Covers-Large.jpg">View Front &amp; Back Covers</a>
+                <li><a href="http://wiki.eclipse.org/EMF_Book_Errata">View &amp; Add Errata</a>
                 </ul>
         </div>
 
@@ -640,4 +642,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.25 2009/04/09 02:16:24 davidms Exp $ -->
+<!-- $Id: index.php,v 1.26 2009/07/27 18:47:42 davidms Exp $ -->

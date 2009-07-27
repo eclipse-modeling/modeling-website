@@ -43,11 +43,12 @@ ob_start();
 		<h6>Buy The Book</h6>
 		
 		<p align="center">
-			<a href="http://www.informit.com/store/product.aspx?isbn=9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
+			<a href="http://www.informit.com/title/9780321331885"><img src="/modeling/emf/images/book/EMF-2nd-Ed-Cover-Small.jpg"/></a>
 		</p>
 		<ul>
-		<li><a href="http://www.informit.com/store/product.aspx?isbn=9780321331885">View Details &amp; Order</a>
+		<li><a href="http://www.informit.com/title/9780321331885">View Details &amp; Order</a>
 		<li><a href="/modeling/emf/images/book/EMF-2nd-Ed-Covers-Large.jpg">View Front &amp; Back Covers</a>
+		<li><a href="http://wiki.eclipse.org/EMF_Book_Errata">View &amp; Add Errata</a>
 		</ul>
 	</div>
 
