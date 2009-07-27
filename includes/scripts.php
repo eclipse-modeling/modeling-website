@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.84 2009/07/27 15:42:55 nickb Exp $
+// $Id: scripts.php,v 1.85 2009/07/27 15:45:35 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -83,8 +83,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 	if(PWD_check($PWD, $suf))
 	{
 		$data = array(
-		// dir is empty, do not check
-		/*4 => array(
+		4 => array(
 				"checkdir" => "/home/data/httpd/download.eclipse.org/", 
 				"tries" => array("/home/data/httpd/download.eclipse.org/$suf", 
 				"/home/data/httpd/download.eclipse.org/$PR/$suf", 
@@ -98,7 +97,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/eclipse/$PR/$suf",)
 		),
 		// dir is empty, do not check
-		5 => array(
+		/*5 => array(
 				"checkdir" => "/home/data2/httpd/download.eclipse.org/",
 				"tries" => array("/home/data2/httpd/download.eclipse.org/$suf", 
 				"/home/data2/httpd/download.eclipse.org/$PR/$suf", 
@@ -110,7 +109,8 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/tools/$PR/$suf", 
 				"/home/www/technology/$PR/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
-		),*/
+		),
+		// dir is empty, do not check
 		6 => array(
 				"checkdir" => "/home/local/data/httpd/download.eclipse.org/",
 				"tries" => array(
@@ -133,7 +133,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 				"/home/www/tools/$suf", 
 				"/home/www/technology/$suf", 
 				"/home/www/eclipse/$PR/$suf",)
-		),
+		),*/
 		7 => array("checkdir" => "/var/www/",
 				"tries" => array("/var/www/$PR/$suf", 
 				"/var/www/html/$PR/$suf", 
