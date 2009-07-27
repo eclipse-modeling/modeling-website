@@ -1,6 +1,6 @@
 <?php
 
-// $Id: scripts.php,v 1.82 2009/07/27 15:34:23 nickb Exp $
+// $Id: scripts.php,v 1.83 2009/07/27 15:36:34 nickb Exp $
 
 function PWD_debug($PWD, $suf, $str)
 {
@@ -55,7 +55,7 @@ function getPWD($suf = "", $doDynCheck = true, $debug_echoPWD = 1) // set 0 to h
 			"/build\.eclipse\.org/" => "/opt/public/modeling/build", 
 			"/emf(?:\.torolab\.ibm\.com)?/" => "/home/www-data/build", 
 			"/(emft|modeling)(?:\.eclipse\.org)?/" => "/home/www-data/build", 
-			"/download1\.eclipse\.org/" => "/home/local/data/httpd/download.eclipse.org", 
+			"/download1\.eclipse\.org/" => "/home/data/httpd/download.eclipse.org", // local/data/httpd is empty, use data/httpd 
 			"/fullmoon\.torolab\.ibm\.com/" => "/home/www");
 
 		foreach(array_keys($servers) as $z)
