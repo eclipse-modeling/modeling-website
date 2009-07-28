@@ -14,11 +14,6 @@ $options = array (
 		"build.eclipse.org=------------,------------",
 		"0.7.1=HEAD,/opt/public/common/ibm-java2-ppc-50",
 
-		"emft.eclipse.org=------------,------------",
-		"0.7.0=HEAD,/opt/sun-java2-5.0",
-
-		"build.eclipse.org=------------,------------",
-		"0.7.0=HEAD,/opt/public/common/ibm-java2-ppc-50",
 	),
 
 	/* define a regular expression to be used to collect the most recent 
@@ -33,8 +28,8 @@ $options = array (
 	"EmailDefault" => "alle-ki@itemis.de", // prefil email contact box with comma-sep'd list: xtext-dev@eclipse.org
 	//the email above will be also used if cron autobuild fails
 	"Users" => array (
-		"dhubner",
-		"dhubner",
+		"nickb",
+		"nickb",
 		null
 	) /* build user, eclipse cvs user, IES cvs user */
 
