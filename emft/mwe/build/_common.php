@@ -21,7 +21,7 @@ $options = array (
 
 	"EmailDefault" => "alle-ki@itemis.de", // prefil email contact box with comma-sep'd list
 	
-	"Users" => array("dhubner","dhubner",null) /* build user, eclipse cvs user, IES cvs user */
+	"Users" => array("nickb","nickb",null) /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
