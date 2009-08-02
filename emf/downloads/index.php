@@ -117,6 +117,7 @@ $filePre = array(
 	"/emf" => array("emf-sdo-xsd", "emf-sdo", "emf", "sdo", "xsd"),
 	"/teneo" => array("emft-teneo","emf-teneo"),
 	"/cdo" => array("emft-cdo","emf-cdo"),
+	"/compare" => array("emft-compare","emf-compare"),
 	"/net4j" => array("emft-net4j","emf-net4j"),
 );
 /* alternate method for specifying prefixes - static list */
