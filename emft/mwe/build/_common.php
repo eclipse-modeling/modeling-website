@@ -5,6 +5,16 @@ $options = array (
 	"BaseBuilderBranch" => "R35_RC4",
 	
 	"BranchAndJDK" => array (
+	
+		"emft.eclipse.org=------------,------------",
+		"0.7.2=HEAD,/opt/sun-java2-5.0",
+		
+		"modeling.eclipse.org=------------,------------",
+        "0.7.2=HEAD,/opt/sun-java2-5.0",
+
+		"build.eclipse.org=------------,------------",
+		"0.7.2=HEAD,/opt/public/common/ibm-java2-ppc-50",
+		
 		"emft.eclipse.org=------------,------------",
 		"0.7.1=HEAD,/opt/sun-java2-5.0",
 		
