@@ -2,14 +2,10 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "R35_M5",
+	"BaseBuilderBranch" => "R35_RC4",
 
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
-        "2.3.0=HEAD,/opt/sun-java2-5.0",
-        "2.2.x=R2_2_maintenance,/opt/sun-java2-5.0",
-        
-		"emft.eclipse.org=------------,------------",
         "2.3.0=HEAD,/opt/sun-java2-5.0",
         "2.2.x=R2_2_maintenance,/opt/sun-java2-5.0",
         
@@ -35,7 +31,7 @@ $options = array (
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "richard.gronback@borland.com,anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list: can't send to gmf-releng@eclipse.org, so use actual recipients
+	"EmailDefault" => "anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list: can't send to gmf-releng@eclipse.org, so use actual recipients
 	"Users" => array("nickb","nickb",NULL), /* build user, eclipse cvs user, IES cvs user */
 );
 
