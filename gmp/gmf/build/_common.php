@@ -7,11 +7,11 @@ $options = array (
 	"BranchAndJDK" => array (
 		"emf.torolab.ibm.com=------------,------------",
         "2.3.0=HEAD,/opt/sun-java2-5.0",
-        "2.2.x=R2_2_maintenance,/opt/sun-java2-5.0",
+        "2.2.1=R2_2_maintenance,/opt/sun-java2-5.0",
         
         "modeling.eclipse.org=------------,------------",
         "2.3.0=HEAD,/opt/sun-java2-6.0_64",
-        "2.2.x=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "2.2.1=R2_2_maintenance,/opt/sun-java2-6.0_64",
 	),
 
 	/* define a regular expression to be used to collect the most recent 
