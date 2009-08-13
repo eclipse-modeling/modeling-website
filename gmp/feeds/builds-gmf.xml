@@ -4,11 +4,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>gmf Builds</title>
   <link href="http://download.eclipse.org/modeling/gmf/feeds/builds-gmf.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-06-22T16:39:46Z</updated>
+  <updated>2009-08-13T22:10:47Z</updated>
   <author>
     <name>gmf Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/gmf/feeds/builds-gmf.xml</id>
+  <entry>
+    <title>[announce] gmf 2.1.1RC1 (2.2.1.S200908131445) is available</title>
+    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200908131445#S200908131445"/>
+    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200908131445#S200908131445</id>
+    <updated>2009-08-13T22:10:47Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R2_2_maintenance" datetime="200908131445" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=S200908131445#S200908131445" type="S" vanityname="2.1.1RC1" version="2.2.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.1/S200908131445/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/gmf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=S200908131445
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-experimental-2.1.1RC1.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.1/S200908131445/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/eclipse-SDK-3.5-linux-gtk-x86_64.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/R200906151043/emf-xsd-SDK-2.5.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/query/downloads/drops/1.3.0/R200906221200/emf-query-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.3.0/R200906221200/emf-transaction-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/validation/downloads/drops/1.3.0/R200906221200/emf-validation-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/m2m/qvtoml/downloads/drops/2.0.0/R200906161204/m2m-qvtoml-SDK-2.0.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.3.0/R200906151742/mdt-ocl-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/3.0.0/R200906151558/mdt-uml2-SDK-3.0.0.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/gef/downloads/drops/3.5.1/M200907271257/GEF-SDK-M200907271257.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/R20090529135407/orbitBundles-R20090529135407.map</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/R200906151043/emf-xsd-SDK-2.5.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] gmf 2.2.0 (R200906220658) is available</title>
     <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=R200906220658#R200906220658"/>
