@@ -15,7 +15,7 @@ $options = array (
 		"0.8.0=R0_8_maintenance,/opt/sun-java2-5.0",
 		
 		"modeling.eclipse.org=------------,------------",
-		"0.8.0=R0_8_maintenance,/opt/sun-java2-5.0",
+		"0.8.1=R0_8_maintenance,/opt/sun-java2-5.0",
 		
 		"emft.eclipse.org=------------,------------",
 		"0.9.0=HEAD,/opt/sun-java2-5.0",
