@@ -51,4 +51,23 @@ M2T JET SDK (Incubation) 1.1.0M1 S200908201116: contains runtime, source, and do
 		<category name="M2T JET SDK (Incubation) 1.1.0M1 S200908201116"/>
 	</feature>
 
+	<!-- JET 1.0.1RC2 S200909010949 (Incubation) -->
+	<category-def label="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949" name="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949">
+		<description>
+M2T JET SDK (Incubation) 1.0.1RC2 S200909010949: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.sdk" version="1.0.1.v200908201022-4-2866DnIsTFMnLiLGDVHC" url="features/org.eclipse.jet.sdk_1.0.1.v200908201022-4-2866DnIsTFMnLiLGDVHC.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="1.0.1.v200908201022-2-07w311A19312133" url="features/org.eclipse.jet.doc_1.0.1.v200908201022-2-07w311A19312133.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="1.0.1.v200908201022-508aAkF77g7ZDB9PBB" url="features/org.eclipse.jet_1.0.1.v200908201022-508aAkF77g7ZDB9PBB.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="1.0.1.v200908201022" url="features/org.eclipse.jet.source_1.0.1.v200908201022.jar" patch="false">
+		<category name="M2T JET SDK (Incubation) 1.0.1RC2 S200909010949"/>
+	</feature>
+
 </site>
