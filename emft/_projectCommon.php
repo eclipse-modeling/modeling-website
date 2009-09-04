@@ -46,7 +46,8 @@ $cvscoms = array(
 		"temporality" => "org.eclipse.emf.temporality",
 		"mint" => "org.eclipse.emf.mint",
 		"emf4net" => "org.eclipse.emf.emf4net",
-		"emfatic" => "org.eclipse.emf.emfatic"
+		"emfatic" => "org.eclipse.emf.emfatic",
+		"eef" => "org.eclipse.emf.eef"
 		/* add more here */
 	)
 );
@@ -57,7 +58,7 @@ $projects = array(
 	"Mint" => "mint",
 	"Search" => "search",
 	"EMFatic" => "emfatic",
-	
+	"EEF" => "eef",
 	"Modeling Workflow" => "mwe",
 
 	// graduated
