@@ -4,11 +4,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>transaction Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-transaction.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-08-27T17:39:15Z</updated>
+  <updated>2009-09-09T20:59:07Z</updated>
   <author>
     <name>transaction Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-transaction.xml</id>
+  <entry>
+    <title>[announce] transaction 1.3.1RC3 (S200909091245) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200909091245#S200909091245"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200909091245#S200909091245</id>
+    <updated>2009-09-09T20:59:07Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="R1_3_maintenance" datetime="200909091245" href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200909091245#S200909091245" type="S" vanityname="1.3.1RC3" version="1.3.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.3.1/S200909091245/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=transaction</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=transaction&amp;version=S200909091245
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-transaction-SDK-1.3.1RC3.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.3.1/S200909091245/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/I20090825-1032/eclipse-SDK-I20090825-1032-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/query/downloads/drops/1.3.0/R200906221200/emf-query-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/validation/downloads/drops/1.3.0/R200906221200/emf-validation-SDK-1.3.0.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/1.3.0/R200906151742/mdt-ocl-SDK-1.3.0.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/R200906151043/emf-xsd-SDK-2.5.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] transaction 1.3.1RC2 (S200908271245) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S200908271245#S200908271245"/>
