@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>compare Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-compare.xml" rel="self" type="application/atom+xml"/>
-  <updated>2009-09-07T15:41:27Z</updated>
+  <updated>2009-09-09T12:40:03Z</updated>
   <author>
     <name>compare Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-compare.xml</id>
+  <entry>
+    <title>[announce] compare I200909090744 (1.0.1.I200909090744) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200909090744#I200909090744"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200909090744#I200909090744</id>
+    <updated>2009-09-09T12:40:03Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200909090744" href="http://www.eclipse.org/modeling/emf/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200909090744#I200909090744" type="I" vanityname="I200909090744" version="1.0.1">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/compare/downloads/drops/1.0.1/I200909090744/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=compare</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=compare&amp;version=I200909090744
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-compare-SDK-incubation-I200909090744.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/compare/downloads/drops/1.0.1/I200909090744/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.5.1RC3-200909031100/eclipse-SDK-3.5.1RC3-linux-gtk.tar.gz</dependency>
+          <dependency>http://eclipse.ialto.org/technology/subversive/0.7/builds/Subversive-incubation-0.7.8.I20090506-1500.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/emf/downloads/drops/2.5.0/R200906151043/emf-xsd-SDK-2.5.0.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] compare I200909071106 (1.0.1.I200909071106) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=compare&amp;showAll=1&amp;hlbuild=I200909071106#I200909071106"/>
