@@ -7,38 +7,20 @@
 			effective EMF software factory tool in June 2010.</html:p>
 	</introduction>
 	<release_deliverables>
-		<html:p>Every EGF deliverable is the EGF engine with a few basic
-			factories. Examples of factories are provided in the EGF wiki.
+		<html:p>An EGF deliverable contains the EGF engine and basic
+			factories. Examples of factories are provided in the <a href="http://wiki.eclipse.org/EGF">EGF wiki</a>.
 		</html:p>
 	</release_deliverables>
 	<release_milestones>
-		<milestone date="9/18/2009" milestone="">
-			<html:p>0.1.0 milestone</html:p>
-		</milestone>
-		<milestone date="11/14/2009" milestone="">
-			<html:p>0.2.0 milestone</html:p>
-		</milestone>
-		<milestone date="12/18/2009" milestone="">
-			<html:p>0.2.1 milestone</html:p>
-		</milestone>
-		<milestone date="1/29/2010" milestone="">
-			<html:p>January milestone</html:p>
-		</milestone>
-		<milestone date="2/26/2010" milestone="">
-			<html:p>February milestone</html:p>
-		</milestone>
-		<milestone date="3/31/2010" milestone="">
-			<html:p>March milestone</html:p>
-		</milestone>
-		<milestone date="4/30/2010" milestone="">
-			<html:p>April milestone</html:p>
-		</milestone>
-		<milestone date="5/31/2010" milestone="">
-			<html:p>May milestone</html:p>
-		</milestone>
-		<milestone date="6/30/2010" milestone="">
-			<html:p>June milestone</html:p>
-		</milestone>
+		<milestone date="09/18/2009" milestone="0.1.0 milestone"></milestone>
+		<milestone date="11/14/2009" milestone="0.2.0 milestone"></milestone>
+		<milestone date="12/18/2009" milestone="0.2.1 milestone"></milestone>
+		<milestone date="1/29/2010" milestone="January milestone"></milestone>
+		<milestone date="2/26/2010" milestone="February milestone"></milestone>
+		<milestone date="3/31/2010" milestone="March milestone"></milestone>
+		<milestone date="4/30/2010" milestone="April milestone"></milestone>
+		<milestone date="5/31/2010" milestone="May milestone"></milestone>
+		<milestone date="6/30/2010" milestone="June milestone"></milestone>
 		<postamble />
 	</release_milestones>
 	<target_environments>
@@ -61,12 +43,12 @@
 
 		<preamble>
 			<html:p>
-				The EGF project is divided into four kinds of activities: EGF Engine,
-				Generation Pattern, User Interfaces, and the EGF portfolios.
+				The EGF project is divided into three kinds of activities: EGF Engine,
+				EGF Pattern Engine, and the EGF portfolios.
      </html:p>
 		</preamble>
 
-		<theme name="EGF Engine">
+		<theme name="EGF Core Engine">
 			<description>
 				<html:p>
 					<html:ul>
@@ -79,7 +61,7 @@
 			<committed></committed>
 		</theme>
 
-		<theme name="Generation Pattern">
+		<theme name="EGF Pattern Engine">
 			<description>
 				<html:p>
 					<html:ul>
@@ -90,17 +72,9 @@
 			<committed></committed>
 		</theme>
 
-		<theme name="User Interface">
-			<description>
-				<html:p>Not planned yet
-				</html:p>
-			</description>
-			<committed></committed>
-		</theme>
-
 		<theme name="Portfolio">
 			<description>
-				<html:p>Not planned yet
+				<html:p>Not planned yet: Customization of the EMF generation
 				</html:p>
 			</description>
 			<committed></committed>
