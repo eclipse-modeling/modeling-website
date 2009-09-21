@@ -162,6 +162,26 @@ requirements document and associated Bugzilla entries are left to those wanting
 more detailed information on each.
       </html:div>
     </preamble>
+    <theme name="Compliance">
+      <description>
+        <html:div>
+          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/bpmn2/project-info/plan.xml&amp;component=BPMN2">BPMN2</html:a>
+        </html:div>
+      </description>
+      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
+      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
+      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=BPMN2&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+    </theme>
+    <theme name="">
+      <description>
+        <html:div>
+          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/mst/project-info/plan.xml&amp;component=MST">MST</html:a>
+        </html:div>
+      </description>
+      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
+      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
+      <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+    </theme>
     <theme name="Release Currency">
       <description>
         <html:div>
@@ -183,16 +203,6 @@ more detailed information on each.
       <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=UML2&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
     </theme>
     <theme name="TBD">
-      <description>
-        <html:div>
-          <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/mst/project-info/plan.xml&amp;component=MST">MST</html:a>
-        </html:div>
-      </description>
-      <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-  	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=MST&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
-    </theme>
-    <theme name="">
       <description>
         <html:div>
           <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/ocl/project-info/plan.xml&amp;component=OCL">OCL</html:a>
