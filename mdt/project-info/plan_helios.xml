@@ -36,9 +36,10 @@ The release deliverables have the same form as is found in most Eclipse projects
       <html:p>
         <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/ocl/project-info/plan.xml&amp;component=OCL">OCL</html:a>
         <html:ul>
+          <html:li>source code release, available as versions tagged "R1_4" in the project's CVS repository.</html:li>
           <html:li>source code release, available as versions tagged "R3_0" in the project's CVS repository.</html:li>
-          <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-          <html:li>runtime binary distribution (downloadable and update site).</html:li>
+          <html:li>SDKs (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+          <html:li>runtime binary distributions (downloadable and update site).</html:li>
           <html:li>tests (downloadable)</html:li>
         </html:ul>
       </html:p>
@@ -218,7 +219,7 @@ more detailed information on each.
         </html:div>
       </description>
       <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
+      <proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=1.4.0&amp;target_milestone=3.0.0&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
   	  <deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
     </theme>
     <theme name=" ">
