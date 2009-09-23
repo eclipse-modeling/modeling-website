@@ -53,7 +53,7 @@ The release deliverables have the same form as is found in most Eclipse projects
         </html:ul>
       </html:p>
       <html:p>
-        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan.xml&amp;component=UML2">UML2</html:a>
+        <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/mdt/uml2/project-info/plan_helios.xml&amp;component=UML2">UML2</html:a>
         <html:ul>
           <html:li>source code release, available as versions tagged "R3_1" in the project's CVS repository.</html:li>
           <html:li>SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
