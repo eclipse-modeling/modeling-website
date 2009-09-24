@@ -955,6 +955,7 @@ function findCatg($url) {
 		"20xpand" => "m2t-xpand-",
 		"19dtp" => "dtp-|dtp_",
 		"18dltk-core" => "dltk-core-sdk-",
+		"18dltk-index" => "dltk-core-index-sdk-",
 		"18dltk-rse" => "dltk-rse-",
 		"18dltk-tests" => "dltk-core-Automated_Tests-",
 		"18dltk-mylyn" => "dltk-mylyn-",
