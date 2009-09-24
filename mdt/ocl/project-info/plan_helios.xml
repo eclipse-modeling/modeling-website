@@ -28,6 +28,7 @@ These deviations appeared historically due to several reasons such as the incons
 OMG OCL 2.0 standard itself, wrong implementation assumptions and bugs. In Helios release the OCL team mostly
 focuses on the implementation of the OMG OCL 2.1 standard which is released as MDT OCL 3.0.0.</html:i>
 </html:p>
+<html:p>
 <html:i>
 A guide aimed to help users to migrate from MDT OCL 1.3/1.4 releases to MDT OCL 3.0.0 release
 will be provided.
@@ -126,7 +127,7 @@ appropriate offset.
 As described above, the MDT OCL 3.0.0 release is not backwards compatible with the MDT OCL 1.2 
 and 1.3 releases. For compatibility with the previous versions use MDT OCL 1.4.0.
 </html:p>
-</html:p>
+<html:p>
 <html:i>
 A guide aimed to help users to migrate from MDT OCL 1.3/1.4 releases to MDT OCL 3.0.0 release
 will be provided.
