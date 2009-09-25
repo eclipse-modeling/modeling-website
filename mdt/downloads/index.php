@@ -9,6 +9,8 @@ $extraZips = array(
 	"emf-xsd-Update",
 	"emf-sdo-xsd-Update",
 	"mdt-ocl-standalone",
+	"mdt-ocl-automated-tests", # deprecated Modeling build version
+	"mdt-ocl-Automated-Tests", # new Athena version
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
 	"emf-sdo-xsd-sourcedoc", # never existed
@@ -43,7 +45,8 @@ $dls = array(
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "automated-tests",
+			"Automated Tests" => "automated-tests",  # deprecated Modeling build 
+			"Automated Tests" => "Automated-Tests",  # new Athena build
 			"Stand-alone" => "standalone"
 		)
 	),
