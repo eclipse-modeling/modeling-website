@@ -151,7 +151,7 @@ HTML;
 	<div class="sideitem">
 		<h6>More Downloads</h6>
 		<ul>
-			<li><a href="http://www.eclipse.org/downloads/packages/">All Ganymede Packages</a></li>
+			<li><a href="http://www.eclipse.org/downloads/packages/">All Packages</a></li>
 			<li><a href="http://download.eclipse.org/eclipse/downloads/">Eclipse Platform Downloads</a></li>
 		</ul>
 	</div>
@@ -167,8 +167,8 @@ HTML;
 	<div class="sideitem">
 		<h6>More Info</h6>
 		<ul>
-			<li><a href="http://wiki.eclipse.org/Ganymede#Projects">Who's Who In Ganymede</a></li>
-			<li><a href="http://www.eclipse.org/downloads/packages/compare-packages">What's In The Ganymede Packages</a></li>
+			<li><a href="http://wiki.eclipse.org/Helios">Who's Who In Helios</a></li>
+			<li><a href="http://www.eclipse.org/downloads/packages/compare-packages">Compare Packages</a></li>
 			<li><a href="http://wiki.eclipse.org/Equinox_p2_Update_UI_Users_Guide">How To Update Eclipse</a></li>
 			<li><a href="http://wiki.eclipse.org/Modeling_Project/Installation">Previous Modeling Releases</a></li>
 			<li><a href="http://www.eclipse.org/projects/listofprojects.php">All Eclipse Projects</a></li>

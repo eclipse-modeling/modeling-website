@@ -124,9 +124,9 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://www.eclipse.org/modeling/amalgam">Modeling Amalgamation Project</a> (Amalgam) : provides improved packaging, integration, and usability of Modeling project components.</li>
 				<ul>
-					<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymedesr1">
+					<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr1">
 					<img alt="All-In-One Bundle including Eclipse and required dependencies" src="/modeling/images/dl-icon-aio-bundle.gif"/> 
-					<b style="color:green">All-In-One</b> Ganymede SR1 Modeling Tools Package</a> : an <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes most Modeling SDKs.</li>
+					<b style="color:green">All-In-One</b> Galileo SR1 Modeling Tools Package</a> : an <a href="http://www.eclipse.org/epp">Eclipse Packaging Project</a> that includes most Modeling SDKs.</li>
 				</ul>
 			</ul>
 		</div>
@@ -152,7 +152,10 @@ development technologies within the Eclipse community by providing a unified set
 			<ul>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Project">Modeling Project Wiki</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/Modeling_Corner">Modeling Corner</a></li>
-				<li><a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>, <a href="http://www.eclipse.org/callisto">Callisto</a> - see 'Models and Model Development Tools' category.</li>
+				<li>
+				<a href="http://wiki.eclipse.org/Helios">Helios</a>, <a href="http://wiki.eclipse.org/Galileo">Galileo</a>, 
+				<a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>, <a href="http://www.eclipse.org/callisto">Callisto</a> - 
+				see 'Models and Model Development Tools' category.</li>
 				<li><a href="http://www.eclipse.org/modeling/project-info/team.php">Who`s Who in Modeling?</a></li>
 			</ul>
 		</div>
@@ -162,9 +165,9 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="sideitem">
 			<h6>News</h6>
 			<ul>
-				<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/ganymedesr1">
+				<li><a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr1">
 				<img alt="All-In-One Bundle including Eclipse and required dependencies" src="/modeling/images/dl-icon-aio-bundle.gif"/> 
-				<b style="color:green">All-In-One</b> Ganymede SR1 Modeling Tools Package</a> is available</a>.</li>
+				<b style="color:green">All-In-One</b> Galileo SR1 Modeling Tools Package</a> is available</a>.</li>
 				<li>Domain Specific Modeling <a href="http://eclipsesummit.org/summiteurope2007/index.php?page=detail/&id=32">demo</a> viewlets from <a href="http://eclipsesummit.org/summiteurope2007/index.php">Eclipse Summit Europe 2007</a> are <a href="http://www.eclipse.org/modeling/presentations/ese2007/index.php">posted</a>.</li>
 			</ul>
 		</div>
