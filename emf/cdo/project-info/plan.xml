@@ -2,12 +2,12 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="CDO Model Repository">
-   <release projectid="modeling.emf.cdo" version="2.0"/>
+   <release projectid="modeling.emf.cdo" version="3.0"/>
    <introduction>
      <html:div>
 This document lays out the feature and API set for the
 second release of the CDO Model Repository
-Project (CDO), version 2.0. This project plan inherits from the Modeling
+Project (CDO), version 3.0. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
      </html:div>
@@ -31,61 +31,60 @@ Platform milestone releases by approximately 1 week; that is, until the
 final 3.5 release of the Platform, upon which CDO and other projects
 will release simultaneously. CDO will deliver its milestones within one week of
 the Eclipse Platform. It is anticipated that CDO will synchronize its
-milestones with the Galileo milestone schedule.
+milestones with the Helios milestone schedule.
          </html:div>
       </preamble>
-<milestone date="09/30/2008" milestone="M2"></milestone>
-<milestone date="11/05/2008" milestone="M3"></milestone>
-<milestone date="12/17/2008" milestone="M4"></milestone>
-<milestone date="02/03/2009" milestone="M5"></milestone>
-<milestone date="03/16/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
-<milestone date="05/04/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="05/18/2009" milestone="RC1"></milestone>
-<milestone date="05/25/2009" milestone="RC2"></milestone>
-<milestone date="06/01/2009" milestone="RC3"></milestone>
-<milestone date="06/08/2009" milestone="RC4"></milestone>
-<milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.0"></milestone>
+<milestone date="09/29/2009" milestone="M2"></milestone>
+<milestone date="11/10/2009" milestone="M3"></milestone>
+<milestone date="12/15/2009" milestone="M4"></milestone>
+<milestone date="02/02/2010" milestone="M5"></milestone>
+<milestone date="03/16/2010" milestone="M6"><html:div>API freeze</html:div></milestone>
+<milestone date="05/04/2010" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+<milestone date="05/18/2010" milestone="RC1"></milestone>
+<milestone date="05/25/2010" milestone="RC2"></milestone>
+<milestone date="06/01/2010" milestone="RC3"></milestone>
+<milestone date="06/08/2010" milestone="RC4"></milestone>
+<milestone date="06/15/2010" milestone="Final"></milestone>
       <postamble><html:div>
-CDO will produce maintenance releases to align with the Ganymede SR
-releases, that includes the Eclipse Platform 3.4.2 release.
+CDO will produce maintenance releases to align with the Galileo SR
+releases, that includes the Eclipse Platform 3.5.x release.
 CDO may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.  Maintenance releases will only be published
 if they have any new fixes to offer.
 <html:ul>
-  <html:li>Friday, October 3, 2008 - CDO 1.0.1 maintenance release (if necessary)</html:li>
-  <html:li>Friday, February 27, 2009 - CDO 1.0.2 maintenance release (Ganymede Service Release 2) (if necessary)</html:li>
-  <html:li>A list of issues indicated for the 1.0.x maintenance stream can be found in
+  <html:li>?, 2009 - CDO 2.0.1 maintenance release (if necessary)</html:li>
+  <html:li>Wednesday, February 17, 2010 - CDO 2.0.2 maintenance release (Galileo Service Release 2) (if necessary)</html:li>
+  <html:li>A list of issues indicated for the 2.0.x maintenance stream can be found in
       bugzilla, or by using links on maintenance stream build pages.</html:li>
-</html:ul> 
+</html:ul>
       </html:div></postamble>
    </release_milestones>
    <target_environments>
      <html:div>
 In order to remain current, each Eclipse release targets reasonably
-current versions of the underlying operating environments. The CDO Model Repository 
+current versions of the underlying operating environments. The CDO Model Repository
 Project (CDO) depends upon on the
 Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. CDO
 will target the same Java version as EMF Core, which currently requires
-Java 5. Eclipse Platform SDK 3.5 will be tested and validated on a
+Java 5. Eclipse Platform SDK 3.6 will be tested and validated on a
 number of reference platforms. CDO will be tested and validated
 against a subset of those listed for the platform.
      </html:div>
      <internationalization>
           <html:div>
-The CDO Model Repository is a runtime technology with most of the 
-components having no user interface. The remaining user interface 
-parts of CDO are considered exemplary and thus no attention has been 
+The CDO Model Repository is a runtime technology with most of the
+components having no user interface. The remaining user interface
+parts of CDO are considered exemplary and thus no attention has been
 paid to externalize them for internationalization.
           </html:div>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The 2.0 release of the CDO Model Repository will contain a large set of new
+The 3.0 release of the CDO Model Repository will contain a large set of new
 functionality and an enhanced API as driven by the community. Therefore CDO
 will not be binary compatible with previous releases. Careful attention
-has been paid to minimize the API related changes and the resulting impact 
+has been paid to minimize the API related changes and the resulting impact
 to existing applications based upon CDO.
        </html:div>
    </compatibility_with_previous_releases>
@@ -109,32 +108,32 @@ control over the behaviour and performance of their repositories and sessions.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=Helios&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-">
             </deferred>
         </theme>
         <theme name="Appealing to a Broader Community">
             <description>
                 <html:div>
 The CDO project has a proven record of robustness and flexibility.  However,
-in the past best results could only be achieved with EMF models specifically 
-generated for the usage with CDO. The upcoming 2.0 release will be less invasive
+in the past best results could only be achieved with EMF models specifically
+generated for the usage with CDO. The upcoming 3.0 release will be less invasive
 to the client models and applications by being better aligned with EMF and other standards.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=Helios&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Appealing+to+a+Broader+Community&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-">
             </deferred>
         </theme>
         <theme name="Lighter, Faster and Better">
@@ -146,25 +145,25 @@ Existing and new clients often desire more functionality from the framework
 while long established clients generally desire mostly improvements in performance.
 Often these two are at odds since additional extensibility often has a performance cost
 and any changes, even performance boosting ones, potentially impact reliability.
-Every effort will be made to introduce new capabilities 
+Every effort will be made to introduce new capabilities
 so that they have negligible impact on established clients
-based on the guiding principle: 
-if you don't use it, 
+based on the guiding principle:
+if you don't use it,
 you don't pay for it.
 Because service and support has and always will take priority over new development work,
 development commitments and schedules are subject to arbitrary change, slippage, or even deferral.
-Be sure to establish direct communication to ensure that any hard commitments 
+Be sure to establish direct communication to ensure that any hard commitments
 are seen as that by the development team itself!
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=2.0&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=Helios&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Lighter,+Faster+and+Better&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-">
             </deferred>
         </theme>
    </themes_and_priorities>
