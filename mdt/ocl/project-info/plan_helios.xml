@@ -76,7 +76,7 @@ be following the same schedule below.
 <milestone date="05/31/2010" milestone="RC3"></milestone>
 <milestone date="06/07/2010" milestone="RC4"></milestone>
 <milestone date="06/14/2010" milestone="RC5"></milestone>
-<milestone date="06/23/2010" milestone="1.4.0"></milestone>
+<milestone date="06/23/2010" milestone="Helios"></milestone>
       <postamble><html:div>
 MDT OCL may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.
@@ -155,13 +155,13 @@ of the MDT OCL implementation from the OCL 2.0 standard (and consequently, OCL 2
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=OCL+2.1&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=OCL+2.1&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=OCL+2.1&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-">
             </deferred>
         </theme>
         <theme name="Release Currency">
