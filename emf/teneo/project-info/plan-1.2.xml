@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
+      name="Teneo">
+   <release projectid="modeling.emf.teneo" version="1.2"/>
+   <introduction>
+     <html:div>
+This document lays out the planned features for the next major release
+of the model-driven Object Relational Mapping Framework Teneo, version 1.2. This project plan inherits from the Modeling
+Project Plan, which should be referenced when consulting this
+individual project plan.
+     </html:div>
+   </introduction>
+   <release_deliverables>
+     <html:div>
+The release deliverables have the same form as is found in most Eclipse projects, namely:
+<html:ul>
+<html:li>Teneo SDK (includes Mapping Providers for different ORM Tools, Examples, Documentation and Source).</html:li>
+<html:li>Teneo Examples (contains the Teneo examples models and tutorials.</html:li>
+<html:li>Teneo Tests (contains the testcases).</html:li>
+</html:ul>
+     </html:div>
+   </release_deliverables>
+    <release_milestones>
+        <preamble>
+            <p>
+            	Teneo will participate in Helios from the M3 Milestone. From then 
+                Teneo Milestones follow the Eclipse release milestones by an offset of 2 as set by the
+                <a href="htt//wiki.eclipse.org/Helios#Milestones_and_Release_Candidates">Helios release schedule.</a>.
+                Teneo will have weekly Maintenance releases to solve any issues reported in the previous week. 
+                Maintenance releases are only done if there are issues to solve. 
+            </p>
+            <p>Note: The following are preliminary dates subject to change.</p>
+        </preamble>
+        <milestone
+            date="11/06/2009"
+            milestone="M3">
+            <p>M3 milestone</p>
+        </milestone>
+                <milestone
+            date="12/11/2009"
+            milestone="M4">
+            <p>M4 milestone</p>
+        </milestone>
+		<milestone
+            date="1/29/2010"
+            milestone="M5">
+            <p>M5 milestone</p>
+        </milestone>
+        <milestone
+            date="3/12/2010"
+            milestone="M6">
+            <p>M6 milestone</p>
+        </milestone>
+        <milestone
+            date="4/30/2010"
+            milestone="M7">
+            <p>M7 milestone</p>
+        </milestone>
+        <milestone
+            date="5/14/2010"
+            milestone="RC1">
+            <p>RC1 milestone</p>
+        </milestone>
+        <milestone
+            date="5/21/2010"
+            milestone="RC2">
+            <p>RC2 milestone</p>
+
+        </milestone>
+        <milestone
+            date="5/28/2010"
+            milestone="RC3">
+            <p>RC3 milestone</p>
+        </milestone>
+        <milestone
+            date="6/04/2010"
+            milestone="RC4">
+            <p>RC4 milestone</p>
+        </milestone>
+        <milestone
+            date="6/11/2010"
+            milestone="Final Build">
+            <p>Final Build.</p>
+        </milestone>
+        <milestone
+            date="06/23/2010"
+            milestone="GA">
+            <p>GA</p>
+        </milestone>
+        <postamble />
+    </release_milestones>
+   <target_environments>
+     <html:div>
+In order to remain current, each Eclipse release targets reasonably
+current versions of the underlying operating environments. The Teneo 
+Project depends upon on the
+Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. Teneo
+will target the same Java version as EMF Core, which currently requires
+Java 5. Eclipse Platform SDK 3.5 will be tested and validated on a
+number of reference platforms. Teneo will be tested and validated
+against a subset of those listed for the platform.
+     </html:div>
+     <internationalization>
+          <html:div>
+Teneo is a runtime technology, most of the 
+components having no user interface. The remaining user interface 
+parts of Teneo are considered exemplary and thus no attention has been 
+paid to externalize them for internationalization.
+          </html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+Teneo will be 
+backward compatible for the ORM tools supported in previous releases. Mapping 
+stability/backward compatibility (generated the same mapping in new releases) 
+is in this respect far more important than
+binary compatibility.
+       </html:div>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+     <preamble>
+         <html:div>
+A list of project requirements and agreed upon
+implementation time frames is found in this document. For the
+milestones listed in this document, a set of overall themes is used
+to indicate what major set of functionalities is to be concentrated
+on for each. These themes are presented below, while the requirements
+document and associated Bugzilla entries are left to those wanting
+more detailed information on each.
+         </html:div>
+     </preamble>
+    <theme name="Improvements and Consolidation">
+      <description>
+        <html:div>
+			<p>In 1.5 Teneo will have a completely new mapping strategy <a href="http://www.elver.org/hibernate/eav_mapping.html">EAV</a>.</p> 
+			<p>Other improvements are mainly focused on further extending the support for Hibernate annotations.</p>
+        </html:div>
+      </description>
+            <committed
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_id=&amp;bugidtype=include&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;classification=Modeling&amp;component=Teneo&amp;email1=&amp;email2=&amp;emailtype1=substring&amp;emailtype2=substring&amp;field0-0-0=noop&amp;keywords=&amp;keywords_type=allwords&amp;longdesc=&amp;longdesc_type=allwordssubstr&amp;product=EMF&amp;query_format=advanced&amp;short_desc=Helios&amp;short_desc_type=allwordssubstr&amp;status_whiteboard=&amp;status_whiteboard_type=allwordssubstr&amp;type0-0-0=noop&amp;value0-0-0=&amp;version=1.2&amp;votes=&amp;title=Bug%20List">
+            </committed>
+    </theme>
+   </themes_and_priorities>
+</plan>
