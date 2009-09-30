@@ -3,7 +3,7 @@
 <plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
    <release projectid="modeling.gmf" version="2.3.0"/>
    <introduction>
-   		<html:p>This document lays out the feature and API set for the fourth release of the Eclipse Graphical Modeling Framework Project, version 2.2.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
+   		<html:p>This document lays out the feature and API set for the fourth release of the Eclipse Graphical Modeling Framework Project, version 2.3.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
    </introduction>
    <release_deliverables>
      <html:p>
@@ -45,8 +45,8 @@
    </release_milestones>
    <target_environments>
    		<html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.</html:p>
-   		<html:p>The Eclipse Graphical Modeling Framework (GMF) project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.5 release of the Eclipse Platform Project is written and compiled against version 1.4 of the Java Platform APIs, and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. GMF will target the same Java version as EMF, which currently requires Java 5.</html:p>
-		<html:p>Eclipse Platform SDK 3.5 will be tested and validated on a number of reference platforms. GMF will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.</html:p>
+   		<html:p>The Eclipse Graphical Modeling Framework (GMF) project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.6 release of the Eclipse Platform Project is written and compiled against version 1.4 of the Java Platform APIs, and targeted to run on version 1.4 of the Java Runtime Environment, Standard Edition. GMF will target the same Java version as EMF, which currently requires Java 5.</html:p>
+		<html:p>Eclipse Platform SDK 3.6 will be tested and validated on a number of reference platforms. GMF will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.</html:p>
      <internationalization>
      	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Graphical Modeling Framework project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
