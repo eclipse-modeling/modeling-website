@@ -116,7 +116,7 @@ $Nav->addCustomNav("Modeling Corner", "http://wiki.eclipse.org/Modeling_Corner",
 #   &order=changeddate%2Cbug_status%2Ctarget_milestone%2Cbug_id
 #   &query_based_on=
 $collist = "columnlist=changeddate%2Cbug_severity%2Cpriority%2Crep_platform%2Cbug_status%2Cproduct%2Ccomponent%2Cversion%2Ctarget_milestone%2short_desc";
-$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&$collist&product%3D" . $projectName . (isset ($bugcoms[$proj]) ? "&component=$bugcoms[$proj]" : "") . 
+$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&$collist&product=" . $projectName . (isset ($bugcoms[$proj]) ? "&component=$bugcoms[$proj]" : "") . 
 	"&query_format=advanced&order=bug_status%2Ctarget_milestone%2Cbug_id", "_self", 2);
 
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $projectName . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
