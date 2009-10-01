@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" name="Eclipse Model-to-text Project" 
+    xmlns="http://www.eclipse.org/project/plan" 
+    xmlns:html="http://www.w3.org/1999/xhtml">
+   <release projectid="modeling.m2t" version="Helios"/>
+   <introduction>
+     <html:div>
+     <html:p>
+     This plan covers the Eclipse Helios simultaneous release of components in the Model to Text (M2T) project of
+     the Eclipse Modeling top-level project. 
+     This project plan inherits from the Modeling Project Plan, which should be reference when consulting this plan.
+     This plan primarily serves as a pointer to individual component plans.
+     </html:p>
+     </html:div>
+   </introduction>
+   <release_deliverables>
+     <html:div>
+     <html:p>
+     The Helios release will include the following M2T components:
+     </html:p>
+     <html:ul>
+        <html:li>M2T Acceleo - <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/m2t/acceleo/project-info/plan.xml&amp;component=M2T+Acceleo">Plan</html:a></html:li>
+        <html:li>M2T JET  - <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/m2t/jet/plan-helios.xml&amp;component=M2T+JET">Plan</html:a></html:li>
+        <html:li>M2T Xpand  - <html:a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/modeling/m2t/xpand/projectplan/plan_helios.xml&amp;component=M2T+Xpand">Plan</html:a></html:li>
+     </html:ul>
+     </html:div>
+   </release_deliverables>
+   <release_milestones>
+      <preamble>
+         <html:div>
+         <html:p>
+         All project components follow the Helios schedule as defined by the <html:a href="http://www.google.com/calendar/embed?src=e7qn66hb96fvgbnlrkfng6n0r0%40group.calendar.google.com">Google Calendar</html:a>.
+         Milestones occ at roughly 6 week intervals, and follow the Eclipse Platform milestones by approximately 2 weeks.
+         </html:p>
+         </html:div>
+      </preamble>
+      <milestone date="10/1/2008" milestone="M2"><html:div></html:div></milestone>
+      <milestone date="11/12/2008" milestone="M3"><html:div></html:div></milestone>
+      <milestone date="12/29/2008" milestone="M4"><html:div></html:div></milestone>
+      <milestone date="02/06/2009" milestone="M5"><html:div></html:div></milestone>
+      <milestone date="03/18/2009" milestone="M6"><html:div>API Freeze</html:div></milestone>
+      <milestone date="05/06/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+      <milestone date="05/19/2009" milestone="RC1"><html:div></html:div></milestone>
+      <milestone date="05/26/2009" milestone="RC2"><html:div></html:div></milestone>
+      <milestone date="06/02/2009" milestone="RC3"><html:div></html:div></milestone>
+      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
+      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
+      <milestone date="06/16/2009" milestone="RC5"><html:div></html:div></milestone>
+      <milestone date="6/26/2009" milestone="1.0"/>
+   </release_milestones>
+   <target_environments>
+     <html:div>
+     <html:p>
+        In order to remain current, each Eclipse release targets reasonably
+        current versions of the underlying operating environments. The M2T JET
+        project depends upon on the Eclipse Platform and other projects,
+        which are mostly "pure" Java<html:sup>TM</html:sup>. The 3.6
+        release of the Eclipse Platform Project is written and compiled
+        against version 1.4 of the Java Platform APIs, and targeted to run on
+        version 1.4 of the Java Runtime Environment, Standard Edition and later. The M2T components
+        will target a subset of the Java version as the Eclipse Platform Project (typically, Java 5 or later). 
+        Eclipse Platform SDK 3.6 will be tested and validated on a
+        number of reference platforms. The M2T components will be tested and validated
+        against a subset of those listed for the platform.
+     </html:p>
+     </html:div>
+     <internationalization>
+          <html:div>
+          <html:p>
+See individual component plans for statements on internationalization.
+          </html:p>
+          </html:div>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+       <html:div>
+       <html:p>
+See individual component plans for statements on compatibility.
+       </html:p>
+       </html:div>
+   </compatibility_with_previous_releases>
+ </plan>
