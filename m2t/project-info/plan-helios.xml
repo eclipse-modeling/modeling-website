@@ -9,7 +9,7 @@
      <html:p>
      This plan covers the Eclipse Helios simultaneous release of components in the Model to Text (M2T) project of
      the Eclipse Modeling top-level project. 
-     This project plan inherits from the Modeling Project Plan, which should be reference when consulting this plan.
+     This project plan inherits from the <html:a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling">Modeling Project Plan</html:a>, which should be reference when consulting this plan.
      This plan primarily serves as a pointer to individual component plans.
      </html:p>
      </html:div>
@@ -35,19 +35,18 @@
          </html:p>
          </html:div>
       </preamble>
-      <milestone date="10/1/2008" milestone="M2"><html:div></html:div></milestone>
-      <milestone date="11/12/2008" milestone="M3"><html:div></html:div></milestone>
-      <milestone date="12/29/2008" milestone="M4"><html:div></html:div></milestone>
-      <milestone date="02/06/2009" milestone="M5"><html:div></html:div></milestone>
-      <milestone date="03/18/2009" milestone="M6"><html:div>API Freeze</html:div></milestone>
-      <milestone date="05/06/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-      <milestone date="05/19/2009" milestone="RC1"><html:div></html:div></milestone>
-      <milestone date="05/26/2009" milestone="RC2"><html:div></html:div></milestone>
-      <milestone date="06/02/2009" milestone="RC3"><html:div></html:div></milestone>
-      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
-      <milestone date="06/09/2009" milestone="RC4"><html:div></html:div></milestone>
-      <milestone date="06/16/2009" milestone="RC5"><html:div></html:div></milestone>
-      <milestone date="6/26/2009" milestone="1.0"/>
+      <milestone date="08/21/2009" milestone="M1"><html:div></html:div></milestone>
+      <milestone date="10/02/2009" milestone="M2"><html:div></html:div></milestone>
+      <milestone date="11/13/2009" milestone="M3"><html:div></html:div></milestone>
+      <milestone date="12/18/2009" milestone="M4"><html:div></html:div></milestone>
+      <milestone date="02/05/2010" milestone="M5"><html:div></html:div></milestone>
+      <milestone date="03/19/2010" milestone="M6"><html:div>API Freeze</html:div></milestone>
+      <milestone date="05/07/2010" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+      <milestone date="05/21/2010" milestone="RC1"><html:div></html:div></milestone>
+      <milestone date="05/28/2010" milestone="RC2"><html:div></html:div></milestone>
+      <milestone date="06/04/2010" milestone="RC3"><html:div></html:div></milestone>
+      <milestone date="06/11/2010" milestone="RC4"><html:div></html:div></milestone>
+      <milestone date="06/23/2010" milestone="Helios Release"/>
    </release_milestones>
    <target_environments>
      <html:div>
