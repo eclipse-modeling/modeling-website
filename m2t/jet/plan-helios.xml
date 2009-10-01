@@ -2,9 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" name="Eclipse Model-to-text (M2T) JET Component" 
     xmlns="http://www.eclipse.org/project/plan" 
-    xmlns:html="http://www.w3.org/1999/xhtml" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://www.eclipse.org/project/plan http://www.eclipse.org/projects/plan.xsd ">
+    xmlns:html="http://www.w3.org/1999/xhtml">
    <release projectid="modeling.m2t.jet" version="1.1"/>
    <introduction>
      <html:div>
@@ -38,7 +36,7 @@
       <preamble>
          <html:div>
          <html:p>
-         The project will follow the Helios +1 schedule as defined by the <html:a href="http://www.google.com/calendar/embed?src=gchs7nm4nvpm837469ddj9tjlk%40group.calendar.google.com&ctz=America/New_York">Google Calendar</html:a>.
+         The project will follow the Helios +1 schedule as defined by the <html:a href="http://www.google.com/calendar/embed?src=gchs7nm4nvpm837469ddj9tjlk%40group.calendar.google.com&amp;ctz=America/New_York">Google Calendar</html:a>.
          Milestones occur at roughly 6 week intervals, and follow the Eclipse Platform milestones by approximately 1 week.
          </html:p>
          </html:div>
