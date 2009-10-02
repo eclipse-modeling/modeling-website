@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
+<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="QVT Operational">
    <release projectid="modeling.m2m.qvtoml" version="3.0.0"/>
    <introduction>
    		<html:p>This document lays out the feature and API set for the next major release of the QVT Operational component, version 3.0.0.  This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
