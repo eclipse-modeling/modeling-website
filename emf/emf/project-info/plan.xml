@@ -2,11 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="EMF Core">
-   <release projectid="modeling.emf" version="2.5.0"/>
+   <release projectid="modeling.emf" version="2.6.0"/>
    <introduction>
      <div xmlns="http://www.w3.org/1999/xhtml">
 This document lays out the feature and API set for the
-2.5.0 release of the Eclipse Modeling Framework Core (EMF Core) project.
+2.6.0 release of the Eclipse Modeling Framework Core (EMF Core) project.
 This project plan inherits from the <a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.emf">Eclipse Modeling Framework Project Plan</a>,
 which should be referenced when consulting this individual project plan.
      </div>
@@ -17,7 +17,7 @@ The release deliverables have the same form as is found in most Eclipse projects
        <ul>
          <li>
 EMF Core source code release, 
-available as versions tagged with "R2_5" in the project's CVS repository.
+available as versions tagged with "R2_6" in the project's CVS repository.
          </li>
          <li>
 EMF Core SDK,
@@ -39,13 +39,13 @@ available as a download.
       <preamble>
          <div xmlns="http://www.w3.org/1999/xhtml">
 Release milestones occur at roughly 6 week intervals 
-and follow the Platform release milestone by the Galileo-established +1 delta interval,
+and follow the Platform release milestone by the Helios-established +1 delta interval,
 though all effort will be made to reduce this to +1 business day
 regardless of the size of the established +1 delta interval..
-The final EMF Core 2.5 release will available simultaneously 
-with the 3.5 release of the Platform and all the other Galileo projects.
+The final EMF Core 2.6 release will available simultaneously 
+with the 3.5 release of the Platform and all the other Helios projects.
 It is anticipated that EMF Core will synchronize its milestones 
-with any changes to the Galileo milestone schedule.
+with any changes to the Helios milestone schedule.
          </div>
       </preamble>
 <milestone date="08/13/2008" milestone="M1"></milestone>
@@ -60,22 +60,19 @@ with any changes to the Galileo milestone schedule.
 <milestone date="06/01/2009" milestone="RC3"></milestone>
 <milestone date="06/08/2009" milestone="RC4"></milestone>
 <milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.5.0"></milestone>
+<milestone date="06/28/2009" milestone="2.6.0"></milestone>
       <postamble>
         <div xmlns="http://www.w3.org/1999/xhtml">
-EMF Core will produce maintenance releases to align with the Ganymede Service Releases
-which includes the Eclipse Platform's 3.4.1 and 3.4.2 releases.
+EMF Core will produce maintenance releases to align with the Galileo Service Releases as needed
+which includes the Eclipse Platform's 3.5.1 and 3.5.2 releases.
 EMF Core may produce additional interim maintenance releases.  
 Maintenance releases will only be published if they contain new fixes.
           <ul>
             <li>
-Monday, August 25, 2008 - EMF Core 2.4.1 maintenance release
+Friday, September 26, 2008 - EMF Core 2.5.1 maintenance release for Galileo Service Release 1.
             </li>
             <li>
-Friday, September 26, 2008 - EMF Core 2.4.1 maintenance release for Ganymede Service Release 1.
-            </li>
-            <li>
-Friday, February 27, 2009 - EMF Core 2.4.2 maintenance release for Ganymede Service Release 2.
+Friday, February 27, 2009 - EMF Core 2.5.2 maintenance release for Galileo Service Release 2.
             </li>
             <li>
 Version numbers are subject to change should there be be any additional maintenance releases.
@@ -119,13 +116,13 @@ The download page will provide the details as the become available.
    </target_environments>
    <compatibility_with_previous_releases>
        <div xmlns="http://www.w3.org/1999/xhtml">
-Compatibility of Release 2.4: 
+Compatibility of Release 2.6: 
 The EMF Core project will be developed in parallel, 
 and released simultaneously, 
 with the following project: 
          <ul>
            <li>
-Eclipse Platform SDK version 3.5
+Eclipse Platform SDK version 3.6
            </li>
         </ul>
 Each milestone version of the EMF Core project 
@@ -169,7 +166,7 @@ are seen as that by the development team itself!
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=2.5&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;target_milestone=2.6&amp;target_milestone=---&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=galileo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=galileo-">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;product=EMF&amp;component=Core&amp;component=Doc&amp;component=Edit&amp;component=Mapping&amp;component=Tools&amp;component=XML/XMI&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">
