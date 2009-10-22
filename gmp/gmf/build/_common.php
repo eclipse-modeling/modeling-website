@@ -5,14 +5,10 @@ $options = array (
 	"BaseBuilderBranch" => "R35_RC4",
 
 	"BranchAndJDK" => array (
-		"emf.torolab.ibm.com=------------,------------",
-        "2.3.0=HEAD,/opt/sun-java2-5.0",
-        "2.2.1=R2_2_maintenance,/opt/sun-java2-5.0",
-        
         "modeling.eclipse.org=------------,------------",
         "2.3.0=HEAD,/opt/sun-java2-6.0_64",
         "2.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
-        "2.2.1=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "2.2.2=R2_2_maintenance,/opt/sun-java2-6.0_64",
 	),
 
 	/* define a regular expression to be used to collect the most recent 
