@@ -49,12 +49,12 @@
    <target_environments>
      <html:div>
      The acceleo project depends upon on the Platform and other projects, which are mostly "pure" Java.
-     acceleo will be available on Eclipse Ganymede, Galileo, and Helios. 
+     Acceleo will be available on Eclipse Ganymede, Galileo, and Helios. 
      EMF is used by the Acceleo execution engine for accessing the models. 
      The MDT-OCL component is reused to edit, parse, and interpret OCL as a sub-language of Acceleo. 
      acceleo will target the same Java version as EMF, which currently requires Java 5.
      Eclipse Platform SDK 3.6 will be tested and validated on a number of reference platforms. 
-     acceleo will be tested and validated against a subset of those listed for the platform. 
+     Acceleo will be tested and validated against a subset of those listed for the platform. 
      </html:div>
           <internationalization>
           <html:div>
