@@ -66,7 +66,7 @@ $projects = array(
 	"Validation Framework" => "validation",
 );
 
-$extraprojects = array("QTV All-In-One" => "emfqtv", "Model Query 2" => "query2"); //components with only downloads, no info yet, "prettyname" => "directory"
+$extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup =   array("query","query2","transaction","validation","emfqtv", "net4j","teneo","cdo","compare", "sdo"); //components without newsgroup
 $nomailinglist = array("query","query2","transaction","validation","emfqtv", "net4j","teneo","cdo", "compare", "sdo"); //components without mailinglist
