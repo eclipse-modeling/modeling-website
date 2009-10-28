@@ -60,6 +60,13 @@ $dls = array(
 			"Automated Tests" => "automated-tests"
 		)
 	),*/
+	"/query2" => array(
+		"Model Query 2 (Incubating)" => array( # same as value in _projectCommon.php's $projects array
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"SDK (Runtime, Source)" => "SDK",
+			"Automated Tests (Hibernate and EclipseLink)" => "Automated-Tests"
+		)
+	),
 	"/teneo" => array(
 		"Teneo Hibernate" => array( # same as value in _projectCommon.php's $projects array
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
