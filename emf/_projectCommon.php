@@ -40,6 +40,7 @@ $cvscoms = array(
 		"cdo" => "org.eclipse.emf.cdo",
 		"compare" => "org.eclipse.emf.compare",
 		"query" => "org.eclipse.emf.query",
+		"query2" => "org.eclipse.emf.query",
 		"transaction" => "org.eclipse.emf.transaction",
 		"emfqtv" => "org.eclipse.emf.emfqtv",
 		"net4j" => "org.eclipse.emf.net4j",
@@ -56,6 +57,7 @@ $projects = array(
 	"CDO" => "cdo",
 	"Compare" => "compare",
 	"Model Query" => "query",
+	"Model Query 2" => "query2",
 	"Model Transaction" => "transaction",
 	"Net4j" => "net4j",
 	"QTV All-In-One" => "emfqtv",
@@ -64,11 +66,11 @@ $projects = array(
 	"Validation Framework" => "validation",
 );
 
-$extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
+$extraprojects = array("QTV All-In-One" => "emfqtv", "Model Query 2" => "query2"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup =   array("query","transaction","validation","emfqtv", "net4j","teneo","cdo","compare", "sdo"); //components without newsgroup
-$nomailinglist = array("query","transaction","validation","emfqtv", "net4j","teneo","cdo", "compare", "sdo"); //components without mailinglist
-$incubating =    array(); // components which are incubating - EMF will never have incubating components -- see EMFT
+$nonewsgroup =   array("query","query2","transaction","validation","emfqtv", "net4j","teneo","cdo","compare", "sdo"); //components without newsgroup
+$nomailinglist = array("query","query2","transaction","validation","emfqtv", "net4j","teneo","cdo", "compare", "sdo"); //components without mailinglist
+$incubating =    array("query2"); // components which are incubating - EMF will never have incubating components -- see EMFT
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
