@@ -14,9 +14,9 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Henshin";
-	$pageKeywords	= "Type, page, keywords, here";
-	$pageAuthor		= "Type your name here";
+	$pageTitle 		= "EMF Henshin";
+	$pageKeywords	= "EMF, Henshin, model transformation";
+	$pageAuthor		= "Christian Krause";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
