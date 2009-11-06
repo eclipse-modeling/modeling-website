@@ -17,7 +17,6 @@
 	$pageTitle 		= "EMF Henshin - Downloads";
 	$pageKeywords	= "EMF, Henshin, model transformation, Downloads";
 	$pageAuthor		= "Christian Krause";
-	$theme          = "Nova";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
