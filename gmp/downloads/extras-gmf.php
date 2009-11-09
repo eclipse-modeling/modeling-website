@@ -1,9 +1,9 @@
 <?php
 
 $oldrels = array(
-	"2.1.2" => "200809171625",
-	"2.1.1" => "200808151718",
-	"2.1.0" => "200806121402",
+	"2.1.2" => array("2008/09/17 16:25","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.2/200809171625")
+	"2.1.1" => array("2008/08/15 17:18","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.1/200808151718"),
+	"2.1.0" => array("2008/06/12 14:02","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.0/200806121402"),
 	"2.0.2" => array("2008/02/25 02:00","http://archive.eclipse.org/modeling/gmf/downloads/drops/R-2.0.2-200802250200"),
 	"2.0.1" => array("2007/09/28 00:00","http://archive.eclipse.org/modeling/gmf/downloads/drops/R-2.0.1-200709280000"),
 	"2.0.0" => array("2007/06/21 00:00","http://archive.eclipse.org/modeling/gmf/downloads/drops/R-2.0-200706210000"),
