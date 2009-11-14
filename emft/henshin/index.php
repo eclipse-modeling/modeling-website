@@ -34,10 +34,10 @@
 
     <div id="midcolumn">
 	<h1>$pageTitle</h1>
-	<img style="float:right" src="henshzin_small.png" alt="EMF Henshin Logo"/>
+	<img style="float:right" src="henshin_small.png" alt=""/>
 	
 	<p>
-	Henshin is an in-place model transformation language for the 
+	Henshin is an in-place model transformation language for the
 	<a href="http://www.eclipse.org/modeling/emf">Eclipse Modeling Framework (EMF)</a>.
 	It supports direct transformations of EMF model instances (endogenous transformations), 
 	as well as generating instances of a target language 
