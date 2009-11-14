@@ -34,7 +34,7 @@
 
     <div id="midcolumn">
 	<h1>$pageTitle</h1>
-	<img style="float:right" src="henshin_small.png" alt=""/>
+	<img style="float:right" src="henshin_small.png" alt="" style="border-width:0px"/>
 	
 	<p>
 	Henshin is an in-place model transformation language for the
