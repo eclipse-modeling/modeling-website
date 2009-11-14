@@ -32,94 +32,99 @@
 
 <div id="maincontent">
 
-	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+    <div id="midcolumn">
+	<h1>$pageTitle</h1>
+	<img style="float:right" src="henshzin_small.png" alt="EMF Henshin Logo"/>
+	
+	<p>
+	Henshin is an in-place model transformation language for the 
+	<a href="http://www.eclipse.org/modeling/emf">Eclipse Modeling Framework (EMF)</a>.
+	It supports direct transformations of EMF model instances (endogenous transformations), 
+	as well as generating instances of a target language 
+	from given instances of a source language (exogenous transformations). 
+	The main features are:
+	<ul>
+	<li>Support for endogenous as well as exogenous transformations</li>
+	<li>Natural treatment and efficient in-place execution of endogenous transformations</li>
+	<li>Graphical syntax</li>
+	<li>Support for static analysis of transformations</li>
+	</ul>
+	</p>
 		
-		<p>
-		Henshin is an in-place model transformation language for the <a href="http://www.eclipse.org/modeling/emf">Eclipse Modeling Framework (EMF)</a>.
-		It supports direct transformations of EMF model instances (endogenous transformations), as well as generating instances of a target language 
-		from given instances of a source language (exogenous transformations). 
-		The main features are:
-			<ul>
-				<li>Support for endogenous as well as exogenous transformations</li>
-				<li>Natural treatment and efficient in-place execution of endogenous transformations</li>
-				<li>Graphical syntax</li>
-				<li>Support for static analysis of transformations</li>
-			</ul>
-		</p>
-		
-		<p>
-		<i>More information here soon...</i>
-		</p>
+	<p>
+	<i>More information here soon...</i>
+	</p>
 
-		<!--
+	<!--
 		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h3>This is a wide column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<hr class="clearer" />
-		<p>Some free text</p>
-		<ul class="midlist">
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
+	<div class="homeitem">
+		<h3>Narrow column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 		</ul>
-		<ol>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-		</ol>
+	</div>
 		
-		-->
+	<div class="homeitem">
+		<h3>Narrow column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		</ul>
+	</div>
+	
+	<div class="homeitem3col">
+		<h3>This is a wide column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		</ul>
+	</div>
+	
+	<hr class="clearer" />
+	<p>Some free text</p>
+	<ul class="midlist">
+	<li>list of items in free text</li>
+	<li>list of items in free text</li>
+	<li>list of items in free text</li>
+	</ul>
+	<ol>
+	<li>Ordered list</li>
+	<li>Ordered list</li>
+	<li>Ordered list</li>
+	</ol>
+		
+	-->
 		
 	</div>
 	
 	<!--	
 	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>Related links</h6>
-			<ul>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-			</ul>
+	<div class="sideitem">
+
+		<h6>Related links</h6>
+		<ul>
+		<li><a href="#">Link</a> - descriptive text</li>
+		<li><a href="#">Link</a> - descriptive text</li>
+		</ul>
 		</div>
+
 		<div class="sideitem">
-			<h6>Related links</h6>
-			<ul>
-				<li><a href="#">Link</a> - descriptive text</li>
-				<li><a href="#">Link</a> - descriptive text</li>
-			</ul>
+		<h6>Related links</h6>
+		<ul>
+		<li><a href="#">Link</a> - descriptive text</li>
+		<li><a href="#">Link</a> - descriptive text</li>
+		</ul>
 		</div>
 	</div>
 	-->
 	
 </div>
 
-
 EOHTML;
-
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
