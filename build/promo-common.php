@@ -178,14 +178,14 @@ if (!isset ($_POST["process"]) || !$_POST["process"] == "build")
 				<td>
 				<p><input type="checkbox" name="build_Update_Coordinated_Update_Site" value="Yes"> Contribute to
 				<small><select style="font-size:9px" name="build_Coordinated_Site_Name" size="1">
-					<?php displayOptions(array("galileo", "ganymede"), false, 0); ?>
+					<?php displayOptions(array("helios", "galileo"), false, 0); ?>
 				</select></small> update site?</p>
 				</td>
 				<td width="300"><small><a id="divToggle_coordinated" name="divToggle_coordinated" href="javascript:toggleDetails('coordinated')">[+]</a></small>
 					<div id="divDetail_coordinated" name="divDetail_coordinated" style="display:none;border:0">
 					<small>
 					This will create all the required coordinated update site contributions for your component. You need to be a member of the <i>callisto-dev</i> group in order to update your file in CVS. If you're not, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=212325">bug 212325</a>.
-					See also <a href="http://wiki.eclipse.org/Galileo">Galileo</a>, <a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>.
+					See also <a href="http://wiki.eclipse.org/Helios">Helios</a>, <a href="http://wiki.eclipse.org/Galileo">Galileo</a><!--, <a href="http://wiki.eclipse.org/Ganymede">Ganymede</a>, <a href="http://wiki.eclipse.org/Europa">Europa</a>-->.
 					</small>
 					</div>
 				</td>
