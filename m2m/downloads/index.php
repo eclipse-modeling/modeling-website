@@ -33,7 +33,6 @@ $dls = array(
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "automated-tests", # deprecated Modeling build version
 			"Automated-Tests" => "Automated-Tests" # new Athena version
 		)
 	),
