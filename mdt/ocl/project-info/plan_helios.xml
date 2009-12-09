@@ -8,29 +8,20 @@
 <html:p>
 This document lays out the feature and API set for the
 fifth release of the Eclipse Object Constraint Language (MDT OCL)
-Project, versions 3.0.0 and 1.4.0.
+Project, versions 3.0.0.
 </html:p>
 <html:p>
 <html:i><html:b>Note</html:b> that, since the 
 <html:a href="http://www.omg.org/cgi-bin/doc?ptc/09-05-02.pdf">OMG OCL 2.1</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
 <html:b>MDT OCL 3.0.0</html:b> release is best endeavours to establish a coherent interpretation
-of the OMG OCL 2.1 standard. MDT OCL 3.0.0 is not intended to be backwards
-compatible with MDT OCL 1.3.0 (Galileo release). The major part of bug fixes and feature development 
-is done in MDT OCL 3.0.0</html:i>
+of the OMG OCL 2.1 and to prototype resolutions for the OMG OCL 2.3 standards.</html:i>
 </html:p>
 <html:p>
-<html:i><html:b>Note</html:b> that, <html:b>MDT OCL 1.4.0</html:b> is an implementation of OCL 
-which is fully backwards compatible with MDT OCL 1.3.0 (Galileo release). Since this release inherits the
-behaviour of MDT OCL 1.3.0, it can be considered an implementation of the 
-<html:a href="http://www.omg.org/spec/OCL/2.0/">OMG OCL 2.0</html:a> standard with some deviations.
-These deviations appeared historically due to several reasons such as the inconsistency of the
-OMG OCL 2.0 standard itself, wrong implementation assumptions and bugs. In Helios release the OCL team mostly
-focuses on the implementation of the OMG OCL 2.1 standard which is released as MDT OCL 3.0.0.</html:i>
 </html:p>
 <html:p>
 <html:i>
-A guide aimed to help users to migrate from MDT OCL 1.3/1.4 releases to MDT OCL 3.0.0 release
+A guide aimed to help users to migrate from MDT OCL 1.3.0 releases to MDT OCL 3.0.0 release
 will be provided.
 </html:i>
 </html:p>
@@ -38,7 +29,7 @@ will be provided.
    </introduction>
    <release_deliverables>
      <html:div>
-The release deliverables for each of the MDT OCL releases (1.4 and 3.0) have the same form as 
+The release deliverables for the MDT OCL 3.0 release has the same form as 
 is found in most Eclipse projects, namely:
 <html:ul>
 <html:li>MDT OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
@@ -48,7 +39,6 @@ is found in most Eclipse projects, namely:
 <html:li>MDT OCL examples (downloadable)</html:li>
 </html:ul>
 MDT OCL 3.0.0 source code will be available as versions tagged "R3_0" in the project's CVS repository.
-MDT OCL 1.4.0 source code will be available as versions tagged "R1_4" in the project's CVS repository.
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -60,7 +50,7 @@ final 3.6 release of the Platform, upon which MDT OCL and other projects
 will release simultaneously. As MDT OCL is a dependency of numerous
 other projects, MDT OCL will deliver its milestones within one week of
 the Eclipse Platform. It is anticipated that MDT OCL will synchronize its
-milestones with the Galileo milestone schedule. MDT OCL 1.4.0 and 3.0.0 will
+milestones with the Galileo milestone schedule. MDT OCL 3.0.0 will
 be following the same schedule below.
          </html:div>
       </preamble>
@@ -112,24 +102,21 @@ the time frame for availability.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The MDT OCL 1.4 and 3.0 projects
+The MDT OCL 3.0 project
 will be developed in parallel, and released simultaneously, with the
-following projects. As stated above, each milestone release of the
-MDT OCL 1.4 project will be compatible with the
-corresponding milestones for each of these projects, and delivered the
-appropriate offset.
+following projects. 
 <html:ul>
     <html:li>Eclipse Platform SDK version 3.6</html:li>
     <html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
     <html:li>Model Development Tools (MDT) UML2 version 3.1</html:li>
 </html:ul>
 <html:p>
-As described above, the MDT OCL 3.0.0 release is not backwards compatible with the MDT OCL 1.2 
-and 1.3 releases. For compatibility with the previous versions use MDT OCL 1.4.0.
+As described above, the MDT OCL 3.0.0 release is not fully backwards compatible with the MDT OCL 1.2 
+and 1.3 releases.
 </html:p>
 <html:p>
 <html:i>
-A guide aimed to help users to migrate from MDT OCL 1.3/1.4 releases to MDT OCL 3.0.0 release
+A guide aimed to help users to migrate from MDT OCL 1.3 releases to MDT OCL 3.0.0 release
 will be provided.
 </html:i>
 </html:p>
