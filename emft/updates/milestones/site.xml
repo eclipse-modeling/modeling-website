@@ -99,6 +99,28 @@ EMFT MWE SDK (Incubation) 0.7.2RC1 S200908101326: contains runtime, source, and 
 		<category name="EMFT MWE SDK (Incubation) 0.7.2RC1 S200908101326"/>
 	</feature>
 
+	<!-- MINT 0.9.0M4 S200912151225 -->
+	<category-def label="EMFT MINT SDK 0.9.0M4 S200912151225" name="EMFT MINT SDK 0.9.0M4 S200912151225">
+		<description>
+EMFT MINT SDK 0.9.0M4 S200912151225: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.9.0.v200912151225" url="features/org.eclipse.emf.mint.sdk_0.9.0.v200912151225.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M4 S200912151225"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.source" version="0.9.0.v200912151225" url="features/org.eclipse.emf.mint.source_0.9.0.v200912151225.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M4 S200912151225"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.examples" version="0.9.0.v200912151225" url="features/org.eclipse.emf.mint.examples_0.9.0.v200912151225.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M4 S200912151225"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint.doc" version="0.9.0.v200912151225" url="features/org.eclipse.emf.mint.doc_0.9.0.v200912151225.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M4 S200912151225"/>
+	</feature>
+	<feature id="org.eclipse.emf.mint" version="0.9.0.v200912151225" url="features/org.eclipse.emf.mint_0.9.0.v200912151225.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M4 S200912151225"/>
+	</feature>
+
 	<!-- MINT 0.8.0RC4 S200906110922 -->
 	<category-def label="EMFT MINT SDK 0.8.0RC4 S200906110922" name="EMFT MINT SDK 0.8.0RC4 S200906110922">
 		<description>
