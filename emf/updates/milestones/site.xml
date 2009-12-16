@@ -69,6 +69,52 @@ EMF VALIDATION SDK 1.3.1RC4 S200909151245: contains runtime, source, and documen
 		<category name="EMF VALIDATION SDK 1.3.1RC4 S200909151245"/>
 	</feature>
 
+	<!-- TRANSACTION 1.4.0M4 S200912161108 -->
+	<category-def label="EMF TRANSACTION SDK 1.4.0M4 S200912161108" name="EMF TRANSACTION SDK 1.4.0M4 S200912161108">
+		<description>
+EMF TRANSACTION SDK 1.4.0M4 S200912161108: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200901271819" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200901271819.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.examples" version="1.2.100.v200901271819-45A78yE4F9GCEoCVHo8MBU" url="features/org.eclipse.emf.transaction.examples_1.2.100.v200901271819-45A78yE4F9GCEoCVHo8MBU.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.emfqtv.all.sdk" version="1.4.0.v20090819-1300-47A-90GCOMFIff2ChAjZIIqAdQ3Q" url="features/org.eclipse.emf.emfqtv.all.sdk_1.4.0.v20090819-1300-47A-90GCOMFIff2ChAjZIIqAdQ3Q.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.emfqtv.all" version="1.4.0.v20090819-1300-777I8ZAuVHJjASLu_UoYjV_mhidR" url="features/org.eclipse.emf.emfqtv.all_1.4.0.v20090819-1300-777I8ZAuVHJjASLu_UoYjV_mhidR.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200901271819-35-8s733L366A4F6E" url="features/org.eclipse.emf.workspace.source_1.3.0.v200901271819-35-8s733L366A4F6E.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200901271819-45-9oB55W5AAS7LAT" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200901271819-45-9oB55W5AAS7LAT.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.sdk" version="1.4.0.v20091215-1213-777J-9AYOz-V1bP-uZmmpehtc3Iy" url="features/org.eclipse.emf.transaction.sdk_1.4.0.v20091215-1213-777J-9AYOz-V1bP-uZmmpehtc3Iy.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200901271819-22-7w311A1238292A" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200901271819-22-7w311A1238292A.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.source" version="1.4.0.v20090819-1300-377-8s733L3J5L15933" url="features/org.eclipse.emf.transaction.source_1.4.0.v20090819-1300-377-8s733L3J5L15933.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200901271819-35-8s733L366A4F6E" url="features/org.eclipse.emf.workspace_1.3.0.v200901271819-35-8s733L366A4F6E.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction" version="1.4.0.v20090819-1300-377-8s733L3J5L15933" url="features/org.eclipse.emf.transaction_1.4.0.v20090819-1300-377-8s733L3J5L15933.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.100.v200901271819" url="features/org.eclipse.emf.transaction.examples.source_1.2.100.v200901271819.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200901271819-358Z8s733L466F3C6D4" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200901271819-358Z8s733L466F3C6D4.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.4.0M4 S200912161108"/>
+	</feature>
+
 	<!-- TRANSACTION 1.3.1RC4 S200909151245 -->
 	<category-def label="EMF TRANSACTION SDK 1.3.1RC4 S200909151245" name="EMF TRANSACTION SDK 1.3.1RC4 S200909151245">
 		<description>
