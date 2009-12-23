@@ -11,11 +11,7 @@ function sidebar()
 		<h6>Actions</h6>
 		<ul>
 			<li>
-			<?php if ($isEMFserver) { ?>
-				<a href="/emf/build/">Build</a>,
-			<?php } else { ?>
 				<a href="/modeling/emf/<?php print $projct; ?>/build/">Build</a>,
-			<?php } ?>
 				<a href="/modeling/emf/<?php print $projct; ?>/build/clean.php">Clean</a>,
 				<a href="/modeling/emf/<?php print $projct; ?>/build/promo.php">Promote</a>
 			</li>
