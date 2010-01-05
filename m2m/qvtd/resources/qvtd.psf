@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <psf version="2.0">
 	<provider id="org.eclipse.team.cvs.core.cvsnature">
-		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime,net.sourceforge.lpg.lpgjavaruntime,v1_1"/>
-		<project reference="1.0,:pserver:anonymous@lpg.cvs.sourceforge.net:/cvsroot/lpg,lpg.runtime.java,lpg.runtime.java,"/>
+		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/tools,org.eclipse.orbit/lpg.runtime.java,lpg.runtime.java,v2_0_17"/>
+		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.m2m/org.eclipse.qvt.declarative/plugins/org.eclipse.qvt.declarative.lpg.runtime,lpg.runtime,"/>
 
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.validation/plugins/org.eclipse.emf.validation,org.eclipse.emf.validation,"/>
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.transaction/plugins/org.eclipse.emf.transaction,org.eclipse.emf.transaction,"/>
