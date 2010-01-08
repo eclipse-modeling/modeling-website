@@ -959,12 +959,15 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
-				if ($debug>10) { echo "[a][$vanity]<br/>"; }
-				hudsonURLcleanup($vanity);
-				if ($debug>10) { echo "[b][$vanity]<br/>"; }
+				if ($debug>10) { 
+					echo "[a][$vanity]<br/>";
+					echo "[b][".hudsonURLcleanup($vanity)."]<br/>"; 
+				}
 				
-				if ($debug>10) { echo "[?] deps[z] = $deps[$z], z = $z<br/>"; }
-				if ($debug>10) { echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup($z)."<br/>"; }
+				if ($debug>10) { 
+					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
+					echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup(str_replace("."," ",$z))."<br/>"; 
+				}
 
 				# tokenize and reassemble, avoiding dupes
 				$vanityBits = explode(" ",trim($vanity));
