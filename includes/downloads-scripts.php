@@ -886,8 +886,8 @@ function getBuildArtifacts($dir, $branchID)
 		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
 		$buildID[$z] = isset($opts["${z}BuildURL"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}BuildURL"])) : "";
 		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}File"]) ? $opts["${z}File"] : "");
-		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? (!preg_match("/hudson/",$builddir[$z]) ? getDownloadScript() : "http://build.eclipse.org") . "$builddir[$z]" : $builddir[$z]) : "";
-		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? (!preg_match("/hudson/",$buildfile[$z]) ? getDownloadScript() : "http://build.eclipse.org") . "$buildfile[$z]" : $buildfile[$z]);
+		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
+		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
 		if ($builddir[$z]) {
 		    $havedeps[$z] = $z;
 		}
@@ -900,13 +900,24 @@ function getBuildArtifacts($dir, $branchID)
 		preg_match("/^(.+)\.buildurl$/", $y, $regs); $z = $regs[1];
 		if ($z)
 		{
-			$builddir[$z] = $eclipseDownloadURL. (isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
+			$builddir[$z] = 
+				(isset($opts["${z}.url"]) && preg_match("#snapshot|Snapshot|hudson#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
+				(isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
+			if ($debug>10) { 
+				echo "{{ download-scripts.php :: $Revision: 1.74 $ }}<br/>";
+				echo "[??][".$builddir[$z]."]<br/>"; 
+			} 
+				
 			# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
 			# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
 			$buildID[$z] = isset($opts["${z}.buildurl"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}.buildurl"])) : "";
 			$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
-			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? (!preg_match("/hudson/",$builddir[$z]) ? getDownloadScript() : "http://build.eclipse.org") . "$builddir[$z]" : $builddir[$z]) : "";
-			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? (!preg_match("/hudson/",$builddir[$z]) ? getDownloadScript() : "http://build.eclipse.org") . "$buildfile[$z]" : $buildfile[$z]);
+			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript()  . "$builddir[$z]" : $builddir[$z]) : "";
+			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
+			if ($debug>10) { 
+				echo "[!!][".$builddir[$z]."]<br/>"; 
+				echo "[!!][".$buildfile[$z]."]<br/>";
+			} 
 			if ($builddir[$z]) {
 			    $havedeps[$z] = $z;
 			}
@@ -960,7 +971,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.73 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.74 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>";
 					echo "[#][".$builddir[$z]."]<br/>"; 
