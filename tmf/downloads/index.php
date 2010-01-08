@@ -6,6 +6,12 @@ ob_start();
 
 /* config */
 
+/* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
+$extraZips = array(
+	"tmf-xtext-Automated-Tests",
+	"tmf-xtext-automated-tests",
+);
+
 /* $project => sections/Project Name => (prettyname => filename) */
 /* only required if using something other than the default 4; otherwise will be generated */
 $dls = array(
@@ -24,7 +30,8 @@ $dls = array(
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
+			"Automated Tests" => "automated-tests",
+			"Automated Tests" => "Automated-Tests"
 		)
 	),
 );
