@@ -870,7 +870,7 @@ function loadBuildConfig($file, $deps)
 
 function getBuildArtifacts($dir, $branchID)
 {
-	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct, $isTools, $isTech;
+	global $isBuildServer, $downloadPre, $PR, $deps, $proj, $projct, $isTools, $isTech, $debug;
 
 	$PR2 = ($isTools ? "tools/$proj" : ($isTech ? "technology/$proj" : "$PR" . ($proj != "/" ? $proj : ""))); # to allow for www.eclipse.org/gef/ and download.eclipse.org/tools/gef, but also modeling/emf
 	$mid = "$downloadPre/$PR2" . "/downloads/drops/";
