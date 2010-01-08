@@ -886,8 +886,8 @@ function getBuildArtifacts($dir, $branchID)
 		# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
 		$buildID[$z] = isset($opts["${z}BuildURL"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}BuildURL"])) : "";
 		$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}File"]) ? $opts["${z}File"] : "");
-		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
-		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
+		$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? (!preg_match("/hudson/",$builddir[$z]) getDownloadScript() : "http://build.eclipse.org") . "$builddir[$z]" : $builddir[$z]) : "";
+		$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? (!preg_match("/hudson/",$buildfile[$z]) getDownloadScript() : "http://build.eclipse.org") . "$buildfile[$z]" : $buildfile[$z]);
 		if ($builddir[$z]) {
 		    $havedeps[$z] = $z;
 		}
@@ -905,8 +905,8 @@ function getBuildArtifacts($dir, $branchID)
 			# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
 			$buildID[$z] = isset($opts["${z}.buildurl"]) ? str_replace("/", " ", preg_replace("/.+\/drops\/(.+)/", "$1", $opts["${z}.buildurl"])) : "";
 			$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
-			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript() . "$builddir[$z]" : $builddir[$z]) : "";
-			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
+			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? (!preg_match("/hudson/",$builddir[$z]) getDownloadScript() : "http://build.eclipse.org") . "$builddir[$z]" : $builddir[$z]) : "";
+			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? (!preg_match("/hudson/",$buildfile[$z]) getDownloadScript() : "http://build.eclipse.org") . "$buildfile[$z]" : $buildfile[$z]);
 			if ($builddir[$z]) {
 			    $havedeps[$z] = $z;
 			}
@@ -960,7 +960,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				/*if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.71 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.72 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
