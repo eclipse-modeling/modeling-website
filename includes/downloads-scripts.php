@@ -942,6 +942,9 @@ function getBuildArtifacts($dir, $branchID)
 				if ($reg && is_array($reg) && sizeof($reg) > 0) {
 					
 					$vanity = $buildID[$z];
+					$vanity = preg_replace("#/hudson/job/cbi-#","",$vanity);
+					$vanity = preg_replace("#(lastSuccessful[^/]+/|lastStable[^/]+/)#","",$vanity);
+					$vanity = preg_replace("#artifact/#","",$vanity);
 					$vanity = preg_replace("#(-|_|sdk_)+#"," ",$vanity);
 					$vanity = preg_replace("#(.+ downloads|downloads)+#"," ",$vanity);
 					$vanity = trim(preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$vanity));
