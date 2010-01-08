@@ -960,7 +960,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.68 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.69 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
@@ -1021,11 +1021,12 @@ function getBuildArtifacts($dir, $branchID)
 
 function hudsonURLcleanup($vanity) 
 {
-	$vanity = preg_replace("# hudson job cbi#","",$vanity);
-	$vanity = preg_replace("# Snapshot| snapshot#","",$vanity);
-	$vanity = preg_replace("# (lastSuccessful[^ ]+|lastStable[^ ]+)#","",$vanity);
-	$vanity = preg_replace("# artifact#","",$vanity);
-	$vanity = preg_replace("# base#","",$vanity);
+	$vanity = preg_replace("#hudson job cbi#","",$vanity);
+	$vanity = preg_replace("#Snapshot|snapshot#","",$vanity);
+	$vanity = preg_replace("#(lastSuccessful[^ ]+|lastStable[^ ]+)#","",$vanity);
+	$vanity = preg_replace("#artifact#","",$vanity);
+	$vanity = preg_replace("#base#","",$vanity);
+	$vanity = preg_replace("#[ ]+#"," ",$vanity);
 	return $vanity;
 }
 				
