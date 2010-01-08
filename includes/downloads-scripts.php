@@ -959,13 +959,13 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
-				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.70 $ }}<br/>";
+				/*if ($debug>10) { 
+					echo "{{ download-scripts.php :: $Revision: 1.71 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
 					echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup(str_replace("."," ",$z))."<br/>"; 
-				}
+				}*/
 
 				$vanity = preg_match("#snapshot|Snapshot#",$vanity) ? "Snapshot" : hudsonURLcleanup($vanity);
 				
