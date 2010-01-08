@@ -960,14 +960,11 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { echo "[a][$vanity]<br/>"; }
-				
-				$vanity = preg_replace("#/hudson/job/cbi-#","",$vanity);
-				$vanity = preg_replace("#(lastSuccessful[^/]+/|lastStable[^/]+/)#","",$vanity);
-				$vanity = preg_replace("#artifact/#","",$vanity);
-				
+				hudsonURLcleanup($vanity);
 				if ($debug>10) { echo "[b][$vanity]<br/>"; }
 				
-				if ($debug>10) { echo "[!] deps[z] = $deps[$z], z = $z<br/>"; }
+				if ($debug>10) { echo "[?] deps[z] = $deps[$z], z = $z<br/>"; }
+				if ($debug>10) { echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup($z)."<br/>"; }
 
 				# tokenize and reassemble, avoiding dupes
 				$vanityBits = explode(" ",trim($vanity));
@@ -984,7 +981,7 @@ function getBuildArtifacts($dir, $branchID)
 					$bf[] = $buildfile[$z]; // zip
 					$bf[] = $bfbits[1] . "/orbitBundles-" . $bfbits[2] . ".map";
 				}
-				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":""). ($deps[$z]?$deps[$z]:ucwords(str_replace("."," ",$z))) . " " . 
+				$ret .= "<li>".($builddir[$z]?"<div><a href=\"$builddir[$z]\">Build Page</a></div>":""). ($deps[$z]?$deps[$z]:ucwords(hudsonURLcleanup(str_replace("."," ",$z)))) . " " . 
 					($z == "orbit" ? "<a href=\"{$bf[0]}\">$vanity</a> (<a href=\"{$bf[1]}\">map</a>)" : "<a href=\"{$buildfile[$z]}\">$vanity</a>") . 
 				"</li>\n";
 			}
@@ -1018,6 +1015,15 @@ function getBuildArtifacts($dir, $branchID)
 	}
 	return $ret;
 }
+
+function hudsonURLcleanup($vanity) 
+{
+	$vanity = preg_replace("#Snapshot hudson job cbi#","",$vanity);
+	$vanity = preg_replace("#(lastSuccessful[^ ]+|lastStable[^ ]+)#","",$vanity);
+	$vanity = preg_replace("#artifact#","",$vanity);
+	return $vanity;
+}
+				
 
 function showToggle($showAll, $showMax, $sortBy, $count)
 {
