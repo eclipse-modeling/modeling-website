@@ -960,6 +960,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
+					echo "{{ download-scripts.php :: $Revision: 1.68 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
