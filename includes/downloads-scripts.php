@@ -1023,7 +1023,7 @@ function hudsonURLcleanup($vanity)
 {
 	$vanity = preg_replace("# hudson job cbi#","",$vanity);
 	$vanity = preg_replace("# Snapshot| snapshot#","",$vanity);
-	$vanity = preg_replace("#(lastSuccessful[^ ]+|lastStable[^ ]+)#","",$vanity);
+	$vanity = preg_replace("# (lastSuccessful[^ ]+|lastStable[^ ]+)#","",$vanity);
 	$vanity = preg_replace("# artifact#","",$vanity);
 	$vanity = preg_replace("# base#","",$vanity);
 	return $vanity;
