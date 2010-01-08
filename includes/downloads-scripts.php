@@ -960,14 +960,14 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.69 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.70 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
 					echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup(str_replace("."," ",$z))."<br/>"; 
 				}
 
-				$vanity = hudsonURLcleanup($vanity);
+				$vanity = preg_match("#snapshot|Snapshot#",$vanity) ? "Snapshot" : hudsonURLcleanup($vanity);
 				
 				# tokenize and reassemble, avoiding dupes
 				$vanityBits = explode(" ",trim($vanity));
