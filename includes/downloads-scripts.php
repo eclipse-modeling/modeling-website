@@ -939,12 +939,9 @@ function getBuildArtifacts($dir, $branchID)
 			{
 				$vanity = $buildID[$z];
 				preg_match("/.+-(incubation-|sdk_|)([^-]+)(\.zip|\.tar\.gz)/", $buildfile[$z], $reg);
-				if ($reg && is_array($reg) && sizeof($reg) > 0) {
-					
+				if ($reg && is_array($reg) && sizeof($reg) > 0) 
+				{
 					$vanity = $buildID[$z];
-					$vanity = preg_replace("#/hudson/job/cbi-#","",$vanity);
-					$vanity = preg_replace("#(lastSuccessful[^/]+/|lastStable[^/]+/)#","",$vanity);
-					$vanity = preg_replace("#artifact/#","",$vanity);
 					$vanity = preg_replace("#(-|_|sdk_)+#"," ",$vanity);
 					$vanity = preg_replace("#(.+ downloads|downloads)+#"," ",$vanity);
 					$vanity = trim(preg_replace("/(\d+\.\d+|\d+\.\d+\.\d+) ([NIMRS]\d+)/","$2",$vanity));
@@ -961,6 +958,17 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#incubation#","",$vanity);
 				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
+				
+				if ($debug>10) { echo "[a][$vanity]<br/>"; }
+				
+				$vanity = preg_replace("#/hudson/job/cbi-#","",$vanity);
+				$vanity = preg_replace("#(lastSuccessful[^/]+/|lastStable[^/]+/)#","",$vanity);
+				$vanity = preg_replace("#artifact/#","",$vanity);
+				
+				if ($debug>10) { echo "[b][$vanity]<br/>"; }
+				
+				if ($debug>10) { echo "[!] deps[z] = $deps[$z], z = $z<br/>"; }
+
 				# tokenize and reassemble, avoiding dupes
 				$vanityBits = explode(" ",trim($vanity));
 				$vanity=""; foreach ($vanityBits as $vb){ if ($vb && false===strstr($vanity,$vb)){ $vanity.=" $vb"; } }
