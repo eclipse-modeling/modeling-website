@@ -901,10 +901,10 @@ function getBuildArtifacts($dir, $branchID)
 		if ($z)
 		{
 			$builddir[$z] = 
-				(isset($opts["${z}.url"]) && preg_match("#snapshot|Snapshot|hudson#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
+				(isset($opts["${z}.url"]) && preg_match("#.+(snapshot|Snapshot|hudson).+#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
 				(isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
 			if ($debug>10) { 
-				echo "{{ download-scripts.php :: $Revision: 1.74 $ }}<br/>";
+				echo "---{{ download-scripts.php :: $Revision: 1.75 $ }}---<br/>";
 				echo "[??][".$builddir[$z]."]<br/>"; 
 			} 
 				
@@ -971,7 +971,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.74 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.75 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>";
 					echo "[#][".$builddir[$z]."]<br/>"; 
