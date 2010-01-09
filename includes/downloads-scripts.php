@@ -904,11 +904,11 @@ function getBuildArtifacts($dir, $branchID)
 			$builddir[$z] = 
 				(isset($opts["${z}.url"]) && preg_match("#.+(build.eclipse.org/hudson/job).+#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
 				(isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
-			if ($debug>10) { 
-				echo "<br/>---{{ download-scripts.php :: $Revision: 1.77 $ }}---<br/>";
+			/*if ($debug>10) { 
+				echo "<br/>---{{ download-scripts.php :: $Revision: 1.78 $ }}---<br/>";
 				echo "[??][".$opts["${z}.url"]."]<br/>";
 				echo "[??][".$builddir[$z]."]<br/>"; 
-			} 
+			}*/
 				
 			# Eclipse: R-3.2.1-200609210945 or S-3.3M2-200609220010 or I20060926-0935 or M20060919-1045
 			# Other: 2.2.1/R200609210005 or 2.2.1/S200609210005
@@ -916,10 +916,10 @@ function getBuildArtifacts($dir, $branchID)
 			$buildfile[$z] = $builddir[$z] . "/" . (isset($opts["${z}.file"]) ? $opts["${z}.file"] : "");
 			$builddir[$z] = $builddir[$z] ? (!preg_match("/^http/", $builddir[$z]) ? getDownloadScript()  . "$builddir[$z]" : $builddir[$z]) : "";
 			$buildfile[$z] = (!preg_match("/^http/", $buildfile[$z]) ? getDownloadScript() . "$buildfile[$z]" : $buildfile[$z]);
-			if ($debug>10) { 
+			/*if ($debug>10) { 
 				echo "[!!][".$builddir[$z]."]<br/>"; 
 				echo "[!!][".$buildfile[$z]."]<br/>";
-			} 
+			}*/
 			if ($builddir[$z]) {
 			    $havedeps[$z] = $z;
 			}
@@ -972,15 +972,15 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( \d+\.\d+ )#"," ",$vanity);
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
-				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.77 $ }}<br/>";
+				/*if ($debug>10) { 
+					echo "{{ download-scripts.php :: $Revision: 1.78 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>";
 					echo "[#][".$builddir[$z]."]<br/>"; 
 					echo "[#][".$buildfile[$z]."]<br/>"; 
 					echo "[?] deps[z] = $deps[$z], z = $z<br/>";
 					echo "[!] deps[z] = $deps[$z], z = ".hudsonURLcleanup(str_replace("."," ",$z))."<br/>"; 
-				}
+				}*/
 
 				$vanity = preg_match("#snapshot|Snapshot#",$vanity) ? "Snapshot" : hudsonURLcleanup($vanity);
 				
