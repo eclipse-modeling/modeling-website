@@ -848,7 +848,7 @@ function loadBuildConfig($file, $deps)
 			$opts[$regs[1]] = $regs[2];
 		}
 		// Athena build style
-		else if (preg_match("/^(.+\.download\.url|.+\.file|.+\.buildurl)=(.{2,})$/", $z, $regs))
+		else if (preg_match("/^(.+\.download\.url|.+\.file|.+\.buildurl|.+\.url)=(.{2,})$/", $z, $regs))
 		{
 			#print "[ " . $regs[1] . " = " . $regs[2] . " ]<br/>";
 			$opts[$regs[1]] = $regs[2];
@@ -900,11 +900,12 @@ function getBuildArtifacts($dir, $branchID)
 		preg_match("/^(.+)\.buildurl$/", $y, $regs); $z = $regs[1];
 		if ($z)
 		{
+			# hudson.job.cbi.emft.mwe.0.7.integration.lastSuccessfulBuild.artifact.snapshot.base.url=https://build.eclipse.org/hudson/job/cbi-emft-mwe-0.7-integration/lastSuccessfulBuild/artifact/snapshot/emft-mwe-SDK-incubation-S-Snapshot.zip
 			$builddir[$z] = 
-				(isset($opts["${z}.url"]) && preg_match("#.+(snapshot|Snapshot|hudson).+#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
+				(isset($opts["${z}.url"]) && preg_match("#.+(build.eclipse.org/hudson/job).+#",$opts["${z}.url"]) ? "https://build.eclipse.org" : $eclipseDownloadURL) . 
 				(isset($opts["${z}.buildurl"]) ? $opts["${z}.buildurl"] : ""); if ($builddir[$z] == "/downloads") { $builddir[$z] = null; }
 			if ($debug>10) { 
-				echo "<br/>---{{ download-scripts.php :: $Revision: 1.76 $ }}---<br/>";
+				echo "<br/>---{{ download-scripts.php :: $Revision: 1.77 $ }}---<br/>";
 				echo "[??][".$opts["${z}.url"]."]<br/>";
 				echo "[??][".$builddir[$z]."]<br/>"; 
 			} 
@@ -972,7 +973,7 @@ function getBuildArtifacts($dir, $branchID)
 				$vanity = preg_replace("#( [IMNRS] )#"," ",$vanity);
 				
 				if ($debug>10) { 
-					echo "{{ download-scripts.php :: $Revision: 1.76 $ }}<br/>";
+					echo "{{ download-scripts.php :: $Revision: 1.77 $ }}<br/>";
 					echo "[A][$vanity]<br/>";
 					echo "[B][".hudsonURLcleanup($vanity)."]<br/>";
 					echo "[#][".$builddir[$z]."]<br/>"; 
