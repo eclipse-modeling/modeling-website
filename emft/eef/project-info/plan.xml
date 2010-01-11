@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
-      name="modeling.emft.eef">
-   <release projectid="modeling.emft.eef" version="0.8.0"/>
+      name="modeling.emf.eef">
+   <release projectid="modeling.emf.eef" version="0.8.0"/>
    <introduction>
      <html:div>
 This document lays out the feature and API set for the
