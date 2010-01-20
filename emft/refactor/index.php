@@ -14,9 +14,9 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "EMFT Refactor";
-	$pageKeywords	= "Type, page, keywords, here";
-	$pageAuthor		= "Type your name here";
+	$pageTitle 		= "EMF Refactor";
+	$pageKeywords	= "EMF, Refactor, model refactoring, refactoring";
+	$pageAuthor		= "Thorsten Arendt";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -30,13 +30,92 @@
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
 
-	<div id="midcolumn">
-	  This project was just provisioned, so there is nothing here yet. Here is the original <a href="http://www.eclipse.org/proposals/emf-refactor/">proposal</a>.
+	<div id="maincontent">
+
+    <div id="midcolumn">
+	<h1>$pageTitle</h1>
+	<img style="float:right" src="henshin_small.png" alt="" style="border-width:0px"/>
+	
+	<p>
+	EMF Refactor is a ... 
+	</p>
+		
+	<p>
+	<i>More information here soon...</i>
+	</p>
+
+	<!--
+		
+	<div class="homeitem">
+		<h3>Narrow column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		</ul>
 	</div>
+		
+	<div class="homeitem">
+		<h3>Narrow column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		</ul>
+	</div>
+	
+	<div class="homeitem3col">
+		<h3>This is a wide column</h3>
+		<ul>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+		</ul>
+	</div>
+	
+	<hr class="clearer" />
+	<p>Some free text</p>
+	<ul class="midlist">
+	<li>list of items in free text</li>
+	<li>list of items in free text</li>
+	<li>list of items in free text</li>
+	</ul>
+	<ol>
+	<li>Ordered list</li>
+	<li>Ordered list</li>
+	<li>Ordered list</li>
+	</ol>
+		
+	-->
+		
+	</div>
+	
+	<!--	
+	<div id="rightcolumn">
+	<div class="sideitem">
+
+		<h6>Related links</h6>
+		<ul>
+		<li><a href="#">Link</a> - descriptive text</li>
+		<li><a href="#">Link</a> - descriptive text</li>
+		</ul>
+		</div>
+
+		<div class="sideitem">
+		<h6>Related links</h6>
+		<ul>
+		<li><a href="#">Link</a> - descriptive text</li>
+		<li><a href="#">Link</a> - descriptive text</li>
+		</ul>
+		</div>
+	</div>
+	-->
+	
+</div>
 
 EOHTML;
-
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
+
