@@ -14,9 +14,9 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Henshin";
-	$pageKeywords	= "EMF, Henshin, model transformation";
-	$pageAuthor		= "Christian Krause";
+	$pageTitle 		= "EMF Refactor";
+	$pageKeywords	= "EMF, Refactor, model refactoring, refactoring";
+	$pageAuthor		= "Thorsten Arendt";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -37,18 +37,7 @@
 	<img style="float:right" src="henshin_small.png" alt="" style="border-width:0px"/>
 	
 	<p>
-	Henshin is an in-place model transformation language for the
-	<a href="http://www.eclipse.org/modeling/emf">Eclipse Modeling Framework (EMF)</a>.
-	It supports direct transformations of EMF model instances (endogenous transformations), 
-	as well as generating instances of a target language 
-	from given instances of a source language (exogenous transformations). 
-	The main features are:
-	<ul>
-	<li>Support for endogenous as well as exogenous transformations</li>
-	<li>Natural treatment and efficient in-place execution of endogenous transformations</li>
-	<li>Graphical syntax</li>
-	<li>Support for static analysis of transformations</li>
-	</ul>
+	EMF Refactor is a ...
 	</p>
 		
 	<p>
