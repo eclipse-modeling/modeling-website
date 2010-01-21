@@ -37,8 +37,10 @@
 	<img style="float:right" src="henshin_small.png" alt="" style="border-width:0px"/>
 	
 	<p>
-	EMF Refactor is a ...
+	EMF Refactor is a new open source component under <a href="http://www.eclipse.org/modeling/emft/">Eclipse EMFT</a> to provide tool support for generating and applying refactorings for models based on EMF Ecore, e.g. UML EMF models.
 	</p>
+	
+
 		
 	<p>
 	<i>More information here soon...</i>
