@@ -45,7 +45,7 @@ models, e.g. UML EMF models.
 	EMF Refactor will consist of 
 	<ul>
 		<li>a <strong>Refactoring Generation Module</strong> for specifying EMF model refactorings using several model transformation approaches,
-		<li>a <strong>structured suite</strong> of predefined EMF model refactorings, and
+		<li>a <strong>Structured Suite</strong> of predefined EMF model refactorings, and
 		<li>a <strong>Refactoring Application Module</strong> for applying EMF model refactorings in a uniform and user-friendly way.
 	</ul>
 	</p>
