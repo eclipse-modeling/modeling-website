@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "EMF Henshin - Installation";
+	$pageTitle 		= "Henshin - Installation";
 	$pageKeywords	= "EMF, Henshin, model transformation, installation";
 	$pageAuthor		= "Christian Krause";
 

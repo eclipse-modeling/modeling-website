@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "EMF Henshin - Downloads";
+	$pageTitle 		= "Henshin - Downloads";
 	$pageKeywords	= "EMF, Henshin, model transformation, Downloads";
 	$pageAuthor		= "Christian Krause";
 	
@@ -36,7 +36,7 @@
 		<h1>$pageTitle</h1>
 		
 		<p>
-		<b>The first release is scheduled for 15 Februar 2010.</b>
+		<b>The first release is scheduled Februar 2010.</b>
 		</p>
 
 		<!--
