@@ -36,7 +36,7 @@
 		<h1>$pageTitle</h1>
 		
 		<p>
-		<i>More information here soon...</i>
+		<b>The first release is scheduled for 15 Februar 2010.</b>
 		</p>
 
 		<!--

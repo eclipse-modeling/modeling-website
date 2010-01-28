@@ -52,7 +52,7 @@
 	</p>
 		
 	<p>
-	<i>More information here soon...</i>
+	<b>The first release is planned for February 2010.</b>
 	</p>
 
 	<!--
