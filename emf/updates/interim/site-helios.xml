@@ -7,35 +7,35 @@
 	</description>
 
 
-	<!-- VALIDATION 1.4.0 I200912151427 -->
-	<category-def label="EMF VALIDATION SDK 1.4.0 I200912151427" name="EMF VALIDATION SDK 1.4.0 I200912151427">
+	<!-- VALIDATION 1.4.0 I201002011334 -->
+	<category-def label="EMF VALIDATION SDK 1.4.0 I201002011334" name="EMF VALIDATION SDK 1.4.0 I201002011334">
 		<description>
-EMF VALIDATION SDK 1.4.0 I200912151427: contains runtime, source, and documentation.
+EMF VALIDATION SDK 1.4.0 I201002011334: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.emf.validation" version="1.3.0.v200902052232-479-9oB55W69AO6KBA9" url="features/org.eclipse.emf.validation_1.3.0.v200902052232-479-9oB55W69AO6KBA9.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
+	</feature>
+	<feature id="org.eclipse.emf.validation.examples.source" version="1.4.0.v20100111-1135" url="features/org.eclipse.emf.validation.examples.source_1.4.0.v20100111-1135.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.source" version="1.3.0.v200902052232-479-9oB55W69AO6KBA9" url="features/org.eclipse.emf.validation.source_1.3.0.v200902052232-479-9oB55W69AO6KBA9.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.examples" version="1.3.0.v200901271722-67E-BgJ99rAFIfCbJM1" url="features/org.eclipse.emf.validation.examples_1.3.0.v200901271722-67E-BgJ99rAFIfCbJM1.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.ocl" version="1.3.0.v20091215-1218-3--7w311A232602329" url="features/org.eclipse.emf.validation.ocl_1.3.0.v20091215-1218-3--7w311A232602329.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.ocl.source" version="1.3.0.v20091215-1218-3--7w311A232602329" url="features/org.eclipse.emf.validation.ocl.source_1.3.0.v20091215-1218-3--7w311A232602329.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.doc" version="1.3.0.v200901271722-35-8s733L466F3B769" url="features/org.eclipse.emf.validation.doc_1.3.0.v200901271722-35-8s733L466F3B769.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 	<feature id="org.eclipse.emf.validation.sdk" version="1.3.0.v200901271722-67E-97OGPL6SJslRVggVm_ZVlH99" url="features/org.eclipse.emf.validation.sdk_1.3.0.v200901271722-67E-97OGPL6SJslRVggVm_ZVlH99.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
-	<feature id="org.eclipse.emf.validation.examples.source" version="1.3.0.v200901271722" url="features/org.eclipse.emf.validation.examples.source_1.3.0.v200901271722.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0 I200912151427"/>
+	<feature id="org.eclipse.emf.validation.examples" version="1.4.0.v20100111-1135-67F-BgJ9AiAFH_AWIN8" url="features/org.eclipse.emf.validation.examples_1.4.0.v20100111-1135-67F-BgJ9AiAFH_AWIN8.jar" patch="false">
+		<category name="EMF VALIDATION SDK 1.4.0 I201002011334"/>
 	</feature>
 
 	<!-- TRANSACTION 1.4.0 I200912151749 -->
