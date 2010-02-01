@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>jet Builds</title>
   <link href="http://download.eclipse.org/modeling/m2t/feeds/builds-jet.xml" rel="self" type="application/atom+xml"/>
-  <updated>2010-02-01T15:56:55Z</updated>
+  <updated>2010-02-01T20:59:27Z</updated>
   <author>
     <name>jet Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2t/feeds/builds-jet.xml</id>
+  <entry>
+    <title>[announce] jet 1.1.0M5 (S201002011505) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=S201002011505#S201002011505"/>
+    <id>http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=S201002011505#S201002011505</id>
+    <updated>2010-02-01T20:59:27Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="201002011505" href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=S201002011505#S201002011505" type="S" vanityname="1.1.0M5" version="1.1.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/jet/downloads/drops/1.1.0/S201002011505/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2t/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2t/downloads/?project=jet</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=jet&amp;version=S201002011505
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2t-jet-SDK-1.1.0M5.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/jet/downloads/drops/1.1.0/S201002011505/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.6M5-201001291300/eclipse-SDK-3.6M5-linux-gtk-x86_64.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.6.0/I201001101746/emf-xsd-SDK-I201001101746.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/3.1.0/S201002011100/mdt-uml2-SDK-3.1.0M5.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] jet 1.0.2RC2 (S201001291720) is available</title>
     <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=jet&amp;showAll=1&amp;hlbuild=S201001291720#S201001291720"/>
