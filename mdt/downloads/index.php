@@ -42,7 +42,8 @@ $dls = array(
 	"/ocl" => array(
 		"OCL" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"SDK (Runtime, Source)" => "SDK",
+			"SDK (Runtime, Source, Documentation, Examples)" => "SDK",
+			"Core SDK (Runtime, Source)" => "CoreSDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "automated-tests",  # deprecated Modeling build 
