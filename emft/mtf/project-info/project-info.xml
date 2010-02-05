@@ -21,13 +21,13 @@
      - database; You can override the name stored on the database by filling 
      - the <name/> tag
     -->
-  <name>Phoenix Project</name>
+  <name>Modeling Team Framework</name>
     
   <!--     
      - Each project can also have a short name to be used in HTML lists and 
      - other horizontally challenged places.
     -->
-  <short-name>Phoenix</short-name>
+  <short-name>MTF</short-name>
   
   <!--
      - Each Eclipse project has one or more Bugzilla products and components.
@@ -40,7 +40,7 @@
      - page of the first product. Multiple <product>s are allowed.
     -->
   <bugzilla>
-    <product name="Phoenix"/>
+    <product name="EMFT.MTF"/>
   </bugzilla>
 
   <!--
