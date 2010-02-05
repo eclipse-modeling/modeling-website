@@ -25,14 +25,14 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MTF", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	$Nav->addNavSeparator("MTF", 	"/modeling/emft/mtf/");
+	$Nav->addCustomNav("Download", "/modeling/emft/mtf/download.php", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/modeling/emft/mtf/documentation.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/emft/mtf/support.php", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/modeling/emft/mtf/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "emf, dsl, modeling, domain specific language, textual, framework, repository";
+	$pageKeywords	= "emf, dsl, modeling, domain specific language, textual, framework, repository, team";
 	$pageAuthor		= "Steffen Stundzig";
 	# $pageTitle 		= "Xtext";
 
