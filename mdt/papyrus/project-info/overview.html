@@ -1,9 +1,68 @@
-<p>
-Papyrus is an open source component of the Model Development Tools (MDT) subproject to provide an integrated, user-consumable environment for editing models based on UML and other related languages such as SysML.
-</p>
-<p>
-Specially, this project will provide the glue around valuable UML and SysML diagram editors (GMF-based or not) and other MDE tools. It will also offer support for UML and SysML profiling mechanisms.
-</p>
-<p>
-For more details on Papyrus, see the <a href="http://wiki.eclipse.org/MDT/Papyrus">Wiki</a>.
-</p>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT COLOR="#000000">Papyrus
+is a graphical editing tool that provides UML2 editors and
+environment to create and combine any graphical editor
+(domain-specific modeling language) defined from Ecore metamodel or
+from UML2 profile</FONT>. It is Eclipse-based and it uses the Eclipse
+Graphical Modeling Framework.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Papyrus
+is a tool consisting of several editors, mainly graphical editors but
+also completed with other editors such as textual-based and
+tree-based editors. All these editors allow simultaneous viewing of
+multiple diagrams of a given model. This model can be UML, UML
+profile or any EMF model and it can reference other models (from any
+EMF-based modeling language). Papyrus provides a main editor, showing
+one or several model diagrams that can be arranged in  tabbed views,
+and additional views including an model explorer view, a property
+view, and a bird's-eye view. The multiple diagrams are managed by
+Papyrus rather than by Eclipse. The tabbed views can be arranged side
+by side (left, right, top and bottom), can be created, re-sized,
+moved, and deleted by dragging them to the desired position.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Papyrus
+is highly customizable and allows adding new diagram types developed
+using any Eclipse-compatible technology (e.g., GEF, GMF, EMF Tree
+Editors). This is achieved through a diagram plug-in mechanism. In
+fact, even the default diagrams use this mechanism, allowing their
+easy replacement if desired. For each editor, there are generic
+preferences that allow customizing the general appearance of all
+language concepts. Those preferences are extended to provide specific
+options for each language concerning the modeling effort.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>In
+accordance with its primary goal of realizing the UML2 specification,
+Papyrus delivers all UML diagram editors  and provides extensive
+support for UML profiles. It includes all the facilities for defining
+and applying UML profiles in a very rich and efficient manner. It 
+provides the same powerful tool customization capabilities for both
+profile-based editors and DSML-like (Domain Specific Modeling
+Language) editors.. The main difference here is to enable the profile
+plug-in of Papyrus to dynamically drive its customization as defined
+by a profile. This means that when applying a profile, the tool may
+adapt its visual rendering and GUI to fit the specific domain
+supported by that profile. Of course, if the profile is unapplied
+later, the tool resumes to its previous configuration.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>When
+designing a UML2 profile, it may be necessary to customize  one or
+more existing UML2 diagram editors. For that purpose, Papyrus
+supports customization of  existing editors with the added capability
+of extending such customizations by adding new tools relevant to the
+stereotypes defined in the UML profile. For example, the SysML
+requirements diagram editor is designed as a customization of the
+classical UML2 class diagram editor with additional features for
+direct  manipulation of all the concepts defined in the SysML
+requirements diagram.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Finally,
+when embedding a profile within an Eclipse plug-in, a designer can
+also provide a specific properties view that will simplify (i.e.,
+make more user friendly) the manipulation of the stereotypes and
+their related properties. The outline editor and the menu of the
+tools can also be customized to fit domain-specific concerns
+appropriate to the profile.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P>For more details on Papyrus, see its <A HREF="http://wiki.eclipse.org/MDT/Papyrus">Wiki</A>.
+</P>
+<P><BR><BR>
+</P>
