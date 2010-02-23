@@ -44,7 +44,7 @@
 		domain. Several independent projects using the Eclipse platform / EMF have each defined 
 		their own meta model for feature models. Although these meta models have considerable 
 		structural differences, their core semantics are similar. A brief description of feature 
-		models can be found at <a href="http://en.wikipedia.org/wiki/Feature_model">Wikipedia</a>. 
+		models can be found at <a href="http://en.wikipedia.org/wiki/Feature_model" target="_blank">Wikipedia</a>. 
 		The EMF Feature Model project will define a standard representation of Feature 
 		Models inside the Eclipse platform. The intent is to provide a uniform representation for 
 		variability information for tools based on the Eclipse Modeling Framework. This will allow 
@@ -52,8 +52,6 @@
 		and variant decisions, in DSLs, M2M transformations, and other contexts where variability 
 		information is produced or consumed.
     </p>
-
-  <!--		
 		
 		<div class="homeitem">
 			<h3>Narrow column</h3>
@@ -63,6 +61,10 @@
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 			</ul>
 		</div>
+		
+		  <!--		
+		
+		
 		<div class="homeitem">
 			<h3>Narrow column</h3>
 			<ul>
