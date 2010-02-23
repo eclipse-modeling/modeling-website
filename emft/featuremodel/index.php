@@ -14,9 +14,9 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Featuremodel";
-	$pageKeywords	= "Type, page, keywords, here";
-	$pageAuthor		= "Type your name here";
+	$pageTitle 		= "EMF Feature Model";
+	$pageKeywords	= "EMF, feature model";
+	$pageAuthor		= "Holger Papajewski";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -30,9 +30,102 @@
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
 
+<div id="maincontent">
 	<div id="midcolumn">
-	  This project was just provisioned, so there is nothing here yet. Here is the original <a href="http://www.eclipse.org/proposals/feature-model/">proposal</a>.
+		<h1>$pageTitle</h1>
+		<h2>Section title</h2>
+		<p>
+		EMF Feature Model is a proposed open source project under the Eclipse Modeling Framework 
+		Technology Project (EMFT).
+    </p>
+		<p>
+		During the last years Feature Modeling has become the "standard" for variability management 
+		in the field of Software Product Lines. Feature Models are easy to understand and provide a 
+		generic way to represent variability information, independent of a specific application 
+		domain. Several independent projects using the Eclipse platform / EMF have each defined 
+		their own meta model for feature models. Although these meta models have considerable 
+		structural differences, their core semantics are similar. A brief description of feature 
+		models can be found at <a href="http://en.wikipedia.org/wiki/Feature_model">Wikipedia</a>. 
+		The EMF Feature Model project will define a standard representation of Feature 
+		Models inside the Eclipse platform. The intent is to provide a uniform representation for 
+		variability information for tools based on the Eclipse Modeling Framework. This will allow 
+		easy and consistent access to variability-related information, such as variation points 
+		and variant decisions, in DSLs, M2M transformations, and other contexts where variability 
+		information is produced or consumed.
+    </p>
+
+  <!--		
+		
+		<div class="homeitem">
+			<h3>Narrow column</h3>
+			<ul>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+			</ul>
+		</div>
+		<div class="homeitem">
+			<h3>Narrow column</h3>
+			<ul>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+			</ul>
+		</div>
+		<div class="homeitem3col">
+			<h3>This is a wide column</h3>
+			<ul>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+			</ul>
+		</div>
+		<hr class="clearer" />
+		<p>Some free text</p>
+		<ul class="midlist">
+			<li>list of items in free text</li>
+			<li>list of items in free text</li>
+			<li>list of items in free text</li>
+		</ul>
+		<ol>
+			<li>Ordered list</li>
+			<li>Ordered list</li>
+			<li>Ordered list</li>
+		</ol>
+		
+		-->
+		
 	</div>
+	
+	<!--
+	
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Related links</h6>
+			<ul>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+			</ul>
+		</div>
+		<div class="sideitem">
+			<h6>Related links</h6>
+			<ul>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+				<li><a href="#">Link</a> - descriptive text</li>
+			</ul>
+		</div>
+	</div>
+	
+	-->
+	
+</div>
+
 
 EOHTML;
 
