@@ -7,32 +7,32 @@
 	</description>
 
 
-	<!-- ACCELEO 0.8.0 -->
-	<category-def label="M2T ACCELEO SDK 0.8.0" name="M2T ACCELEO SDK 0.8.0">
+	<!-- JET 1.0.2 -->
+	<category-def label="M2T JET SDK 1.0.2" name="M2T JET SDK 1.0.2">
 		<description>
-M2T ACCELEO SDK 0.8.0: contains runtime, source, and documentation.
+M2T JET SDK 1.0.2: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.acceleo.doc" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.doc_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v200906120900-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v200906120900-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.examples" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.examples_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.editor" version="1.0.0.v200906120945-2--7w311A17231A11" url="features/org.eclipse.jet.editor_1.0.0.v200906120945-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.runtime" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.runtime_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.doc" version="1.0.2.v201001281539-2-17w31211239264A" url="features/org.eclipse.jet.doc_1.0.2.v201001281539-2-17w31211239264A.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.sdk" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.sdk_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.sdk" version="1.0.2.v201001281539-4-5866Eq9sMGMeJfZQJZPL" url="features/org.eclipse.jet.sdk_1.0.2.v201001281539-4-5866Eq9sMGMeJfZQJZPL.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.source" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.source_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.all" version="1.0.2.v201001281539-4-17D28T-HLxYz-ePXlhmfRK_QM" url="features/org.eclipse.jet.all_1.0.2.v201001281539-4-17D28T-HLxYz-ePXlhmfRK_QM.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo.ui.capabilities" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo.ui.capabilities_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet.source" version="1.0.2.v201001281539" url="features/org.eclipse.jet.source_1.0.2.v201001281539.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
-	<feature id="org.eclipse.acceleo" version="0.8.0.v200906220953" url="features/org.eclipse.acceleo_0.8.0.v200906220953.jar" patch="false">
-		<category name="M2T ACCELEO SDK 0.8.0"/>
+	<feature id="org.eclipse.jet" version="1.0.2.v201001281539-508cAkF78Y7VCLASCK" url="features/org.eclipse.jet_1.0.2.v201001281539-508cAkF78Y7VCLASCK.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2"/>
 	</feature>
 
 </site>
