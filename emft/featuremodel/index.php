@@ -56,10 +56,15 @@
     <p>
     The objectives of the EMF Feature Model project are the following:
 		<ul>
-    <li>Define Feature Meta Model</li>
-    <li>Define an extensible evaluation engine framework and provide an exemplary engine implementation</li>
-    <li>Provide extensible editors and visualizations for the EMF Feature Models</li>
+    <li>Define <strong>Feature Meta Model</strong></li>
+    <li>Define an extensible <strong>Evaluation Engine Framework</strong> and provide an exemplary engine implementation</li>
+    <li>Provide extensible <strong>Editors and Visualizations</strong> for the EMF Feature Models</li>
 		</ul>
+    </p>
+
+    <p>
+    A first version of the EMF Feature Model is available in the public SVN at:
+    <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.featuremodel">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.featuremodel</a>
     </p>
 
   <!--		
