@@ -33,7 +33,6 @@
 <div id="maincontent">
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		<h2>Section title</h2>
 		<p>
 		EMF Feature Model is a proposed open source project under the Eclipse Modeling Framework 
 		Technology Project (EMFT).
