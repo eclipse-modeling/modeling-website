@@ -64,7 +64,9 @@
 
     <p>
     A first version of the EMF Feature Model is available in the public SVN at:
+    <ul><li>
     <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.featuremodel">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.featuremodel</a>
+    </li></ul>
     This first release acts as base for public discussion at 
     <a href="https://dev.eclipse.org/mailman/listinfo/featuremodel-dev">EMF feature Model mailing list</a>.
     </p>
