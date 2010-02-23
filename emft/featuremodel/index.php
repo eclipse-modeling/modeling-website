@@ -54,7 +54,7 @@
     </p>
 		
 		<div class="homeitem">
-			<h3>Narrow column</h3>
+			<h3>Repository</h3>
 			<ul>
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
