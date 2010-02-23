@@ -52,19 +52,26 @@
 		and variant decisions, in DSLs, M2M transformations, and other contexts where variability 
 		information is produced or consumed.
     </p>
+    
+    <p>
+    The objectives of the EMF Feature Model project are the following:
+		<ul>
+    <li>Define Feature Meta Model</li>
+    <li>Define an extensible evaluation engine framework and provide an exemplary engine implementation</li>
+    <li>Provide extensible editors and visualizations for the EMF Feature Models</li>
+		</ul>
+    </p>
+
+  <!--		
 		
 		<div class="homeitem">
-			<h3>Repository</h3>
+			<h3>Narrow column</h3>
 			<ul>
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
 			</ul>
 		</div>
-		
-		  <!--		
-		
-		
 		<div class="homeitem">
 			<h3>Narrow column</h3>
 			<ul>
