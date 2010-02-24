@@ -24,9 +24,9 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|" .
-			"2\.6\..+/[ISR]200.*/emf-xsd-SDK-|" .
-			"3\.0\..+/[ISR]200.*mdt-ocl-.*SDK-",
+	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|" .
+			"2\.6\..+/[ISR]20.*/emf-xsd-SDK-|" .
+			"3\.0\..+/[ISR]20.*mdt-ocl-.*SDK-",
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 

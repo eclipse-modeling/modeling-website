@@ -15,15 +15,15 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I200.*/eclipse-SDK-|[SR]-.*200.*/eclipse-SDK-|" .
-			"2\.[56]\..+/[ISR]200.*/emf-xsd-SDK-|" .
-			"3\.[01]\..+/[ISR]200.*/mdt-uml2-SDK|" .
-			"1\.[34]\..+/[ISR]200.*/mdt-ocl-.*SDK-|" .
-			"1\.3\..+/[ISR]200.*/emf-query-SDK-|" .
-			"1\.3\..+/[ISR]200.*/emf-validation-SDK-|" .
-			"1\.3\..+/[ISR]200.*/emf-transaction-SDK-|" .
-			"[23]\.0\..+/[ISR]200.*/m2m-qvtoml-SDK-|" .
-			"[ISR]200.*/GEF-|" .
+	"regex" => "I20.*/eclipse-SDK-.*x86_64|[SR]-.*20.*/eclipse-SDK-.*x86_64|" .
+			"2\.6\..+/[ISR]20.*/emf-xsd-SDK-|" .
+			"3\.1\..+/[ISR]20.*/mdt-uml2-SDK|" .
+			"3\.0\..+/[ISR]20.*/mdt-ocl-.*SDK-|" .
+			"1\.4\..+/[ISR]20.*/emf-query-SDK-|" .
+			"1\.4\..+/[ISR]20.*/emf-validation-SDK-|" .
+			"1\.4\..+/[ISR]20.*/emf-transaction-SDK-|" .
+			"3\.0\..+/[ISR]20.*/m2m-qvtoml-SDK-|" .
+			"[ISR]20.*/GEF-|" .
 			"orbitBundles-.*\.map",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
