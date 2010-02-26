@@ -32,21 +32,6 @@ ob_start();
 					<li><a href="http://bugs.eclipse.org/bugs" target="_blank"><b>Bugs</b></a> | View <a href="http://dev.eclipse.org/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&email1=&emailtype1=substring&emailassigned_to1=1&email2=&emailtype2=substring&emailreporter2=1&bugidtype=include&bug_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&product=GMF&short_desc=&short_desc_type=allwordssubstr&long_desc=&long_desc_type=allwordssubstr&keywords=&keywords_type=anywords&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&order=Reuse+same+sort+as+last+time">all open</a> issues.</li>
 					<li><a href="http://www.eclipse.org/projects/project-plan.php?projectid=modeling.gmf"><b>2.3 Project Plan</b></a></li>
 		</div>
-		<div class="homeitem">
-			<h3>Events</h3>
-			<ul class="midlist">
-				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=337">Introduction to the Graphical Modeling Framework</a> tutorial at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
-				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=48">Using GMF and M2M for Model-driven-development</a> tutorial at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
-				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=320">GMF Exemplary MDD</a> long talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
-				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=184">Migrating your Graphical Editor to the Eclipse Graphical Modeling Framework</a> long talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
-				<li><a href="http://www.eclipsecon.org/2008/index.php?page=sub/&id=387">Bitter GMF, or how we did UML with GMF</a> short talk at <a href="http://www.eclipsecon.org/2008/">EclipseCon 2008</a></li>
-				<li>Subscribe to events and milestones <a target="_blank" href="feed://www.google.com/calendar/feeds/gmfdev%40gmail.com/public/basic"><img src="http://www.google.com/calendar/images/xml.gif" border=0></a>
-						<a target="_blank" href="webcal://www.google.com/calendar/ical/gmfdev%40gmail.com/public/basic.ics"><img src="http://www.google.com/calendar/images/ical.gif" border=0></a></li>
-			</ul>
-		</div>
-		<br/>
-		
-		<hr class="clearer" />
 		
 		<div class="homeitem3col">
 		<h3>What can you do with GMF?&nbsp;<a href="./gallery/index.php"><img src="http://www.eclipse.org/images/more.gif" alt="More..." /></a></h3>
