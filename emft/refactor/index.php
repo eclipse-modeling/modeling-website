@@ -34,7 +34,7 @@
 
     <div id="midcolumn">
 	<h1>$pageTitle</h1>
-	<img style="float:right" src="emfrefactor.png" alt="" style="border-width:0px"/>
+	<img style="float:right" src="/images/emfrefactor.png" alt="" style="border-width:0px"/>
 	
 	<p>
 	EMF Refactor is an open source component under <a href="http://www.eclipse.org/modeling/emft/">Eclipse EMFT</a> to provide extensible tool support for generating and applying refactorings of EMF based
