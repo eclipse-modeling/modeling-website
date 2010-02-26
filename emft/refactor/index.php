@@ -104,10 +104,15 @@ models, e.g. UML EMF models.
 		
 	</div>
 	
-	<!--	
+	
 	<div id="rightcolumn">
 	<div class="sideitem">
-
+	
+		
+   		<h6>Incubation</h6>
+   			<div align="center"><a href="/projects/what-is-incubation.php"><img align="center" src="/images/egg-incubation.png"  border="0" alt="Incubation" /></a></div>
+ 			</div>
+	<!--	
 		<h6>Related links</h6>
 		<ul>
 		<li><a href="#">Link</a> - descriptive text</li>
@@ -121,9 +126,11 @@ models, e.g. UML EMF models.
 		<li><a href="#">Link</a> - descriptive text</li>
 		<li><a href="#">Link</a> - descriptive text</li>
 		</ul>
+		-->
+		
 		</div>
 	</div>
-	-->
+	
 	
 </div>
 
