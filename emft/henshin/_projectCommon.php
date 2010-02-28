@@ -15,6 +15,6 @@ $Nav->addCustomNav("Installation", "install.php", "_self", 2);
 $Nav->addCustomNav("FAQ", "faq.php", "_self", 2);
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Henshin", "_self", 2);
 $Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/henshin-dev", "_self", 2);
-$Nav->addCustomNav("Project Summary", "http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emft.henshin", "_self", 2);
+$Nav->addCustomNav("Summary", "http://www.eclipse.org/projects/project_summary.php?projectid=modeling.emft.henshin", "_self", 2);
 
 ?>
