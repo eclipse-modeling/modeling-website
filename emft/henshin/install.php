@@ -32,11 +32,14 @@ $html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
+		You can <a href="download.php">download</a> the latest version and install it directly.
+		We recommend though to install from our update site. The URL will be announced here soon.
+
 		<h2>Sources</h2>
 		<p>
 		You can get the latest version of the source code directly from our SVN repository:
 		<ul>
-		<li>Henshin repository URL: <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</li>
+		<li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</li>
 		</ul>
 		</p>
 
