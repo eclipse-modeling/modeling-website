@@ -32,8 +32,10 @@ $html = <<<EOHTML
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
-		You can <a href="download.php">download</a> the latest version and install it directly.
+		<p>
+		You can <a href="downloads.php">download</a> the latest version and install it directly.
 		We recommend though to install from our update site. The URL will be announced here soon.
+		</p>
 
 		<h2>Sources</h2>
 		<p>
