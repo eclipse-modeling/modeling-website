@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.eclipse.team.cvs.core.cvsnature">
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo,org.eclipse.emf.teneo"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.all-feature,org.eclipse.emf.teneo.all-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.annotations,org.eclipse.emf.teneo.annotations"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/tests/org.eclipse.emf.teneo.commontest,org.eclipse.emf.teneo.commontest"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.eclipse,org.eclipse.emf.teneo.eclipse"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.eclipselink,org.eclipse.emf.teneo.eclipselink"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.eclipselink-feature,org.eclipse.emf.teneo.eclipselink-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.eclipselink.common.ui,org.eclipse.emf.teneo.eclipselink.common.ui"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.eclipselink.elistfactory,org.eclipse.emf.teneo.eclipselink.elistfactory"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/examples/org.eclipse.emf.teneo.eclipselink.examples.library,org.eclipse.emf.teneo.eclipselink.examples.library"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/tests/org.eclipse.emf.teneo.eclipselink.examples.library.orm.tests,org.eclipse.emf.teneo.eclipselink.examples.library.orm.tests"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.eclipselink.sdk-feature,org.eclipse.emf.teneo.eclipselink.sdk-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.eclipselink.ui,org.eclipse.emf.teneo.eclipselink.ui"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.hibernate,org.eclipse.emf.teneo.hibernate"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.hibernate-feature,org.eclipse.emf.teneo.hibernate-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.hibernate.eclipse,org.eclipse.emf.teneo.hibernate.eclipse"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/examples/org.eclipse.emf.teneo.hibernate.examples,org.eclipse.emf.teneo.hibernate.examples"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.hibernate.mapper,org.eclipse.emf.teneo.hibernate.mapper"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.hibernate.sdk-feature,org.eclipse.emf.teneo.hibernate.sdk-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/tests/org.eclipse.emf.teneo.hibernate.test,org.eclipse.emf.teneo.hibernate.test"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.orm,org.eclipse.emf.teneo.orm"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/plugins/org.eclipse.emf.teneo.orm.eclipse,org.eclipse.emf.teneo.orm.eclipse"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/releng/org.eclipse.emf.teneo.releng.buckminster,org.eclipse.emf.teneo.releng.buckminster"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/releng/org.eclipse.emf.teneo.releng.build.components,org.eclipse.emf.teneo.releng.build.components"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/releng/org.eclipse.emf.teneo.releng.test.components,org.eclipse.emf.teneo.releng.test.components"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/examples/org.eclipse.emf.teneo.samples,org.eclipse.emf.teneo.samples"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.site-feature,org.eclipse.emf.teneo.site-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/modeling,org.eclipse.emf/org.eclipse.emf.teneo/features/org.eclipse.emf.teneo.tests-feature,org.eclipse.emf.teneo.tests-feature"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/callisto,org.eclipse.helios.build,org.eclipse.helios.build"/>
+<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/org.eclipse,www/modeling/emf/teneo,teneo"/>
+</provider>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1265146918267_1" label="Teneo" name="Teneo">
+<item elementID="=org.eclipse.emf.teneo.hibernate.eclipse" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.hibernate.mapper" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipse" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.hibernate" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1265146985596_4" label="Teneo Build" name="Teneo Build">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.hibernate.sdk-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.hibernate-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.all-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.releng.build.components" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.eclipselink-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/teneo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.tests-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.releng.buckminster" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.eclipselink.sdk-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.site-feature" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.helios.build" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.eclipse.emf.teneo.releng.test.components" type="4"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1265146946903_2" label="Teneo EclipseLink" name="Teneo EclipseLink">
+<item elementID="=org.eclipse.emf.teneo.eclipselink.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.orm" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipselink.common.ui" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipselink.elistfactory" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.orm.eclipse" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipselink" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1265147009037_5" label="Teneo Examples" name="Teneo Examples">
+<item elementID="=org.eclipse.emf.teneo.hibernate.examples" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipselink.examples.library" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+<workingSets editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" id="1265157170752_9" label="Teneo Test" name="Teneo Test">
+<item elementID="=org.eclipse.emf.teneo.samples" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.commontest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.eclipselink.examples.library.orm.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=org.eclipse.emf.teneo.hibernate.test" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSets>
+</psf>
