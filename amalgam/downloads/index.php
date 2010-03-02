@@ -11,9 +11,8 @@ ob_start();
 		<tr><td>&nbsp;</td></tr>
 		<tr>
 			<td align="top">
-			Amalgam packages come in two flavors: the Eclipse Packaging Project style in the case of the Eclipse Modeling Tools download, and custom 
-			Eclipse product bundles tailored to specific modeler audiences.  This page provides links to the latest build for each.
-			</td>
+			Amalgam packages used to come in two flavors: the Eclipse Packaging Project style in the case of the Eclipse Modeling Tools download, and custom 
+			Eclipse product bundles tailored to specific modeler audiences. Since Helios, the Amalgam project primary focus is on the EPP Eclipse Modeling Tools download.</td>
 		</tr>
 		<tr>
 			<td align="top">
