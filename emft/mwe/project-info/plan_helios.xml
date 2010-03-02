@@ -63,33 +63,33 @@ The release deliverables have the same form as is found in most Eclipse projects
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="05/18/2009" milestone="RC1">
+      <milestone date="05/18/2010" milestone="RC1">
       	<html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMFT&amp;component=MWE&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;target_milestone=RC1">
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="05/25/2009" milestone="RC2">
+      <milestone date="05/25/2010" milestone="RC2">
       	<html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMFT&amp;component=MWE&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;target_milestone=RC2">
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="06/01/2009" milestone="RC3">
+      <milestone date="06/01/2010" milestone="RC3">
       	<html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMFT&amp;component=MWE&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;target_milestone=RC3">
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="06/08/2009" milestone="RC4">
+      <milestone date="06/08/2010" milestone="RC4">
       	<html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMFT&amp;component=MWE&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;target_milestone=RC4">
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="06/15/2009" milestone="RC5">
+      <milestone date="06/15/2010" milestone="RC5">
       	<html:p>Last build</html:p>
       	<html:a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMFT&amp;component=MWE&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;target_milestone=RC5">
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="06/23/2009" milestone="0.8.0"></milestone>
+      <milestone date="06/23/2010" milestone="0.8.0"></milestone>
   </release_milestones>
   <target_environments>
     <html:div>
