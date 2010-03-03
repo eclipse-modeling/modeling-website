@@ -6,7 +6,7 @@
    <introduction>
      <html:div>
 This document lays out the feature and API set for the
-second release of the CDO Model Repository
+third release of the CDO Model Repository
 Project (CDO), version 3.0. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
@@ -28,7 +28,7 @@ The release deliverables have the same form as is found in most Eclipse projects
          <html:div>
 Release milestone occurring at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
-final 3.5 release of the Platform, upon which CDO and other projects
+final 3.6 release of the Platform, upon which CDO and other projects
 will release simultaneously. CDO will deliver its milestones within one week of
 the Eclipse Platform. It is anticipated that CDO will synchronize its
 milestones with the Helios milestone schedule.
