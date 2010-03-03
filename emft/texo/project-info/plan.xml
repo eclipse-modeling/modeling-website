@@ -32,27 +32,27 @@ the Helios release.
         <milestone
             date="3/12/2010"
             milestone="M6">
-            <p>Code generation of entities, EMF-conversion, Runtime Model, XMI/XML persistence</p>
+            <html:div>Code generation of entities, EMF-conversion, Runtime Model, XMI/XML persistence</html:div>
         </milestone>
         <milestone
             date="4/30/2010"
             milestone="M7">
-            <p>JPA annotation generation</p>
+            <html:div>JPA annotation generation</html:div>
         </milestone>
         <milestone
             date="5/14/2010"
             milestone="RC1">
-            <p>Annotation maintenance support</p>
+            <html:div>Annotation maintenance support, JSON Webservice support</html:div>
         </milestone>
         <milestone
             date="6/11/2010"
             milestone="Final Build">
-            <p>Final Build.</p>
+            <html:div>Final Build.</html:div>
         </milestone>
         <milestone
             date="06/23/2010"
             milestone="GA">
-            <p>First downloadable incubation release</p>
+            <html:div>First downloadable incubation release</html:div>
         </milestone>
       <postamble><html:div>
 Texo will not have maintenance releases in this initial phase. Nightly builds are made available through the Hudson continuous build system.
