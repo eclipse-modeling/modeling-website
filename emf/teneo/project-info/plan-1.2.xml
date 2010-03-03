@@ -134,7 +134,7 @@ more detailed information on each.
     <theme name="Improvements and Consolidation">
       <description>
         <html:div>
-			<p>In 1.5 Teneo will have a completely new mapping strategy <a href="http://www.elver.org/hibernate/eav_mapping.html">EAV</a>.</p> 
+			<p>In 1.5 Teneo will have a completely new mapping strategy <a href="http://wiki.eclipse.org/Teneo/Hibernate/ModelRelational/Entity_Attribute_Value_Mapping">EAV</a>.</p> 
 			<p>Other improvements are mainly focused on further extending the support for Hibernate annotations.</p>
         </html:div>
       </description>
