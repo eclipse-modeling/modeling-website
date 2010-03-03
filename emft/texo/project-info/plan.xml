@@ -5,7 +5,7 @@
    <release projectid="modeling.emft.texo" version="1.0"/>
    <introduction>
      <html:div>
-This document lays out the planned features for the first release of the web
+This document lays out the planned features for the first release of the server side web
 application generation framework Texo. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
@@ -25,24 +25,37 @@ The release deliverables have the same form as is found in most Eclipse projects
       <preamble>
          <html:div>
 As Texo is in incubation and in its initial phases of development it will not be possible
-to release new versions with every milestone. Overall the goal is to deliver a first version 
-on M7. 
+to release new versions with every milestone. Overall the goal is to deliver a first version in parallel with 
+the Helios release.
          </html:div>
       </preamble>
-<milestone date="09/30/2008" milestone="M2"></milestone>
-<milestone date="11/05/2008" milestone="M3"></milestone>
-<milestone date="12/17/2008" milestone="M4"></milestone>
-<milestone date="02/03/2009" milestone="M5"></milestone>
-<milestone date="03/16/2009" milestone="M6"><html:div>API freeze</html:div></milestone>
-<milestone date="05/04/2009" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="05/18/2009" milestone="RC1"></milestone>
-<milestone date="05/25/2009" milestone="RC2"></milestone>
-<milestone date="06/01/2009" milestone="RC3"></milestone>
-<milestone date="06/08/2009" milestone="RC4"></milestone>
-<milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.0"></milestone>
+        <milestone
+            date="3/12/2010"
+            milestone="M6">
+            <p>Code generation of entities, EMF-conversion, Runtime Model, XMI/XML persistence</p>
+        </milestone>
+        <milestone
+            date="4/30/2010"
+            milestone="M7">
+            <p>JPA annotation generation</p>
+        </milestone>
+        <milestone
+            date="5/14/2010"
+            milestone="RC1">
+            <p>Annotation maintenance support</p>
+        </milestone>
+        <milestone
+            date="6/11/2010"
+            milestone="Final Build">
+            <p>Final Build.</p>
+        </milestone>
+        <milestone
+            date="06/23/2010"
+            milestone="GA">
+            <p>First downloadable incubation release</p>
+        </milestone>
       <postamble><html:div>
-Texo will not have maintenance releases in this initial phase.
+Texo will not have maintenance releases in this initial phase. Nightly builds are made available through the Hudson continuous build system.
       </html:div></postamble>
    </release_milestones>
    <target_environments>
@@ -50,15 +63,15 @@ Texo will not have maintenance releases in this initial phase.
 In order to remain current, each Eclipse release targets reasonably
 current versions of the underlying operating environments. The Texo 
 Project depends upon on the
-Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. Texo
+Platform and EMF project, which are mostly "pure" Java<html:sup>TM</html:sup>. Texo
 will target the same Java version as EMF Core, which currently requires
-Java 5. Eclipse Platform SDK 3.5 will be tested and validated on a
+Java 5. Eclipse Platform SDK 3.6 will be tested and validated on a
 number of reference platforms. Texo will be tested and validated
 against a subset of those listed for the platform.
      </html:div>
      <internationalization>
           <html:div>
-Texo is mostly a development time technology which requires no
+Texo is mostly a development time technology which requires little
 internationalization, most of the 
 components having no user interface. The remaining user interface 
 parts of Texo are considered exemplary and thus no attention has been 
