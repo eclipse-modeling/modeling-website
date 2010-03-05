@@ -96,38 +96,38 @@ M2T MTL SDK 0.7.0 I200809181315: contains runtime, source, and documentation.
 		<category name="M2T MTL SDK 0.7.0 I200809181315"/>
 	</feature>
 
-	<!-- JET 1.1.0 I201002261103 -->
-	<category-def label="M2T JET SDK 1.1.0 I201002261103" name="M2T JET SDK 1.1.0 I201002261103">
+	<!-- JET 1.1.0 I201003051502 -->
+	<category-def label="M2T JET SDK 1.1.0 I201003051502" name="M2T JET SDK 1.1.0 I201003051502">
 		<description>
-M2T JET SDK 1.1.0 I201002261103: contains runtime, source, and documentation.
+M2T JET SDK 1.1.0 I201003051502: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.jet.editor" version="1.1.0.v201002261043-20-7w312113372154" url="features/org.eclipse.jet.editor_1.1.0.v201002261043-20-7w312113372154.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
-	</feature>
-	<feature id="org.eclipse.jet.core" version="1.1.0.v200910091421-32-8s7353377F53B9" url="features/org.eclipse.jet.core_1.1.0.v200910091421-32-8s7353377F53B9.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
 	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v200906120900-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v200906120900-2--7w311A17231A11.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
 	<feature id="org.eclipse.jet.doc" version="1.1.0.v201002261043-20-7w312113372154" url="features/org.eclipse.jet.doc_1.1.0.v201002261043-20-7w312113372154.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
 	<feature id="org.eclipse.jet.source" version="1.1.0.v200910091421" url="features/org.eclipse.jet.source_1.1.0.v200910091421.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
-	<feature id="org.eclipse.jet.sdk" version="1.1.0.v200910091421-42-86A3Mz0LDOPHUNhFUOP4A35" url="features/org.eclipse.jet.sdk_1.1.0.v200910091421-42-86A3Mz0LDOPHUNhFUOP4A35.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+	<feature id="org.eclipse.jet.core" version="1.1.0.v200910091421-32-8s7353385E5778" url="features/org.eclipse.jet.core_1.1.0.v200910091421-32-8s7353385E5778.jar" patch="false">
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
-	<feature id="org.eclipse.jet" version="1.1.0.v200910091421-53-9sC7HAAIDVAQGI3924" url="features/org.eclipse.jet_1.1.0.v200910091421-53-9sC7HAAIDVAQGI3924.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+	<feature id="org.eclipse.jet.all" version="1.1.0.v200910091421-63-7MB5mpZIeUFvXz-hprjhGZLP5" url="features/org.eclipse.jet.all_1.1.0.v200910091421-63-7MB5mpZIeUFvXz-hprjhGZLP5.jar" patch="false">
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="1.1.0.v200910091421-53-9sC7HAAJBUAUCH3924" url="features/org.eclipse.jet_1.1.0.v200910091421-53-9sC7HAAJBUAUCH3924.jar" patch="false">
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
 	<feature id="org.eclipse.jet.uml2" version="1.1.0.v200910091421-2-07w311A1A152813" url="features/org.eclipse.jet.uml2_1.1.0.v200910091421-2-07w311A1A152813.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
-	<feature id="org.eclipse.jet.all" version="1.1.0.v200910091421-63-7MB5mpZIeUFuZz0hlumiGVPQ5" url="features/org.eclipse.jet.all_1.1.0.v200910091421-63-7MB5mpZIeUFuZz0hlumiGVPQ5.jar" patch="false">
-		<category name="M2T JET SDK 1.1.0 I201002261103"/>
+	<feature id="org.eclipse.jet.sdk" version="1.1.0.v200910091421-42-86A3Mz0LDOPHVLgFYKO4A35" url="features/org.eclipse.jet.sdk_1.1.0.v200910091421-42-86A3Mz0LDOPHVLgFYKO4A35.jar" patch="false">
+		<category name="M2T JET SDK 1.1.0 I201003051502"/>
 	</feature>
 
 	<!-- JET 1.0.2 M200910071234 -->
