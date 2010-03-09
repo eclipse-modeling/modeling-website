@@ -29,3 +29,14 @@ a strong {
 #rightcolumn ul {
 	margin-left: 10px;
 }
+
+#feature_xtext {
+	float: left;
+	width: 30%;
+	margin-right: 3%;
+}
+#feature_helios {
+	float: left;
+	width: 30%;
+	margin-right: 3%;
+}
