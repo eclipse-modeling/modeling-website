@@ -42,7 +42,8 @@ a strong {
 }
 #revision {
     font-size:x-small;
-    color:#cccccc;
+    color:#aaaaaa;
+    text-aligt:right;
     }
 span.footnote {
     font-size:x-small;
