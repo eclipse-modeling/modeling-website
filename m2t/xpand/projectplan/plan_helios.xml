@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml" name="Xpand">
-  <release projectid="modeling.m2t.xpand" version="0.8.0"/>
+  <release projectid="modeling.m2t.xpand" version="1.0.0"/>
   <introduction>
     <html:div>
       <html:p>
-     This document lays out the feature and API set for the next version of the Xpand (version 0.8.0).  
+     This document lays out the feature and API set for the next version of the Xpand (version 1.0.0).  
      This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.
       </html:p>
     </html:div>
@@ -89,7 +89,7 @@ The release deliverables have the same form as is found in most Eclipse projects
       	bugzillas
       	</html:a>
       </milestone>
-      <milestone date="06/23/2010" milestone="0.8.0"></milestone>
+      <milestone date="06/23/2010" milestone="1.0.0"></milestone>
   </release_milestones>
   <target_environments>
     <html:div>
@@ -119,7 +119,7 @@ parallel, and released simultaneously, with the following projects.
       <html:ul>
         <html:li>Eclipse Platform SDK version 3.6</html:li>
         <html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
-        <html:li>EMFT MWE version 0.8.0</html:li>
+        <html:li>EMFT MWE version 1.0.0</html:li>
         <html:li>EMF Compare version 1.0.0</html:li>
         <html:li>Eclipse UML2 version 3.0.0</html:li>
       </html:ul>
