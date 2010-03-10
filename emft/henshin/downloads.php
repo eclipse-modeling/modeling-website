@@ -12,9 +12,9 @@ include($App->getProjectCommon());
 
 #
 # Begin: page-specific settings.  Change these. 
-$pageTitle 		= "Henshin - Downloads";
+$pageTitle 	= "Henshin - Downloads";
 $pageKeywords	= "EMF, Henshin, model transformation, Downloads";
-$pageAuthor		= "Christian Krause";
+$pageAuthor	= "Christian Krause";
 	
 # Add page-specific Nav bars here
 # Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -30,57 +30,65 @@ $html = <<<EOHTML
 
 <div id="maincontent">
 
-	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+<div id="midcolumn">
+<h1>$pageTitle</h1>
 		
-		<p>
-		<b>The first release is scheduled for February 2010.</b>
-		</p>
+<p>
+<h3>Version 0.5.0.I201003102034</h3>
+<ol>
+<li>Runtime: 
+<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.5.0/I201003102034/henshin-runtime-incubation_0.5.0.I201003102034.zip">henshin-runtime-incubation_0.5.0.I201003102034.zip</a> 
+</li>
+<li>SDK (Runtime + Source): 
+<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.5.0/I201003102034/henshin-sdk-incubation_0.5.0.I201003102034.zip">henshin-sdk-incubation_0.5.0.I201003102034.zip</a> 
+</li>
+</ol>
 
-		<!--
+</p>
+
+<!--
 		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
+<div class="homeitem">
+<h3>Narrow column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
 		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h3>This is a wide column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<hr class="clearer" />
-		<p>Some free text</p>
-		<ul class="midlist">
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
-		</ul>
-		<ol>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-		</ol>
+<div class="homeitem">
+<h3>Narrow column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
+<div class="homeitem3col">
+<h3>This is a wide column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
+<hr class="clearer" />
+<p>Some free text</p>
+<ul class="midlist">
+<li>list of items in free text</li>
+<li>list of items in free text</li>
+<li>list of items in free text</li>
+</ul>
+<ol>
+<li>Ordered list</li>
+<li>Ordered list</li>
+<li>Ordered list</li>
+</ol>
 		
-		-->
-		
-	</div>
-		
+-->
+
+</div>
 </div>
 
 

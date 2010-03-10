@@ -29,66 +29,65 @@ $html = <<<EOHTML
 
 <div id="maincontent">
 
-	<div id="midcolumn">
-		<h1>$pageTitle</h1>
+<div id="midcolumn">
+<h1>$pageTitle</h1>
 		
-		<p>
-		You can <a href="downloads.php">download</a> the latest version and install it directly.
-		We recommend though to install from our update site. The URL will be announced here soon.
-		</p>
+<p>
+You can <a href="downloads.php">download</a> the latest version and install it directly.
+We recommend though to install from our update site. The URL will be announced here soon.
+</p>
 
-		<h2>Sources</h2>
-		<p>
-		You can get the latest version of the source code directly from our SVN repository:
-		<ul>
-		<li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</li>
-		</ul>
-		</p>
+<h2>Sources</h2>
+<p>
+You can get the latest version of the source code directly from our SVN repository:
+<ul>
+<li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</li>
+</ul>
+</p>
 
-		<!--
+<!--
+
+<div class="homeitem">
+<h3>Narrow column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
 		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
+<div class="homeitem">
+<h3>Narrow column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
+<div class="homeitem3col">
+<h3>This is a wide column</h3>
+<ul>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
+</ul>
+</div>
+<hr class="clearer" />
+<p>Some free text</p>
+<ul class="midlist">
+<li>list of items in free text</li>
+<li>list of items in free text</li>
+<li>list of items in free text</li>
+</ul>
+<ol>
+<li>Ordered list</li>
+<li>Ordered list</li>
+<li>Ordered list</li>
+</ol>
+	
+-->
 		
-		<div class="homeitem">
-			<h3>Narrow column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<div class="homeitem3col">
-			<h3>This is a wide column</h3>
-			<ul>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-				<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-			</ul>
-		</div>
-		<hr class="clearer" />
-		<p>Some free text</p>
-		<ul class="midlist">
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
-			<li>list of items in free text</li>
-		</ul>
-		<ol>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-			<li>Ordered list</li>
-		</ol>
-		
-		-->
-		
-	</div>
-		
+</div>
 </div>
 
 EOHTML;
