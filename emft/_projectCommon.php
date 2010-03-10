@@ -48,6 +48,7 @@ $cvscoms = array(
 		"emf4net" => "org.eclipse.emf.emf4net",
 		"emfatic" => "org.eclipse.emf.emfatic",
 		"emfindex" => "org.eclipse.emf.emfindex",
+		"egf" => "org.eclipse.emf.egf",
 		"eef" => "org.eclipse.emf.eef"
 		/* add more here */
 	)
