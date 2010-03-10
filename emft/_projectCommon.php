@@ -60,6 +60,7 @@ $projects = array(
 	"Search" => "search",
 	"EMFatic" => "emfatic",
 	"EEF" => "eef",
+	"Eclipse Generation Factories" => "egf",
 	"Modeling Workflow" => "mwe",
 	"EMF Index" => "emfindex",
 	// graduated
