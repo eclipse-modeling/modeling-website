@@ -44,7 +44,8 @@ a strong {
     font-size:x-small;
     color:#aaaaaa;
     text-aligt:right;
+    align:right;
     }
-#midcolumn span.small {
+span.small {
     font-size:x-small;
 }
