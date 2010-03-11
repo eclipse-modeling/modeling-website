@@ -20,7 +20,7 @@ org.eclipse.emf.ocl,143882,Edward Willink,small,cdamus
 org.eclipse.ocl,176110,Edward Willink,46145,cdamus
 org.eclipse.ocl,198451,Andreas Werner,150,cdamus
 org.eclipse.ocl,206147,Edward Willink,116,cdamus
-org.elcipse.ocl,191504,Adolfo Sanchez-Barbudo Herrera,35,cdamus
+org.eclipse.ocl,191504,Adolfo Sanchez-Barbudo Herrera,35,cdamus
 org.eclipse.ocl,213753,Edward Willink,2,cdamus
 org.eclipse.ocl,213755,Edward Willink,1,cdamus
 org.eclipse.ocl,152003,Ed Merks,16,cdamus
@@ -55,11 +55,13 @@ org.eclipse.ocl,242880,aigdalov,607,cdamus
 org.eclipse.ocl,242880,aigdalov,185,cdamus
 org.eclipse.ocl,266320,aigdalov,12,cdamus
 org.eclipse.ocl,265066,radvorak,25,cdamus
-org.eclipse.ocl,294200,Patrick Könemann,25,ewillink
-
-Section 3 (Third Party Software),,,,
-
+org.eclipse.ocl.examples.interpreter,294200,Patrick Könemann,25,ewillink
+org.eclipse.ocl.examples.project.royalandloyal,"246639, CQ 2652","Anneke Kleppe, Jos Warmer, Miguel Garcia",812,ewillink
+,,,,
+"Section 3 (Third Party Software)",,,,
+,,,,
 Library Name,CQ,CVS Location,License,Usage,
 LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
 LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
-LPG Java Runtime v1.1,1081,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+LPG Java Runtime v1.1,(No longer in use) 1081,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
+LPG Java Runtime v2.0.17,3656,/cvsroot/tools/org.eclipse.orbit/lpg.runtime.java v2_0_17,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
