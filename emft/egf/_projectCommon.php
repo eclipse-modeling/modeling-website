@@ -10,8 +10,8 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	$Nav->addNavSeparator("Project Home", 	"downloads.php");
-	$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
-	$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
+	$Nav->addCustomNav("Downloads", 		"http://www.eclipse.org/downloads/download.php?file=/egf/tool/egf_0.2.3.201003081742.zip", 	"_self", 2);
+	$Nav->addCustomNav("Installation", 		"http://wiki.eclipse.org/EGF_Installation", 		"_self", 2);
 	$Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
 
 
