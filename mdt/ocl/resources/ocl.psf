@@ -11,14 +11,14 @@
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.ecore.edit,org.eclipse.ocl.ecore.edit,"/>
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.uml.edit,org.eclipse.ocl.uml.edit,"/>
 		
-		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.capabilities,org.eclipse.ocl.capabilities,"/>
+		<!--project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.capabilities,org.eclipse.ocl.capabilities,"/-->
 		
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/tests/org.eclipse.ocl.tests,org.eclipse.ocl.tests,"/>
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/tests/org.eclipse.ocl.ecore.tests,org.eclipse.ocl.ecore.tests,"/>
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/tests/org.eclipse.ocl.uml.tests,org.eclipse.ocl.uml.tests,"/>
 
-		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/tests/org.eclipse.ocl.uml.tests,org.eclipse.ocl.uml.tests,"/>
-
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/examples/org.eclipse.emf.ocl.examples.interpreter,org.eclipse.emf.ocl.examples.interpreter,"/>
+
+		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/releng,org.eclipse.ocl.releng,"/>
 	</provider>
 </psf>
