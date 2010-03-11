@@ -55,6 +55,7 @@ $cvscoms = array(
 );
 
 $projects = array(
+    "B3" => "b3",
 	"Compare" => "compare",
 	"Ecore Tools" => "ecoretools",
 	"Mint" => "mint",
