@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/m2m/updates/milestones/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/m2m/updates/milestones/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2m/updates/ ... -->
+
+	<description url="http://download.eclipse.org/modeling/m2m/updates/milestones/site.xml">
+	To install these plugins, point Eclipse at this site. 
+	</description>
+
+
+	<!-- ATL 3.1.0M6 S201003150617 -->
+	<category-def label="M2M ATL SDK 3.1.0M6 S201003150617" name="M2M ATL SDK 3.1.0M6 S201003150617">
+		<description>
+M2M ATL SDK 3.1.0M6 S201003150617: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.m2m.atl" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.sdk" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl.sdk_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.profiler" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl.profiler_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.doc" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl.doc_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.examples" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl.examples_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+	<feature id="org.eclipse.m2m.atl.source" version="3.1.0.v201003150617" url="features/org.eclipse.m2m.atl.source_3.1.0.v201003150617.jar" patch="false">
+		<category name="M2M ATL SDK 3.1.0M6 S201003150617"/>
+	</feature>
+
+</site>
