@@ -33,7 +33,7 @@ $options = array (
 
 	"EmailDefault" => "boris.gruschko@sap.com,anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list
 	
-    "Users" => array("nickb","nickb",NULL) /* build user, eclipse cvs user, IES cvs user */
+    "Users" => array("ahunter","ahunter",NULL) /* build user, eclipse cvs user, IES cvs user */
 );
 
 ?>
