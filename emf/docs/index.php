@@ -60,6 +60,10 @@ print <<<EOHTML
 	<h3>EMF Tutorials</h3>
 
 	<ul>
+		<li><div>March 2010</div><a href="http://www.vogella.de/articles/EclipseEMF/article.html">A Tour of the Eclipse Modeling Framework</a><br/>
+			Contributed by Lars Vogel
+		</li>
+		
 		<li>
 			<div>May 31 2006</div><a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/tutorials/clibmod/clibmod.html">Tutorial: Generating an EMF Model</a>
 		</li>
@@ -642,4 +646,4 @@ $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
-<!-- $Id: index.php,v 1.26 2009/07/27 18:47:42 davidms Exp $ -->
+<!-- $Id: index.php,v 1.27 2010/03/15 20:23:49 emerks Exp $ -->
