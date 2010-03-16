@@ -44,6 +44,7 @@
       <sitesURLS>http://download.itemis.com/updates/milestones</sitesURLS>
       <overview summary="Xtext is a framework for development of programming languages and domain&#xA;specific languages (DSLs). Just describe your very own DSL using Xtext's simple&#xA;EBNF grammar language and the generator will create a parser, an AST-meta model&#xA;(implemented in EMF) as well as a full-featured Eclipse text editor from that.&#xA;&#xA;The Framework integrates with frameworks from Eclipse Modeling such as EMF, GMF&#xA;and M2T as well as other Eclipse based technologies. Development with Xtext is&#xA;optimized for short turn-arounds, so that adding new features to an existing&#xA;DSL is a matter of minutes. Still sophisticated programming languages can be&#xA;implemented." screenshot="images/xtext-screenshot-320x240.png"/>
       <id>de.itemis.xtext.antlr.sdk</id>
+      <id>org.eclipse.xtext.sdk</id>
     </components>
   </categories>
   <categories name="Modeler" description="Modeling environment tools." relevance="3">
