@@ -47,8 +47,10 @@
     </components>
   </categories>
   <categories name="Modeler" description="Modeling environment tools." relevance="3">
-    <components name="Papyrus UML" provider="Eclipse.org" license="EPL" groups="//@filters.0" incubation="true" visible="false">
+    <components name="UML2 Tools" provider="Eclipse.org" description="The UML2Tools component is a set of the UML 2.1 compatible diagram editors, based on the Eclipse GMF framework" license="EPL" groups="//@filters.0" image32="" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
+      <overview summary="UML2Tools provides support for Class, Composite Structure, Component,&#xA;Deployment, UseCase, Activity and StateMachine diagram. It also contains&#xA;supplementary Profile Definition diagram, enabling the visual integration of&#xA;the custom defined stereotypes with the other supported diagrams." screenshot="images/uml2tools-screenshot-320x240.png"/>
+      <id>org.eclipse.uml2tools</id>
     </components>
   </categories>
   <categories name=" Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="2">
@@ -68,9 +70,7 @@
     <components name="MoDisCo" provider="Eclipse.org" description="MoDisco is an extensible framework to develop model-driven tools for software modernization projects." license="EPL" groups="//@filters.0" image32="images/modisco.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
       <overview summary="MoDisco provides standard metamodels to describe existing systems, discoverers&#xA;to automaticaly create models from Java and XML source code, and generic tools&#xA;to understand and transform complex models.&#xA;" screenshot="images/modisco-screenshot-320x240.png" url="http://www.eclipse.org/gmt/modisco/"/>
-      <id>org.eclipse.gmt.modisco.java</id>
-      <id>org.eclipse.gmt.modisco.xml</id>
-      <id>org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.infrastructure&#xA;org.eclipse.gmt.modisco.intrastructure</id>
+      <id>org.eclipse.gmt.modisco.sdk</id>
     </components>
   </categories>
   <filters name="Incubation"/>
