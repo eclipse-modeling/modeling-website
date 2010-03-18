@@ -11,7 +11,7 @@
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.ecore.edit,org.eclipse.ocl.ecore.edit,"/>
 		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/plugins/org.eclipse.ocl.uml.edit,org.eclipse.ocl.uml.edit,"/>
 
-		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/releng,org.eclipse.ocl.releng,"/>
+		<project reference="1.0,:pserver:anonymous@dev.eclipse.org:/cvsroot/modeling,org.eclipse.mdt/org.eclipse.ocl/releng,org.eclipse.ocl-releng,"/>
 		
 		<!-- Further PSFs may be found in org.eclipse.ocl.releng/psfs -->
 	</provider>
