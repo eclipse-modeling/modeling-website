@@ -7,26 +7,26 @@
 	</description>
 
 
-	<!-- MINT 0.9.0M5 S201002022130 -->
-	<category-def label="EMFT MINT SDK 0.9.0M5 S201002022130" name="EMFT MINT SDK 0.9.0M5 S201002022130">
+	<!-- MINT 0.9.0M6 S201003171406 -->
+	<category-def label="EMFT MINT SDK 0.9.0M6 S201003171406" name="EMFT MINT SDK 0.9.0M6 S201003171406">
 		<description>
-EMFT MINT SDK 0.9.0M5 S201002022130: contains runtime, source, and documentation.
+EMFT MINT SDK 0.9.0M6 S201003171406: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.mint.sdk" version="0.9.0.v201002022130" url="features/org.eclipse.emf.mint.sdk_0.9.0.v201002022130.jar" patch="false">
-		<category name="EMFT MINT SDK 0.9.0M5 S201002022130"/>
+	<feature id="org.eclipse.emf.mint.examples" version="0.9.0.v201003171406" url="features/org.eclipse.emf.mint.examples_0.9.0.v201003171406.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M6 S201003171406"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.source" version="0.9.0.v201002022130" url="features/org.eclipse.emf.mint.source_0.9.0.v201002022130.jar" patch="false">
-		<category name="EMFT MINT SDK 0.9.0M5 S201002022130"/>
+	<feature id="org.eclipse.emf.mint.doc" version="0.9.0.v201003171406" url="features/org.eclipse.emf.mint.doc_0.9.0.v201003171406.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M6 S201003171406"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.examples" version="0.9.0.v201002022130" url="features/org.eclipse.emf.mint.examples_0.9.0.v201002022130.jar" patch="false">
-		<category name="EMFT MINT SDK 0.9.0M5 S201002022130"/>
+	<feature id="org.eclipse.emf.mint" version="0.9.0.v201003171406" url="features/org.eclipse.emf.mint_0.9.0.v201003171406.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M6 S201003171406"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint.doc" version="0.9.0.v201002022130" url="features/org.eclipse.emf.mint.doc_0.9.0.v201002022130.jar" patch="false">
-		<category name="EMFT MINT SDK 0.9.0M5 S201002022130"/>
+	<feature id="org.eclipse.emf.mint.sdk" version="0.9.0.v201003171406" url="features/org.eclipse.emf.mint.sdk_0.9.0.v201003171406.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M6 S201003171406"/>
 	</feature>
-	<feature id="org.eclipse.emf.mint" version="0.9.0.v201002022130" url="features/org.eclipse.emf.mint_0.9.0.v201002022130.jar" patch="false">
-		<category name="EMFT MINT SDK 0.9.0M5 S201002022130"/>
+	<feature id="org.eclipse.emf.mint.source" version="0.9.0.v201003171406" url="features/org.eclipse.emf.mint.source_0.9.0.v201003171406.jar" patch="false">
+		<category name="EMFT MINT SDK 0.9.0M6 S201003171406"/>
 	</feature>
 
 </site>
