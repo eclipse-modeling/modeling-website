@@ -51,7 +51,7 @@ models, e.g. UML EMF models.
 	</p>
 	
 	<p>
-	A first community technical preview is targeted in spring 2010.
+	A first community technical preview is targeted May 15, 2010.
 	</p>
 		
 	<p>
