@@ -9,6 +9,7 @@
 	# Define your project-wide Nav bars here.
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
+	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling.emft.refactor", "_self", 2);
 	$Nav->addNavSeparator("Project Home", 	"index.php");
 	$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
 	$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
