@@ -3,6 +3,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 
+/* redirect for emft projects */
+if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && in_array($_GET["project"],$emft_redirects))
+{
+        header("Location: " . $emft_redirects[$_GET["project"]]);
+        exit;
+}
+
 ob_start();
 ?>
 
