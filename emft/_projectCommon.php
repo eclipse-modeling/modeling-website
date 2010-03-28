@@ -81,6 +81,7 @@ $projects = array(
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
+/* if set, both home and download page will redirect to a different landing page */
 $emft_redirects = array("texo" => "http://wiki.eclipse.org/Texo/Download_and_Install");
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
