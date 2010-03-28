@@ -4,8 +4,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 /* redirect for emft projects */
 if ($_GET["debug"] == 99){
 print_r($emft_redirects);
-print "<br/>".$_GET["project"]."<br/>";
-print "<br/>".$emft_redirects[$_GET["project"]]."<br/>";
+print "<br/>1".$_GET["project"];
+print "<br/>2".$emft_redirects[$_GET["project"]];
+print "<br/>3";
+print is_array($emft_redirects);
+print "<br/>4";
+print in_array($_GET["project"],$emft_redirects);
+
 }
 
 if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && in_array($_GET["project"],$emft_redirects))
