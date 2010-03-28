@@ -81,7 +81,7 @@ $projects = array(
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
-$emft_redirects = array("Texo" => "http://wiki.eclipse.org/Texo/Download_and_Install");
+$emft_redirects = array("texo" => "http://wiki.eclipse.org/Texo/Download_and_Install");
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("coordinated","jcrm","temporality", "emf4net", "emfatic"); //components with only information, no downloads, or no builds available yet, "projectkey"
