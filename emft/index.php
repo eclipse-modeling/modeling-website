@@ -13,7 +13,7 @@ print in_array($_GET["project"],$emft_redirects);
 
 }
 
-if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && in_array($_GET["project"],$emft_redirects))
+if (isset($_GET["project"]) && isset($emft_redirects) && is_array($emft_redirects) && array_key_exists($_GET["project"],$emft_redirects))
 {
         header("Location: " . $emft_redirects[$_GET["project"]]);
         exit;
