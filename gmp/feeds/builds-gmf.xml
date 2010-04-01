@@ -4,11 +4,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>gmf Builds</title>
   <link href="http://download.eclipse.org/modeling/gmf/feeds/builds-gmf.xml" rel="self" type="application/atom+xml"/>
-  <updated>2010-03-26T14:25:57Z</updated>
+  <updated>2010-04-01T15:12:25Z</updated>
   <author>
     <name>gmf Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/gmf/feeds/builds-gmf.xml</id>
+  <entry>
+    <title>[announce] gmf I201004010009 (2.3.0.I201004010009) is available</title>
+    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I201004010009#I201004010009"/>
+    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I201004010009#I201004010009</id>
+    <updated>2010-04-01T15:12:25Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="201004010009" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I201004010009#I201004010009" type="I" vanityname="I201004010009" version="2.3.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.3.0/I201004010009/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/gmf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=I201004010009
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-I201004010009.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.3.0/I201004010009/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/eclipse-SDK-3.6M6-linux-gtk-x86_64.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.6.0/I201001101746/emf-xsd-SDK-I201001101746.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.6.0/S201003151457/emf-xsd-SDK-2.6.0M6.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/transaction/downloads/drops/1.4.0/S201003162118/emf-transaction-SDK-1.4.0M6.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/m2m/qvtoml/downloads/drops/3.0.0/S201003160736/m2m-qvtoml-SDK-3.0.0M6.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/gef/downloads/drops/3.6.0/S201003151526/GEF-SDK-3.6.0M6.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/orbit/downloads/drops/S20100308015149/orbitBundles-S20100308015149.map</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/query/downloads/drops/1.4.0/S201003161832/emf-query-SDK-1.4.0M6.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/validation/downloads/drops/1.4.0/S201003162050/emf-validation-SDK-1.4.0M6.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/mdt/ocl/downloads/drops/3.0.0/S201003152029/mdt-ocl-SDK-3.0.0M6.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/mdt/uml2/downloads/drops/3.1.0/S201003152024/mdt-uml2-SDK-3.1.0M6.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] gmf I201003260005 (2.3.0.I201003260005) is available</title>
     <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=I201003260005#I201003260005"/>
