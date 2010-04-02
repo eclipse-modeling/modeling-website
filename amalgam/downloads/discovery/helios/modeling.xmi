@@ -11,7 +11,7 @@
       <overview summary="JET allows you to easily generate textual artifacts in the Eclipse environment&#xA;in a syntax similar to JSP. It supplies tag libraries for navigating XML&#xA;documents, EMF-based documents (including UML2) and for writing template&#xA;results to the Eclipse workspace.&#xA;" url="http://wiki.eclipse.org/M2T-JET"/>
       <id>org.eclipse.jet.sdk</id>
     </components>
-    <components name="Xpand" provider="Eclipse.org" description="Xpand is an efficient code generation framework with a statically-typed template language and support for arbitrary input model types." license="EPL" groups="//@filters.0" incubation="true">
+    <components name="Xpand" provider="Eclipse.org" description="Xpand is an efficient code generation framework with a statically-typed template language and support for arbitrary input model types." license="EPL" groups="//@filters.0" image32="images/xpand.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
       <overview summary="Xpand allows to write code generators for many different types of models. These&#xA;models include EMF models, UML models, XML documents and textual DSL models.&#xA;Any type of source code can be generated from the model sources. Xpand has&#xA;strong emphasize on reducing the effort to create industry-strength code&#xA;generators and provides outstanding Eclipse integration.&#xA;&#xA;Xpand's features include:&#xA; &#x2022; support of various modeling tools&#xA; &#x2022; support of EMF (Eclipse Modeling Framework)&#xA; &#x2022; model-to-code transformations&#xA; &#x2022; model-to-model transformations             &#xA; &#x2022; model validation&#xA; &#x2022; expression language&#xA; &#x2022; static code analysis&#xA; &#x2022; aspect oriented programming&#xA; &#x2022; support for standalone execution" screenshot="images/xpand-screenshot-320x240.png"/>
       <id>org.eclipse.xpand.sdk</id>
@@ -68,7 +68,7 @@
     </components>
   </categories>
   <categories name="Reverse Engineering" description="Tools focused on getting models from source code." relevance="1">
-    <components name="MoDisCo" provider="Eclipse.org" description="MoDisco is an extensible framework to develop model-driven tools for software modernization projects." license="EPL" groups="//@filters.0" image32="images/modisco.png" incubation="true">
+    <components name="MoDisco" provider="Eclipse.org" description="MoDisco is an extensible framework to develop model-driven tools for software modernization projects." license="EPL" groups="//@filters.0" image32="images/modisco.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
       <overview summary="MoDisco provides standard metamodels to describe existing systems, discoverers&#xA;to automaticaly create models from Java and XML source code, and generic tools&#xA;to understand and transform complex models.&#xA;" screenshot="images/modisco-screenshot-320x240.png" url="http://www.eclipse.org/gmt/modisco/"/>
       <id>org.eclipse.gmt.modisco.sdk</id>
