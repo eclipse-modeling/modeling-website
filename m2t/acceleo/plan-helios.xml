@@ -9,7 +9,7 @@
      The Acceleo component is an open source component under the Eclipse Modeling / Model-To-Text (M2T) project.
      Its primary goal is to provide an implementation of the MOF Model-To-Text OMG standard.
      For Helios, this is the first time we plan to graduate under Eclipse. We also plan to grow the version number from 1.0.0 to 3.0.0 because
-     the last release of Acceleo outside of Eclipse was the 2.6.0 version (Acceleo.org). We are also in the process of transferring the community,
+     the last release of Acceleo outside of Eclipse was the 2.7.0 version (Acceleo.org). We are also in the process of transferring the community,
      and for a community point of view, it is clearer to graduate and set the new Eclipse version as 3.0.0.
      </html:div>
    </introduction>
@@ -113,7 +113,7 @@ the time frame for availability.
 	    	<html:ul>
 	    <html:li>Workflow facilities for acceleo.</html:li>
 	    <html:li>Compatibility with other Eclipse modeling projects like QVTo, ATL, JET, and Xpand.</html:li>
-	    <html:li>A wizard to migrate an Acceleo template from the 2.6 version to the 3.0 version.</html:li>
+	    <html:li>A wizard to migrate an Acceleo template from the 2.x version to the 3.0 version.</html:li>
 	    	</html:ul>
 	    </description>
      </theme>
