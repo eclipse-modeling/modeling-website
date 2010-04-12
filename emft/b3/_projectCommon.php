@@ -16,7 +16,7 @@
 	$Nav->addCustomNav("Documentation", "/modeling/emft/b3/documentation/", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/emft/b3/support/", "_self", 3);
 	$Nav->addCustomNav("Getting Involved", "/modeling/emft/b3/developers/", "_self", 3);
-	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling.emft.b3", "_self", 3);
+	$Nav->addNavSeparator("About This Project", "/projects/project_summary.php?projectid=modeling.emft.b3");
 	
 	$pageKeywords	= "eclipse, jgit, git, vcs";
 	$pageAuthor		= "Henrik Lindberg";
