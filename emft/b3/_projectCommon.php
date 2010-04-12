@@ -11,12 +11,12 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	$Nav->setLinkList(array());
+	$Nav->addNavSeparator("About This Project", "/projects/project_summary.php?projectid=modeling.emft.b3");
 	$Nav->addNavSeparator("b3", 	"/modeling/emft/b3/");
 	$Nav->addCustomNav("Download", "/modeling/emft/b3/download/", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/emft/b3/documentation/", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/emft/b3/support/", "_self", 3);
 	$Nav->addCustomNav("Getting Involved", "/modeling/emft/b3/developers/", "_self", 3);
-	$Nav->addNavSeparator("About This Project", "/projects/project_summary.php?projectid=modeling.emft.b3");
 	
 	$pageKeywords	= "eclipse, jgit, git, vcs";
 	$pageAuthor		= "Henrik Lindberg";
