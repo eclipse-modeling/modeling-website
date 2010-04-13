@@ -34,7 +34,7 @@
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "payrus, mdt, modeling, uml2, uml, sysml, marte, idm, mde, mda, dsl, dsml";
 	$pageAuthor		= "Sébastien Gérard";
-	# $pageTitle 		= "Papyrus";
+	$pageTitle 		= "Papyrus";
 
 
 	# top navigation bar
@@ -43,7 +43,7 @@
 	# $Menu->addMenuItem("Home", "/project", "_self");
 	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
 	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
+	$Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
