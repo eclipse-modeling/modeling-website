@@ -1,0 +1,49 @@
+# $Id.$
+# set to the dir where update_tags.sh script is, in order to resolve options file, releng plugins file, and ../scripts/sendEmailSimple.php
+WORKING_DIR="/home/www-data/modeling-releng-common/tools/org.eclipse.releng.tools.tagandrelease"
+
+# comma separated list of email addresses - NO SPACES!
+MAILING_LIST="gmf-releng@dev.eclipse.org"
+
+#####################################################################
+# Development CVS - where your plugins|features|fragments are located
+#####################################################################
+
+# user name on development CVS
+DEV_CVS_USER="ahunter"
+
+DEV_CVSROOT=':ext:'${DEV_CVS_USER}'@dev.eclipse.org:/cvsroot/modeling'
+
+# if your DEV_CVSROOT is not "pserver" you must specify the path to
+# your RSH replacement here - otherwise, just leave it as ""
+DEV_CVS_RSH="ssh"
+
+# if your DEV_CVSROOT *is* "pserver", then you must specify the path
+# to a .cvspass file that will allow you to run commands on your
+# dev CVS repo.
+DEV_CVS_PASS="${WORKING_DIR}/.cvspass"
+
+# branch from your plugin|feature|fragment CVS which contains the latest
+# revision of your plugin.  It is from this branch that your modules
+# are compared and will be tagged if they have changed
+DEV_BRANCH="R2_2_maintenance"
+
+#####################################################################
+# CS CVS Variables - for Eclipse projects, use same as above
+#####################################################################
+CS_CVS_USER="${DEV_CVS_USER}"
+CS_CVSROOT="${DEV_CVSROOT}"
+
+# the branch that map modules will be checked out of and back in to
+CS_BRANCH="${DEV_BRANCH}"
+
+# This is the version of your map module that will be pulled from CS CVS
+# it also represents the tag that will be moved to the new revision should
+# your map module be changed and committed back to CS CVS
+MAP_PLUGIN_VERSION="autotag${DEV_BRANCH}"
+
+# define path to releng project containing map(s)
+MAP_PLUGIN="org.eclipse.gmf/org.eclipse.gmf.releng"
+
+#define script to run if map file is changed, eg., to run a build immediately
+EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf -buildType M -version 2.2.2 -cvsbranch R2_2_maintenance -basebuilderBranch R35_RC4 -searchcvs gmf.releng -noSearchCVS -a -email gmf-releng@eclipse.org,nickboldt+build@gmail.com -regex M200.*/eclipse-SDK-|R-.*200.*/eclipse-SDK-|R200.*/emf-xsd-SDK-|R200.*/mdt-uml2-SDK|R200.*/mdt-ocl-.*SDK-|R200.*/emf-query-SDK-|R200.*/emf-validation-SDK-|R200.*/emf-transaction-SDK-|R200.*/GEF-SDK-|GEF-SDK-M|orbitBundles-"
