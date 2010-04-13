@@ -22,7 +22,7 @@
 	# these are optional
 	
 	# If you want to override the eclipse.org navigation, uncomment below.
-	# $Nav->setLinkList(array());
+	$Nav->setLinkList(array());
 	
 	# Break the navigation into sections
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
