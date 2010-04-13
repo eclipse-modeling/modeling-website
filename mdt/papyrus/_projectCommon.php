@@ -25,16 +25,16 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
+	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
+	$Nav->addCustomNav("Download", "/default/download.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support.php", "_blank", 3);
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
-	# $pageTitle 		= "Xtext";
+	$pageKeywords	= "payrus, mdt, modeling, uml2, uml, sysml, marte, idm, mde, mda, dsl, dsml";
+	$pageAuthor		= "Sébastien Gérard";
+	# $pageTitle 		= "Papyrus";
 
 
 	# top navigation bar

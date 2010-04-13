@@ -6,7 +6,7 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
- * Contributors:
+ * Contributors: Sébastien Gérard, CEA LIST
  *    
  *******************************************************************************/
 
@@ -16,9 +16,9 @@
 	$localVersion = false;
 	
 	# Define these here, or in _projectCommon.php for site-wide values
-	$pageKeywords	= "eclipse, project";
-	$pageAuthor		= "Your name";
-	$pageTitle 		= "My project home";
+	$pageKeywords	= "eclipse, project, payrus, uml, sysml, marte, mde, mda, idm, dsl, dsml";
+	$pageAuthor		= "Sebastien Gerard";
+	$pageTitle 		= "Papyrus home";
 	
 	
 	// 	# Paste your HTML content between the EOHTML markers!
