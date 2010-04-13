@@ -39,7 +39,7 @@
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
-	# $Menu->setMenuItemList(array());
+	$Menu->setMenuItemList(array());
 	# $Menu->addMenuItem("Home", "/project", "_self");
 	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
 	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
