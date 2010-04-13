@@ -22,7 +22,7 @@
 	
 	
 	// 	# Paste your HTML content between the EOHTML markers!
-	$html = file_get_contents('modeling/mdt/papyrus/description/_index.html');
+	$html = file_get_contents('modeling/mdt/papyrus/pages/_index.html');
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
