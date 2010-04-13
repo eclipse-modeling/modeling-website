@@ -21,7 +21,7 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	
-	$Nav->setLinkList(array());
+	#$Nav->setLinkList(array());
 	$Nav->addNavSeparator("About Papyrus", 	"/modeling/mdt/papyrus");
 	$Nav->addCustomNav("Download", "/default/download.php", "_self", 2);
 	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 2);
