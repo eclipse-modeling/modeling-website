@@ -28,7 +28,7 @@
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
 	$Nav->addCustomNav("Download", "/default/download.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/support.php", "_blank", 3);
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
