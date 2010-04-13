@@ -30,11 +30,18 @@
 	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
 	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	
+	#$Nav->setLinkList(array());
+	#$Nav->addNavSeparator("About Papyrus", 	"/modeling/mdt/papyrus");
+	#$Nav->addCustomNav("Download", "/default/download.php", "_self", 2);
+	#$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 2);
+	#$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/support.php", "_blank", 2);
+	#$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 2);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
-	# $pageTitle 		= "Xtext";
+	$pageKeywords	= "payrus, mdt, modeling, uml2, uml, sysml, marte, idm, mde, mda, dsl, dsml";
+	$pageAuthor		= "Sébastien Gérard";
+	$pageTitle 		= "Papyrus";
 
 
 	# top navigation bar
@@ -43,7 +50,7 @@
 	# $Menu->addMenuItem("Home", "/project", "_self");
 	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
 	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
+	# $Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
