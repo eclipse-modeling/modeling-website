@@ -21,12 +21,22 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	
+	# If you want to override the eclipse.org navigation, uncomment below.
+	# $Nav->setLinkList(array());
+	
+	# Break the navigation into sections
+	$Nav->addNavSeparator("MyProject", 	"/default");
+	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	
 	#$Nav->setLinkList(array());
-	$Nav->addNavSeparator("About Papyrus", 	"/modeling/mdt/papyrus");
-	$Nav->addCustomNav("Download", "/default/download.php", "_self", 2);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 2);
-	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/support.php", "_blank", 2);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 2);
+	#$Nav->addNavSeparator("About Papyrus", 	"/modeling/mdt/papyrus");
+	#$Nav->addCustomNav("Download", "/default/download.php", "_self", 2);
+	#$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 2);
+	#$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/support.php", "_blank", 2);
+	#$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 2);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "payrus, mdt, modeling, uml2, uml, sysml, marte, idm, mde, mda, dsl, dsml";
@@ -40,7 +50,7 @@
 	# $Menu->addMenuItem("Home", "/project", "_self");
 	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
 	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	$Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/support.php", "_self");
+	# $Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
