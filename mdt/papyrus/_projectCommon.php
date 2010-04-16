@@ -8,6 +8,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
+ * Sebastien Gerard
  *    
  *******************************************************************************/
 
@@ -21,20 +22,17 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	
-	# If you want to override the eclipse.org navigation, uncomment below.
-	# $Nav->setLinkList(array());
-	
-	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	$Nav->setLinkList(array());
+	$Nav->addNavSeparator("Papyrus", 	"/Modeling/mdt/papyrus");
+	$Nav->addCustomNav("Download", "/Modeling/mdt/papyrus/download.php", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/Modeling/mdt/papyrus/documentation.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/Modeling/mdt/papyrus/support.php", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/Modeling/mdt/papyrus/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
-	# $pageTitle 		= "Xtext";
+	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
+	$pageAuthor		= "Sebastien Gerard";
+	$pageTitle 		= "Papyrus";
 
 
 	# top navigation bar

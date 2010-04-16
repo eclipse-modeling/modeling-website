@@ -7,18 +7,19 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
+ * Sebastien Gerard
  *    
  *******************************************************************************/
 
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/Modeling/mdt/papyrus/style.css"/>');
 	
 	$localVersion = false;
 	
 	# Define these here, or in _projectCommon.php for site-wide values
-	$pageKeywords	= "eclipse, project";
-	$pageAuthor		= "Your name";
-	$pageTitle 		= "My project home";
+	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
+	$pageAuthor		= "Sebastien Gerard";
+	$pageTitle 		= "Papyrus";
 	
 	
 	// 	# Paste your HTML content between the EOHTML markers!
