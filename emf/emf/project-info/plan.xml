@@ -48,19 +48,23 @@ It is anticipated that EMF Core will synchronize its milestones
 with any changes to the Helios milestone schedule.
          </div>
       </preamble>
-<milestone date="08/13/2008" milestone="M1"></milestone>
-<milestone date="09/24/2008" milestone="M2"></milestone>
-<milestone date="11/05/2008" milestone="M3"></milestone>
-<milestone date="12/17/2008" milestone="M4"></milestone>
-<milestone date="02/03/2009" milestone="M5"></milestone>
-<milestone date="03/16/2009" milestone="M6"><div xmlns="http://www.w3.org/1999/xhtml">API freeze</div></milestone>
-<milestone date="05/04/2009" milestone="M7"><div xmlns="http://www.w3.org/1999/xhtml">Feature Freeze</div></milestone>
-<milestone date="05/18/2009" milestone="RC1"></milestone>
-<milestone date="05/25/2009" milestone="RC2"></milestone>
-<milestone date="06/01/2009" milestone="RC3"></milestone>
-<milestone date="06/08/2009" milestone="RC4"></milestone>
-<milestone date="06/15/2009" milestone="RC5"></milestone>
-<milestone date="06/28/2009" milestone="2.6.0"></milestone>
+	<milestone date="08/19/2009" milestone="M1" />
+    <milestone date="09/30/2009" milestone="M2" />
+    <milestone date="11/11/2009" milestone="M3" />
+    <milestone date="12/16/2009" milestone="M4" />
+    <milestone date="02/03/2010" milestone="M5" />
+    <milestone date="03/17/2010" milestone="M6">
+      <html:div>API Freeze</html:div>
+    </milestone>
+    <milestone date="05/05/2010" milestone="M7">
+      <html:div>Feature Freeze</html:div>
+    </milestone>
+    <milestone date="05/19/2010" milestone="RC1" />
+    <milestone date="05/26/2010" milestone="RC2" />
+    <milestone date="06/02/2010" milestone="RC3" />
+    <milestone date="06/09/2010" milestone="RC4" />
+    <milestone date="06/16/2010" milestone="Final" />
+    <milestone date="06/23/2010" milestone="Helios" />
       <postamble>
         <div xmlns="http://www.w3.org/1999/xhtml">
 EMF Core will produce maintenance releases to align with the Galileo Service Releases as needed
