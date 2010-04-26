@@ -35,7 +35,7 @@ ob_start();
 
 <!-- Middle part -->
 <div id="midcolumn">
-<img style="float:right" src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>
+<img src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>
 <h1>Papyrus Update Sites</h1>
 <h3>How to add the Papyrus update site</h3>
 <p align="JUSTIFY">
