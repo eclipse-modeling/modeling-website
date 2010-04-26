@@ -24,7 +24,7 @@
 	
 	$Nav->setLinkList(array());
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
-	$Nav->addCustomNav("Download", "/modeling/mdt/papyrus/downloads/download.php", "_self", 3);
+	$Nav->addCustomNav("Download", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/documentation.php", "_blank", 3);
 	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support.php", "_blank", 3);
 	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developers", "_blank", 3);
