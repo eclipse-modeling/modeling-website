@@ -65,7 +65,8 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <p>
 <h4>Development update sites:</h4>
 <ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
+<!--<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>-->
+<li>Coming soon!</li>
 </ul>
 </p>
 
