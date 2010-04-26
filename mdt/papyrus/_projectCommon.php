@@ -23,11 +23,11 @@
 	# these are optional
 	
 	$Nav->setLinkList(array());
-	$Nav->addNavSeparator("Papyrus", 	"/Modeling/mdt/papyrus");
-	$Nav->addCustomNav("Download", "/Modeling/mdt/papyrus/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/Modeling/mdt/papyrus/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/Modeling/mdt/papyrus/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/Modeling/mdt/papyrus/developers", "_blank", 3);
+	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
+	$Nav->addCustomNav("Download", "/modeling/mdt/papyrus/downloads/download.php", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/documentation.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support.php", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
