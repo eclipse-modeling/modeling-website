@@ -12,6 +12,32 @@
  *    
  *******************************************************************************/
 
+	// project root
+	$PR = "modeling/mdt/papyrus";
+	$PR_www = "modeling/mdt/papyrus";
+	$projectName = "Papyrus";
+	$projects = array("Papyrus" => "papyrus");
+	//$projects = array();
+	//$defaultProj = "papyrus";
+
+	$extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
+	$nodownloads = array(); //components with only information, no downloads, or no builds available yet, "projectkey"
+	$nonewsgroup = array(); //components without newsgroup
+	$nomailinglist = array(); //components without mailinglist
+	$incubating = true; // components which are incubating
+	$nomenclature = "Project"; //are we dealing with "components" or "projects"?
+	
+	$buildtypes = array(
+		"R" => "Release",
+		"S" => "Stable",
+		"I" => "Integration",
+		"M" => "Maintenance",
+		"N" => "Nightly"
+	);
+	
+	include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
+	
+
 	# Set the theme for your project's web pages.
 	# See http://eclipse.org/phoenix/
 	$theme = "Nova";
