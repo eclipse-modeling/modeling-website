@@ -78,4 +78,35 @@ EMF TRANSACTION SDK 1.4.0 I201004291202: contains runtime, source, and documenta
 		<category name="EMF TRANSACTION SDK 1.4.0 I201004291202"/>
 	</feature>
 
+	<!-- QUERY 1.4.0 I201004282337 -->
+	<category-def label="EMF QUERY SDK 1.4.0 I201004282337" name="EMF QUERY SDK 1.4.0 I201004282337">
+		<description>
+EMF QUERY SDK 1.4.0 I201004282337: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.emf.query.doc" version="1.4.0.v20100428-2315-33-8s733L466A3AE72" url="features/org.eclipse.emf.query.doc_1.4.0.v20100428-2315-33-8s733L466A3AE72.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.source" version="1.4.0.v20100428-2315-218Z7w311A142A1142" url="features/org.eclipse.emf.query.source_1.4.0.v20100428-2315-218Z7w311A142A1142.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl" version="1.4.0.v20100428-2315-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl_1.4.0.v20100428-2315-3--7w311A232602735.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query" version="1.4.0.v20100428-2315-218Z7w311A142A1142" url="features/org.eclipse.emf.query_1.4.0.v20100428-2315-218Z7w311A142A1142.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.sdk" version="1.4.0.v20100428-2315-67J-95GFz01DOIuNNRTWK_NPj507" url="features/org.eclipse.emf.query.sdk_1.4.0.v20100428-2315-67J-95GFz01DOIuNNRTWK_NPj507.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples.source" version="1.4.0.v20100428-2315" url="features/org.eclipse.emf.query.examples.source_1.4.0.v20100428-2315.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.examples" version="1.4.0.v20100428-2315-677-AkF78Y8FEY7MOGC" url="features/org.eclipse.emf.query.examples_1.4.0.v20100428-2315-677-AkF78Y8FEY7MOGC.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.4.0.v20100428-2315-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl.source_1.4.0.v20100428-2315-3--7w311A232602735.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0 I201004282337"/>
+	</feature>
+
 </site>
