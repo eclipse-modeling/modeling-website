@@ -6,14 +6,10 @@ $options = array (
 
 	"BranchAndJDK" => array (
         "localhost=------------,------------",
-        "2.3.0=HEAD,/opt/sun-java2-5.0",
-        "2.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
-        "2.2.2=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "1.4.0=HEAD,/opt/sun-java2-5.0",
 
         "modeling.eclipse.org=------------,------------",
-        "2.3.0=HEAD,/opt/sun-java2-6.0_64",
-        "2.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
-        "2.2.2=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "1.4.0=HEAD,/opt/sun-java2-6.0_64",
 
 	),
 
@@ -28,7 +24,6 @@ $options = array (
 			"1\.4\..+/[ISR]20.*/emf-query-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-validation-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-transaction-SDK-|" .
-			"3\.0\..+/[ISR]20.*/m2m-qvtoml-runtime-|" .
 			"[ISR]20.*/GEF-|" .
 			"orbitBundles-.*\.map",
 
