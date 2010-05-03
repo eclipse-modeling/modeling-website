@@ -35,7 +35,8 @@ $dls = array(
 		"GMF Runtime" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"GMF Runtime Master" => "runtime-Master",
-			"GMF Runtime Examples" => "examples",
+			"GMF Runtime SDK (Runtime, Source, Examples)" => "runtime-sdk",
+			"GMF Runtime Examples" => "runtime-examples",
 			"GMF Runtime Tests" => "runtime-tests",
 			"GMF Runtime" => "runtime",
 		)
