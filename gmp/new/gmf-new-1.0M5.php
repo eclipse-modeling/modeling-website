@@ -53,8 +53,8 @@ include ($App->getProjectCommon());
 				<tr>
 					<td width="69%" class="bannertext">
 						Here are some of the more noteworthy things available in milestone build M5 
-  						(March 03, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M5-200603031600/index.php" target="_self">download</a>. 
-  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M5-200603031600/buildNotes.php">M5 build notes</a> for details about bugs fixed and other changes.
+  						(March 03, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M5-200603031600/index.php" target="_self">download</a>. 
+  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M5-200603031600/buildNotes.php">M5 build notes</a> for details about bugs fixed and other changes.
 					</td>
 				</tr>
 			</tbody>
@@ -132,7 +132,7 @@ Migrated existing animation classes in GMF to new animation classes in GEF (Layo
     		<td align="right" valign="top" width="10%">
       			<b>PNG Support</b>
     		</td>
-    		<td align="left" valign="top" width="70%">A new image format PNG is now supported via the "Save as Image File…"
+    		<td align="left" valign="top" width="70%">A new image format PNG is now supported via the "Save as Image Fileï¿½"
 <br/><br/>
 First choose the "Save As Image File.." from the right mouse context menu.<br/><br/><center><img src="images1.0m5/image001.jpg"></center>
 <br/><br/>
@@ -144,7 +144,7 @@ Then choose the drop down to select the image file format.  Choose "PNG".<br/><b
     		<td align="right" valign="top" width="10%">
       			<b>Improved Layout</b>
     		</td>
-    		<td align="left" valign="top" width="70%">There is a new layout provider that considers contained children is now available.  Previously, the layout providers that were available only operated in a single container context and clients would have to manually select each container they wishes to arrange.  Now, this new layout will recursively enter each child in the layout container and arrange it’s contents as well.  By default, these CompositeTopDownLayoutProvider and CompositeLeftRightLayoutProvider are not installed as the default layout provider for clients.  If clients wish to utilize it, they must create a layout provider that subclasses on these providers and provide for their diagram type and the LayoutType.DEFAULT type.  This is instrumented in the logic example. 
+    		<td align="left" valign="top" width="70%">There is a new layout provider that considers contained children is now available.  Previously, the layout providers that were available only operated in a single container context and clients would have to manually select each container they wishes to arrange.  Now, this new layout will recursively enter each child in the layout container and arrange itï¿½s contents as well.  By default, these CompositeTopDownLayoutProvider and CompositeLeftRightLayoutProvider are not installed as the default layout provider for clients.  If clients wish to utilize it, they must create a layout provider that subclasses on these providers and provide for their diagram type and the LayoutType.DEFAULT type.  This is instrumented in the logic example. 
 <br/><br/>
 @see org.eclipse.gmf.examples.runtime.diagram.logic.internal.providers.LogicLayoutProvider.
 <br/><br/>

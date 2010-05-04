@@ -1,1 +1,1 @@
-<?php header('Location: /modeling/gmf/?project=gmf-tooling'); ?>
+<?php header('Location: /modeling/gmp/?project=gmf-tooling'); ?>

@@ -53,8 +53,8 @@ include ($App->getProjectCommon());
 				<tr>
 					<td width="69%" class="bannertext">
 						Here are some of the more noteworthy things available in milestone build M4 
-  						(January 13, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M4-200601131500/index.php" target="_self">download</a>. 
-  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M4-200601131500/buildNotes.php">M4 build notes</a> for details about bugs fixed and other changes.
+  						(January 13, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M4-200601131500/index.php" target="_self">download</a>. 
+  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M4-200601131500/buildNotes.php">M4 build notes</a> for details about bugs fixed and other changes.
 					</td>
 				</tr>
 			</tbody>
@@ -282,7 +282,7 @@ Audit rules are then evaluated by EMFT ModelValidationService which is called in
 				In addition, the infrastructure to support having shapes border around existing shapes was refactored 
 				to simplify the API and make it more intuitive to use.  There are now two main interfaces, one representing 
 				the shape that resides on the border (IBorderItemEditPart) and the shape that holds the border shapes along 
-				it’s border (IBorderedShapeEditPart). 
+				itï¿½s border (IBorderedShapeEditPart). 
     		</td>    		
   		</tr>
   		
@@ -364,12 +364,12 @@ Audit rules are then evaluated by EMFT ModelValidationService which is called in
     		First of all the option is there now for clients to create an EditPart that points directly to a semantic element instead 
     		of creating a notation view that references the semantic element.  This can produce significant savings for an EditPart 
     		that is displayed but has no user settable or configurable display for the view.  For instance, a list compartment that 
-    		has list items may all be configured the same and as such don’t need to be able to persist view notation for each list item.  
+    		has list items may all be configured the same and as such donï¿½t need to be able to persist view notation for each list item.  
     		For this case there is a new api class SemanticListCompartmentEditPart that supports list item EditParts that point directly 
     		to the semantic list items.
     		<br/><br/>
 			Another memory saving is for notation views that are created initially as not visible.  Previously, even if the notation 
-			view wasn’t visible, the EditPart and Figure were created in memory anyways.  Now, if the child view is not visible when the 
+			view wasnï¿½t visible, the EditPart and Figure were created in memory anyways.  Now, if the child view is not visible when the 
 			parent EditPart is created, then the EditPart is not created until the view is made visible through an explicit action (i.e. Show/Hide Compartment ).
 			<br/></br/>
 			In terms of performance, the SVG rendering has been improved dramatically achieving up to 50% improvement in most cases.  
@@ -400,7 +400,7 @@ Audit rules are then evaluated by EMFT ModelValidationService which is called in
     		<td align="right" valign="top" width="10%">
       			<b>API Work</b>
     		</td>
-    		<td align="left" valign="top" width="70%">API continued to be a focus in M4 to ensure that the public api will be scalable and solid for future releases to accommodate backward compatibility.  Specifically, we have created a new EMFT sub-project “Transaction” defining a new API for transactional editing domains and some improvements in the OCL parser API.  Documentation of the Transaction API will be available in the next iteration; so far there is Javadoc and an example plug-in (org.eclipse.emf.workbench.examples.library.editor) to help you get started.
+    		<td align="left" valign="top" width="70%">API continued to be a focus in M4 to ensure that the public api will be scalable and solid for future releases to accommodate backward compatibility.  Specifically, we have created a new EMFT sub-project ï¿½Transactionï¿½ defining a new API for transactional editing domains and some improvements in the OCL parser API.  Documentation of the Transaction API will be available in the next iteration; so far there is Javadoc and an example plug-in (org.eclipse.emf.workbench.examples.library.editor) to help you get started.
 			<br/>
 			Some minor changes were made in the OCL API, as follows:<br/><br/>
 			<b>Package org.eclipse.emf.ocl.helper:</b>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site pack200="true" digestURL="http://download.eclipse.org/modeling/gmf/updates/interim/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/gmf/updates/interim/site.xml&amp;format=xml">
-	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/updates/ ... -->
+<site pack200="true" digestURL="http://download.eclipse.org/modeling/gmp/updates/interim/" mirrorsURL="http://www.eclipse.org/modeling/download.php?file=/modeling/gmp/updates/interim/site.xml&amp;format=xml">
+	<!-- to track downloads, use absolute paths instead: http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmp/updates/ ... -->
 
-	<description url="http://download.eclipse.org/modeling/gmf/updates/interim/site.xml">
+	<description url="http://download.eclipse.org/modeling/gmp/updates/interim/site.xml">
 	To install these plugins, point Eclipse at this site. 
 	</description>
 

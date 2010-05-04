@@ -53,8 +53,8 @@ include ($App->getProjectCommon());
 				<tr>
 					<td width="69%" class="bannertext">
 						Here are some of the more noteworthy things available in milestone build M6 
-  						(April 14, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M6-200604142204/index.php" target="_self">download</a>. 
-  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M6-200604142204/buildNotes.php">M6 build notes</a> for details about bugs fixed and other changes.
+  						(April 14, 2006) which is now available for <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M6-200604142204/index.php" target="_self">download</a>. 
+  						<br/><br/>See the <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M6-200604142204/buildNotes.php">M6 build notes</a> for details about bugs fixed and other changes.
 					</td>
 				</tr>
 			</tbody>

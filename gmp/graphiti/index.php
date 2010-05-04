@@ -1,1 +1,1 @@
-<?php header('Location: /modeling/gmf/?project=graphiti'); ?>
+<?php header('Location: /modeling/gmp/?project=graphiti'); ?>

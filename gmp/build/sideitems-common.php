@@ -7,13 +7,13 @@ function sidebar()
 	<div class="sideitem">
 		<h6>GMF Update Sites</h6>
 		<ul>
-			<li><a href="http://download.eclipse.org/modeling/gmf/updates/releases/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmp/updates/releases/site.xml">
 			Release builds</a></li>
-			<li><a href="http://download.eclipse.org/modeling/gmf/updates/milestones/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmp/updates/milestones/site.xml">
 			Milestone builds</a></li>
-			<li><a href="http://download.eclipse.org/modeling/gmf/updates/interim/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmp/updates/interim/site.xml">
 			Integration builds</a></li>
-			<li><a href="http://download.eclipse.org/modeling/gmf/update-site/europa/site.xml">
+			<li><a href="http://download.eclipse.org/modeling/gmp/update-site/europa/site.xml">
 			Europa builds</a></li>
 		</ul>
 	</div>
@@ -36,8 +36,8 @@ function sidebar()
 		<ul>
 			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=GMF&amp;component=<?php echo $projct; ?>&amp;bug_status=ASSIGNED">Assigned Bugs</a></li>
 			<li><a href="https://bugs.eclipse.org/bugs/buglist.cgi?product=GMF&amp;component=<?php echo $projct; ?>&amp;bug_status=RESOLVED&changedin=7">Resolved Bugs This Week</a></li>
-			<li><a href="http://www.eclipse.org/modeling/gmf/searchcvs.php?q=branch%3A+HEAD+days%3A+7">Development This Week</a></li>
-			<li><a href="http://www.eclipse.org/modeling/gmf/searchcvs.php?q=branch%3A+R+days%3A+7">Maintenance This Week</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmp/searchcvs.php?q=branch%3A+HEAD+days%3A+7">Development This Week</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmp/searchcvs.php?q=branch%3A+R+days%3A+7">Maintenance This Week</a></li>
 		</ul>
 	</div>
 	<?php

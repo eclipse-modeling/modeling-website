@@ -3,29 +3,29 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>gmf Builds</title>
-  <link href="http://download.eclipse.org/modeling/gmf/feeds/builds-gmf-N.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://download.eclipse.org/modeling/gmp/feeds/builds-gmf-N.xml" rel="self" type="application/atom+xml"/>
   <updated>2009-03-13T16:04:36Z</updated>
   <author>
     <name>gmf Build Team</name>
   </author>
-  <id>http://download.eclipse.org/modeling/gmf/feeds/builds-gmf-N.xml</id>
+  <id>http://download.eclipse.org/modeling/gmp/feeds/builds-gmf-N.xml</id>
   <entry>
     <title>[announce] gmf N200903131042 (2.2.0.N200903131042) is available</title>
-    <link href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042"/>
-    <id>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042</id>
+    <link href="http://www.eclipse.org/modeling/gmp/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042"/>
+    <id>http://www.eclipse.org/modeling/gmp/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042</id>
     <updated>2009-03-13T16:04:36Z</updated>
     <summary>
-      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200903131042" href="http://www.eclipse.org/modeling/gmf/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042" type="N" vanityname="N200903131042" version="2.2.0">
-        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/N200903131042/" log="buildlog.txt" map="directory.txt"/>
-        <update>http://download.eclipse.org/modeling/gmf/updates/</update>
-        <downloads>http://www.eclipse.org/modeling/gmf/downloads/?project=gmf</downloads>
-        <releasenotes>http://www.eclipse.org/modeling/gmf/news/relnotes.php?project=gmf&amp;version=N200903131042
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="200903131042" href="http://www.eclipse.org/modeling/gmp/downloads/?project=gmf&amp;showAll=1&amp;hlbuild=N200903131042#N200903131042" type="N" vanityname="N200903131042" version="2.2.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmp/gmf/downloads/drops/2.2.0/N200903131042/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/gmp/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/gmp/downloads/?project=gmf</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/gmp/news/relnotes.php?project=gmf&amp;version=N200903131042
           </releasenotes>
         <releases>
           <release arch="ALL" os="ALL" type="SDK" ws="ALL">gmf-sdk-experimental-N200903131042.zip</release>
         </releases>
         <tests>
-          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmf/gmf/downloads/drops/2.2.0/N200903131042/testResults.php" type="junit">
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/gmp/gmf/downloads/drops/2.2.0/N200903131042/testResults.php" type="junit">
             <result arch="ALL" os="ALL" ws="ALL">PASS</result>
           </test>
         </tests>

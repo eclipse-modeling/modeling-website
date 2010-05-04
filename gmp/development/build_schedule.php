@@ -65,7 +65,7 @@ Times are all CEST (GMT +2)</p>
       <td rowspan="5"><b>RC1</b></td>
       <td width="22%">Friday April 14</td>
       <td width="65%">20:00 I build</td>
-      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M6-200604142204/index.php">
+      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M6-200604142204/index.php">
       	  <img src="http://www.eclipse.org/gmf/images/OK.gif"/>
       	</a>
       </td>
@@ -94,7 +94,7 @@ Times are all CEST (GMT +2)</p>
       <td rowspan="5"><b>RC2</b></td>
       <td width="22%">Friday April 28</td>
       <td width="65%">20:00 I build</td>
-      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0RC2-200605051750/index.php">
+      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0RC2-200605051750/index.php">
       	  <img src="http://www.eclipse.org/gmf/images/OK.gif"/>
       	</a>
     </tr>
@@ -122,7 +122,7 @@ Times are all CEST (GMT +2)</p>
       <td rowspan="5"><b>RC3</b></td>
       <td width="22%">Friday May 12</td>
       <td width="65%">20:00 I build</td>
-      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0RC3-200605191300/index.php">
+      <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0RC3-200605191300/index.php">
       	  <img src="http://www.eclipse.org/gmf/images/OK.gif"/></a>
       </td>
     </tr>
@@ -150,7 +150,7 @@ Times are all CEST (GMT +2)</p>
       <td rowspan="5"><b>RC4</b></td>
       <td width="22%">Wednesday May 24</td>
       <td width="65%">20:00 I build</td>
-       <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0RC4a-200606091400/index.php">
+       <td rowspan="5"><a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0RC4a-200606091400/index.php">
       	  <img src="http://www.eclipse.org/gmf/images/OK.gif"/></a>
       	</td>
     </tr>

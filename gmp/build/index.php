@@ -1,1 +1,1 @@
-<?php header("Location: /modeling/gmf/gmf/build/"); ?>
+<?php header("Location: /modeling/gmp/gmf/build/"); ?>

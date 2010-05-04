@@ -24,22 +24,22 @@ ob_start();
 					href="http://wiki.eclipse.org/index.php/GMF_Tutorial"
 					target="_self">Tutorial</a></li>
 				<li><a href="http://wiki.eclipse.org/index.php/GMF_Development_Guidelines">Development Guidelines</a></li>
-				<li><a href="http://www.eclipse.org/modeling/gmf/development/index.php">Developer Resources</a></li>
+				<li><a href="http://www.eclipse.org/modeling/gmp/development/index.php">Developer Resources</a></li>
 				<li><a href="http://help.eclipse.org/ganymede/index.jsp">Online Documentation</a></li>
-				<li><a href="http://www.eclipse.org/modeling/gmf/downloads/">Downloads</a></li>
+				<li><a href="http://www.eclipse.org/modeling/gmp/downloads/">Downloads</a></li>
 			</ul>
 		</div>
 		
 	<div class="sideitem">
 		<h6>News</h6>
-		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "http://www.eclipse.org/modeling/gmf/news/news.xml")); ?>
+		<?php getNews(4, "whatsnew", file_get_contents($_SERVER["DOCUMENT_ROOT"] . "http://www.eclipse.org/modeling/gmp/news/news.xml")); ?>
 		<ul>
-			<li><a href="http://www.eclipse.org/modeling/gmf/news-whatsnew.php">Older news</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmp/news-whatsnew.php">Older news</a></li>
 		</ul>
 	</div>
 
 	<div class="sideitem">
-		<h6><a href="/modeling/gmf/feeds/"><img style="float:right" alt="Build Feeds" src="http://www.eclipse.org/modeling/images/rss-atom10.gif"/></a>
+		<h6><a href="/modeling/gmp/feeds/"><img style="float:right" alt="Build Feeds" src="http://www.eclipse.org/modeling/images/rss-atom10.gif"/></a>
 		<?php 
 		$tmp = array_flip($projects);
 		print ($tmp && isset($tmp[$proj]) && $tmp[$proj] ? $tmp[$proj] . " " : "");
@@ -47,7 +47,7 @@ ob_start();
 		Build News</h6>
 		<?php build_news($cvsprojs, $cvscoms, $proj); ?>
 		<ul>
-			<li><a href="http://www.eclipse.org/modeling/gmf/news-whatsnew.php#build">Other build news</a></li>
+			<li><a href="http://www.eclipse.org/modeling/gmp/news-whatsnew.php#build">Other build news</a></li>
 		</ul>
 	</div>
 

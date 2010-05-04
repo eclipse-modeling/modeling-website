@@ -80,7 +80,7 @@ $filePre = array(
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
 /* end config */
 
-if ($isBuildServer) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/gmf/build/sideitems-common.php"; }
+if ($isBuildServer) { include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/gmp/build/sideitems-common.php"; }
 require_once($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/downloads-common.php");
 
 $html = ob_get_contents();

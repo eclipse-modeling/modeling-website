@@ -53,8 +53,8 @@ include ($App->getProjectCommon());
 		<tr>
 			<td width="69%" class="bannertext">
 			Here are some of the more noteworthy things available in milestone build M3 
-  	(November 18, 2005) which is now available for <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M3-200511182000/index.php" target="_self">download</a>. 
-  	See the <a href="http://download.eclipse.org/modeling/gmf/downloads/drops/S-1.0M3-200511182000/buildNotes.php">M3 build notes</a> for details about bugs fixed 
+  	(November 18, 2005) which is now available for <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M3-200511182000/index.php" target="_self">download</a>. 
+  	See the <a href="http://download.eclipse.org/modeling/gmp/downloads/drops/S-1.0M3-200511182000/buildNotes.php">M3 build notes</a> for details about bugs fixed 
   	and other changes.
 			</td>
 		</tr>
@@ -90,22 +90,22 @@ include ($App->getProjectCommon());
     		<td align="left" valign="top" width="70%">
     			API continued to be a focus in M3 to ensure that the public
 api will be scalable and solid for future releases to accommodate backward
-compatibility.  Specifically, we aimed to have consistent nomenclature with GEF
+compatibility.ï¿½ Specifically, we aimed to have consistent nomenclature with GEF
 (i.e. ?Connection? as opposed to ?Connector?, ensure intuitive naming and that
-any redundancies were identified and removed.  Additionally we made sure that
+any redundancies were identified and removed.ï¿½ Additionally we made sure that
 internal API that should be accessible external was made public and documented
 accordingly.<br/><br/>
 
 A significant change is the support for different coordinate
-systems.  Previous to M3, clients were expected to use the HiMetric coordinate
+systems.ï¿½ Previous to M3, clients were expected to use the HiMetric coordinate
 system (2540 units per inch) when initializing their figures and when
-manipulating the model.  Now this requirement has been relaxed so that clients
+manipulating the model.ï¿½ Now this requirement has been relaxed so that clients
 not interested in the precision or absolute qualities of HiMetric can utilize
-an Identity mapping mode.  This means that essentially device coordinates
-(pixels) are equal to logical coordinates (persisted units).  This mode is more
-similar to how existing GEF clients would be expected to work.  This change
+an Identity mapping mode.ï¿½ This means that essentially device coordinates
+(pixels) are equal to logical coordinates (persisted units).ï¿½ This mode is more
+similar to how existing GEF clients would be expected to work.ï¿½ This change
 should ease migration for existing GEF clients or clients that don?t need a
-precision coordinate system for their Editor.  The default coordinate system
+precision coordinate system for their Editor.ï¿½ The default coordinate system
 continues to be HiMetric, so clients need make overrides to enter this new mode
 (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=112788">112788</a>
 ).
@@ -117,12 +117,12 @@ continues to be HiMetric, so clients need make overrides to enter this new mode
       			<p align="right"><b>Performance Enhancements</b></p>
     		</td>
     		<td align="left" valign="top" width="70%">GMF runtime is designed for scalability through our extensibility
-infrastructure and component based architecture.  However, this requires that
+infrastructure and component based architecture.ï¿½ However, this requires that
 we pay close attention to performance issues with respect to loading of
-diagrams and creation of elements.  In M3 we dedicated time to profiling the
+diagrams and creation of elements.ï¿½ In M3 we dedicated time to profiling the
 runtime and identifying some bottlenecks that were prohibiting maximum
-performance.  The following list of issues was addressed to ensure performance
-won?t degrade when clients add their own domain functionality to GMF services. 
+performance.ï¿½ The following list of issues was addressed to ensure performance
+won?t degrade when clients add their own domain functionality to GMF services.ï¿½
 Most of then are removing redundancy where figures were created before they
 were needed, ensuring caching for repeated calls and making sure that execution
 was not carried out when not needed.
@@ -133,12 +133,12 @@ was not carried out when not needed.
     		<td align="left" valign="top" width="10%">
       			<p align="right"><b>Usability</b></p>
     		</td>
-    		<td align="left" valign="top" width="70%">Some minor usability enhancements have been made in M3. 
+    		<td align="left" valign="top" width="70%">Some minor usability enhancements have been made in M3.ï¿½
 Notable one is the ability to drag and drop from the tool creation palette onto
-the diagram surface.  Previously, you had to click on the tool entry and then
-re-click on the diagram surface to invoke the creation.  Now you can click on
+the diagram surface.ï¿½ Previously, you had to click on the tool entry and then
+re-click on the diagram surface to invoke the creation.ï¿½ Now you can click on
 the tool entry and without releasing the mouse drag onto the diagram surface
-and the creation will be invoked.  This has been available in GEF for a while but
+and the creation will be invoked.ï¿½ This has been available in GEF for a while but
 our creation mechanism is different requiring some additional work to support
 this use-case.
     		<hr/></td>
@@ -149,8 +149,8 @@ this use-case.
     		</td>
     		<td align="left" valign="top" width="70%">A programmer?s guide for the diagram runtime has been
 introduced that provides a general introduction to the architecture and usage
-scenarios.  This has been added to the Documentation component available from
-the nightly builds.  After you?ve installed this component into your Eclipse
+scenarios.ï¿½ This has been added to the Documentation component available from
+the nightly builds.ï¿½ After you?ve installed this component into your Eclipse
 development environment, then it is accessible from the ?Help Contents? menu.
     		</td>
     	</tr>

@@ -1,12 +1,12 @@
 <?php
 $Nav->setLinkList(null);
 
-$PR = "modeling/gmf";
-$projectName = "GMF";
+$PR = "modeling/gmp";
+$projectName = "GMP";
 $defaultProj = "/gmf";
 
-$isGMFserver = true; // (preg_match("/^ltahunter61(?:\.ottawa\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
-$isBuildServer = (preg_match("/^(emft|modeling|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isGMFserver;
+$isEMFserver = (preg_match("/^emf(?:\.torolab\.ibm\.com)$/", $_SERVER["SERVER_NAME"]));
+$isBuildServer = (preg_match("/^(emft|modeling|build)\.eclipse\.org$/", $_SERVER["SERVER_NAME"])) || $isEMFserver;
 $isBuildDotEclipseServer = $_SERVER["SERVER_NAME"] == "build.eclipse.org";
 $isWWWserver = (preg_match("/^(?:www.|)eclipse.org$/", $_SERVER["SERVER_NAME"]));
 $isEclipseCluster = (preg_match("/^(?:www.||download.|download1.|build.)eclipse.org$/", $_SERVER["SERVER_NAME"]));

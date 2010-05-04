@@ -65,7 +65,7 @@ include ($App->getProjectCommon());
 	<h4>ECore Diagram Example</h4>
 		<p>Using the GMF ECore editor example, you can visually model and edit any EMF *.ecore model. You can render your 
 		 existing models via a simple right-click. Until a separate 
-		download for this example is available, you can get it with the rest of GMF's examples <a href="http://download.eclipse.org/modeling/gmf/downloads/index.php">here</a>.</p>
+		download for this example is available, you can get it with the rest of GMF's examples <a href="http://download.eclipse.org/modeling/gmp/downloads/index.php">here</a>.</p>
 		<a href="cbe_ecore.png" target="_blank"><img height="384" width="512" src="cbe_ecore.png"/></a>
 		<br/>
 		<hr/>

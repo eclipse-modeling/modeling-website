@@ -1,10 +1,10 @@
 <?php 
 if ($_SERVER["SERVER_NAME"] != "www.eclipse.org") {
-	header("Location: http://www.eclipse.org/modeling/gmf/updates/");
+	header("Location: http://www.eclipse.org/modeling/gmp/updates/");
 }
 require_once ("../../includes/buildServer-common.php");
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
-require($_SERVER["DOCUMENT_ROOT"] . "/modeling/gmf/build/sideitems-common.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/gmp/build/sideitems-common.php");
 
 $PRS = array();
 

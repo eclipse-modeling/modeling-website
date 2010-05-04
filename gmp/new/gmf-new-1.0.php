@@ -53,8 +53,8 @@ include ($App->getProjectCommon());
 				<tr>
 					<td width="69%" class="bannertext">
 						Here are some of the more noteworthy things available in release build 1.0 
-  						(June 30, 2006) which is now available for <a href="http://download3.eclipse.org/modeling/gmf/downloads/drops/R-1.0-200606271200/index.php" target="_self">download</a>. 
-  						<br/><br/>See the <a href="http://download3.eclipse.org/modeling/gmf/downloads/drops/R-1.0-200606271200/buildNotes.php">R1.0 build notes</a> for details about bugs fixed and other changes.
+  						(June 30, 2006) which is now available for <a href="http://download3.eclipse.org/modeling/gmp/downloads/drops/R-1.0-200606271200/index.php" target="_self">download</a>. 
+  						<br/><br/>See the <a href="http://download3.eclipse.org/modeling/gmp/downloads/drops/R-1.0-200606271200/buildNotes.php">R1.0 build notes</a> for details about bugs fixed and other changes.
 					</td>
 				</tr>
 				<tr>
