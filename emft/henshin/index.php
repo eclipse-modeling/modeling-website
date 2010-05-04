@@ -42,10 +42,6 @@ $html = <<<EOHTML
 	
 	$description
 		
-	<p>
-	<b>The first release is planned for February 2010.</b>
-	</p>
-
 	<!--
 		
 	<div class="homeitem">
