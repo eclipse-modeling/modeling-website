@@ -7,77 +7,6 @@
 	</description>
 
 
-	<!-- VALIDATION 1.4.0M5 S201002021148 -->
-	<category-def label="EMF VALIDATION SDK 1.4.0M5 S201002021148" name="EMF VALIDATION SDK 1.4.0M5 S201002021148">
-		<description>
-EMF VALIDATION SDK 1.4.0M5 S201002021148: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.validation" version="1.3.0.v200902052232-479-9oB55W69AO6KBA9" url="features/org.eclipse.emf.validation_1.3.0.v200902052232-479-9oB55W69AO6KBA9.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.examples.source" version="1.4.0.v20100111-1135" url="features/org.eclipse.emf.validation.examples.source_1.4.0.v20100111-1135.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.source" version="1.3.0.v200902052232-479-9oB55W69AO6KBA9" url="features/org.eclipse.emf.validation.source_1.3.0.v200902052232-479-9oB55W69AO6KBA9.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.ocl" version="1.3.0.v20091215-1218-3--7w311A232602329" url="features/org.eclipse.emf.validation.ocl_1.3.0.v20091215-1218-3--7w311A232602329.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.ocl.source" version="1.3.0.v20091215-1218-3--7w311A232602329" url="features/org.eclipse.emf.validation.ocl.source_1.3.0.v20091215-1218-3--7w311A232602329.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.doc" version="1.3.0.v200901271722-35-8s733L466F3B769" url="features/org.eclipse.emf.validation.doc_1.3.0.v200901271722-35-8s733L466F3B769.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.sdk" version="1.3.0.v200901271722-67E-97OGPL6SJslRVggVm_ZVlH99" url="features/org.eclipse.emf.validation.sdk_1.3.0.v200901271722-67E-97OGPL6SJslRVggVm_ZVlH99.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-	<feature id="org.eclipse.emf.validation.examples" version="1.4.0.v20100111-1135-67F-BgJ9AiAFH_AWIN8" url="features/org.eclipse.emf.validation.examples_1.4.0.v20100111-1135-67F-BgJ9AiAFH_AWIN8.jar" patch="false">
-		<category name="EMF VALIDATION SDK 1.4.0M5 S201002021148"/>
-	</feature>
-
-	<!-- TRANSACTION 1.4.0M5 S201002021214 -->
-	<category-def label="EMF TRANSACTION SDK 1.4.0M5 S201002021214" name="EMF TRANSACTION SDK 1.4.0M5 S201002021214">
-		<description>
-EMF TRANSACTION SDK 1.4.0M5 S201002021214: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.workspace.examples.source" version="1.2.0.v200901271819" url="features/org.eclipse.emf.workspace.examples.source_1.2.0.v200901271819.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.examples" version="1.2.100.v200901271819-45A78yE4F9GCEoCVHo8MBU" url="features/org.eclipse.emf.transaction.examples_1.2.100.v200901271819-45A78yE4F9GCEoCVHo8MBU.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction" version="1.4.0.v20090819-1300-377-8s734C3D4D15B47" url="features/org.eclipse.emf.transaction_1.4.0.v20090819-1300-377-8s734C3D4D15B47.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace.source" version="1.3.0.v200901271819-35-8s733L366A4F6E" url="features/org.eclipse.emf.workspace.source_1.3.0.v200901271819-35-8s733L366A4F6E.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace.examples" version="1.2.0.v200901271819-45-9oB55W5AAS7LAT" url="features/org.eclipse.emf.workspace.examples_1.2.0.v200901271819-45-9oB55W5AAS7LAT.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.sdk" version="1.4.0.v20091215-1213-777J-9AYOz-V1bP0lZglhehvd7Iy" url="features/org.eclipse.emf.transaction.sdk_1.4.0.v20091215-1213-777J-9AYOz-V1bP0lZglhehvd7Iy.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace.doc" version="1.3.0.v200901271819-22-7w311A1238292A" url="features/org.eclipse.emf.workspace.doc_1.3.0.v200901271819-22-7w311A1238292A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace" version="1.3.0.v200901271819-35-8s733L366A4F6E" url="features/org.eclipse.emf.workspace_1.3.0.v200901271819-35-8s733L366A4F6E.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.examples.source" version="1.2.100.v200901271819" url="features/org.eclipse.emf.transaction.examples.source_1.2.100.v200901271819.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.doc" version="1.3.0.v200901271819-358Z8s733L466F3C6D4" url="features/org.eclipse.emf.transaction.doc_1.3.0.v200901271819-358Z8s733L466F3C6D4.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.source" version="1.4.0.v20090819-1300-377-8s734C3D4D15B47" url="features/org.eclipse.emf.transaction.source_1.4.0.v20090819-1300-377-8s734C3D4D15B47.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.4.0M5 S201002021214"/>
-	</feature>
-
 	<!-- TENEO 1.2.0M4 S200912161141 -->
 	<category-def label="EMF TENEO SDK 1.2.0M4 S200912161141" name="EMF TENEO SDK 1.2.0M4 S200912161141">
 		<description>
@@ -112,35 +41,35 @@ EMF TENEO SDK 1.2.0M4 S200912161141: contains runtime, source, and documentation
 		<category name="EMF TENEO SDK 1.2.0M4 S200912161141"/>
 	</feature>
 
-	<!-- QUERY 1.4.0M5 S201002020941 -->
-	<category-def label="EMF QUERY SDK 1.4.0M5 S201002020941" name="EMF QUERY SDK 1.4.0M5 S201002020941">
+	<!-- QUERY 1.4.0M7 S201005041240 -->
+	<category-def label="EMF QUERY SDK 1.4.0M7 S201005041240" name="EMF QUERY SDK 1.4.0M7 S201005041240">
 		<description>
-EMF QUERY SDK 1.4.0M5 S201002020941: contains runtime, source, and documentation.
+EMF QUERY SDK 1.4.0M7 S201005041240: contains runtime, source, and documentation.
 		</description>
 	</category-def>
-	<feature id="org.eclipse.emf.query.doc" version="1.2.100.v200901271543-33-8s733L466A3AE72" url="features/org.eclipse.emf.query.doc_1.2.100.v200901271543-33-8s733L466A3AE72.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.doc" version="1.4.0.v20100428-2315-33-8s733L466A3AE72" url="features/org.eclipse.emf.query.doc_1.4.0.v20100428-2315-33-8s733L466A3AE72.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.ocl" version="1.4.0.v20091215-1624-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl_1.4.0.v20091215-1624-3--7w311A232602735.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.source" version="1.4.0.v20100428-2315-218Z7w311A142A1142" url="features/org.eclipse.emf.query.source_1.4.0.v20100428-2315-218Z7w311A142A1142.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.source" version="1.2.100.v200901271643-218Z7w311A142A1142" url="features/org.eclipse.emf.query.source_1.2.100.v200901271643-218Z7w311A142A1142.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.ocl" version="1.4.0.v20100428-2315-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl_1.4.0.v20100428-2315-3--7w311A232602735.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query" version="1.2.100.v200901271643-218Z7w311A142A1142" url="features/org.eclipse.emf.query_1.2.100.v200901271643-218Z7w311A142A1142.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query" version="1.4.0.v20100428-2315-218Z7w311A142A1142" url="features/org.eclipse.emf.query_1.4.0.v20100428-2315-218Z7w311A142A1142.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.examples" version="1.4.0.v20091215-1624-677-AkF77g9DDV7LRHB" url="features/org.eclipse.emf.query.examples_1.4.0.v20091215-1624-677-AkF77g9DDV7LRHB.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.sdk" version="1.4.0.v20100428-2315-67J-95GFz01DOIuNNRTWK_NPj507" url="features/org.eclipse.emf.query.sdk_1.4.0.v20100428-2315-67J-95GFz01DOIuNNRTWK_NPj507.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.sdk" version="1.4.0.v20091215-1624-67DBg95GFyJEJHqPQVWPNZUpIt95" url="features/org.eclipse.emf.query.sdk_1.4.0.v20091215-1624-67DBg95GFyJEJHqPQVWPNZUpIt95.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.examples.source" version="1.4.0.v20100428-2315" url="features/org.eclipse.emf.query.examples.source_1.4.0.v20100428-2315.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.examples.source" version="1.4.0.v20091215-1624" url="features/org.eclipse.emf.query.examples.source_1.4.0.v20091215-1624.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.examples" version="1.4.0.v20100428-2315-677-AkF78Y8FEY7MOGC" url="features/org.eclipse.emf.query.examples_1.4.0.v20100428-2315-677-AkF78Y8FEY7MOGC.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
-	<feature id="org.eclipse.emf.query.ocl.source" version="1.4.0.v20091215-1624-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl.source_1.4.0.v20091215-1624-3--7w311A232602735.jar" patch="false">
-		<category name="EMF QUERY SDK 1.4.0M5 S201002020941"/>
+	<feature id="org.eclipse.emf.query.ocl.source" version="1.4.0.v20100428-2315-3--7w311A232602735" url="features/org.eclipse.emf.query.ocl.source_1.4.0.v20100428-2315-3--7w311A232602735.jar" patch="false">
+		<category name="EMF QUERY SDK 1.4.0M7 S201005041240"/>
 	</feature>
 
 	<!-- EMF 2.6.0M5 S201002011637 -->
@@ -250,40 +179,6 @@ EMF SDK 2.6.0M5 S201002011637 (EMF + XSD): contains runtime, source, documentati
 	</feature>
 	<feature id="org.eclipse.emf.common" version="2.6.0.v201002011637" url="features/org.eclipse.emf.common_2.6.0.v201002011637.jar" patch="false">
 		<category name="EMF SDK 2.6.0M5 S201002011637 (EMF + XSD)"/>
-	</feature>
-
-	<!-- COMPARE 1.1.0M6 S201003161046 (Incubation) -->
-	<category-def label="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046" name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046">
-		<description>
-EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046: contains runtime, source, and documentation.
-		</description>
-	</category-def>
-	<feature id="org.eclipse.emf.compare.team.subversive.source" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.team.subversive.source_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.all" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.all_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.team.subversive" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.team.subversive_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.ui.capabilities" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.ui.capabilities_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.source" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.source_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.ui.capabilities.source" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.ui.capabilities.source_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.sdk" version="1.1.0.v201003161046" url="features/org.eclipse.emf.compare.sdk_1.1.0.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
-	</feature>
-	<feature id="org.eclipse.emf.compare.doc" version="1.0.1.v201003161046" url="features/org.eclipse.emf.compare.doc_1.0.1.v201003161046.jar" patch="false">
-		<category name="EMF COMPARE SDK (Incubation) 1.1.0M6 S201003161046"/>
 	</feature>
 
 	<!-- COMPARE 1.0.0M3 S200911100435 (Incubation) -->
