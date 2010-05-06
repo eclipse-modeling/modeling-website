@@ -4,11 +4,40 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>acceleo Builds</title>
   <link href="http://download.eclipse.org/modeling/m2t/feeds/builds-acceleo.xml" rel="self" type="application/atom+xml"/>
-  <updated>2010-05-06T15:25:04Z</updated>
+  <updated>2010-05-06T15:32:33Z</updated>
   <author>
     <name>acceleo Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/m2t/feeds/builds-acceleo.xml</id>
+  <entry>
+    <title>[announce] acceleo I201005061100 (3.0.0.I201005061100) is available</title>
+    <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=acceleo&amp;showAll=1&amp;hlbuild=I201005061100#I201005061100"/>
+    <id>http://www.eclipse.org/modeling/m2t/downloads/?project=acceleo&amp;showAll=1&amp;hlbuild=I201005061100#I201005061100</id>
+    <updated>2010-05-06T15:32:33Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="201005061100" href="http://www.eclipse.org/modeling/m2t/downloads/?project=acceleo&amp;showAll=1&amp;hlbuild=I201005061100#I201005061100" type="I" vanityname="I201005061100" version="3.0.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/acceleo/downloads/drops/3.0.0/I201005061100/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/m2t/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/m2t/downloads/?project=acceleo</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/m2t/news/relnotes.php?project=acceleo&amp;version=I201005061100
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">m2t-acceleo-SDK-incubation-I201005061100.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/m2t/acceleo/downloads/drops/3.0.0/I201005061100/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.6M7-201004291549/eclipse-SDK-3.6M7-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.6.0/S201005031457/emf-xsd-SDK-2.6.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/3.0.0/S201005040447/mdt-ocl-SDK-3.0.0M7.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] acceleo I201005060805 (3.0.0.I201005060805) is available</title>
     <link href="http://www.eclipse.org/modeling/m2t/downloads/?project=acceleo&amp;showAll=1&amp;hlbuild=I201005060805#I201005060805"/>
