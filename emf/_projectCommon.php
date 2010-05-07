@@ -67,7 +67,8 @@ $projects = array(
 );
 
 /* if set, both home and download page will redirect to a different landing page */
-$emf_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install");
+$emf_download_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install");
+$emf_home_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo");
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"

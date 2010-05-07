@@ -3,10 +3,10 @@
 require_once ("../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-/* temporary redirect for emft projects */
-if (isset($_GET["project"]) && isset($emf_redirects) && is_array($emf_redirects) && in_array($_GET["project"],$emf_redirects))
+/* temporary redirect for emf projects */
+if (isset($_GET["project"]) && isset($emf_home_redirects) && is_array($emf_home_redirects) && in_array($_GET["project"],$emf_home_redirects))
 {
-    header("Location: " . $emf_redirects[$_GET["project"]]);
+    header("Location: " . $emf_home_redirects[$_GET["project"]]);
 	/*header("Location: http://www.eclipse.org/emft/projects/?project=" . $_GET["project"]);*/
 	exit;
 }
