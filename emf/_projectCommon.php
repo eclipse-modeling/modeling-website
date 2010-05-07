@@ -66,6 +66,9 @@ $projects = array(
 	"Validation Framework" => "validation",
 );
 
+/* if set, both home and download page will redirect to a different landing page */
+$emf_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install");
+
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup =   array("query","query2","transaction","validation","emfqtv", "net4j","teneo","cdo","compare", "sdo"); //components without newsgroup
