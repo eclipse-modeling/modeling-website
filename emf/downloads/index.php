@@ -3,11 +3,10 @@
 require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
-/* temporary redirect for emft projects, except on build servers if downloads folder exists */
-if (isset($_GET["project"]) && isset($emf_download_redirects) && is_array($emf_download_redirects) && in_array($_GET["project"],$emf_download_redirects))
+/* redirect for emf projects */
+if (isset($_GET["project"]) && isset($emf_download_redirects) && is_array($emf_download_redirects) && array_key_exists($_GET["project"],$emf_download_redirects))
 {
-    header("Location: " . $emf_download_redirects[$_GET["project"]]);
-	/*header("Location: http://www.eclipse.org/emft/downloads/?project=" . $_GET["project"]);*/
+	header("Location: " . $emf_download_redirects[$_GET["project"]]);
 	exit;
 }
 else if (isset($_GET["project"]) && $_GET["project"]=="sdo")
