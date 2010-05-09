@@ -44,13 +44,11 @@ $dls = array(
 	"/gmf-tooling" => array(
 		"GMF" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"SDK (Runtime, Source, Examples)" => "sdk",
-			"Experimental SDK" => "sdk-experimental",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Examples PDE Wizard" => "examples-pde",
-			"Automated Tests" => "tests",
-			"Experimental Tests" => "tests-experimental",
+			"GMF Tooling SDK (Runtime, Source, Examples)" => "sdk",
+			"GMF Tooling Experimental SDK" => "sdk-experimental",
+			"GMF Tooling" => "tooling",
+			"GMF Tooling Automated Tests" => "tests",
+			"GMF Tooling Experimental Tests" => "tests-experimental",
 			"Xpand" => "xpand",
 		)
 	),
