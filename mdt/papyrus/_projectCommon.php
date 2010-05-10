@@ -52,9 +52,9 @@
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
 	$Nav->addCustomNav("Download", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("Update Sites", "/modeling/mdt/papyrus/updates/index.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developers", "_blank", 3);
+	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/supportIndex.php", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developersCorner/developersCornerIndex", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
