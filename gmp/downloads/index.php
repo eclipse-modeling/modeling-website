@@ -27,7 +27,7 @@ $dls = array(
 		"GMF Notation" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"GMF Notation Master" => "notation-Master",
-			"GMF Notation SDK" => "notation-sdk",
+			"GMF Notation SDK" => "sdk-notation",
 			"GMF Notation" => "notation",
 		)
 	),
