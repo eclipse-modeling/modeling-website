@@ -3,7 +3,7 @@
 WORKING_DIR="/home/www-data/modeling-releng-common/tools/org.eclipse.releng.tools.tagandrelease"
 
 # comma separated list of email addresses - NO SPACES!
-MAILING_LIST="gmf-releng@dev.eclipse.org"
+MAILING_LIST="anthonyh@ca.ibm.com"
 
 #####################################################################
 # Development CVS - where your plugins|features|fragments are located
@@ -43,7 +43,7 @@ CS_BRANCH="${DEV_BRANCH}"
 MAP_PLUGIN_VERSION="autotag${DEV_BRANCH}"
 
 # define path to releng project containing map(s)
-MAP_PLUGIN="org.eclipse.gmf/org.eclipse.gmf.releng"
+MAP_PLUGIN="org.eclipse.gmp/org.eclipse.gmf.notation.releng"
 
 #define script to run if map file is changed, eg., to run a build immediately
-EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf -buildType I -version 2.3.0 -searchcvs gmf.releng -noSearchCVS -a -email gmf-releng@eclipse.org -regex I2010.*eclipse-SDK-.*x86_64.*|S-.*2010.*/eclipse-SDK-3.6.*x86_64*|[IS]2010.*/emf-xsd-SDK-|[IS]20.*/mdt-uml2-SDK-|[IS]20.*/mdt-ocl-.*SDK-|[IS]20.*/emf-query-SDK-|[IS]20.*/emf-validation-SDK-|[IS]20.*/emf-transaction-SDK-|3.6.*[IS]2010.*/GEF-SDK-|[IS]2010.*/m2m-qvtoml-SDK-|orbitBundles-"
+EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf-notation -buildType I -version 1.4.0 -noSearchCVS -a -email anthonyh@ca.ibm.com -regex I2010.*eclipse-SDK-.*x86_64.*|S-.*2010.*/eclipse-SDK-3.6.*x86_64*|[IS]2010.*/emf-xsd-SDK-"
