@@ -24,7 +24,8 @@ $options = array (
 			"1\.4\..+/[ISR]20.*/emf-query-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-validation-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-transaction-SDK-|" .
-			"[ISR]20.*/GEF-|" .
+			"1\.4\..+/[ISR]20.*/gmf-notation-sdk-|" .
+			"3\.6\..+/[ISR]20.*/GEF-SDK-|" .
 			"orbitBundles-.*\.map",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
