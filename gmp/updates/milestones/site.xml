@@ -7,6 +7,49 @@
 	</description>
 
 
+	<!-- GMF-TOOLING 2.3.0 S201005190909 -->
+	<category-def label="GMP GMF-TOOLING SDK 2.3.0 S201005190909" name="GMP GMF-TOOLING SDK 2.3.0 S201005190909">
+		<description>
+GMP GMF-TOOLING SDK 2.3.0 S201005190909: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.gmf.sdk" version="2.3.0.v20100508-1742-7779-95sDcLbJSsdu7Xz-x9v0pat" url="features/org.eclipse.gmf.sdk_2.3.0.v20100508-1742-7779-95sDcLbJSsdu7Xz-x9v0pat.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.xpand" version="2.3.0.v20100421-2359-787CA7CcNBGKCUGkAQTWZ" url="features/org.eclipse.gmf.xpand_2.3.0.v20100421-2359-787CA7CcNBGKCUGkAQTWZ.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests.source" version="2.3.0.v20100508-1742" url="features/org.eclipse.gmf.tests.source_2.3.0.v20100508-1742.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.experimental" version="1.1.1.v20100421-2359-7A77EpF7RZHMqItThAZvp308Q9X6" url="features/org.eclipse.gmf.sdk.experimental_1.1.1.v20100421-2359-7A77EpF7RZHMqItThAZvp308Q9X6.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests.experimental" version="1.0.0.v20100421-2359-7A4DF8s73533B5C179DL" url="features/org.eclipse.gmf.tests.experimental_1.0.0.v20100421-2359-7A4DF8s73533B5C179DL.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tooling.source" version="2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw4lRJTE1" url="features/org.eclipse.gmf.tooling.source_2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw4lRJTE1.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.sdk.experimental.source" version="1.1.1.v20100421-2359" url="features/org.eclipse.gmf.sdk.experimental.source_1.1.1.v20100421-2359.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.doc" version="1.4.0.v20100518-2359-35-8s733L3H7L17395" url="features/org.eclipse.gmf.doc_1.4.0.v20100518-2359-35-8s733L3H7L17395.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tooling" version="2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw4lRJTE1" url="features/org.eclipse.gmf.tooling_2.3.0.v20100421-2359-7c7MFO-FLWUl0ilw4lRJTE1.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests" version="2.3.0.v20100508-1742-7E78DFAkF7B77LAQ3ENQ_" url="features/org.eclipse.gmf.tests_2.3.0.v20100508-1742-7E78DFAkF7B77LAQ3ENQ_.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.4.0.v20100421-2359-7P8W5FHV2CJxit5giT_vaw311A16" url="features/org.eclipse.gmf.runtime.thirdparty_1.4.0.v20100421-2359-7P8W5FHV2CJxit5giT_vaw311A16.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests.experimental.source" version="1.0.0.v20100421-2359" url="features/org.eclipse.gmf.tests.experimental.source_1.0.0.v20100421-2359.jar" patch="false">
+		<category name="GMP GMF-TOOLING SDK 2.3.0 S201005190909"/>
+	</feature>
+
 	<!-- GMF-RUNTIME 1.4.0RC1 S201005190000 -->
 	<category-def label="GMP GMF-RUNTIME SDK 1.4.0RC1 S201005190000" name="GMP GMF-RUNTIME SDK 1.4.0RC1 S201005190000">
 		<description>
