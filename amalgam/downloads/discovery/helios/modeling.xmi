@@ -61,12 +61,18 @@
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
-  <categories name=" Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="2">
+  <categories name="Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="2">
     <components name="Connected Data Objects Repository" provider="Eclipse.org" license="EPL" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
     </components>
     <components name="Model Workflow Engine" provider="Eclipse.org" license="EPL" groups="//@filters.0" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
+    </components>
+    <components name="Teneo" provider="Eclipse.org" description="Teneo is a Model-Relational mapping and runtime database persistence solution for the Eclipse Modeling Framework (EMF) using Hibernate and EclipseLink." license="EPL">
+      <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
+      <overview summary="The EMF &#x2013; Hibernate integration supports all EMF features and standard EclipseLink and Hibernate features. EMF objects can be persisted in most major relational databases and retrieved using an EMF resource approach or HQL/JPA queries. A distinctive feature of Teneo is that you can override/extend the Model-Relational mapping using JPA annotations in the model." screenshot="images/teneo-screenshot-320x240.png" url="http://wiki.eclipse.org/Teneo"/>
+      <id>org.eclipse.emf.teneo.hibernate</id>
+      <id>org.eclipse.emf.teneo.eclipselink</id>
     </components>
     <components name="Agent Modeling Platform" provider="Eclipse.org" description="Agent Modeling Platform (Incubation), including Agent Modeling Framework, Agent eXecution Framework, Agent Graphics and Visualization Framework, and Escape." license="EPL" groups="//@filters.0" image32="images/amp.png" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
