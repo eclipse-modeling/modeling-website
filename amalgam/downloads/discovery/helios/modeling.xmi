@@ -55,8 +55,8 @@
     </components>
     <components name="Papyrus" provider="Eclipse.org" description="Papyrus provides an integrated, user-consumable environment for editing models based on UML and other related languages such as SysML." license="EPL" groups="//@filters.0" image32="images/papyrus.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
       <overview summary="Papyrus is an open source component of the&#xA;Model Development Tools (MDT) subproject to provide an integrated environment&#xA;for editing UML and SysML models. Specially, this project will provide the glue&#xA;around valuable UML and SysML diagram editors (GMF-based or not) and other MDE&#xA;tools. It will also offer support for UML and SysML profiling mechanisms." screenshot="images/papyrus-screenshot-320x240.png" url="http://www.eclipse.org/modeling/mdt/?project=papyrus#papyrus"/>
-      <id>org.eclipse.papyrus</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
