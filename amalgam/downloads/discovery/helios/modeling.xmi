@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<discovery:DiscoveryDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:discovery="http://www.eclipse.org/amalgamation/discovery/1.0" xsi:schemaLocation="http://www.eclipse.org/amalgamation/discovery/1.0 ../../../../org.eclipse.amalgam.discovery.core/model/discovery.ecore">
+<discovery:DiscoveryDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:discovery="http://www.eclipse.org/amalgamation/discovery/1.0">
   <categories name="Model To Text" description="Model to Text (also known as code generation) tools and languages." relevance="6" image48="">
     <components name="Acceleo" provider="Eclipse.org" description="Acceleo is a standard-based template language focused on usability and pragmatism." license="EPL" groups="//@filters.0" image32="images/acceleo.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
@@ -53,6 +53,12 @@
       <overview summary="UML2Tools provides support for Class, Composite Structure, Component,&#xA;Deployment, UseCase, Activity and StateMachine diagram. It also contains&#xA;supplementary Profile Definition diagram, enabling the visual integration of&#xA;the custom defined stereotypes with the other supported diagrams." screenshot="images/uml2tools-screenshot-320x240.png"/>
       <id>org.eclipse.uml2tools</id>
     </components>
+    <components name="Papyrus" provider="Eclipse.org" description="Papyrus provides an integrated, user-consumable environment for editing models based on UML and other related languages such as SysML." license="EPL" groups="//@filters.0" image32="images/papyrus.png" incubation="true" visible="false">
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</sitesURLS>
+      <overview summary="Papyrus is an open source component of the&#xA;Model Development Tools (MDT) subproject to provide an integrated environment&#xA;for editing UML and SysML models. Specially, this project will provide the glue&#xA;around valuable UML and SysML diagram editors (GMF-based or not) and other MDE&#xA;tools. It will also offer support for UML and SysML profiling mechanisms." screenshot="images/papyrus-screenshot-320x240.png" url="http://www.eclipse.org/modeling/mdt/?project=papyrus#papyrus"/>
+      <id>org.eclipse.papyrus</id>
+      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
+    </components>
   </categories>
   <categories name=" Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="2">
     <components name="Connected Data Objects Repository" provider="Eclipse.org" license="EPL" visible="false">
@@ -65,6 +71,7 @@
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
       <overview summary="The Agent Modeling Platform (AMP) provides extensible frameworks&#xA;and exemplary tools for representing, editing, generating, executing and&#xA;visualizing agent-based models (ABMs) and any other domain requiring spatial,&#xA;behavioral and functional features. AMP has two parts: 1) The Agent Modeling&#xA;Framework (AMF) which provides an Agent-Based Model (ABM) meta-model&#xA;representation, editor, development environment and code generators for popular&#xA;ABM platforms. 2) The AMP platform tools. The Agent Execution Framework (AXF)&#xA;provides services and UI for model management, execution, and views. The Agent&#xA;Graphics Framework (AGF) extends GEF, GEF3D, Zest, and the BIRT charting engine&#xA;to support real-time visualization of and interaction with agent models. Escape&#xA;is a complete ABM environment for Eclipse." screenshot="images/amp-screenshot-320x240.png" url="http://www.eclipse.org/amp"/>
       <id>org.eclipse.amp.all</id>
+      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
   <categories name="Reverse Engineering" description="Tools focused on getting models from source code." relevance="1">
