@@ -50,41 +50,41 @@ GMP GMF-TOOLING SDK 2.3.0 I201005161446: contains runtime, source, and documenta
 		<category name="GMP GMF-TOOLING SDK 2.3.0 I201005161446"/>
 	</feature>
 
-	<!-- GMF-RUNTIME 1.4.0 I201005161259 -->
-	<category-def label="GMP GMF-RUNTIME SDK 1.4.0 I201005161259" name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259">
+	<!-- GMF-RUNTIME 1.4.0 I201005211114 -->
+	<category-def label="GMP GMF-RUNTIME SDK 1.4.0 I201005211114" name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114">
 		<description>
-GMP GMF-RUNTIME SDK 1.4.0 I201005161259: contains runtime, source, and documentation.
+GMP GMF-RUNTIME SDK 1.4.0 I201005211114: contains runtime, source, and documentation.
 		</description>
 	</category-def>
+	<feature id="org.eclipse.gmf.source" version="1.4.0.v20100421-2359-7d98-FYnmMCGUghmqU7lZ2tsgWcV" url="features/org.eclipse.gmf.source_1.4.0.v20100421-2359-7d98-FYnmMCGUghmqU7lZ2tsgWcV.jar" patch="false">
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
+	</feature>
 	<feature id="org.eclipse.gmf.tests.runtime.source" version="1.4.0.v20100511-1424" url="features/org.eclipse.gmf.tests.runtime.source_1.4.0.v20100511-1424.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
-	<feature id="org.eclipse.gmf.runtime.notation" version="1.4.0.v20100421-2359-377-8s73533B77179DL" url="features/org.eclipse.gmf.runtime.notation_1.4.0.v20100421-2359-377-8s73533B77179DL.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
-	</feature>
-	<feature id="org.eclipse.gmf.runtime.sdk" version="1.4.0.v20100511-1424-67G-9E9PW2g1miWbjIShCAoECaeg" url="features/org.eclipse.gmf.runtime.sdk_1.4.0.v20100511-1424-67G-9E9PW2g1miWbjIShCAoECaeg.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+	<feature id="org.eclipse.gmf" version="1.4.0.v20100421-2359-7d98-FYnmMCGUghmqU7lZ2tsgWcV" url="features/org.eclipse.gmf_1.4.0.v20100421-2359-7d98-FYnmMCGUghmqU7lZ2tsgWcV.jar" patch="false">
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
 	<feature id="org.eclipse.gmf.runtime.thirdparty.source" version="1.1.0.v20100511-1424-7I850FCnk296ZOs5Y2KHaw311A16" url="features/org.eclipse.gmf.runtime.thirdparty.source_1.1.0.v20100511-1424-7I850FCnk296ZOs5Y2KHaw311A16.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
 	<feature id="org.eclipse.gmf.tests.runtime" version="1.4.0.v20100511-1424-7O7vA7FEx2XdBj8ovGojWS" url="features/org.eclipse.gmf.tests.runtime_1.4.0.v20100511-1424-7O7vA7FEx2XdBj8ovGojWS.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
-	<feature id="org.eclipse.gmf.source" version="1.4.0.v20100421-2359-7d98-FYnmMCGUeipqQish7mscc5V" url="features/org.eclipse.gmf.source_1.4.0.v20100421-2359-7d98-FYnmMCGUeipqQish7mscc5V.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+	<feature id="org.eclipse.gmf.runtime.notation" version="1.4.0.v20100512-1416-377-8s73533D5715B5F" url="features/org.eclipse.gmf.runtime.notation_1.4.0.v20100512-1416-377-8s73533D5715B5F.jar" patch="false">
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
-	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.4.0.v20100421-2359-7P8W5FHV2CJxit5giT_vaw311A16" url="features/org.eclipse.gmf.runtime.thirdparty_1.4.0.v20100421-2359-7P8W5FHV2CJxit5giT_vaw311A16.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+	<feature id="org.eclipse.gmf.runtime.sdk" version="1.4.0.v20100511-1424-67G-9E9PW2g1miWbjIUg9Are5S_n" url="features/org.eclipse.gmf.runtime.sdk_1.4.0.v20100511-1424-67G-9E9PW2g1miWbjIUg9Are5S_n.jar" patch="false">
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.thirdparty" version="1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16" url="features/org.eclipse.gmf.runtime.thirdparty_1.4.0.v20100521-1113-7P8W5FHV2CNOiy0niXURaw311A16.jar" patch="false">
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples.runtime" version="1.4.0.v20100511-1355-7B7L0F8NcJP-JxPc9U1oc" url="features/org.eclipse.gmf.examples.runtime_1.4.0.v20100511-1355-7B7L0F8NcJP-JxPc9U1oc.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
-	</feature>
-	<feature id="org.eclipse.gmf" version="1.4.0.v20100421-2359-7d98-FYnmMCGUeipqQish7mscc5V" url="features/org.eclipse.gmf_1.4.0.v20100421-2359-7d98-FYnmMCGUeipqQish7mscc5V.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
 	<feature id="org.eclipse.gmf.examples.runtime.ui.pde" version="1.4.0.v20100511-1355-23-7w3121162202466" url="features/org.eclipse.gmf.examples.runtime.ui.pde_1.4.0.v20100511-1355-23-7w3121162202466.jar" patch="false">
-		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005161259"/>
+		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201005211114"/>
 	</feature>
 
 	<!-- GMF-NOTATION 1.4.0 I201005111617 -->
