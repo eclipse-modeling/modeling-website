@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule	  ^(.*)$    http://www.eclipse.org/modeling/gmp [R,L]
