@@ -61,7 +61,14 @@
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
-  <categories name="Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="2">
+  <categories name="Reverse Engineering" description="Tools focused on getting models from source code." relevance="2">
+    <components name="MoDisco" provider="Eclipse.org" description="MoDisco is an extensible framework to develop model-driven tools for software modernization projects." license="EPL" groups="//@filters.0" image32="images/modisco.png" incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
+      <overview summary="MoDisco provides standard metamodels to describe existing systems, discoverers&#xA;to automaticaly create models from Java and XML source code, and generic tools&#xA;to understand and transform complex models.&#xA;" screenshot="images/modisco-screenshot-320x240.png" url="http://www.eclipse.org/gmt/modisco/"/>
+      <id>org.eclipse.gmt.modisco.sdk</id>
+    </components>
+  </categories>
+  <categories name="Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="1">
     <components name="Connected Data Objects Repository" provider="Eclipse.org" license="EPL" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
     </components>
@@ -79,13 +86,6 @@
       <overview summary="The Agent Modeling Platform (AMP) provides extensible frameworks&#xA;and exemplary tools for representing, editing, generating, executing and&#xA;visualizing agent-based models (ABMs) and any other domain requiring spatial,&#xA;behavioral and functional features. AMP has two parts: 1) The Agent Modeling&#xA;Framework (AMF) which provides an Agent-Based Model (ABM) meta-model&#xA;representation, editor, development environment and code generators for popular&#xA;ABM platforms. 2) The AMP platform tools. The Agent Execution Framework (AXF)&#xA;provides services and UI for model management, execution, and views. The Agent&#xA;Graphics Framework (AGF) extends GEF, GEF3D, Zest, and the BIRT charting engine&#xA;to support real-time visualization of and interaction with agent models. Escape&#xA;is a complete ABM environment for Eclipse." screenshot="images/amp-screenshot-320x240.png" url="http://www.eclipse.org/amp"/>
       <id>org.eclipse.amp.all</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
-    </components>
-  </categories>
-  <categories name="Reverse Engineering" description="Tools focused on getting models from source code." relevance="1">
-    <components name="MoDisco" provider="Eclipse.org" description="MoDisco is an extensible framework to develop model-driven tools for software modernization projects." license="EPL" groups="//@filters.0" image32="images/modisco.png" incubation="true">
-      <sitesURLS>http://download.eclipse.org/releases/staging/</sitesURLS>
-      <overview summary="MoDisco provides standard metamodels to describe existing systems, discoverers&#xA;to automaticaly create models from Java and XML source code, and generic tools&#xA;to understand and transform complex models.&#xA;" screenshot="images/modisco-screenshot-320x240.png" url="http://www.eclipse.org/gmt/modisco/"/>
-      <id>org.eclipse.gmt.modisco.sdk</id>
     </components>
   </categories>
   <filters name="Incubation"/>
