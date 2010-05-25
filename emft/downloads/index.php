@@ -30,8 +30,8 @@ $dls = array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
 			"SDK (Runtime, Source)" => "SDK",
 			"Runtime" => "runtime",
-			//"Examples" => "examples",
-			"Automated Tests" => "automated-tests"
+			"Examples" => "examples",
+			"Automated Tests" => "Automated-Tests"
 		)
 	),
 	"/compare" => array(
@@ -51,6 +51,7 @@ $dls = array(
 /* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
 	/* "/newproj" => array("emft-newproj", "emf-newproj"), */
+	"/mwe" => array("emft-mwe", "emft-mwe2", "emft-mwe2-lang")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
