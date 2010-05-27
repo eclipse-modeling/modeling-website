@@ -1,0 +1,165 @@
+#header {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/header_bg.jpg) #ffffff repeat-x 0% 50%; HEIGHT: 70px; PADDING-TOP: 0px
+}
+#header .eclipse-main {
+	WIDTH: 131px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/eclipse_home_header.jpg) no-repeat 0% 50%
+}
+#header .bugs {
+	WIDTH: 240px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/bugs_header.jpg) no-repeat 0% 50%
+}
+#header .eclipsecon {
+	WIDTH: 236px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/eclipsecon_header.jpg) no-repeat 0% 50%
+}
+#header .ipzilla {
+	WIDTH: 356px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/ipzilla_header.jpg) no-repeat 0% 50%
+}
+#header .babel {
+	WIDTH: 356px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/babel_header.jpg) no-repeat 0% 50%
+}
+#header .planet {
+	WIDTH: 336px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/planet_header.jpg) no-repeat 0% 50%
+}
+#header .plugin-central {
+	WIDTH: 400px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/plugin_central_header.jpg) no-repeat 0% 50%
+}
+#header .wiki {
+	WIDTH: 240px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/wiki_header.jpg) no-repeat 0% 50%
+}
+#header-graphic {
+	POSITION: absolute; HEIGHT: 68px; TOP: 0pt; LEFT: 0pt
+}
+#header .eclipse-main {
+	WIDTH: 131px
+}
+#header-graphic H1 {
+	TEXT-INDENT: -9999px; DISPLAY: none
+}
+#header-global-holder {
+	POSITION: absolute; HEIGHT: 68px; TOP: 0pt; RIGHT: 0pt
+}
+#header .eclipse-main-global {
+	WIDTH: 395px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/eclipse_home_bg.jpg) no-repeat 0% 50%
+}
+#header .bugs-global {
+	WIDTH: 442px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/bugs_bg.jpg) no-repeat 0% 50%
+}
+#header .eclipsecon-global {
+	WIDTH: 313px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/eclipsecon_bg.jpg) no-repeat 0% 50%
+}
+#header .ipzilla-global {
+	WIDTH: 518px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/ipzilla_bg.jpg) no-repeat 0% 50%
+}
+#header .babel-global {
+	WIDTH: 518px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/babel_bg.jpg) no-repeat 0% 50%
+}
+#header .planet-global {
+	WIDTH: 462px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/planet_bg.jpg) no-repeat 0% 50%
+}
+#header .plugin-central-global {
+	WIDTH: 417px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/plugin_central_bg.jpg) no-repeat 0% 50%
+}
+#header .wiki-global {
+	WIDTH: 466px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/wiki_bg.jpg) no-repeat 0% 50%
+}
+#header-global-links {
+	POSITION: absolute; WIDTH: 335px; HEIGHT: 26px; TOP: 0pt; RIGHT: 0pt
+}
+#header-global-links UL {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 0pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 15px; PADDING-TOP: 4px
+}
+#header-global-links UL LI {
+	DISPLAY: inline
+}
+#header-global-links UL LI A {
+	BORDER-BOTTOM-COLOR: #ffffff; PADDING-BOTTOM: 0pt; BORDER-RIGHT-WIDTH: 0px; TEXT-TRANSFORM: uppercase; BORDER-TOP-COLOR: #ffffff; PADDING-LEFT: 10px; PADDING-RIGHT: 5px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/global_links_divider.gif) no-repeat 0% 50%; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; COLOR: #333366; BORDER-RIGHT-COLOR: #ffffff; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-WIDTH: 0px; TEXT-DECORATION: none; PADDING-TOP: 0pt
+}
+#header-global-links UL LI A:link {
+	
+}
+#header-global-links UL LI A:visited {
+	
+}
+#header-global-links UL LI A:hover {
+	TEXT-DECORATION: underline
+}
+#header-icons {
+	POSITION: absolute; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 20px; TOP: 33px; RIGHT: 0pt; PADDING-TOP: 0pt
+}
+#header-icons IMG {
+	MARGIN: 0pt 0pt 0pt 2px; DISPLAY: inline
+}
+#header-eclipsecon-info {
+	
+}
+#header-eclipsecon-info H2 {
+	TEXT-INDENT: -9999px
+}
+#header-eclipsecon-info H3 {
+	TEXT-INDENT: -9999px
+}
+#header-nav {
+	WHITE-SPACE: nowrap; FLOAT: left
+}
+#header-nav UL {
+	PADDING-BOTTOM: 0pt; MARGIN: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 7px
+}
+#header-nav UL LI {
+	DISPLAY: inline; COLOR: #2e2c51
+}
+#header-nav UL LI A {
+	BORDER-BOTTOM-COLOR: #ffffff; PADDING-BOTTOM: 0pt; BORDER-RIGHT-WIDTH: 0px; TEXT-TRANSFORM: uppercase; BORDER-TOP-COLOR: #ffffff; PADDING-LEFT: 10px; PADDING-RIGHT: 5px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/nav_divider.gif) no-repeat left center; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; COLOR: #2e2c51; BORDER-RIGHT-COLOR: #ffffff; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-WIDTH: 0px; TEXT-DECORATION: none; PADDING-TOP: 0pt
+}
+#header-nav UL LI A:link {
+	
+}
+#header-nav UL LI A:visited {
+	
+}
+#header-nav UL LI A:hover {
+	TEXT-DECORATION: underline
+}
+#header A.first_one {
+	BACKGROUND: 0% 50%
+}
+#header-menu {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/menu_bg.jpg) #ffffff repeat-x 0% 50%; HEIGHT: 33px; CLEAR: both; PADDING-TOP: 0px
+}
+#header-utils {
+	Z-INDEX: 20; POSITION: relative; MARGIN: 5px 0pt 0pt; WHITE-SPACE: nowrap; FLOAT: right
+}
+#header-utils FORM {
+	PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; PADDING-RIGHT: 15px; FLOAT: left; PADDING-TOP: 0pt
+}
+#header-utils FORM INPUT.input {
+	VERTICAL-ALIGN: middle
+}
+#header-utils FORM INPUT.button {
+	VERTICAL-ALIGN: middle
+}
+#header-utils FORM INPUT.input {
+	WIDTH: 120px
+}
+#header-utils UL {
+	MARGIN-TOP: 4px; FLOAT: left
+}
+#header-utils UL LI {
+	LIST-STYLE: none none outside; PADDING-BOTTOM: 0pt; PADDING-LEFT: 20px; PADDING-RIGHT: 15px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/util_links_divider.gif) no-repeat left center; FLOAT: left; PADDING-TOP: 0pt
+}
+#header-utils UL LI.rss_feed {
+	PADDING-BOTTOM: 0px
+}
+#header-global-links UL LI A {
+	FONT-SIZE: 0.8em
+}
+#header-nav UL LI A {
+	FONT-SIZE: 0.8em
+}
+#header-utils UL LI.text_size A {
+	COLOR: #2e2c51
+}
+#header-utils UL LI.text_size A.smallText {
+	FONT-SIZE: 80% !important
+}
+#header-utils UL LI.text_size A.largeText {
+	FONT-SIZE: 120% !important
+}

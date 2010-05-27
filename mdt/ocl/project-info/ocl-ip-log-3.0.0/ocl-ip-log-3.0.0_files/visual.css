@@ -1,0 +1,267 @@
+BODY {
+	FONT-FAMILY: arial, sans-serif; BACKGROUND: #ffffff; COLOR: #000
+}
+BODY {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+H1 {
+	COLOR: #336; FONT-SIZE: 150%
+}
+H2 {
+	COLOR: #000; FONT-SIZE: 125%
+}
+H4 {
+	COLOR: #336
+}
+H5 {
+	COLOR: #003366; FONT-SIZE: 125%
+}
+A {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #636
+}
+A:visited {
+	COLOR: #336
+}
+A:hover {
+	COLOR: #636; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #636; TEXT-DECORATION: underline
+}
+#header {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/header_bg.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top
+}
+#searchbar {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/searchbar_bg.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top
+}
+#searchbar INPUT {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #56548d; BORDER-RIGHT-STYLE: solid; BACKGROUND-COLOR: #ffffff; BORDER-TOP-COLOR: #56548d; BORDER-TOP-STYLE: solid; COLOR: #333333; BORDER-RIGHT-COLOR: #56548d; FONT-SIZE: 90%; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #56548d
+}
+#headernav {
+	
+}
+#headernav LI {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #ccc; BORDER-RIGHT-STYLE: solid; LIST-STYLE-TYPE: none; BORDER-TOP-COLOR: #ccc; BORDER-TOP-STYLE: solid; BORDER-RIGHT-COLOR: #ccc; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #ccc; LIST-STYLE-IMAGE: none
+}
+#headernav A {
+	COLOR: #ccc
+}
+#headernav A:link {
+	COLOR: #ccc
+}
+#headernav A:visited {
+	COLOR: #ccc
+}
+#headernav A:hover {
+	COLOR: #fff
+}
+#headernav A:active {
+	COLOR: #fff
+}
+.smallText {
+	COLOR: #ccc; FONT-SIZE: small !important
+}
+.largeText {
+	COLOR: #ccc; FONT-SIZE: large !important
+}
+#leftcol {
+	BACKGROUND-COLOR: #ffffff; COLOR: #fff
+}
+#leftnav LI {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #7a79a7; BORDER-RIGHT-STYLE: solid; BORDER-TOP-COLOR: #7a79a7; BORDER-TOP-STYLE: solid; BORDER-RIGHT-COLOR: #7a79a7; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #7a79a7
+}
+#leftnav A {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #fff; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#leftnav A:link {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #fff; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#leftnav A:visited {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #fff; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#leftnav A:hover {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #fff; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#leftnav A:active {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #fff; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+#leftnav A:hover {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet_hover.gif); BACKGROUND-COLOR: #8583b2; COLOR: #292556
+}
+#leftnav A:active {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet_hover.gif); BACKGROUND-COLOR: #8583b2; COLOR: #292556
+}
+#leftnav A.nolink {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #999999; TEXT-DECORATION: none
+}
+#leftnav A.nolink:link {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #999999; TEXT-DECORATION: none
+}
+#leftnav A.nolink:visited {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #999999; TEXT-DECORATION: none
+}
+#leftnav A.nolink:hover {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #999999; TEXT-DECORATION: none
+}
+#leftnav A.nolink:active {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/leftnav_bullet.gif); BACKGROUND-COLOR: #595791; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 3% 50%; COLOR: #999999; TEXT-DECORATION: none
+}
+#leftnav LI.separator {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #7a79a7; BORDER-RIGHT-STYLE: solid; BACKGROUND-COLOR: #7a79a7; BORDER-TOP-COLOR: #7a79a7; BORDER-TOP-STYLE: solid; BORDER-RIGHT-COLOR: #7a79a7; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #7a79a7
+}
+#leftnav A.separator {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #7a79a7; COLOR: #fff; TEXT-DECORATION: none
+}
+#leftnav A.separator:link {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #7a79a7; COLOR: #fff; TEXT-DECORATION: none
+}
+#leftnav A.separator:visited {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #7a79a7; COLOR: #fff; TEXT-DECORATION: none
+}
+#leftnav A.separator:hover {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #7a79a7; COLOR: #fff; TEXT-DECORATION: none
+}
+#leftnav A.separator:active {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #7a79a7; COLOR: #fff; TEXT-DECORATION: none
+}
+#topnav {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); BACKGROUND-REPEAT: repeat-x; COLOR: #999
+}
+#topnav LI {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); LIST-STYLE-TYPE: none; BACKGROUND-REPEAT: repeat-x; LIST-STYLE-IMAGE: none
+}
+#topnav LI.tabstart {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabstart_first.gif); BACKGROUND-REPEAT: no-repeat
+}
+#topnav LI.tabstartselected {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabstart_selected_inline.gif); BACKGROUND-REPEAT: no-repeat
+}
+#topnav LI.tabseparator {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabseparator.gif); BACKGROUND-REPEAT: no-repeat
+}
+#topnav LI.tabseparatorselected {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabseparator_selected.gif); BACKGROUND-REPEAT: no-repeat
+}
+#topnav A {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #333; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A:link {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #333; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A:visited {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #333; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A:active {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #333; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A.tabselected {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg_selected.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A.tabselected:link {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg_selected.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A.tabselected:visited {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg_selected.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A.tabselected:hover {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg_selected.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A.tabselected:active {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/topnav_tabbg_selected.gif); BACKGROUND-COLOR: transparent; BACKGROUND-REPEAT: repeat-x; COLOR: #fff; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#topnav A:hover {
+	COLOR: #000
+}
+#topnav A:active {
+	COLOR: #000
+}
+#topnavsep {
+	BACKGROUND-COLOR: #7a79a7
+}
+#midcolumn A {
+	FONT-WEIGHT: bold
+}
+.midlist {
+	MARGIN: 10px 0px 10px 25px; LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/arrow.gif)
+}
+#midcolumn UL {
+	LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/arrow.gif)
+}
+.homeitem {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #669; BORDER-RIGHT-STYLE: solid; BORDER-TOP-COLOR: #669; BORDER-TOP-STYLE: solid; BORDER-RIGHT-COLOR: #669; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #669
+}
+.homeitem H3 {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/header_bg.gif); BACKGROUND-COLOR: #669; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top; COLOR: #fff; FONT-SIZE: 110%
+}
+.homeitem LI {
+	BORDER-BOTTOM: #669 1px dashed; BORDER-LEFT: #669 0px dashed; BORDER-TOP: #669 0px dashed; LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/arrow.gif); BORDER-RIGHT: #669 0px dashed
+}
+.homeitem3col {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #669; BORDER-RIGHT-STYLE: solid; BORDER-TOP-COLOR: #669; BORDER-TOP-STYLE: solid; BORDER-RIGHT-COLOR: #669; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #669
+}
+.homeitem3col H3 {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/header_bg.gif); BACKGROUND-COLOR: #669; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top; COLOR: #fff; FONT-SIZE: 110%
+}
+.homeitem3col LI {
+	BORDER-BOTTOM: #669 1px dashed; BORDER-LEFT: #669 0px dashed; BORDER-TOP: #669 0px dashed; LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/arrow.gif); BORDER-RIGHT: #669 0px dashed
+}
+.homeitem OL LI {
+	LIST-STYLE-IMAGE: none
+}
+.homeitem3col OL LI {
+	LIST-STYLE-IMAGE: none
+}
+LI.nodash {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/arrow.gif)
+}
+.sideitem {
+	BORDER-BOTTOM-STYLE: solid; BORDER-BOTTOM-COLOR: #ccc; BORDER-RIGHT-STYLE: solid; BORDER-TOP-COLOR: #ccc; BORDER-TOP-STYLE: solid; COLOR: #000; BORDER-RIGHT-COLOR: #ccc; FONT-SIZE: 90%; BORDER-LEFT-STYLE: solid; BORDER-LEFT-COLOR: #ccc
+}
+.sideitem H6 {
+	BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/bar.jpg) -20px -20px; COLOR: #333; FONT-SIZE: 110%; FONT-WEIGHT: bold
+}
+.sideitem UL {
+	LIST-STYLE-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/bullet.gif)
+}
+.sideitem LI {
+	
+}
+#footer {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/footer.jpg); BORDER-BOTTOM: #7a79a7 2px solid; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top; COLOR: #53528a; BORDER-TOP: #7a79a7 1px solid
+}
+#footernav {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+#footernav LI.first A {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#footernav LI A {
+	PADDING-BOTTOM: 0pt; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; BACKGROUND: url(/eclipse.org-common/themes/Phoenix/images/nav_divider.gif) no-repeat 0% 50%; PADDING-TOP: 0pt
+}
+#footernav A {
+	COLOR: #663366
+}
+#footernav A:link {
+	COLOR: #663366
+}
+#footernav A:visited {
+	COLOR: #663366
+}
+#footernav A:hover {
+	COLOR: #663366
+}
+#footernav A:active {
+	COLOR: #663366
+}
+.poll_start {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/poll_start.jpg); BACKGROUND-REPEAT: no-repeat
+}
+.poll_bar {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/poll_bar.jpg); BACKGROUND-REPEAT: repeat-x
+}
+.poll_end {
+	BACKGROUND-IMAGE: url(/eclipse.org-common/themes/Phoenix/images/poll_end.jpg); BACKGROUND-REPEAT: no-repeat
+}
