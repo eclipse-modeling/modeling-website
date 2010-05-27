@@ -1,0 +1,139 @@
+
+h1. Amalgam 1.1.0 Release Review - Helios Simultaneous Release
+
+
+@Author@ Cédric Brun
+
+Release Review :  *Friday, June 11, 2010*
+Copyright Obeo (c) 2010,  made available under the EPL v1.0
+
+
+h2. Project Summary
+
+h3. Contact
+
+Communication channel : @eclipse.modeling.amalgam@
+Process Documentation : @http://www.eclipse.org/projects/dev_process/development_process.php@
+Project Plan : @http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam@
+
+h3. Focus
+
+The Amalgam project provides :
+- the Eclipse Modeling Package
+- integration code and tools for the Modeling Projects 
+
+h2.  1.1.0 Release Talking Points
+
+h3. Features
+
+*Modeling Discovery User Interface* has been developed and integrated in the Eclipse Modeling Package to ease integration 
+of the numerous modeling components while keeping a stable and consistent platform.
+ 
+The package has been *slimed down* from more than @400Mb@ to @250Mb@ and is now more consistent.
+
+
+h3. Non-Code Aspects
+
+The discovery UI is integrated in the modeling package through a welcome page contribution and an action near the classical @Install New Software ...@ action. 
+
+h3. APIs
+
+*The project lead certifies that the requirements for Eclipse Quality APIs have been met for this release*
+
+Metamodel definitions and corresponding implementations are considered APIs.
+
+Non-API classes are separated from the exposed API through an @internal@ package in the namespace.
+
+
+h3. Architecture
+ 
+The discovery UI is leveraging a model describing its contribution and hosted on the Eclipse.org server. This model might be updated after the release to provide new installable components for the package. 
+
+h3. Tool Usability
+
+Amalgam address the need of a common integrated platform for Eclipse Modeling. This platform is completely focused on the EMF runtime and technologies.  The discovery UI integrated in the package address the need to find its way through the so diverse modeling project and to install the needed technologies. 
+ 
+
+h3. End Of Life 
+
+The *Modeling Examples* developed for the _Eclipse Modeling Project: A Domain-Specific Language (DSL) Toolkit_ (@ISBN-13: 978-0321534071@) book have not been maintained since the Ganymede release and have not been updated for Helios yet.
+
+
+h3. Bugzilla
+
+
+|_.  Severity  |_. NEW |_. 	RESOLVED |_.	 Total |
+|blocker      |	.  | 	1 	| 1  |
+|major 	     | 1  | 	. 	| 1 	| 
+|normal       |	6| 	18| 	24|
+|enhancement 	| 1 | 	5|  	6 | 
+| Total 	|  8 	| 24 | 	32 |   
+
+h3. Standards
+
+No standard exists concerning the modeling amalgam project scope..
+
+h3. UI Usability
+
+The Amalgam integration code is conforming to the user interface guidelines.
+
+h3. Schedule
+
+The Amalgam project follow closely the EMF Core schedule:
+
+* M1	08/18/2009
+* M2	09/29/2009	
+* M3	11/10/2009	
+* M4	12/15/2009	
+* M5	02/02/2010	
+* M6	03/16/2010	
+* M7	05/04/2010	
+* RC1	05/18/2010	
+* RC2	05/25/2010	
+* RC3	06/01/2010	
+* RC4	06/08/2010	
+* Final	06/16/2010	
+* 1.1.0	06/23/2010
+
+h3. Project Plan
+
+The Helios project plan is available at @http://www.eclipse.org/projects/project-plan.php?projectid=modeling.amalgam@
+
+
+h3. Communities
+
+Since the new team has been formed a few actions took place to gather the community :
+   
+* Google Summer of Code 2010 ideas
+* About one update every two months on Planet Eclipse.  
+
+h3. Commiter Changes
+
+The whole team changed, the former and only commiter @Richard Gronback@ resigned and a new team composed of : 
+* @Cédric Brun@ (lead)
+* @Peter Friese@
+* @Artem Tikhomirov@
+
+has been created in September 2009
+
+
+h3. IP Issues
+
+p. 
+The about files and use licenses are in place as per the Guidelines to Legal Documentation.
+All contributions (code, documentation, images, etc) have been committed by individuals who are either Members of the
+Foundation, or have signed the appropriate Committer Agreement.
+In either case, these are individuals who have signed, and are abiding by, the Eclipse IP Policy.
+All significant contributions have been reviewed by the Foundation's legal staff.
+All non-Committer code contributions, including third-party libraries, have been documented in the release and reviewed by the Foundation's legal staff.
+
+All contribution Questionnaires have been completed
+
+The "provider" field of each plugin is set to "Eclipse Modeling Project"
+The "copyright" field of each plugin is set to the copyright owner
+Any third-party logos or trademarks included in the distribution (icons, logos, etc) have been licensed under the EPL
+The Amalgam IP log is generated and submited at
+
+@http://www.eclipse.org/projects/ip_log.php?projectid=modeling.amalgam@ 
+
+There was no contributions to this release.
