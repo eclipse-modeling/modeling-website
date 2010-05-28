@@ -38,22 +38,22 @@ the Eclipse Platform. It is anticipated that MDT UML2 will synchronize its
 milestones with the Helios milestone schedule.
          </html:div>
       </preamble>
-	<milestone date="08/19/2009" milestone="M1" />
-    <milestone date="09/30/2009" milestone="M2" />
-    <milestone date="11/11/2009" milestone="M3" />
-    <milestone date="12/16/2009" milestone="M4" />
-    <milestone date="02/03/2010" milestone="M5" />
-    <milestone date="03/17/2010" milestone="M6">
+	<milestone date="08/17/2009" milestone="M1" />
+    <milestone date="09/28/2009" milestone="M2" />
+    <milestone date="11/09/2009" milestone="M3" />
+    <milestone date="12/14/2009" milestone="M4" />
+    <milestone date="02/01/2010" milestone="M5" />
+    <milestone date="03/15/2010" milestone="M6">
       <html:div>API Freeze</html:div>
     </milestone>
-    <milestone date="05/05/2010" milestone="M7">
+    <milestone date="05/03/2010" milestone="M7">
       <html:div>Feature Freeze</html:div>
     </milestone>
-    <milestone date="05/19/2010" milestone="RC1" />
-    <milestone date="05/26/2010" milestone="RC2" />
-    <milestone date="06/02/2010" milestone="RC3" />
-    <milestone date="06/09/2010" milestone="RC4" />
-    <milestone date="06/16/2010" milestone="Final" />
+    <milestone date="05/17/2010" milestone="RC1" />
+    <milestone date="05/24/2010" milestone="RC2" />
+    <milestone date="05/31/2010" milestone="RC3" />
+    <milestone date="06/07/2010" milestone="RC4" />
+    <milestone date="06/14/2010" milestone="Final" />
     <milestone date="06/23/2010" milestone="Helios" />
       <postamble><html:div>
 MDT UML2 will produce maintenance releases to align with the Galileo SR
