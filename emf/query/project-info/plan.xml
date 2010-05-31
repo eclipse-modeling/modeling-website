@@ -45,7 +45,7 @@ milestones with the Galileo milestone schedule.
       <milestone date="12/15/2009" milestone="M4"></milestone>
       <milestone date="02/02/2010" milestone="M5"></milestone>
       <milestone date="03/16/2010" milestone="M6"><html:p>API freeze</html:p></milestone>
-      <milestone date="05/04/2010" milestone="M7"></milestone>
+      <milestone date="05/04/2010" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
       <milestone date="05/18/2010" milestone="RC1"></milestone>
       <milestone date="05/25/2010" milestone="RC2"></milestone>
       <milestone date="06/01/2010" milestone="RC3"></milestone>
@@ -105,6 +105,8 @@ appropriate offset.
 <html:ul>
     <html:li>Eclipse Platform SDK version 3.6</html:li>
     <html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
+    <html:li>Eclipse MDT OCL version 3.0</html:li>
+    <html:li>Eclipse MDT UML2 version 3.1</html:li>
 </html:ul>
 Therefore, the EMF Query initial release will be
 compatible with these versions and will publish binary and source
@@ -143,7 +145,7 @@ availability.  No committer-driven content is planned.
             </deferred>
         </theme>
    </themes_and_priorities>
-   <appendix name="Legal Notices">
+   <appendix name="A: Legal Notices">
         <html:div>
 <html:ul>
 <html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
