@@ -23,7 +23,7 @@
       <overview summary="The ATL component of the M2M project provides ways to produce a set of target models from a set of source models. An ATL transformation program is composed of rules that define how source model elements are matched and navigated to create and initialize the elements of the target models. Developed on top of the Eclipse platform, the ATL toolkit provides a number of standard development tools (advanced editor, debugger, profiler, etc.) that aims to ease development of ATL transformations." screenshot="images/atl-screenshot-320x240.png" url="http://www.eclipse.org/m2m/atl/"/>
       <id>org.eclipse.m2m.atl.sdk</id>
     </components>
-    <components name="Declarative QVT" provider="Eclipse.org" description="Editors for QVT Relational and QVT Core documents" license="EPL" groups="//@filters.0" image32="images/qvtd.png" incubation="true">
+    <components name="Declarative QVT" provider="Eclipse.org" description="Editors for QVT Relational and QVT Core documents" license="EPL" groups="//@filters.0" image32="images/qvtd.png" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="QVTd project currently provides Editors for&#xA;&#xA;- QVT Relational documents&#xA;- QVT Core documents&#xA;&#xA;QVTc and QVTr execution is work in progress" screenshot="images/qvtd-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.m2m.qvt-relations"/>
       <id>org.eclipse.qvtd</id>
