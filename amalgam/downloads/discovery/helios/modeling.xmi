@@ -23,7 +23,7 @@
       <overview summary="The ATL component of the M2M project provides ways to produce a set of target models from a set of source models. An ATL transformation program is composed of rules that define how source model elements are matched and navigated to create and initialize the elements of the target models. Developed on top of the Eclipse platform, the ATL toolkit provides a number of standard development tools (advanced editor, debugger, profiler, etc.) that aims to ease development of ATL transformations." screenshot="images/atl-screenshot-320x240.png" url="http://www.eclipse.org/m2m/atl/"/>
       <id>org.eclipse.m2m.atl.sdk</id>
     </components>
-    <components name="Declarative QVT" provider="Eclipse.org" description="Editors for QVT Relational and QVT Core documents" license="EPL" groups="//@filters.0" image32="images/qvtd.png" incubation="true" visible="false">
+    <components name="Declarative QVT" provider="Eclipse.org" description="Editors for QVT Relational and QVT Core documents" license="EPL" groups="//@filters.0" image32="images/qvtd.png" incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="QVTd project currently provides Editors for&#xA;&#xA;- QVT Relational documents&#xA;- QVT Core documents&#xA;&#xA;QVTc and QVTr execution is work in progress" screenshot="images/qvtd-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.m2m.qvt-relations"/>
       <id>org.eclipse.qvtd</id>
@@ -86,9 +86,9 @@
       <id>org.eclipse.emf.teneo.hibernate</id>
       <id>org.eclipse.emf.teneo.eclipselink</id>
     </components>
-    <components name="OCL Tools" provider="Eclipse.org" description="An evaluation Console for OCL expressions, and Xtext Editors for Complete OCL documents, Combined OCL in Ecore Models and for individual OCL expressions" license="EPL" image32="images/ocl.png" visible="false">
+    <components name="OCL Tools" provider="Eclipse.org" description="An evaluation Console for OCL expressions, and Xtext Editors for Complete OCL documents, Combined OCL in Ecore Models and for individual OCL expressions" license="EPL" image32="images/ocl.png">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
-      <overview summary="The Examples for the Object Constraint Language provide&#xA;&#xA;Xtext Editors for&#xA;- CompleteOCL documents to enhance Ecore or UML models&#xA;- OCL in Ecore documents defining OCL and Ecore at once&#xA;- Individual Expressions for use by other tools&#xA;- the OCL Standard Library" screenshot="images/oclexamples-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.mdt.ocl"/>
+      <overview summary="The Examples for the Object Constraint Language provide&#xA;&#xA;Xtext Editors for&#xA;- CompleteOCL documents to enhance Ecore or UML models&#xA;- OCL in Ecore documents defining OCL and Ecore at once&#xA;- Individual Expressions for use by other tools&#xA;- the OCL Standard Library" screenshot="images/ocl-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.mdt.ocl"/>
       <id>org.eclipse.ocl.examples</id>
     </components>
     <components name="Agent Modeling Platform" provider="Eclipse.org" description="Agent Modeling Platform (Incubation), including Agent Modeling Framework, Agent eXecution Framework, Agent Graphics and Visualization Framework, and Escape." license="EPL" groups="//@filters.0" image32="images/amp.png" incubation="true" visible="false">
