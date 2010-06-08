@@ -4,11 +4,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>query Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-query.xml" rel="self" type="application/atom+xml"/>
-  <updated>2010-05-31T15:47:35Z</updated>
+  <updated>2010-06-08T16:11:16Z</updated>
   <author>
     <name>query Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-query.xml</id>
+  <entry>
+    <title>[announce] query 1.4.0RC4 (S201006081000) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S201006081000#S201006081000"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S201006081000#S201006081000</id>
+    <updated>2010-06-08T16:11:16Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="201006081000" href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S201006081000#S201006081000" type="S" vanityname="1.4.0RC4" version="1.4.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/query/downloads/drops/1.4.0/S201006081000/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=query</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=query&amp;version=S201006081000
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-query-SDK-1.4.0RC4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/query/downloads/drops/1.4.0/S201006081000/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops/S-3.6RC2-201005201744/eclipse-SDK-3.6RC2-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.6.0/S201005211545/emf-xsd-SDK-2.6.0RC2.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/3.0.0/S201005241044/mdt-ocl-CoreSDK-3.0.0RC2.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/mdt/uml2/downloads/drops/3.1.0/S201005031632/mdt-uml2-SDK-3.1.0M7.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] query 1.4.0RC3 (S201005311205) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=query&amp;showAll=1&amp;hlbuild=S201005311205#S201005311205"/>
