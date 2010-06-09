@@ -107,7 +107,7 @@ if ($projct == "atl")
 {	
 	$Nav->addNavSeparator("ATL", "/atl");
 	$Nav->addCustomNav("Download", "http://www.eclipse.org/modeling/m2m/downloads/?project=atl", "_self", 3);
-	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/index-old.php", "_self", 2);
+//	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/index-old.php", "_self", 2);
 	$Nav->addCustomNav("Documentation", "/atl/documentation", "_self", 3);
 	$Nav->addCustomNav("Support", "/atl/support", "_self", 3);
 	$Nav->addCustomNav("Getting Involved", "/atl/developers", "_self", 3);
