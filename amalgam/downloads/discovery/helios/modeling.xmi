@@ -15,6 +15,7 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="Xpand allows to write code generators for many different types of models. These&#xA;models include EMF models, UML models, XML documents and textual DSL models.&#xA;Any type of source code can be generated from the model sources. Xpand has&#xA;strong emphasize on reducing the effort to create industry-strength code&#xA;generators and provides outstanding Eclipse integration.&#xA;&#xA;Xpand's features include:&#xA; &#x2022; support of various modeling tools&#xA; &#x2022; support of EMF (Eclipse Modeling Framework)&#xA; &#x2022; model-to-code transformations&#xA; &#x2022; model-to-model transformations             &#xA; &#x2022; model validation&#xA; &#x2022; expression language&#xA; &#x2022; static code analysis&#xA; &#x2022; aspect oriented programming&#xA; &#x2022; support for standalone execution" screenshot="images/xpand-screenshot-320x240.png"/>
       <id>org.eclipse.xpand.sdk</id>
+      <hiddingFeatureID>org.eclipse.xpand</hiddingFeatureID>
     </components>
   </categories>
   <categories name="Model To Model" description="Model to Model tools and transformation languages." image48="">
