@@ -44,7 +44,7 @@
       <id>org.eclipse.emf.eef.edt</id>
       <hiddingFeatureID>org.eclipse.emf.eef.runtime</hiddingFeatureID>
     </components>
-    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" license="EPL" image32="images/gmf.png">
+    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" license="EPL" description="GMF Tooling is a framework to generate functional graphical editors based on the GMF Runtime." image32="images/gmf.png">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <id>org.eclipse.gmf.sdk</id>
     </components>
