@@ -58,57 +58,13 @@ ob_start();
 			<th/>
 		</tr>
 		<tr>
-			<td/><td/>
-			<td>n/a</td>
+			<tr>
 			<td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/I20081128-0606/index.php">I20081128-0606</a></td>
-			<td/>
-		</tr>
-		<tr>
-			<td/>
-			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
-		</tr>
-		<tr>
-			<th/><th/>
-			<th align="left">Milestone</th>
-			<th/>
-			<th align="left">Integration</th>
-			<th/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/index.php">1.0M8</a></td>
-			<td/>
-			<td></td>
-			<td/>
-		</tr>
-		<tr/><tr/><tr/>
-		<tr>
-			<td><img align="top" src="http://www.eclipse.org/modeling/images/modeling_about.png"></td>
-			<td colspan="5" width="200"><b>Modeler<b></td>
-		</tr>
-		<tr>
-			<td/>
-			<td colspan="5">A lightweight set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Practitioner; that is, it provides UML and BPMN diagramming capabilities.</td>
-		</tr>
-		<tr>
-			<td/>
-			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Galileo_Simultaneous_Release">Galileo</a> release train (platform version 3.5):</td>
-		</tr>
-		<tr>
-			<th/><th/>
-			<th align="left">Milestone</th>
-			<th/>
-			<th align="left">Integration</th>
-			<th/>
-		</tr>
-		<tr>
-			<td/><td/>
-			<td><a href="http://download.eclipse.org/modeling/amalgam/modeler/downloads/drops/S20090521-1418">1.0M7</a></td>
-			<td/>
-			<td></td>
-			<td/>
-		</tr>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-win32.win32.x86">Windows</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-macosx-cocoa-x8">Mac OS X</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-linux-gtk-x86.tar.gz">Linux 32bit</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
+		</tr>	
 	</table>
 
 </div>
