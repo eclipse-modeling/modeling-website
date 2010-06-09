@@ -49,8 +49,8 @@ ob_start();
 		<tr>
 			<tr>
 			<td/>
-			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-win32.win32.x86">Windows</a></td>
-			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-macosx-cocoa-x8">Mac OS X</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-win32.win32.x86.zip">Windows</a></td>
+			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-macosx-cocoa-x86.tar.gz">Mac OS X</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-linux-gtk-x86.tar.gz">Linux 32bit</a></td>
 			<td><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/amalgam/dsltk/downloads/drops/S20090703-0844/dsltk-1.0.0M8-incubation-linux-gtk-x86_64.tar.gz">Linux 64bit</a></td>
 		</tr>	
