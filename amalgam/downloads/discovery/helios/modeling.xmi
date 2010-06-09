@@ -10,6 +10,7 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="JET allows you to easily generate textual artifacts in the Eclipse environment&#xA;in a syntax similar to JSP. It supplies tag libraries for navigating XML&#xA;documents, EMF-based documents (including UML2) and for writing template&#xA;results to the Eclipse workspace.&#xA;" url="http://wiki.eclipse.org/M2T-JET"/>
       <id>org.eclipse.jet.sdk</id>
+      <hiddingFeatureID>org.eclipse.jet</hiddingFeatureID>
     </components>
     <components name="Xpand" provider="Eclipse.org" description="Xpand is an efficient code generation framework with a statically-typed template language and support for arbitrary input model types." license="EPL" image32="images/xpand.png">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
@@ -23,6 +24,7 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The ATL component of the M2M project provides ways to produce a set of target models from a set of source models. An ATL transformation program is composed of rules that define how source model elements are matched and navigated to create and initialize the elements of the target models. Developed on top of the Eclipse platform, the ATL toolkit provides a number of standard development tools (advanced editor, debugger, profiler, etc.) that aims to ease development of ATL transformations." screenshot="images/atl-screenshot-320x240.png" url="http://www.eclipse.org/m2m/atl/"/>
       <id>org.eclipse.m2m.atl.sdk</id>
+      <hiddingFeatureID>org.eclipse.m2m.atl</hiddingFeatureID>
     </components>
     <components name="Declarative QVT" provider="Eclipse.org" description="Editors for QVT Relational and QVT Core documents" license="EPL" groups="//@filters.0" image32="images/qvtd.png" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
@@ -40,6 +42,7 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The Extended Editing Framework aims at giving another way to improve the EMF model creation phase by providing new services dedicated to editing and using more appealing editing elements. The way to obtain these services and elements is based on a generative approach similar to the EMF.Edit one. The framework provides advanced editing components for the properties of EMF elements and a default generation based on standard metamodels using these components." screenshot="images/eef-screenshot-320x240.png" url="http://www.eclipse.org/modeling/emft/?project=eef"/>
       <id>org.eclipse.emf.eef.edt</id>
+      <hiddingFeatureID>org.eclipse.emf.eef.runtime</hiddingFeatureID>
     </components>
     <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" license="EPL" image32="images/gmf.png">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
@@ -70,6 +73,7 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="MoDisco provides standard metamodels to describe existing systems, discoverers&#xA;to automaticaly create models from Java and XML source code, and generic tools&#xA;to understand and transform complex models.&#xA;" screenshot="images/modisco-screenshot-320x240.png" url="http://www.eclipse.org/gmt/modisco/"/>
       <id>org.eclipse.gmt.modisco.sdk</id>
+       <hiddingFeatureID>org.eclipse.gmt.modisco.infrastructure</hiddingFeatureID>
     </components>
   </categories>
   <categories name="Runtime and Tools" description="Modeling related runtimes and frameworks." relevance="1">
