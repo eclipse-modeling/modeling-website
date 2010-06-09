@@ -45,18 +45,7 @@ ob_start();
 		<tr>
 			<td/>
 			<td colspan="5">A set of modeling technologies delivered as an Eclipse product that focuses on the needs of a modeling Toolsmith; that is, it provides EMF, GMF, OCL, QVT, Xpand, UML and other capabilities.</td>
-		</tr>
-		<tr>
-			<td/>
-			<td colspan="5">Builds based on the <a href="http://wiki.eclipse.org/Ganymede_Simultaneous_Release">Ganymede</a> release train (platform version 3.4):</td>
-		</tr>
-		<tr>
-			<th/><th/>
-			<th align="left">Milestone</th>
-			<th/>
-			<th align="left">Integration</th>
-			<th/>
-		</tr>
+		</tr>		
 		<tr>
 			<tr>
 			<td/>
