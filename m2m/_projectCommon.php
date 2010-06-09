@@ -104,15 +104,13 @@ $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $proj
 $Nav->addCustomNav("Contributors", "http://www.eclipse.org/$PR/project-info/team.php", "_self", 2);
 
 if ($projct == "atl")
-{
-	$Nav->addNavSeparator("ATL", "/m2m/atl/");
-	$Nav->addCustomNav("Use Cases", "/m2m/atl/usecases/", "_self", 2);
-	$Nav->addCustomNav("Basic Examples", "/m2m/atl/basicExamples_Patterns/", "_self", 2);
-	$Nav->addCustomNav("Transformations", "/m2m/atl/atlTransformations/", "_self", 2);
+{	
+	$Nav->addNavSeparator("ATL", "/atl");
+	$Nav->addCustomNav("Download", "http://www.eclipse.org/modeling/m2m/downloads/?project=atl", "_self", 3);
 	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/index-old.php", "_self", 2);
-	$Nav->addCustomNav("Documentation", "/m2m/atl/doc/", "_self", 2);
-	$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/M2M/Atlas_Transformation_Language_(ATL)", "_self", 2);
-	$Nav->addCustomNav("Publications", "/m2m/atl/publication.php", "_self", 2);
+	$Nav->addCustomNav("Documentation", "/atl/documentation", "_self", 3);
+	$Nav->addCustomNav("Support", "/atl/support", "_self", 3);
+	$Nav->addCustomNav("Getting Involved", "/atl/developers", "_self", 3);
 }
 unset ($bugcoms);
 
