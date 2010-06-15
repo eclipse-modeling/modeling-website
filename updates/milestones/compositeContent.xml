@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Milestone Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-  <children size='7'>
+  <children size='10'>
     <!--  EMF Compare -->
     <child location='http://download.eclipse.org/modeling/emf/updates/milestones/'/>
     <!--  EMF EMF (Core) and MDT XSD -->
@@ -12,9 +12,15 @@
     <child location='http://download.eclipse.org/modeling/emft/ecoretools/updates/0.10milestones/'/>
     <!--  EMFT EEF -->
     <child location='http://download.eclipse.org/modeling/emft/eef/updates/milestones/'/>
+    <!--  EMFT MWE -->
+    <child location='http://download.eclipse.org/modeling/emft/mwe/updates/milestones/'/>
     <!--  M2T Acceleo, JET -->
     <child location='http://download.eclipse.org/modeling/m2t/updates/milestones/'/>
+    <!--  M2T Xpand -->
+    <child location='http://download.eclipse.org/modeling/m2t/xpand/updates/milestones/'/>
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/milestones/'/>
+    <!--  TMF Xtext -->
+    <child location='http://download.eclipse.org/modeling/tmf/updates/milestones/'/>
   </children>
 </repository>
