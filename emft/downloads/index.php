@@ -28,7 +28,7 @@ $dls = array(
 	"/mwe" => array(
 		"Model Workflow Engine" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"SDK (Runtime, Source)" => "-SDK",
+			"SDK (Runtime, Source)" => "SDK",
 			"SDK MWE2 (Runtime, Source)" => "2-SDK",
 			"SDK MWE2 Lang (Runtime, Source)" => "2-lang-SDK",
 			"Runtime" => "runtime",
@@ -53,7 +53,7 @@ $dls = array(
 /* only required if using something other than the default; otherwise will be generated */
 $filePre = array(
 	/* "/newproj" => array("emft-newproj", "emf-newproj"), */
-	"/mwe" => array("emft-mwe", "emft-mwe2", "emft-mwe2-lang")
+	"/mwe" => array("emft-mwe")
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
