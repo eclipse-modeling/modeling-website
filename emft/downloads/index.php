@@ -33,7 +33,6 @@ $dls = array(
 			"SDK MWE(Runtime, Source)" => "SDK",
 			"SDK MWE2 (Runtime, Source)" => "2-SDK",
 			"SDK MWE2 Language (Runtime, Source)" => "2-lang-SDK",
-			"Examples" => "examples",
 			"Automated Tests" => "Automated-Tests"
 		)
 	),
