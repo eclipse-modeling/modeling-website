@@ -27,11 +27,15 @@ $dls = array(
 	),*/
 	"/mwe" => array(
 		"Model Workflow Engine" => array(
-			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"SDK (Runtime, Source)" => "SDK",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE</b></acronym>" => "Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE2</b></acronym>" => "2-Update",
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE2 Language</b></acronym>" => "2-lang-Update",
+			"SDK MWE(Runtime, Source)" => "SDK",
 			"SDK MWE2 (Runtime, Source)" => "2-SDK",
-			"SDK MWE2 Lang (Runtime, Source)" => "2-lang-SDK",
-			"Runtime" => "runtime",
+			"SDK MWE2 Language (Runtime, Source)" => "2-lang-SDK",
+			"Runtime MWE" => "runtime",
+			"Runtime MWE2" => "2-runtime",
+			"Runtime MWE2 Language" => "2-lang-runtime",
 			"Examples" => "examples",
 			"Automated Tests" => "Automated-Tests"
 		)
