@@ -12,10 +12,10 @@ Project, versions 3.0.0.
 </html:p>
 <html:p>
 <html:i><html:b>Note</html:b> that, since the 
-<html:a href="http://www.omg.org/cgi-bin/doc?ptc/09-05-02.pdf">OMG OCL 2.1</html:a>
+<html:a href="http://www.omg.org/cgi-bin/doc?ptc/10-02-01.pdf">OMG OCL 2.2</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
 <html:b>MDT OCL 3.0.0</html:b> release is best endeavours to establish a coherent interpretation
-of the OMG OCL 2.1 and to prototype resolutions for the OMG OCL 2.3 standards.</html:i>
+of the OMG OCL 2.2 and to prototype resolutions for the OMG OCL 2.3 standards.</html:i>
 </html:p>
 <html:p>
 </html:p>
@@ -137,8 +137,8 @@ more detailed information on each.
         <theme name="Compliance">
             <description>
                 <html:div>
-This theme addresses issues related to the OMG OCL 2.1 standard adoption. The bugs related to the inherited deviations
-of the MDT OCL implementation from the OCL 2.0 standard (and consequently, OCL 2.1) also appear here.
+This theme addresses issues related to the OMG OCL 2.2 standard adoption. The bugs related to the inherited deviations
+of the MDT OCL implementation from the OCL 2.0 standard (and consequently, OCL 2.2) also appear here.
                 </html:div>
             </description>
             <committed
