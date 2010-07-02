@@ -85,6 +85,7 @@
       <sitesURLS>http://lwjgl.org/update</sitesURLS>
       <sitesURLS>http://ascape.sourceforge.net/eclipse</sitesURLS>
       <sitesURLS>http://download.eclipse.org/amp/updates/releases</sitesURLS>
+      <sitesURLS>http://mirror.anl.gov/pub/repastsimphony/</sitesURLS>
       <overview summary="The Agent Modeling Platform (AMP) provides extensible frameworks&#xA;and exemplary tools for representing, editing, generating, executing and&#xA;visualizing agent-based models (ABMs) and any other domain requiring spatial,&#xA;behavioral and functional features. AMP has two parts: 1) The Agent Modeling&#xA;Framework (AMF) which provides an Agent-Based Model (ABM) meta-model&#xA;representation, editor, development environment and code generators for popular&#xA;ABM platforms. 2) The AMP platform tools. The Agent Execution Framework (AXF)&#xA;provides services and UI for model management, execution, and views. The Agent&#xA;Graphics Framework (AGF) extends GEF, GEF3D, Zest, and the BIRT charting engine&#xA;to support real-time visualization of and interaction with agent models. Escape&#xA;is a complete ABM environment for Eclipse." screenshot="images/amp-screenshot-320x240.png" url="http://www.eclipse.org/amp"/>
       <id>org.eclipse.amp.all</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
