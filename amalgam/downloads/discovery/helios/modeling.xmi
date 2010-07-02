@@ -80,6 +80,15 @@
     <components name="Connected Data Objects Repository" provider="Eclipse.org" license="EPL" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
     </components>
+    <components name="Agent Modeling Platform" provider="             Eclipse.org  &#xA; &lt;a href=&quot;http://www.eclipse.org/amp/installing/about_discovery.php&quot;>contains non ip-approved content&lt;/a>" description="Agent Modeling Platform (Incubation), including Agent Modeling Framework, Agent eXecution Framework, Agent Graphics and Visualization Framework, and Escape." license="EPL" groups="//@filters.0" image32="images/amp.png" incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
+      <sitesURLS>http://lwjgl.org/update</sitesURLS>
+      <sitesURLS>http://ascape.sourceforge.net/eclipse</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/amp/updates/releases</sitesURLS>
+      <overview summary="The Agent Modeling Platform (AMP) provides extensible frameworks&#xA;and exemplary tools for representing, editing, generating, executing and&#xA;visualizing agent-based models (ABMs) and any other domain requiring spatial,&#xA;behavioral and functional features. AMP has two parts: 1) The Agent Modeling&#xA;Framework (AMF) which provides an Agent-Based Model (ABM) meta-model&#xA;representation, editor, development environment and code generators for popular&#xA;ABM platforms. 2) The AMP platform tools. The Agent Execution Framework (AXF)&#xA;provides services and UI for model management, execution, and views. The Agent&#xA;Graphics Framework (AGF) extends GEF, GEF3D, Zest, and the BIRT charting engine&#xA;to support real-time visualization of and interaction with agent models. Escape&#xA;is a complete ABM environment for Eclipse." screenshot="images/amp-screenshot-320x240.png" url="http://www.eclipse.org/amp"/>
+      <id>org.eclipse.amp.all</id>
+      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
+    </components>
     <components name="Model Workflow Engine" provider="Eclipse.org" license="EPL" groups="//@filters.0" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
     </components>
@@ -93,15 +102,6 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The Examples for the Object Constraint Language provide&#xA;&#xA;Xtext Editors for&#xA;- CompleteOCL documents to enhance Ecore or UML models&#xA;- OCL in Ecore documents defining OCL and Ecore at once&#xA;- Individual Expressions for use by other tools&#xA;- the OCL Standard Library" screenshot="images/ocl-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.mdt.ocl"/>
       <id>org.eclipse.ocl.examples</id>
-    </components>
-    <components name="Agent Modeling Platform" provider="             Eclipse.org  &#xA; &lt;a href=&quot;http://www.eclipse.org/amp/installing/about_discovery.php&quot;>contains non ip-approved content&lt;/a>" description="Agent Modeling Platform (Incubation), including Agent Modeling Framework, Agent eXecution Framework, Agent Graphics and Visualization Framework, and Escape." license="EPL" groups="//@filters.0" image32="images/amp.png" incubation="true">
-      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
-      <sitesURLS>http://lwjgl.org/update</sitesURLS>
-      <sitesURLS>http://ascape.sourceforge.net/eclipse</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/amp/updates/releases</sitesURLS>
-      <overview summary="The Agent Modeling Platform (AMP) provides extensible frameworks&#xA;and exemplary tools for representing, editing, generating, executing and&#xA;visualizing agent-based models (ABMs) and any other domain requiring spatial,&#xA;behavioral and functional features. AMP has two parts: 1) The Agent Modeling&#xA;Framework (AMF) which provides an Agent-Based Model (ABM) meta-model&#xA;representation, editor, development environment and code generators for popular&#xA;ABM platforms. 2) The AMP platform tools. The Agent Execution Framework (AXF)&#xA;provides services and UI for model management, execution, and views. The Agent&#xA;Graphics Framework (AGF) extends GEF, GEF3D, Zest, and the BIRT charting engine&#xA;to support real-time visualization of and interaction with agent models. Escape&#xA;is a complete ABM environment for Eclipse." screenshot="images/amp-screenshot-320x240.png" url="http://www.eclipse.org/amp"/>
-      <id>org.eclipse.amp.all</id>
-      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
   <filters name="Incubation"/>
