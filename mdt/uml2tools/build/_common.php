@@ -5,7 +5,7 @@ $options = array (
 	"BaseBuilderBranch" => "R35_M7",
 
 	"BranchAndJDK" => array (
-		"emft.eclipse.org=------------,------------",
+		"modeling.eclipse.org=------------,------------",
 		"0.9.0=HEAD,/opt/sun-java2-5.0",
 		"0.9.1=R0_9_0_Maintenance,/opt/sun-java2-5.0",
 		"0.7.2=R0_7_0_Maintenance,/opt/sun-java2-5.0",
