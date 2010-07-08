@@ -13,7 +13,7 @@ $pageKeywords	= "developer,resources,modeling,graphical";
 $pageAuthor		= "Anthony Hunter";
 	
 # Paste your HTML content between the EOHTML markers!
-# $Id: releases.php,v 1.3 2010/07/08 22:28:50 ahunter Exp $	
+# $Id: releases.php,v 1.4 2010/07/08 22:30:52 ahunter Exp $	
 $html = <<<EOHTML
 
 <style type="text/css">
@@ -21,6 +21,7 @@ $html = <<<EOHTML
    h2 { font-family : Arial, Helvetica, sans-serif; font-size : 12pt; font-weight : bold; font-style : normal; }
    h3 { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : bold; font-style : normal; }
    table { text-align:left; padding: 3px; border: 1px solid black; }
+   tr.white { background-color: white; border: 1px solid black; }
    tr.top { background-color: #CCFFFF; border: 1px solid black; }
    tr.callisto { background-color: #FFCCFF; border: 1px solid black; }
    tr.europa { background-color: #FFFFCC; border: 1px solid black; }
@@ -287,11 +288,15 @@ $html = <<<EOHTML
 <td></td>
 </tr>
 
-</table>
+<tr class="white">
+<td colspan="14">
 <p>[1] - GMF Runtime and GMF Notation were not separate projects until Helios and the GMF Restructure.</p>
 <p>[2] - GMF Notation was not a separate feature until Ganymede.</p>
 <p>[3] - MDT OCL started depending on MDT UML2 in Europa.</p>
 <p>[4] - GMF Tooling started depending on M2M QVT in Galileo.</p>
+</td>
+</tr>
+</table>
 
 EOHTML;
 
