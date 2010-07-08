@@ -15,7 +15,7 @@ $pageAuthor		= "Anthony Hunter";
 # Paste your HTML content between the EOHTML markers!
 $html = <<<EOHTML
 
-<!-- $Id: releases.php,v 1.5 2010/07/08 22:38:33 ahunter Exp $ -->	
+<!-- $Id: releases.php,v 1.6 2010/07/08 22:40:31 ahunter Exp $ -->	
 <style type="text/css">
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
    table { text-align:left; padding: 3px; border: 1px solid black; }
@@ -27,7 +27,7 @@ $html = <<<EOHTML
    tr.galileo { background-color: #FFCCCC; border: 1px solid black; }
    tr.helios { background-color: #CCFFFF; border: 1px solid black; }
    tr.indigo { background-color: #CCCCFF; border: 1px solid black; }
-   td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 10pt; text-align: left; vertical-align: top; border: 1px solid black;}
+   td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 8pt; text-align: left; vertical-align: top; border: 1px solid black;}
 </style>
 
 <h1>Eclipse Graphical Modeling Project (GMP) Versions</h1>
