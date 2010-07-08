@@ -12,7 +12,8 @@ $pageTitle 		= "Eclipse Graphical Modeling Project (GMP) Releases";
 $pageKeywords	= "developer,resources,modeling,graphical";
 $pageAuthor		= "Anthony Hunter";
 	
-# Paste your HTML content between the EOHTML markers!	
+# Paste your HTML content between the EOHTML markers!
+# $Id: releases.php,v 1.3 2010/07/08 22:28:50 ahunter Exp $	
 $html = <<<EOHTML
 
 <style type="text/css">
@@ -27,7 +28,7 @@ $html = <<<EOHTML
    tr.galileo { background-color: #FFCCCC; border: 1px solid black; }
    tr.helios { background-color: #CCFFFF; border: 1px solid black; }
    tr.indigo { background-color: #CCCCFF; border: 1px solid black; }
-   td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 10pt; text-align: left; vertical-align: top; }
+   td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 10pt; text-align: left; vertical-align: top; border: 1px solid black;}
    p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt;}
    p.footer { font-family : Arial, Helvetica, sans-serif; font-size : 8pt; }
    pre  { font-family : Courier, sans-serif; font-size : 10pt; color : #44cc44;}
