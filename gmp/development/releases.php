@@ -19,14 +19,14 @@ $html = <<<EOHTML
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
    h2 { font-family : Arial, Helvetica, sans-serif; font-size : 12pt; font-weight : bold; font-style : normal; }
    h3 { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-weight : bold; font-style : normal; }
-   table { text-align:left; padding: 3px; border: 1px; background-color: black; color: black; }
-   tr.top { background-color: #CCFFFF; }
-   tr.callisto { background-color: #FFCCFF; }
-   tr.europa { background-color: #FFFFCC; }
-   tr.ganymede { background-color: #CCFFCC; }
-   tr.galileo { background-color: #FFCCCC; }
-   tr.helios { background-color: #CCFFFF; }
-   tr.indigo { background-color: #CCCCFF; }
+   table { text-align:left; padding: 3px; border: 1px solid black; }
+   tr.top { background-color: #CCFFFF; border: 1px solid black; }
+   tr.callisto { background-color: #FFCCFF; border: 1px solid black; }
+   tr.europa { background-color: #FFFFCC; border: 1px solid black; }
+   tr.ganymede { background-color: #CCFFCC; border: 1px solid black; }
+   tr.galileo { background-color: #FFCCCC; border: 1px solid black; }
+   tr.helios { background-color: #CCFFFF; border: 1px solid black; }
+   tr.indigo { background-color: #CCCCFF; border: 1px solid black; }
    td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 10pt; text-align: left; vertical-align: top; }
    p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt;}
    p.footer { font-family : Arial, Helvetica, sans-serif; font-size : 8pt; }
