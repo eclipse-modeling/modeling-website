@@ -34,7 +34,7 @@ $cvscoms = array(
 	"org.eclipse.m2m" => array (
 		"atl" => "org.eclipse.atl",
 		"qvtoml" => "org.eclipse.qvtoml",
-		"qvtr" => "org.eclipse.qvtr",
+		"qvtd" => "org.eclipse.qvt.declarative",
 		/* add more here */
 	)
 );
@@ -42,17 +42,17 @@ $cvscoms = array(
 $projects = array(
 	"ATL" => "atl",
 	"Operational QVT" => "qvtoml",
-	"Relational QVT" => "qvtr"
+	"QVT Declarative" => "qvtd"
 );
 
 $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("qvtr"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array(); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array("atl"); //components without newsgroup
 $nomailinglist = array("atl"); //components without mailinglist
-$incubating = array("qvtr"); // components that are incubating
+$incubating = array("qvtd"); // components that are incubating
 $nomenclature = "Component"; //are we dealing with "components" or "projects"?
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
