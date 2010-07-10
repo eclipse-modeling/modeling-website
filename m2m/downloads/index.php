@@ -29,11 +29,11 @@ $dls = array(
 	),*/
 	"/qvtd" => array(
 		"QVT Declarative" => array(
-			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"SDK (Runtime, Source, Examples)" => "SDK",
-			"Runtime" => "runtime",
-			"Examples" => "examples",
-			"Automated-Tests" => "Automated-Tests" # new Athena version
+			"<acronym title=\"Archived Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "incubation-Update",
+			"SDK (Runtime, Source, Examples)" => "incubation-SDK",
+			"Runtime" => "incubation-runtime",
+			"Examples" => "incubation-examples",
+			"Automated-Tests" => "incubation-Automated-Tests" # new Athena version
 		)
 	),
 	"/qvtoml" => array(
