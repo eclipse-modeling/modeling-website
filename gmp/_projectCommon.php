@@ -80,6 +80,7 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
+$Nav->addCustomNav("Download Versions", "$rooturl/development/releases.php", "_self", 2);
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/GMF_Documentation");
