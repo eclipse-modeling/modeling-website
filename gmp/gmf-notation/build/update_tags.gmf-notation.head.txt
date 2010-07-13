@@ -46,4 +46,4 @@ MAP_PLUGIN_VERSION="autotag${DEV_BRANCH}"
 MAP_PLUGIN="org.eclipse.gmp/org.eclipse.gmf.notation.releng"
 
 #define script to run if map file is changed, eg., to run a build immediately
-EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf-notation -buildType I -version 1.4.0 -noSearchCVS -a -email anthonyh@ca.ibm.com -regex I2010.*eclipse-SDK-.*x86_64.*|S-.*2010.*/eclipse-SDK-3.6.*x86_64*|[IS]2010.*/emf-xsd-SDK-"
+EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf-notation -buildType I -version 1.5.0 -noSearchCVS -a -email anthonyh@ca.ibm.com -regex I2010.*eclipse-SDK-.*x86_64.*|R-.*2010.*/eclipse-SDK-3.6.*x86_64*|R2010.*/emf-xsd-SDK-"
