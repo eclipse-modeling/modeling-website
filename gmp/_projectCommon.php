@@ -35,7 +35,6 @@ $cvsprojs = array (); /* should always be empty */
 /* "cvsname" => array("shortname" => "cvsname") */
 $cvscoms = array (
 	"org.eclipse.gmf" => array (
-		"gmf" => "org.eclipse.gmf",
                 "gmf-tooling" => "org.eclipse.gmf",
                 "gmf-notation" => "org.eclipse.gmf",
                 "gmf-runtime" => "org.eclipse.gmf",
@@ -45,7 +44,6 @@ $cvscoms = array (
 );
 
 $projects = array (
-	"GMF" => "gmf",
 	"GMF Tooling" => "gmf-tooling",
 	"GMF Runtime" => "gmf-runtime",
 	"GMF Notation" => "gmf-notation",

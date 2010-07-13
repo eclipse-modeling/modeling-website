@@ -51,17 +51,6 @@ $dls = array(
 			"Xpand" => "xpand",
 		)
 	),
-	"/gmf" => array(
-		"GMF Tooling" => array(
-			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
-			"GMF SDK (Runtime, Source, Examples)" => "sdk",
-			"GMF Tooling" => "tooling",
-			"GMF Tooling Tests" => "tests",
-			"GMF Experimental SDK" => "sdk-experimental",
-			"GMF Experimental Tests" => "tests-experimental",
-			"GMF Xpand" => "xpand",
-		)
-	),
 );
 
 /* list of valid file prefixes for projects who have been renamed; keys have leading / to match $proj */
@@ -71,7 +60,6 @@ $filePre = array(
 	"/gmf-runtime" => array("gmf"),
 	"/gmf-notation" => array("gmf"),
 	"/gmf-tooling" => array("gmf"),
-	"/gmf" => array("gmf"),
 );
 
 /* define showNotes(), $oldrels, doLanguagePacks() in extras-$proj.php (or just extras.php for flat projects) if necessary, downloads-common.php will include them */
