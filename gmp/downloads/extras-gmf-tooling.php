@@ -1,7 +1,10 @@
 <?php
 
 $oldrels = array(
+	"2.2.2" => array("2010/02/24 12:28","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/2.2.2/R201002241200"),
+	"2.2.1" => array("2009/09/24 15:25","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/2.2.1/R200909151752"),
 	"2.2.0" => array("2009/06/22 12:28","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/2.2.0/R200906220658"),
+	"2.1.3" => array("2009/02/18 12:25","http://archive.eclipse.org/modeling/gmf/gmf/downloads/drops/2.1.3/R200902181028"),
 	"2.1.2" => array("2008/09/17 16:25","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.2/R200809171625"),
 	"2.1.1" => array("2008/08/15 17:18","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.1/R200808151718"),
 	"2.1.0" => array("2008/06/12 14:02","http://archive.eclipse.org/modeling/gmf/downloads/drops/2.1.0/R200806121402"),
@@ -18,8 +21,10 @@ function showNotes()
 {
 ?>
 	<div class="homeitem3col">
+		<h3>GMF Downloads</h3>
+		<p>In the Helios release, the GMF project was restructured into the GMF Tooling, GMF Runtime and GMF Notation projects under the Graphical Modeling Project.</p>
+		<p>A table of previous GMF releases can be found <a href="http://www.eclipse.org/modeling/gmp/development/releases.php"><b>HERE</b></a></p>
 		<h3>Questions?</h3>
-		<p>Looking for the <a href="http://archive.eclipse.org/modeling/gmf/downloads/drops/">old downloads page</a>?</p>
 		<p>If you have problems downloading the drops, contact the <a href="mailto:webmaster@eclipse.org">webmaster</a>.</p>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 	</div>
