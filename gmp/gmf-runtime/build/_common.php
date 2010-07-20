@@ -23,14 +23,14 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I2010.*eclipse-SDK-.*x86_64.*|S-.*2010.*/eclipse-SDK-3.6.*x86_64*|" .
+	"regex" => "I2010.*eclipse-SDK-.*x86_64.*|[SR]-.*2010.*/eclipse-SDK-3.6.*x86_64*|" .
 			"2\.6\..+/[ISR]20.*/emf-xsd-SDK-|" .
 			"3\.1\..+/[ISR]20.*/mdt-uml2-SDK|" .
 			"3\.0\..+/[ISR]20.*/mdt-ocl-.*SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-query-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-validation-SDK-|" .
 			"1\.4\..+/[ISR]20.*/emf-transaction-SDK-|" .
-			"1\.4\..+/[ISR]20.*/gmf-notation-sdk-|" .
+			"1\.4\..+/[ISR]20.*/gmf-sdk-notation-|" .
 			"3\.6\..+/[ISR]20.*/GEF-SDK-|" .
 			"orbitBundles-.*\.map",
 
