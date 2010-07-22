@@ -15,9 +15,10 @@ $pageAuthor		= "Anthony Hunter";
 # Paste your HTML content between the EOHTML markers!
 $html = <<<EOHTML
 
-<!-- $Id: releases.php,v 1.6 2010/07/08 22:40:31 ahunter Exp $ -->	
+<!-- $Id: releases.php,v 1.7 2010/07/22 21:51:54 ahunter Exp $ -->	
 <style type="text/css">
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
+   p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-style : normal; }
    table { text-align:left; padding: 3px; border: 1px solid black; }
    tr.white { background-color: white; border: 1px solid black; }
    tr.top { background-color: #CCFFFF; border: 1px solid black; }
@@ -30,7 +31,8 @@ $html = <<<EOHTML
    td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 8pt; text-align: left; vertical-align: top; border: 1px solid black;}
 </style>
 
-<h1>Eclipse Graphical Modeling Project (GMP) Versions</h1>
+<h1>Eclipse Graphical Modeling Project (GMP) Releases</h1>
+<p>The following table lists the various release done over the past five years.</p>
 <table border="1">
 <tr class="top">
 <td><b>Eclipse<br>Simultanious<br>Release</b></td>
@@ -245,9 +247,9 @@ $html = <<<EOHTML
 <tr class="helios">
 <td rowspan="2">Helios</td>
 <td>06/23/10</td>
-<td rowspan="2">2.3.0</td>
+<td>2.3.0</td>
 <td>1.4.0</td>
-<td rowspan="2">1.4.0</td>
+<td>1.4.0</td>
 <td>3.6.0</td>
 <td>3.6.0</td>
 <td rowspan="2">2.6.0</td>
@@ -261,6 +263,8 @@ $html = <<<EOHTML
 
 <tr class="helios">
 <td>09/24/10</td>
+<td>2.3.1</td>
+<td>1.4.1</td>
 <td>1.4.1</td>
 <td>3.6.1</td>
 <td>3.6.1</td>
@@ -270,10 +274,10 @@ $html = <<<EOHTML
 <td>Indigo</td>
 <td>06/2x/11</td>
 <td></td>
-<td></td>
+<td>1.5.0</td>
 <td></td>
 <td>3.7.0</td>
-<td></td>
+<td>3.7.0</td>
 <td></td>
 <td></td>
 <td></td>
