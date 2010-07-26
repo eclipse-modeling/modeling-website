@@ -37,9 +37,21 @@ ob_start();
 <div id="midcolumn">
 <!--<img src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>-->
 <h1>Papyrus Update Sites</h1>
+
+<h3>Recommended installation, using Eclipse Modeling Package:</h3>
+<p align="JUSTIFY">
+<ul>
+<li>You can download <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
+<li>Use the discovery interface (“Help” => “Install Modeling Component”) and select Papyrus.</li>
+<li>Proceed through installation steps.</li>
+<li>Papyrus is now ready to use!</li>
+</ul>
+</p>
+
 <h3>How to add the Papyrus update site</h3>
 <p align="JUSTIFY">
 
+<h4>Installation using update sites:</h4>
 There are several different ways to add a new update site to the list of sites available from the Install Manager. 
 In all cases, the site location (i.e. the Web URL or the archived Update Site provided above) is the only required item.
 <p align="JUSTIFY">
@@ -47,25 +59,16 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 </p>  
 
 <!-- RS: no update site for release for now... Only one nightly update site -->
-<!--
-<p>
-<h4>Main update site:</h4>
-<ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/release/">http://download.eclipse.org/modeling/mdt/papyrus/updates/release/</a> <br><font color='#808080'>(Eclipse Galileo Update)</font></li>
-</ul>
 
-<h4>Development update sites:</h4>
-<ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/">http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/integration/">http://download.eclipse.org/modeling/mdt/papyrus/updates/integration/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
-</ul>
-</p>
--->
 <p>
-<h4>Development update sites:</h4>
+<h4>Main update site: (Recommended)</h4>
 <ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
+</ul>
+<p>
+<h4>Development update sites (version 0.7.1):</h4>
+<ul>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/helios">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/helios</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
 </ul>
 </p>
 
