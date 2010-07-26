@@ -42,7 +42,7 @@ ob_start();
 <p align="JUSTIFY">
 <ul>
 <li>You can download <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
-<li>Use the discovery interface (“Help” => “Install Modeling Component”) and select Papyrus.</li>
+<li>Use the discovery interface ("Help" => "Install Modeling Component") and select Papyrus.</li>
 <li>Proceed through installation steps.</li>
 <li>Papyrus is now ready to use!</li>
 </ul>
