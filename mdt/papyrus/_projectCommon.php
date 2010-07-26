@@ -54,7 +54,7 @@
 	$Nav->addCustomNav("Update Sites", "/modeling/mdt/papyrus/updates/index.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/index.php", "_self", 3);
-	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developersCorner/developersCornerIndex", "_self", 3);
+	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developpersCorner/developpersCornerIndex", "_self", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
