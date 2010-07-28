@@ -87,6 +87,22 @@ GMP GMF-RUNTIME SDK 1.4.0 I201006041147: contains runtime, source, and documenta
 		<category name="GMP GMF-RUNTIME SDK 1.4.0 I201006041147"/>
 	</feature>
 
+	<!-- GMF-NOTATION 1.4.1 M201007281641 -->
+	<category-def label="GMP GMF-NOTATION SDK 1.4.1 M201007281641" name="GMP GMF-NOTATION SDK 1.4.1 M201007281641">
+		<description>
+GMP GMF-NOTATION SDK 1.4.1 M201007281641: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.gmf.runtime.notation" version="1.4.1.v20100717-0059-37708s73533F5C1479I" url="features/org.eclipse.gmf.runtime.notation_1.4.1.v20100717-0059-37708s73533F5C1479I.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.4.1 M201007281641"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.4.1.v20100717-0059-37708s73533F5C1479I" url="features/org.eclipse.gmf.runtime.notation.source_1.4.1.v20100717-0059-37708s73533F5C1479I.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.4.1 M201007281641"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.sdk" version="1.4.1.v20100717-0059-47B28xGC7DxQAO68KKZ3AHJL9t84" url="features/org.eclipse.gmf.runtime.notation.sdk_1.4.1.v20100717-0059-47B28xGC7DxQAO68KKZ3AHJL9t84.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.4.1 M201007281641"/>
+	</feature>
+
 	<!-- GMF-NOTATION 1.4.0 I201005111617 -->
 	<category-def label="GMP GMF-NOTATION SDK 1.4.0 I201005111617" name="GMP GMF-NOTATION SDK 1.4.0 I201005111617">
 		<description>
