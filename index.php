@@ -64,8 +64,14 @@ development technologies within the Eclipse community by providing a unified set
 		<div class="homeitem3col">
 			<h3>Concrete Syntax Development</h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/gmf">Graphical Modeling Framework</a> (GMF) : provides a generative component and runtime infrastructure for developing graphical editors based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a> and <a href="http://www.eclipse.org/gef" target="_top"><b>GEF</b></a>.</li>
-				<li><a href="http://www.eclipse.org/modeling/tmf/">Textual Modeling Framework</a> (TMF) : provides tools and frameworks for developing textual syntaxes and corresponding editors based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a>.</li>
+				<li><a href="/modeling/gmp">Graphical Modeling Project</a> (GMP) : provides a generative components and runtime infrastructures for developing graphical editors based on <a href="/modeling/emf/" target="_top"><b>EMF</b></a> and <a href="/gef" target="_top"><b>GEF</b></a>.</li>
+				<ul>
+					<li><a href="/modeling/gmp/gmf-tooling">GMF Tooling</a> : provides a model-driven approach to generating graphical editors in Eclipse..</li>
+					<li><a href="/modeling/gmp/gmf-runtime">GMF Runtime</a> : an industry proven application framework for creating graphical editors using EMF and GEF.</li>
+					<li><a href="/modeling/gmp/gmf-notation">GMF Notation</a> : provides a standard EMF notational meta model.</li>
+					<li><a href="/modeling/gmp/graphiti">Graphiti</a> : Graphiti is an Eclipse-based graphics framework to enable easy development of state-of-the-art diagram editors for domain models.</li>
+				</ul>
+				<li><a href="/modeling/tmf/">Textual Modeling Framework</a> (TMF) : provides tools and frameworks for developing textual syntaxes and corresponding editors based on <a href="/modeling/emf/" target="_top"><b>EMF</b></a>.</li>
 				<ul>
 					<li><a href="http://www.eclipse.org/modeling/tmf/?project=xtext">Xtext</a> : a powerful framework/tool for developing external textual DSLs based on <a href="http://www.eclipse.org/modeling/emf/" target="_top"><b>EMF</b></a>.</li>
 					<li><a href="http://www.eclipse.org/gmt/tcs/">TCS</a> : a component that enables the specification of textual concrete syntaxes for Domain-Specific Languages (DSLs) by attaching syntactic information to metamodels.</li>
