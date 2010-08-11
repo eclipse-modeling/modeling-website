@@ -6,7 +6,7 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"emft.eclipse.org=------------,------------",
-		"1.1.0=HEAD,/opt/sun-java2-5.0",
+		"1.1.1=HEAD,/opt/sun-java2-5.0",
 		"1.0.1=R1_0_maintenance,/opt/sun-java2-5.0",
 		"0.8.1=R0_8_maintenance,/opt/sun-java2-5.0",
 		"0.7.1=R0_7_maintenance,/opt/sun-java2-5.0",
@@ -14,7 +14,7 @@ $options = array (
 		#"1.0.3=R1_0_maintenance,/opt/sun-java2-1.4",
 		
 		"modeling.eclipse.org=------------,------------",
-		"1.1.0=HEAD,/opt/sun-java2-5.0",
+		"1.1.1=HEAD,/opt/sun-java2-5.0",
 		"1.0.1=R1_0_maintenance,/opt/sun-java2-5.0",
 		"0.8.1=R0_8_maintenance,/opt/sun-java2-5.0",
 		"0.7.1=R0_7_maintenance,/opt/sun-java2-5.0",
