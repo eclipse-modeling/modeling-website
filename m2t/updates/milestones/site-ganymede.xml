@@ -94,6 +94,34 @@ M2T JET SDK 1.0.2RC2 S201001291720: contains runtime, source, and documentation.
 		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
 	</feature>
 
+	<!-- ACCELEO 3.0.1RC1 S201008110715 -->
+	<category-def label="M2T ACCELEO SDK 3.0.1RC1 S201008110715" name="M2T ACCELEO SDK 3.0.1RC1 S201008110715">
+		<description>
+M2T ACCELEO SDK 3.0.1RC1 S201008110715: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.acceleo.doc" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.doc_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.runtime" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.runtime_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.examples" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.examples_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.ui.capabilities_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.source" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.source_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.sdk" version="3.0.0.v201008110715" url="features/org.eclipse.acceleo.sdk_3.0.0.v201008110715.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC1 S201008110715"/>
+	</feature>
+
 	<!-- ACCELEO 0.9.0M5 S201002020636 -->
 	<category-def label="M2T ACCELEO SDK 0.9.0M5 S201002020636" name="M2T ACCELEO SDK 0.9.0M5 S201002020636">
 		<description>
