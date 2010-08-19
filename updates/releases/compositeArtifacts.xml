@@ -20,6 +20,8 @@
     <child location='http://download.eclipse.org/modeling/m2t/updates/releases/'/>
     <!--  M2T Xpand -->
     <child location='http://download.eclipse.org/modeling/m2t/xpand/updates/'/>
+    <!--  MDT MoDisco -->
+    <child location='http://download.eclipse.org/modeling/mdt/modisco/updates/release/'/>
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/releases/'/>
     <!--  TMF Xtext -->
