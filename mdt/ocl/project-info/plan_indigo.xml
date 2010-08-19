@@ -8,13 +8,15 @@
 <html:p>
 This document lays out the feature and API set for the
 sixth annual release of the Eclipse Object Constraint Language (MDT OCL)
-Project, version 4.0.0 and an interim upgrade 3.1.0.
+Project, version 3.2.0 and an interim upgrade 3.1.0.
 
 A late requirement to use Xtext rather than IMP to support editing meant that many 3.0.0 facilities
 were not fully developed in time for release 3.0.0. Resolution of evaluator issues and library usability
 were held back, and the editors provided only as examples. The interim 3.1.0 release is intended to
-resolve quality issues in the editors. The 4.0.0 release should fully integrate the new editors
-and make the library model-driven. 
+resolve quality issues in the editors. The 3.2.0 release (for Indigo) should prepare for fully integration
+of the new editors and make the library model-driven. Switchover of the old APIs to the new functionality
+and renaming of examples plugins should occur immediately after Indigo so that OCL clients have the
+entire Indigo+1 development cycle to exploit the enhancements that will appear in 4.0.0.
 
 New external APIs are planned to provide interchangeability with alternate OCL products.
 The existing external APIs should be unaffected, will be deprecated after Indigo, but may be
@@ -29,7 +31,7 @@ working with major consumers in the release after Indigo to assist in migration 
 <html:i><html:b>Note</html:b> that, since the 
 <html:a href="http://www.omg.org/cgi-bin/doc?ptc/10-02-01.pdf">OMG OCL 2.2</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
-<html:b>MDT OCL 4.0.0</html:b> release is best endeavours to establish a coherent interpretation
+<html:b>MDT OCL 3.2.0</html:b> release is best endeavours to establish a coherent interpretation
 of the OMG OCL 2.2 and to prototype resolutions for the OMG OCL 2.3 standards. Two of the MDT/OCL
 committers are also members of the OMG Revision Task Force that resolves the specification issues.</html:i>
 </html:p>
@@ -45,7 +47,7 @@ will be provided.
    </introduction>
    <release_deliverables>
      <html:div>
-The release deliverables for the MDT OCL 4.0 release has the same form as 
+The release deliverables for the MDT OCL 3.2 release has the same form as 
 is found in most Eclipse projects, namely:
 <html:ul>
 <html:li>MDT OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
@@ -54,7 +56,7 @@ is found in most Eclipse projects, namely:
 <html:li>MDT OCL tests (downloadable)</html:li>
 <html:li>MDT OCL examples (downloadable)</html:li>
 </html:ul>
-MDT OCL 4.0.0 source code will be available as versions tagged "R4_0" in the project's CVS repository.
+MDT OCL 3.2.0 source code will be available as versions tagged "R3_2" in the project's CVS repository.
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -64,24 +66,24 @@ Release milestones occur at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
 final 3.7 release of the Platform, upon which MDT OCL and other projects
 will release simultaneously. As MDT OCL is a dependency of numerous
-other projects, MDT OCL will deliver its milestones within one week of
-the Eclipse Platform in accordance with the schedule below.
+other projects, MDT OCL Core will deliver its milestones at the +1
+schedule in accordance with the schedule below. MDT OCL Tools will deliver
+at the +3 schedule (two days later).
          </html:div>
       </preamble>
-<milestone date="~08/17/2010" milestone="3.1.0M1"></milestone>
-<milestone date="~09/28/2010" milestone="3.1.0M2"></milestone>
-<milestone date="15/10/2010" milestone="3.1.0"></milestone>
-<milestone date="~11/09/2010" milestone="4.0.0M3"></milestone>
-<milestone date="~12/14/2010" milestone="4.0.0M4"></milestone>
-<milestone date="~02/01/2011" milestone="4.0.0M5"></milestone>
-<milestone date="~03/15/2011" milestone="4.0.0M6"><html:div>API freeze</html:div></milestone>
-<milestone date="~05/03/2011" milestone="4.0.0M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="~05/17/2011" milestone="4.0.0RC1"></milestone>
-<milestone date="~05/24/2011" milestone="4.0.0RC2"></milestone>
-<milestone date="~05/31/2011" milestone="4.0.0RC3"></milestone>
-<milestone date="~06/07/2011" milestone="4.0.0RC4"></milestone>
-<milestone date="~06/14/2011" milestone="4.0.0RC5"></milestone>
-<milestone date="06/23/2011" milestone="Indigo"></milestone>
+<milestone date="Monday 18 August 2010" milestone="3.1.0M1"></milestone>
+<milestone date="Monday 27 September 2010" milestone="3.1.0M2"></milestone>
+<milestone date="Monday 25 October 2010" milestone="3.1.0"></milestone>
+<milestone date="Monday 8 November 2010" milestone="3.2.0M3"></milestone>
+<milestone date="Monday 13 December 2010" milestone="3.2.0M4"></milestone>
+<milestone date="Monday 7 February 2011" milestone="3.2.0M5"></milestone>
+<milestone date="Monday 14 March 2011" milestone="3.2.0M6"><html:div>API freeze</html:div></milestone>
+<milestone date="Monday 2 May 2011" milestone="3.2.0M7"><html:div>Feature Freeze</html:div></milestone>
+<milestone date="Monday 16 May 2011" milestone="3.2.0RC1"></milestone>
+<milestone date="Monday 23 May 2011" milestone="3.2.0RC2"></milestone>
+<milestone date="Monday 30 May 2011" milestone="3.2.0RC3"></milestone>
+<milestone date="Monday 6 June 2011" milestone="3.2.0RC4"></milestone>
+<milestone date="Monday 22 June 2011" milestone="Indigo"></milestone>
       <postamble><html:div>
 MDT OCL may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.
