@@ -1,8 +1,4 @@
 @CHARSET "UTF-8";
-/*#novaContent {*/
-/*	background: url("backgroundMain.png") no-repeat;*/
-/*	padding-top: 210px;*/
-/*}*/
 
 #midcolumn {
 	width: 640px;
@@ -29,7 +25,7 @@ a strong {
 
 
 #novaContent {
-	background: url("images/backgroundMain.png") no-repeat white;
+	background: url("images/backgroundMain-980x196.png") no-repeat white;
 	padding-top: 170px;
 }
 

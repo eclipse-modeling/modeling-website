@@ -39,15 +39,16 @@
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
-	# $Menu->setMenuItemList(array());
-	# $Menu->addMenuItem("Home", "/project", "_self");
-	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
-	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
+	$Menu->setMenuItemList(array());
+	$Menu->addMenuItem("Home", "/modeling/emft/mtf/", "_self");
+	$Menu->addMenuItem("Download", "/modeling/emft/mtf/download.php", "_self");
+	$Menu->addMenuItem("Documentation", "/modeling/emft/mtf/documentation.php", "_self");
+	$Menu->addMenuItem("Support", "/modeling/emft/mtf/support.php", "_self");
+	$Menu->addMenuItem("Getting Involved", "/modeling/emft/mtf/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
 	# $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/emft/mtf/style.css"/>');
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 	$App->Promotion = TRUE;
