@@ -1,7 +1,4 @@
 @CHARSET "UTF-8";
-#novaContent {
-	background: url("images/backgroundMain-980x196.png") no-repeat white;
-}
 
 #midcolumn {
 	width: 640px;
@@ -73,64 +70,80 @@ a strong {
 	
 #bigbuttons {
 	position: relative;
-	padding-left: 420px;
-	width : 560px;
+	left: 420px;
+	top: -170px;
 }
 #bigbuttons h3{
 	visibility: hidden;
-	height:0;
 }
 
 #bigbuttons a {
 }
 
 #bigbuttons ul li {
-   vertical-align:bottom;
-   display:inline-block;
+   display:block;
    list-style-type:none;
+   background-color: red;
    padding: 0;
    margin: 0;
 }
 
 #bigbuttons a:hover {
-	text-decoration: underline;
-	color : black;
+	text-decoration: none;
 }
 
 #bigbuttons a {
-   margin: 50px;
-   display:inline-block;
-   list-style-type:none;
-   padding-left: 70px;
-   padding-top: 10px;
-   margin: 0;
-   width: 180px;
-   height: 77px;
-   color : black;
+   display: block;
+   height:77px; width:250px;
+   padding: 0;
+   margin: 20px;
+   text-indent: -9000px;
+   position: absolute;
 }
 
 #buttonDownload {
-   background:transparent url("images/buttonDownload_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonDownload.png") no-repeat 0 0;
+   top: 0px;
+   left: 0px;
 }
 
+#buttonDownload:hover {
+   background:transparent url("images/buttonDownload_sel.png") no-repeat 0 0;
+}
+
+   
 #buttonDocumentation {
-   background:transparent url("images/buttonDocumentation_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonDocumentation.png") no-repeat 0 0;
+   top: 87px;
+   left: 0px;
+}
+
+#buttonDocumentation:hover {
+   background:transparent url("images/buttonDocumentation_sel.png") no-repeat 0 0;
 }
 
 #buttonSupport {
-   background:transparent url("images/buttonSupport_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonSupport.png") no-repeat 0 0;
+   top: 0px;
+   left: 280px;
+}
+
+#buttonSupport:hover {
+   background:transparent url("images/buttonSupport_sel.png") no-repeat 0 0;
 }
 
 #buttonInvolved {
-   background:transparent url("images/buttonInvolved_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
+   top: 87px;
+   left: 280px;
+}
+
+#buttonInvolved:hover {
+   background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
 }
 
 #bigbuttons a * {
-}
-
-#bigbuttons strong{
-   display:block;
-   text-decoration: none;
+	visibility: hidden;
 }
 
 #headlines {
