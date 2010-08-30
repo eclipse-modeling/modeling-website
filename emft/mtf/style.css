@@ -104,19 +104,31 @@ a strong {
 }
 
 #buttonDownload {
-   background:transparent url("images/buttonDownload_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonDownload.png") no-repeat 0 0;
+}
+#buttonDownload a:HOVER {
+   background:transparent url("images/buttonDownload_sel.png") no-repeat 0 0;
 }
 
 #buttonDocumentation {
-   background:transparent url("images/buttonDocumentation_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonDocumentation.png") no-repeat 0 0;
+}
+#buttonDocumentation a:HOVER {
+   background:transparent url("images/buttonDocumentation_sel.png") no-repeat 0 0;
 }
 
 #buttonSupport {
-   background:transparent url("images/buttonSupport_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonSupport.png") no-repeat 0 0;
+}
+#buttonSupport a:HOVER {
+   background:transparent url("images/buttonSupport_sel.png") no-repeat 0 0;
 }
 
 #buttonInvolved {
-   background:transparent url("images/buttonInvolved_empty.png") no-repeat 0 0;
+   background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
+}
+#buttonInvolved a:HOVER {
+   background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
 }
 
 #bigbuttons a * {
