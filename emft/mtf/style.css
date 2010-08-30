@@ -112,7 +112,7 @@ a strong {
 }
 
 #buttonSupport {
-   background:transparent url("images/buttonSupport.png") no-repeat 0 0;
+   background:transparent url("/default/images/buttonSupport_empty.png") no-repeat 0 0;
 }
 
 #buttonInvolved {
@@ -125,6 +125,14 @@ a strong {
 #bigbuttons strong{
    display:block;
    text-decoration: none;
+}
+
+#bigbuttonTitle {
+	font-size: 16px;
+}
+
+#bigbuttonSummary {
+	font-size: 10px;
 }
 
 #headlines {
