@@ -114,9 +114,6 @@ a strong {
 #buttonSupport {
    background:transparent url("images/buttonSupport.png") no-repeat 0 0;
 }
-#buttonSupport:HOVER {
-   background:transparent url("images/buttonSupport_sel.png") no-repeat 0 0;
-}
 
 #buttonInvolved {
    background:transparent url("/default/images/buttonInvolved_empty.png") no-repeat 0 0;
