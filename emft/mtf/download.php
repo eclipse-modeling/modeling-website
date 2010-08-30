@@ -11,8 +11,9 @@
  *******************************************************************************/
 
 	$pageTitle 		= "MyProject - Download";
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
-
+#	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/emft/mtf/style.css"/>');
+	
 	$html  = <<<EOHTML
 <div id="midcolumn">
 <h2>$pageTitle</h2>
