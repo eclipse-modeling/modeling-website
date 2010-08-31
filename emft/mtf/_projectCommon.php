@@ -26,25 +26,25 @@
 	
 	# Break the navigation into sections
 	$Nav->addNavSeparator("MTF", 	"/modeling/emft/mtf/");
-	$Nav->addCustomNav("Download", "/modeling/emft/mtf/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/modeling/emft/mtf/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/modeling/emft/mtf/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/modeling/emft/mtf/developers", "_blank", 3);
+	$Nav->addCustomNav("Download", "/modeling/emft/mtf/download/", "_self", 3);
+	$Nav->addCustomNav("Documentation", "/modeling/emft/mtf/documentation/", "_blank", 3);
+	$Nav->addCustomNav("Support", "/modeling/emft/mtf/support/", "_blank", 3);
+	$Nav->addCustomNav("Getting Involved", "/modeling/emft/mtf/developers/", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "emf, dsl, modeling, domain specific language, textual, framework, repository, team";
 	$pageAuthor		= "Steffen Stundzig";
-	# $pageTitle 		= "Xtext";
+	# $pageTitle 		= "MTF";
 
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
 	$Menu->setMenuItemList(array());
 	$Menu->addMenuItem("Home", "/modeling/emft/mtf/", "_self");
-	$Menu->addMenuItem("Download", "/modeling/emft/mtf/download.php", "_self");
-	$Menu->addMenuItem("Documentation", "/modeling/emft/mtf/documentation.php", "_self");
-	$Menu->addMenuItem("Support", "/modeling/emft/mtf/support.php", "_self");
-	$Menu->addMenuItem("Getting Involved", "/modeling/emft/mtf/developers", "_self");
+	$Menu->addMenuItem("Download", "/modeling/emft/mtf/download/", "_self");
+	$Menu->addMenuItem("Documentation", "/modeling/emft/mtf/documentation/", "_self");
+	$Menu->addMenuItem("Support", "/modeling/emft/mtf/support/", "_self");
+	$Menu->addMenuItem("Getting Involved", "/modeling/emft/mtf/developers/", "_self");
 	
 	# To define additional CSS or other pre-body headers
 	# $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
