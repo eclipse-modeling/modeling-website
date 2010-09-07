@@ -48,6 +48,19 @@ $cvscoms = array (
 	)
 );
 
+$aboutcoms = array (
+	"bpmn2" => ".bpmn2",
+	"imm" => ".imm",
+	"mst" => ".mst",
+	"ocl" => ".ocl",
+	"papyrus" => ".papyrus",
+	"sbvr" => ".sbvr",
+	"uml2" => ".uml2",
+	"uml2tools" => ".uml2-tools",
+	"xsd" => ".xsd"
+	/* add more here */
+);
+
 $projects = array (
 	"BPMN2" => "bpmn2",
 	"IMM" => "imm",
@@ -84,7 +97,7 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
-$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
+$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling.mdt" . (isset ($aboutcoms[$proj]) ? "$aboutcoms[$proj]" : ""), "", 1);
 $Nav->addNavSeparator($projectName, "$rooturl/");
 foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
