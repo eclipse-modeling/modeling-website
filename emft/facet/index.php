@@ -32,8 +32,10 @@
 	
 	// 	# Paste your HTML content between the EOHTML markers!
 	$html = file_get_contents('pages/_index.html');
+	$description = file_get_contents('pages/description.html');
 	$news = getMoDiscoNews();
 	$html = str_replace("%%HEADLINES%%", $news, $html);
+	$html = str_replace("%%DESCRIPTION%%", $description, $html);
 	# Generate the web page
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>' . "\n\t");
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
