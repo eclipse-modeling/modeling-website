@@ -15,15 +15,27 @@
 	$localVersion = false;
 	
 	# Define these here, or in _projectCommon.php for site-wide values
-	$pageKeywords	= "eclipse, project";
-	$pageAuthor		= "Your name";
-	$pageTitle 		= "My project home";
+	$pageKeywords	= "eclipse, emf, facet";
+	$pageAuthor		= "Grégoire Dupé";
+	$pageTitle 		= "EMF Facet";
 	
+	function getMoDiscoNews(){
+		$xsl = new Xsltprocessor();
+		$xsldoc = new DomDocument();
+		$xsldoc->load("news/news.xsl");
+		$xsl->importStyleSheet($xsldoc);
+		
+		$xmldoc = new DomDocument();
+		$xmldoc->load("news/news.rss");
+		return $xsl->transformToXML($xmldoc); 
+	}
 	
 	// 	# Paste your HTML content between the EOHTML markers!
 	$html = file_get_contents('pages/_index.html');
-
+	$news = getMoDiscoNews();
+	$html = str_replace("%%HEADLINES%%", $news, $html);
 	# Generate the web page
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>' . "\n\t");
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
 ?>
