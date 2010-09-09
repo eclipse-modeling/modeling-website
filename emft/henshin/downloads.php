@@ -35,7 +35,7 @@ $html = <<<EOHTML
 		
 <p>
 
-<h3>Version 0.6.0.I201009090000 (released 9 September 2010)</h3>
+<h3>Version 0.6.0.I201009090000 (released 9 Sep. 2010)</h3>
 <ol>
 <li>Runtime: 
 <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.6.0/I201009090000/henshin-runtime-incubation_0.6.0.I201009090000.zip">henshin-runtime-incubation_0.6.0.I201009090000.zip</a> 
