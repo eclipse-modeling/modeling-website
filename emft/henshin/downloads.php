@@ -35,6 +35,17 @@ $html = <<<EOHTML
 		
 <p>
 
+<h3>Version 0.6.0.I201009090000 (released 9 September 2010)</h3>
+<ol>
+<li>Runtime: 
+<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.6.0/I201009090000/henshin-runtime-incubation_0.6.0.I201009090000.zip">henshin-runtime-incubation_0.6.0.I201009090000.zip</a> 
+</li>
+<li>SDK (Runtime + Source): 
+<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.6.0/I201009090000/henshin-sdk-incubation_0.6.0.I201009090000.zip">henshin-sdk-incubation_0.6.0.I201009090000.zip</a> 
+</li>
+</ol>
+
+
 <h3>Version 0.5.1.I201003091626 (released 4 May 2010)</h3>
 <ol>
 <li>Runtime: 
