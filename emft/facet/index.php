@@ -37,6 +37,7 @@
 	$html = str_replace("%%HEADLINES%%", $news, $html);
 	$html = str_replace("%%DESCRIPTION%%", $description, $html);
 	# Generate the web page
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>' . "\n\t");
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>' . "\n\t");
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
 
