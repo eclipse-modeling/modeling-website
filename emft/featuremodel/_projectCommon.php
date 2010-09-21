@@ -10,7 +10,7 @@
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
 	# these are optional
 	$Nav->addNavSeparator("EMF Feature Model", "index.php");
-	$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
+	#$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
 	#$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
 	#$Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
 
