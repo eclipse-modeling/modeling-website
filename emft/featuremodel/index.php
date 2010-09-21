@@ -20,9 +20,9 @@
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
-  $Nav->setLinkList( array() );
-  $Nav->addNavSeparator( "EMF Feature Model", "/modeling/emft/featuremodel/" );
-    $Nav->addNavSeparator("Downloads",    "/modeling/emft/featuremodel/downloads.php");
+    $Nav->setLinkList( array() );
+    $Nav->addNavSeparator( "EMF Feature Model", "/modeling/emft/featuremodel/" );
+    $Nav->addCustomNav("Downloads",    "/modeling/emft/featuremodel/downloads.php");
 	$Nav->addCustomNav("About This Project", 	"/projects/project_summary.php?projectid=modeling.emft.featuremodel","",2);
 	# $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
 	# $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
