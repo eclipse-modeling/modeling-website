@@ -13,6 +13,7 @@ $newsgroups["UML2"][] = "tools.uml2"; /* add old one */
 $newsgroups["XSD"] = array("technology.xsd","tools.emf"); /* override */
 $newsgroups["Papyrus"] = array("papyrus"); /* override */
 $newsgroups["MST"] = array("mst"); /* override */
+$newsgroups["MoDisco"] = array("modisco"); /* override */
 
 $mailinglists = array("MDT (main)" => array("mdt.dev"));
 foreach ($projects as $name => $suf) {
