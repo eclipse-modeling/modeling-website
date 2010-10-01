@@ -24,16 +24,14 @@
 		<h1>Papyrus Documentation</h1>
 		
 		<p>
-			Papyrus documentation is currently in development. Users will find in the future a complete documentation in the online help of the Eclipse tool.   
+			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
+			Finally, developpers may go the Papyrus wiki to know more Papyrus design and questions may be asked to the Papyrus forum.
 		</p>
 		
 		<p>
 			You can find some documentation:
 			<ul>
-			<li>On the Papyrus <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">forum</a></li>
-			<li>On the online help: in the eclipse tool, section Papyrus</li>
-			<li>On the <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.papyrus/tags/0.7.0/plugins/developer/org.eclipse.papyrus.doc/">svn</a> repository.</li> 
-			<li>On the Papyrus <a href="http://wiki.eclipse.org/MDT/Papyrus">Wiki</a></li>
+			<li><a href="usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
 			</ul> 
 		</p>
 		
@@ -78,8 +76,8 @@
 		<div class="sideitem">
 			<h6>Related Links</h6>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/MDT/Papyrus">For developpers, let's see the papyrus wiki</a></li>
-				<li>test<a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">For questions, let's go to Papyrus forum</a></li>
+				<li>For developpers, let's see at the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki</a></li>
+				<li>For questions, let's go to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum</a></li>
 			</ul>
 		</div>
 		<!--
