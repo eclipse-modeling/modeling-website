@@ -13,7 +13,7 @@
 
 	#
 	# Begin: page-specific settings.
-	$pageTitle 		= "Papyrus Users Corner";
+	$pageTitle 		= "Papyrus Tutorials";
 	$pageKeywords	= "papyrus, users, documents, tutorials, examples";
 	$pageAuthor		= "Sebastien Gerard";
 		
@@ -21,7 +21,7 @@
 	ob_start();
 	?>
 	<div id="midcolumn">
-		<h1>Papyrus Documentation</h1>
+		<h1>Papyrus Tutorials</h1>
 		
 		<p>
 			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
