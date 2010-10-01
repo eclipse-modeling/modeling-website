@@ -78,8 +78,8 @@
 		<div class="sideitem">
 			<h6>Related Links</h6>
 			<ul>
-				<li><a href="http://wiki.eclipse.org/MDT/Papyrus">Wiki</a></li>
-				<li><a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Forum</a></li>
+				<li><a href="http://wiki.eclipse.org/MDT/Papyrus">For developpers, let's see the papyrus wiki</a></li>
+				<li><a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">For questions, let's go the Papyrus forum</a></li>
 			</ul>
 		</div>
 		<!--
