@@ -31,8 +31,8 @@
 		<p>
 			You can find some documentation:
 			<ul>
-			<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
-			<li><a href="resources/TutorialOnPapyrusUSE_d20101001.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
+			<li><a href="resources/TutorialOnPapyrusUSE_d20101001.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
+			<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
 			</ul> 
 		</p>
 		
