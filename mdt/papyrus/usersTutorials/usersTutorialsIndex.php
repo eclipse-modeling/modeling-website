@@ -31,10 +31,8 @@
 		<p>
 			You can find some documentation:
 			<ul>
-			<li>On the Papyrus <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">forum</a></li>
-			<li>On the online help: in the eclipse tool, section Papyrus</li>
-			<li>On the <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.mdt.papyrus/tags/0.7.0/plugins/developer/org.eclipse.papyrus.doc/">svn</a> repository.</li> 
-			<li>On the Papyrus <a href="http://wiki.eclipse.org/MDT/Papyrus">Wiki</a></li>
+			<li><a href="/Resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
+			<li><a href="/Resources/TutorialOnPapyrusUSE_d20101001.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
 			</ul> 
 		</p>
 		
