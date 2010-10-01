@@ -24,8 +24,8 @@
 		<h1>Papyrus Documentation</h1>
 		
 		<p>
-			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
-			Finally, developpers may go the Papyrus wiki to know more Papyrus design and questions may be asked to the Papyrus forum.
+			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
+			In addition to the documentation available through this page, you will find documentation in the online help of the tool.
 		</p>
 		
 		<p>
@@ -77,17 +77,17 @@
 			<h6>Related Links</h6>
 			<ul>
 				<li>For developpers, let's see at the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki</a></li>
-				<li>For questions, let's go to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum</a></li>
+				<li>For any questions, let's go to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum</a></li>
 			</ul>
 		</div>
-		<!--
+		
 		<div class="sideitem">
 			<h6>&lt;h6&gt; tag</h6>
 				<div class="modal">
 					Wrapping your content using a div.modal tag here will add the gradient background
 				</div>
 		</div>
-		-->
+		
 	</div>
 
 	
