@@ -239,18 +239,32 @@ Notes:
 	Customize the active / inactive classes to affect the thumbnails animation.
 	Use the !important keyword to override FX without affecting performance.
 */
-
+/*
 .slideshow-thumbnails {
-	rigth: 65px;
+	bottom: -65px;
 	height: 65px;
 	left: 0;
 	position: absolute;
 	width: 100%;
 }
+*/
 .slideshow-thumbnails * {
 	margin: 0;
 	padding: 0;
 }
+
+    .slideshow-thumbnails {
+    	height: 300px;
+    	left: auto;
+    	right: -80px;
+    	top: 0;
+    	width: 70px;
+    }
+    .slideshow-thumbnails ul {
+    	height: 500px;
+    	width: 70px;
+    }    
+/*
 .slideshow-thumbnails ul {
 	height: 65px;
 	left: 0;
@@ -258,6 +272,7 @@ Notes:
 	top: 0;
 	width: 10000px;
 }
+*/
 .slideshow-thumbnails li {
 	float: left;
 	list-style: none;
