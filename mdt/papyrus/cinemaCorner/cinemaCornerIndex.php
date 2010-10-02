@@ -20,13 +20,7 @@
 	# Paste your HTML content between the EOHTML markers!	
 	ob_start();
 	?>
-	<div id="midcolumn">
-		<h1>Papyrus Cinema Corner</h1>
-		
-		<p>
-			This page consists of screenshots and screencasts on Papyrus.
-		</p>
-<p>
+
 <head>
 	<title>Papyrus Slideshow</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -54,12 +48,17 @@
  -->
  
 <body>
-  <div id="show" class="slideshow">
-    <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
-  </div>
-  
+	<div id="midcolumn">
+		<h1>Papyrus Cinema Corner</h1>
+		<p>
+			This page consists of screenshots and screencasts on Papyrus. //
+		</p>
+		<p>
+  			<div id="show" class="slideshow">
+    			<img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
+  			</div>
+  		</p>
  </body>
-</p>
 
 <!-- 
 <div id="screencast">
