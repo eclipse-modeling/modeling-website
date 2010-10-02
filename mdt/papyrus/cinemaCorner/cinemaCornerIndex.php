@@ -24,16 +24,16 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page consists of screenshots and screencasts on Papyrus. !!
+			This page consists of screenshots and screencasts on Papyrus.
 		</p>
-<!--
+
 <head>
-	<title>Slideshow 2!</title>
+	<title>Papyrus Slideshow</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="Aeron Glemann (http://www.electricprism.com/aeron/)" />
+	<meta name="author" content="Sebastien Gerard" />
 	<link rel="stylesheet" type="text/css" href="cinemaCorner/css/slideshow.css" media="screen" />
-	<script type="text/javascript" src="cinemaCorner/js/mootools.js"></script>
-	<script type="text/javascript" src="cinemaCorner/js/slideshow.js"></script>
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
 	<script type="text/javascript">		
 	//<![CDATA[
 	  window.addEvent('domready', function(){
@@ -43,12 +43,12 @@
 	      '3.jpg': { caption: 'The view from Volcano Maderas.' }, 
 	      '4.jpg': { caption: 'Beer and ice cream.' }
 	    };
-	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'cinemaCorner/images/', thumbnails: true, width: 400});
+	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'images/', thumbnails: true, width: 400});
 	  });
 	//]]>
 	</script>
 </head>
--->
+
 
   <div id="show" class="slideshow">
     <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />

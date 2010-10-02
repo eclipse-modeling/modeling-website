@@ -247,12 +247,10 @@ Notes:
 	position: absolute;
 	width: 100%;
 }
-
 .slideshow-thumbnails * {
 	margin: 0;
 	padding: 0;
 }
-
 .slideshow-thumbnails ul {
 	height: 65px;
 	left: 0;
@@ -260,7 +258,6 @@ Notes:
 	top: 0;
 	width: 10000px;
 }
-
 .slideshow-thumbnails li {
 	float: left;
 	list-style: none;
