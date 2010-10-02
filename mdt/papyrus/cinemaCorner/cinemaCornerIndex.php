@@ -24,7 +24,7 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page consists of screenshots and screencasts on Papyrus. !
+			This page consists of screenshots and screencasts on Papyrus.
 		</p>
 
 <head>
@@ -48,6 +48,8 @@
 	//]]>
 	</script>
 </head>
+
+<div style="clear:both;"></div>
 
 <body>
   <div id="show" class="slideshow">
