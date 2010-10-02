@@ -27,7 +27,7 @@
 			This page is about screenshots and screencasts on Papyrus.
 		</p>
 		
-		<p>
+		
 			<head>
 				<title>Papyrus Slideshow</title>
 				<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -53,7 +53,7 @@
 			<div id="show" class="slideshow">
    				 <img width="640" src="cinemaCorner/images/1.jpg" alt="Volcanosse Asención in Ometepe, Nicaragua." />
 			</div>
-		</p>
+		
 
 <!-- 
 <div id="screencast">
