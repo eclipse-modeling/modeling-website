@@ -62,14 +62,19 @@
   </div>
   
   <div id="contact2">
+  
   </div>
   <div id="contact3">
+  
   </div>
   <div id="contact4">
+  
   </div>
   <div id="contact5">
+  
   </div>
   <div id="contact6">
+  
   </div>
   
   <div id="contact">  
