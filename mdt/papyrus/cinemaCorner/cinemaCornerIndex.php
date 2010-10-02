@@ -26,7 +26,7 @@
 		<p>
 			This page is about screenshots and screencasts on Papyrus.
 		</p>
-		
+<!--
 <head>
 	<title>Slideshow 2!</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -48,6 +48,7 @@
 	//]]>
 	</script>
 </head>
+-->
 <body>
   <div id="show" class="slideshow">
     <img src="cinemaCorner/images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
