@@ -24,7 +24,7 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page consists of screenshots and screencasts on Papyrus.
+			This page consists of screenshots and screencasts on Papyrus. //
 		</p>
 <p>
 <head>
