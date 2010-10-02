@@ -54,12 +54,17 @@
    				 <img width="640" src="cinemaCorner/images/1.jpg" alt="Volcanosse Asención in Ometepe, Nicaragua." />
 			</div>
 		</p>
-		
-		<p>
-			<ul>
-			<li><a href="usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
-			</ul> 
-		</p>
+
+<!-- 
+<div id="screencast">
+<object width="640" height="480">
+<param name="allowfullscreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<param name="movie" value="videos/video1/PapyrusMDT.swf" />
+<embed src="videos/video1/PapyrusMDT.swf" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="480"></embed>
+</object>
+</div>
+-->
 		
 		<!--
 		<h3>&lt;h3&gt; tag</h3>
@@ -97,7 +102,7 @@
 		
 	</div>
 
-	<!-- remove the entire <div> tag to omit the right column!  -->
+<!-- remove the entire <div> tag to omit the right column!
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>Related Links</h6>
@@ -115,6 +120,7 @@
 		</div>
 		
 	</div>
+-->
 
 	
 	<?
