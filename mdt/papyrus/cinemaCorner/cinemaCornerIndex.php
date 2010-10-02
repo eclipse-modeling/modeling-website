@@ -24,7 +24,7 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page consists of screenshots and screencasts on Papyrus. //
+			This page consists of screenshots and screencasts on Papyrus.
 		</p>
 <p>
 <head>
@@ -59,21 +59,20 @@
   </div>
   
   <div id="contact1">
-	sdfsdfssdsf
   </div>
   
   <div id="contact2">
-	sdfsdfs
+  </div>
+  <div id="contact3">
+  </div>
+  <div id="contact4">
+  </div>
+  <div id="contact5">
+  </div>
+  <div id="contact6">
   </div>
   
-  <div id="contact">
-  
-  
-  
-  
-  
-  
-  
+  <div id="contact">  
     End of show...
   </div>
 </body>
