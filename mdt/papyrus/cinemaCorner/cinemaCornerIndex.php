@@ -31,7 +31,7 @@
 	<title>Papyrus Slideshow</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Sebastien Gerard" />
-	<link rel="stylesheet" type="text/css" href="cinemaCorner/css/slideshow.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css" media="screen" />
 	<script type="text/javascript" src="js/mootools.js"></script>
 	<script type="text/javascript" src="js/slideshow.js"></script>
 	<script type="text/javascript">		
@@ -57,6 +57,7 @@
   </div>
 </body>
 </p>
+
 <!-- 
 <div id="screencast">
 <object width="640" height="480">
@@ -125,7 +126,7 @@
 -->
 
 	
-	<?
+<?
 	$html = ob_get_clean();
 
 	# Generate the web page
