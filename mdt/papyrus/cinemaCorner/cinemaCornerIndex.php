@@ -27,32 +27,31 @@
 			This page is about screenshots and screencasts on Papyrus.
 		</p>
 		
-		
-			<head>
-				<title>Papyrus Slideshow</title>
-				<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-				<meta name="author" content="Sebastien Gerard, CEA LIST" />
-				<link rel="stylesheet" type="text/css" href="cinemaCorner/css/slideshow.css" media="screen" />
-				<script type="text/javascript" src="cinemaCorner/js/mootools.js"></script>
-				<script type="text/javascript" src="cinemaCorner/js/slideshow.js"></script>
-				<script type="text/javascript">		
-					//<![CDATA[
-					window.addEvent('domready', function(){
-	   				var data = {
-	      				'1.jpg': { caption: 'Volcano Asención in Ometepe, Nicaragua.' }, 
-	      				'2.jpg': { caption: 'A Ceibu tree.' }, 
-	      				'3.jpg': { caption: 'The view from Volcano Maderas.' }, 
-	      				'4.jpg': { caption: 'Beer and ice cream.' }
-	    			};
-	    			var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'cinemaCorner/images/', resize: true, thumbnails: true, width: 300});
-	  				});
-					//]]>
-				</script>
-			</head>
+		<head>
+			<title>Papyrus Slideshow</title>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<meta name="author" content="Sebastien Gerard, CEA LIST" />
+			<link rel="stylesheet" type="text/css" href="cinemaCorner/css/slideshow.css" media="screen" />
+			<script type="text/javascript" src="cinemaCorner/js/mootools.js"></script>
+			<script type="text/javascript" src="cinemaCorner/js/slideshow.js"></script>
+			<script type="text/javascript">		
+				//<![CDATA[
+				window.addEvent('domready', function(){
+	   			var data = {
+	      			'1.jpg': { caption: 'Volcano Asención in Ometepe, Nicaragua.' }, 
+	      			'2.jpg': { caption: 'A Ceibu tree.' }, 
+	      			'3.jpg': { caption: 'The view from Volcano Maderas.' }, 
+	      			'4.jpg': { caption: 'Beer and ice cream.' }
+	    		};
+	    		var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'cinemaCorner/images/', resize: true, thumbnails: true, width: 300});
+	  			});
+				//]]>
+			</script>
+		</head>
 
-			<div id="show" class="slideshow">
-   				 <img width="640" src="cinemaCorner/images/1.jpg" alt="Volcanosse Asención in Ometepe, Nicaragua." />
-			</div>
+		<div id="show" class="slideshow">
+   			 <img width="640" src="cinemaCorner/images/1.jpg" alt="Volcanosse Asención in Ometepe, Nicaragua." />
+		</div>
 		
 
 <!-- 
