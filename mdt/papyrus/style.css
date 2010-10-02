@@ -146,6 +146,18 @@ a strong {
    background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
 }
 
+#buttonCinema {
+   background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
+   top: 20px;
+   left: 200px;
+}
+
+#buttonCinema:hover {
+   background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
+}
+
+
+
 #bigbuttons a * {
 	visibility: hidden;
 }
