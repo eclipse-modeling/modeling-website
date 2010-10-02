@@ -24,7 +24,7 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page is about screenshots and screencasts on Papyrus.
+			This page consists of screenshots and screencasts on Papyrus.
 		</p>
 <!--
 <head>
@@ -49,11 +49,10 @@
 	</script>
 </head>
 -->
-<body>
+
   <div id="show" class="slideshow">
     <img src="cinemaCorner/images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
   </div>
-</body>
 
 		
 
