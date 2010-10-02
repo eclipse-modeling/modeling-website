@@ -98,7 +98,7 @@ a strong {
 
 #bigbuttons a {
    display: block;
-   height:67px; width:200px;
+   height:77px; width:250px;
    padding: 0;
    margin: 20px;
    text-indent: -9000px;
@@ -145,17 +145,6 @@ a strong {
 #buttonInvolved:hover {
    background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
 }
-
-#buttonCinema {
-   background:transparent url("images/buttonInvolved.png") no-repeat 0 0;
-   top: 20px;
-   left: 200px;
-}
-
-#buttonCinema:hover {
-   background:transparent url("images/buttonInvolved_sel.png") no-repeat 0 0;
-}
-
 
 
 #bigbuttons a * {
