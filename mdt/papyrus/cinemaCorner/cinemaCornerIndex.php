@@ -24,7 +24,7 @@
 		<h1>Papyrus Cinema Corner</h1>
 		
 		<p>
-			This page consists of screenshots and screencasts on Papyrus.
+			This page consists of screenshots and screencasts on Papyrus. !!
 		</p>
 
 <head>
@@ -43,7 +43,7 @@
 	      '3.jpg': { caption: 'The view from Volcano Maderas.' }, 
 	      '4.jpg': { caption: 'Beer and ice cream.' }
 	    };
-	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'images/', thumbnails: true, width: 400});
+	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'images/', thumbnails: false, width: 400});
 	  });
 	//]]>
 	</script>
