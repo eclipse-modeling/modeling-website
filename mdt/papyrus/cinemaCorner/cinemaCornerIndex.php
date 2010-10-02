@@ -126,7 +126,7 @@
 -->
 
 	
-<?
+x<?
 	$html = ob_get_clean();
 
 	# Generate the web page
