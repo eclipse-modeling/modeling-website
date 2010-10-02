@@ -57,6 +57,15 @@
   <div id="show" class="slideshow">
     <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
   </div>
+  
+  <div id="contact1">
+	sdfsdfssdsf
+  </div>
+  
+  <div id="contact2">
+	sdfsdfs
+  </div>
+  
   <div id="contact">
   
   
