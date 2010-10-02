@@ -74,9 +74,12 @@
   <div id="contact5">
   .
   </div>
+  
+  <ul>
   <div id="contact6">
-  .
+  ...
   </div>
+  </ul>
   
   <div id="contact">  
     End of show...
