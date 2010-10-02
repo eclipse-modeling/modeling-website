@@ -49,8 +49,10 @@
 	</script>
 </head>
 
+<!-- 
 <div style="clear:both;"></div>
-
+ -->
+ 
 <body>
   <div id="show" class="slideshow">
     <img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
