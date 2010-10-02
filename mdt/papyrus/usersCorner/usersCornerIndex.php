@@ -29,7 +29,6 @@
 		</p>
 		
 		<p>
-			You can find some documentation:
 			<ul>
 			<li><a href="usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
 			</ul> 
