@@ -24,7 +24,7 @@
 		<h1>Papyrus Documentation</h1>
 		
 		<p>
-			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
+			dfdfThis page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
 			In addition to the documentation available through this page, you will find documentation in the online help of the tool.
 		</p>
 		
