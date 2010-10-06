@@ -32,7 +32,7 @@
 	//<![CDATA[
 	  window.addEvent('domready', function(){
 	    var data = {
-	      '1.jpg': { caption: 'Volcano Asención in Ometepe, Nicaragua.' }, 
+	      'ProfileDiagramEditor.jpg': { caption: 'Profile diagram editor.' }, 
 	      '2.jpg': { caption: 'A Ceibu tree.' }, 
 	      '3.jpg': { caption: 'The view from Volcano Maderas.' }, 
 	      '4.jpg': { caption: 'Beer and ice cream.' }
@@ -51,7 +51,7 @@
 		</p>
 		<p>
   			<div id="show" class="slideshow">
-    			<img src="images/1.jpg" alt="Volcano Asención in Ometepe, Nicaragua." />
+    			<img src="images/ProfileDiagramEditor.jpg" alt="Profile diagram editor." />
   			</div>
   			<br>
   			<br>
