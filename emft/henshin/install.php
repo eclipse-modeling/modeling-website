@@ -37,6 +37,10 @@ You can <a href="downloads.php">download</a> the latest version and install it d
 We recommend though to install from our update site. The URL will be announced here soon.
 </p>
 
+<p>
+<i>You need Eclipse Helios to run Henshin.</i>
+</p>
+
 <h2>Sources</h2>
 <p>
 You can get the latest version of the source code directly from our SVN repository:
