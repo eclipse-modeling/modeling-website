@@ -24,13 +24,13 @@
 		<h1>Papyrus Documentation</h1>
 		
 		<p>
-			dfdfThis page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
+			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
 			In addition to the documentation available through this page, you will find documentation in the online help of the tool.
 		</p>
 		
 		<p>
 			<ul>
-			<li><a href="usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
+			<li><a href="./../usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
 			</ul> 
 		</p>
 		
