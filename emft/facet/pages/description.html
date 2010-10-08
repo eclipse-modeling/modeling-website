@@ -6,30 +6,13 @@
 <title>Project description</title>
 </head>
 <body>
-<p>The Eclipse Modeling Project focuses on the evolution and
-promotion of model-based development technologies within the Eclipse
-community by providing a unified set of modeling frameworks, tooling,
-and standards implementations. EMFT is part of this Eclipse Modeling
-Project and is about incubating new technologies that extend or
-complement EMF.</p>
 
-<p>Tools based on EMF use Ecore as a common standard to represent
-the data manipulated by the tool. Data is described in terms of a set of
-entities, attributes, relations and operations. Extending the data
-structure used by an EMF tool (e.g. adding a new entity, attribute,
-relation or operation) implies modifying its Ecore definition, and thus,
-changing its source code.</p>
+<p>EMF Facet is a solution to extend existing Ecore metamodels without having to modify them.</p>
 
-<p>Extending existing EMF tools without changing their Ecore
-definition (and therefore, without requiring to change their source
-code) would facilitate their customization to fit specific needs. To
-allow for this kind of extension, EMF needs a mechanism to dynamically
-create viewpoints that extend and combine existing Ecore definitions
-without having to modify them.</p>
+<p>The idea is to provide non-intrusive mechanisms to add new features (types, attributes, operations and references) to a metamodel and to customize the existing features by adding extra properties (icons, label, etc.)</p>
 
-<p>EMF Facet aims to allow this kind of extension by providing a
-mechanism to dynamically add attributes, references and operation to
-existing Ecore definitions without having to modify them. A part of this
-tooling will be imported from the project MoDisco.</p>
+<p>These mechanisms are based on a query abstraction framework to be able to use all the kind of queries independently of their implementation language (Java, OCL, ATL, JXPath, etc.)</p>
+
+<p>A part of this tooling will be imported from the project MoDisco.</p>
 </body>
 </html>
