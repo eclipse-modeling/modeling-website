@@ -87,15 +87,13 @@
 		<theme name="Allow extending a metamodel with a non-intrusive way">
 			<description>
 				<html:div>
-					<html:p>The first objective of the EMF Facet project is to provide
-						a framework dedicated to the Ecore metamodel extension without
-						having to modify them.</html:p>
-
-					<html:p>The idea is to provide a non-intrusive
-						mechanism to add new
-						features (types, attributes, operations and
-						references) to a
-						metamodel.</html:p>
+					The first objective of the EMF Facet project is to provide
+					a framework dedicated to the Ecore metamodel extension without
+					having to modify them. The idea is to provide a non-intrusive
+					mechanism to add new
+					features (types, attributes, operations and
+					references) to a
+					metamodel.
 				</html:div>
 			</description>
 			<!-- <committed bugzilla="https://bugs.eclipse.org/bugs/query.cgi?bug_file_loc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_id=&amp;bugidtype=include&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;email1=&amp;email2=&amp;emailtype1=substring&amp;emailtype2=substring&amp;field0-0-0=bug_id&amp;field0-0-1=bug_id&amp;field0-0-10=bug_id&amp;field0-0-11=bug_id&amp;field0-0-12=bug_id&amp;field0-0-13=bug_id&amp;field0-0-14=bug_id&amp;field0-0-2=bug_id&amp;field0-0-3=bug_id&amp;field0-0-4=bug_id&amp;field0-0-5=bug_id&amp;field0-0-6=bug_id&amp;field0-0-7=bug_id&amp;field0-0-8=bug_id&amp;field0-0-9=bug_id&amp;keywords=&amp;keywords_type=allwords&amp;longdesc=&amp;longdesc_type=allwordssubstr&amp;query_format=advanced&amp;short_desc=&amp;short_desc_type=allwordssubstr&amp;status_whiteboard=&amp;status_whiteboard_type=allwordssubstr&amp;type0-0-0=equals&amp;type0-0-1=equals&amp;type0-0-10=equals&amp;type0-0-11=equals&amp;type0-0-12=equals&amp;type0-0-13=equals&amp;type0-0-14=equals&amp;type0-0-2=equals&amp;type0-0-3=equals&amp;type0-0-4=equals&amp;type0-0-5=equals&amp;type0-0-6=equals&amp;type0-0-7=equals&amp;type0-0-8=equals&amp;type0-0-9=equals&amp;value0-0-0=259223&amp;value0-0-1=259234&amp;value0-0-10=272881&amp;value0-0-11=281512&amp;value0-0-12=281612&amp;value0-0-13=287787&amp;value0-0-14=288127&amp;value0-0-2=263643&amp;value0-0-3=266356&amp;value0-0-4=266425&amp;value0-0-5=267327&amp;value0-0-6=267830&amp;value0-0-7=269029&amp;value0-0-8=271158&amp;value0-0-9=272159"/> -->
@@ -139,7 +137,5 @@
 			</html:div>
 		</postamble>
 	</themes_and_priorities>
-	<!-- <appendix name="">
-		 To fill later if necessary 
-	</appendix>-->
+	<!-- <appendix name=""> To fill later if necessary </appendix> -->
 </plan>
