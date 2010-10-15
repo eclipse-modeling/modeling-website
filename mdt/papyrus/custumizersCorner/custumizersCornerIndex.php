@@ -21,7 +21,7 @@
 	ob_start();
 	?>
 	<div id="midcolumn">
-		<h1>Papyrus Custumization Documentation</h1>
+		<h1>Papyrus Custumization Documentation Corner</h1>
 		
 		<p>
 			Papyrus is a UML tool that provide very advanced facililitlies for custmizing the tool. You will find in this page tutorials and examples illustrating the usage of all this custum facilities. 
