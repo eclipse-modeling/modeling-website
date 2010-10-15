@@ -13,7 +13,7 @@
 
 	#
 	# Begin: page-specific settings.
-	$pageTitle 		= "Papyrus Custumization Documentation";
+	$pageTitle 		= "Papyrus Custumization Tutorials";
 	$pageKeywords	= "papyrus, users, documents, tutorials, examples";
 	$pageAuthor		= "Sebastien Gerard";
 		
@@ -21,20 +21,16 @@
 	ob_start();
 	?>
 	<div id="midcolumn">
-		<h1>Papyrus Custumization Documentation</h1>
+		<h1>Papyrus Custumization Tutorials</h1>
 		
 		<p>
-			Papyrus is a UML tool that provide very advanced facililitlies for custmizing the tool. You will find in this page tutorials and examples illustrating the usage of all this custum facilities. 
+			This page will provide you tutorials on the usage of the custumization facilities effered by Papyrus.
 		</p>
 		
-		<h3>Tutorials</h3>
-			<ul>
-				<li>Coming soon...</li>
-			</ul>
-		<h3>Examples</h3>
-			<ul>
-				<li><a href="./custumizationExamples/custumizationExamplesIndex.php">The mixin machin DSML example</li>
-			</ul>
+		<ul>
+			<li>Coming soon...</li>
+		</ul>
+
 		<!--
 		<h3>&lt;h3&gt; tag</h3>
 		<div class="homeitem">

@@ -25,7 +25,7 @@
 		
 		<p>
 			Papyrus is a UML tool that provide very advanced facililitlies for custmizing the tool. You will find in this page tutorials and examples illustrating the usage of all this custum facilities. 
-			Developpers may go the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki to know more Papyrus design and questions may be asked to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum.
+			Developpers may go the Papyrus wiki to know more Papyrus design and questions may be asked to the Papyrus forum.
 			In addition to the documentation available through this page, you will find documentation in the online help of the tool.
 		</p>
 		
