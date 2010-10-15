@@ -24,13 +24,15 @@
 		<h1>Papyrus Documentation</h1>
 		
 		<p>
-			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples.
+			Papyrus is a UML tool that provide very advanced facililitlies for custmizing the tool. You will find in this page tutorials and examples illustrating the usage of all this custum facilities. 
+			Developpers may go the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki to know more Papyrus design and questions may be asked to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum.
 			In addition to the documentation available through this page, you will find documentation in the online help of the tool.
 		</p>
 		
 		<p>
 			<ul>
-			<li><a href="./../usersTutorials/usersTutorialsIndex.php">Papyrus tutorials</a></li>
+				<li><a href="./../usersTutorials/usersTutorialsIndex.php">Papyrus users tutorials</a></li>
+				<li><a href="./../custumizersCorner/custumizersCornerIndex.php">Papyrus custumizers tutorials</a></li>
 			</ul> 
 		</p>
 		

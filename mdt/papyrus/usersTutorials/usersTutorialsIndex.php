@@ -25,7 +25,6 @@
 		
 		<p>
 			This page is about the Papyrus documentation dedicated to both its users and its custumizers. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
-			Finally, developpers may go the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki to know more Papyrus design and questions may be asked to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum.
 		</p>
 		
 		<p>
