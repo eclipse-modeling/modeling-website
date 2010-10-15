@@ -161,6 +161,10 @@ more detailed information on each.
                 <html:div>
 This theme addresses issues related to the OMG OCL 2.2 specification adoption. The bugs related to the inherited deviations
 of the MDT OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.2) also appear here.
+
+It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+traditional behaviour until 4.0.0.
                 </html:div>
             </description>
             <committed
@@ -195,6 +199,10 @@ dependencies, in particular with the EMF and MDT UML2 projects.
                 <html:div>
 This theme addresses the need for extensibility and usability improvements
 of the MDT OCL language implementation and APIs.
+
+It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+traditional behaviour until 4.0.0.
                 </html:div>
             </description>
             <committed
@@ -212,6 +220,10 @@ of the MDT OCL language implementation and APIs.
                 <html:div>
 This theme addresses issues related to prototyping resolutions of problems in the OMG OCL 2.2 specification and enhancements in future specifications. OMG issues
 will be raised and RTF proposed resolutions submitted in order to  
+
+It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+traditional behaviour until 4.0.0.
                 </html:div>
             </description>
             <committed
