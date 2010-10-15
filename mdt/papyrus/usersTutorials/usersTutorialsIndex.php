@@ -24,16 +24,13 @@
 		<h1>Papyrus Tutorials</h1>
 		
 		<p>
-			This page is about the Papyrus documentation dedicated to its users. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
-			Finally, developpers may go the Papyrus wiki to know more Papyrus design and questions may be asked to the Papyrus forum.
+			This page is about the Papyrus documentation dedicated to both its users and its custumizers. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
+			Finally, developpers may go the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki to know more Papyrus design and questions may be asked to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum.
 		</p>
 		
 		<p>
-			You can find some documentation:
-			<ul>
 			<li><a href="resources/TutorialOnPapyrusUSE_d20101001.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
-			<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
-			</ul> 
+			<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li> 
 		</p>
 		
 		<!--
