@@ -219,33 +219,6 @@ public class PeopleNavigatorContentProvider implements ICommonContentProvider {
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (PeopleVisualIDRegistry.getVisualID(view)) {
 
-		case PersonChildrenEditPart.VISUAL_ID: {
-			LinkedList<PeopleAbstractNavigatorItem> result = new LinkedList<PeopleAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			PeopleNavigatorGroup target = new PeopleNavigatorGroup(
-					Messages.NavigatorGroupName_PersonChildren_4002_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			PeopleNavigatorGroup source = new PeopleNavigatorGroup(
-					Messages.NavigatorGroupName_PersonChildren_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					PeopleVisualIDRegistry.getType(PersonEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					PeopleVisualIDRegistry.getType(PersonEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
 		case PersonEditPart.VISUAL_ID: {
 			LinkedList<PeopleAbstractNavigatorItem> result = new LinkedList<PeopleAbstractNavigatorItem>();
 			Node sv = (Node) view;
@@ -271,6 +244,33 @@ public class PeopleNavigatorContentProvider implements ICommonContentProvider {
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case PersonChildrenEditPart.VISUAL_ID: {
+			LinkedList<PeopleAbstractNavigatorItem> result = new LinkedList<PeopleAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			PeopleNavigatorGroup target = new PeopleNavigatorGroup(
+					Messages.NavigatorGroupName_PersonChildren_4002_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			PeopleNavigatorGroup source = new PeopleNavigatorGroup(
+					Messages.NavigatorGroupName_PersonChildren_4002_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					PeopleVisualIDRegistry.getType(PersonEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					PeopleVisualIDRegistry.getType(PersonEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}

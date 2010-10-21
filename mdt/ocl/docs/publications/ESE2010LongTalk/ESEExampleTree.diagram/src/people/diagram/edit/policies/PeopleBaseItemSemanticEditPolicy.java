@@ -329,11 +329,6 @@ public class PeopleBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 					return false;
 				}
 			}
-			if (target != null
-					&& (target.getParents().size() >= 2 || target.getParents()
-							.contains(target))) {
-				return false;
-			}
 
 			return canExistPersonChildren_4002(source, target);
 		}

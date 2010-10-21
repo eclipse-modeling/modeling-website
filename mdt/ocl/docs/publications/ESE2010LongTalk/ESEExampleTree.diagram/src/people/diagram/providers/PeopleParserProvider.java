@@ -27,20 +27,22 @@ public class PeopleParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser personNameGender_5001Parser;
+	private IParser personName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPersonNameGender_5001Parser() {
-		if (personNameGender_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					PeoplePackage.eINSTANCE.getPerson_Name(),
-					PeoplePackage.eINSTANCE.getPerson_Gender() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			personNameGender_5001Parser = parser;
+	private IParser getPersonName_5001Parser() {
+		if (personName_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { PeoplePackage.eINSTANCE
+					.getPerson_Name() };
+			EAttribute[] editableFeatures = new EAttribute[] { PeoplePackage.eINSTANCE
+					.getPerson_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features,
+					editableFeatures);
+			personName_5001Parser = parser;
 		}
-		return personNameGender_5001Parser;
+		return personName_5001Parser;
 	}
 
 	/**
@@ -49,7 +51,7 @@ public class PeopleParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case PersonNameEditPart.VISUAL_ID:
-			return getPersonNameGender_5001Parser();
+			return getPersonName_5001Parser();
 		}
 		return null;
 	}

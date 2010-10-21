@@ -4,18 +4,22 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.ToolbarLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.ConstrainedToolbarLayoutEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
@@ -26,6 +30,7 @@ import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
+import people.diagram.edit.policies.PeopleTextSelectionEditPolicy;
 import people.diagram.edit.policies.PersonItemSemanticEditPolicy;
 import people.diagram.part.PeopleVisualIDRegistry;
 import people.diagram.providers.PeopleElementTypes;
@@ -74,19 +79,15 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
 
-		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+		ConstrainedToolbarLayoutEditPolicy lep = new ConstrainedToolbarLayoutEditPolicy() {
 
-			protected Command createAddCommand(EditPart child, EditPart after) {
-				return null;
-			}
-
-			protected Command createMoveChildCommand(EditPart child,
-					EditPart after) {
-				return null;
-			}
-
-			protected Command getCreateCommand(CreateRequest request) {
-				return null;
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				if (child.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE) == null) {
+					if (child instanceof ITextAwareEditPart) {
+						return new PeopleTextSelectionEditPolicy();
+					}
+				}
+				return super.createChildEditPolicy(child);
 			}
 		};
 		return lep;
@@ -309,10 +310,6 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigurePersonGenderFigure;
-		/**
-		 * @generated
-		 */
 		private WrappingLabel fFigurePersonNameFigure;
 
 		/**
@@ -320,14 +317,12 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		 */
 		public PersonFigure() {
 
-			FlowLayout layoutThis = new FlowLayout();
+			ToolbarLayout layoutThis = new ToolbarLayout();
 			layoutThis.setStretchMinorAxis(false);
-			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMinorAlignment(ToolbarLayout.ALIGN_TOPLEFT);
 
-			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(5);
-			layoutThis.setMinorSpacing(5);
-			layoutThis.setHorizontal(true);
+			layoutThis.setSpacing(5);
+			layoutThis.setVertical(false);
 
 			this.setLayoutManager(layoutThis);
 
@@ -339,23 +334,11 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigurePersonGenderFigure = new WrappingLabel();
-			fFigurePersonGenderFigure.setText("<...>");
-
-			this.add(fFigurePersonGenderFigure);
-
 			fFigurePersonNameFigure = new WrappingLabel();
-			fFigurePersonNameFigure.setText("<...>");
+			fFigurePersonNameFigure.setText("");
 
 			this.add(fFigurePersonNameFigure);
 
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigurePersonGenderFigure() {
-			return fFigurePersonGenderFigure;
 		}
 
 		/**

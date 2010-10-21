@@ -17,8 +17,8 @@
             href="People.gmfgraph#PersonName"/>
         <features
             href="People.ecore#//Person/name"/>
-        <features
-            href="People.ecore#//Person/gender"/>
+        <editableFeatures
+            href="People.ecore#//Person/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
