@@ -19,13 +19,12 @@ div.block {
 	margin-right: 3%
 }
 
-#headlines h4 {
-	font-size: 12px;
-	border-bottom-style: dotted;
-	border-bottom-width: 1px;
+h7.headlines {
+	font-size: 14px;
+	text-decoration: underline;
 }
 
-#headlines ul li {
+div.headlines ul li {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 }

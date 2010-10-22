@@ -13,7 +13,10 @@
 
 <xsl:template match="item">
   <li>
-  <h4><a href="{link}"><xsl:value-of select="title"/></a></h4>
+  <h7 class="headlines">
+  	<xsl:if test="link"><a href="{link}"><xsl:value-of select="title"/></a></xsl:if>
+  	<xsl:if test="not(link)"><xsl:value-of select="title"/></xsl:if>
+  </h7>
   <xsl:copy-of select="description/*"/>
   </li>
   
