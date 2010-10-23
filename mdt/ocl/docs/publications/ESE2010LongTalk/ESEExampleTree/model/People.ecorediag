@@ -17,7 +17,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_Zavz0dhSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EEnum" href="People.ecore#//Gender"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zavz0thSEd-5f556FwQ0xQ" x="420" y="75"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zavz0thSEd-5f556FwQ0xQ" x="45" y="95"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ZbEj8NhSEd-5f556FwQ0xQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ZbKDgNhSEd-5f556FwQ0xQ" type="4001"/>
@@ -41,7 +41,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_ZbEj8dhSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="People.ecore#//Person"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZbEj8thSEd-5f556FwQ0xQ" x="275" y="160"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZbEj8thSEd-5f556FwQ0xQ" x="205" y="190"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_ZbYtANhSEd-5f556FwQ0xQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_ZbYtA9hSEd-5f556FwQ0xQ" type="4001"/>
@@ -57,50 +57,50 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_ZbYtAdhSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="People.ecore#//Universe"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZbYtAthSEd-5f556FwQ0xQ" x="290" y="35"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZbYtAthSEd-5f556FwQ0xQ" x="235" y="105"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_ZVQP0thSEd-5f556FwQ0xQ"/>
   <element xmi:type="ecore:EPackage" href="People.ecore#/"/>
   <edges xmi:type="notation:Edge" xmi:id="_Zbc-cNhSEd-5f556FwQ0xQ" type="3002" source="_ZbEj8NhSEd-5f556FwQ0xQ" target="_ZbEj8NhSEd-5f556FwQ0xQ">
     <children xmi:type="notation:Node" xmi:id="_ZbeMkNhSEd-5f556FwQ0xQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbeMkdhSEd-5f556FwQ0xQ" x="13" y="-31"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbeMkdhSEd-5f556FwQ0xQ" x="13" y="-26"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_ZbezoNhSEd-5f556FwQ0xQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbezodhSEd-5f556FwQ0xQ" x="13" y="19"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbezodhSEd-5f556FwQ0xQ" x="13" y="14"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_Zbc-cdhSEd-5f556FwQ0xQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_Zbc-cthSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="People.ecore#//Person/children"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbc-c9hSEd-5f556FwQ0xQ" points="[0, 3, 93, 6]$[0, 50, 93, 53]$[-93, 50, 0, 53]$[-93, 3, 0, 6]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbc-c9hSEd-5f556FwQ0xQ" points="[0, 4, 118, 7]$[0, 34, 118, 37]$[-118, 34, 0, 37]$[-118, 4, 0, 7]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i7fKQNhSEd-5f556FwQ0xQ" id="(0.8527131782945736,0.9538461538461539)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i7fxUNhSEd-5f556FwQ0xQ" id="(0.12403100775193798,0.9076923076923077)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ZbfasNhSEd-5f556FwQ0xQ" type="3002" source="_ZbEj8NhSEd-5f556FwQ0xQ" target="_ZbEj8NhSEd-5f556FwQ0xQ">
     <children xmi:type="notation:Node" xmi:id="_ZbfatNhSEd-5f556FwQ0xQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbfatdhSEd-5f556FwQ0xQ" x="13" y="34"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbfatdhSEd-5f556FwQ0xQ" x="14" y="-30"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_ZbfatthSEd-5f556FwQ0xQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_Zbfat9hSEd-5f556FwQ0xQ" x="13" y="-9"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Zbfat9hSEd-5f556FwQ0xQ" x="14" y="18"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZbfasdhSEd-5f556FwQ0xQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_ZbfasthSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="People.ecore#//Person/parents"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbfas9hSEd-5f556FwQ0xQ" points="[0, 6, -93, 3]$[0, 53, -93, 50]$[93, 53, 0, 50]$[93, 6, 0, 3]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbfas9hSEd-5f556FwQ0xQ" points="[0, 7, -118, 4]$[0, 37, -118, 34]$[118, 37, 0, 34]$[118, 7, 0, 4]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_coF5kNhSEd-5f556FwQ0xQ" id="(0.12403100775193798,0.9076923076923077)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_coF5kdhSEd-5f556FwQ0xQ" id="(0.8527131782945736,0.9538461538461539)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ZbfauNhSEd-5f556FwQ0xQ" type="3002" source="_ZbYtANhSEd-5f556FwQ0xQ" target="_ZbEj8NhSEd-5f556FwQ0xQ">
     <children xmi:type="notation:Node" xmi:id="_ZbgBwNhSEd-5f556FwQ0xQ" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbgBwdhSEd-5f556FwQ0xQ" x="-4" y="32"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbgBwdhSEd-5f556FwQ0xQ" x="-5" y="28"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_ZbgBwthSEd-5f556FwQ0xQ" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbgBw9hSEd-5f556FwQ0xQ" x="-4" y="-21"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ZbgBw9hSEd-5f556FwQ0xQ" x="-5" y="-15"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZbfaudhSEd-5f556FwQ0xQ" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_ZbfauthSEd-5f556FwQ0xQ" fontColor="4210752" fontName="Microsoft Sans Serif" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="People.ecore#//Universe/people"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zbfau9hSEd-5f556FwQ0xQ" points="[0, 0, 0, 64]$[0, -64, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZgOwwNhSEd-5f556FwQ0xQ" id="(0.5,0.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZgOwwNhSEd-5f556FwQ0xQ" id="(0.4803921568627451,0.9761904761904762)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZgPX0NhSEd-5f556FwQ0xQ" id="(0.49612403100775193,1.0)"/>
   </edges>
 </notation:Diagram>

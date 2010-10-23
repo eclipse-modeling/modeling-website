@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tree:Universe xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:tree="http://www.eclipse.org/examples/tree" xsi:schemaLocation="http://www.eclipse.org/examples/tree People.ecore">
+<tree:Universe xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tree="http://www.eclipse.org/examples/tree" xsi:schemaLocation="http://www.eclipse.org/examples/tree People1.ecore">
   <people children="//@people.2 //@people.3 //@people.16 //@people.18 //@people.20 //@people.22" parents="//@people.5 //@people.6" name="Zeus"/>
   <people children="//@people.2 //@people.3" gender="FEMALE" name="Hera"/>
   <people parents="//@people.0 //@people.1" name="Hephaestus"/>
@@ -15,7 +13,7 @@
   <people parents="//@people.5 //@people.6" name="Poseidon"/>
   <people parents="//@people.5 //@people.6" name="Hades"/>
   <people parents="//@people.5 //@people.6" name="Demeter"/>
-  <people parents="//@people.7 //@people.8" name="Hyerion"/>
+  <people parents="//@people.7 //@people.8" name="Hyperion"/>
   <people parents="//@people.7 //@people.8" name="Oceanus"/>
   <people children="//@people.16" gender="FEMALE" name="Semele"/>
   <people parents="//@people.0 //@people.15" name="Dionysus"/>
