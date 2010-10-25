@@ -39,6 +39,7 @@
 		<i>More information here soon...</i>
 		</p>
 
+    <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip"> 
 		<!--
 		
 		<div class="homeitem">
