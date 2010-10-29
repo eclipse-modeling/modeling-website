@@ -2,23 +2,29 @@
  * <copyright>
  * </copyright>
  *
- * $Id: PersonImpl.java,v 1.1 2010/10/16 12:13:06 ewillink Exp $
+ * $Id: PersonImpl.java,v 1.2 2010/10/29 11:58:02 ewillink Exp $
  */
 package people.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -37,6 +43,8 @@ import people.Person;
  *   <li>{@link people.impl.PersonImpl#getParents <em>Parents</em>}</li>
  *   <li>{@link people.impl.PersonImpl#getGender <em>Gender</em>}</li>
  *   <li>{@link people.impl.PersonImpl#getName <em>Name</em>}</li>
+ *   <li>{@link people.impl.PersonImpl#getFather <em>Father</em>}</li>
+ *   <li>{@link people.impl.PersonImpl#getMother <em>Mother</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,6 +112,26 @@ public class PersonImpl extends EObjectImpl implements Person {
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached setting delegate for the '{@link #getFather() <em>Father</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFather()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate FATHER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PeoplePackage.Literals.PERSON__FATHER).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getMother() <em>Mother</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMother()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate MOTHER__ESETTING_DELEGATE = ((EStructuralFeature.Internal)PeoplePackage.Literals.PERSON__MOTHER).getSettingDelegate();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,7 +157,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 */
 	public EList<Person> getChildren() {
 		if (children == null) {
-			children = new EObjectWithInverseResolvingEList.ManyInverse<Person>(Person.class, this, PeoplePackage.PERSON__CHILDREN, PeoplePackage.PERSON__PARENTS);
+			children = new EObjectResolvingEList<Person>(Person.class, this, PeoplePackage.PERSON__CHILDREN);
 		}
 		return children;
 	}
@@ -141,7 +169,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 */
 	public EList<Person> getParents() {
 		if (parents == null) {
-			parents = new EObjectWithInverseResolvingEList.ManyInverse<Person>(Person.class, this, PeoplePackage.PERSON__PARENTS, PeoplePackage.PERSON__CHILDREN);
+			parents = new EObjectResolvingEList<Person>(Person.class, this, PeoplePackage.PERSON__PARENTS);
 		}
 		return parents;
 	}
@@ -193,16 +221,8 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PeoplePackage.PERSON__CHILDREN:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChildren()).basicAdd(otherEnd, msgs);
-			case PeoplePackage.PERSON__PARENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParents()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+	public Person getFather() {
+		return (Person)FATHER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -210,15 +230,68 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case PeoplePackage.PERSON__CHILDREN:
-				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
-			case PeoplePackage.PERSON__PARENTS:
-				return ((InternalEList<?>)getParents()).basicRemove(otherEnd, msgs);
+	public Person basicGetFather() {
+		return (Person)FATHER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFather(Person newFather) {
+		FATHER__ESETTING_DELEGATE.dynamicSet(this, null, 0, newFather);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Person getMother() {
+		return (Person)MOTHER__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Person basicGetMother() {
+		return (Person)MOTHER__ESETTING_DELEGATE.dynamicGet(this, null, 0, false, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMother(Person newMother) {
+		MOTHER__ESETTING_DELEGATE.dynamicSet(this, null, 0, newMother);
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #child(java.lang.String) <em>Child</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #child(java.lang.String)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate CHILD_STRING__EINVOCATION_DELEGATE = ((EOperation.Internal)PeoplePackage.Literals.PERSON___CHILD__STRING).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Person child(String childName) {
+		try {
+			return (Person)CHILD_STRING__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{childName}));
 		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
 	}
 
 	/**
@@ -237,6 +310,12 @@ public class PersonImpl extends EObjectImpl implements Person {
 				return getGender();
 			case PeoplePackage.PERSON__NAME:
 				return getName();
+			case PeoplePackage.PERSON__FATHER:
+				if (resolve) return getFather();
+				return basicGetFather();
+			case PeoplePackage.PERSON__MOTHER:
+				if (resolve) return getMother();
+				return basicGetMother();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -264,6 +343,12 @@ public class PersonImpl extends EObjectImpl implements Person {
 			case PeoplePackage.PERSON__NAME:
 				setName((String)newValue);
 				return;
+			case PeoplePackage.PERSON__FATHER:
+				setFather((Person)newValue);
+				return;
+			case PeoplePackage.PERSON__MOTHER:
+				setMother((Person)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -288,6 +373,12 @@ public class PersonImpl extends EObjectImpl implements Person {
 			case PeoplePackage.PERSON__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case PeoplePackage.PERSON__FATHER:
+				setFather((Person)null);
+				return;
+			case PeoplePackage.PERSON__MOTHER:
+				setMother((Person)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -308,8 +399,26 @@ public class PersonImpl extends EObjectImpl implements Person {
 				return gender != GENDER_EDEFAULT;
 			case PeoplePackage.PERSON__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case PeoplePackage.PERSON__FATHER:
+				return FATHER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case PeoplePackage.PERSON__MOTHER:
+				return MOTHER__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case PeoplePackage.PERSON___CHILD__STRING:
+				return child((String)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

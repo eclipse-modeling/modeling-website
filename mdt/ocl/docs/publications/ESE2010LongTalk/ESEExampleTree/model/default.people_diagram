@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tree="http://www.clipse.org/ecamples/tree" xmi:id="__hwfwNhVEd-DhoABUGS8wA" type="People" measurementUnit="Pixel">
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tree="http://www.eclipse.org/examples/tree" xmi:id="__hwfwNhVEd-DhoABUGS8wA" type="People" measurementUnit="Pixel">
   <children xmi:type="notation:Shape" xmi:id="__ihUwNhVEd-DhoABUGS8wA" type="2001" fontName="Microsoft Sans Serif">
     <children xmi:type="notation:DecorationNode" xmi:id="__ih70NhVEd-DhoABUGS8wA" type="5001"/>
     <element xmi:type="tree:Person" href="default.people#//@people.0"/>

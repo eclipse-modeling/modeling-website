@@ -267,7 +267,7 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="http://www.clipse.org/ecamples/tree">
+      <metamodel nsURI="http://www.eclipse.org/examples/tree">
          <metamodelType
                id="ESEExampleTree.diagram.Universe_1000"
                name="%metatype.name.Universe_1000"
@@ -277,7 +277,7 @@
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.clipse.org/ecamples/tree">
+      <metamodel nsURI="http://www.eclipse.org/examples/tree">
          <metamodelType
                id="ESEExampleTree.diagram.Person_2001"
                name="%metatype.name.Person_2001"
@@ -287,7 +287,7 @@
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.clipse.org/ecamples/tree">
+      <metamodel nsURI="http://www.eclipse.org/examples/tree">
          <specializationType
                id="ESEExampleTree.diagram.PersonChildren_4002"
                name="%metatype.name.PersonChildren_4002"

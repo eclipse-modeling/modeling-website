@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: PeopleFactoryImpl.java,v 1.1 2010/10/16 12:13:06 ewillink Exp $
+ * $Id: PeopleFactoryImpl.java,v 1.2 2010/10/29 11:58:02 ewillink Exp $
  */
 package people.impl;
 
@@ -32,7 +32,7 @@ public class PeopleFactoryImpl extends EFactoryImpl implements PeopleFactory {
 	 */
 	public static PeopleFactory init() {
 		try {
-			PeopleFactory thePeopleFactory = (PeopleFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.clipse.org/ecamples/tree"); 
+			PeopleFactory thePeopleFactory = (PeopleFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/examples/tree"); 
 			if (thePeopleFactory != null) {
 				return thePeopleFactory;
 			}

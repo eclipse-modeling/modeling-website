@@ -84,15 +84,15 @@ public class PeopleNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (PeopleVisualIDRegistry.getVisualID(view)) {
-		case PersonEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://www.clipse.org/ecamples/tree?Person", PeopleElementTypes.Person_2001); //$NON-NLS-1$
 		case PersonChildrenEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://www.clipse.org/ecamples/tree?Person?children", PeopleElementTypes.PersonChildren_4002); //$NON-NLS-1$
+					"Navigator?Link?http://www.eclipse.org/examples/tree?Person?children", PeopleElementTypes.PersonChildren_4002); //$NON-NLS-1$
 		case UniverseEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Diagram?http://www.clipse.org/ecamples/tree?Universe", PeopleElementTypes.Universe_1000); //$NON-NLS-1$
+					"Navigator?Diagram?http://www.eclipse.org/examples/tree?Universe", PeopleElementTypes.Universe_1000); //$NON-NLS-1$
+		case PersonEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://www.eclipse.org/examples/tree?Person", PeopleElementTypes.Person_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -145,12 +145,12 @@ public class PeopleNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (PeopleVisualIDRegistry.getVisualID(view)) {
-		case PersonEditPart.VISUAL_ID:
-			return getPerson_2001Text(view);
 		case PersonChildrenEditPart.VISUAL_ID:
 			return getPersonChildren_4002Text(view);
 		case UniverseEditPart.VISUAL_ID:
 			return getUniverse_1000Text(view);
+		case PersonEditPart.VISUAL_ID:
+			return getPerson_2001Text(view);
 		}
 		return getUnknownElementText(view);
 	}

@@ -2,13 +2,14 @@
  * <copyright>
  * </copyright>
  *
- * $Id: PeoplePackage.java,v 1.1 2010/10/16 12:13:05 ewillink Exp $
+ * $Id: PeoplePackage.java,v 1.2 2010/10/29 11:58:02 ewillink Exp $
  */
 package people;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see people.PeopleFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL'"
  * @generated
  */
 public interface PeoplePackage extends EPackage {
@@ -42,7 +44,7 @@ public interface PeoplePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.clipse.org/ecamples/tree";
+	String eNS_URI = "http://www.eclipse.org/examples/tree";
 
 	/**
 	 * The package namespace name.
@@ -107,13 +109,49 @@ public interface PeoplePackage extends EPackage {
 	int PERSON__NAME = 3;
 
 	/**
+	 * The feature id for the '<em><b>Father</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__FATHER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Mother</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__MOTHER = 5;
+
+	/**
 	 * The number of structural features of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 4;
+	int PERSON_FEATURE_COUNT = 6;
+
+	/**
+	 * The operation id for the '<em>Child</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON___CHILD__STRING = 0;
+
+	/**
+	 * The number of operations of the '<em>Person</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link people.impl.UniverseImpl <em>Universe</em>}' class.
@@ -142,6 +180,15 @@ public interface PeoplePackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Universe</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link people.Gender <em>Gender</em>}' enum.
@@ -207,6 +254,38 @@ public interface PeoplePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPerson_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link people.Person#getFather <em>Father</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Father</em>'.
+	 * @see people.Person#getFather()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EReference getPerson_Father();
+
+	/**
+	 * Returns the meta object for the reference '{@link people.Person#getMother <em>Mother</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Mother</em>'.
+	 * @see people.Person#getMother()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EReference getPerson_Mother();
+
+	/**
+	 * Returns the meta object for the '{@link people.Person#child(java.lang.String) <em>Child</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Child</em>' operation.
+	 * @see people.Person#child(java.lang.String)
+	 * @generated
+	 */
+	EOperation getPerson__Child__String();
 
 	/**
 	 * Returns the meta object for class '{@link people.Universe <em>Universe</em>}'.
@@ -302,6 +381,30 @@ public interface PeoplePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Father</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSON__FATHER = eINSTANCE.getPerson_Father();
+
+		/**
+		 * The meta object literal for the '<em><b>Mother</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSON__MOTHER = eINSTANCE.getPerson_Mother();
+
+		/**
+		 * The meta object literal for the '<em><b>Child</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PERSON___CHILD__STRING = eINSTANCE.getPerson__Child__String();
 
 		/**
 		 * The meta object literal for the '{@link people.impl.UniverseImpl <em>Universe</em>}' class.
