@@ -7,7 +7,6 @@ Bundle-ClassPath: .
 Bundle-Activator: people.provider.PeopleEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: people.provider
 Require-Bundle: org.eclipse.core.runtime,
  ESEExampleTree;visibility:=reexport,
