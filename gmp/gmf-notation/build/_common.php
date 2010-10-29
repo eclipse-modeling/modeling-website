@@ -3,15 +3,15 @@ require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
 	"BaseBuilderBranch" => "R35_RC4",
-
+	
 	"BranchAndJDK" => array (
         "localhost=------------,------------",
-        "1.5.0=HEAD,/opt/sun-java2-5.0",
-        "1.4.1=R1_4_maintenance,/opt/sun-java2-5.0",
+        "1.5.0=HEAD,/opt/jdk6_21",
+        "1.4.2=R1_4_maintenance,/opt/jdk6_21",
 
         "modeling.eclipse.org=------------,------------",
         "1.5.0=HEAD,/opt/sun-java2-6.0_64",
-        "1.4.1=R1_4_maintenance,/opt/sun-java2-6.0_64",
+        "1.4.2=R1_4_maintenance,/opt/sun-java2-6.0_64",
 
 	),
 

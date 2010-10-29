@@ -6,14 +6,14 @@ $options = array (
 
 	"BranchAndJDK" => array (
         "localhost=------------,------------",
-        "1.5.0=HEAD,/opt/sun-java2-5.0",
-        "1.4.1=R1_4_maintenance,/opt/sun-java2-5.0",
-        "1.3.3=R2_2_maintenance,/opt/sun-java2-5.0",
-        "1.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
+        "1.5.0=HEAD,/opt/jdk6_21",
+        "1.4.2=R1_4_maintenance,/opt/jdk6_21",
+        "1.3.3=R2_2_maintenance,/opt/jdk6_21",
+        "1.1.4=R2_1_maintenance,/opt/jdk6_21",
 
         "modeling.eclipse.org=------------,------------",
         "1.5.0=HEAD,/opt/sun-java2-6.0_64",
-        "1.4.1=R1_4_maintenance,/opt/sun-java2-6.0_64",
+        "1.4.2=R1_4_maintenance,/opt/sun-java2-6.0_64",
         "1.3.3=R2_2_maintenance,/opt/sun-java2-6.0_64",
         "1.1.4=R2_1_maintenance,/opt/sun-java2-6.0_64",
 
