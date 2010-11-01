@@ -58,8 +58,8 @@
 
         <h2>Archived Sites</h2>
         <p>If you want a local copy of an archived update site:
-        <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Release 0.7.0</a>
         </p>
+        <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">org.eclipse.featuremodel.updatesite_0.7.0.zip</a>
         
         <!--
 		<p>
