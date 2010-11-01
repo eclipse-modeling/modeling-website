@@ -35,11 +35,32 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
+        <h2>EMF Feature Model Update Sites (0.7.0)</h2>
+
+        <div class="homeitem">
+        <h3>Using Eclipse 3.4's Install Manager</h3>
+            <p>To install these plugins, point your Install Manager at this site. 
+            <!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. -->
+            </p>
+            <ul>
+                <li>Help &gt; Software Updates... &gt; Available Software &gt; Add Site...
+                <ul>
+                    <li><b><a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site<br/>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+        <h3>Archived Update Sites</h3>
+            <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Updatesite</a>
+        
+        <h3>Update Sites</h3>
+            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">Updatesite</a>
+        
 		<p>
 		<i>More information here soon...</i>
 		</p>
 
-    <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip"> Updatesite </a>
 		<!--
 		
 		<div class="homeitem">
