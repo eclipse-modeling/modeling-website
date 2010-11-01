@@ -35,7 +35,7 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
-        <div class="homeitem3col">
+        <div class="homeitem">
         <h2>Using Eclipse 3.5's Install Manager</h2>
             <p>To install these plugins, point your Install Manager at this site. 
             <!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. -->
@@ -51,21 +51,19 @@
         </div>
 
         <h2>Remote Site</h2>
-            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">http://www.eclipse.org//modeling/emft/featuremodel/update-site</a>
+        <p>The latest release of the EMF Feature Model can be installed from these remote site:</p>
+        <a href="http://www.eclipse.org/modeling/emft/featuremodel/update-site">http://www.eclipse.org/modeling/emft/featuremodel/update-site</a>
 
-        <h2>Release 0.7.0</h2>
-
-        <h3>Archived Site</h3>
-            <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Site</a>
+        <h2>Archived Sites</h2>
+        <p>If you want a local copy of an archived update site:</p>
+        <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Site (Release 0.7.0)</a>
         
-        <h3>Remote Site</h3>
-            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">http://www.eclipse.org//modeling/emft/featuremodel/update-site</a>
-
-        
+        <!--
 		<p>
 		<i>More information here soon...</i>
 		</p>
-
+        -->
+        
 		<!--
 		
 		<div class="homeitem">
