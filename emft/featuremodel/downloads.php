@@ -52,7 +52,7 @@
 
         <h2>Remote Site</h2>
         <p>The latest release of the EMF Feature Model can be installed from these remote site:</p>
-        <a href="http://www.eclipse.org/modeling/emft/featuremodel/update-site">http://www.eclipse.org/modeling/emft/featuremodel/update-site</a>
+        <a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site</a>
 
         <h2>Archived Sites</h2>
         <p>If you want a local copy of an archived update site:</p>
