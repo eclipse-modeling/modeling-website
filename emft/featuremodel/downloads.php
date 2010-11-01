@@ -35,27 +35,32 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		
-        <h2>EMF Feature Model Update Sites (0.7.0)</h2>
-
-        <div class="homeitem">
-        <h3>Using Eclipse 3.4's Install Manager</h3>
+        <div class="homeitem3col">
+        <h2>Using Eclipse 3.5's Install Manager</h2>
             <p>To install these plugins, point your Install Manager at this site. 
             <!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. -->
             </p>
             <ul>
-                <li>Help &gt; Software Updates... &gt; Available Software &gt; Add Site...
+                <li>Help &gt; Software Updates... &gt; Find and Install... &gt; Search for new features to install &gt; New Remote Site...
                 <ul>
                     <li><b><a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site<br/>
                     </li>
                 </ul>
+                </li>
             </ul>
         </div>
 
-        <h3>Archived Update Sites</h3>
-            <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Updatesite</a>
+        <h2>Remote Site</h2>
+            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">http://www.eclipse.org//modeling/emft/featuremodel/update-site</a>
+
+        <h2>Release 0.7.0</h2>
+
+        <h3>Archived Site</h3>
+            <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Site</a>
         
-        <h3>Update Sites</h3>
-            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">Updatesite</a>
+        <h3>Remote Site</h3>
+            <a href="http://www.eclipse.org//modeling/emft/featuremodel/update-site">http://www.eclipse.org//modeling/emft/featuremodel/update-site</a>
+
         
 		<p>
 		<i>More information here soon...</i>
