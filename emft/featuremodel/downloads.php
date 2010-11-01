@@ -37,26 +37,29 @@
 		
         <div class="homeitem">
         <h2>Using Eclipse 3.5's Install Manager</h2>
-            <p>To install these plugins, point your Install Manager at this site. 
-            <!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. -->
-            </p>
+            
+        <p>To install these plugins, point your Install Manager at this site. 
+        <!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. -->
+        </p>
+        <ul>
+            <li>Help &gt; Software Updates... &gt; Find and Install... &gt; Search for new features to install &gt; New Remote Site...
             <ul>
-                <li>Help &gt; Software Updates... &gt; Find and Install... &gt; Search for new features to install &gt; New Remote Site...
-                <ul>
-                    <li><b><a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site<br/>
-                    </li>
-                </ul>
+                <li><b><a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site</a><br/>
                 </li>
             </ul>
+            </li>
+        </ul>
         </div>
 
         <h2>Remote Site</h2>
-        <p>The latest release of the EMF Feature Model can be installed from these remote site:</p>
+        <p>The latest release of the EMF Feature Model can be installed from these remote site:
         <a href="http://download.eclipse.org/modeling/emft/featuremodel/update-site">http://download.eclipse.org/modeling/emft/featuremodel/update-site</a>
+        </p>
 
         <h2>Archived Sites</h2>
-        <p>If you want a local copy of an archived update site:</p>
-        <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Archived Site (Release 0.7.0)</a>
+        <p>If you want a local copy of an archived update site:
+        <a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/featuremodel/org.eclipse.featuremodel.updatesite_0.7.0.zip">Release 0.7.0</a>
+        </p>
         
         <!--
 		<p>
