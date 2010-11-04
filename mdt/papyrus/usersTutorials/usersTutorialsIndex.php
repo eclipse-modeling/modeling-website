@@ -31,6 +31,7 @@
 			<ul>
 				<li><a href="resources/TutorialOnPapyrusUSE_d20101001.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
+				<li><a href="resources/PapyrusTutorial_OnActivityDiagrams_v0.1_d20101014.pdf">A tutorial on Papyrus activity diagram editor (2010-10-14).</a></li>
 			</ul>
 		<h3>Examples</h3>
 			<ul>
