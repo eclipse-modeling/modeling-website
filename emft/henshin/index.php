@@ -12,7 +12,7 @@ include($App->getProjectCommon());
 #
 # Begin: page-specific settings.  Change these. 
 $pageTitle 	= "Henshin";
-$pageKeywords	= "EMF, Henshin, model transformation";
+$pageKeywords	= "EMF, Henshin, model transformation, state space analysis";
 $pageAuthor	= "Christian Krause";
 
 # Load project description from a separate file:
