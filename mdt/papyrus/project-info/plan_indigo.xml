@@ -178,7 +178,8 @@ and [Team Working].
       		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
-                <theme name="Documentation">
+        
+        <theme name="Documentation">
             <description>
                 <html:div>
 This theme addresses the need for documentation of the MDT Papyrus
@@ -189,6 +190,17 @@ following concerns: [Documentation - User], and [Documentation - Developer].
             <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
+        </theme>
+        
+        <theme name="Miscellaneous">
+            <description>
+                <html:div>
+This theme addresses all tasks that may not be included in one of the previous theme.
+                </html:div>
+            </description>
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
    </themes_and_priorities>
    <appendix name="Legal Notices">
