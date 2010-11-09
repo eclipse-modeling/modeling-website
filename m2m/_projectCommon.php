@@ -88,7 +88,7 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 if ($projct == "atl") {
 $Nav->addCustomNav("Update Manager", "$rooturl/atl/updates/", "_self", 2);
-$Nav->addCustomNav("Old Update Manager (ATL < 3.2)", "$rooturl/updates/", "_self", 2);
+//$Nav->addCustomNav("Old Update Manager (ATL < 3.2)", "$rooturl/updates/", "_self", 2);
 } else {
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 }
