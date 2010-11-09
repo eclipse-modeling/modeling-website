@@ -86,8 +86,12 @@ foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
+if ($projct == "atl") {
+$Nav->addCustomNav("Update Manager", "$rooturl/atl/updates/", "_self", 2);
+$Nav->addCustomNav("Old Update Manager (ATL < 3.2)", "$rooturl/updates/", "_self", 2);
+} else {
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
-
+}
 $Nav->addNavSeparator("Documentation", "http://wiki.eclipse.org/Model_to_Model_Transformation_(M2M)");
 $Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.m2m", "_self", 2);
 #$Nav->addCustomNav("Plan", "$rooturl/docs/plans/m2m_project_plan_1_1.html", "_self", 2);
@@ -103,15 +107,15 @@ $Nav->addCustomNav("Open Bugs", "$bugurl/bugs/buglist.cgi?bug_status=NEW&bug_sta
 $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $projectName, "_self", 2);
 $Nav->addCustomNav("Contributors", "http://www.eclipse.org/$PR/project-info/team.php", "_self", 2);
 
-if ($projct == "atl")
-{	
-	$Nav->addNavSeparator("ATL", "/atl");
-	$Nav->addCustomNav("Download", "http://www.eclipse.org/modeling/m2m/downloads/?project=atl", "_self", 3);
+//if ($projct == "atl")
+//{	
+//	$Nav->addNavSeparator("ATL", "/atl");
+//	$Nav->addCustomNav("Download", "http://www.eclipse.org/modeling/m2m/downloads/?project=atl", "_self", 3);
 //	$Nav->addCustomNav("Old Downloads", "/m2m/atl/download/index-old.php", "_self", 2);
-	$Nav->addCustomNav("Documentation", "/atl/documentation", "_self", 3);
-	$Nav->addCustomNav("Support", "/atl/support", "_self", 3);
-	$Nav->addCustomNav("Getting Involved", "/atl/developers", "_self", 3);
-}
+//	$Nav->addCustomNav("Documentation", "/atl/documentation", "_self", 3);
+//	$Nav->addCustomNav("Support", "/atl/support", "_self", 3);
+//	$Nav->addCustomNav("Getting Involved", "/atl/developers", "_self", 3);
+//}
 unset ($bugcoms);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
