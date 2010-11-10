@@ -2,26 +2,20 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="Papyrus">
-   <release projectid="modeling.mdt" version="Helios"/>
+   <release projectid="modeling.mdt" version="Indigo"/>
    <introduction>
      <html:div>
 <html:p>This document lays out the feature and API set for the first release of
-the Eclipse Papyrus (MDT Papyrus) Project, version 0.0.7.  This project plan
+the Eclipse Papyrus (MDT Papyrus) Project, version 0.8.0  This project plan
 inherits from the Modeling Project Plan, which should be referenced when
 consulting this individual project plan.</html:p>
-<html:p>
-<html:i>
-A transformation aimed to help users to migrate from Papyrus version 1 and from
-TopCASED-UML towards MDT Papyrus will be provided early 2010.
-</html:i>
-</html:p>
      </html:div>
    </introduction>
    <release_deliverables>
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
 <html:ul>
-<html:li>MDT Papyrus source code release, available as versions tagged "R0_7" in the project's SVN repository.</html:li>
+<html:li>MDT Papyrus source code release, available as versions tagged "R0_8" in the project's SVN repository.</html:li>
 <html:li>MDT Papyrus SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
 <html:li>MDT Papyrus runtime binary distribution (downloadable and update site).</html:li>
 <html:li>MDT Papyrus stand-alone binary distribution (downloadable).</html:li>
@@ -35,24 +29,18 @@ The release deliverables have the same form as is found in most Eclipse projects
          <html:div>
 Release milestones occurring at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
-final 3.6 release of the Platform, upon which MDT Papyrus and other projects
+final 3.7 release of the Platform, upon which MDT Papyrus and other projects
 will release simultaneously. It is anticipated that MDT Papyrus will synchronize
-its milestones with the Helios milestone schedule.
+its milestones with the Indigo milestone schedule.
          </html:div>
       </preamble>
-<milestone date="08/17/2009" milestone="M1"></milestone>
-<milestone date="09/28/2009" milestone="M2"></milestone>
-<milestone date="11/09/2009" milestone="M3"></milestone>
-<milestone date="12/14/2009" milestone="M4"></milestone>
-<milestone date="02/01/2010" milestone="M5"></milestone>
-<milestone date="03/15/2010" milestone="M6"><html:div>API freeze</html:div></milestone>
-<milestone date="05/03/2010" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="05/17/2010" milestone="RC1"></milestone>
-<milestone date="05/24/2010" milestone="RC2"></milestone>
-<milestone date="05/31/2010" milestone="RC3"></milestone>
-<milestone date="06/07/2010" milestone="RC4"></milestone>
-<milestone date="06/14/2010" milestone="RC5"></milestone>
-<milestone date="06/23/2010" milestone="Helios"></milestone>
+<milestone date="08/06/2010" milestone="M1"></milestone>
+<milestone date="09/17/2010" milestone="M2"></milestone>
+<milestone date="10/29/2010" milestone="M3"></milestone>
+<milestone date="12/10/2010" milestone="M4"></milestone>
+<milestone date="01/28/2011" milestone="M5"></milestone>
+<milestone date="03/11/2011" milestone="M6"><html:div>API freeze</html:div></milestone>
+<milestone date="04/29/2011" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
       <postamble><html:div>
 MDT Papyrus may produce interim maintenance releases in addition to these in
 order to satisfy client requests.
@@ -63,12 +51,12 @@ order to satisfy client requests.
         In order to remain current, each Eclipse release targets reasonably
         current versions of the underlying operating environments. The Eclipse
         Papyrus project depends upon on the Platform and other
-        projects, which are mostly "pure" Java. The 3.6 release of the Eclipse
+        projects, which are mostly "pure" Java. The 3.7 release of the Eclipse
         Platform Project is written and compiled against version 5.0 of the Java
         Platform APIs, and targeted to run on version 5.0 of the Java Runtime
         Environment, Standard Edition. MDT Papyrus will target the same Java
         version as EMF and UML2, which currently require Java 5. Eclipse
-        Platform SDK 3.6 will be tested and validated on a number of reference
+        Platform SDK 3.7 will be tested and validated on a number of reference
         platforms. MDT Papyrus will be tested and validated against a subset of
         those listed for the platform.
      </html:div>
@@ -88,26 +76,26 @@ the time frame for availability.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The MDT Papyrus 0.0.7 project
+The MDT Papyrus 0.8.0 project
 will be developed in parallel, and released simultaneously, with the
 following projects. As stated above, each milestone release of the
-MDT Papyrus 0.0.7 project will be compatible with the
+MDT Papyrus 0.8.0 project will be compatible with the
 corresponding milestones for each of these projects, and delivered the
 appropriate offset.
 <html:ul>
-    <html:li>Eclipse Platform SDK version 3.6</html:li>
+    <html:li>Eclipse Platform SDK version 3.7</html:li>
     <html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
     <html:li>Model Development Tools (MDT) UML2 version 3.1</html:li>
     <html:li>Graphical Modeling Framework (GMF) version 2.3</html:li>
 </html:ul>
 <html:p>
-As described above, the MDT Papyrus 0.0.7 release is not backwards compatible
+As described above, the MDT Papyrus 0.8.0 release is not backwards compatible
 with the Papyrus and TopCASED-UML project.
 </html:p>
 <html:p>
 <html:i>
 A transformation aimed to help users to migrate from Papyrus version 1 and from
-TopCASED-UML towards MDT Papyrus will be provided early 2010.
+TopCASED-UML/SysML towards MDT Papyrus will be provided early 2011.
 </html:i>
 </html:p>
        </html:div>
@@ -124,47 +112,37 @@ document and associated Bugzilla entries are left to those wanting
 more detailed information on each.
          </html:div>
      </preamble>
-        <theme name="UML2 Diagrams">
+        <theme name="Editors">
             <description>
                 <html:div>
-This theme addresses issues related the support of UML 2 diagrams. It concerns
-more precisely all features related to following concerns: [All diagrams],
-[Class diagram], [Package diagram], [Composite structure diagram],
+This theme addresses issues related the diagram editors of Papyrus. It concerns
+more precisely all generic features related any kind of Papyrus diagram editor.
+For the UML2, it concerns following diagram edtiors: [Class diagram], [Package diagram], [Composite structure diagram],
 [Component diagram], [Profile diagram], [Use case diagram],
 [State machine diagram], [Protocol state machine diagram], [Activity diagram],
 [Sequence diagram], [Communications diagram], [Interactions overview Diagram],
 [Timing diagram].
-                </html:div>
-            </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=UML2+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=UML2+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=UML2+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
-        </theme>
-        <theme name="SysML Diagrams">
-            <description>
-                <html:div>
-This theme addresses issues related the support of SysML diagrams. It
-concerns more precisely all features related to following concerns:
-[Activity diagram], [Block definition diagram], [Internal block diagram],
+For the SysML, it concerns following specific diagram editors: [Activity diagram], [Block definition diagram], [Internal block diagram],
 [Package diagram], [Parametric diagram], [Requirements diagram],
 [Sequence diagram], and [State machine diagram].
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=SysML+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=SysML+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=SysML+Diagrams&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
+
         <theme name="Extensibility">
             <description>
                 <html:div>
-This theme addresses the need for usability improvements of the MDT Papyrus
+This theme addresses the need for extensiblity improvements of the MDT Papyrus
 implementation and APIs. It concerns more precisely all features related to
 following concerns: [Backbone] and [Metatooling].
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Extensibility&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
         <theme name="Scalability">
             <description>
@@ -173,9 +151,9 @@ This theme addresses the need for scalability and performance improvements
 of the MDT Papyrus implementation and APIs.
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Scalability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
         <theme name="Usability">
             <description>
@@ -186,11 +164,12 @@ following concerns: [Palette], [Property View], [Model Explorer], [Sash Editor],
 and [Team Working].
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
-                <theme name="Documentation">
+        
+        <theme name="Documentation">
             <description>
                 <html:div>
 This theme addresses the need for documentation of the MDT Papyrus
@@ -198,9 +177,20 @@ implementation and APIs. It concerns more precisely all features related to
 following concerns: [Documentation - User], and [Documentation - Developer].
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=Helios&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=helios&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=helios-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=helios-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Documentation&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
+        </theme>
+        
+        <theme name="Miscellaneous">
+            <description>
+                <html:div>
+This theme addresses all tasks that may not be included in one of the previous theme.
+                </html:div>
+            </description>
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
    </themes_and_priorities>
    <appendix name="Legal Notices">
