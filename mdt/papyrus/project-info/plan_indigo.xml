@@ -112,7 +112,7 @@ document and associated Bugzilla entries are left to those wanting
 more detailed information on each.
          </html:div>
      </preamble>
-        <theme name="Diagram editors">
+        <theme name="Editors">
             <description>
                 <html:div>
 This theme addresses issues related the diagram editors of Papyrus. It concerns
@@ -127,9 +127,9 @@ For the SysML, it concerns following specific diagram editors: [Activity diagram
 [Sequence diagram], and [State machine diagram].
                 </html:div>
             </description>
-            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Diagram+editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Diagram+editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Diagram+editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
+            <committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Editors&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
 
         <theme name="Extensibility">
