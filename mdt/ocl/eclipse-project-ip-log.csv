@@ -1,5 +1,5 @@
 Section 1 (Committers),,,,
-
+,,,,
 dev.eclise.org Login,active/inactive,present/past,,
 cdamus,active,past,,
 cmcgee,active,past,,
@@ -8,9 +8,9 @@ aigdalov,active,present,,
 ewillink,active,present,,
 lgoubet,inactive,present,,
 asanchez,active,present,,
-
+,,,,
 Section 2 (Developers),,,,
-
+,,,,
 Component,Bug #,Contributor,Size,Committer
 org.eclipse.emf.ocl,134792,Christian Vogt,35509 LOC,cdamus
 org.eclipse.emf.ocl,141413,Christian Vogt,557 LOC,cdamus
@@ -57,10 +57,11 @@ org.eclipse.ocl,266320,aigdalov,12,cdamus
 org.eclipse.ocl,265066,radvorak,25,cdamus
 org.eclipse.ocl.examples.interpreter,294200,Patrick Könemann,25,ewillink
 org.eclipse.ocl.examples.project.royalandloyal,"246639, CQ 2652","Anneke Kleppe, Jos Warmer, Miguel Garcia",812,ewillink
+org.eclipse.ocl.uml.tests,329946,Axel Uhl,5,ewillink
 ,,,,
-"Section 3 (Third Party Software)",,,,
+Section 3 (Third Party Software),,,,
 ,,,,
-Library Name,CQ,CVS Location,License,Usage,
+Library Name,CQ,CVS Location,License,Usage
 LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/technology/org.eclipse.emft/ocl/plugins/org.eclipse.emf.ocl/lib/lpgjavaruntime.jar,Eclipse Public License Version 1.0,unmodified entire package
 LPG Java Runtime v1.0,(No longer in use) 303,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_0,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
 LPG Java Runtime v1.1,(No longer in use) 1081,/cvsroot/tools/org.eclipse.orbit/net.sourceforge.lpg.lpgjavaruntime v1_1,Eclipse Public License Version 1.0,original lpgjavaruntime.jar repackaged as an OSGi bundle
