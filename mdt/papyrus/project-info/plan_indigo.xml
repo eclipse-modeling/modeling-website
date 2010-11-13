@@ -5,10 +5,11 @@
    <release projectid="modeling.mdt" version="Indigo"/>
    <introduction>
      <html:div>
-<html:p>This document lays out the feature and API set for the first release of
+<html:p>This document lays out the feature and API set for the incoming release of
 the Eclipse Papyrus (MDT Papyrus) Project, version 0.8.0  This project plan
 inherits from the Modeling Project Plan, which should be referenced when
-consulting this individual project plan.</html:p>
+consulting this individual project plan.
+In addition to the detailled items listed below, the papyrus team will ensure the maintenance of its existing plug-ins.</html:p>
      </html:div>
    </introduction>
    <release_deliverables>
@@ -94,8 +95,9 @@ with the Papyrus and TopCASED-UML project.
 </html:p>
 <html:p>
 <html:i>
-A transformation aimed to help users to migrate from Papyrus version 1 and from
-TopCASED-UML/SysML towards MDT Papyrus will be provided early 2011.
+A transformation aimed to help users to migrate from TopCASED-UML/SysML towards MDT Papyrus will be provided early 2011.
+For migrating from Papyrus 1.x to MDT Papyrus, a partail transformation will be provided to support class and comosite diagrams migration.
+In addition, papyrus will enable to create automatically diagrams from ane xisting UMl models. This tool may be used as for example for migrating from the UML2 Tool 
 </html:i>
 </html:p>
        </html:div>
