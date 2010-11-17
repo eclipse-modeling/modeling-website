@@ -117,7 +117,7 @@ foreach ($catgs as $num => $dirBits)
 			{
 				$results = getTestResults($PWD . $dirBits[1] . $file);
 				$noProblems = $noProblems && !$results;
-				$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir. preg_replace("#/xml/#", "/html/", $dirBits[1]) . preg_replace("#\.xml$#",".html", $file) . '">' .
+				$out .= '<li><div>' . $results . '</div><a href="' . $linkPre . $buildDir. $dirBits[1] . $file . '">' .
 				preg_replace("/\.xml$/", "", $file) . '</a> (' . pretty_size(filesize($PWD . $dirBits[1] . $file)). ')</li>' . "\n";
 			}
 		}
