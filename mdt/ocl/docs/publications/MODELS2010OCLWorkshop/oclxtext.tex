@@ -1,56 +1,33 @@
-\documentclass[runningheads,a4paper]{llncs}
+\documentclass{eceasst}
+% This is the source of the author documentation
+% for the ECEASST document class.
 
-\usepackage{amssymb}
-\setcounter{tocdepth}{3}
-\usepackage{graphicx}
+% Required packages
+% =================
+\usepackage{subfig}
 
-\usepackage{url}
-\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-\noindent\keywordname\enspace\ignorespaces#1}
+% Volume frontmatter
+% ==================
+\input{frontmatter}
+
+% Article frontmatter
+% ===================
+\title{% Title of the article
+Re-engineering Eclipse MDT/OCL for Xtext}
+%\short{% Short title of the article (optional)
+%Re-engineering Eclipse MDT/OCL for Xtext}
+\author{% Authors and references to addresses
+Edward Willink\autref{1}}
+\institute{% Institutes with labels
+\autlabel{1} \email{ed \_at\_ willink.me.uk}, \url{http://www.eclipse.org/modeling}\\
+Eclipse Modeling Project}
+
+\abstract{
+The current tooling used for the Eclipse OCL project uses an LALR parser generator. Enhancing the tooling to support editing motivated a migration to exploit the inherently model-driven characteristics of Xtext. This paper summarizes the experiences of that migration, identifies the many benefits and discusses a few changes in implementation approach that were required. Objective performance and size comparisons between the old LALR and new Xtext approach are provided.}
+\keywords{OCL, meta-model, editor, Xtext, LALR, LPG, ASG, AST, CSG, CST}
 
 \begin{document}
-
-\mainmatter  % start of an individual contribution
-
-% first the title is needed
-\title{MODELS 2010\\Workshop on OCL and Textual Modelling:\\Re-engineering Eclipse MDT/OCL for Xtext}
-
-% a short form should be given in case it is too long for the running head
-\titlerunning{MODELS 2010 Workshop on OCL and Textual Modelling}
-
-% the name(s) of the author(s) follow(s) next
-%
-% NB: Chinese authors should write their first names(s) in front of
-% their surnames. This ensures that the names appear correctly in
-% the running heads and the author index.
-%
-\author{Edward Willink}
-%
-\authorrunning{Re-engineering Eclipse MDT/OCL for Xtext}
-% (feature abused for this document to repeat the title also on left hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
-\institute{Eclipse Modeling Project,\\
-\url{http://www.eclipse.org/modeling}}
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem"
-% (search for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
-%
-
-\toctitle{MODELS 2010 Workshop on OCL and Textual Modelling}
-\tocauthor{Re-engineering Eclipse MDT/OCL for Xtext}
 \maketitle
-
-
-\begin{abstract}
-The current tooling used for the Eclipse OCL project uses an LALR parser generator. Enhancing the tooling to support editing motivated a migration to exploit the inherently model-driven characteristics of Xtext. This paper summarizes the experiences of that migration, identifies the many benefits and discusses a few changes in implementation approach that were required. Objective performance and size comparisons between the old LALR and new Xtext approach are provided.
-\keywords{OCL, meta-model, editor, Xtext, LALR, LPG, ASG, AST, CSG, CST}
-\end{abstract}
-
 
 \section{Introduction}
 
@@ -71,7 +48,7 @@ Although OCL is perhaps a General Purpose rather than Domain-Specific Language, 
 
 In this paper we describe this redevelopment, and since this is a redevelopment of a real language, we are able to provide realistic contrasts between the more traditional parsing approaches and the revised approaches required by Xtext and, behind the scenes, ANTLR \cite{ANTLR}. We first review the basic parsing activities and see how the old tools supported it, then we see how Xtext provides much simpler and more powerful mechanisms that do much more. The redevelopment was not always straightforward and so we then describe areas where Xtext required a different approach to be adopted. Finally we conclude with some performance metrics contrasting the traditional and the Xtext implementations.
 
-The code for both implementations is available as part of the Eclipse Helios release. The basic MDT/OCL installation provides just the old approach. Installation of the optional MDT/OCL Examples provides the new Xtext editors that use the new Xtext approach\footnote{Install the {\tt Modeling} / {\tt OCL Examples and Editors} feature from the \url{http://download.eclipse.org/releases/helios/} Update site.}.
+The code for both implementations is available as part of the Eclipse Helios release. The basic Eclipse OCL installation provides just the old approach. Installation of the optional MDT/OCL Examples provides the new Xtext editors that use the new Xtext approach\footnote{Install the {\tt Modeling} / {\tt OCL Examples and Editors} feature from the \url{http://download.eclipse.org/releases/helios/} Update site.}.
 
 \section{Background}
 
@@ -176,7 +153,7 @@ is required and then Xtext auto-generates
 
 So for less manual input than for LPG, Xtext provides much more auto-generated output. As will be seen in the following examples, it is not just less input, it is 80\% less input.
 
-With Xtext, the CST for CollectionRangeCS (and also CollectionItemCS) can be auto-generated from the following 3 lines rather than the 10 above:
+With Xtext, the CST for CollectionRangeCS (and also CollectionItemCS) can be generated automatically from the following 3 lines rather than the 10 above:
 
 {\small\begin{verbatim}
 CollectionLiteralPartCS:
@@ -184,7 +161,7 @@ CollectionLiteralPartCS:
 ;
 \end{verbatim}}
 
-Here the `action code' comprises the property assignments; \verb#expressionCS=# and \verb#lastExpressionCS=#. These cause the corresponding properties to exist in the \verb#CollectionLiteralPartCS# class in the CST meta-model.
+Here the `action code' comprises the two assignments to CST properties, as a result of which the  \verb#CollectionLiteralPartCS# in the CST meta-model class has \verb#expressionCS# and \verb#lastExpressionCS# properties.
 
 The maintenance of lists is also simplified from 16 lines to 6. 
 
@@ -227,7 +204,7 @@ pathNameCS returns PathNameExpCS:
 ;
 \end{verbatim}}
 
-Here an arbitrary number of \verb+Identifier '::'+ prefixes may precede an \verb+Identifier+. The prefixes are each analyzed as \verb+Namespace+ and appended to the \verb+PathNameExpCS::namespace+ feature, while the final \verb+Identifier+ is analyzed as a \verb+NamedElement+ and assigned to the \verb+PathNameExpCS::element+ feature.
+Here an arbitrary number of \verb+Identifier '::'+ prefixes may precede an \verb+Identifier+. The prefixes are each analyzed as \verb+Namespace+ and the \verb+PathNameExpCS::namespace+ feature accumulates them. The final \verb+Identifier+ is analyzed as a \verb+NamedElement+ and assigned to the \verb+PathNameExpCS::element+ feature.
 
 The \verb+Namespace+ and \verb+NamedElement+ classes are part of the ASG, and their instances may be either objects created by conversion of the CSG to the ASG or objects imported from an external model. 
 
@@ -249,11 +226,11 @@ multiplicativeCS ::= multiplicativeCS '/' unaryCS
 ...
 \end{verbatim}}
 
-A repeated term such as \verb+8/4/2+ is parsed first by reduction\footnote{The reader is referred to \cite{dragon} for a description of shift and reduce transitions.} of \verb+8+ via \verb+unaryCS+ and then via \verb+multiplicativeCS+. This is followed by reduction of \verb+4+ via \verb+unaryCS+ so that a further \verb+multiplicativeCS+ reduction gives the  \verb+multiplicativeCS+ for \verb+(8/4)+. Finally after reduction of \verb+2+ via \verb+unaryCS+, reduction of \verb+multiplicativeCS+ gives the \verb+multiplicativeCS+ for \verb+((8/4)/2)+.
+A repeated term such as \verb+8/4/2+ is parsed first by reduction\footnote{The reader is referred to \cite{dragon} for a description of shift and reduce transitions.} of \verb+8+ via \verb+unaryCS+ and then via \verb+multiplicativeCS+. This is followed by reduction of \verb+4+ via \verb+unaryCS+ so that a further \verb+multiplicativeCS+ reduction gives the  \verb+multiplicativeCS+ for \verb+(8/4)+. Finally after reduction of \verb+2+ via \verb+unaryCS+, reduction of \verb+multiplicativeCS+ gives a \verb+multiplicativeCS+ for \verb+((8/4)/2)+.
 
 This resolves precedence and associativity in accordance with typical language specifications and makes as much progress as possible with `shift' transitions along the rule before a `reduction' at the end of the rule. LALR grammars parse alternate syntax hypotheses concurrently for `shift's but require only one alternative to remain valid for the `reduction'.
 
-ANTLR, and consequently Xtext, support only right recursion and so the corresponding right recursive exposition in Xtext would incorrectly parse \verb+8/4/2+ as \verb+8/(4/2)+ rather than \verb+(8/4)/2+. This mis-parse is predictable and so could be corrected during the CSG to ASG conversion. However Xtext's extended BNF comes to the rescue for practical use cases.
+ANTLR, and consequently Xtext, supports only right recursion and so the corresponding right recursive exposition in Xtext would parse \verb+8/4/2+ as \verb+8/(4/2)+ rather than \verb+(8/4)/2+. This mis-parse is predictable and so could be corrected during the CSG to ASG conversion. However Xtext's extended BNF comes to the rescue for practical use cases.
 
 {\small\begin{verbatim}
 multiplicativeCS: unaryCS (('*'|'/') unaryCS)*;
@@ -274,7 +251,7 @@ What could have been a significant Xtext limitation appears in practice to once 
 
 \subsection{Overlapping Syntaxes}
 
-It is difficult to create a parser for the OCL grammar for a variety of reasons. One of these is the status of names. For instance, under what circumstances may \verb+String+,  \verb+Set+,  \verb+collect+, \verb+self+ or \verb+true+ be used as ordinary names as in: \verb+java::lang::String+, \verb+values.collect+ or \verb+myTest.true+? The OCL 2.2 specification is not clear and so implementers are forced to use intuition. The resolution of Issue 14583\cite{OCL2.3} for the OCL 2.3 specification is influenced by experience extending the Eclipse MDT/OCL implementation for re-use by QVT. Iterator names are not reserved at all, avoiding any impediment to extension with new names. \verb+self+ and \verb+true+ are totally reserved. \verb+String+ and \verb+Set+ are restricted, that is they are reserved except when qualified as in \verb+mine::Set+.
+It is difficult to create a parser for the OCL grammar for a variety of reasons. One of these is the status of names. For instance, under what circumstances may \verb+String+,  \verb+Set+,  \verb+collect+, \verb+self+ or \verb+true+ be used as ordinary names as in: \verb+java::lang::String+, \verb+values.collect+ or \verb+myTest.true+? The OCL 2.2 specification is not clear and so implementers are forced to use intuition. The resolution of Issue 14583\cite{OCL2.3} for the OCL 2.3 specification is influenced by experience extending the Eclipse OCL implementation for re-use by QVT. Iterator names are not reserved at all, avoiding any impediment to extension with new names. \verb+self+ and \verb+true+ are totally reserved. \verb+String+ and \verb+Set+ are restricted, that is they are reserved except when qualified as in \verb+mine::Set+.
 
 With iterator names unreserved, the parser must use lexical structure rather than a keyword to distinguish the iterator and operator call syntaxes. In simple cases such as \verb+any()+, this is impossible and so resolution must be deferred to the semantic analysis of \verb+any+.
 
@@ -318,22 +295,25 @@ self.context           -- context is an identifier
 At first sight it appears that the use of \verb+'context'+ as a keyword in the grammar precludes the use of \verb+context+ by the \verb+ID+ terminal, since the default lexer uses \verb+ID+ only when there is nothing more specific. However Xtext augments the traditional terminal and production rules with an intermediate datatype rule that can merge terminal rules. Thus in:
 
 {\small\begin{verbatim}
-terminal ID: (('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*);
+terminal ID:('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 RestrictedKeyword:   'context' | 'package';
 Identifier:           ID | RestrictedKeyword;
 \end{verbatim}}
  
 \noindent
-\verb+ID+ is a terminal rule that defines the behavior of the auto-generated Lexer. 
+\verb+ID+ is a terminal rule that defines the behavior of the auto-generated Lexer.
+
 \verb+RestrictedKeyword+ is a datatype rule identifying a list of two grammar keywords.
+
 \verb+Identifier+ is a further datatype rule merging the lexer terminal with the grammar list.
+
 The remainder of the grammar can refer to \verb+Identifier+ without worrying about whether the name overlaps a distinct token.
 
 This provides a very simple solution, but unfortunately has a very bad effect on the sizes of the generated grammar. The Complete OCL grammar has 14 keywords that need treatment in this fashion. Unfortunately only 9 can be defined this way before the generated ANTLR grammar hits the 64 kB Java method size limit. This occurs for Xtext 1.0.0. It is difficult to believe that this is a fundamental limitation of the ANTLR technology, so hopefully this problem will go away in a future release.
 
 \subsection{Complex References}
 
-In real languages, the complexity of the reference to a type as in a declaration such as \verb+name : type+, may vary from a simple string such as \verb+Boolean+ to the more complex \verb+Tuple{name:String,values:Sequence(Integer)}+. The absence of a bound on the nesting depth of Tuples and Collections leads to potentially unlimited complexity. Supporting this diversity provides a dilemma to meta-model developers. On the one hand the common use case of a simple reference is efficiently satisfied by a shared reference, while on the other hand the complex construct mandates a tree of composed objects whose root requires an owner. Identifying a suitable owner is a further dilemma.
+In real languages, the type reference in a declaration such as \verb+name : type+ may be a simple name \verb+Boolean+ or constructed \verb+Tuple{name:String,values:Sequence(Real)}+. The absence of a bound on the nesting depth of Tuples and Collections leads to potentially unlimited complexity. Supporting this diversity provides a dilemma to meta-model developers. On the one hand the common use case of a simple reference is efficiently satisfied by a shared reference, while on the other hand the complex construct mandates a tree of composed objects whose root requires an owner. Identifying a suitable owner is a further dilemma.
 
 \begin{figure}
   \begin{center}
@@ -347,7 +327,7 @@ Figure~\ref{fig:SiblingReference} shows the simplest solution in which both a sh
 
 Equivalent usages in the OCL specification omit the composed reference avoiding the redundancy but the result is that complex types just magically exist without a clear specification as to how they are persisted.
 
-Since the meta-model representation is difficult, it is not surprising that the difficulty appears in an Xtext grammar as well. If a type is referenced in the grammar as \verb+type=[TypeCS|Identifier]+, a complex type cannot be accommodated. Therefore we could pursue the owned and not owned approach with \verb+(type=[TypeCS|Identifier] | ownedType=ComplexTypeCS)+, but this leaves the generated parser to resolve partial ambiguities between the two syntaxes. In practice with ANTLR technology, this means that one approach is attempted and if it fails backtracking is invoked and another alternative is attempted. At best this just costs parsing time through erroneous attempts. More of a concern arises when the first attempt succeeds because it is a prefix of the alternative; the parser then proceeds using the `wrong' parse and perhaps fails during a subsequent alternative. It is not obvious that a parser may not have a non-linear growth of backtracking alternatives to examine. With Xtext largely hiding the underlying ANTLR capabilities, it is not clear how an Xtext grammar should be written to obtain predictable and efficient results. Experience suggests that it is necessary to put more complex alternatives before simpler choices, since the complex can fail and back-track to the simple, but the converse of a false success of a simple choice does not backtrack.
+Since the meta-model representation is difficult, it is not surprising that the difficulty appears in an Xtext grammar as well. A  type reference such as \verb+type=[TypeCS|Identifier]+ in a grammar cannot accommodate a complex type. We could pursue the owned and not owned approach with \verb+(type=[TypeCS|Identifier] | ownedType=ComplexTypeCS)+, but this leaves the generated parser to resolve partial ambiguities between the two syntaxes. In practice with ANTLR technology, this means that one approach is attempted and if it fails backtracking is invoked and another alternative is attempted. At best this just costs parsing time through erroneous attempts. More of a concern arises when the first attempt succeeds because it is a prefix of the alternative; the parser then proceeds using the `wrong' parse and perhaps fails during a subsequent alternative. It is not obvious that a parser may not have a non-linear growth of backtracking alternatives to examine. With Xtext largely hiding the underlying ANTLR capabilities, it is not clear how an Xtext grammar should be written to obtain predictable and efficient results. Experience suggests that it is necessary to put more complex alternatives before simpler choices, since the complex can fail and back-track to the simple, but the converse of a false success of a simple choice does not backtrack.
 
 The UML-style double feature approach did not appear to work well and the OCL-style magical ownership has no corresponding Xtext magic. The solution was to omit the shared reference and so treat all references as complex using \verb+ownedType=TypeRefCS+ with TypeRefCS the abstract type of a family of type reference expressions.
 
@@ -357,7 +337,7 @@ TypeRefCS : SimpleTypeRefCS | ComplexTypeRefCS; // etc
 SimpleTypeRefCS: type=[Type|Identifier];
 
 ComplexTypeRefCS: type=[Type|Identifier]
-           '<' ownedParams+=TypeRefCS (',' ownedParams+=TypeRefCS)* '>';
+       '<' ownedParams+=TypeRefCS (',' ownedParams+=TypeRefCS)* '>';
 \end{verbatim}}
 
 This approach endeavors to use an appropriate meta-model representation without redundant features. This is probably a mistake, since as shown in the simplified example above, the alternative types often share a common prefix. The parser is forced to distinguish between rather similar alternatives which may contribute to some of the adverse parsing speeds reported later. Since there is very little prospect of the CSG structure for diverse references doubling up as the ASG, it is inevitable that a slight restructuring transformation is needed between CSG and ASG. The minor aesthetic benefits of compact CSG objects is probably misguided; fewer alternatives would simplify the parser, so in the above example, \verb+SimpleTypeRefCS+ could be merged into \verb+ComplexTypeRefCS+ by making the \verb+'<' ... '>'+\footnote{Although OCL 2.2 does not support UML's templated types, OCL aspires to UML alignment. This  example is part of work to achieve alignment.} terms optional in \verb+ComplexTypeRefCS+. An LALR parser would probably mandate this change in order to eliminate a shift-reduce conflict. The Xtext tooling needs stronger diagnostic capability to advise on unwise grammar formulations. 
@@ -376,7 +356,7 @@ Comparison of the first parse time is not particularly helpful, since the measur
 
 Comparison of the re-parse times is much fairer, since the re-parses use cached meta-models and grammars. During each re-parse, LPG and Xtext parsers read just the Complete OCL document. The eleven-fold speed degradation for Xtext is disappointing but not totally surprising. Both LPG and Xtext offer opportunities for improvement, but with Xtext 1.0.0 being a very new product there are hopefully a few simple improvements that can be made before Xtext considers switching to an LALR technology.
 
-Disclaimer: The above measurements were made using the Eclipse Helios release of MDT/OCL (3.0.0) and Xtext (1.0.0) projects. No thorough analysis of the performance differences has been made, so the above measurements do not distinguish whether it is the Xtext parser or the MDT/OCL configuration of the Xtext parser that is slow. Informal observations suggest that there are many opportunities for caches to avoid repeated work in both projects.
+Disclaimer: The above measurements were made using the Eclipse Helios release of Eclipse OCL (3.0.0) and Xtext (1.0.0) projects. No thorough analysis of the performance differences has been made, so the above measurements do not distinguish whether it is the Xtext parser or the MDT/OCL configuration of the Xtext parser that is slow. Informal observations suggest that there are many opportunities for caches to avoid repeated work in both projects.
 
 The test code for these speed tests is available as an attachment to \url{https://bugs.eclipse.org/320703}.
 
@@ -417,7 +397,7 @@ The OCL specification re-uses OCL to define constraints
 
 Anyone who studies these OCL constraints soon realizes that the constraints have never been subjected to a tool that provides syntactic, let alone semantic, checking. With so many basic lexical errors, what prospect is there that the constraints actually express the required functionality?
 
-The MDT/OCL realization of these constraints is distributed throughout the LPG parser, analyzer and validator as hand-coded Java making it difficult to determine the correspondence with the specification, even if the specification was accurate.
+The Eclipse OCL realization of these constraints is distributed throughout the LPG parser, analyzer and validator as hand-coded Java making it difficult to determine the correspondence with the specification, even if the specification was accurate.
 
 The Xtext re-engineering has hand-coded scoping classes that bear a superficial resemblance to the `Inherited Attributes' specifications and, as yet, no realization of the well-formedness rules at all.
 
@@ -444,19 +424,15 @@ The definitions of infixOperator could be provided as part of a customizable OCL
 
 \subsection{LPG Compatibility}
 
-Unless Xtext is able to come close to LPG speed, the Eclipse MDT/OCL project has no alternative but to support two parsers; an LPG parser for speed and an Xtext parser for use in interactive environments such as editors. The Eclipse MDT/OCL project also has a compatibility obligation to its consumers, so the LPG interface cannot easily be discontinued.
+Unless Xtext is able to come close to LPG speed, the Eclipse OCL project has no alternative but to support two parsers; an LPG parser for speed and an Xtext parser for use in interactive environments such as editors. The Eclipse OCL project also has a compatibility obligation to its consumers, so the LPG interface cannot easily be discontinued.
 
 Maintenance of two independent parsers and analyzers is not an attractive prospect. Xtext uses Xtext to define its own editor and grammar, so it should be possible to perform a Model to Model and then a Model to Text transformation on the Xtext grammar for OCL and thereby auto-generate an LPG grammar with auto-generated action code to maintain a very similar CSG model.
 
 This should give an Xtext-defined LPG grammar avoiding the adverse performance of the ANTLR tooling and preserving the general principles of the existing parser and analyzer interface. Re-expression of the Xtext grammar in LALR form may also provide the missing diagnostics of unwise parser constructs.
 
-\section{Acknowledgments}
-
-Many thanks to Sebastian Zarnekow, Adolfo S\'anchez-Barbudo Herrera and the anonymous reviewers for helpful comments on earlier versions of this paper.
-
 \section{Conclusions}
 
-Re-engineering the MDT/OCL support to use Xtext 1.0.0 rather than LPG 2.0.17 has demonstrated many of the powerful benefits that Xtext offers. Subjectively Xtext is much better for common functionality and incomparably better because of the  richer tooling and extra auto-generated functionality.
+Re-engineering the Eclipse OCL support to use Xtext 1.0.0 rather than LPG 2.0.17 has demonstrated many of the powerful benefits that Xtext offers. Subjectively Xtext is much better for common functionality and incomparably better because of the  richer tooling and extra auto-generated functionality.
 
 Objectively, the Xtext version of the OCL grammar is at least 5 times smaller, but the generated parser is 10 times larger and 11 times slower.
 
@@ -468,33 +444,16 @@ Xtext provides good diagnosis of syntactical and simple semantic errors in an Xt
 
 With the aid of Xtext and other modern tooling it may be practical to have OCL editor and parser tooling reusing the exposition of grammars and constraints in the OCL specification.
 
+%\subsection{Manual Assembly of Bibliographies}\label{bibman}
 
-\begin{thebibliography}{4}
+%\noindent\textbf{To Do}
 
-\bibitem{ANTLR} ANTLR, ANother Tool for Language Recognition,  \url{http://www.antlr.org}
+\begin{acknowledge}
+Many thanks to Sebastian Zarnekow, Adolfo S\'anchez-Barbudo Herrera and the anonymous reviewers for helpful comments on earlier versions of this paper.
+\end{acknowledge}
 
-\bibitem{dragon} Aho, A., Sethi, R., Ullman, J.: Compilers: Principles, Techniques and Tools. Addison-Wesley(1988) 
-
-\bibitem{Helios} Eclipse Helios release,  \url{http://www.eclipse.org/downloads/}
-
-\bibitem{IMP} Eclipse IDE Meta-Tooling Platform Project,  \url{http://www.eclipse.org/projects/project_summary.php?projectid=technology.imp}
-
-\bibitem{LPG} Sourceforge LALR Parser Project,  \url{http://sourceforge.net/projects/lpg}
-
-\bibitem{MDT/OCL} Eclipse MDT/OCL Project,  \url{http://www.eclipse.org/projects/project_summary.php?projectid=modeling.mdt.ocl}
-
-\bibitem{MOFM2T} MOF Model to Text Transformation Language. v1.0, OMG Document Number: formal/2008-01-16, Object Management Group (2010),  \url{http://www.omg.org/spec/MOFM2T/1.0}
-
-\bibitem{OCL} Object Constraint Language. Version 2.2, OMG Document Number: formal/2010-02-01, Object Management Group (2010),  \url{http://www.omg.org/spec/OCL/2.2}
-
-\bibitem{OCL2.3} First Ballot Resolutions for Object Constraint Language. Version 2.3,  \url{http://www.omg.org/archives/ocl2-rtf/msg00331.html}
-
-\bibitem{QVT} Query/View/Transformation Specification. Version 1.1, OMG Document Number: ptc/09-12-05, Object Management Group (2009),  \url{http://www.omg.org/spec/QVT/1.1/Beta2/PDF}
-
-\bibitem{TMF/Xtext} Eclipse TMF/Xtext Project,  \url{http://www.eclipse.org/Xtext}
-
-\bibitem{UML} Unified Modeling Language, Superstructure. Version 2.3, OMG Document Number: formal/2010-05-05, Object Management Group (2010),  \url{http://www.omg.org/spec/UML/2.3}
-
-\end{thebibliography}
+\nocite{*}
+\bibliographystyle{eceasst}
+\bibliography{oclxtext}
 
 \end{document}
