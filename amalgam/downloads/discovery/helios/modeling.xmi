@@ -102,7 +102,7 @@
     </components>
     <components name="EGF" provider="Eclipse.org" description="The purpose of EGF is to provide an extensible generation framework in order to support complex, large-scale and customizable generations." license="EPL" groups="//@filters.0" image32="images/egf.png">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/egf/updates/milestones/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/egf/updates/helios/official</sitesURLS>
       <overview summary="In order to improve the software development industrialization, a major step consists in mass-producing software. This mass-production must be customizable, and must be able to support complex, large-scale and heterogeneous generations. Given the today's available Eclipse tools, the issue here is not to provide either a new transformation engine (model-to-model, model-to-text, text-to-model, text-to-text) or DSL (Domain-Specific Language) editor but to realize their integration for flexible software mass-production." screenshot="images/egf-screenshot-320x240.png" url="http://wiki.eclipse.org/EGF"/>
       <id>org.eclipse.emf.egf</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
