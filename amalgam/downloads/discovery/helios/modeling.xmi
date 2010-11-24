@@ -48,17 +48,17 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <id>org.eclipse.gmf.sdk</id>
     </components>
-    <components name="Xtext" provider="Eclipse.org" description="Xtext is a framework for development of programming languages and domain&#xA;specific languages (DSLs). " license="EPL" groups="//@filters.0" image32="images/xtext.png">
-      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
-      <overview summary="Xtext is a framework for development of programming languages and domain&#xA;specific languages (DSLs). Just describe your very own DSL using Xtext's simple&#xA;EBNF grammar language and the generator will create a parser, an AST-meta model&#xA;(implemented in EMF) as well as a full-featured Eclipse text editor from that.&#xA;&#xA;The Framework integrates with frameworks from Eclipse Modeling such as EMF, GMF&#xA;and M2T as well as other Eclipse based technologies. Development with Xtext is&#xA;optimized for short turn-arounds, so that adding new features to an existing&#xA;DSL is a matter of minutes. Still sophisticated programming languages can be&#xA;implemented." screenshot="images/xtext-screenshot-320x240.png"/>
-      <id>org.eclipse.xtext.sdk</id>
-    </components>
     <components name="Graphiti" provider="Eclipse.org" description="Graphiti is a graphical API that enables the fast and easy creation of graphical tools for any kind of domain models." license="EPL" groups="//@filters.0" image32="images/graphiti.png">
       <sitesURLS>http://download.eclipse.org/graphiti/updates/0.7.0/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The goal of Graphiti is to support the fast and easy creation of graphical tools, which can display and edit underlying domain models using a tool-defined graphical notation. Graphiti supports the developer in getting to a first version of an editor with very low effort by:&#xA;- Hiding platform specific technology (e.g. GEF / Draw2D on Eclipse)&#xA;- Providing rich default implementations inside the framework&#xA;- Providing a default look and feel that was designed in close co-operation with usability specialists" screenshot="images/graphiti-screenshot-320x240.png" url="http://www.eclipse.org/graphiti/"/>
       <id>org.eclipse.graphiti.sdk.feature</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
+    </components>
+    <components name="Xtext" provider="Eclipse.org" description="Xtext is a framework for development of programming languages and domain&#xA;specific languages (DSLs). " license="EPL" groups="//@filters.0" image32="images/xtext.png">
+      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
+      <overview summary="Xtext is a framework for development of programming languages and domain&#xA;specific languages (DSLs). Just describe your very own DSL using Xtext's simple&#xA;EBNF grammar language and the generator will create a parser, an AST-meta model&#xA;(implemented in EMF) as well as a full-featured Eclipse text editor from that.&#xA;&#xA;The Framework integrates with frameworks from Eclipse Modeling such as EMF, GMF&#xA;and M2T as well as other Eclipse based technologies. Development with Xtext is&#xA;optimized for short turn-arounds, so that adding new features to an existing&#xA;DSL is a matter of minutes. Still sophisticated programming languages can be&#xA;implemented." screenshot="images/xtext-screenshot-320x240.png"/>
+      <id>org.eclipse.xtext.sdk</id>
     </components>
   </categories>
   <categories name="Modeler" description="Modeling environment tools." relevance="3">
