@@ -100,6 +100,13 @@
     <components name="Model Workflow Engine" provider="Eclipse.org" license="EPL" groups="//@filters.0" incubation="true" visible="false">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
     </components>
+    <components name="EGF" provider="Eclipse.org" description="The purpose of EGF is to provide an extensible generation framework in order to support complex, large-scale and customizable generations." license="EPL" groups="//@filters.0" image32="images/egf.png">
+      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/egf/updates/milestones/</sitesURLS>
+      <overview summary="In order to improve the software development industrialization, a major step consists in mass-producing software. This mass-production must be customizable, and must be able to support complex, large-scale and heterogeneous generations. Given the today's available Eclipse tools, the issue here is not to provide either a new transformation engine (model-to-model, model-to-text, text-to-model, text-to-text) or DSL (Domain-Specific Language) editor but to realize their integration for flexible software mass-production." screenshot="images/egf-screenshot-320x240.png" url="http://wiki.eclipse.org/EGF"/>
+      <id>org.eclipse.emf.egf</id>
+      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
+    </components>
     <components name="Teneo" provider="Eclipse.org" description="Teneo is a Model-Relational mapping and runtime database persistence solution for the Eclipse Modeling Framework (EMF) using Hibernate and EclipseLink." license="EPL">
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The EMF &#x2013; Hibernate integration supports all EMF features and standard EclipseLink and Hibernate features. EMF objects can be persisted in most major relational databases and retrieved using an EMF resource approach or HQL/JPA queries. A distinctive feature of Teneo is that you can override/extend the Model-Relational mapping using JPA annotations in the model." screenshot="images/teneo-screenshot-320x240.png" url="http://wiki.eclipse.org/Teneo"/>
@@ -110,13 +117,6 @@
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The Examples for the Object Constraint Language provide&#xA;&#xA;Xtext Editors for&#xA;- CompleteOCL documents to enhance Ecore or UML models&#xA;- OCL in Ecore documents defining OCL and Ecore at once&#xA;- Individual Expressions for use by other tools&#xA;- the OCL Standard Library" screenshot="images/ocl-screenshot-320x240.png" url="http://www.eclipse.org/projects/project_summary.php?projectid=modeling.mdt.ocl"/>
       <id>org.eclipse.ocl.examples</id>
-    </components>
-    <components name="EGF" provider="Eclipse.org" description="The purpose of EGF is to provide an extensible generation framework in order to support complex, large-scale and customizable generations." license="EPL" groups="//@filters.0" image32="images/egf.png">
-      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/egf/updates/milestones/</sitesURLS>
-      <overview summary="In order to improve the software development industrialization, a major step consists in mass-producing software. This mass-production must be customizable, and must be able to support complex, large-scale and heterogeneous generations. Given the today's available Eclipse tools, the issue here is not to provide either a new transformation engine (model-to-model, model-to-text, text-to-model, text-to-text) or DSL (Domain-Specific Language) editor but to realize their integration for flexible software mass-production." screenshot="images/egf-screenshot-320x240.png" url="http://wiki.eclipse.org/EGF"/>
-      <id>org.eclipse.emf.egf</id>
-      <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
   </categories>
   <filters name="Incubation"/>
