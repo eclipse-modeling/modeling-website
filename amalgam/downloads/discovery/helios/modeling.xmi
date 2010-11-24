@@ -55,6 +55,7 @@
     </components>
     <components name="Graphiti" provider="Eclipse.org" description="Graphiti is a graphical API that enables the fast and easy creation of graphical tools for any kind of domain models." license="EPL" groups="//@filters.0" image32="images/graphiti.png">
       <sitesURLS>http://download.eclipse.org/graphiti/updates/0.7.0/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="The goal of Graphiti is to support the fast and easy creation of graphical tools, which can display and edit underlying domain models using a tool-defined graphical notation. Graphiti supports the developer in getting to a first version of an editor with very low effort by:&#xA;- Hiding platform specific technology (e.g. GEF / Draw2D on Eclipse)&#xA;- Providing rich default implementations inside the framework&#xA;- Providing a default look and feel that was designed in close co-operation with usability specialists" screenshot="images/graphiti-screenshot-320x240.png" url="http://www.eclipse.org/graphiti/"/>
       <id>org.eclipse.graphiti.sdk.feature</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
