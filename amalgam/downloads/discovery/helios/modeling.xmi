@@ -104,7 +104,7 @@
       <sitesURLS>http://download.eclipse.org/egf/updates/helios/official/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary="In order to improve the software development industrialization, a major step consists in mass-producing software. This mass-production must be customizable, and must be able to support complex, large-scale and heterogeneous generations. Given the today's available Eclipse tools, the issue here is not to provide either a new transformation engine (model-to-model, model-to-text, text-to-model, text-to-text) or DSL (Domain-Specific Language) editor but to realize their integration for flexible software mass-production." screenshot="images/egf-screenshot-320x240.png" url="http://wiki.eclipse.org/EGF"/>
-      <id>org.eclipse.egf</id>
+      <id>org.eclipse.egf.sdk</id>
       <messages title="Early Access" message="Please note that this component is not a participant of the Helios simultaneous release and that it is provided here as an early access."/>
     </components>
     <components name="Teneo" provider="Eclipse.org" description="Teneo is a Model-Relational mapping and runtime database persistence solution for the Eclipse Modeling Framework (EMF) using Hibernate and EclipseLink." license="EPL">
