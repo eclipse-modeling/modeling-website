@@ -1,6 +1,10 @@
 <?php
 
+echo '5';
+
 require_once("downloads-scripts.php");
+
+echo '6';
 
 if (is_array($projects))
 {
