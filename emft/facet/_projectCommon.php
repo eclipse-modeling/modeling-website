@@ -11,6 +11,23 @@
  *    
  *******************************************************************************/
 
+	// project root
+	$PR = "modeling/emft/facet";
+	$PR_www = "modeling/emft/facet";
+	$projectName = "EMFFacet";
+	$projects = array("EMFFacet" => "emffacet");
+	//$projects = array();
+	//$defaultProj = "modisco";
+
+	$extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
+	$nodownloads = array(); //components with only information, no downloads, or no builds available yet, "projectkey"
+	$nonewsgroup = array(); //components without newsgroup
+	$nomailinglist = array(); //components without mailinglist
+	$incubating = true; // components which are incubating
+	$nomenclature = "Project"; //are we dealing with "components" or "projects"?
+
+
+
 	# Set the theme for your project's web pages.
 	# See http://eclipse.org/phoenix/
 	$theme = "Nova";
