@@ -1,6 +1,4 @@
 <?php
-echo '...';
-error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 $buildServerCommonFiles = array ( 
 	"/opt/public/cbi/modeling/includes/buildServer-common.php",
 	$_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-common.php",
@@ -70,6 +68,8 @@ require_once("downloads-common.php");
 
 $html = ob_get_contents();
 ob_end_clean();
+
+echo '<!--' . $html . '-->';
 
 /* Note: Google Analytics moved to _projectCommon.php so it's on EVERY page */
 
