@@ -19,7 +19,7 @@
 	$pageAuthor		= "Grégoire Dupé";
 	$pageTitle 		= "EMF Facet";
 	
-	function getMoDiscoNews(){
+	function getEMFFacetNews(){
 		$xsl = new Xsltprocessor();
 		$xsldoc = new DomDocument();
 		$xsldoc->load("news/news.xsl");
@@ -33,7 +33,7 @@
 	// 	# Paste your HTML content between the EOHTML markers!
 	$html = file_get_contents('pages/_index.html');
 	$description = file_get_contents('pages/description.html');
-	$news = getMoDiscoNews();
+	$news = getEMFFacetNews();
 	$html = str_replace("%%HEADLINES%%", $news, $html);
 	$html = str_replace("%%DESCRIPTION%%", $description, $html);
 	# Generate the web page
