@@ -2,6 +2,8 @@
 
 require_once("downloads-scripts.php");
 
+echo '1';
+
 if (is_array($projects))
 {
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
@@ -11,6 +13,8 @@ else
 {
 	$proj = "";
 }
+
+echo '2';
 
 if ((!$proj || $proj == "/") && isset($defaultProj)) { $proj = $defaultProj; }
 $projct = preg_replace("#^/#", "", $proj);
@@ -29,6 +33,8 @@ if (isset($projct) && isset($hasmoved) && is_array($hasmoved) && array_key_exist
 	header("Location: http://www.eclipse.org/modeling/" . $hasmoved[$projct] . "/downloads/?" . $_SERVER["QUERY_STRING"]);
 	exit;
 }
+
+echo '3';
 
 $numzips = isset($extraZips) ? 0 - sizeof($extraZips) : 0; // if extra zips (new zips added later), reduce the "required" count when testing a build
 if (isset($dls[$proj]) && is_array($dls[$proj]))
@@ -52,6 +58,8 @@ foreach ($files as $file)
 		break;
 	}
 }
+
+echo '4';
 
 $hadLoadDirSimpleError = 1; //have we echoed the loadDirSimple() error msg yet? if 1, omit error; if 0, echo at most 1 error
 $sortBy = (isset($_GET["sortBy"]) && preg_match("/^(date)$/", $_GET["sortBy"], $regs) ? $regs[1] : "");
@@ -79,6 +87,8 @@ else // all others
 	$downloadScript = getdownloadScript();
 	$downloadPre = "";
 }
+
+echo '5';
 
 /* these are possible deps, the actual deps must be a subset of these and are read from build.cfg */
 /* See also:
@@ -130,7 +140,7 @@ $deps = array(
 	"subversive" => "<a href=\"http://www.eclipse.org/subversive/\">Subversive</a>",
 );
 
-echo '1';
+echo '6';
 
 //print "<div id=\"midcolumn\">\n";
 //print "<h1>Downloads</h1>\n";
@@ -150,8 +160,6 @@ print "<tr><td>0.8</td><td>3.6 (Helios)</td><td>5.0</td></tr>";
 print "<tr><td>0.7</td><td>3.5 (Galileo)</td><td>5.0</td></tr>";
 print "</table>";
 */
-
-echo '2';
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -359,6 +367,5 @@ EOHTML;
 
 print "</div>\n";
 
-echo '3';
 
 ?>
