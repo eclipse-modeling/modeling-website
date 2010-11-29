@@ -1,10 +1,6 @@
 <?php
 
-echo '5';
-
 require_once("downloads-scripts.php");
-
-echo '6';
 
 if (is_array($projects))
 {
@@ -134,6 +130,8 @@ $deps = array(
 	"subversive" => "<a href=\"http://www.eclipse.org/subversive/\">Subversive</a>",
 );
 
+echo '1';
+
 //print "<div id=\"midcolumn\">\n";
 //print "<h1>Downloads</h1>\n";
 // EMFFacet specific:
@@ -152,6 +150,8 @@ print "<tr><td>0.8</td><td>3.6 (Helios)</td><td>5.0</td></tr>";
 print "<tr><td>0.7</td><td>3.5 (Galileo)</td><td>5.0</td></tr>";
 print "</table>";
 */
+
+echo '2';
 
 if (is_array($projects) && sizeof($projects) > 1)
 {
@@ -359,5 +359,6 @@ EOHTML;
 
 print "</div>\n";
 
+echo '3';
 
 ?>

@@ -3,7 +3,6 @@ $buildServerCommonFiles = array (
 	"/opt/public/cbi/modeling/includes/buildServer-common.php",
 	$_SERVER['DOCUMENT_ROOT'] . "/modeling/includes/buildServer-common.php",
 );
-echo '1';
 $foundBuildServerCommonFile = false;
 foreach ($buildServerCommonFiles as $bs)
 {
@@ -12,7 +11,6 @@ foreach ($buildServerCommonFiles as $bs)
 		require_once($bs); $foundBuildServerCommonFile = true; break;
 	}
 }
-echo '2';
 if (!$foundBuildServerCommonFile)
 {
 	print "Warning: could not find modeling/includes/buildServer-common.php in _common.php";
@@ -28,8 +26,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.p
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 
 $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
-
-echo '3';
 
 ob_start();
 
@@ -72,8 +68,6 @@ require_once("downloads-common.php");
 
 $html = ob_get_contents();
 ob_end_clean();
-
-echo '4';
 
 /* Note: Google Analytics moved to _projectCommon.php so it's on EVERY page */
 
