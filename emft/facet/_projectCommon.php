@@ -26,6 +26,15 @@
 	$incubating = true; // components which are incubating
 	$nomenclature = "Project"; //are we dealing with "components" or "projects"?
 
+	$buildtypes = array(
+		"R" => "Release",
+		"S" => "Stable",
+		"I" => "Integration",
+		"M" => "Maintenance",
+		"N" => "Nightly"
+	);
+	
+	include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
 
 
 	# Set the theme for your project's web pages.
