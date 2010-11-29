@@ -8,14 +8,14 @@ $projectInfo = new ProjectInfo("modeling.gmp");
 $projectInfo->generate_common_nav( $Nav );
 include ($App->getProjectCommon()); 
 # Begin: page-specific settings.  Change these. 
-$pageTitle 		= "Eclipse Graphical Modeling Project (GMP) Releases";
+$pageTitle 		= "Eclipse Graphical Modeling Project (GMP) Releases of the Graphical Modeling Framework (GMF).";
 $pageKeywords	= "developer,resources,modeling,graphical";
 $pageAuthor		= "Anthony Hunter";
 	
 # Paste your HTML content between the EOHTML markers!
 $html = <<<EOHTML
 
-<!-- $Id: releases.php,v 1.7 2010/07/22 21:51:54 ahunter Exp $ -->	
+<!-- $Id: releases.php,v 1.8 2010/11/29 17:24:38 ahunter Exp $ -->	
 <style type="text/css">
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
    p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-style : normal; }
@@ -245,29 +245,36 @@ $html = <<<EOHTML
 </tr>
 
 <tr class="helios">
-<td rowspan="2">Helios</td>
+<td rowspan="3">Helios</td>
 <td>06/23/10</td>
 <td>2.3.0</td>
 <td>1.4.0</td>
 <td>1.4.0</td>
 <td>3.6.0</td>
 <td>3.6.0</td>
-<td rowspan="2">2.6.0</td>
-<td rowspan="2">1.4.0</td>
-<td rowspan="2">1.4.0</td>
-<td rowspan="2">1.4.0</td>
-<td rowspan="2">3.0.0</td>
-<td rowspan="2">3.1.0</td>
-<td rowspan="2">3.0.0</td>
+<td rowspan="3">2.6.0</td>
+<td rowspan="3">1.4.0</td>
+<td rowspan="3">1.4.0</td>
+<td rowspan="3">1.4.0</td>
+<td rowspan="3">3.0.0</td>
+<td rowspan="3">3.1.0</td>
+<td rowspan="3">3.0.0</td>
 </tr>
 
 <tr class="helios">
 <td>09/24/10</td>
-<td>2.3.1</td>
+<td rowspan="2">2.3.1</td>
 <td>1.4.1</td>
-<td>1.4.1</td>
+<td rowspan="2">1.4.1</td>
 <td>3.6.1</td>
 <td>3.6.1</td>
+</tr>
+
+<tr class="helios">
+<td>2/25/2011</td>
+<td>1.4.2</td>
+<td>3.6.2</td>
+<td>3.6.2</td>
 </tr>
 
 <tr class="indigo">
