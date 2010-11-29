@@ -2,15 +2,19 @@
 
 require_once("downloads-scripts.php");
 
-echo '1';
+echo '1 ';
 
 if (is_array($projects))
 {
+	echo '1.1 ';
 	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
+	echo '1.1.1 ';
 	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :	""); # default
+	echo '1.1.2 ';
 }
 else
 {
+	echo '1.2 ';
 	$proj = "";
 }
 
