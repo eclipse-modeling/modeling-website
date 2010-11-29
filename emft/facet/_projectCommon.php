@@ -12,7 +12,7 @@
  *******************************************************************************/
 
 	// project root
-	$PR = "modeling/emft/facet";
+	$PR = "facet";
 	$PR_www = "modeling/emft/facet";
 	$projectName = "EMFFacet";
 	$projects = array("EMFFacet" => "emffacet");
