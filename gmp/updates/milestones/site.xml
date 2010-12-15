@@ -87,6 +87,28 @@ GMP GMF-RUNTIME SDK 1.4.1RC4 S201009141529: contains runtime, source, and docume
 		<category name="GMP GMF-RUNTIME SDK 1.4.1RC4 S201009141529"/>
 	</feature>
 
+	<!-- GMF-NOTATION 1.5.0M4 S201012151120 -->
+	<category-def label="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120" name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120">
+		<description>
+GMP GMF-NOTATION SDK 1.5.0M4 S201012151120: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.gmf.tests.runtime.notation.source" version="1.4.0.v20100929-1723" url="features/org.eclipse.gmf.tests.runtime.notation.source_1.4.0.v20100929-1723.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation" version="1.4.1.v20100716-2159-37708s73533F5B1689I" url="features/org.eclipse.gmf.runtime.notation_1.4.1.v20100716-2159-37708s73533F5B1689I.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120"/>
+	</feature>
+	<feature id="org.eclipse.gmf.tests.runtime.notation" version="1.4.0.v20100929-1723-797CA78s73533L7L15H79" url="features/org.eclipse.gmf.tests.runtime.notation_1.4.0.v20100929-1723-797CA78s73533L7L15H79.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.sdk" version="1.4.1.v20100716-2159-47B28xGC7DxQAM6CMKY3CIJL9t84" url="features/org.eclipse.gmf.runtime.notation.sdk_1.4.1.v20100716-2159-47B28xGC7DxQAM6CMKY3CIJL9t84.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120"/>
+	</feature>
+	<feature id="org.eclipse.gmf.runtime.notation.source" version="1.4.1.v20100716-2159-37708s73533F5B1689I" url="features/org.eclipse.gmf.runtime.notation.source_1.4.1.v20100716-2159-37708s73533F5B1689I.jar" patch="false">
+		<category name="GMP GMF-NOTATION SDK 1.5.0M4 S201012151120"/>
+	</feature>
+
 	<!-- GMF-NOTATION 1.4.1RC4 S201009141407 -->
 	<category-def label="GMP GMF-NOTATION SDK 1.4.1RC4 S201009141407" name="GMP GMF-NOTATION SDK 1.4.1RC4 S201009141407">
 		<description>
