@@ -63,7 +63,7 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <p>
 <h4>Main update site: (Recommended)</h4>
 <ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios</a> <br><font color='#808080'>(Eclipse Helios Update)</font></li>
 </ul>
 <p>
 <h4>Development update sites (version 0.7.1):</h4>
