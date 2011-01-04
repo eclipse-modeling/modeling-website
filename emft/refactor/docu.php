@@ -33,9 +33,13 @@
 <div id="maincontent">
 
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>
-		
+		<h1>$pageTitle</h1>		
 		<p>
+		<h2>How to's</h2>
+		<ul class="midlist">
+			<li>How to apply EMF model refactorings</li>
+			<li>How to generate new EMF model refactorings</li>
+		</ul>
 		<i>More information here soon...</i>
 		</p>
 		
