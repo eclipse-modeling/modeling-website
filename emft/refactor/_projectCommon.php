@@ -13,6 +13,7 @@
 	$Nav->addNavSeparator("Project Home", 	"index.php");
 	$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
 	$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
+	$Nav->addCustomNav("Documentation", 		"docu.php", 		"_self", 2);
 	$Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
 
 
