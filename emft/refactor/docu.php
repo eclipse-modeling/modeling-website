@@ -37,9 +37,12 @@
 		<p>
 		<h2>How to's</h2>
 		<ul class="midlist">
-			<li>How to apply EMF model refactorings</li>
-			<li>How to generate new EMF model refactorings</li>
+			<li><a href="#apply">How to apply EMF model refactorings</a></li>
+			<li><a href="#generate">How to generate new EMF model refactorings</a></li>
 		</ul>
+		<h2><a name="apply">How to apply EMF model refactorings</a></h2>
+		<i>More information here soon...</i>
+		<h2><a name="generate">How to generate new EMF model refactorings</a></h2>
 		<i>More information here soon...</i>
 		</p>
 		
