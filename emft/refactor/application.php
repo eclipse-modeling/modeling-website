@@ -34,7 +34,7 @@
 			<img src="fig/appl_06.PNG" width="491" height="505" alt="Fig. 6">	
 			<p></p>
 			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
-			<img src="fig/appl_07.PNG" width="503" height="139" alt="Fig. 7">
+			<img src="fig/appl_07.PNG" width="503" height="138" alt="Fig. 7">
 			<p></p>
 	
 			<p>
