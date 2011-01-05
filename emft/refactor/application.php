@@ -21,7 +21,9 @@
 			<p>Before applying the refactoring let us first present some erroneous situations. The following figure shows that attribute <i>name</i> of class <i>ModelRefactoring</i> represents the ID of this class. So, the application of refactoring <b>Move EAttribute</b> on attribute <i>name</i> is not possible.</p>
 			<img src="fig/appl_03.PNG" width="684" height="474" alt="Fig. 3">
 			<p></p>
-			
+			<p>Each refactoring can be triggered from within the context menu of a specific contextual model element. The next figure shows the context menu of attribute <i>name</i>.</p>
+			<img src="fig/appl_04.PNG" width="495" height="552" alt="Fig. 4">
+			<p></p>
 			
 			<p>
 			<i>To be continued .....</i>
