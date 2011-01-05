@@ -17,6 +17,12 @@
 			<p>During software design it became questionable whether attribute <i>label</i> of class <i>ModelRefactoring</i> could be better placed in class <i>Entry</i>. So, model refactoring <b>Move EAttribute</b> is the next task to be performed. Since <b>EMF Refactor</b> can be used on arbitrary EMF based models the application of a specific refactoring is mainly triggered from within the EMF instance editor. The next figure shows the example model from above using this tree-based editor.</p>
 			<img src="fig/appl_02.PNG" width="407" height="477" alt="Fig. 2">
 			<p></p>
+			<p>EMF model refactoring <b>Move EAttribute</b> can be specified in the following way: First, it has to be checked whether the contextual <i>EAttribute</i> is not marked as ID of the containing class, and whether this class has at least one referenced class. If these (initial) checks pass the user has to put in the name of the class the attribute has to be moved to. Then, it has to be checked whether the containing class has a referenced class with the specified name, and whether this class does not already owns an attribute with the same name as the contextual attribute. If these (final) checks pass the contextual attribute can finally be moved to the specified class.
+			<p>Before applying the refactoring let us first present some erroneous situations. The following figure shows that attribute <i>name</i> of class <i>ModelRefactoring</i> represents the ID of this class. So, the application of refactoring <b>Move EAttribute</b> on attribute <i>name</i> is not possible.</p>
+			<img src="fig/appl_03.PNG" width="684" height="474" alt="Fig. 3">
+			<p></p>
+			
+			
 			<p>
 			<i>To be continued .....</i>
 			</p>		
