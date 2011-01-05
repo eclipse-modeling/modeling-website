@@ -36,6 +36,10 @@
 			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
 			<img src="fig/appl_07.PNG" width="503" height="138" alt="Fig. 7">
 			<p></p>
+			<p>Now, let's try to apply refactoring <b>Move EAttribute</b> on attribute <i>name</i> of class <i>MetaModel</i>. The initial checks pass, i.e. the attribute is not the ID of its containing class and this class is referenced to class <i>MetaModelType</i> (see following figure).</p>
+			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
+			<p></p>
+	
 	
 			<p>
 			<i>To be continued .....</i>
