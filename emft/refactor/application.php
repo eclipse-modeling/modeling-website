@@ -24,7 +24,10 @@
 			<p>Each refactoring can be triggered from within the context menu of a specific contextual model element. The next figure shows the context menu of attribute <i>name</i>.</p>
 			<img src="fig/appl_04.PNG" width="495" height="552" alt="Fig. 4">
 			<p></p>
-			
+			<p>As expected, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
+			<img src="fig/appl_05.PNG" width="503" height="140" alt="Fig. 5">
+			<p></p>
+	
 			<p>
 			<i>To be continued .....</i>
 			</p>		
