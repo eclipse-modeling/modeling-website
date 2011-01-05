@@ -12,7 +12,7 @@
 		<h1>$pageTitle</h1>	
 			<p>This manual presents the application of a EMF model refactoring using <b>EMF Refactor</b>.</p>
 			<p>Please take a look to the following Ecore diagram presenting a first model concerning EMF model refactorings in an early stage of the EMF Refactor development process. A <i>ModelRefactoring</i> has a name and conforms to a <i>MetaModel</i> that is specified by name, namespace prefix, and namespace URI. Furthermore, it has a label that should be shown as an <i>Entry</i> in the <i>ContextMenu</i> of an arbitrary <i>ModelElement</i>. A <i>ModelElement</i> belongs to a <i>Model</i> that is specified by a name and stored in a file with a specific name. Furthermore, a <i>Model</i> conforms to a <i>MetaModel</i> and each <i>ModelElement</i> is typed over a specific <i>MetaModelType</i> belonging to the corresponding <i>MetaModel</i>. Besides the afore mentioned attributes, each <i>ModelRefactoring</i> is related to a <i>MetaModelType</i> representing the type of the contextual element the refactoring can be applied on.</p>
-			<img src="fig/appl_01.png" alt="Fig. 1">	
+			<img src="fig/appl_01.PNG" alt="Fig. 1">	
 			<p>
 			<i>To be continued .....</i>
 			</p>		
