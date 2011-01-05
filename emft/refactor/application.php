@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "EMF Refactor - Documentation";
+	$pageTitle 		= "How to apply EMF model refactorings";
 	$pageKeywords	= "EMF, Refactor, model refactoring, refactoring";
 	$pageAuthor		= "Thorsten Arendt";
 
@@ -35,17 +35,8 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>		
 		<p>
-		<h2>How to's</h2>
-		<ul class="midlist">
-			<li><a href="application.php">How to apply EMF model refactorings</a></li>
-			<li><a href="#generate">How to generate new EMF model refactorings</a></li>
-		</ul>
-		<h2><a name="application.php">How to apply EMF model refactorings</a></h2>
 		<i>More information here soon...</i>
-		<h2><a name="generate">How to generate new EMF model refactorings</a></h2>
-		<i>More information here soon...</i>
-		</p>
-		
+		</p>		
 	</div>
 	
 	<div id="rightcolumn">
