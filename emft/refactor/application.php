@@ -30,7 +30,9 @@
 			<p>The second erroneous situation occurs if we try to apply refactoring <b>Move EAttribute</b> on attribute <i>name</i> of class <i>MetaModelElement</i>. As you see in the following figure, this class does not have any (outgoing) references to other classes in our example model.</p>
 			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
 			<p></p>
-	
+			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModelElement</i> as shown in the following figure.</p>
+			<img src="fig/appl_06.PNG" width="491" height="505" alt="Fig. 1">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
