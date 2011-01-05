@@ -31,7 +31,10 @@
 			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
 			<p></p>
 			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModelElement</i> as shown in the following figure.</p>
-			<img src="fig/appl_06.PNG" width="491" height="505" alt="Fig. 1">	
+			<img src="fig/appl_06.PNG" width="491" height="505" alt="Fig. 6">	
+			<p></p>
+			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
+			<img src="fig/appl_07.PNG" width="503" height="139" alt="Fig. 7">
 			<p></p>
 	
 			<p>
