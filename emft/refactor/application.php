@@ -39,7 +39,9 @@
 			<p>Now, let's try to apply refactoring <b>Move EAttribute</b> on attribute <i>name</i> of class <i>MetaModel</i>. The initial checks pass, i.e. the attribute is not the ID of its containing class and this class is referenced to class <i>MetaModelType</i> (see following figure).</p>
 			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
 			<p></p>
-	
+			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModel</i> as shown in the following figure.</p>
+			<img src="fig/appl_08.PNG" width="492" height="631" alt="Fig. 8">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
