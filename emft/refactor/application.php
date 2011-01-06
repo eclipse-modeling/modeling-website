@@ -69,6 +69,9 @@
 			<p>Since the initial precondition checks pass the parameter dialog appears and we type in class name <i>Entry</i> (see following figure).</p>
 			<img src="fig/appl_14.PNG" width="477" height="157" alt="Fig. 14">	
 			<p></p>
+			<p>It is possible to optain a preview of the refactoring action. Here, <b>EMF Refactor</b> uses <b>EMF Compare</b>. The left hand side of the following figure shows the original model whereas the right hand side presents the refactored model. Model changes are highlighted by colored connections. Here, the dialog shows that attribute <i>label</i> was removed from class <i>ModelRefactoring</i> and inserted into class <i>Entry</i>, i.e. the attribute was moved.</p>
+			<img src="fig/appl_15.PNG" width="477" height="501" alt="Fig. 15">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
