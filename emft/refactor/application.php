@@ -51,6 +51,9 @@
 			<p>The last erronoeous situation occurs if we try to move attribute <i>name</i> of class <i>MetaModel</i> to the referenced class <i>MetaModelType</i>. Here, class <i>MetaModelType</i> already owns an attribute <i>name</i> (see following figure).</p>
 			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
 			<p></p>
+			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModel</i> as shown in the following figure.</p>
+			<img src="fig/appl_08.PNG" width="492" height="631" alt="Fig. 8">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
