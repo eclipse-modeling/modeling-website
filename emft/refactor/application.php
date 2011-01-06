@@ -45,7 +45,9 @@
 			<p>The initial precondition checks pass, i.e. <b>EMF Refactor</b> does not display any error messages, and a user input form appears specific to the triggered EMF model refactoring. For refactoring <b>Move EAttribute</b> we now have to input the name of the class the contextual attribute should be moved to. The following figure shows the input dialog. Here, another erroneous situation arises if we type in a name of a class that is not referenced by the containing class of the contextual attribute (or even a complete invalid name), for example <i>ModelElement</i>.</p>
 			<img src="fig/appl_09.PNG" width="477" height="159" alt="Fig. 9">	
 			<p></p>
-	
+			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
+			<img src="fig/appl_10.PNG" alt="Fig. 10">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
