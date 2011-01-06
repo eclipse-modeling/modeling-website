@@ -63,6 +63,9 @@
 			<p>Now, all possible erroneous situations of EMf refactoring <b>Move EAttribute</b> are presented and we can continue with a successful refactoring application. As already mentioned above, attribute <i>label</i> of class <i>ModelRefactoring</i> could be better placed in class <i>Entry</i> and should be moved.</p>
 			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
 			<p></p>
+			<p>Now, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>label</i> of class <i>ModelRefactoring</i> as shown in the following figure.</p>
+			<img src="fig/appl_13.PNG" width="493" height="599" alt="Fig. 13">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
