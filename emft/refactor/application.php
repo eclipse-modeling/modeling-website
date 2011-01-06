@@ -54,6 +54,9 @@
 			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModel</i> as shown in the following figure.</p>
 			<img src="fig/appl_08.PNG" width="492" height="631" alt="Fig. 8">	
 			<p></p>
+			<p>In the refactoring parameter dialog we type in name <i>MetaModelType</i> as shown in the following figure.</p>
+			<img src="fig/appl_11.PNG" width="477" height="158" alt="Fig. 11">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
