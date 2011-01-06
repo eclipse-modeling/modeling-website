@@ -42,6 +42,10 @@
 			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModel</i> as shown in the following figure.</p>
 			<img src="fig/appl_08.PNG" width="492" height="631" alt="Fig. 8">	
 			<p></p>
+			<p>The initial precondition checks pass, i.e. <b>EMF Refactor</b> does not display any error messages, and a user input form appears specific to the triggered EMF model refactoring. For refactoring <b>Move EAttribute</b> we now have to input the name of the class the contextual attribute should be moved to. The following figure shows the input dialog. Here, another erroneous situation arises if we type in a name of a class that is not referenced by the containing class of the contextual attribute (or even a complete invalid name), for example <i>ModelElement</i>.</p>
+			<img src="fig/appl_09.PNG" width="477" height="159" alt="Fig. 9">	
+			<p></p>
+	
 	
 			<p>
 			<i>To be continued .....</i>
