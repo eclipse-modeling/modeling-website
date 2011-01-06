@@ -57,6 +57,9 @@
 			<p>In the refactoring parameter dialog we type in name <i>MetaModelType</i> as shown in the following figure.</p>
 			<img src="fig/appl_11.PNG" width="477" height="158" alt="Fig. 11">	
 			<p></p>
+			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
+			<img src="fig/appl_12.PNG" width="449" height="372" alt="Fig. 10">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
