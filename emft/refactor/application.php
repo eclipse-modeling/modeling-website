@@ -72,6 +72,9 @@
 			<p>It is possible to optain a preview of the refactoring action. Here, <b>EMF Refactor</b> uses <b>EMF Compare</b>. The left hand side of the following figure shows the original model whereas the right hand side presents the refactored model. Model changes are highlighted by colored connections. Here, the dialog shows that attribute <i>label</i> was removed from class <i>ModelRefactoring</i> and inserted into class <i>Entry</i>, i.e. the attribute was moved.</p>
 			<img src="fig/appl_15.PNG" width="477" height="501" alt="Fig. 15">	
 			<p></p>
+			<p>Now, these changes can be committed and refactoring <b>Move EAttribute</b> can take place. The following figure shows the refactored model using the tree-based EMF instance editor.</p>
+			<img src="fig/appl_16.PNG" width="405" height="480" alt="Fig. 16">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
