@@ -66,6 +66,9 @@
 			<p>Now, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>label</i> of class <i>ModelRefactoring</i> as shown in the following figure.</p>
 			<img src="fig/appl_13.PNG" width="493" height="599" alt="Fig. 13">	
 			<p></p>
+			<p>Since the initial precondition checks pass the parameter dialog appears and we type in class name <i>Entry</i> (see following figure).</p>
+			<img src="fig/appl_14.PNG" width="477" height="157" alt="Fig. 14">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
