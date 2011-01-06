@@ -9,6 +9,7 @@
 <div id="maincontent">
 
 	<div id="midcolumn">
+		<a name=top></a>
 		<h1>$pageTitle</h1>	
 			<p>This manual presents the application of a EMF model refactoring using <b>EMF Refactor</b>. More precisely, we demonstrate the model refactoring <b>Move EAttribute</b> for Ecore models. Please note, that EMF Refactor can be used for refactorings of any models whose meta model is based on EMF Ecore.</p>
 			<p>First, please take a look to the following Ecore diagram presenting a first model concerning EMF model refactorings in an early stage of the EMF Refactor development process. A <i>ModelRefactoring</i> has a name and conforms to a <i>MetaModel</i> that is specified by name, namespace prefix, and namespace URI. Furthermore, it has a label that should be shown as an <i>Entry</i> in the <i>ContextMenu</i> of an arbitrary <i>ModelElement</i>. A <i>ModelElement</i> belongs to a <i>Model</i> that is specified by a name and stored in a file with a specific name. Furthermore, a <i>Model</i> conforms to a <i>MetaModel</i> and each <i>ModelElement</i> is typed over a specific <i>MetaModelType</i> belonging to the corresponding <i>MetaModel</i>. Besides the afore mentioned attributes, each <i>ModelRefactoring</i> is related to a <i>MetaModelType</i> representing the type of the contextual element the refactoring can be applied on.</p>
@@ -82,7 +83,8 @@
 			<img src="fig/appl_18.PNG" width="253" height="291" alt="Fig. a_18">	
 			<p></p>
 			<p>The last figure of this manual shows the refactored Ecore model using the graphical diagram view of <b>Ecore Tools</b>.</p>
-			<img src="fig/appl_19.PNG" width="748" height="432" alt="Fig. a_19">	
+			<img src="fig/appl_19.PNG" width="748" height="432" alt="Fig. a_19">
+		<a href=#top>top</a>	
 	</div>
 	
 	<div id="rightcolumn">
