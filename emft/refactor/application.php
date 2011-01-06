@@ -78,7 +78,7 @@
 			<p>Of course, <b>EMF Refactor</b> provides undo ...</p>
 			<img src="fig/appl_17.PNG" width="254" height="292" alt="Fig. 17">	
 			<p></p>
-			<p>... and redo funcionality.</p>
+			<p>... and redo functionality.</p>
 			<img src="fig/appl_18.PNG" width="253" height="291" alt="Fig. 18">	
 			<p></p>
 	
