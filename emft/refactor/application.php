@@ -60,6 +60,9 @@
 			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
 			<img src="fig/appl_12.PNG" width="449" height="372" alt="Fig. 10">	
 			<p></p>
+			<p>Now, all possible erroneous situations of EMf refactoring <b>Move EAttribute</b> are presented and we can continue with a successful refactoring application. As already mentioned above, attribute <i>label</i> of class <i>ModelRefactoring</i> could be better placed in class <i>Entry</i> and should be moved.</p>
+			<img src="fig/appl_01.PNG" width="750" height="464" alt="Fig. 1">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
