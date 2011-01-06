@@ -75,6 +75,12 @@
 			<p>Now, these changes can be committed and refactoring <b>Move EAttribute</b> can take place. The following figure shows the refactored model using the tree-based EMF instance editor.</p>
 			<img src="fig/appl_16.PNG" width="405" height="480" alt="Fig. 16">	
 			<p></p>
+			<p>Of course, <b>EMF Refactor</b> provides undo ...</p>
+			<img src="fig/appl_17.PNG" width="254" height="292" alt="Fig. 17">	
+			<p></p>
+			<p>... and redo funcionality.</p>
+			<img src="fig/appl_18.PNG" width="253" height="291" alt="Fig. 18">	
+			<p></p>
 	
 			<p>
 			<i>To be continued .....</i>
