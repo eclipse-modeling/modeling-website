@@ -85,7 +85,7 @@
 			<p>The last figure of this manual shows the refactored Ecore model using the graphical diagram view of <b>Ecore Tools</b>.</p>
 			<img src="fig/appl_19.PNG" width="748" height="432" alt="Fig. a_19">
 			<p></p>
-		<a href=#top>top</a>	
+			<p><a href=#top>top</a></p>	
 	</div>
 	
 	<div id="rightcolumn">
