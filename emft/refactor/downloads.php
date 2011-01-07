@@ -15,7 +15,7 @@
 		<h2>How to's</h2>
 		<ul class="midlist">
 			<li><a href="downloads/manual_application.pdf" target="_blank">How to apply EMF model refactorings</a></li>
-			<li>How to generate new EMF model refactorings using Java</li>
+			<li><a href="downloads/manual_generation.pdf" target="_blank">How to generate new EMF model refactorings using Java code</a></li>
 		</ul>
 		</p>
 		

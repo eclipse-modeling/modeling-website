@@ -15,7 +15,7 @@
 		(PDF versions can be found in the <a href="downloads.php">downloads</a> section.) 
 		<ul class="midlist">
 			<li><a href="application.php">How to apply EMF model refactorings</a></li>
-			<li><a href="generation.php">How to generate new EMF model refactorings using Java</a></li>
+			<li><a href="generation.php">How to generate new EMF model refactorings using Java code</a></li>
 		</ul>
 		</p>
 		
