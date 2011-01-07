@@ -1,6 +1,6 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 
-	$pageTitle 		= "EMF Refactor - Documentation";
+	$pageTitle 		= "How to generate new EMF model refactorings using Henshin transformations";
 	$pageKeywords	= "EMF, Refactor, model refactoring, refactoring";
 	$pageAuthor		= "Thorsten Arendt";
 
@@ -9,15 +9,10 @@
 <div id="maincontent">
 
 	<div id="midcolumn">
-		<h1>$pageTitle</h1>		
+		<h1>$pageTitle</h1>
+		
 		<p>
-		<h2>How to's</h2>
-		<ul class="midlist">
-			<li><a href="application.php">How to apply EMF model refactorings</a></li>
-			<li><a href="generation.php">How to generate new EMF model refactorings using Java code</a></li>
-			<li><a href="henshin.php">How to generate new EMF model refactorings using Henshin transformations</a></li>
-		</ul>
-		(PDF versions can be found in the <a href="downloads.php">downloads</a> section.) 
+		<i>More information here soon...</i>
 		</p>
 		
 	</div>
