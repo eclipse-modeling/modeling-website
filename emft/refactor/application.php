@@ -49,7 +49,7 @@
 			<p>Again, <b>EMF Refactor</b> does not apply refactoring <b>Move EAttribute</b> because of the violated precondition. The following figure shows the corresponding error message.</p>
 			<img src="fig/appl_10.PNG" alt="Fig. a_10">	
 			<p></p>
-			<p>The last erronoeous situation occurs if we try to move attribute <i>name</i> of class <i>MetaModel</i> to the referenced class <i>MetaModelType</i>. Here, class <i>MetaModelType</i> already owns an attribute <i>name</i> (see following figure).</p>
+			<p>The last erroneous situation occurs if we try to move attribute <i>name</i> of class <i>MetaModel</i> to the referenced class <i>MetaModelType</i>. Here, class <i>MetaModelType</i> already owns an attribute <i>name</i> (see following figure).</p>
 			<img src="fig/appl_01.PNG" alt="Fig. a_1">	
 			<p></p>
 			<p>Again, we trigger refactoring <b>Move EAttribute</b> from within the context menu of attribute <i>name</i> of class <i>MetaModel</i> as shown in the following figure.</p>
@@ -70,7 +70,7 @@
 			<p>Since the initial precondition checks pass the parameter dialog appears and we type in class name <i>Entry</i> (see following figure).</p>
 			<img src="fig/appl_14.PNG" alt="Fig. a_14">	
 			<p></p>
-			<p>It is possible to optain a preview of the refactoring action. Here, <b>EMF Refactor</b> uses <b>EMF Compare</b>. The left hand side of the following figure shows the original model whereas the right hand side presents the refactored model. Model changes are highlighted by colored connections. Here, the dialog shows that attribute <i>label</i> was removed from class <i>ModelRefactoring</i> and inserted into class <i>Entry</i>, i.e. the attribute was moved.</p>
+			<p>It is possible to obtain a preview of the refactoring action. Here, <b>EMF Refactor</b> uses <b>EMF Compare</b>. The left hand side of the following figure shows the original model whereas the right hand side presents the refactored model. Model changes are highlighted by colored connections. Here, the dialog shows that attribute <i>label</i> was removed from class <i>ModelRefactoring</i> and inserted into class <i>Entry</i>, i.e. the attribute was moved.</p>
 			<img src="fig/appl_15.PNG" alt="Fig. a_15">	
 			<p></p>
 			<p>Now, these changes can be committed and refactoring <b>Move EAttribute</b> can take place. The following figure shows the refactored model using the tree-based EMF instance editor.</p>
