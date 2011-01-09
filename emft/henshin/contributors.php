@@ -33,8 +33,8 @@ $html = <<<EOHTML
 
 <ul>
 <li><a href="http://www.tfs.tu-berlin.de/menue/home/team/biermann_enrico/">Enrico Biermann</a></li>
-<li><a href="http://www.hpi.uni-potsdam.de/giese/personen/christian_krause.html">Christian Krause</a></li>
 <li><a href="http://www.mathematik.uni-marburg.de/~sjurack/">Stefan Jurack</a></li>
+<li><a href="http://www.hpi.uni-potsdam.de/giese/personen/christian_krause.html">Christian Krause</a></li>
 <ul>
 
 </div>
