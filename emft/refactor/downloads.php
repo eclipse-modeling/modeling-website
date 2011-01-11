@@ -22,7 +22,7 @@
 
 <h2>Releases</h2>
 <ul class="midlist">
-    <li><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/refactor/refactor-0.5.0.20110111155034.jar">refactor-0.5.0.20110111155034.jar</a> (released 11. Jan 2011 15:50)</li>
+    <li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released 11. Jan 2011 15:54)</li>
 </ul>
 	</div>
 	
