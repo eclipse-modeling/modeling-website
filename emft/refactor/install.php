@@ -36,8 +36,15 @@
 		<h1>$pageTitle</h1>
 		
 		<p>
-		<i>More information here soon...</i>
+		<i>How to install EMF Refactor:</i>
 		</p>
+
+		<ol>
+			<li>Install <a href="http://www.eclipse.org/modeling/emft/henshin/">EMF Henshin</a> if you want to use it together with EMF Refactor.</li>
+			<li>Download the EMF Refactor JAR file.</li>
+			<li>Install the software as usual: Window->Install New Software...->Add.. >Archive->refactor-X.X.X.X</li>
+		</ol>
+
 
 		<!--
 		

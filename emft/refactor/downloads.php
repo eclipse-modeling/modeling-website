@@ -18,16 +18,18 @@
 			<li><a href="downloads/manual_generation.pdf" target="_blank">How to generate new EMF model refactorings using Java code</a></li>
 			<li>How to generate new EMF model refactorings using Henshin transformations</li>
 		</ul>
-		</p>
-		
+		</p>	
+
+<h2>Releases</h2>
+<ul class="midlist">
+    <li><a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/refactor/refactor-0.5.0.20110111155034.jar">refactor-0.5.0.20110111155034.jar</a> (released 11. Jan 2011 15:50)</li>
+</ul>
 	</div>
 	
 	<div id="rightcolumn">
 		<div class="sideitem">	
-		
    		<h6>Incubation</h6>
 		<p>This component is currently in its <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
-
    			<div align="center"><a href="/projects/what-is-incubation.php"><img align="center" src="/images/egg-incubation.png"  border="0" alt="Incubation" /></a></div>
  		</div>
 		
