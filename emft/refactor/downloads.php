@@ -12,6 +12,15 @@
 		<h1>$pageTitle</h1>
 		
 		<p>
+		
+		<h2>Releases</h2>
+		<h3>Version 0.5.0 (released 15 Jan. 2011)
+		<ul class="midlist">
+    		<li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released 11. Jan 2011 15:54)</li>
+		</ul>
+		</p>	
+		
+		<p>	
 		<h2>How to's</h2>
 		<ul class="midlist">
 			<li><a href="downloads/manual_application.pdf" target="_blank">How to apply EMF model refactorings</a></li>
@@ -20,10 +29,6 @@
 		</ul>
 		</p>	
 
-<h2>Releases</h2>
-<ul class="midlist">
-    <li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released 11. Jan 2011 15:54)</li>
-</ul>
 	</div>
 	
 	<div id="rightcolumn">
