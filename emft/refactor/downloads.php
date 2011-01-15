@@ -25,7 +25,7 @@
 		<ul class="midlist">
 			<li><a href="downloads/manual_application.pdf" target="_blank">How to apply EMF model refactorings</a></li>
 			<li><a href="downloads/manual_generation.pdf" target="_blank">How to generate new EMF model refactorings using Java code</a></li>
-			<li>How to generate new EMF model refactorings using Henshin transformations</li>
+			<li><a href="downloads/manual_henshin.pdf" target="_blank">How to generate new EMF model refactorings using Henshin transformations</a></li>
 		</ul>
 		</p>	
 
