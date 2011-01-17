@@ -51,7 +51,7 @@ $projects = array (
 );
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array("graphiti"); //components with only information, no downloads, or no builds available yet, "projectkey"
+$nodownloads = array(""); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(""); //components without newsgroup
 $nomailinglist = array(""); //components without mailinglist
 $incubating = array("graphiti"); // components which are still incubating
@@ -76,7 +76,11 @@ $Nav->addNavSeparator($projectName, "$rooturl/");
 
 foreach (array_keys(array_diff($projects, $extraprojects)) as $z)
 {
-	$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
+	if ( $z == "Graphiti") {
+		$Nav->addCustomNav($z, "http://www.eclipse.org/graphiti/", "_self", 2);
+	} else {
+		$Nav->addCustomNav($z, "$rooturl/?project=$projects[$z]", "_self", 2);
+	}
 }
 
 $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
