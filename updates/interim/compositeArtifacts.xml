@@ -14,6 +14,8 @@
     <child location='http://download.eclipse.org/modeling/emft/eef/updates/interim/'/>
     <!--  M2T Acceleo, JET -->
     <child location='http://download.eclipse.org/modeling/m2t/updates/interim/'/>
+    <!--  MDT OCL -->
+    <child location='http://download.eclipse.org/modeling/mdt/ocl/updates/interim/'/>
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/interim/'/>
   </children>

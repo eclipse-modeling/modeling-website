@@ -20,6 +20,8 @@
     <child location='http://download.eclipse.org/modeling/m2t/xpand/updates/milestones/'/>
     <!--  MDT MoDisco -->
     <child location='http://download.eclipse.org/modeling/mdt/modisco/updates/milestones/'/>
+    <!--  MDT OCL -->
+    <child location='http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/'/>            
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/milestones/'/>
     <!--  TMF Xtext -->
