@@ -82,8 +82,8 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 /* if set, both home and download page will redirect to a different landing page */
-$emft_home_redirects = array("texo" => "http://wiki.eclipse.org/Texo");
-$emft_download_redirects = array("texo" => "http://wiki.eclipse.org/Texo/Download_and_Install");
+$emft_home_redirects = array("texo" => "http://wiki.eclipse.org/Texo", "compare" => "http://www.eclipse.org/modeling/emf/?project=compare");
+$emft_download_redirects = array("texo" => "http://wiki.eclipse.org/Texo/Download_and_Install", "compare" => "http://www.eclipse.org/modeling/emf/downloads/?project=compare");
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads = array("coordinated","jcrm","temporality", "emf4net", "emfatic"); //components with only information, no downloads, or no builds available yet, "projectkey"
