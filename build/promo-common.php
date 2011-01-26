@@ -383,13 +383,21 @@ else
 	$BR = explode("/", $BR[0]);
 	$ID = $BR[1];
 	$BR = $BR[0];
-	$relengProject =
-		$projct == "emf" ? "org.eclipse.emf/org.eclipse.emf.releng/scripts" :
-		($PR=="modeling/emf" || $PR=="modeling/emft" ?
-			"org.eclipse.emf/org.eclipse.emf.$projct.releng" :
-			"org.eclipse.$topProj/org.eclipse.$projct.releng"
-		);
-	#echo "got: cvsbranch: $cvsbranch, ID: $ID, BR: $BR, relengProject: $relengProject<br/>";
+	$relengProject = "org.eclipse.$topProj/org.eclipse.$projct.releng";
+	if ($projct == "emf")
+	{
+		$relengProject = "org.eclipse.emf/org.eclipse.emf.releng/scripts";
+	}
+	else if ($PR=="modeling/emf" || $PR=="modeling/emft")
+	{
+		$relengProject = "org.eclipse.emf/org.eclipse.emf.$projct.releng";
+	}
+	else if ($PR=="modeling/gmp")
+	{
+		$subprojectName2 = str_replace("gmf-","gmf.",$projct);
+		$relengProject = "org.eclipse.$topProj/org.eclipse.$subprojectName2.releng";
+	}
+	#echo "got: PR: $PR, projct: $projct, topProj: $topProj, cvsbranch: $cvsbranch, ID: $ID, BR: $BR, relengProject: $relengProject<br/>";
 
 
 	$logdir = "/home/www-data/promo_logs/";
