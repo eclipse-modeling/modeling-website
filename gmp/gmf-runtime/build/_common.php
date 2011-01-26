@@ -2,20 +2,20 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "R35_RC4",
+	"BaseBuilderBranch" => "R37_M4",
 
 	"BranchAndJDK" => array (
         "localhost=------------,------------",
-        "1.5.0=HEAD,/opt/jdk6_21",
-        "1.4.2=R1_4_maintenance,/opt/jdk6_21",
-        "1.3.3=R2_2_maintenance,/opt/jdk6_21",
-        "1.1.4=R2_1_maintenance,/opt/jdk6_21",
+        "1.5.0=HEAD,/opt/sun-java2-5.0",
+        "1.4.2=R1_4_maintenance,/opt/sun-java2-5.0",
+        "1.3.3=R2_2_maintenance,/opt/sun-java2-5.0",
+        "1.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
 
         "modeling.eclipse.org=------------,------------",
-        "1.5.0=HEAD,/opt/sun-java2-6.0_64",
-        "1.4.2=R1_4_maintenance,/opt/sun-java2-6.0_64",
-        "1.3.3=R2_2_maintenance,/opt/sun-java2-6.0_64",
-        "1.1.4=R2_1_maintenance,/opt/sun-java2-6.0_64",
+        "1.5.0=HEAD,/opt/sun-java2-5.0",
+        "1.4.2=R1_4_maintenance,/opt/sun-java2-5.0",
+        "1.3.3=R2_2_maintenance,/opt/sun-java2-5.0",
+        "1.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
 
 	),
 
@@ -23,7 +23,7 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I2010.*eclipse-SDK-.*x86_64.*|[SR]-.*2010.*/eclipse-SDK-3.6.*x86_64*|" .
+	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-",
 			"2\.6\..+/[ISR]20.*/emf-xsd-SDK-|" .
 			"3\.1\..+/[ISR]20.*/mdt-uml2-SDK|" .
 			"3\.0\..+/[ISR]20.*/mdt-ocl-.*SDK-|" .
