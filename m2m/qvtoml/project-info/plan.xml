@@ -14,9 +14,9 @@
 <html:li>QVT Operational runtime binary distribution (downloadable and update site).</html:li>
 <html:li>QVT Operational tests (downloadable and update site)</html:li>
 </html:ul>
+M2M QVTO 3.1.0 source code will be available as versions tagged "R3_1" in the project's CVS repository.
+<br>
 </html:p>
-      	<html:p>M2M QVTO 3.1.0 source code will be available as versions tagged "R3_1" in the project's CVS repository.
-	<html:p>
     </release_deliverables>
    <release_milestones>
       <preamble>
@@ -27,8 +27,8 @@
       <milestone date="Monday 8 November 2010" milestone="3.1.0 M3"></milestone>
       <milestone date="Monday 13 December 2010" milestone="3.1.0 M4"></milestone>
       <milestone date="Monday 7 February 2011" milestone="3.1.0 M5"></milestone>
-      <milestone date="Monday 14 March 2011" milestone="3.1.0 M6"></milestone><div>API freeze</div>
-      <milestone date="Monday 2 May 2011" milestone="3.1.0 M7"></milestone><div>Feature freeze</div>
+      <milestone date="Monday 14 March 2011" milestone="3.1.0 M6"><html:div>API freeze</html:div></milestone>
+      <milestone date="Monday 2 May 2011" milestone="3.1.0 M7"><html:div>Feature freeze</html:div></milestone>
       <milestone date="Monday 16 May 2011" milestone="3.1.0 RC1"></milestone>
       <milestone date="Monday 23 May 2011" milestone="3.1.0 RC2"></milestone>
       <milestone date="Monday 30 May 2011" milestone="3.1.0 RC3"></milestone>
@@ -67,13 +67,21 @@
 			</html:p>
 		</preamble>
     	<theme name="Release Currency">
-		<html:p> The M2M QVTO project will maintain currency with its dependencies, in particular with the EMF and MDT OCL projects.
+            <description>
+                <html:div>
+The M2M QVTO project will maintain currency with its dependencies, in particular with the EMF and MDT OCL projects.
+                </html:div>
+            </description>
       		<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;target_milestone=3.0+M1&amp;target_milestone=3.0+M2&amp;target_milestone=3.0+M3&amp;target_milestone=3.0+M4&amp;target_milestone=3.0+M5&amp;target_milestone=3.0+M6&amp;target_milestone=3.0+M7&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
     	</theme>
 	<theme name="Usability">
-		<html:p> This theme addresses the need for extensibility and usability improvements of the M2M QVTO implementation and APIs.
+            <description>
+                <html:div>
+This theme addresses the need for extensibility and usability improvements of the M2M QVTO implementation and APIs.
+                </html:div>
+            </description>
 		<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;target_milestone=3.0+M1&amp;target_milestone=3.0+M2&amp;target_milestone=3.0+M3&amp;target_milestone=3.0+M4&amp;target_milestone=3.0+M5&amp;target_milestone=3.0+M6&amp;target_milestone=3.0+M7&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
 		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-"/>
 		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=M2M&amp;component=QVT_OML-Doc&amp;component=QVT_OML-Engine&amp;component=QVT_OML-UI&amp;component=QVT_OML-Website&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
