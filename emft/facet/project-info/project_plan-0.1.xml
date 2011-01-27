@@ -15,7 +15,7 @@
 
 			<p>These mechanisms are based on a query abstraction framework to be
 				able to use all the kind of queries independently of their
-				implementation language (Java, OCL, ATL, JXPath, etc.)</p>
+				implementation language (Java, OCL, ATL, etc.)</p>
 
 			<p>Note that new components proposed by external contributors would
 				also be integrated at some point by the EMF Facet team if relevant
@@ -115,7 +115,7 @@
 					The metamodel extension and metamodel customization
 					mechanisms are based on a query abstraction framework to be able to
 					use all the kind of queries independently of their implementation
-					language (Java, OCL, ATL, JXPath, etc.)
+					language (Java, OCL, ATL, etc.)
         	</html:div>
 			</description>
 		</theme>
@@ -137,5 +137,13 @@
 			</html:div>
 		</postamble>
 	</themes_and_priorities>
-	<!-- <appendix name=""> To fill later if necessary </appendix> -->
+	<appendix name="Legal Notices">
+   	 <html:div>
+     	<html:ul>
+     		<html:li>Java is a trademark or a registered trademark of Sun Microsystems, Inc.</html:li>
+     		<html:li>All other products or company names are mentioned for identification purposes only, and may be trademarks or service marks of their respective owners.</html:li>
+     	</html:ul>	
+     </html:div>  
+   </appendix>	
+	
 </plan>
