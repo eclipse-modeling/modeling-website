@@ -23,7 +23,7 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|",
+	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|".
 			"2\.7\..+/[ISR]20.*/emf-xsd-SDK-|" .
 			"3\.2\..+/[ISR]20.*/mdt-uml2-SDK|" .
 			"3\.1\..+/[ISR]20.*/mdt-ocl-.*SDK-|" .
