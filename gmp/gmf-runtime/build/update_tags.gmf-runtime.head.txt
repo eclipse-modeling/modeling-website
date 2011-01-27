@@ -1,4 +1,4 @@
-# $Id: update_tags.gmf-runtime.head.txt,v 1.9 2011/01/27 18:00:04 ahunter Exp $
+# $Id: update_tags.gmf-runtime.head.txt,v 1.10 2011/01/27 18:10:14 ahunter Exp $
 # set to the dir where update_tags.sh script is, in order to resolve options file, releng plugins file, and ../scripts/sendEmailSimple.php
 WORKING_DIR="/home/www-data/modeling-releng-common/tools/org.eclipse.releng.tools.tagandrelease"
 
@@ -46,4 +46,4 @@ MAP_PLUGIN_VERSION="autotag${DEV_BRANCH}"
 MAP_PLUGIN="org.eclipse.gmp/org.eclipse.gmf.runtime.releng"
 
 #define script to run if map file is changed, eg., to run a build immediately
-EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf-runtime -buildType I -version 1.5.0 -noSearchCVS -a -email anthonyh@ca.ibm.com -regex I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|2\.7\..+/[ISR]20.*/emf-xsd-SDK-|3\.2\..+/[ISR]20.*/mdt-uml2-SDK|3\.1\..+/[ISR]20.*/mdt-ocl-.*SDK-|1\.5\..+/[ISR]20.*/emf-query-SDK-|1\.5\..+/[ISR]20.*/emf-validation-SDK-|1\.5\..+/[ISR]20.*/emf-transaction-SDK-|1\.5\..+/[ISR]20.*/gmf-sdk-notation-|3\.7\..+/[ISR]20.*/GEF-SDK-|orbitBundles-.*\.map"
+EXECUTE_ON_MAP_CHANGE="/home/www-data/build/modeling/scripts/start_cron.sh -sub gmf-runtime -buildType I -basebuilderBranch R37_M4 -version 1.5.0 -noSearchCVS -a -email anthonyh@ca.ibm.com -regex I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|2\.7\..+/[ISR]20.*/emf-xsd-SDK-|3\.2\..+/[ISR]20.*/mdt-uml2-SDK|3\.1\..+/[ISR]20.*/mdt-ocl-.*SDK-|1\.5\..+/[ISR]20.*/emf-query-SDK-|1\.5\..+/[ISR]20.*/emf-validation-SDK-|1\.5\..+/[ISR]20.*/emf-transaction-SDK-|1\.5\..+/[ISR]20.*/gmf-sdk-notation-|3\.7\..+/[ISR]20.*/GEF-SDK-|orbitBundles-.*\.map"
