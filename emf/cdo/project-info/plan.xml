@@ -16,10 +16,10 @@ individual project plan.
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
 <html:ul>
-<html:li><html:b>CDO Dawn Codegen (Experimental)</html:b> (Contains the code generation aspects for graphical collaboration support over CDO.)</html:li>
-<html:li><html:b>CDO Dawn Examples (Experimental)</html:b> (Contains example plugins to demonstrate a range of functions of Dawn.)</html:li>
-<html:li><html:b>CDO Dawn Runtime (Experimental)</html:b> (Contains the runtime aspects for graphical collaboration support over CDO.)</html:li>
-<html:li><html:b>CDO Dawn SDK (Experimental)</html:b> (Includes Runtime, Codegen, Tools, Examples, Documentation and Source.)</html:li>
+<html:li><html:b>CDO Dawn Codegen</html:b> (Contains the code generation aspects for graphical collaboration support over CDO.)</html:li>
+<html:li><html:b>CDO Dawn Examples</html:b> (Contains example plugins to demonstrate a range of functions of Dawn.)</html:li>
+<html:li><html:b>CDO Dawn Runtime</html:b> (Contains the runtime aspects for graphical collaboration support over CDO.)</html:li>
+<html:li><html:b>CDO Dawn SDK</html:b> (Includes Runtime, Codegen, Tools, Examples, Documentation and Source.)</html:li>
 <html:li><html:b>CDO Gastro Example</html:b> (Contains the CDO Gastro RCP plugins, models and sources.)</html:li>
 <html:li><html:b>CDO Model Repository Client</html:b> (Contains the CDO client core and user interface plugins.)</html:li>
 <html:li><html:b>CDO Model Repository Definitions</html:b> (Contains the EMF-based definition and wiring plugins for CDO.)</html:li>
