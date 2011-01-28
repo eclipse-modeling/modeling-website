@@ -136,14 +136,16 @@ control over the behaviour and performance of their repositories and sessions.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC1&amp;target_milestone=RC2&amp;target_milestone=RC3&amp;target_milestone=RC4&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;status_whiteboard=Power%20to%20the%20People&amp;bug_status=RESOLVED&amp;version=4.0&amp;component=cdo.core&amp;component=cdo.dawn&amp;component=cdo.db&amp;component=cdo.docs&amp;component=cdo.hibernate&amp;component=cdo.net4j&amp;component=cdo.net4j.db&amp;component=cdo.net4j.ui&amp;component=cdo.objy&amp;component=cdo.releng&amp;component=cdo.ui&amp;resolution=FIXED&amp;product=EMF&amp;classification=Modeling">
             </committed>
+			<!--
             <proposed
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;target_milestone=Helios&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=substring&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;short_desc_type=allwordssubstr&amp;short_desc=&amp;classification=Modeling&amp;product=EMF&amp;component=CDO&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_file_loc_type=allwordssubstr&amp;bug_file_loc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=Power+to+the+People&amp;keywords_type=allwords&amp;keywords=&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;votes=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
             </deferred>
+			-->
         </theme>
         <theme name="Appealing to a Broader Community">
             <description>
