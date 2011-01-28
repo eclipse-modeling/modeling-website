@@ -35,7 +35,7 @@ The release deliverables have the same form as is found in most Eclipse projects
 <html:li><b>CDO Model Repository Server Product</b> (Contains the product definition of an installable CDO server.)</html:li>
 <html:li><b>CDO Model Repository Tests</b> (Contains the CDO test plugins, models and sources.)</html:li>
 <html:li><b>CDO Release Engineering Version Tool</b> (Contains the release engineering plugins and extensions.)</html:li>
-<html:li><b>Net4j DB Framework</b> (Contains the database core framework and database adapter plugins for Derby, Mysql, HSQLDB and PostgreSQL. Additional database drivers are available via http://net4j.sourceforge.net/update</b> (read the license informations). )</html:li>
+<html:li><b>Net4j DB Framework</b> (Contains the database core framework and database adapter plugins for Derby, Mysql, HSQLDB and PostgreSQL. Additional database drivers are available via http://net4j.sourceforge.net/update. Read the license informations.)</html:li>
 <html:li><b>Net4j DB Framework Derby Adapter</b> (Contains the Derby Adapter matching the Net4j DB Framework and the database driver bundle for Derby.)</html:li>
 <html:li><b>Net4j DB Framework H2 Adapter</b> (Contains the H2 Adapter matching the Net4j DB Framework and the database driver bundle for H2.)</html:li>
 <html:li><b>Net4j DB Framework HSQLDB Adapter</b> (Contains the HSQLDB Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for HSQLDB. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
@@ -43,7 +43,7 @@ The release deliverables have the same form as is found in most Eclipse projects
 <html:li><b>Net4j DB Framework PostgreSQL Adapter</b> (Contains the PostgreSQL Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for PostgreSQL. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
 <html:li><b>Net4j Signalling Platform Definitions</b> (Contains the EMF-based definition and wiring plugins for Net4j.)</html:li>
 <html:li><b>Net4j Signalling Platform Examples</b> (Contains the general Net4j examples, the buddies collaboration + chat examples and the experimental JMS provider implementation plugins, as well as all sources.)</html:li>
-<html:li><b>Net4j Signalling Platform Runtime</b> (Contains the Net4j core and transport provider plugins</b> (tcp, jvm and http).)</html:li>
+<html:li><b>Net4j Signalling Platform Runtime</b> (Contains the Net4j core and transport provider plugins, e.g. tcp, jvm and http.)</html:li>
 <html:li><b>Net4j Signalling Platform SDK</b> (Includes Runtime, UI, DB, Examples, Documentation and Source.)</html:li>
 <html:li><b>Net4j Signalling Platform Tests</b> (Contains the Net4j test plugins and sources.)</html:li>
 <html:li><b>Net4j Signalling Platform UI</b> (Contains the Net4j user interface and utilities user interface plugins. </html:li>
