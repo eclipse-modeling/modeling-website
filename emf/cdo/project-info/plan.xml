@@ -16,37 +16,37 @@ individual project plan.
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
 <html:ul>
-<html:li><b>CDO Dawn Codegen (Experimental)</b> (Contains the code generation aspects for graphical collaboration support over CDO.)</html:li>
-<html:li><b>CDO Dawn Examples (Experimental)</b> (Contains example plugins to demonstrate a range of functions of Dawn.)</html:li>
-<html:li><b>CDO Dawn Runtime (Experimental)</b> (Contains the runtime aspects for graphical collaboration support over CDO.)</html:li>
-<html:li><b>CDO Dawn SDK (Experimental)</b> (Includes Runtime, Codegen, Tools, Examples, Documentation and Source.)</html:li>
-<html:li><b>CDO Gastro Example</b> (Contains the CDO Gastro RCP plugins, models and sources.)</html:li>
-<html:li><b>CDO Model Repository Client</b> (Contains the CDO client core and user interface plugins.)</html:li>
-<html:li><b>CDO Model Repository Definitions</b> (Contains the EMF-based definition and wiring plugins for CDO.)</html:li>
-<html:li><b>CDO Model Repository Documentation</b> (Contains the documentation of the CDO SDK.)</html:li>
-<html:li><b>CDO Model Repository EPP</b> (Contains a minimum CDO client and server environment for the Eclipse Modeling package.)</html:li>
-<html:li><b>CDO Model Repository Examples</b> (Contains the CDO example plugin, models and sources.)</html:li>
-<html:li><b>CDO Model Repository SDK</b> (Includes Client, Server, Tools, Examples, Documentation and Source.)</html:li>
-<html:li><b>CDO Model Repository Server</b> (Contains the CDO server plugins.)</html:li>
-<html:li><b>CDO Model Repository Server DB</b> (Contains the DBStore plugins.)</html:li>
-<html:li><b>CDO Model Repository Server DB4O</b> (Contains the DB4O Store bundle. Ensure that DB4O Driver is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains DB4O Driver.)</html:li>
-<html:li><b>CDO Model Repository Server Hibernate</b> (Contains the HibernateStore and Teneo integration plugins. Ensure that Hibernate is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains Hibernate.)</html:li>
-<html:li><b>CDO Model Repository Server Objectivity</b> (Contains the Objectivity Store and stubbed jar file bundle. For runtime, ensure that you have Objectivity /DB installed!)</html:li>
-<html:li><b>CDO Model Repository Server Product</b> (Contains the product definition of an installable CDO server.)</html:li>
-<html:li><b>CDO Model Repository Tests</b> (Contains the CDO test plugins, models and sources.)</html:li>
-<html:li><b>CDO Release Engineering Version Tool</b> (Contains the release engineering plugins and extensions.)</html:li>
-<html:li><b>Net4j DB Framework</b> (Contains the database core framework and database adapter plugins for Derby, Mysql, HSQLDB and PostgreSQL. Additional database drivers are available via http://net4j.sourceforge.net/update. Read the license informations.)</html:li>
-<html:li><b>Net4j DB Framework Derby Adapter</b> (Contains the Derby Adapter matching the Net4j DB Framework and the database driver bundle for Derby.)</html:li>
-<html:li><b>Net4j DB Framework H2 Adapter</b> (Contains the H2 Adapter matching the Net4j DB Framework and the database driver bundle for H2.)</html:li>
-<html:li><b>Net4j DB Framework HSQLDB Adapter</b> (Contains the HSQLDB Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for HSQLDB. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
-<html:li><b>Net4j DB Framework MYSQL Adapter</b> (Contains the MYSQL Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for MYSQL. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
-<html:li><b>Net4j DB Framework PostgreSQL Adapter</b> (Contains the PostgreSQL Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for PostgreSQL. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
-<html:li><b>Net4j Signalling Platform Definitions</b> (Contains the EMF-based definition and wiring plugins for Net4j.)</html:li>
-<html:li><b>Net4j Signalling Platform Examples</b> (Contains the general Net4j examples, the buddies collaboration + chat examples and the experimental JMS provider implementation plugins, as well as all sources.)</html:li>
-<html:li><b>Net4j Signalling Platform Runtime</b> (Contains the Net4j core and transport provider plugins, e.g. tcp, jvm and http.)</html:li>
-<html:li><b>Net4j Signalling Platform SDK</b> (Includes Runtime, UI, DB, Examples, Documentation and Source.)</html:li>
-<html:li><b>Net4j Signalling Platform Tests</b> (Contains the Net4j test plugins and sources.)</html:li>
-<html:li><b>Net4j Signalling Platform UI</b> (Contains the Net4j user interface and utilities user interface plugins. </html:li>
+<html:li><html:b>CDO Dawn Codegen (Experimental)</html:b> (Contains the code generation aspects for graphical collaboration support over CDO.)</html:li>
+<html:li><html:b>CDO Dawn Examples (Experimental)</html:b> (Contains example plugins to demonstrate a range of functions of Dawn.)</html:li>
+<html:li><html:b>CDO Dawn Runtime (Experimental)</html:b> (Contains the runtime aspects for graphical collaboration support over CDO.)</html:li>
+<html:li><html:b>CDO Dawn SDK (Experimental)</html:b> (Includes Runtime, Codegen, Tools, Examples, Documentation and Source.)</html:li>
+<html:li><html:b>CDO Gastro Example</html:b> (Contains the CDO Gastro RCP plugins, models and sources.)</html:li>
+<html:li><html:b>CDO Model Repository Client</html:b> (Contains the CDO client core and user interface plugins.)</html:li>
+<html:li><html:b>CDO Model Repository Definitions</html:b> (Contains the EMF-based definition and wiring plugins for CDO.)</html:li>
+<html:li><html:b>CDO Model Repository Documentation</html:b> (Contains the documentation of the CDO SDK.)</html:li>
+<html:li><html:b>CDO Model Repository EPP</html:b> (Contains a minimum CDO client and server environment for the Eclipse Modeling package.)</html:li>
+<html:li><html:b>CDO Model Repository Examples</html:b> (Contains the CDO example plugin, models and sources.)</html:li>
+<html:li><html:b>CDO Model Repository SDK</html:b> (Includes Client, Server, Tools, Examples, Documentation and Source.)</html:li>
+<html:li><html:b>CDO Model Repository Server</html:b> (Contains the CDO server plugins.)</html:li>
+<html:li><html:b>CDO Model Repository Server DB</html:b> (Contains the DBStore plugins.)</html:li>
+<html:li><html:b>CDO Model Repository Server DB4O</html:b> (Contains the DB4O Store bundle. Ensure that DB4O Driver is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains DB4O Driver.)</html:li>
+<html:li><html:b>CDO Model Repository Server Hibernate</html:b> (Contains the HibernateStore and Teneo integration plugins. Ensure that Hibernate is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains Hibernate.)</html:li>
+<html:li><html:b>CDO Model Repository Server Objectivity</html:b> (Contains the Objectivity Store and stubbed jar file bundle. For runtime, ensure that you have Objectivity /DB installed!)</html:li>
+<html:li><html:b>CDO Model Repository Server Product</html:b> (Contains the product definition of an installable CDO server.)</html:li>
+<html:li><html:b>CDO Model Repository Tests</html:b> (Contains the CDO test plugins, models and sources.)</html:li>
+<html:li><html:b>CDO Release Engineering Version Tool</html:b> (Contains the release engineering plugins and extensions.)</html:li>
+<html:li><html:b>Net4j DB Framework</html:b> (Contains the database core framework and database adapter plugins for Derby, Mysql, HSQLDB and PostgreSQL. Additional database drivers are available via http://net4j.sourceforge.net/update. Read the license informations.)</html:li>
+<html:li><html:b>Net4j DB Framework Derby Adapter</html:b> (Contains the Derby Adapter matching the Net4j DB Framework and the database driver bundle for Derby.)</html:li>
+<html:li><html:b>Net4j DB Framework H2 Adapter</html:b> (Contains the H2 Adapter matching the Net4j DB Framework and the database driver bundle for H2.)</html:li>
+<html:li><html:b>Net4j DB Framework HSQLDB Adapter</html:b> (Contains the HSQLDB Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for HSQLDB. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
+<html:li><html:b>Net4j DB Framework MYSQL Adapter</html:b> (Contains the MYSQL Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for MYSQL. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
+<html:li><html:b>Net4j DB Framework PostgreSQL Adapter</html:b> (Contains the PostgreSQL Adapter matching the Net4j DB Framework BUT NOT the database driver bundle for PostgreSQL. This needs to be installed separately, for example from http://net4j.sourceforge.net/update)</html:li>
+<html:li><html:b>Net4j Signalling Platform Definitions</html:b> (Contains the EMF-based definition and wiring plugins for Net4j.)</html:li>
+<html:li><html:b>Net4j Signalling Platform Examples</html:b> (Contains the general Net4j examples, the buddies collaboration + chat examples and the experimental JMS provider implementation plugins, as well as all sources.)</html:li>
+<html:li><html:b>Net4j Signalling Platform Runtime</html:b> (Contains the Net4j core and transport provider plugins, e.g. tcp, jvm and http.)</html:li>
+<html:li><html:b>Net4j Signalling Platform SDK</html:b> (Includes Runtime, UI, DB, Examples, Documentation and Source.)</html:li>
+<html:li><html:b>Net4j Signalling Platform Tests</html:b> (Contains the Net4j test plugins and sources.)</html:li>
+<html:li><html:b>Net4j Signalling Platform UI</html:b> (Contains the Net4j user interface and utilities user interface plugins. </html:li>
 </html:ul>
      </html:div>
    </release_deliverables>
