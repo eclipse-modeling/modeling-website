@@ -194,6 +194,14 @@ This theme addresses all tasks that may not be included in one of the previous t
       		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;target_milestone=indigo&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;field0-1-0=flagtypes.name&amp;type0-1-0=notsubstring&amp;value0-1-0=indigo-" />
       		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Miscellaneous&amp;classification=Modeling&amp;product=MDT&amp;component=Papyrus&amp;keywords_type=allwords&amp;keywords=plan&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-" />
         </theme>
+        
+        <theme name="Eclipse 4.1">
+        	<description>
+        		<html:div>
+Current status: no support, no testing on 4.1
+        		</html:div>
+        	</description>
+        </theme>
    </themes_and_priorities>
    <appendix name="Legal Notices">
         <html:div>
