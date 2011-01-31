@@ -41,7 +41,7 @@
 		</preamble>
 		<milestone date="11/10/2009" milestone="0.1M3"></milestone>
 		<milestone date="12/15/2010" milestone="0.1M4"></milestone>
-		<milestone date="02/09/2010" milestone="0.1M5"></milestone>
+		<milestone date="02/01/2010" milestone="0.1M5"></milestone>
 		<milestone date="03/16/2010" milestone="0.1M6">
 			<html:b>(API Freeze)</html:b>
 		</milestone>
@@ -127,6 +127,13 @@
 					implementations of model
 					editors which want to use the extension and
 					customization mechanisms. 
+        	</html:div>
+			</description>
+		</theme>
+		<theme name="Eclipse 4.1">
+			<description>
+				<html:div>
+					EMF Facet provides no support and no testing on 4.1.
         	</html:div>
 			</description>
 		</theme>
