@@ -18,7 +18,7 @@
     </release_deliverables>
    <release_milestones>
       <preamble>
-      	<html:p>Release milestone occurring at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; that is, until the final 3.7 release of the Platform, upon which GMF Notation and other projects will release simultaneously. As GMF Notation is also dependent upon the EMF project, which is scheduled to release milestones within 1 week of Platform milestones, GMF Notation will deliver its milestones within the following week. It is anticipated that GMF Notation will synchronize its release milestones with the Indigo release schedule for +1 components.</html:p>
+      	<html:p>Release milestones occur at roughly 6 week intervals and follow the Platform milestone releases by approximately 1 week; that is, until the final 3.7 release of the Platform, upon which GMF Notation and other projects will release simultaneously. It is anticipated that GMF Notation will synchronize its release milestones with the Indigo release schedule for +1 components.</html:p>
       </preamble>
       <milestone date="08/16/2010" milestone="M1"></milestone>
       <milestone date="09/27/2010" milestone="M2"></milestone>
@@ -45,19 +45,19 @@
    </release_milestones>
    <target_environments>
    		<html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.</html:p>
-   		<html:p>The Eclipse Graphical Modeling Framework Notation project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.7 release of the Eclipse Platform Project is written and compiled against version 1.5 of the Java Platform APIs, and targeted to run on version 1.5 of the Java Runtime Environment, Standard Edition. GMF Notation will target the same Java version as EMF, which currently requires Java 1.5.</html:p>
+   		<html:p>The GMF Notation project depends upon on the Platform and other projects, which are mostly "pure" Java. The 3.7 release of the Eclipse Platform Project is written and compiled against version 1.5 of the Java Platform APIs, and targeted to run on version 1.5 of the Java Runtime Environment, Standard Edition. GMF Notation will target the same Java version as EMF, which currently requires Java 1.5.</html:p>
 		<html:p>Eclipse Platform SDK 3.7 will be tested and validated on a number of reference platforms. GMF Notation will be tested and validated against a subset of those listed for the platform. Those available will be presented on the project download site.</html:p>
      <internationalization>
-     	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the Graphical Modeling Framework Notation project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
+     	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the GMF Notation project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
      <html:p>Compatibility of Release 1.5</html:p>
-	<html:p>The GMF Notation Project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the Graphical Modeling Framework Notation Project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</html:p>
+	<html:p>The GMF Notation Project will be developed in parallel, and released simultaneously, with the following projects. As stated above, each milestone release of the GMF Notation Project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</html:p>
 	<html:ul><html:li>Eclipse Platform SDK version 3.7</html:li>
-		<html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
+		<html:li>Eclipse Modeling Framework (EMF) version 2.7</html:li>
 	</html:ul>
-	<html:p>Therefore, the Graphical Modeling Framework initial release will be compatible with these versions and will publish binary and source compatibilities with migration guides on subsequent releases.</html:p>
+	<html:p>Therefore, the GMF Notation initial release will be compatible with these versions and will publish binary and source compatibilities with migration guides on subsequent releases.</html:p>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
 		<preamble>
