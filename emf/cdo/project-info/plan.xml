@@ -201,6 +201,14 @@ are seen as that by the development team itself!
 			-->
         </theme>
    </themes_and_priorities>
+        <theme name="Eclipse 4.1">
+            <description>
+                <html:div>
+No support, no testing on 4.1
+				</html:div>
+            </description>
+        </theme>
+   </themes_and_priorities>
    <appendix name="A: Legal Notices">
         <html:div>
 <html:ul>
