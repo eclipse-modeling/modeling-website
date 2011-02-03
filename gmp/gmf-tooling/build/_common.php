@@ -2,19 +2,19 @@
 require_once ("../../../includes/buildServer-common.php");
 
 $options = array (
-	"BaseBuilderBranch" => "R35_RC4",
+	"BaseBuilderBranch" => "R37_M4",
 
 	"BranchAndJDK" => array (
         "localhost=------------,------------",
         "2.4.0=HEAD,/opt/sun-java2-5.0",
         "2.3.1=R2_3_maintenance,/opt/sun-java2-5.0",
-        "2.2.2=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "2.2.2=R2_2_maintenance,/opt/sun-java2-5.0",
         "2.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
 
         "modeling.eclipse.org=------------,------------",
-        "2.4.0=HEAD,/opt/sun-java2-6.0_64",
-        "2.3.1=R2_3_maintenance,/opt/sun-java2-6.0_64",
-        "2.2.2=R2_2_maintenance,/opt/sun-java2-6.0_64",
+        "2.4.0=HEAD,/opt/sun-java2-5.0",
+        "2.3.1=R2_3_maintenance,/opt/sun-java2-5.0",
+        "2.2.2=R2_2_maintenance,/opt/sun-java2-5.0",
         "2.1.4=R2_1_maintenance,/opt/sun-java2-5.0",
 
 	),
@@ -23,7 +23,7 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I2010.*eclipse-SDK-.*x86_64.*|[SR]-3.7.*2010.*/eclipse-SDK-.*x86_64*|" .
+	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|" .
 			"2\.7\..+/[ISR]20.*/emf-xsd-SDK-|" .
 			"3\.2\..+/[ISR]20.*/mdt-uml2-SDK|" .
 			"3\.1\..+/[ISR]20.*/mdt-ocl-.*SDK-|" .
