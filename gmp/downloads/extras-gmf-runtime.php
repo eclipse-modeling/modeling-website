@@ -23,7 +23,7 @@ function showNotes()
 	<div class="homeitem3col">
 		<h3>GMF Downloads</h3>
 		<p>In the Helios release, the GMF project was restructured into the GMF Tooling, GMF Runtime and GMF Notation projects under the Graphical Modeling Project.</p>
-		<p>A table of previous GMF releases can be found <a href="http://www.eclipse.org/modeling/gmp/development/releases.php"><b>HERE</b></a></p>
+		<p>A table of previous GMF releases can be found <a href="/modeling/gmp/development/releases.php"><b>HERE</b></a></p>
 		<h3>Questions?</h3>
 		<p>If you have problems downloading the drops, contact the <a href="mailto:webmaster@eclipse.org">webmaster</a>.</p>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
