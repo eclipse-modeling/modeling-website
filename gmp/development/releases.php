@@ -15,7 +15,6 @@ $pageAuthor		= "Anthony Hunter";
 # Paste your HTML content between the EOHTML markers!
 $html = <<<EOHTML
 
-<!-- $Id: releases.php,v 1.10 2011/02/03 20:02:07 ahunter Exp $ -->	
 <style type="text/css">
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
    p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-style : normal; }
@@ -315,7 +314,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 [3] - MDT OCL started depending on MDT UML2 in Europa.<br>
 [4] - GMF Tooling started depending on M2M QVT in Galileo.<br>
 [5] - Graphiti will have its first release in Indigo.<br>
-Last Updated $Date: 2011/02/03 20:02:07 $
+Last Updated Feb 03 2011
 </td>
 </tr>
 </table>
