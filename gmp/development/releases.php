@@ -15,11 +15,10 @@ $pageAuthor		= "Anthony Hunter";
 # Paste your HTML content between the EOHTML markers!
 $html = <<<EOHTML
 
-<!-- $Id: releases.php,v 1.9 2011/02/03 19:09:29 ahunter Exp $ -->	
+<!-- $Id: releases.php,v 1.10 2011/02/03 20:02:07 ahunter Exp $ -->	
 <style type="text/css">
    h1 { font-family : Arial, Helvetica, sans-serif; font-size : 14pt; font-weight : bold; font-style : normal; }
    p { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; font-style : normal; }
-   p.small { font-family : Arial, Helvetica, sans-serif; font-size : 8pt; font-style : normal; }
    table { text-align:left; padding: 3px; border: 1px solid black; }
    tr.white { background-color: white; border: 1px solid black; }
    tr.top { background-color: #CCFFFF; border: 1px solid black; }
@@ -33,24 +32,24 @@ $html = <<<EOHTML
 </style>
 
 <h1>Eclipse Graphical Modeling Project (GMP) Releases</h1>
-<p>The following table lists the various release versions done over the years.</p>
-<p class="small">Last Updated $Date: 2011/02/03 19:09:29 $</p>
+<p>The following table lists the releases completed over the years, with their version numbers. The table includes the four Graphical Modeling Projects; 
+GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependencies.</p>
 <table border="1">
 <tr class="top">
-<td><b>Eclipse<br>Simultanious<br>Release</b></td>
-<td><b>Release<br>Date</b></td>
+<td>Eclipse<br>Simultanious<br>Release</td>
+<td>Release<br>Date</td>
 <td><b>GMF<br>Runtime<br></b>[1]</td>
 <td><b>GMF<br>Notation<br></b>[1]</td>
-<td><b>Eclipse<br>Platform</b></td>
-<td><b>GEF</b></td>
-<td><b>EMF<br>Core</b></td>
-<td><b>EMF<br>Query</b></td>
-<td><b>EMF<br>Validation</b></td>
-<td><b>EMF<br>Transaction</b></td>
-<td><b>MDT<br>OCL</b></td>
-<td><b>MDT<br>UML2</b></td>
+<td>Eclipse<br>Platform</td>
+<td>GEF</td>
+<td>EMF<br>Core</td>
+<td>EMF<br>Query</td>
+<td>EMF<br>Validation</td>
+<td>EMF<br>Transaction</td>
+<td>MDT<br>OCL</td>
+<td>MDT<br>UML2</td>
 <td><b>GMF<br>Tooling<br>(GMF SDK)</b></td>
-<td><b>QVT<br>OML</b></td>
+<td>QVT<br>OML</td>
 <td><b>Graphiti</b></td>
 </tr>
 
@@ -202,7 +201,7 @@ $html = <<<EOHTML
 </tr>
 
 <tr class="ganymede">
-<td>patch</td>
+<td>06/13/10<br>(patch)</td>
 <td>1.1.4</td>
 </tr>
 
@@ -247,7 +246,7 @@ $html = <<<EOHTML
 </tr>
 
 <tr class="galileo">
-<td>patch</td>
+<td>(patch)</td>
 <td>1.3.3</td>
 </tr>
 
@@ -315,7 +314,8 @@ $html = <<<EOHTML
 [2] - GMF Notation was not a separate feature until Ganymede.<br>
 [3] - MDT OCL started depending on MDT UML2 in Europa.<br>
 [4] - GMF Tooling started depending on M2M QVT in Galileo.<br>
-[5] - Graphiti will have its first release in Indigo.
+[5] - Graphiti will have its first release in Indigo.<br>
+Last Updated $Date: 2011/02/03 20:02:07 $
 </td>
 </tr>
 </table>
