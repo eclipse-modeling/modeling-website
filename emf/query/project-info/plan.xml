@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan"
 	xmlns:html="http://www.w3.org/1999/xhtml" name="Project Name">
-	<release projectid="modeling.emf" version="1.4.0" />
+	<release projectid="modeling.emf" version="1.5.0" />
 	<introduction>
 		<html:div>
 			<html:p>
@@ -61,18 +61,18 @@
 		<milestone date="11/12/2010" milestone="M3"></milestone>
 		<milestone date="12/17/2010" milestone="M4"></milestone>
 		<milestone date="02/04/2011" milestone="M5"></milestone>
-		<milestone date="03/18/2010" milestone="M6">
+		<milestone date="03/18/2011" milestone="M6">
 			<html:p>API freeze</html:p>
 		</milestone>
-		<milestone date="05/20/2010" milestone="M7">
+		<milestone date="05/20/2011" milestone="M7">
 			<html:div>Feature Freeze</html:div>
 		</milestone>
-		<milestone date="05/20/2010" milestone="RC1"></milestone>
-		<milestone date="05/25/2010" milestone="RC2"></milestone>
-		<milestone date="06/03/2010" milestone="RC3"></milestone>
-		<milestone date="06/10/2010" milestone="RC4"></milestone>
-		<milestone date="06/22/2010" milestone="RC5"></milestone>
-		<milestone date="06/22/2010" milestone="1.5.0"></milestone>
+		<milestone date="05/20/2011" milestone="RC1"></milestone>
+		<milestone date="05/25/2011" milestone="RC2"></milestone>
+		<milestone date="06/03/2011" milestone="RC3"></milestone>
+		<milestone date="06/10/2011" milestone="RC4"></milestone>
+		<milestone date="06/22/2011" milestone="RC5"></milestone>
+		<milestone date="06/22/2011" milestone="1.5.0"></milestone>
 		<postamble>
 			<html:div>
 				EMF Query will produce maintenance releases to align with the Indigo
