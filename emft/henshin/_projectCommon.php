@@ -11,10 +11,10 @@ $theme = "Nova";
 # these are optional
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling.emft.henshin", "_self", 2);
 $Nav->addNavSeparator("Henshin", "index.php");
-$Nav->addCustomNav("Downloads", "downloads.php", "_self", 2);
 $Nav->addCustomNav("Installation", "install.php", "_self", 2);
-$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/Henshin_FAQ", "_self", 2);
+$Nav->addCustomNav("Downloads", "downloads.php", "_self", 2);
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Henshin", "_self", 2);
+$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/Henshin_FAQ", "_self", 2);
 $Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/henshin-dev", "_self", 2);
 $Nav->addCustomNav("Publications", "publications.php", "_self", 2);
 $Nav->addCustomNav("Contributors", "contributors.php", "_self", 2);

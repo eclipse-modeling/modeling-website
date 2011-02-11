@@ -34,12 +34,22 @@ $html = <<<EOHTML
 		
 <p>
 You can <a href="downloads.php">download</a> the latest version and install it directly.
-We recommend though to install from our update site. The URL will be announced here soon.
+We recommend though to install Henshin from our update site.
 </p>
 
 <p>
 <i>You need Eclipse Helios to run Henshin.</i>
 </p>
+
+<h2>Update Sites</h2>
+<p>
+You can get the latest version of the source code directly from our SVN repository:
+<ul>
+<li><b>Releases:</b> <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
+<li>Nightly Builds: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/nightly">http://download.eclipse.org/modeling/emft/henshin/updates/nightly</a></li>
+</ul>
+</p>
+
 
 <h2>Sources</h2>
 <p>
