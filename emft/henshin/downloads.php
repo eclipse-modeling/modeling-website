@@ -34,19 +34,34 @@ $html = <<<EOHTML
 <div id="midcolumn">
 <h1>$pageTitle</h1>
 
-<h2>Stable Releases</h2>
+<h2>Latest Stable Release</h2>
 <p>
+<table>
+<tr>
+<td>
 <a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip"><img src="go-bottom.png"></a>
+</td>
+<td>
 <a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip">Henshin SDK 0.7.0</a>
+</td>
+</tr>
+</table>
 </p>
 
-<!--
 <h2>Nightly Builds</h2>
 <p>
-<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip"><img src="go-bottom.png"></a>
-<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip">Henshin SDK 0.7.0</a>
+<table>
+<tr>
+<td>
+<a href="$drops/0.7.0/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip"><img src="go-bottom.png"></a>
+</td>
+<td>
+<a href="$drops/0.7.0/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip">Henshin SDK SNAPSHOT</a>
+</td>
+</tr>
+</table>
 </p>
--->
+
 
 <!--
 		
