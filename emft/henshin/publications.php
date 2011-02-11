@@ -32,9 +32,10 @@ $html = <<<EOHTML
 <h1>$pageTitle</h1>
 
 <ul>
-<li><i>Henshin: Advanced Concepts and Tools for In-place EMF Model Transformations</i>.
-To&nbsp;appear in the Proceedings of <a href="http://models2010.ifi.uio.no/">MoDELS'10</a>, 
-Lecture Notes in Computer Science. Springer, 2010.
+<li><a href="http://www.springerlink.com/content/qrlj332wxhn01227/">Henshin: 
+Advanced Concepts and Tools for In-place EMF Model Transformations</a>.
+Proceedings of <a href="http://models2010.ifi.uio.no/">MoDELS'10</a>, 
+Lecture Notes in Computer Science, 2010, Volume 6394/2010, 121-135, DOI: 10.1007/978-3-642-16145-2_9.
 </li>
 <ul>
 
