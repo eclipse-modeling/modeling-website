@@ -25,40 +25,28 @@ $pageAuthor	= "Christian Krause";
 # End: page-specific settings
 #
 		
-# Paste your HTML content between the EOHTML markers!	
+
+$drops = "http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops";
 $html = <<<EOHTML
 
 <div id="maincontent">
 
 <div id="midcolumn">
 <h1>$pageTitle</h1>
-		
+
+<h2>Stable Releases</h2>
 <p>
-
-<h3>Version 0.6.0.I201009090000 (released 9 Sep. 2010)</h3>
-<ol>
-<li>SDK: 
-<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.6.0/I201009090000/Henshin-SDK-Incubation_0.6.0.I201009090000.zip">Henshin-SDK-Incubation_0.6.0.I201009090000.zip</a> 
-</li>
-</ol>
-
-
-<h3>Version 0.5.1.I201003091626 (released 4 May 2010)</h3>
-<ol>
-<li>SDK: 
-<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.5.1/I201003091626/Henshin-SDK-Incubation_0.5.1.I201003091626.zip">Henshin-SDK-Incubation_0.5.1.I201003091626.zip</a> 
-</li>
-</ol>
-
-
-<h3>Version 0.5.0.I201003102034</h3>
-<ol>
-<li>SDK: 
-<a href="http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops/0.5.0/I201003102034/Henshin-SDK-Incubation_0.5.0.I201003102034.zip">Henshin-SDK-Incubation_0.5.0.I201003102034.zip</a> 
-</li>
-</ol>
-
+<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip">Henshin SDK 0.7.0</a>
 </p>
+
+<!--
+<h2>Nightly Builds</h2>
+<p>
+<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.7.0/R201102111655/Henshin-SDK-Incubation_0.7.0.zip">Henshin SDK 0.7.0</a>
+</p>
+-->
 
 <!--
 		
