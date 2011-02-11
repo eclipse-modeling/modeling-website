@@ -48,7 +48,7 @@ $html = <<<EOHTML
 </table>
 </p>
 
-<h2>Nightly Builds</h2>
+<h2>Latest Nightly Build</h2>
 <p>
 <table>
 <tr>
