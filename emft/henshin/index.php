@@ -42,6 +42,11 @@ $html = <<<EOHTML
 	
 	$description
 		
+		
+	<h3>Screenshots</h3>
+	
+	<a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer"><img height="150" src="http://wiki.eclipse.org/images/4/4e/Statespace-explorer-phil-win32.png"></a>
+	
 	<!--
 		
 	<div class="homeitem">
