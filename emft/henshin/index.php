@@ -45,7 +45,9 @@ $html = <<<EOHTML
 		
 	<h3>Screenshots</h3>
 	
-	<a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer"><img height="150" src="http://wiki.eclipse.org/images/4/4e/Statespace-explorer-phil-win32.png"></a>
+	<a href="http://wiki.eclipse.org/Henshin_Transformation_Rules"><img height="120" src="http://wiki.eclipse.org/images/b/bc/Henshin_example_transformation_rule.png"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer"><img height="120" src="http://wiki.eclipse.org/images/4/4e/Statespace-explorer-phil-win32.png"></a>
 	
 	<!--
 		
