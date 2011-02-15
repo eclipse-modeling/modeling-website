@@ -59,6 +59,17 @@ You can get the latest version of the source code directly from our SVN reposito
 </ul>
 </p>
 
+
+<h2>Build Jobs</h2>
+<p>
+Release and nighly builds are compiled using Hudson jobs:
+<ul>
+<li>Releases: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_release/">https://hudson.eclipse.org/hudson/job/cbi_henshin_release/</li>
+<li>Nightly Builds: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly/">https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly/</li>
+</ul>
+</p>
+
+
 <!--
 
 <div class="homeitem">
