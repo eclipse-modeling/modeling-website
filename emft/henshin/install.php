@@ -55,7 +55,7 @@ You can get the latest version of the source code directly from our SVN reposito
 <p>
 You can get the latest version of the source code directly from our SVN repository:
 <ul>
-<li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</li>
+<li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</a></li>
 </ul>
 </p>
 
@@ -64,8 +64,8 @@ You can get the latest version of the source code directly from our SVN reposito
 <p>
 Release and nighly builds are compiled using Hudson jobs:
 <ul>
-<li>Releases: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_release/">https://hudson.eclipse.org/hudson/job/cbi_henshin_release/</li>
-<li>Nightly Builds: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly/">https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly/</li>
+<li>Releases: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_release/">https://hudson.eclipse.org/hudson/job/cbi_henshin_release</a></li>
+<li>Nightly Builds: <a href="https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly/">https://hudson.eclipse.org/hudson/job/cbi_henshin_nightly</a></li>
 </ul>
 </p>
 
