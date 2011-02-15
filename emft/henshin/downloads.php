@@ -53,10 +53,10 @@ $html = <<<EOHTML
 <table>
 <tr>
 <td>
-<a href="$drops/0.7.0/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.7.1/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip"><img src="go-bottom.png"></a>
 </td>
 <td>
-<a href="$drops/0.7.0/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip">Henshin SDK SNAPSHOT</a>
+<a href="$drops/0.7.1/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip">Henshin SDK 0.7.1 SNAPSHOT</a>
 </td>
 </tr>
 </table>
