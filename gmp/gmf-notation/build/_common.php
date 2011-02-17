@@ -19,7 +19,7 @@ $options = array (
 	 * matching dependencies for running a build. See also releng-common/tools/scripts/start_cron.sh
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
-	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|".
+	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-3.7|".
 			"2\.7\..+/[ISR]20.*/emf-xsd-SDK-",
 
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
