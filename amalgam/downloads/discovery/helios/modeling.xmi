@@ -2,6 +2,7 @@
 <discovery:DiscoveryDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:discovery="http://www.eclipse.org/amalgamation/discovery/1.0">
   <categories name="Model To Text" description="Model to Text (also known as code generation) tools and languages." relevance="6" image48="">
     <components name="Acceleo" provider="Eclipse.org" description="Acceleo is a standard-based template language focused on usability and pragmatism." license="EPL" image32="images/acceleo.png">
+      <sitesURLS>http://download.eclipse.org/modeling/m2t/acceleo/updates/releases/3.0/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/helios/</sitesURLS>
       <overview summary=" Acceleo is a pragmatic implementation of the Object Management Group (OMG) MOF Model to Text Language (MTL) standard.&#xA;&#xA;You do not need to be an expert to start using the plug-ins and create your first code generator : using the provided example projects and the powerful completion feature of the Acceleo editor, it is very easy to get started once you understand the basic principles. " screenshot="images/acceleo-screenshot-320x240.png"/>
       <id>org.eclipse.acceleo.sdk</id>
