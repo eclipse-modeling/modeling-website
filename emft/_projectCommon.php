@@ -82,7 +82,7 @@ $bugcoms = array_flip($projects);
 $bugcoms = preg_replace("/ /", "%20", $bugcoms);
 
 /* if set, both home and download page will redirect to a different landing page */
-$emft_home_redirects = array("texo" => "http://wiki.eclipse.org/Texo", "compare" => "http://www.eclipse.org/modeling/emf/?project=compare");
+$emft_home_redirects = array("texo" => "http://wiki.eclipse.org/Texo", "compare" => "http://www.eclipse.org/emf/compare");
 $emft_download_redirects = array("texo" => "http://wiki.eclipse.org/Texo/Download_and_Install", "compare" => "http://www.eclipse.org/modeling/emf/downloads/?project=compare");
 
 $extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
