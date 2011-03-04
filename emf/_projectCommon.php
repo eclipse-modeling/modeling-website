@@ -70,7 +70,8 @@ $projects = array(
 $emf_download_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install", 
 	"cdo" => "http://www.eclipse.org/cdo/downloads/");
 $emf_home_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo",
-	"cdo" => "http://www.eclipse.org/cdo/");
+	"cdo" => "http://www.eclipse.org/cdo/",
+	"compare" => "http://www.eclipse.org/emf/compare");
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
