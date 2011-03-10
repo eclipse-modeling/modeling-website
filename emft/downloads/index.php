@@ -12,6 +12,10 @@ if (isset($_GET["project"]) && isset($emft_download_redirects) && is_array($emft
 ob_start();
 
 /* config */
+/* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
+$extraZips = array(
+	"emft-mwe-Automated-Tests",
+);
 
 /* $project => sections/Project Name => (prettyname => filename) */
 /* only required if using something other than the default 4; otherwise will be generated */
