@@ -12,21 +12,21 @@
  *
  * </copyright>
  *
- * $Id: States.xtext,v 1.1 2011/03/12 20:46:05 ewillink Exp $
+ * $Id: States.xtext,v 1.2 2011/03/12 22:29:41 ewillink Exp $
  */
 grammar org.eclipse.ocl.tutorial.eclipsecon2011.States with org.eclipse.xtext.common.Terminals
 
 generate states "http://ocl.eclipse.org/tutorial/eclipsecon2011/States"
 
 Module:
-	'module' name=(STRING|ID)
+	'module' name=STRING
 	(machines+=Statemachine)*
 ;
 
 Statemachine:
 	(initial?='initial')? 'statemachine' name=ID ('value' value=INT)? '{'
 	'events' (events+=Event)* ';'
-	(states+=State)* '}' ('debug' dbgName=ID)?
+	(states+=State)* '}'
 ;
 
 Event:
@@ -36,14 +36,15 @@ State: SimpleState | CompoundState;
 
 SimpleState:
 	(initial?='initial')? 'state' name=ID ('value' value=INT)?
-	'{' (transitions+=Transition)* '}' ('debug' dbgName=ID)?
+	'{' (transitions+=Transition)* '}'
 ;
 
 CompoundState:
-	'compound' (initial?='initial')? 'state' name=ID 'machine' machine=[Statemachine]
-	'{' (transitions+=Transition)* '}' ('debug' dbgName=ID)?
+	'compound' (initial?='initial')? 'state' name=ID
+	'machine' machine=[Statemachine]
+	'{' (transitions+=Transition)* '}'
 ;
 
 Transition:
-	event=[Event] '=>' state=[State] ('debug' dbgName=ID)?
+	event=[Event] '=>' state=[State]
 ;

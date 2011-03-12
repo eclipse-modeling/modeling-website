@@ -23,12 +23,11 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalStatesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'statemachine'", "'{'", "'events'", "';'", "'}'", "'value'", "'debug'", "'state'", "'compound'", "'machine'", "'=>'", "'initial'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'statemachine'", "'{'", "'events'", "';'", "'}'", "'value'", "'state'", "'compound'", "'machine'", "'=>'", "'initial'"
     };
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
     public static final int RULE_ID=5;
-    public static final int T__23=23;
     public static final int T__20=20;
     public static final int T__13=13;
     public static final int RULE_STRING=4;
@@ -623,21 +622,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleTransition"
 
 
-    // $ANTLR start "rule__Module__NameAlternatives_1_0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:257:1: rule__Module__NameAlternatives_1_0 : ( ( RULE_STRING ) | ( RULE_ID ) );
-    public final void rule__Module__NameAlternatives_1_0() throws RecognitionException {
+    // $ANTLR start "rule__State__Alternatives"
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:257:1: rule__State__Alternatives : ( ( ruleSimpleState ) | ( ruleCompoundState ) );
+    public final void rule__State__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:261:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:261:1: ( ( ruleSimpleState ) | ( ruleCompoundState ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==RULE_STRING) ) {
+            if ( (LA1_0==18||LA1_0==22) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==RULE_ID) ) {
+            else if ( (LA1_0==19) ) {
                 alt1=2;
             }
             else {
@@ -648,84 +647,13 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:262:1: ( RULE_STRING )
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:262:1: ( ruleSimpleState )
                     {
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:262:1: ( RULE_STRING )
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:263:1: RULE_STRING
-                    {
-                     before(grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0_0()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Module__NameAlternatives_1_0490); 
-                     after(grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:268:6: ( RULE_ID )
-                    {
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:268:6: ( RULE_ID )
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:269:1: RULE_ID
-                    {
-                     before(grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_1_0_1()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Module__NameAlternatives_1_0507); 
-                     after(grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_1_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Module__NameAlternatives_1_0"
-
-
-    // $ANTLR start "rule__State__Alternatives"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:279:1: rule__State__Alternatives : ( ( ruleSimpleState ) | ( ruleCompoundState ) );
-    public final void rule__State__Alternatives() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:283:1: ( ( ruleSimpleState ) | ( ruleCompoundState ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==19||LA2_0==23) ) {
-                alt2=1;
-            }
-            else if ( (LA2_0==20) ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
-
-                throw nvae;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:284:1: ( ruleSimpleState )
-                    {
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:284:1: ( ruleSimpleState )
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:285:1: ruleSimpleState
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:262:1: ( ruleSimpleState )
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:263:1: ruleSimpleState
                     {
                      before(grammarAccess.getStateAccess().getSimpleStateParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleSimpleState_in_rule__State__Alternatives539);
+                    pushFollow(FOLLOW_ruleSimpleState_in_rule__State__Alternatives490);
                     ruleSimpleState();
 
                     state._fsp--;
@@ -738,13 +666,13 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:290:6: ( ruleCompoundState )
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:268:6: ( ruleCompoundState )
                     {
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:290:6: ( ruleCompoundState )
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:291:1: ruleCompoundState
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:268:6: ( ruleCompoundState )
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:269:1: ruleCompoundState
                     {
                      before(grammarAccess.getStateAccess().getCompoundStateParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleCompoundState_in_rule__State__Alternatives556);
+                    pushFollow(FOLLOW_ruleCompoundState_in_rule__State__Alternatives507);
                     ruleCompoundState();
 
                     state._fsp--;
@@ -774,21 +702,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:303:1: rule__Module__Group__0 : rule__Module__Group__0__Impl rule__Module__Group__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:281:1: rule__Module__Group__0 : rule__Module__Group__0__Impl rule__Module__Group__1 ;
     public final void rule__Module__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:307:1: ( rule__Module__Group__0__Impl rule__Module__Group__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:308:2: rule__Module__Group__0__Impl rule__Module__Group__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:285:1: ( rule__Module__Group__0__Impl rule__Module__Group__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:286:2: rule__Module__Group__0__Impl rule__Module__Group__1
             {
-            pushFollow(FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__0586);
+            pushFollow(FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__0537);
             rule__Module__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__1_in_rule__Module__Group__0589);
+            pushFollow(FOLLOW_rule__Module__Group__1_in_rule__Module__Group__0540);
             rule__Module__Group__1();
 
             state._fsp--;
@@ -812,20 +740,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:315:1: rule__Module__Group__0__Impl : ( 'module' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:293:1: rule__Module__Group__0__Impl : ( 'module' ) ;
     public final void rule__Module__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:319:1: ( ( 'module' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:320:1: ( 'module' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:297:1: ( ( 'module' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:298:1: ( 'module' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:320:1: ( 'module' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:321:1: 'module'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:298:1: ( 'module' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:299:1: 'module'
             {
              before(grammarAccess.getModuleAccess().getModuleKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Module__Group__0__Impl617); 
+            match(input,11,FOLLOW_11_in_rule__Module__Group__0__Impl568); 
              after(grammarAccess.getModuleAccess().getModuleKeyword_0()); 
 
             }
@@ -849,21 +777,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:334:1: rule__Module__Group__1 : rule__Module__Group__1__Impl rule__Module__Group__2 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:312:1: rule__Module__Group__1 : rule__Module__Group__1__Impl rule__Module__Group__2 ;
     public final void rule__Module__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:338:1: ( rule__Module__Group__1__Impl rule__Module__Group__2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:339:2: rule__Module__Group__1__Impl rule__Module__Group__2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:316:1: ( rule__Module__Group__1__Impl rule__Module__Group__2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:317:2: rule__Module__Group__1__Impl rule__Module__Group__2
             {
-            pushFollow(FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__1648);
+            pushFollow(FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__1599);
             rule__Module__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__2_in_rule__Module__Group__1651);
+            pushFollow(FOLLOW_rule__Module__Group__2_in_rule__Module__Group__1602);
             rule__Module__Group__2();
 
             state._fsp--;
@@ -887,23 +815,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:346:1: rule__Module__Group__1__Impl : ( ( rule__Module__NameAssignment_1 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:324:1: rule__Module__Group__1__Impl : ( ( rule__Module__NameAssignment_1 ) ) ;
     public final void rule__Module__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:350:1: ( ( ( rule__Module__NameAssignment_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:351:1: ( ( rule__Module__NameAssignment_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:328:1: ( ( ( rule__Module__NameAssignment_1 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:329:1: ( ( rule__Module__NameAssignment_1 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:351:1: ( ( rule__Module__NameAssignment_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:352:1: ( rule__Module__NameAssignment_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:329:1: ( ( rule__Module__NameAssignment_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:330:1: ( rule__Module__NameAssignment_1 )
             {
              before(grammarAccess.getModuleAccess().getNameAssignment_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:353:1: ( rule__Module__NameAssignment_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:353:2: rule__Module__NameAssignment_1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:331:1: ( rule__Module__NameAssignment_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:331:2: rule__Module__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Module__NameAssignment_1_in_rule__Module__Group__1__Impl678);
+            pushFollow(FOLLOW_rule__Module__NameAssignment_1_in_rule__Module__Group__1__Impl629);
             rule__Module__NameAssignment_1();
 
             state._fsp--;
@@ -934,16 +862,16 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:363:1: rule__Module__Group__2 : rule__Module__Group__2__Impl ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:341:1: rule__Module__Group__2 : rule__Module__Group__2__Impl ;
     public final void rule__Module__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:367:1: ( rule__Module__Group__2__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:368:2: rule__Module__Group__2__Impl
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:345:1: ( rule__Module__Group__2__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:346:2: rule__Module__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__2708);
+            pushFollow(FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__2659);
             rule__Module__Group__2__Impl();
 
             state._fsp--;
@@ -967,35 +895,35 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__2__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:374:1: rule__Module__Group__2__Impl : ( ( rule__Module__MachinesAssignment_2 )* ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:352:1: rule__Module__Group__2__Impl : ( ( rule__Module__MachinesAssignment_2 )* ) ;
     public final void rule__Module__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:378:1: ( ( ( rule__Module__MachinesAssignment_2 )* ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:379:1: ( ( rule__Module__MachinesAssignment_2 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:356:1: ( ( ( rule__Module__MachinesAssignment_2 )* ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:357:1: ( ( rule__Module__MachinesAssignment_2 )* )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:379:1: ( ( rule__Module__MachinesAssignment_2 )* )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:380:1: ( rule__Module__MachinesAssignment_2 )*
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:357:1: ( ( rule__Module__MachinesAssignment_2 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:358:1: ( rule__Module__MachinesAssignment_2 )*
             {
              before(grammarAccess.getModuleAccess().getMachinesAssignment_2()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:381:1: ( rule__Module__MachinesAssignment_2 )*
-            loop3:
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:359:1: ( rule__Module__MachinesAssignment_2 )*
+            loop2:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( (LA3_0==12||LA3_0==23) ) {
-                    alt3=1;
+                if ( (LA2_0==12||LA2_0==22) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt2) {
             	case 1 :
-            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:381:2: rule__Module__MachinesAssignment_2
+            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:359:2: rule__Module__MachinesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Module__MachinesAssignment_2_in_rule__Module__Group__2__Impl735);
+            	    pushFollow(FOLLOW_rule__Module__MachinesAssignment_2_in_rule__Module__Group__2__Impl686);
             	    rule__Module__MachinesAssignment_2();
 
             	    state._fsp--;
@@ -1005,7 +933,7 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop3;
+            	    break loop2;
                 }
             } while (true);
 
@@ -1032,21 +960,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:397:1: rule__Statemachine__Group__0 : rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:375:1: rule__Statemachine__Group__0 : rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1 ;
     public final void rule__Statemachine__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:401:1: ( rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:402:2: rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:379:1: ( rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:380:2: rule__Statemachine__Group__0__Impl rule__Statemachine__Group__1
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__0__Impl_in_rule__Statemachine__Group__0772);
+            pushFollow(FOLLOW_rule__Statemachine__Group__0__Impl_in_rule__Statemachine__Group__0723);
             rule__Statemachine__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__1_in_rule__Statemachine__Group__0775);
+            pushFollow(FOLLOW_rule__Statemachine__Group__1_in_rule__Statemachine__Group__0726);
             rule__Statemachine__Group__1();
 
             state._fsp--;
@@ -1070,31 +998,31 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:409:1: rule__Statemachine__Group__0__Impl : ( ( rule__Statemachine__InitialAssignment_0 )? ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:387:1: rule__Statemachine__Group__0__Impl : ( ( rule__Statemachine__InitialAssignment_0 )? ) ;
     public final void rule__Statemachine__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:413:1: ( ( ( rule__Statemachine__InitialAssignment_0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:414:1: ( ( rule__Statemachine__InitialAssignment_0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:391:1: ( ( ( rule__Statemachine__InitialAssignment_0 )? ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:392:1: ( ( rule__Statemachine__InitialAssignment_0 )? )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:414:1: ( ( rule__Statemachine__InitialAssignment_0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:415:1: ( rule__Statemachine__InitialAssignment_0 )?
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:392:1: ( ( rule__Statemachine__InitialAssignment_0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:393:1: ( rule__Statemachine__InitialAssignment_0 )?
             {
              before(grammarAccess.getStatemachineAccess().getInitialAssignment_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:416:1: ( rule__Statemachine__InitialAssignment_0 )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:394:1: ( rule__Statemachine__InitialAssignment_0 )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA4_0==23) ) {
-                alt4=1;
+            if ( (LA3_0==22) ) {
+                alt3=1;
             }
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:416:2: rule__Statemachine__InitialAssignment_0
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:394:2: rule__Statemachine__InitialAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Statemachine__InitialAssignment_0_in_rule__Statemachine__Group__0__Impl802);
+                    pushFollow(FOLLOW_rule__Statemachine__InitialAssignment_0_in_rule__Statemachine__Group__0__Impl753);
                     rule__Statemachine__InitialAssignment_0();
 
                     state._fsp--;
@@ -1128,21 +1056,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:426:1: rule__Statemachine__Group__1 : rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:404:1: rule__Statemachine__Group__1 : rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2 ;
     public final void rule__Statemachine__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:430:1: ( rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:431:2: rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:408:1: ( rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:409:2: rule__Statemachine__Group__1__Impl rule__Statemachine__Group__2
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__1833);
+            pushFollow(FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__1784);
             rule__Statemachine__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__2_in_rule__Statemachine__Group__1836);
+            pushFollow(FOLLOW_rule__Statemachine__Group__2_in_rule__Statemachine__Group__1787);
             rule__Statemachine__Group__2();
 
             state._fsp--;
@@ -1166,20 +1094,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:438:1: rule__Statemachine__Group__1__Impl : ( 'statemachine' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:416:1: rule__Statemachine__Group__1__Impl : ( 'statemachine' ) ;
     public final void rule__Statemachine__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:442:1: ( ( 'statemachine' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:443:1: ( 'statemachine' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:420:1: ( ( 'statemachine' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:421:1: ( 'statemachine' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:443:1: ( 'statemachine' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:444:1: 'statemachine'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:421:1: ( 'statemachine' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:422:1: 'statemachine'
             {
              before(grammarAccess.getStatemachineAccess().getStatemachineKeyword_1()); 
-            match(input,12,FOLLOW_12_in_rule__Statemachine__Group__1__Impl864); 
+            match(input,12,FOLLOW_12_in_rule__Statemachine__Group__1__Impl815); 
              after(grammarAccess.getStatemachineAccess().getStatemachineKeyword_1()); 
 
             }
@@ -1203,21 +1131,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:457:1: rule__Statemachine__Group__2 : rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:435:1: rule__Statemachine__Group__2 : rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3 ;
     public final void rule__Statemachine__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:461:1: ( rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:462:2: rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:439:1: ( rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:440:2: rule__Statemachine__Group__2__Impl rule__Statemachine__Group__3
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__2__Impl_in_rule__Statemachine__Group__2895);
+            pushFollow(FOLLOW_rule__Statemachine__Group__2__Impl_in_rule__Statemachine__Group__2846);
             rule__Statemachine__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__3_in_rule__Statemachine__Group__2898);
+            pushFollow(FOLLOW_rule__Statemachine__Group__3_in_rule__Statemachine__Group__2849);
             rule__Statemachine__Group__3();
 
             state._fsp--;
@@ -1241,23 +1169,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__2__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:469:1: rule__Statemachine__Group__2__Impl : ( ( rule__Statemachine__NameAssignment_2 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:447:1: rule__Statemachine__Group__2__Impl : ( ( rule__Statemachine__NameAssignment_2 ) ) ;
     public final void rule__Statemachine__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:473:1: ( ( ( rule__Statemachine__NameAssignment_2 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:474:1: ( ( rule__Statemachine__NameAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:451:1: ( ( ( rule__Statemachine__NameAssignment_2 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:452:1: ( ( rule__Statemachine__NameAssignment_2 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:474:1: ( ( rule__Statemachine__NameAssignment_2 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:475:1: ( rule__Statemachine__NameAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:452:1: ( ( rule__Statemachine__NameAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:453:1: ( rule__Statemachine__NameAssignment_2 )
             {
              before(grammarAccess.getStatemachineAccess().getNameAssignment_2()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:476:1: ( rule__Statemachine__NameAssignment_2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:476:2: rule__Statemachine__NameAssignment_2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:454:1: ( rule__Statemachine__NameAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:454:2: rule__Statemachine__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Statemachine__NameAssignment_2_in_rule__Statemachine__Group__2__Impl925);
+            pushFollow(FOLLOW_rule__Statemachine__NameAssignment_2_in_rule__Statemachine__Group__2__Impl876);
             rule__Statemachine__NameAssignment_2();
 
             state._fsp--;
@@ -1288,21 +1216,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__3"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:486:1: rule__Statemachine__Group__3 : rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:464:1: rule__Statemachine__Group__3 : rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4 ;
     public final void rule__Statemachine__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:490:1: ( rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:491:2: rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:468:1: ( rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:469:2: rule__Statemachine__Group__3__Impl rule__Statemachine__Group__4
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__3__Impl_in_rule__Statemachine__Group__3955);
+            pushFollow(FOLLOW_rule__Statemachine__Group__3__Impl_in_rule__Statemachine__Group__3906);
             rule__Statemachine__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__4_in_rule__Statemachine__Group__3958);
+            pushFollow(FOLLOW_rule__Statemachine__Group__4_in_rule__Statemachine__Group__3909);
             rule__Statemachine__Group__4();
 
             state._fsp--;
@@ -1326,31 +1254,31 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__3__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:498:1: rule__Statemachine__Group__3__Impl : ( ( rule__Statemachine__Group_3__0 )? ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:476:1: rule__Statemachine__Group__3__Impl : ( ( rule__Statemachine__Group_3__0 )? ) ;
     public final void rule__Statemachine__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:502:1: ( ( ( rule__Statemachine__Group_3__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:503:1: ( ( rule__Statemachine__Group_3__0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:480:1: ( ( ( rule__Statemachine__Group_3__0 )? ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:481:1: ( ( rule__Statemachine__Group_3__0 )? )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:503:1: ( ( rule__Statemachine__Group_3__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:504:1: ( rule__Statemachine__Group_3__0 )?
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:481:1: ( ( rule__Statemachine__Group_3__0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:482:1: ( rule__Statemachine__Group_3__0 )?
             {
              before(grammarAccess.getStatemachineAccess().getGroup_3()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:505:1: ( rule__Statemachine__Group_3__0 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:483:1: ( rule__Statemachine__Group_3__0 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA5_0==17) ) {
-                alt5=1;
+            if ( (LA4_0==17) ) {
+                alt4=1;
             }
-            switch (alt5) {
+            switch (alt4) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:505:2: rule__Statemachine__Group_3__0
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:483:2: rule__Statemachine__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Statemachine__Group_3__0_in_rule__Statemachine__Group__3__Impl985);
+                    pushFollow(FOLLOW_rule__Statemachine__Group_3__0_in_rule__Statemachine__Group__3__Impl936);
                     rule__Statemachine__Group_3__0();
 
                     state._fsp--;
@@ -1384,21 +1312,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__4"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:515:1: rule__Statemachine__Group__4 : rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:493:1: rule__Statemachine__Group__4 : rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5 ;
     public final void rule__Statemachine__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:519:1: ( rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:520:2: rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:497:1: ( rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:498:2: rule__Statemachine__Group__4__Impl rule__Statemachine__Group__5
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__4__Impl_in_rule__Statemachine__Group__41016);
+            pushFollow(FOLLOW_rule__Statemachine__Group__4__Impl_in_rule__Statemachine__Group__4967);
             rule__Statemachine__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__5_in_rule__Statemachine__Group__41019);
+            pushFollow(FOLLOW_rule__Statemachine__Group__5_in_rule__Statemachine__Group__4970);
             rule__Statemachine__Group__5();
 
             state._fsp--;
@@ -1422,20 +1350,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__4__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:527:1: rule__Statemachine__Group__4__Impl : ( '{' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:505:1: rule__Statemachine__Group__4__Impl : ( '{' ) ;
     public final void rule__Statemachine__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:531:1: ( ( '{' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:532:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:509:1: ( ( '{' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:510:1: ( '{' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:532:1: ( '{' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:533:1: '{'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:510:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:511:1: '{'
             {
              before(grammarAccess.getStatemachineAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__Statemachine__Group__4__Impl1047); 
+            match(input,13,FOLLOW_13_in_rule__Statemachine__Group__4__Impl998); 
              after(grammarAccess.getStatemachineAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
@@ -1459,21 +1387,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__5"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:546:1: rule__Statemachine__Group__5 : rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:524:1: rule__Statemachine__Group__5 : rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6 ;
     public final void rule__Statemachine__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:550:1: ( rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:551:2: rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:528:1: ( rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:529:2: rule__Statemachine__Group__5__Impl rule__Statemachine__Group__6
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__5__Impl_in_rule__Statemachine__Group__51078);
+            pushFollow(FOLLOW_rule__Statemachine__Group__5__Impl_in_rule__Statemachine__Group__51029);
             rule__Statemachine__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__6_in_rule__Statemachine__Group__51081);
+            pushFollow(FOLLOW_rule__Statemachine__Group__6_in_rule__Statemachine__Group__51032);
             rule__Statemachine__Group__6();
 
             state._fsp--;
@@ -1497,20 +1425,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__5__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:558:1: rule__Statemachine__Group__5__Impl : ( 'events' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:536:1: rule__Statemachine__Group__5__Impl : ( 'events' ) ;
     public final void rule__Statemachine__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:562:1: ( ( 'events' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:563:1: ( 'events' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:540:1: ( ( 'events' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:541:1: ( 'events' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:563:1: ( 'events' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:564:1: 'events'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:541:1: ( 'events' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:542:1: 'events'
             {
              before(grammarAccess.getStatemachineAccess().getEventsKeyword_5()); 
-            match(input,14,FOLLOW_14_in_rule__Statemachine__Group__5__Impl1109); 
+            match(input,14,FOLLOW_14_in_rule__Statemachine__Group__5__Impl1060); 
              after(grammarAccess.getStatemachineAccess().getEventsKeyword_5()); 
 
             }
@@ -1534,21 +1462,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__6"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:577:1: rule__Statemachine__Group__6 : rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:555:1: rule__Statemachine__Group__6 : rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7 ;
     public final void rule__Statemachine__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:581:1: ( rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:582:2: rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:559:1: ( rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:560:2: rule__Statemachine__Group__6__Impl rule__Statemachine__Group__7
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__6__Impl_in_rule__Statemachine__Group__61140);
+            pushFollow(FOLLOW_rule__Statemachine__Group__6__Impl_in_rule__Statemachine__Group__61091);
             rule__Statemachine__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__7_in_rule__Statemachine__Group__61143);
+            pushFollow(FOLLOW_rule__Statemachine__Group__7_in_rule__Statemachine__Group__61094);
             rule__Statemachine__Group__7();
 
             state._fsp--;
@@ -1572,35 +1500,35 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__6__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:589:1: rule__Statemachine__Group__6__Impl : ( ( rule__Statemachine__EventsAssignment_6 )* ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:567:1: rule__Statemachine__Group__6__Impl : ( ( rule__Statemachine__EventsAssignment_6 )* ) ;
     public final void rule__Statemachine__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:593:1: ( ( ( rule__Statemachine__EventsAssignment_6 )* ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:594:1: ( ( rule__Statemachine__EventsAssignment_6 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:571:1: ( ( ( rule__Statemachine__EventsAssignment_6 )* ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:572:1: ( ( rule__Statemachine__EventsAssignment_6 )* )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:594:1: ( ( rule__Statemachine__EventsAssignment_6 )* )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:595:1: ( rule__Statemachine__EventsAssignment_6 )*
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:572:1: ( ( rule__Statemachine__EventsAssignment_6 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:573:1: ( rule__Statemachine__EventsAssignment_6 )*
             {
              before(grammarAccess.getStatemachineAccess().getEventsAssignment_6()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:596:1: ( rule__Statemachine__EventsAssignment_6 )*
-            loop6:
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:574:1: ( rule__Statemachine__EventsAssignment_6 )*
+            loop5:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA6_0==RULE_ID) ) {
-                    alt6=1;
+                if ( (LA5_0==RULE_ID) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt5) {
             	case 1 :
-            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:596:2: rule__Statemachine__EventsAssignment_6
+            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:574:2: rule__Statemachine__EventsAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__Statemachine__EventsAssignment_6_in_rule__Statemachine__Group__6__Impl1170);
+            	    pushFollow(FOLLOW_rule__Statemachine__EventsAssignment_6_in_rule__Statemachine__Group__6__Impl1121);
             	    rule__Statemachine__EventsAssignment_6();
 
             	    state._fsp--;
@@ -1610,7 +1538,7 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop5;
                 }
             } while (true);
 
@@ -1637,21 +1565,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__7"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:606:1: rule__Statemachine__Group__7 : rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:584:1: rule__Statemachine__Group__7 : rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8 ;
     public final void rule__Statemachine__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:610:1: ( rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:611:2: rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:588:1: ( rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:589:2: rule__Statemachine__Group__7__Impl rule__Statemachine__Group__8
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__7__Impl_in_rule__Statemachine__Group__71201);
+            pushFollow(FOLLOW_rule__Statemachine__Group__7__Impl_in_rule__Statemachine__Group__71152);
             rule__Statemachine__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__8_in_rule__Statemachine__Group__71204);
+            pushFollow(FOLLOW_rule__Statemachine__Group__8_in_rule__Statemachine__Group__71155);
             rule__Statemachine__Group__8();
 
             state._fsp--;
@@ -1675,20 +1603,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__7__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:618:1: rule__Statemachine__Group__7__Impl : ( ';' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:596:1: rule__Statemachine__Group__7__Impl : ( ';' ) ;
     public final void rule__Statemachine__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:622:1: ( ( ';' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:623:1: ( ';' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:600:1: ( ( ';' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:601:1: ( ';' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:623:1: ( ';' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:624:1: ';'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:601:1: ( ';' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:602:1: ';'
             {
              before(grammarAccess.getStatemachineAccess().getSemicolonKeyword_7()); 
-            match(input,15,FOLLOW_15_in_rule__Statemachine__Group__7__Impl1232); 
+            match(input,15,FOLLOW_15_in_rule__Statemachine__Group__7__Impl1183); 
              after(grammarAccess.getStatemachineAccess().getSemicolonKeyword_7()); 
 
             }
@@ -1712,21 +1640,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__8"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:637:1: rule__Statemachine__Group__8 : rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:615:1: rule__Statemachine__Group__8 : rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9 ;
     public final void rule__Statemachine__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:641:1: ( rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:642:2: rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:619:1: ( rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:620:2: rule__Statemachine__Group__8__Impl rule__Statemachine__Group__9
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__8__Impl_in_rule__Statemachine__Group__81263);
+            pushFollow(FOLLOW_rule__Statemachine__Group__8__Impl_in_rule__Statemachine__Group__81214);
             rule__Statemachine__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group__9_in_rule__Statemachine__Group__81266);
+            pushFollow(FOLLOW_rule__Statemachine__Group__9_in_rule__Statemachine__Group__81217);
             rule__Statemachine__Group__9();
 
             state._fsp--;
@@ -1750,35 +1678,35 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__8__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:649:1: rule__Statemachine__Group__8__Impl : ( ( rule__Statemachine__StatesAssignment_8 )* ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:627:1: rule__Statemachine__Group__8__Impl : ( ( rule__Statemachine__StatesAssignment_8 )* ) ;
     public final void rule__Statemachine__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:653:1: ( ( ( rule__Statemachine__StatesAssignment_8 )* ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:654:1: ( ( rule__Statemachine__StatesAssignment_8 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:631:1: ( ( ( rule__Statemachine__StatesAssignment_8 )* ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:632:1: ( ( rule__Statemachine__StatesAssignment_8 )* )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:654:1: ( ( rule__Statemachine__StatesAssignment_8 )* )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:655:1: ( rule__Statemachine__StatesAssignment_8 )*
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:632:1: ( ( rule__Statemachine__StatesAssignment_8 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:633:1: ( rule__Statemachine__StatesAssignment_8 )*
             {
              before(grammarAccess.getStatemachineAccess().getStatesAssignment_8()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:656:1: ( rule__Statemachine__StatesAssignment_8 )*
-            loop7:
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:634:1: ( rule__Statemachine__StatesAssignment_8 )*
+            loop6:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( ((LA7_0>=19 && LA7_0<=20)||LA7_0==23) ) {
-                    alt7=1;
+                if ( ((LA6_0>=18 && LA6_0<=19)||LA6_0==22) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt6) {
             	case 1 :
-            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:656:2: rule__Statemachine__StatesAssignment_8
+            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:634:2: rule__Statemachine__StatesAssignment_8
             	    {
-            	    pushFollow(FOLLOW_rule__Statemachine__StatesAssignment_8_in_rule__Statemachine__Group__8__Impl1293);
+            	    pushFollow(FOLLOW_rule__Statemachine__StatesAssignment_8_in_rule__Statemachine__Group__8__Impl1244);
             	    rule__Statemachine__StatesAssignment_8();
 
             	    state._fsp--;
@@ -1788,7 +1716,7 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop6;
                 }
             } while (true);
 
@@ -1815,22 +1743,17 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__9"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:666:1: rule__Statemachine__Group__9 : rule__Statemachine__Group__9__Impl rule__Statemachine__Group__10 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:644:1: rule__Statemachine__Group__9 : rule__Statemachine__Group__9__Impl ;
     public final void rule__Statemachine__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:670:1: ( rule__Statemachine__Group__9__Impl rule__Statemachine__Group__10 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:671:2: rule__Statemachine__Group__9__Impl rule__Statemachine__Group__10
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:648:1: ( rule__Statemachine__Group__9__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:649:2: rule__Statemachine__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group__9__Impl_in_rule__Statemachine__Group__91324);
+            pushFollow(FOLLOW_rule__Statemachine__Group__9__Impl_in_rule__Statemachine__Group__91275);
             rule__Statemachine__Group__9__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Statemachine__Group__10_in_rule__Statemachine__Group__91327);
-            rule__Statemachine__Group__10();
 
             state._fsp--;
 
@@ -1853,20 +1776,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group__9__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:678:1: rule__Statemachine__Group__9__Impl : ( '}' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:655:1: rule__Statemachine__Group__9__Impl : ( '}' ) ;
     public final void rule__Statemachine__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:682:1: ( ( '}' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:683:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:659:1: ( ( '}' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:660:1: ( '}' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:683:1: ( '}' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:684:1: '}'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:660:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:661:1: '}'
             {
              before(grammarAccess.getStatemachineAccess().getRightCurlyBracketKeyword_9()); 
-            match(input,16,FOLLOW_16_in_rule__Statemachine__Group__9__Impl1355); 
+            match(input,16,FOLLOW_16_in_rule__Statemachine__Group__9__Impl1303); 
              after(grammarAccess.getStatemachineAccess().getRightCurlyBracketKeyword_9()); 
 
             }
@@ -1889,113 +1812,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statemachine__Group__9__Impl"
 
 
-    // $ANTLR start "rule__Statemachine__Group__10"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:697:1: rule__Statemachine__Group__10 : rule__Statemachine__Group__10__Impl ;
-    public final void rule__Statemachine__Group__10() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:701:1: ( rule__Statemachine__Group__10__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:702:2: rule__Statemachine__Group__10__Impl
-            {
-            pushFollow(FOLLOW_rule__Statemachine__Group__10__Impl_in_rule__Statemachine__Group__101386);
-            rule__Statemachine__Group__10__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group__10"
-
-
-    // $ANTLR start "rule__Statemachine__Group__10__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:708:1: rule__Statemachine__Group__10__Impl : ( ( rule__Statemachine__Group_10__0 )? ) ;
-    public final void rule__Statemachine__Group__10__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:712:1: ( ( ( rule__Statemachine__Group_10__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:713:1: ( ( rule__Statemachine__Group_10__0 )? )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:713:1: ( ( rule__Statemachine__Group_10__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:714:1: ( rule__Statemachine__Group_10__0 )?
-            {
-             before(grammarAccess.getStatemachineAccess().getGroup_10()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:715:1: ( rule__Statemachine__Group_10__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==18) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:715:2: rule__Statemachine__Group_10__0
-                    {
-                    pushFollow(FOLLOW_rule__Statemachine__Group_10__0_in_rule__Statemachine__Group__10__Impl1413);
-                    rule__Statemachine__Group_10__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getStatemachineAccess().getGroup_10()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group__10__Impl"
-
-
     // $ANTLR start "rule__Statemachine__Group_3__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:747:1: rule__Statemachine__Group_3__0 : rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:694:1: rule__Statemachine__Group_3__0 : rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1 ;
     public final void rule__Statemachine__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:751:1: ( rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:752:2: rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:698:1: ( rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:699:2: rule__Statemachine__Group_3__0__Impl rule__Statemachine__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group_3__0__Impl_in_rule__Statemachine__Group_3__01466);
+            pushFollow(FOLLOW_rule__Statemachine__Group_3__0__Impl_in_rule__Statemachine__Group_3__01354);
             rule__Statemachine__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Statemachine__Group_3__1_in_rule__Statemachine__Group_3__01469);
+            pushFollow(FOLLOW_rule__Statemachine__Group_3__1_in_rule__Statemachine__Group_3__01357);
             rule__Statemachine__Group_3__1();
 
             state._fsp--;
@@ -2019,20 +1851,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group_3__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:759:1: rule__Statemachine__Group_3__0__Impl : ( 'value' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:706:1: rule__Statemachine__Group_3__0__Impl : ( 'value' ) ;
     public final void rule__Statemachine__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:763:1: ( ( 'value' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:764:1: ( 'value' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:710:1: ( ( 'value' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:711:1: ( 'value' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:764:1: ( 'value' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:765:1: 'value'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:711:1: ( 'value' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:712:1: 'value'
             {
              before(grammarAccess.getStatemachineAccess().getValueKeyword_3_0()); 
-            match(input,17,FOLLOW_17_in_rule__Statemachine__Group_3__0__Impl1497); 
+            match(input,17,FOLLOW_17_in_rule__Statemachine__Group_3__0__Impl1385); 
              after(grammarAccess.getStatemachineAccess().getValueKeyword_3_0()); 
 
             }
@@ -2056,16 +1888,16 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group_3__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:778:1: rule__Statemachine__Group_3__1 : rule__Statemachine__Group_3__1__Impl ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:725:1: rule__Statemachine__Group_3__1 : rule__Statemachine__Group_3__1__Impl ;
     public final void rule__Statemachine__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:782:1: ( rule__Statemachine__Group_3__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:783:2: rule__Statemachine__Group_3__1__Impl
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:729:1: ( rule__Statemachine__Group_3__1__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:730:2: rule__Statemachine__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Statemachine__Group_3__1__Impl_in_rule__Statemachine__Group_3__11528);
+            pushFollow(FOLLOW_rule__Statemachine__Group_3__1__Impl_in_rule__Statemachine__Group_3__11416);
             rule__Statemachine__Group_3__1__Impl();
 
             state._fsp--;
@@ -2089,23 +1921,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__Group_3__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:789:1: rule__Statemachine__Group_3__1__Impl : ( ( rule__Statemachine__ValueAssignment_3_1 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:736:1: rule__Statemachine__Group_3__1__Impl : ( ( rule__Statemachine__ValueAssignment_3_1 ) ) ;
     public final void rule__Statemachine__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:793:1: ( ( ( rule__Statemachine__ValueAssignment_3_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:794:1: ( ( rule__Statemachine__ValueAssignment_3_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:740:1: ( ( ( rule__Statemachine__ValueAssignment_3_1 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:741:1: ( ( rule__Statemachine__ValueAssignment_3_1 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:794:1: ( ( rule__Statemachine__ValueAssignment_3_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:795:1: ( rule__Statemachine__ValueAssignment_3_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:741:1: ( ( rule__Statemachine__ValueAssignment_3_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:742:1: ( rule__Statemachine__ValueAssignment_3_1 )
             {
              before(grammarAccess.getStatemachineAccess().getValueAssignment_3_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:796:1: ( rule__Statemachine__ValueAssignment_3_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:796:2: rule__Statemachine__ValueAssignment_3_1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:743:1: ( rule__Statemachine__ValueAssignment_3_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:743:2: rule__Statemachine__ValueAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Statemachine__ValueAssignment_3_1_in_rule__Statemachine__Group_3__1__Impl1555);
+            pushFollow(FOLLOW_rule__Statemachine__ValueAssignment_3_1_in_rule__Statemachine__Group_3__1__Impl1443);
             rule__Statemachine__ValueAssignment_3_1();
 
             state._fsp--;
@@ -2135,177 +1967,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statemachine__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__Statemachine__Group_10__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:810:1: rule__Statemachine__Group_10__0 : rule__Statemachine__Group_10__0__Impl rule__Statemachine__Group_10__1 ;
-    public final void rule__Statemachine__Group_10__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:814:1: ( rule__Statemachine__Group_10__0__Impl rule__Statemachine__Group_10__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:815:2: rule__Statemachine__Group_10__0__Impl rule__Statemachine__Group_10__1
-            {
-            pushFollow(FOLLOW_rule__Statemachine__Group_10__0__Impl_in_rule__Statemachine__Group_10__01589);
-            rule__Statemachine__Group_10__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Statemachine__Group_10__1_in_rule__Statemachine__Group_10__01592);
-            rule__Statemachine__Group_10__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group_10__0"
-
-
-    // $ANTLR start "rule__Statemachine__Group_10__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:822:1: rule__Statemachine__Group_10__0__Impl : ( 'debug' ) ;
-    public final void rule__Statemachine__Group_10__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:826:1: ( ( 'debug' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:827:1: ( 'debug' )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:827:1: ( 'debug' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:828:1: 'debug'
-            {
-             before(grammarAccess.getStatemachineAccess().getDebugKeyword_10_0()); 
-            match(input,18,FOLLOW_18_in_rule__Statemachine__Group_10__0__Impl1620); 
-             after(grammarAccess.getStatemachineAccess().getDebugKeyword_10_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group_10__0__Impl"
-
-
-    // $ANTLR start "rule__Statemachine__Group_10__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:841:1: rule__Statemachine__Group_10__1 : rule__Statemachine__Group_10__1__Impl ;
-    public final void rule__Statemachine__Group_10__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:845:1: ( rule__Statemachine__Group_10__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:846:2: rule__Statemachine__Group_10__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Statemachine__Group_10__1__Impl_in_rule__Statemachine__Group_10__11651);
-            rule__Statemachine__Group_10__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group_10__1"
-
-
-    // $ANTLR start "rule__Statemachine__Group_10__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:852:1: rule__Statemachine__Group_10__1__Impl : ( ( rule__Statemachine__DbgNameAssignment_10_1 ) ) ;
-    public final void rule__Statemachine__Group_10__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:856:1: ( ( ( rule__Statemachine__DbgNameAssignment_10_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:857:1: ( ( rule__Statemachine__DbgNameAssignment_10_1 ) )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:857:1: ( ( rule__Statemachine__DbgNameAssignment_10_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:858:1: ( rule__Statemachine__DbgNameAssignment_10_1 )
-            {
-             before(grammarAccess.getStatemachineAccess().getDbgNameAssignment_10_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:859:1: ( rule__Statemachine__DbgNameAssignment_10_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:859:2: rule__Statemachine__DbgNameAssignment_10_1
-            {
-            pushFollow(FOLLOW_rule__Statemachine__DbgNameAssignment_10_1_in_rule__Statemachine__Group_10__1__Impl1678);
-            rule__Statemachine__DbgNameAssignment_10_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getStatemachineAccess().getDbgNameAssignment_10_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__Group_10__1__Impl"
-
-
     // $ANTLR start "rule__SimpleState__Group__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:873:1: rule__SimpleState__Group__0 : rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:757:1: rule__SimpleState__Group__0 : rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1 ;
     public final void rule__SimpleState__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:877:1: ( rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:878:2: rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:761:1: ( rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:762:2: rule__SimpleState__Group__0__Impl rule__SimpleState__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__0__Impl_in_rule__SimpleState__Group__01712);
+            pushFollow(FOLLOW_rule__SimpleState__Group__0__Impl_in_rule__SimpleState__Group__01477);
             rule__SimpleState__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__1_in_rule__SimpleState__Group__01715);
+            pushFollow(FOLLOW_rule__SimpleState__Group__1_in_rule__SimpleState__Group__01480);
             rule__SimpleState__Group__1();
 
             state._fsp--;
@@ -2329,31 +2006,31 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:885:1: rule__SimpleState__Group__0__Impl : ( ( rule__SimpleState__InitialAssignment_0 )? ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:769:1: rule__SimpleState__Group__0__Impl : ( ( rule__SimpleState__InitialAssignment_0 )? ) ;
     public final void rule__SimpleState__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:889:1: ( ( ( rule__SimpleState__InitialAssignment_0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:890:1: ( ( rule__SimpleState__InitialAssignment_0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:773:1: ( ( ( rule__SimpleState__InitialAssignment_0 )? ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:774:1: ( ( rule__SimpleState__InitialAssignment_0 )? )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:890:1: ( ( rule__SimpleState__InitialAssignment_0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:891:1: ( rule__SimpleState__InitialAssignment_0 )?
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:774:1: ( ( rule__SimpleState__InitialAssignment_0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:775:1: ( rule__SimpleState__InitialAssignment_0 )?
             {
              before(grammarAccess.getSimpleStateAccess().getInitialAssignment_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:892:1: ( rule__SimpleState__InitialAssignment_0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:776:1: ( rule__SimpleState__InitialAssignment_0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA9_0==23) ) {
-                alt9=1;
+            if ( (LA7_0==22) ) {
+                alt7=1;
             }
-            switch (alt9) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:892:2: rule__SimpleState__InitialAssignment_0
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:776:2: rule__SimpleState__InitialAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__SimpleState__InitialAssignment_0_in_rule__SimpleState__Group__0__Impl1742);
+                    pushFollow(FOLLOW_rule__SimpleState__InitialAssignment_0_in_rule__SimpleState__Group__0__Impl1507);
                     rule__SimpleState__InitialAssignment_0();
 
                     state._fsp--;
@@ -2387,21 +2064,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:902:1: rule__SimpleState__Group__1 : rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:786:1: rule__SimpleState__Group__1 : rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2 ;
     public final void rule__SimpleState__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:906:1: ( rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:907:2: rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:790:1: ( rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:791:2: rule__SimpleState__Group__1__Impl rule__SimpleState__Group__2
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__1__Impl_in_rule__SimpleState__Group__11773);
+            pushFollow(FOLLOW_rule__SimpleState__Group__1__Impl_in_rule__SimpleState__Group__11538);
             rule__SimpleState__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__2_in_rule__SimpleState__Group__11776);
+            pushFollow(FOLLOW_rule__SimpleState__Group__2_in_rule__SimpleState__Group__11541);
             rule__SimpleState__Group__2();
 
             state._fsp--;
@@ -2425,20 +2102,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:914:1: rule__SimpleState__Group__1__Impl : ( 'state' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:798:1: rule__SimpleState__Group__1__Impl : ( 'state' ) ;
     public final void rule__SimpleState__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:918:1: ( ( 'state' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:919:1: ( 'state' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:802:1: ( ( 'state' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:803:1: ( 'state' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:919:1: ( 'state' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:920:1: 'state'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:803:1: ( 'state' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:804:1: 'state'
             {
              before(grammarAccess.getSimpleStateAccess().getStateKeyword_1()); 
-            match(input,19,FOLLOW_19_in_rule__SimpleState__Group__1__Impl1804); 
+            match(input,18,FOLLOW_18_in_rule__SimpleState__Group__1__Impl1569); 
              after(grammarAccess.getSimpleStateAccess().getStateKeyword_1()); 
 
             }
@@ -2462,21 +2139,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:933:1: rule__SimpleState__Group__2 : rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:817:1: rule__SimpleState__Group__2 : rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3 ;
     public final void rule__SimpleState__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:937:1: ( rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:938:2: rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:821:1: ( rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:822:2: rule__SimpleState__Group__2__Impl rule__SimpleState__Group__3
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__2__Impl_in_rule__SimpleState__Group__21835);
+            pushFollow(FOLLOW_rule__SimpleState__Group__2__Impl_in_rule__SimpleState__Group__21600);
             rule__SimpleState__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__3_in_rule__SimpleState__Group__21838);
+            pushFollow(FOLLOW_rule__SimpleState__Group__3_in_rule__SimpleState__Group__21603);
             rule__SimpleState__Group__3();
 
             state._fsp--;
@@ -2500,23 +2177,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__2__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:945:1: rule__SimpleState__Group__2__Impl : ( ( rule__SimpleState__NameAssignment_2 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:829:1: rule__SimpleState__Group__2__Impl : ( ( rule__SimpleState__NameAssignment_2 ) ) ;
     public final void rule__SimpleState__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:949:1: ( ( ( rule__SimpleState__NameAssignment_2 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:950:1: ( ( rule__SimpleState__NameAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:833:1: ( ( ( rule__SimpleState__NameAssignment_2 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:834:1: ( ( rule__SimpleState__NameAssignment_2 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:950:1: ( ( rule__SimpleState__NameAssignment_2 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:951:1: ( rule__SimpleState__NameAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:834:1: ( ( rule__SimpleState__NameAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:835:1: ( rule__SimpleState__NameAssignment_2 )
             {
              before(grammarAccess.getSimpleStateAccess().getNameAssignment_2()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:952:1: ( rule__SimpleState__NameAssignment_2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:952:2: rule__SimpleState__NameAssignment_2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:836:1: ( rule__SimpleState__NameAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:836:2: rule__SimpleState__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__SimpleState__NameAssignment_2_in_rule__SimpleState__Group__2__Impl1865);
+            pushFollow(FOLLOW_rule__SimpleState__NameAssignment_2_in_rule__SimpleState__Group__2__Impl1630);
             rule__SimpleState__NameAssignment_2();
 
             state._fsp--;
@@ -2547,21 +2224,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__3"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:962:1: rule__SimpleState__Group__3 : rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:846:1: rule__SimpleState__Group__3 : rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4 ;
     public final void rule__SimpleState__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:966:1: ( rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:967:2: rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:850:1: ( rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:851:2: rule__SimpleState__Group__3__Impl rule__SimpleState__Group__4
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__3__Impl_in_rule__SimpleState__Group__31895);
+            pushFollow(FOLLOW_rule__SimpleState__Group__3__Impl_in_rule__SimpleState__Group__31660);
             rule__SimpleState__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__4_in_rule__SimpleState__Group__31898);
+            pushFollow(FOLLOW_rule__SimpleState__Group__4_in_rule__SimpleState__Group__31663);
             rule__SimpleState__Group__4();
 
             state._fsp--;
@@ -2585,31 +2262,31 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__3__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:974:1: rule__SimpleState__Group__3__Impl : ( ( rule__SimpleState__Group_3__0 )? ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:858:1: rule__SimpleState__Group__3__Impl : ( ( rule__SimpleState__Group_3__0 )? ) ;
     public final void rule__SimpleState__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:978:1: ( ( ( rule__SimpleState__Group_3__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:979:1: ( ( rule__SimpleState__Group_3__0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:862:1: ( ( ( rule__SimpleState__Group_3__0 )? ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:863:1: ( ( rule__SimpleState__Group_3__0 )? )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:979:1: ( ( rule__SimpleState__Group_3__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:980:1: ( rule__SimpleState__Group_3__0 )?
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:863:1: ( ( rule__SimpleState__Group_3__0 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:864:1: ( rule__SimpleState__Group_3__0 )?
             {
              before(grammarAccess.getSimpleStateAccess().getGroup_3()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:981:1: ( rule__SimpleState__Group_3__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:865:1: ( rule__SimpleState__Group_3__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA10_0==17) ) {
-                alt10=1;
+            if ( (LA8_0==17) ) {
+                alt8=1;
             }
-            switch (alt10) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:981:2: rule__SimpleState__Group_3__0
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:865:2: rule__SimpleState__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__SimpleState__Group_3__0_in_rule__SimpleState__Group__3__Impl1925);
+                    pushFollow(FOLLOW_rule__SimpleState__Group_3__0_in_rule__SimpleState__Group__3__Impl1690);
                     rule__SimpleState__Group_3__0();
 
                     state._fsp--;
@@ -2643,21 +2320,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__4"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:991:1: rule__SimpleState__Group__4 : rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:875:1: rule__SimpleState__Group__4 : rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5 ;
     public final void rule__SimpleState__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:995:1: ( rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:996:2: rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:879:1: ( rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:880:2: rule__SimpleState__Group__4__Impl rule__SimpleState__Group__5
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__4__Impl_in_rule__SimpleState__Group__41956);
+            pushFollow(FOLLOW_rule__SimpleState__Group__4__Impl_in_rule__SimpleState__Group__41721);
             rule__SimpleState__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__5_in_rule__SimpleState__Group__41959);
+            pushFollow(FOLLOW_rule__SimpleState__Group__5_in_rule__SimpleState__Group__41724);
             rule__SimpleState__Group__5();
 
             state._fsp--;
@@ -2681,20 +2358,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__4__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1003:1: rule__SimpleState__Group__4__Impl : ( '{' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:887:1: rule__SimpleState__Group__4__Impl : ( '{' ) ;
     public final void rule__SimpleState__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1007:1: ( ( '{' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1008:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:891:1: ( ( '{' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:892:1: ( '{' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1008:1: ( '{' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1009:1: '{'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:892:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:893:1: '{'
             {
              before(grammarAccess.getSimpleStateAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__SimpleState__Group__4__Impl1987); 
+            match(input,13,FOLLOW_13_in_rule__SimpleState__Group__4__Impl1752); 
              after(grammarAccess.getSimpleStateAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
@@ -2718,21 +2395,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__5"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1022:1: rule__SimpleState__Group__5 : rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:906:1: rule__SimpleState__Group__5 : rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6 ;
     public final void rule__SimpleState__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1026:1: ( rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1027:2: rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:910:1: ( rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:911:2: rule__SimpleState__Group__5__Impl rule__SimpleState__Group__6
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__5__Impl_in_rule__SimpleState__Group__52018);
+            pushFollow(FOLLOW_rule__SimpleState__Group__5__Impl_in_rule__SimpleState__Group__51783);
             rule__SimpleState__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group__6_in_rule__SimpleState__Group__52021);
+            pushFollow(FOLLOW_rule__SimpleState__Group__6_in_rule__SimpleState__Group__51786);
             rule__SimpleState__Group__6();
 
             state._fsp--;
@@ -2756,35 +2433,35 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__5__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1034:1: rule__SimpleState__Group__5__Impl : ( ( rule__SimpleState__TransitionsAssignment_5 )* ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:918:1: rule__SimpleState__Group__5__Impl : ( ( rule__SimpleState__TransitionsAssignment_5 )* ) ;
     public final void rule__SimpleState__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1038:1: ( ( ( rule__SimpleState__TransitionsAssignment_5 )* ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1039:1: ( ( rule__SimpleState__TransitionsAssignment_5 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:922:1: ( ( ( rule__SimpleState__TransitionsAssignment_5 )* ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:923:1: ( ( rule__SimpleState__TransitionsAssignment_5 )* )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1039:1: ( ( rule__SimpleState__TransitionsAssignment_5 )* )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1040:1: ( rule__SimpleState__TransitionsAssignment_5 )*
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:923:1: ( ( rule__SimpleState__TransitionsAssignment_5 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:924:1: ( rule__SimpleState__TransitionsAssignment_5 )*
             {
              before(grammarAccess.getSimpleStateAccess().getTransitionsAssignment_5()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1041:1: ( rule__SimpleState__TransitionsAssignment_5 )*
-            loop11:
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:925:1: ( rule__SimpleState__TransitionsAssignment_5 )*
+            loop9:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_ID) ) {
-                    alt11=1;
+                if ( (LA9_0==RULE_ID) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt9) {
             	case 1 :
-            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1041:2: rule__SimpleState__TransitionsAssignment_5
+            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:925:2: rule__SimpleState__TransitionsAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__SimpleState__TransitionsAssignment_5_in_rule__SimpleState__Group__5__Impl2048);
+            	    pushFollow(FOLLOW_rule__SimpleState__TransitionsAssignment_5_in_rule__SimpleState__Group__5__Impl1813);
             	    rule__SimpleState__TransitionsAssignment_5();
 
             	    state._fsp--;
@@ -2794,7 +2471,7 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop9;
                 }
             } while (true);
 
@@ -2821,22 +2498,17 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__6"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1051:1: rule__SimpleState__Group__6 : rule__SimpleState__Group__6__Impl rule__SimpleState__Group__7 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:935:1: rule__SimpleState__Group__6 : rule__SimpleState__Group__6__Impl ;
     public final void rule__SimpleState__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1055:1: ( rule__SimpleState__Group__6__Impl rule__SimpleState__Group__7 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1056:2: rule__SimpleState__Group__6__Impl rule__SimpleState__Group__7
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:939:1: ( rule__SimpleState__Group__6__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:940:2: rule__SimpleState__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group__6__Impl_in_rule__SimpleState__Group__62079);
+            pushFollow(FOLLOW_rule__SimpleState__Group__6__Impl_in_rule__SimpleState__Group__61844);
             rule__SimpleState__Group__6__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SimpleState__Group__7_in_rule__SimpleState__Group__62082);
-            rule__SimpleState__Group__7();
 
             state._fsp--;
 
@@ -2859,20 +2531,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group__6__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1063:1: rule__SimpleState__Group__6__Impl : ( '}' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:946:1: rule__SimpleState__Group__6__Impl : ( '}' ) ;
     public final void rule__SimpleState__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1067:1: ( ( '}' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1068:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:950:1: ( ( '}' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:951:1: ( '}' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1068:1: ( '}' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1069:1: '}'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:951:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:952:1: '}'
             {
              before(grammarAccess.getSimpleStateAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,16,FOLLOW_16_in_rule__SimpleState__Group__6__Impl2110); 
+            match(input,16,FOLLOW_16_in_rule__SimpleState__Group__6__Impl1872); 
              after(grammarAccess.getSimpleStateAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -2895,113 +2567,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SimpleState__Group__6__Impl"
 
 
-    // $ANTLR start "rule__SimpleState__Group__7"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1082:1: rule__SimpleState__Group__7 : rule__SimpleState__Group__7__Impl ;
-    public final void rule__SimpleState__Group__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1086:1: ( rule__SimpleState__Group__7__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1087:2: rule__SimpleState__Group__7__Impl
-            {
-            pushFollow(FOLLOW_rule__SimpleState__Group__7__Impl_in_rule__SimpleState__Group__72141);
-            rule__SimpleState__Group__7__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group__7"
-
-
-    // $ANTLR start "rule__SimpleState__Group__7__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1093:1: rule__SimpleState__Group__7__Impl : ( ( rule__SimpleState__Group_7__0 )? ) ;
-    public final void rule__SimpleState__Group__7__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1097:1: ( ( ( rule__SimpleState__Group_7__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1098:1: ( ( rule__SimpleState__Group_7__0 )? )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1098:1: ( ( rule__SimpleState__Group_7__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1099:1: ( rule__SimpleState__Group_7__0 )?
-            {
-             before(grammarAccess.getSimpleStateAccess().getGroup_7()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1100:1: ( rule__SimpleState__Group_7__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0==18) ) {
-                alt12=1;
-            }
-            switch (alt12) {
-                case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1100:2: rule__SimpleState__Group_7__0
-                    {
-                    pushFollow(FOLLOW_rule__SimpleState__Group_7__0_in_rule__SimpleState__Group__7__Impl2168);
-                    rule__SimpleState__Group_7__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getSimpleStateAccess().getGroup_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group__7__Impl"
-
-
     // $ANTLR start "rule__SimpleState__Group_3__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1126:1: rule__SimpleState__Group_3__0 : rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:979:1: rule__SimpleState__Group_3__0 : rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1 ;
     public final void rule__SimpleState__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1130:1: ( rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1131:2: rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:983:1: ( rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:984:2: rule__SimpleState__Group_3__0__Impl rule__SimpleState__Group_3__1
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group_3__0__Impl_in_rule__SimpleState__Group_3__02215);
+            pushFollow(FOLLOW_rule__SimpleState__Group_3__0__Impl_in_rule__SimpleState__Group_3__01917);
             rule__SimpleState__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleState__Group_3__1_in_rule__SimpleState__Group_3__02218);
+            pushFollow(FOLLOW_rule__SimpleState__Group_3__1_in_rule__SimpleState__Group_3__01920);
             rule__SimpleState__Group_3__1();
 
             state._fsp--;
@@ -3025,20 +2606,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group_3__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1138:1: rule__SimpleState__Group_3__0__Impl : ( 'value' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:991:1: rule__SimpleState__Group_3__0__Impl : ( 'value' ) ;
     public final void rule__SimpleState__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1142:1: ( ( 'value' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1143:1: ( 'value' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:995:1: ( ( 'value' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:996:1: ( 'value' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1143:1: ( 'value' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1144:1: 'value'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:996:1: ( 'value' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:997:1: 'value'
             {
              before(grammarAccess.getSimpleStateAccess().getValueKeyword_3_0()); 
-            match(input,17,FOLLOW_17_in_rule__SimpleState__Group_3__0__Impl2246); 
+            match(input,17,FOLLOW_17_in_rule__SimpleState__Group_3__0__Impl1948); 
              after(grammarAccess.getSimpleStateAccess().getValueKeyword_3_0()); 
 
             }
@@ -3062,16 +2643,16 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group_3__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1157:1: rule__SimpleState__Group_3__1 : rule__SimpleState__Group_3__1__Impl ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1010:1: rule__SimpleState__Group_3__1 : rule__SimpleState__Group_3__1__Impl ;
     public final void rule__SimpleState__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1161:1: ( rule__SimpleState__Group_3__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1162:2: rule__SimpleState__Group_3__1__Impl
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1014:1: ( rule__SimpleState__Group_3__1__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1015:2: rule__SimpleState__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleState__Group_3__1__Impl_in_rule__SimpleState__Group_3__12277);
+            pushFollow(FOLLOW_rule__SimpleState__Group_3__1__Impl_in_rule__SimpleState__Group_3__11979);
             rule__SimpleState__Group_3__1__Impl();
 
             state._fsp--;
@@ -3095,23 +2676,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__Group_3__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1168:1: rule__SimpleState__Group_3__1__Impl : ( ( rule__SimpleState__ValueAssignment_3_1 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1021:1: rule__SimpleState__Group_3__1__Impl : ( ( rule__SimpleState__ValueAssignment_3_1 ) ) ;
     public final void rule__SimpleState__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1172:1: ( ( ( rule__SimpleState__ValueAssignment_3_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1173:1: ( ( rule__SimpleState__ValueAssignment_3_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1025:1: ( ( ( rule__SimpleState__ValueAssignment_3_1 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1026:1: ( ( rule__SimpleState__ValueAssignment_3_1 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1173:1: ( ( rule__SimpleState__ValueAssignment_3_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1174:1: ( rule__SimpleState__ValueAssignment_3_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1026:1: ( ( rule__SimpleState__ValueAssignment_3_1 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1027:1: ( rule__SimpleState__ValueAssignment_3_1 )
             {
              before(grammarAccess.getSimpleStateAccess().getValueAssignment_3_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1175:1: ( rule__SimpleState__ValueAssignment_3_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1175:2: rule__SimpleState__ValueAssignment_3_1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1028:1: ( rule__SimpleState__ValueAssignment_3_1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1028:2: rule__SimpleState__ValueAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__SimpleState__ValueAssignment_3_1_in_rule__SimpleState__Group_3__1__Impl2304);
+            pushFollow(FOLLOW_rule__SimpleState__ValueAssignment_3_1_in_rule__SimpleState__Group_3__1__Impl2006);
             rule__SimpleState__ValueAssignment_3_1();
 
             state._fsp--;
@@ -3141,177 +2722,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SimpleState__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__SimpleState__Group_7__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1189:1: rule__SimpleState__Group_7__0 : rule__SimpleState__Group_7__0__Impl rule__SimpleState__Group_7__1 ;
-    public final void rule__SimpleState__Group_7__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1193:1: ( rule__SimpleState__Group_7__0__Impl rule__SimpleState__Group_7__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1194:2: rule__SimpleState__Group_7__0__Impl rule__SimpleState__Group_7__1
-            {
-            pushFollow(FOLLOW_rule__SimpleState__Group_7__0__Impl_in_rule__SimpleState__Group_7__02338);
-            rule__SimpleState__Group_7__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__SimpleState__Group_7__1_in_rule__SimpleState__Group_7__02341);
-            rule__SimpleState__Group_7__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group_7__0"
-
-
-    // $ANTLR start "rule__SimpleState__Group_7__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1201:1: rule__SimpleState__Group_7__0__Impl : ( 'debug' ) ;
-    public final void rule__SimpleState__Group_7__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1205:1: ( ( 'debug' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1206:1: ( 'debug' )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1206:1: ( 'debug' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1207:1: 'debug'
-            {
-             before(grammarAccess.getSimpleStateAccess().getDebugKeyword_7_0()); 
-            match(input,18,FOLLOW_18_in_rule__SimpleState__Group_7__0__Impl2369); 
-             after(grammarAccess.getSimpleStateAccess().getDebugKeyword_7_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group_7__0__Impl"
-
-
-    // $ANTLR start "rule__SimpleState__Group_7__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1220:1: rule__SimpleState__Group_7__1 : rule__SimpleState__Group_7__1__Impl ;
-    public final void rule__SimpleState__Group_7__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1224:1: ( rule__SimpleState__Group_7__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1225:2: rule__SimpleState__Group_7__1__Impl
-            {
-            pushFollow(FOLLOW_rule__SimpleState__Group_7__1__Impl_in_rule__SimpleState__Group_7__12400);
-            rule__SimpleState__Group_7__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group_7__1"
-
-
-    // $ANTLR start "rule__SimpleState__Group_7__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1231:1: rule__SimpleState__Group_7__1__Impl : ( ( rule__SimpleState__DbgNameAssignment_7_1 ) ) ;
-    public final void rule__SimpleState__Group_7__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1235:1: ( ( ( rule__SimpleState__DbgNameAssignment_7_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1236:1: ( ( rule__SimpleState__DbgNameAssignment_7_1 ) )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1236:1: ( ( rule__SimpleState__DbgNameAssignment_7_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1237:1: ( rule__SimpleState__DbgNameAssignment_7_1 )
-            {
-             before(grammarAccess.getSimpleStateAccess().getDbgNameAssignment_7_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1238:1: ( rule__SimpleState__DbgNameAssignment_7_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1238:2: rule__SimpleState__DbgNameAssignment_7_1
-            {
-            pushFollow(FOLLOW_rule__SimpleState__DbgNameAssignment_7_1_in_rule__SimpleState__Group_7__1__Impl2427);
-            rule__SimpleState__DbgNameAssignment_7_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSimpleStateAccess().getDbgNameAssignment_7_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__Group_7__1__Impl"
-
-
     // $ANTLR start "rule__CompoundState__Group__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1252:1: rule__CompoundState__Group__0 : rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1042:1: rule__CompoundState__Group__0 : rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1 ;
     public final void rule__CompoundState__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1256:1: ( rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1257:2: rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1046:1: ( rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1047:2: rule__CompoundState__Group__0__Impl rule__CompoundState__Group__1
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__0__Impl_in_rule__CompoundState__Group__02461);
+            pushFollow(FOLLOW_rule__CompoundState__Group__0__Impl_in_rule__CompoundState__Group__02040);
             rule__CompoundState__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__1_in_rule__CompoundState__Group__02464);
+            pushFollow(FOLLOW_rule__CompoundState__Group__1_in_rule__CompoundState__Group__02043);
             rule__CompoundState__Group__1();
 
             state._fsp--;
@@ -3335,20 +2761,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1264:1: rule__CompoundState__Group__0__Impl : ( 'compound' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1054:1: rule__CompoundState__Group__0__Impl : ( 'compound' ) ;
     public final void rule__CompoundState__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1268:1: ( ( 'compound' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1269:1: ( 'compound' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1058:1: ( ( 'compound' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1059:1: ( 'compound' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1269:1: ( 'compound' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1270:1: 'compound'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1059:1: ( 'compound' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1060:1: 'compound'
             {
              before(grammarAccess.getCompoundStateAccess().getCompoundKeyword_0()); 
-            match(input,20,FOLLOW_20_in_rule__CompoundState__Group__0__Impl2492); 
+            match(input,19,FOLLOW_19_in_rule__CompoundState__Group__0__Impl2071); 
              after(grammarAccess.getCompoundStateAccess().getCompoundKeyword_0()); 
 
             }
@@ -3372,21 +2798,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1283:1: rule__CompoundState__Group__1 : rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1073:1: rule__CompoundState__Group__1 : rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2 ;
     public final void rule__CompoundState__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1287:1: ( rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1288:2: rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1077:1: ( rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1078:2: rule__CompoundState__Group__1__Impl rule__CompoundState__Group__2
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__1__Impl_in_rule__CompoundState__Group__12523);
+            pushFollow(FOLLOW_rule__CompoundState__Group__1__Impl_in_rule__CompoundState__Group__12102);
             rule__CompoundState__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__2_in_rule__CompoundState__Group__12526);
+            pushFollow(FOLLOW_rule__CompoundState__Group__2_in_rule__CompoundState__Group__12105);
             rule__CompoundState__Group__2();
 
             state._fsp--;
@@ -3410,31 +2836,31 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1295:1: rule__CompoundState__Group__1__Impl : ( ( rule__CompoundState__InitialAssignment_1 )? ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1085:1: rule__CompoundState__Group__1__Impl : ( ( rule__CompoundState__InitialAssignment_1 )? ) ;
     public final void rule__CompoundState__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1299:1: ( ( ( rule__CompoundState__InitialAssignment_1 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1300:1: ( ( rule__CompoundState__InitialAssignment_1 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1089:1: ( ( ( rule__CompoundState__InitialAssignment_1 )? ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1090:1: ( ( rule__CompoundState__InitialAssignment_1 )? )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1300:1: ( ( rule__CompoundState__InitialAssignment_1 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1301:1: ( rule__CompoundState__InitialAssignment_1 )?
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1090:1: ( ( rule__CompoundState__InitialAssignment_1 )? )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1091:1: ( rule__CompoundState__InitialAssignment_1 )?
             {
              before(grammarAccess.getCompoundStateAccess().getInitialAssignment_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1302:1: ( rule__CompoundState__InitialAssignment_1 )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1092:1: ( rule__CompoundState__InitialAssignment_1 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA13_0==23) ) {
-                alt13=1;
+            if ( (LA10_0==22) ) {
+                alt10=1;
             }
-            switch (alt13) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1302:2: rule__CompoundState__InitialAssignment_1
+                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1092:2: rule__CompoundState__InitialAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__CompoundState__InitialAssignment_1_in_rule__CompoundState__Group__1__Impl2553);
+                    pushFollow(FOLLOW_rule__CompoundState__InitialAssignment_1_in_rule__CompoundState__Group__1__Impl2132);
                     rule__CompoundState__InitialAssignment_1();
 
                     state._fsp--;
@@ -3468,21 +2894,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1312:1: rule__CompoundState__Group__2 : rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1102:1: rule__CompoundState__Group__2 : rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3 ;
     public final void rule__CompoundState__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1316:1: ( rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1317:2: rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1106:1: ( rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1107:2: rule__CompoundState__Group__2__Impl rule__CompoundState__Group__3
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__2__Impl_in_rule__CompoundState__Group__22584);
+            pushFollow(FOLLOW_rule__CompoundState__Group__2__Impl_in_rule__CompoundState__Group__22163);
             rule__CompoundState__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__3_in_rule__CompoundState__Group__22587);
+            pushFollow(FOLLOW_rule__CompoundState__Group__3_in_rule__CompoundState__Group__22166);
             rule__CompoundState__Group__3();
 
             state._fsp--;
@@ -3506,20 +2932,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__2__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1324:1: rule__CompoundState__Group__2__Impl : ( 'state' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1114:1: rule__CompoundState__Group__2__Impl : ( 'state' ) ;
     public final void rule__CompoundState__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1328:1: ( ( 'state' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1329:1: ( 'state' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1118:1: ( ( 'state' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1119:1: ( 'state' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1329:1: ( 'state' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1330:1: 'state'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1119:1: ( 'state' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1120:1: 'state'
             {
              before(grammarAccess.getCompoundStateAccess().getStateKeyword_2()); 
-            match(input,19,FOLLOW_19_in_rule__CompoundState__Group__2__Impl2615); 
+            match(input,18,FOLLOW_18_in_rule__CompoundState__Group__2__Impl2194); 
              after(grammarAccess.getCompoundStateAccess().getStateKeyword_2()); 
 
             }
@@ -3543,21 +2969,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__3"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1343:1: rule__CompoundState__Group__3 : rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1133:1: rule__CompoundState__Group__3 : rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4 ;
     public final void rule__CompoundState__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1347:1: ( rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1348:2: rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1137:1: ( rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1138:2: rule__CompoundState__Group__3__Impl rule__CompoundState__Group__4
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__3__Impl_in_rule__CompoundState__Group__32646);
+            pushFollow(FOLLOW_rule__CompoundState__Group__3__Impl_in_rule__CompoundState__Group__32225);
             rule__CompoundState__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__4_in_rule__CompoundState__Group__32649);
+            pushFollow(FOLLOW_rule__CompoundState__Group__4_in_rule__CompoundState__Group__32228);
             rule__CompoundState__Group__4();
 
             state._fsp--;
@@ -3581,23 +3007,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__3__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1355:1: rule__CompoundState__Group__3__Impl : ( ( rule__CompoundState__NameAssignment_3 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1145:1: rule__CompoundState__Group__3__Impl : ( ( rule__CompoundState__NameAssignment_3 ) ) ;
     public final void rule__CompoundState__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1359:1: ( ( ( rule__CompoundState__NameAssignment_3 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1360:1: ( ( rule__CompoundState__NameAssignment_3 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1149:1: ( ( ( rule__CompoundState__NameAssignment_3 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1150:1: ( ( rule__CompoundState__NameAssignment_3 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1360:1: ( ( rule__CompoundState__NameAssignment_3 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1361:1: ( rule__CompoundState__NameAssignment_3 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1150:1: ( ( rule__CompoundState__NameAssignment_3 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1151:1: ( rule__CompoundState__NameAssignment_3 )
             {
              before(grammarAccess.getCompoundStateAccess().getNameAssignment_3()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1362:1: ( rule__CompoundState__NameAssignment_3 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1362:2: rule__CompoundState__NameAssignment_3
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1152:1: ( rule__CompoundState__NameAssignment_3 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1152:2: rule__CompoundState__NameAssignment_3
             {
-            pushFollow(FOLLOW_rule__CompoundState__NameAssignment_3_in_rule__CompoundState__Group__3__Impl2676);
+            pushFollow(FOLLOW_rule__CompoundState__NameAssignment_3_in_rule__CompoundState__Group__3__Impl2255);
             rule__CompoundState__NameAssignment_3();
 
             state._fsp--;
@@ -3628,21 +3054,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__4"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1372:1: rule__CompoundState__Group__4 : rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1162:1: rule__CompoundState__Group__4 : rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5 ;
     public final void rule__CompoundState__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1376:1: ( rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1377:2: rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1166:1: ( rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1167:2: rule__CompoundState__Group__4__Impl rule__CompoundState__Group__5
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__4__Impl_in_rule__CompoundState__Group__42706);
+            pushFollow(FOLLOW_rule__CompoundState__Group__4__Impl_in_rule__CompoundState__Group__42285);
             rule__CompoundState__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__5_in_rule__CompoundState__Group__42709);
+            pushFollow(FOLLOW_rule__CompoundState__Group__5_in_rule__CompoundState__Group__42288);
             rule__CompoundState__Group__5();
 
             state._fsp--;
@@ -3666,20 +3092,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__4__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1384:1: rule__CompoundState__Group__4__Impl : ( 'machine' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1174:1: rule__CompoundState__Group__4__Impl : ( 'machine' ) ;
     public final void rule__CompoundState__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1388:1: ( ( 'machine' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1389:1: ( 'machine' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1178:1: ( ( 'machine' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1179:1: ( 'machine' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1389:1: ( 'machine' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1390:1: 'machine'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1179:1: ( 'machine' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1180:1: 'machine'
             {
              before(grammarAccess.getCompoundStateAccess().getMachineKeyword_4()); 
-            match(input,21,FOLLOW_21_in_rule__CompoundState__Group__4__Impl2737); 
+            match(input,20,FOLLOW_20_in_rule__CompoundState__Group__4__Impl2316); 
              after(grammarAccess.getCompoundStateAccess().getMachineKeyword_4()); 
 
             }
@@ -3703,21 +3129,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__5"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1403:1: rule__CompoundState__Group__5 : rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1193:1: rule__CompoundState__Group__5 : rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6 ;
     public final void rule__CompoundState__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1407:1: ( rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1408:2: rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1197:1: ( rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1198:2: rule__CompoundState__Group__5__Impl rule__CompoundState__Group__6
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__5__Impl_in_rule__CompoundState__Group__52768);
+            pushFollow(FOLLOW_rule__CompoundState__Group__5__Impl_in_rule__CompoundState__Group__52347);
             rule__CompoundState__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__6_in_rule__CompoundState__Group__52771);
+            pushFollow(FOLLOW_rule__CompoundState__Group__6_in_rule__CompoundState__Group__52350);
             rule__CompoundState__Group__6();
 
             state._fsp--;
@@ -3741,23 +3167,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__5__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1415:1: rule__CompoundState__Group__5__Impl : ( ( rule__CompoundState__MachineAssignment_5 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1205:1: rule__CompoundState__Group__5__Impl : ( ( rule__CompoundState__MachineAssignment_5 ) ) ;
     public final void rule__CompoundState__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1419:1: ( ( ( rule__CompoundState__MachineAssignment_5 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1420:1: ( ( rule__CompoundState__MachineAssignment_5 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1209:1: ( ( ( rule__CompoundState__MachineAssignment_5 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1210:1: ( ( rule__CompoundState__MachineAssignment_5 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1420:1: ( ( rule__CompoundState__MachineAssignment_5 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1421:1: ( rule__CompoundState__MachineAssignment_5 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1210:1: ( ( rule__CompoundState__MachineAssignment_5 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1211:1: ( rule__CompoundState__MachineAssignment_5 )
             {
              before(grammarAccess.getCompoundStateAccess().getMachineAssignment_5()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1422:1: ( rule__CompoundState__MachineAssignment_5 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1422:2: rule__CompoundState__MachineAssignment_5
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1212:1: ( rule__CompoundState__MachineAssignment_5 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1212:2: rule__CompoundState__MachineAssignment_5
             {
-            pushFollow(FOLLOW_rule__CompoundState__MachineAssignment_5_in_rule__CompoundState__Group__5__Impl2798);
+            pushFollow(FOLLOW_rule__CompoundState__MachineAssignment_5_in_rule__CompoundState__Group__5__Impl2377);
             rule__CompoundState__MachineAssignment_5();
 
             state._fsp--;
@@ -3788,21 +3214,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__6"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1432:1: rule__CompoundState__Group__6 : rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1222:1: rule__CompoundState__Group__6 : rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7 ;
     public final void rule__CompoundState__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1436:1: ( rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1437:2: rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1226:1: ( rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1227:2: rule__CompoundState__Group__6__Impl rule__CompoundState__Group__7
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__6__Impl_in_rule__CompoundState__Group__62828);
+            pushFollow(FOLLOW_rule__CompoundState__Group__6__Impl_in_rule__CompoundState__Group__62407);
             rule__CompoundState__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__7_in_rule__CompoundState__Group__62831);
+            pushFollow(FOLLOW_rule__CompoundState__Group__7_in_rule__CompoundState__Group__62410);
             rule__CompoundState__Group__7();
 
             state._fsp--;
@@ -3826,20 +3252,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__6__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1444:1: rule__CompoundState__Group__6__Impl : ( '{' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1234:1: rule__CompoundState__Group__6__Impl : ( '{' ) ;
     public final void rule__CompoundState__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1448:1: ( ( '{' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1449:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1238:1: ( ( '{' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1239:1: ( '{' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1449:1: ( '{' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1450:1: '{'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1239:1: ( '{' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1240:1: '{'
             {
              before(grammarAccess.getCompoundStateAccess().getLeftCurlyBracketKeyword_6()); 
-            match(input,13,FOLLOW_13_in_rule__CompoundState__Group__6__Impl2859); 
+            match(input,13,FOLLOW_13_in_rule__CompoundState__Group__6__Impl2438); 
              after(grammarAccess.getCompoundStateAccess().getLeftCurlyBracketKeyword_6()); 
 
             }
@@ -3863,21 +3289,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__7"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1463:1: rule__CompoundState__Group__7 : rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1253:1: rule__CompoundState__Group__7 : rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8 ;
     public final void rule__CompoundState__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1467:1: ( rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1468:2: rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1257:1: ( rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1258:2: rule__CompoundState__Group__7__Impl rule__CompoundState__Group__8
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__7__Impl_in_rule__CompoundState__Group__72890);
+            pushFollow(FOLLOW_rule__CompoundState__Group__7__Impl_in_rule__CompoundState__Group__72469);
             rule__CompoundState__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CompoundState__Group__8_in_rule__CompoundState__Group__72893);
+            pushFollow(FOLLOW_rule__CompoundState__Group__8_in_rule__CompoundState__Group__72472);
             rule__CompoundState__Group__8();
 
             state._fsp--;
@@ -3901,35 +3327,35 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__7__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1475:1: rule__CompoundState__Group__7__Impl : ( ( rule__CompoundState__TransitionsAssignment_7 )* ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1265:1: rule__CompoundState__Group__7__Impl : ( ( rule__CompoundState__TransitionsAssignment_7 )* ) ;
     public final void rule__CompoundState__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1479:1: ( ( ( rule__CompoundState__TransitionsAssignment_7 )* ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1480:1: ( ( rule__CompoundState__TransitionsAssignment_7 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1269:1: ( ( ( rule__CompoundState__TransitionsAssignment_7 )* ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1270:1: ( ( rule__CompoundState__TransitionsAssignment_7 )* )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1480:1: ( ( rule__CompoundState__TransitionsAssignment_7 )* )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1481:1: ( rule__CompoundState__TransitionsAssignment_7 )*
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1270:1: ( ( rule__CompoundState__TransitionsAssignment_7 )* )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1271:1: ( rule__CompoundState__TransitionsAssignment_7 )*
             {
              before(grammarAccess.getCompoundStateAccess().getTransitionsAssignment_7()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1482:1: ( rule__CompoundState__TransitionsAssignment_7 )*
-            loop14:
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1272:1: ( rule__CompoundState__TransitionsAssignment_7 )*
+            loop11:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA14_0==RULE_ID) ) {
-                    alt14=1;
+                if ( (LA11_0==RULE_ID) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt11) {
             	case 1 :
-            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1482:2: rule__CompoundState__TransitionsAssignment_7
+            	    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1272:2: rule__CompoundState__TransitionsAssignment_7
             	    {
-            	    pushFollow(FOLLOW_rule__CompoundState__TransitionsAssignment_7_in_rule__CompoundState__Group__7__Impl2920);
+            	    pushFollow(FOLLOW_rule__CompoundState__TransitionsAssignment_7_in_rule__CompoundState__Group__7__Impl2499);
             	    rule__CompoundState__TransitionsAssignment_7();
 
             	    state._fsp--;
@@ -3939,7 +3365,7 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop11;
                 }
             } while (true);
 
@@ -3966,22 +3392,17 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__8"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1492:1: rule__CompoundState__Group__8 : rule__CompoundState__Group__8__Impl rule__CompoundState__Group__9 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1282:1: rule__CompoundState__Group__8 : rule__CompoundState__Group__8__Impl ;
     public final void rule__CompoundState__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1496:1: ( rule__CompoundState__Group__8__Impl rule__CompoundState__Group__9 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1497:2: rule__CompoundState__Group__8__Impl rule__CompoundState__Group__9
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1286:1: ( rule__CompoundState__Group__8__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1287:2: rule__CompoundState__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__CompoundState__Group__8__Impl_in_rule__CompoundState__Group__82951);
+            pushFollow(FOLLOW_rule__CompoundState__Group__8__Impl_in_rule__CompoundState__Group__82530);
             rule__CompoundState__Group__8__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__CompoundState__Group__9_in_rule__CompoundState__Group__82954);
-            rule__CompoundState__Group__9();
 
             state._fsp--;
 
@@ -4004,20 +3425,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__Group__8__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1504:1: rule__CompoundState__Group__8__Impl : ( '}' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1293:1: rule__CompoundState__Group__8__Impl : ( '}' ) ;
     public final void rule__CompoundState__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1508:1: ( ( '}' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1509:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1297:1: ( ( '}' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1298:1: ( '}' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1509:1: ( '}' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1510:1: '}'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1298:1: ( '}' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1299:1: '}'
             {
              before(grammarAccess.getCompoundStateAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,16,FOLLOW_16_in_rule__CompoundState__Group__8__Impl2982); 
+            match(input,16,FOLLOW_16_in_rule__CompoundState__Group__8__Impl2558); 
              after(grammarAccess.getCompoundStateAccess().getRightCurlyBracketKeyword_8()); 
 
             }
@@ -4040,268 +3461,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__CompoundState__Group__8__Impl"
 
 
-    // $ANTLR start "rule__CompoundState__Group__9"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1523:1: rule__CompoundState__Group__9 : rule__CompoundState__Group__9__Impl ;
-    public final void rule__CompoundState__Group__9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1527:1: ( rule__CompoundState__Group__9__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1528:2: rule__CompoundState__Group__9__Impl
-            {
-            pushFollow(FOLLOW_rule__CompoundState__Group__9__Impl_in_rule__CompoundState__Group__93013);
-            rule__CompoundState__Group__9__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group__9"
-
-
-    // $ANTLR start "rule__CompoundState__Group__9__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1534:1: rule__CompoundState__Group__9__Impl : ( ( rule__CompoundState__Group_9__0 )? ) ;
-    public final void rule__CompoundState__Group__9__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1538:1: ( ( ( rule__CompoundState__Group_9__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1539:1: ( ( rule__CompoundState__Group_9__0 )? )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1539:1: ( ( rule__CompoundState__Group_9__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1540:1: ( rule__CompoundState__Group_9__0 )?
-            {
-             before(grammarAccess.getCompoundStateAccess().getGroup_9()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1541:1: ( rule__CompoundState__Group_9__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
-
-            if ( (LA15_0==18) ) {
-                alt15=1;
-            }
-            switch (alt15) {
-                case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1541:2: rule__CompoundState__Group_9__0
-                    {
-                    pushFollow(FOLLOW_rule__CompoundState__Group_9__0_in_rule__CompoundState__Group__9__Impl3040);
-                    rule__CompoundState__Group_9__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getCompoundStateAccess().getGroup_9()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group__9__Impl"
-
-
-    // $ANTLR start "rule__CompoundState__Group_9__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1571:1: rule__CompoundState__Group_9__0 : rule__CompoundState__Group_9__0__Impl rule__CompoundState__Group_9__1 ;
-    public final void rule__CompoundState__Group_9__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1575:1: ( rule__CompoundState__Group_9__0__Impl rule__CompoundState__Group_9__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1576:2: rule__CompoundState__Group_9__0__Impl rule__CompoundState__Group_9__1
-            {
-            pushFollow(FOLLOW_rule__CompoundState__Group_9__0__Impl_in_rule__CompoundState__Group_9__03091);
-            rule__CompoundState__Group_9__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__CompoundState__Group_9__1_in_rule__CompoundState__Group_9__03094);
-            rule__CompoundState__Group_9__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group_9__0"
-
-
-    // $ANTLR start "rule__CompoundState__Group_9__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1583:1: rule__CompoundState__Group_9__0__Impl : ( 'debug' ) ;
-    public final void rule__CompoundState__Group_9__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1587:1: ( ( 'debug' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1588:1: ( 'debug' )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1588:1: ( 'debug' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1589:1: 'debug'
-            {
-             before(grammarAccess.getCompoundStateAccess().getDebugKeyword_9_0()); 
-            match(input,18,FOLLOW_18_in_rule__CompoundState__Group_9__0__Impl3122); 
-             after(grammarAccess.getCompoundStateAccess().getDebugKeyword_9_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group_9__0__Impl"
-
-
-    // $ANTLR start "rule__CompoundState__Group_9__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1602:1: rule__CompoundState__Group_9__1 : rule__CompoundState__Group_9__1__Impl ;
-    public final void rule__CompoundState__Group_9__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1606:1: ( rule__CompoundState__Group_9__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1607:2: rule__CompoundState__Group_9__1__Impl
-            {
-            pushFollow(FOLLOW_rule__CompoundState__Group_9__1__Impl_in_rule__CompoundState__Group_9__13153);
-            rule__CompoundState__Group_9__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group_9__1"
-
-
-    // $ANTLR start "rule__CompoundState__Group_9__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1613:1: rule__CompoundState__Group_9__1__Impl : ( ( rule__CompoundState__DbgNameAssignment_9_1 ) ) ;
-    public final void rule__CompoundState__Group_9__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1617:1: ( ( ( rule__CompoundState__DbgNameAssignment_9_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1618:1: ( ( rule__CompoundState__DbgNameAssignment_9_1 ) )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1618:1: ( ( rule__CompoundState__DbgNameAssignment_9_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1619:1: ( rule__CompoundState__DbgNameAssignment_9_1 )
-            {
-             before(grammarAccess.getCompoundStateAccess().getDbgNameAssignment_9_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1620:1: ( rule__CompoundState__DbgNameAssignment_9_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1620:2: rule__CompoundState__DbgNameAssignment_9_1
-            {
-            pushFollow(FOLLOW_rule__CompoundState__DbgNameAssignment_9_1_in_rule__CompoundState__Group_9__1__Impl3180);
-            rule__CompoundState__DbgNameAssignment_9_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getCompoundStateAccess().getDbgNameAssignment_9_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__Group_9__1__Impl"
-
-
     // $ANTLR start "rule__Transition__Group__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1634:1: rule__Transition__Group__0 : rule__Transition__Group__0__Impl rule__Transition__Group__1 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1330:1: rule__Transition__Group__0 : rule__Transition__Group__0__Impl rule__Transition__Group__1 ;
     public final void rule__Transition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1638:1: ( rule__Transition__Group__0__Impl rule__Transition__Group__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1639:2: rule__Transition__Group__0__Impl rule__Transition__Group__1
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1334:1: ( rule__Transition__Group__0__Impl rule__Transition__Group__1 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1335:2: rule__Transition__Group__0__Impl rule__Transition__Group__1
             {
-            pushFollow(FOLLOW_rule__Transition__Group__0__Impl_in_rule__Transition__Group__03214);
+            pushFollow(FOLLOW_rule__Transition__Group__0__Impl_in_rule__Transition__Group__02607);
             rule__Transition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transition__Group__1_in_rule__Transition__Group__03217);
+            pushFollow(FOLLOW_rule__Transition__Group__1_in_rule__Transition__Group__02610);
             rule__Transition__Group__1();
 
             state._fsp--;
@@ -4325,23 +3500,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1646:1: rule__Transition__Group__0__Impl : ( ( rule__Transition__EventAssignment_0 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1342:1: rule__Transition__Group__0__Impl : ( ( rule__Transition__EventAssignment_0 ) ) ;
     public final void rule__Transition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1650:1: ( ( ( rule__Transition__EventAssignment_0 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1651:1: ( ( rule__Transition__EventAssignment_0 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1346:1: ( ( ( rule__Transition__EventAssignment_0 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1347:1: ( ( rule__Transition__EventAssignment_0 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1651:1: ( ( rule__Transition__EventAssignment_0 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1652:1: ( rule__Transition__EventAssignment_0 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1347:1: ( ( rule__Transition__EventAssignment_0 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1348:1: ( rule__Transition__EventAssignment_0 )
             {
              before(grammarAccess.getTransitionAccess().getEventAssignment_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1653:1: ( rule__Transition__EventAssignment_0 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1653:2: rule__Transition__EventAssignment_0
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1349:1: ( rule__Transition__EventAssignment_0 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1349:2: rule__Transition__EventAssignment_0
             {
-            pushFollow(FOLLOW_rule__Transition__EventAssignment_0_in_rule__Transition__Group__0__Impl3244);
+            pushFollow(FOLLOW_rule__Transition__EventAssignment_0_in_rule__Transition__Group__0__Impl2637);
             rule__Transition__EventAssignment_0();
 
             state._fsp--;
@@ -4372,21 +3547,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1663:1: rule__Transition__Group__1 : rule__Transition__Group__1__Impl rule__Transition__Group__2 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1359:1: rule__Transition__Group__1 : rule__Transition__Group__1__Impl rule__Transition__Group__2 ;
     public final void rule__Transition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1667:1: ( rule__Transition__Group__1__Impl rule__Transition__Group__2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1668:2: rule__Transition__Group__1__Impl rule__Transition__Group__2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1363:1: ( rule__Transition__Group__1__Impl rule__Transition__Group__2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1364:2: rule__Transition__Group__1__Impl rule__Transition__Group__2
             {
-            pushFollow(FOLLOW_rule__Transition__Group__1__Impl_in_rule__Transition__Group__13274);
+            pushFollow(FOLLOW_rule__Transition__Group__1__Impl_in_rule__Transition__Group__12667);
             rule__Transition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Transition__Group__2_in_rule__Transition__Group__13277);
+            pushFollow(FOLLOW_rule__Transition__Group__2_in_rule__Transition__Group__12670);
             rule__Transition__Group__2();
 
             state._fsp--;
@@ -4410,20 +3585,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1675:1: rule__Transition__Group__1__Impl : ( '=>' ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1371:1: rule__Transition__Group__1__Impl : ( '=>' ) ;
     public final void rule__Transition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1679:1: ( ( '=>' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1680:1: ( '=>' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1375:1: ( ( '=>' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1376:1: ( '=>' )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1680:1: ( '=>' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1681:1: '=>'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1376:1: ( '=>' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1377:1: '=>'
             {
              before(grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_1()); 
-            match(input,22,FOLLOW_22_in_rule__Transition__Group__1__Impl3305); 
+            match(input,21,FOLLOW_21_in_rule__Transition__Group__1__Impl2698); 
              after(grammarAccess.getTransitionAccess().getEqualsSignGreaterThanSignKeyword_1()); 
 
             }
@@ -4447,22 +3622,17 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1694:1: rule__Transition__Group__2 : rule__Transition__Group__2__Impl rule__Transition__Group__3 ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1390:1: rule__Transition__Group__2 : rule__Transition__Group__2__Impl ;
     public final void rule__Transition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1698:1: ( rule__Transition__Group__2__Impl rule__Transition__Group__3 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1699:2: rule__Transition__Group__2__Impl rule__Transition__Group__3
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1394:1: ( rule__Transition__Group__2__Impl )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1395:2: rule__Transition__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Transition__Group__2__Impl_in_rule__Transition__Group__23336);
+            pushFollow(FOLLOW_rule__Transition__Group__2__Impl_in_rule__Transition__Group__22729);
             rule__Transition__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Transition__Group__3_in_rule__Transition__Group__23339);
-            rule__Transition__Group__3();
 
             state._fsp--;
 
@@ -4485,23 +3655,23 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__2__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1706:1: rule__Transition__Group__2__Impl : ( ( rule__Transition__StateAssignment_2 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1401:1: rule__Transition__Group__2__Impl : ( ( rule__Transition__StateAssignment_2 ) ) ;
     public final void rule__Transition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1710:1: ( ( ( rule__Transition__StateAssignment_2 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1711:1: ( ( rule__Transition__StateAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1405:1: ( ( ( rule__Transition__StateAssignment_2 ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1406:1: ( ( rule__Transition__StateAssignment_2 ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1711:1: ( ( rule__Transition__StateAssignment_2 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1712:1: ( rule__Transition__StateAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1406:1: ( ( rule__Transition__StateAssignment_2 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1407:1: ( rule__Transition__StateAssignment_2 )
             {
              before(grammarAccess.getTransitionAccess().getStateAssignment_2()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1713:1: ( rule__Transition__StateAssignment_2 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1713:2: rule__Transition__StateAssignment_2
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1408:1: ( rule__Transition__StateAssignment_2 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1408:2: rule__Transition__StateAssignment_2
             {
-            pushFollow(FOLLOW_rule__Transition__StateAssignment_2_in_rule__Transition__Group__2__Impl3366);
+            pushFollow(FOLLOW_rule__Transition__StateAssignment_2_in_rule__Transition__Group__2__Impl2756);
             rule__Transition__StateAssignment_2();
 
             state._fsp--;
@@ -4531,278 +3701,22 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Transition__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Transition__Group__3"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1723:1: rule__Transition__Group__3 : rule__Transition__Group__3__Impl ;
-    public final void rule__Transition__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1727:1: ( rule__Transition__Group__3__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1728:2: rule__Transition__Group__3__Impl
-            {
-            pushFollow(FOLLOW_rule__Transition__Group__3__Impl_in_rule__Transition__Group__33396);
-            rule__Transition__Group__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__3"
-
-
-    // $ANTLR start "rule__Transition__Group__3__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1734:1: rule__Transition__Group__3__Impl : ( ( rule__Transition__Group_3__0 )? ) ;
-    public final void rule__Transition__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1738:1: ( ( ( rule__Transition__Group_3__0 )? ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1739:1: ( ( rule__Transition__Group_3__0 )? )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1739:1: ( ( rule__Transition__Group_3__0 )? )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1740:1: ( rule__Transition__Group_3__0 )?
-            {
-             before(grammarAccess.getTransitionAccess().getGroup_3()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1741:1: ( rule__Transition__Group_3__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
-
-            if ( (LA16_0==18) ) {
-                alt16=1;
-            }
-            switch (alt16) {
-                case 1 :
-                    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1741:2: rule__Transition__Group_3__0
-                    {
-                    pushFollow(FOLLOW_rule__Transition__Group_3__0_in_rule__Transition__Group__3__Impl3423);
-                    rule__Transition__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getGroup_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group__3__Impl"
-
-
-    // $ANTLR start "rule__Transition__Group_3__0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1759:1: rule__Transition__Group_3__0 : rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1 ;
-    public final void rule__Transition__Group_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1763:1: ( rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1764:2: rule__Transition__Group_3__0__Impl rule__Transition__Group_3__1
-            {
-            pushFollow(FOLLOW_rule__Transition__Group_3__0__Impl_in_rule__Transition__Group_3__03462);
-            rule__Transition__Group_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Transition__Group_3__1_in_rule__Transition__Group_3__03465);
-            rule__Transition__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__0"
-
-
-    // $ANTLR start "rule__Transition__Group_3__0__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1771:1: rule__Transition__Group_3__0__Impl : ( 'debug' ) ;
-    public final void rule__Transition__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1775:1: ( ( 'debug' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1776:1: ( 'debug' )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1776:1: ( 'debug' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1777:1: 'debug'
-            {
-             before(grammarAccess.getTransitionAccess().getDebugKeyword_3_0()); 
-            match(input,18,FOLLOW_18_in_rule__Transition__Group_3__0__Impl3493); 
-             after(grammarAccess.getTransitionAccess().getDebugKeyword_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__Transition__Group_3__1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1790:1: rule__Transition__Group_3__1 : rule__Transition__Group_3__1__Impl ;
-    public final void rule__Transition__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1794:1: ( rule__Transition__Group_3__1__Impl )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1795:2: rule__Transition__Group_3__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Transition__Group_3__1__Impl_in_rule__Transition__Group_3__13524);
-            rule__Transition__Group_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__1"
-
-
-    // $ANTLR start "rule__Transition__Group_3__1__Impl"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1801:1: rule__Transition__Group_3__1__Impl : ( ( rule__Transition__DbgNameAssignment_3_1 ) ) ;
-    public final void rule__Transition__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1805:1: ( ( ( rule__Transition__DbgNameAssignment_3_1 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1806:1: ( ( rule__Transition__DbgNameAssignment_3_1 ) )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1806:1: ( ( rule__Transition__DbgNameAssignment_3_1 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1807:1: ( rule__Transition__DbgNameAssignment_3_1 )
-            {
-             before(grammarAccess.getTransitionAccess().getDbgNameAssignment_3_1()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1808:1: ( rule__Transition__DbgNameAssignment_3_1 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1808:2: rule__Transition__DbgNameAssignment_3_1
-            {
-            pushFollow(FOLLOW_rule__Transition__DbgNameAssignment_3_1_in_rule__Transition__Group_3__1__Impl3551);
-            rule__Transition__DbgNameAssignment_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTransitionAccess().getDbgNameAssignment_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__Group_3__1__Impl"
-
-
     // $ANTLR start "rule__Module__NameAssignment_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1823:1: rule__Module__NameAssignment_1 : ( ( rule__Module__NameAlternatives_1_0 ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1425:1: rule__Module__NameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Module__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1827:1: ( ( ( rule__Module__NameAlternatives_1_0 ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1828:1: ( ( rule__Module__NameAlternatives_1_0 ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1429:1: ( ( RULE_STRING ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1430:1: ( RULE_STRING )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1828:1: ( ( rule__Module__NameAlternatives_1_0 ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1829:1: ( rule__Module__NameAlternatives_1_0 )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1430:1: ( RULE_STRING )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1431:1: RULE_STRING
             {
-             before(grammarAccess.getModuleAccess().getNameAlternatives_1_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1830:1: ( rule__Module__NameAlternatives_1_0 )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1830:2: rule__Module__NameAlternatives_1_0
-            {
-            pushFollow(FOLLOW_rule__Module__NameAlternatives_1_0_in_rule__Module__NameAssignment_13590);
-            rule__Module__NameAlternatives_1_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getModuleAccess().getNameAlternatives_1_0()); 
+             before(grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Module__NameAssignment_12797); 
+             after(grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -4825,20 +3739,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__MachinesAssignment_2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1839:1: rule__Module__MachinesAssignment_2 : ( ruleStatemachine ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1440:1: rule__Module__MachinesAssignment_2 : ( ruleStatemachine ) ;
     public final void rule__Module__MachinesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1843:1: ( ( ruleStatemachine ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1844:1: ( ruleStatemachine )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1444:1: ( ( ruleStatemachine ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1445:1: ( ruleStatemachine )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1844:1: ( ruleStatemachine )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1845:1: ruleStatemachine
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1445:1: ( ruleStatemachine )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1446:1: ruleStatemachine
             {
              before(grammarAccess.getModuleAccess().getMachinesStatemachineParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleStatemachine_in_rule__Module__MachinesAssignment_23623);
+            pushFollow(FOLLOW_ruleStatemachine_in_rule__Module__MachinesAssignment_22828);
             ruleStatemachine();
 
             state._fsp--;
@@ -4866,24 +3780,24 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__InitialAssignment_0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1854:1: rule__Statemachine__InitialAssignment_0 : ( ( 'initial' ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1455:1: rule__Statemachine__InitialAssignment_0 : ( ( 'initial' ) ) ;
     public final void rule__Statemachine__InitialAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1858:1: ( ( ( 'initial' ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1859:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1459:1: ( ( ( 'initial' ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1460:1: ( ( 'initial' ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1859:1: ( ( 'initial' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1860:1: ( 'initial' )
-            {
-             before(grammarAccess.getStatemachineAccess().getInitialInitialKeyword_0_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1861:1: ( 'initial' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1862:1: 'initial'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1460:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1461:1: ( 'initial' )
             {
              before(grammarAccess.getStatemachineAccess().getInitialInitialKeyword_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__Statemachine__InitialAssignment_03659); 
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1462:1: ( 'initial' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1463:1: 'initial'
+            {
+             before(grammarAccess.getStatemachineAccess().getInitialInitialKeyword_0_0()); 
+            match(input,22,FOLLOW_22_in_rule__Statemachine__InitialAssignment_02864); 
              after(grammarAccess.getStatemachineAccess().getInitialInitialKeyword_0_0()); 
 
             }
@@ -4911,20 +3825,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__NameAssignment_2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1877:1: rule__Statemachine__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1478:1: rule__Statemachine__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Statemachine__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1881:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1882:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1482:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1483:1: ( RULE_ID )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1882:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1883:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1483:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1484:1: RULE_ID
             {
              before(grammarAccess.getStatemachineAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statemachine__NameAssignment_23698); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statemachine__NameAssignment_22903); 
              after(grammarAccess.getStatemachineAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -4948,20 +3862,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__ValueAssignment_3_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1892:1: rule__Statemachine__ValueAssignment_3_1 : ( RULE_INT ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1493:1: rule__Statemachine__ValueAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__Statemachine__ValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1896:1: ( ( RULE_INT ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1897:1: ( RULE_INT )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1497:1: ( ( RULE_INT ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1498:1: ( RULE_INT )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1897:1: ( RULE_INT )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1898:1: RULE_INT
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1498:1: ( RULE_INT )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1499:1: RULE_INT
             {
              before(grammarAccess.getStatemachineAccess().getValueINTTerminalRuleCall_3_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Statemachine__ValueAssignment_3_13729); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Statemachine__ValueAssignment_3_12934); 
              after(grammarAccess.getStatemachineAccess().getValueINTTerminalRuleCall_3_1_0()); 
 
             }
@@ -4985,20 +3899,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__EventsAssignment_6"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1907:1: rule__Statemachine__EventsAssignment_6 : ( ruleEvent ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1508:1: rule__Statemachine__EventsAssignment_6 : ( ruleEvent ) ;
     public final void rule__Statemachine__EventsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1911:1: ( ( ruleEvent ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1912:1: ( ruleEvent )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1512:1: ( ( ruleEvent ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1513:1: ( ruleEvent )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1912:1: ( ruleEvent )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1913:1: ruleEvent
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1513:1: ( ruleEvent )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1514:1: ruleEvent
             {
              before(grammarAccess.getStatemachineAccess().getEventsEventParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleEvent_in_rule__Statemachine__EventsAssignment_63760);
+            pushFollow(FOLLOW_ruleEvent_in_rule__Statemachine__EventsAssignment_62965);
             ruleEvent();
 
             state._fsp--;
@@ -5026,20 +3940,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Statemachine__StatesAssignment_8"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1922:1: rule__Statemachine__StatesAssignment_8 : ( ruleState ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1523:1: rule__Statemachine__StatesAssignment_8 : ( ruleState ) ;
     public final void rule__Statemachine__StatesAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1926:1: ( ( ruleState ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1927:1: ( ruleState )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1527:1: ( ( ruleState ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1528:1: ( ruleState )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1927:1: ( ruleState )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1928:1: ruleState
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1528:1: ( ruleState )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1529:1: ruleState
             {
              before(grammarAccess.getStatemachineAccess().getStatesStateParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleState_in_rule__Statemachine__StatesAssignment_83791);
+            pushFollow(FOLLOW_ruleState_in_rule__Statemachine__StatesAssignment_82996);
             ruleState();
 
             state._fsp--;
@@ -5066,58 +3980,21 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Statemachine__StatesAssignment_8"
 
 
-    // $ANTLR start "rule__Statemachine__DbgNameAssignment_10_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1937:1: rule__Statemachine__DbgNameAssignment_10_1 : ( RULE_ID ) ;
-    public final void rule__Statemachine__DbgNameAssignment_10_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1941:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1942:1: ( RULE_ID )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1942:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1943:1: RULE_ID
-            {
-             before(grammarAccess.getStatemachineAccess().getDbgNameIDTerminalRuleCall_10_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Statemachine__DbgNameAssignment_10_13822); 
-             after(grammarAccess.getStatemachineAccess().getDbgNameIDTerminalRuleCall_10_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Statemachine__DbgNameAssignment_10_1"
-
-
     // $ANTLR start "rule__Event__NameAssignment"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1952:1: rule__Event__NameAssignment : ( RULE_ID ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1538:1: rule__Event__NameAssignment : ( RULE_ID ) ;
     public final void rule__Event__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1956:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1957:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1542:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1543:1: ( RULE_ID )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1957:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1958:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1543:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1544:1: RULE_ID
             {
              before(grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Event__NameAssignment3853); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Event__NameAssignment3027); 
              after(grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -5141,24 +4018,24 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__InitialAssignment_0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1967:1: rule__SimpleState__InitialAssignment_0 : ( ( 'initial' ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1553:1: rule__SimpleState__InitialAssignment_0 : ( ( 'initial' ) ) ;
     public final void rule__SimpleState__InitialAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1971:1: ( ( ( 'initial' ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1972:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1557:1: ( ( ( 'initial' ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1558:1: ( ( 'initial' ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1972:1: ( ( 'initial' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1973:1: ( 'initial' )
-            {
-             before(grammarAccess.getSimpleStateAccess().getInitialInitialKeyword_0_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1974:1: ( 'initial' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1975:1: 'initial'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1558:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1559:1: ( 'initial' )
             {
              before(grammarAccess.getSimpleStateAccess().getInitialInitialKeyword_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__SimpleState__InitialAssignment_03889); 
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1560:1: ( 'initial' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1561:1: 'initial'
+            {
+             before(grammarAccess.getSimpleStateAccess().getInitialInitialKeyword_0_0()); 
+            match(input,22,FOLLOW_22_in_rule__SimpleState__InitialAssignment_03063); 
              after(grammarAccess.getSimpleStateAccess().getInitialInitialKeyword_0_0()); 
 
             }
@@ -5186,20 +4063,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__NameAssignment_2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1990:1: rule__SimpleState__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1576:1: rule__SimpleState__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__SimpleState__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1994:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1995:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1580:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1581:1: ( RULE_ID )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1995:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1996:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1581:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1582:1: RULE_ID
             {
              before(grammarAccess.getSimpleStateAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleState__NameAssignment_23928); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleState__NameAssignment_23102); 
              after(grammarAccess.getSimpleStateAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -5223,20 +4100,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__ValueAssignment_3_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2005:1: rule__SimpleState__ValueAssignment_3_1 : ( RULE_INT ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1591:1: rule__SimpleState__ValueAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__SimpleState__ValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2009:1: ( ( RULE_INT ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2010:1: ( RULE_INT )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1595:1: ( ( RULE_INT ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1596:1: ( RULE_INT )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2010:1: ( RULE_INT )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2011:1: RULE_INT
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1596:1: ( RULE_INT )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1597:1: RULE_INT
             {
              before(grammarAccess.getSimpleStateAccess().getValueINTTerminalRuleCall_3_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SimpleState__ValueAssignment_3_13959); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SimpleState__ValueAssignment_3_13133); 
              after(grammarAccess.getSimpleStateAccess().getValueINTTerminalRuleCall_3_1_0()); 
 
             }
@@ -5260,20 +4137,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleState__TransitionsAssignment_5"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2020:1: rule__SimpleState__TransitionsAssignment_5 : ( ruleTransition ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1606:1: rule__SimpleState__TransitionsAssignment_5 : ( ruleTransition ) ;
     public final void rule__SimpleState__TransitionsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2024:1: ( ( ruleTransition ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2025:1: ( ruleTransition )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1610:1: ( ( ruleTransition ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1611:1: ( ruleTransition )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2025:1: ( ruleTransition )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2026:1: ruleTransition
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1611:1: ( ruleTransition )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1612:1: ruleTransition
             {
              before(grammarAccess.getSimpleStateAccess().getTransitionsTransitionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleTransition_in_rule__SimpleState__TransitionsAssignment_53990);
+            pushFollow(FOLLOW_ruleTransition_in_rule__SimpleState__TransitionsAssignment_53164);
             ruleTransition();
 
             state._fsp--;
@@ -5300,62 +4177,25 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SimpleState__TransitionsAssignment_5"
 
 
-    // $ANTLR start "rule__SimpleState__DbgNameAssignment_7_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2035:1: rule__SimpleState__DbgNameAssignment_7_1 : ( RULE_ID ) ;
-    public final void rule__SimpleState__DbgNameAssignment_7_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2039:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2040:1: ( RULE_ID )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2040:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2041:1: RULE_ID
-            {
-             before(grammarAccess.getSimpleStateAccess().getDbgNameIDTerminalRuleCall_7_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleState__DbgNameAssignment_7_14021); 
-             after(grammarAccess.getSimpleStateAccess().getDbgNameIDTerminalRuleCall_7_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleState__DbgNameAssignment_7_1"
-
-
     // $ANTLR start "rule__CompoundState__InitialAssignment_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2050:1: rule__CompoundState__InitialAssignment_1 : ( ( 'initial' ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1621:1: rule__CompoundState__InitialAssignment_1 : ( ( 'initial' ) ) ;
     public final void rule__CompoundState__InitialAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2054:1: ( ( ( 'initial' ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2055:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1625:1: ( ( ( 'initial' ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1626:1: ( ( 'initial' ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2055:1: ( ( 'initial' ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2056:1: ( 'initial' )
-            {
-             before(grammarAccess.getCompoundStateAccess().getInitialInitialKeyword_1_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2057:1: ( 'initial' )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2058:1: 'initial'
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1626:1: ( ( 'initial' ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1627:1: ( 'initial' )
             {
              before(grammarAccess.getCompoundStateAccess().getInitialInitialKeyword_1_0()); 
-            match(input,23,FOLLOW_23_in_rule__CompoundState__InitialAssignment_14057); 
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1628:1: ( 'initial' )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1629:1: 'initial'
+            {
+             before(grammarAccess.getCompoundStateAccess().getInitialInitialKeyword_1_0()); 
+            match(input,22,FOLLOW_22_in_rule__CompoundState__InitialAssignment_13200); 
              after(grammarAccess.getCompoundStateAccess().getInitialInitialKeyword_1_0()); 
 
             }
@@ -5383,20 +4223,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__NameAssignment_3"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2073:1: rule__CompoundState__NameAssignment_3 : ( RULE_ID ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1644:1: rule__CompoundState__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__CompoundState__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2077:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2078:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1648:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1649:1: ( RULE_ID )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2078:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2079:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1649:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1650:1: RULE_ID
             {
              before(grammarAccess.getCompoundStateAccess().getNameIDTerminalRuleCall_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompoundState__NameAssignment_34096); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompoundState__NameAssignment_33239); 
              after(grammarAccess.getCompoundStateAccess().getNameIDTerminalRuleCall_3_0()); 
 
             }
@@ -5420,24 +4260,24 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__MachineAssignment_5"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2088:1: rule__CompoundState__MachineAssignment_5 : ( ( RULE_ID ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1659:1: rule__CompoundState__MachineAssignment_5 : ( ( RULE_ID ) ) ;
     public final void rule__CompoundState__MachineAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2092:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2093:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1663:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1664:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2093:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2094:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1664:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1665:1: ( RULE_ID )
             {
              before(grammarAccess.getCompoundStateAccess().getMachineStatemachineCrossReference_5_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2095:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2096:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1666:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1667:1: RULE_ID
             {
              before(grammarAccess.getCompoundStateAccess().getMachineStatemachineIDTerminalRuleCall_5_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompoundState__MachineAssignment_54131); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompoundState__MachineAssignment_53274); 
              after(grammarAccess.getCompoundStateAccess().getMachineStatemachineIDTerminalRuleCall_5_0_1()); 
 
             }
@@ -5465,20 +4305,20 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompoundState__TransitionsAssignment_7"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2107:1: rule__CompoundState__TransitionsAssignment_7 : ( ruleTransition ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1678:1: rule__CompoundState__TransitionsAssignment_7 : ( ruleTransition ) ;
     public final void rule__CompoundState__TransitionsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2111:1: ( ( ruleTransition ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2112:1: ( ruleTransition )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1682:1: ( ( ruleTransition ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1683:1: ( ruleTransition )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2112:1: ( ruleTransition )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2113:1: ruleTransition
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1683:1: ( ruleTransition )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1684:1: ruleTransition
             {
              before(grammarAccess.getCompoundStateAccess().getTransitionsTransitionParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_ruleTransition_in_rule__CompoundState__TransitionsAssignment_74166);
+            pushFollow(FOLLOW_ruleTransition_in_rule__CompoundState__TransitionsAssignment_73309);
             ruleTransition();
 
             state._fsp--;
@@ -5505,62 +4345,25 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__CompoundState__TransitionsAssignment_7"
 
 
-    // $ANTLR start "rule__CompoundState__DbgNameAssignment_9_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2122:1: rule__CompoundState__DbgNameAssignment_9_1 : ( RULE_ID ) ;
-    public final void rule__CompoundState__DbgNameAssignment_9_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2126:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2127:1: ( RULE_ID )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2127:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2128:1: RULE_ID
-            {
-             before(grammarAccess.getCompoundStateAccess().getDbgNameIDTerminalRuleCall_9_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CompoundState__DbgNameAssignment_9_14197); 
-             after(grammarAccess.getCompoundStateAccess().getDbgNameIDTerminalRuleCall_9_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CompoundState__DbgNameAssignment_9_1"
-
-
     // $ANTLR start "rule__Transition__EventAssignment_0"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2137:1: rule__Transition__EventAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1693:1: rule__Transition__EventAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Transition__EventAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2141:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2142:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1697:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1698:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2142:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2143:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1698:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1699:1: ( RULE_ID )
             {
              before(grammarAccess.getTransitionAccess().getEventEventCrossReference_0_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2144:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2145:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1700:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1701:1: RULE_ID
             {
              before(grammarAccess.getTransitionAccess().getEventEventIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transition__EventAssignment_04232); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transition__EventAssignment_03344); 
              after(grammarAccess.getTransitionAccess().getEventEventIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -5588,24 +4391,24 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__StateAssignment_2"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2156:1: rule__Transition__StateAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1712:1: rule__Transition__StateAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Transition__StateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2160:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2161:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1716:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1717:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2161:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2162:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1717:1: ( ( RULE_ID ) )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1718:1: ( RULE_ID )
             {
              before(grammarAccess.getTransitionAccess().getStateStateCrossReference_2_0()); 
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2163:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2164:1: RULE_ID
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1719:1: ( RULE_ID )
+            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:1720:1: RULE_ID
             {
              before(grammarAccess.getTransitionAccess().getStateStateIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transition__StateAssignment_24271); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transition__StateAssignment_23383); 
              after(grammarAccess.getTransitionAccess().getStateStateIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -5630,43 +4433,6 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__Transition__StateAssignment_2"
-
-
-    // $ANTLR start "rule__Transition__DbgNameAssignment_3_1"
-    // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2175:1: rule__Transition__DbgNameAssignment_3_1 : ( RULE_ID ) ;
-    public final void rule__Transition__DbgNameAssignment_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2179:1: ( ( RULE_ID ) )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2180:1: ( RULE_ID )
-            {
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2180:1: ( RULE_ID )
-            // ../org.eclipse.ocl.tutorial.eclipsecon2011.states.ui/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/ui/contentassist/antlr/internal/InternalStates.g:2181:1: RULE_ID
-            {
-             before(grammarAccess.getTransitionAccess().getDbgNameIDTerminalRuleCall_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Transition__DbgNameAssignment_3_14306); 
-             after(grammarAccess.getTransitionAccess().getDbgNameIDTerminalRuleCall_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Transition__DbgNameAssignment_3_1"
 
     // Delegated rules
 
@@ -5694,164 +4460,126 @@ public class InternalStatesParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition421 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTransition428 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Transition__Group__0_in_ruleTransition454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Module__NameAlternatives_1_0490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Module__NameAlternatives_1_0507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleState_in_rule__State__Alternatives539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompoundState_in_rule__State__Alternatives556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__0586 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Module__Group__1_in_rule__Module__Group__0589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Module__Group__0__Impl617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__1648 = new BitSet(new long[]{0x0000000000801000L});
-    public static final BitSet FOLLOW_rule__Module__Group__2_in_rule__Module__Group__1651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__NameAssignment_1_in_rule__Module__Group__1__Impl678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__2708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__MachinesAssignment_2_in_rule__Module__Group__2__Impl735 = new BitSet(new long[]{0x0000000000801002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__0__Impl_in_rule__Statemachine__Group__0772 = new BitSet(new long[]{0x0000000000801000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__1_in_rule__Statemachine__Group__0775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__InitialAssignment_0_in_rule__Statemachine__Group__0__Impl802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__1833 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__2_in_rule__Statemachine__Group__1836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Statemachine__Group__1__Impl864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__2__Impl_in_rule__Statemachine__Group__2895 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__3_in_rule__Statemachine__Group__2898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__NameAssignment_2_in_rule__Statemachine__Group__2__Impl925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__3__Impl_in_rule__Statemachine__Group__3955 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__4_in_rule__Statemachine__Group__3958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_3__0_in_rule__Statemachine__Group__3__Impl985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__4__Impl_in_rule__Statemachine__Group__41016 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__5_in_rule__Statemachine__Group__41019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Statemachine__Group__4__Impl1047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__5__Impl_in_rule__Statemachine__Group__51078 = new BitSet(new long[]{0x0000000000008020L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__6_in_rule__Statemachine__Group__51081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Statemachine__Group__5__Impl1109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__6__Impl_in_rule__Statemachine__Group__61140 = new BitSet(new long[]{0x0000000000008020L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__7_in_rule__Statemachine__Group__61143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__EventsAssignment_6_in_rule__Statemachine__Group__6__Impl1170 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__7__Impl_in_rule__Statemachine__Group__71201 = new BitSet(new long[]{0x0000000000990000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__8_in_rule__Statemachine__Group__71204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Statemachine__Group__7__Impl1232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__8__Impl_in_rule__Statemachine__Group__81263 = new BitSet(new long[]{0x0000000000990000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__9_in_rule__Statemachine__Group__81266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__StatesAssignment_8_in_rule__Statemachine__Group__8__Impl1293 = new BitSet(new long[]{0x0000000000980002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__9__Impl_in_rule__Statemachine__Group__91324 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__10_in_rule__Statemachine__Group__91327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Statemachine__Group__9__Impl1355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group__10__Impl_in_rule__Statemachine__Group__101386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_10__0_in_rule__Statemachine__Group__10__Impl1413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_3__0__Impl_in_rule__Statemachine__Group_3__01466 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_3__1_in_rule__Statemachine__Group_3__01469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Statemachine__Group_3__0__Impl1497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_3__1__Impl_in_rule__Statemachine__Group_3__11528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__ValueAssignment_3_1_in_rule__Statemachine__Group_3__1__Impl1555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_10__0__Impl_in_rule__Statemachine__Group_10__01589 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_10__1_in_rule__Statemachine__Group_10__01592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Statemachine__Group_10__0__Impl1620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__Group_10__1__Impl_in_rule__Statemachine__Group_10__11651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Statemachine__DbgNameAssignment_10_1_in_rule__Statemachine__Group_10__1__Impl1678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__0__Impl_in_rule__SimpleState__Group__01712 = new BitSet(new long[]{0x0000000000880000L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__1_in_rule__SimpleState__Group__01715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__InitialAssignment_0_in_rule__SimpleState__Group__0__Impl1742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__1__Impl_in_rule__SimpleState__Group__11773 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__2_in_rule__SimpleState__Group__11776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__SimpleState__Group__1__Impl1804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__2__Impl_in_rule__SimpleState__Group__21835 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__3_in_rule__SimpleState__Group__21838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__NameAssignment_2_in_rule__SimpleState__Group__2__Impl1865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__3__Impl_in_rule__SimpleState__Group__31895 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__4_in_rule__SimpleState__Group__31898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_3__0_in_rule__SimpleState__Group__3__Impl1925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__4__Impl_in_rule__SimpleState__Group__41956 = new BitSet(new long[]{0x0000000000010020L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__5_in_rule__SimpleState__Group__41959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SimpleState__Group__4__Impl1987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__5__Impl_in_rule__SimpleState__Group__52018 = new BitSet(new long[]{0x0000000000010020L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__6_in_rule__SimpleState__Group__52021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__TransitionsAssignment_5_in_rule__SimpleState__Group__5__Impl2048 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__6__Impl_in_rule__SimpleState__Group__62079 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__7_in_rule__SimpleState__Group__62082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__SimpleState__Group__6__Impl2110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group__7__Impl_in_rule__SimpleState__Group__72141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_7__0_in_rule__SimpleState__Group__7__Impl2168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_3__0__Impl_in_rule__SimpleState__Group_3__02215 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_3__1_in_rule__SimpleState__Group_3__02218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__SimpleState__Group_3__0__Impl2246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_3__1__Impl_in_rule__SimpleState__Group_3__12277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__ValueAssignment_3_1_in_rule__SimpleState__Group_3__1__Impl2304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_7__0__Impl_in_rule__SimpleState__Group_7__02338 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_7__1_in_rule__SimpleState__Group_7__02341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__SimpleState__Group_7__0__Impl2369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__Group_7__1__Impl_in_rule__SimpleState__Group_7__12400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleState__DbgNameAssignment_7_1_in_rule__SimpleState__Group_7__1__Impl2427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__0__Impl_in_rule__CompoundState__Group__02461 = new BitSet(new long[]{0x0000000000880000L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__1_in_rule__CompoundState__Group__02464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__CompoundState__Group__0__Impl2492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__1__Impl_in_rule__CompoundState__Group__12523 = new BitSet(new long[]{0x0000000000880000L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__2_in_rule__CompoundState__Group__12526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__InitialAssignment_1_in_rule__CompoundState__Group__1__Impl2553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__2__Impl_in_rule__CompoundState__Group__22584 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__3_in_rule__CompoundState__Group__22587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__CompoundState__Group__2__Impl2615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__3__Impl_in_rule__CompoundState__Group__32646 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__4_in_rule__CompoundState__Group__32649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__NameAssignment_3_in_rule__CompoundState__Group__3__Impl2676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__4__Impl_in_rule__CompoundState__Group__42706 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__5_in_rule__CompoundState__Group__42709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__CompoundState__Group__4__Impl2737 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__5__Impl_in_rule__CompoundState__Group__52768 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__6_in_rule__CompoundState__Group__52771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__MachineAssignment_5_in_rule__CompoundState__Group__5__Impl2798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__6__Impl_in_rule__CompoundState__Group__62828 = new BitSet(new long[]{0x0000000000010020L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__7_in_rule__CompoundState__Group__62831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__CompoundState__Group__6__Impl2859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__7__Impl_in_rule__CompoundState__Group__72890 = new BitSet(new long[]{0x0000000000010020L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__8_in_rule__CompoundState__Group__72893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__TransitionsAssignment_7_in_rule__CompoundState__Group__7__Impl2920 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__8__Impl_in_rule__CompoundState__Group__82951 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__9_in_rule__CompoundState__Group__82954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__CompoundState__Group__8__Impl2982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group__9__Impl_in_rule__CompoundState__Group__93013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group_9__0_in_rule__CompoundState__Group__9__Impl3040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group_9__0__Impl_in_rule__CompoundState__Group_9__03091 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group_9__1_in_rule__CompoundState__Group_9__03094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__CompoundState__Group_9__0__Impl3122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__Group_9__1__Impl_in_rule__CompoundState__Group_9__13153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompoundState__DbgNameAssignment_9_1_in_rule__CompoundState__Group_9__1__Impl3180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group__0__Impl_in_rule__Transition__Group__03214 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Transition__Group__1_in_rule__Transition__Group__03217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__EventAssignment_0_in_rule__Transition__Group__0__Impl3244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group__1__Impl_in_rule__Transition__Group__13274 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Transition__Group__2_in_rule__Transition__Group__13277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Transition__Group__1__Impl3305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group__2__Impl_in_rule__Transition__Group__23336 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Transition__Group__3_in_rule__Transition__Group__23339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__StateAssignment_2_in_rule__Transition__Group__2__Impl3366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group__3__Impl_in_rule__Transition__Group__33396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group_3__0_in_rule__Transition__Group__3__Impl3423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group_3__0__Impl_in_rule__Transition__Group_3__03462 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Transition__Group_3__1_in_rule__Transition__Group_3__03465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Transition__Group_3__0__Impl3493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__Group_3__1__Impl_in_rule__Transition__Group_3__13524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Transition__DbgNameAssignment_3_1_in_rule__Transition__Group_3__1__Impl3551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__NameAlternatives_1_0_in_rule__Module__NameAssignment_13590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatemachine_in_rule__Module__MachinesAssignment_23623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Statemachine__InitialAssignment_03659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statemachine__NameAssignment_23698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Statemachine__ValueAssignment_3_13729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_rule__Statemachine__EventsAssignment_63760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleState_in_rule__Statemachine__StatesAssignment_83791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Statemachine__DbgNameAssignment_10_13822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Event__NameAssignment3853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__SimpleState__InitialAssignment_03889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleState__NameAssignment_23928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__SimpleState__ValueAssignment_3_13959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__SimpleState__TransitionsAssignment_53990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleState__DbgNameAssignment_7_14021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__CompoundState__InitialAssignment_14057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CompoundState__NameAssignment_34096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CompoundState__MachineAssignment_54131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_rule__CompoundState__TransitionsAssignment_74166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CompoundState__DbgNameAssignment_9_14197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Transition__EventAssignment_04232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Transition__StateAssignment_24271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Transition__DbgNameAssignment_3_14306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleState_in_rule__State__Alternatives490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompoundState_in_rule__State__Alternatives507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__0537 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Module__Group__1_in_rule__Module__Group__0540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Module__Group__0__Impl568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__1599 = new BitSet(new long[]{0x0000000000401000L});
+    public static final BitSet FOLLOW_rule__Module__Group__2_in_rule__Module__Group__1602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__NameAssignment_1_in_rule__Module__Group__1__Impl629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__2659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__MachinesAssignment_2_in_rule__Module__Group__2__Impl686 = new BitSet(new long[]{0x0000000000401002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__0__Impl_in_rule__Statemachine__Group__0723 = new BitSet(new long[]{0x0000000000401000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__1_in_rule__Statemachine__Group__0726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__InitialAssignment_0_in_rule__Statemachine__Group__0__Impl753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__1__Impl_in_rule__Statemachine__Group__1784 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__2_in_rule__Statemachine__Group__1787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Statemachine__Group__1__Impl815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__2__Impl_in_rule__Statemachine__Group__2846 = new BitSet(new long[]{0x0000000000022000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__3_in_rule__Statemachine__Group__2849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__NameAssignment_2_in_rule__Statemachine__Group__2__Impl876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__3__Impl_in_rule__Statemachine__Group__3906 = new BitSet(new long[]{0x0000000000022000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__4_in_rule__Statemachine__Group__3909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group_3__0_in_rule__Statemachine__Group__3__Impl936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__4__Impl_in_rule__Statemachine__Group__4967 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__5_in_rule__Statemachine__Group__4970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Statemachine__Group__4__Impl998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__5__Impl_in_rule__Statemachine__Group__51029 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__6_in_rule__Statemachine__Group__51032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Statemachine__Group__5__Impl1060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__6__Impl_in_rule__Statemachine__Group__61091 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__7_in_rule__Statemachine__Group__61094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__EventsAssignment_6_in_rule__Statemachine__Group__6__Impl1121 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__7__Impl_in_rule__Statemachine__Group__71152 = new BitSet(new long[]{0x00000000004D0000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__8_in_rule__Statemachine__Group__71155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Statemachine__Group__7__Impl1183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__8__Impl_in_rule__Statemachine__Group__81214 = new BitSet(new long[]{0x00000000004D0000L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__9_in_rule__Statemachine__Group__81217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__StatesAssignment_8_in_rule__Statemachine__Group__8__Impl1244 = new BitSet(new long[]{0x00000000004C0002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group__9__Impl_in_rule__Statemachine__Group__91275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Statemachine__Group__9__Impl1303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group_3__0__Impl_in_rule__Statemachine__Group_3__01354 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group_3__1_in_rule__Statemachine__Group_3__01357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Statemachine__Group_3__0__Impl1385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__Group_3__1__Impl_in_rule__Statemachine__Group_3__11416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Statemachine__ValueAssignment_3_1_in_rule__Statemachine__Group_3__1__Impl1443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__0__Impl_in_rule__SimpleState__Group__01477 = new BitSet(new long[]{0x0000000000440000L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__1_in_rule__SimpleState__Group__01480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__InitialAssignment_0_in_rule__SimpleState__Group__0__Impl1507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__1__Impl_in_rule__SimpleState__Group__11538 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__2_in_rule__SimpleState__Group__11541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__SimpleState__Group__1__Impl1569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__2__Impl_in_rule__SimpleState__Group__21600 = new BitSet(new long[]{0x0000000000022000L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__3_in_rule__SimpleState__Group__21603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__NameAssignment_2_in_rule__SimpleState__Group__2__Impl1630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__3__Impl_in_rule__SimpleState__Group__31660 = new BitSet(new long[]{0x0000000000022000L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__4_in_rule__SimpleState__Group__31663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group_3__0_in_rule__SimpleState__Group__3__Impl1690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__4__Impl_in_rule__SimpleState__Group__41721 = new BitSet(new long[]{0x0000000000010020L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__5_in_rule__SimpleState__Group__41724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__SimpleState__Group__4__Impl1752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__5__Impl_in_rule__SimpleState__Group__51783 = new BitSet(new long[]{0x0000000000010020L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__6_in_rule__SimpleState__Group__51786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__TransitionsAssignment_5_in_rule__SimpleState__Group__5__Impl1813 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group__6__Impl_in_rule__SimpleState__Group__61844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SimpleState__Group__6__Impl1872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group_3__0__Impl_in_rule__SimpleState__Group_3__01917 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group_3__1_in_rule__SimpleState__Group_3__01920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__SimpleState__Group_3__0__Impl1948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__Group_3__1__Impl_in_rule__SimpleState__Group_3__11979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleState__ValueAssignment_3_1_in_rule__SimpleState__Group_3__1__Impl2006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__0__Impl_in_rule__CompoundState__Group__02040 = new BitSet(new long[]{0x0000000000440000L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__1_in_rule__CompoundState__Group__02043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__CompoundState__Group__0__Impl2071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__1__Impl_in_rule__CompoundState__Group__12102 = new BitSet(new long[]{0x0000000000440000L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__2_in_rule__CompoundState__Group__12105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__InitialAssignment_1_in_rule__CompoundState__Group__1__Impl2132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__2__Impl_in_rule__CompoundState__Group__22163 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__3_in_rule__CompoundState__Group__22166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__CompoundState__Group__2__Impl2194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__3__Impl_in_rule__CompoundState__Group__32225 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__4_in_rule__CompoundState__Group__32228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__NameAssignment_3_in_rule__CompoundState__Group__3__Impl2255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__4__Impl_in_rule__CompoundState__Group__42285 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__5_in_rule__CompoundState__Group__42288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__CompoundState__Group__4__Impl2316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__5__Impl_in_rule__CompoundState__Group__52347 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__6_in_rule__CompoundState__Group__52350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__MachineAssignment_5_in_rule__CompoundState__Group__5__Impl2377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__6__Impl_in_rule__CompoundState__Group__62407 = new BitSet(new long[]{0x0000000000010020L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__7_in_rule__CompoundState__Group__62410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__CompoundState__Group__6__Impl2438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__7__Impl_in_rule__CompoundState__Group__72469 = new BitSet(new long[]{0x0000000000010020L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__8_in_rule__CompoundState__Group__72472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompoundState__TransitionsAssignment_7_in_rule__CompoundState__Group__7__Impl2499 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__CompoundState__Group__8__Impl_in_rule__CompoundState__Group__82530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__CompoundState__Group__8__Impl2558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__Group__0__Impl_in_rule__Transition__Group__02607 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__Transition__Group__1_in_rule__Transition__Group__02610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__EventAssignment_0_in_rule__Transition__Group__0__Impl2637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__Group__1__Impl_in_rule__Transition__Group__12667 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Transition__Group__2_in_rule__Transition__Group__12670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Transition__Group__1__Impl2698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__Group__2__Impl_in_rule__Transition__Group__22729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Transition__StateAssignment_2_in_rule__Transition__Group__2__Impl2756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Module__NameAssignment_12797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatemachine_in_rule__Module__MachinesAssignment_22828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Statemachine__InitialAssignment_02864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Statemachine__NameAssignment_22903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Statemachine__ValueAssignment_3_12934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_rule__Statemachine__EventsAssignment_62965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_rule__Statemachine__StatesAssignment_82996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Event__NameAssignment3027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__SimpleState__InitialAssignment_03063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleState__NameAssignment_23102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__SimpleState__ValueAssignment_3_13133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__SimpleState__TransitionsAssignment_53164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__CompoundState__InitialAssignment_13200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CompoundState__NameAssignment_33239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CompoundState__MachineAssignment_53274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_rule__CompoundState__TransitionsAssignment_73309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Transition__EventAssignment_03344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Transition__StateAssignment_23383 = new BitSet(new long[]{0x0000000000000002L});
 
 }

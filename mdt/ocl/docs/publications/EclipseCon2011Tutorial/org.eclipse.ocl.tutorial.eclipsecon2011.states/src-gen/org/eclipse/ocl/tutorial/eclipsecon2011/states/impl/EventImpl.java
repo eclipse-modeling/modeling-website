@@ -164,16 +164,17 @@ public class EventImpl extends MinimalEObjectImpl.Container implements Event
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
    */
   @Override
   public String toString()
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer();
-    result.append("Event: ");
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
     result.append(name);
+    result.append(')');
     return result.toString();
   }
 

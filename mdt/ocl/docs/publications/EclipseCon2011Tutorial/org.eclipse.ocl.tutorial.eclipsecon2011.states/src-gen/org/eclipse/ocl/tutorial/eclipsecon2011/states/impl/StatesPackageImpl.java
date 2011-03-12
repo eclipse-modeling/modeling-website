@@ -238,16 +238,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStatemachine_DbgName()
-  {
-    return (EAttribute)statemachineEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getEvent()
   {
     return eventEClass;
@@ -301,16 +291,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
   public EReference getState_Transitions()
   {
     return (EReference)stateEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getState_DbgName()
-  {
-    return (EAttribute)stateEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -388,16 +368,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTransition_DbgName()
-  {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public StatesFactory getStatesFactory()
   {
     return (StatesFactory)getEFactoryInstance();
@@ -433,7 +403,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     createEAttribute(statemachineEClass, STATEMACHINE__VALUE);
     createEReference(statemachineEClass, STATEMACHINE__EVENTS);
     createEReference(statemachineEClass, STATEMACHINE__STATES);
-    createEAttribute(statemachineEClass, STATEMACHINE__DBG_NAME);
 
     eventEClass = createEClass(EVENT);
     createEAttribute(eventEClass, EVENT__NAME);
@@ -442,7 +411,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     createEAttribute(stateEClass, STATE__INITIAL);
     createEAttribute(stateEClass, STATE__NAME);
     createEReference(stateEClass, STATE__TRANSITIONS);
-    createEAttribute(stateEClass, STATE__DBG_NAME);
 
     simpleStateEClass = createEClass(SIMPLE_STATE);
     createEAttribute(simpleStateEClass, SIMPLE_STATE__VALUE);
@@ -453,7 +421,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     transitionEClass = createEClass(TRANSITION);
     createEReference(transitionEClass, TRANSITION__EVENT);
     createEReference(transitionEClass, TRANSITION__STATE);
-    createEAttribute(transitionEClass, TRANSITION__DBG_NAME);
   }
 
   /**
@@ -499,7 +466,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     initEAttribute(getStatemachine_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStatemachine_Events(), this.getEvent(), null, "events", null, 0, -1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStatemachine_States(), this.getState(), null, "states", null, 0, -1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStatemachine_DbgName(), ecorePackage.getEString(), "dbgName", null, 0, 1, Statemachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -508,7 +474,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     initEAttribute(getState_Initial(), ecorePackage.getEBoolean(), "initial", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getState_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getState_DbgName(), ecorePackage.getEString(), "dbgName", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(simpleStateEClass, SimpleState.class, "SimpleState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSimpleState_Value(), ecorePackage.getEInt(), "value", null, 0, 1, SimpleState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -519,7 +484,6 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransition_Event(), this.getEvent(), null, "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_State(), this.getState(), null, "state", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTransition_DbgName(), ecorePackage.getEString(), "dbgName", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

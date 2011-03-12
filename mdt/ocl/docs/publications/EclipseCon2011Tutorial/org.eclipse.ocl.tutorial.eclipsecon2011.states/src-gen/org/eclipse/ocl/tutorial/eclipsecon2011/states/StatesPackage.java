@@ -153,22 +153,13 @@ public interface StatesPackage extends EPackage
   int STATEMACHINE__STATES = 4;
 
   /**
-   * The feature id for the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATEMACHINE__DBG_NAME = 5;
-
-  /**
    * The number of structural features of the '<em>Statemachine</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMACHINE_FEATURE_COUNT = 6;
+  int STATEMACHINE_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.EventImpl <em>Event</em>}' class.
@@ -236,22 +227,13 @@ public interface StatesPackage extends EPackage
   int STATE__TRANSITIONS = 2;
 
   /**
-   * The feature id for the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATE__DBG_NAME = 3;
-
-  /**
    * The number of structural features of the '<em>State</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE_FEATURE_COUNT = 4;
+  int STATE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.SimpleStateImpl <em>Simple State</em>}' class.
@@ -289,15 +271,6 @@ public interface StatesPackage extends EPackage
    * @ordered
    */
   int SIMPLE_STATE__TRANSITIONS = STATE__TRANSITIONS;
-
-  /**
-   * The feature id for the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_STATE__DBG_NAME = STATE__DBG_NAME;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -355,15 +328,6 @@ public interface StatesPackage extends EPackage
   int COMPOUND_STATE__TRANSITIONS = STATE__TRANSITIONS;
 
   /**
-   * The feature id for the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPOUND_STATE__DBG_NAME = STATE__DBG_NAME;
-
-  /**
    * The feature id for the '<em><b>Machine</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -410,22 +374,13 @@ public interface StatesPackage extends EPackage
   int TRANSITION__STATE = 1;
 
   /**
-   * The feature id for the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRANSITION__DBG_NAME = 2;
-
-  /**
    * The number of structural features of the '<em>Transition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION_FEATURE_COUNT = 3;
+  int TRANSITION_FEATURE_COUNT = 2;
 
 
   /**
@@ -526,17 +481,6 @@ public interface StatesPackage extends EPackage
   EReference getStatemachine_States();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getDbgName <em>Dbg Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Dbg Name</em>'.
-   * @see org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getDbgName()
-   * @see #getStatemachine()
-   * @generated
-   */
-  EAttribute getStatemachine_DbgName();
-
-  /**
    * Returns the meta object for class '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Event <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -599,17 +543,6 @@ public interface StatesPackage extends EPackage
    * @generated
    */
   EReference getState_Transitions();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.State#getDbgName <em>Dbg Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Dbg Name</em>'.
-   * @see org.eclipse.ocl.tutorial.eclipsecon2011.states.State#getDbgName()
-   * @see #getState()
-   * @generated
-   */
-  EAttribute getState_DbgName();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.SimpleState <em>Simple State</em>}'.
@@ -684,17 +617,6 @@ public interface StatesPackage extends EPackage
    * @generated
    */
   EReference getTransition_State();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getDbgName <em>Dbg Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Dbg Name</em>'.
-   * @see org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getDbgName()
-   * @see #getTransition()
-   * @generated
-   */
-  EAttribute getTransition_DbgName();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -796,14 +718,6 @@ public interface StatesPackage extends EPackage
     EReference STATEMACHINE__STATES = eINSTANCE.getStatemachine_States();
 
     /**
-     * The meta object literal for the '<em><b>Dbg Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATEMACHINE__DBG_NAME = eINSTANCE.getStatemachine_DbgName();
-
-    /**
      * The meta object literal for the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.EventImpl <em>Event</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -854,14 +768,6 @@ public interface StatesPackage extends EPackage
      * @generated
      */
     EReference STATE__TRANSITIONS = eINSTANCE.getState_Transitions();
-
-    /**
-     * The meta object literal for the '<em><b>Dbg Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATE__DBG_NAME = eINSTANCE.getState_DbgName();
 
     /**
      * The meta object literal for the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.SimpleStateImpl <em>Simple State</em>}' class.
@@ -924,14 +830,6 @@ public interface StatesPackage extends EPackage
      * @generated
      */
     EReference TRANSITION__STATE = eINSTANCE.getTransition_State();
-
-    /**
-     * The meta object literal for the '<em><b>Dbg Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TRANSITION__DBG_NAME = eINSTANCE.getTransition_DbgName();
 
   }
 

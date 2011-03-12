@@ -36,7 +36,6 @@ import org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition;
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StateImpl#isInitial <em>Initial</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StateImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StateImpl#getTransitions <em>Transitions</em>}</li>
- *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StateImpl#getDbgName <em>Dbg Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,26 +92,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * @ordered
    */
   protected EList<Transition> transitions;
-
-  /**
-   * The default value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected static final String DBG_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected String dbgName = DBG_NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -200,29 +179,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDbgName()
-  {
-    return dbgName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDbgName(String newDbgName)
-  {
-    String oldDbgName = dbgName;
-    dbgName = newDbgName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.STATE__DBG_NAME, oldDbgName, dbgName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -250,8 +206,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return getName();
       case StatesPackage.STATE__TRANSITIONS:
         return getTransitions();
-      case StatesPackage.STATE__DBG_NAME:
-        return getDbgName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -277,9 +231,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         getTransitions().clear();
         getTransitions().addAll((Collection<? extends Transition>)newValue);
         return;
-      case StatesPackage.STATE__DBG_NAME:
-        setDbgName((String)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -303,9 +254,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case StatesPackage.STATE__TRANSITIONS:
         getTransitions().clear();
         return;
-      case StatesPackage.STATE__DBG_NAME:
-        setDbgName(DBG_NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -326,8 +274,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case StatesPackage.STATE__TRANSITIONS:
         return transitions != null && !transitions.isEmpty();
-      case StatesPackage.STATE__DBG_NAME:
-        return DBG_NAME_EDEFAULT == null ? dbgName != null : !DBG_NAME_EDEFAULT.equals(dbgName);
     }
     return super.eIsSet(featureID);
   }
@@ -347,8 +293,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     result.append(initial);
     result.append(", name: ");
     result.append(name);
-    result.append(", dbgName: ");
-    result.append(dbgName);
     result.append(')');
     return result.toString();
   }

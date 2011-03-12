@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getEvents <em>Events</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getStates <em>States</em>}</li>
- *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getDbgName <em>Dbg Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -142,31 +141,5 @@ public interface Statemachine extends EObject
    * @generated
    */
   EList<State> getStates();
-
-  /**
-   * Returns the value of the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Dbg Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Dbg Name</em>' attribute.
-   * @see #setDbgName(String)
-   * @see org.eclipse.ocl.tutorial.eclipsecon2011.states.StatesPackage#getStatemachine_DbgName()
-   * @model
-   * @generated
-   */
-  String getDbgName();
-
-  /**
-   * Sets the value of the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Statemachine#getDbgName <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Dbg Name</em>' attribute.
-   * @see #getDbgName()
-   * @generated
-   */
-  void setDbgName(String value);
 
 } // Statemachine

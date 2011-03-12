@@ -28,7 +28,6 @@ import org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition;
  * <ul>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.TransitionImpl#getState <em>State</em>}</li>
- *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.TransitionImpl#getDbgName <em>Dbg Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,26 +54,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * @ordered
    */
   protected State state;
-
-  /**
-   * The default value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected static final String DBG_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected String dbgName = DBG_NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -188,29 +167,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDbgName()
-  {
-    return dbgName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDbgName(String newDbgName)
-  {
-    String oldDbgName = dbgName;
-    dbgName = newDbgName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.TRANSITION__DBG_NAME, oldDbgName, dbgName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -222,8 +178,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case StatesPackage.TRANSITION__STATE:
         if (resolve) return getState();
         return basicGetState();
-      case StatesPackage.TRANSITION__DBG_NAME:
-        return getDbgName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -243,9 +197,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return;
       case StatesPackage.TRANSITION__STATE:
         setState((State)newValue);
-        return;
-      case StatesPackage.TRANSITION__DBG_NAME:
-        setDbgName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -267,9 +218,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case StatesPackage.TRANSITION__STATE:
         setState((State)null);
         return;
-      case StatesPackage.TRANSITION__DBG_NAME:
-        setDbgName(DBG_NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -288,28 +236,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return event != null;
       case StatesPackage.TRANSITION__STATE:
         return state != null;
-      case StatesPackage.TRANSITION__DBG_NAME:
-        return DBG_NAME_EDEFAULT == null ? dbgName != null : !DBG_NAME_EDEFAULT.equals(dbgName);
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer();
-    result.append("Transition: ");
-    result.append(event.getName());
-    result.append(" => ");
-    result.append(state.getName());
-    return result.toString();
   }
 
 } //TransitionImpl

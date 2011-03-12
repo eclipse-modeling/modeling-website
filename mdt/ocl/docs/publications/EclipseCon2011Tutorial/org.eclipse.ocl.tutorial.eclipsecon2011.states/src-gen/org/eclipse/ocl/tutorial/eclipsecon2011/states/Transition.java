@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getEvent <em>Event</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getState <em>State</em>}</li>
- *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getDbgName <em>Dbg Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,31 +78,5 @@ public interface Transition extends EObject
    * @generated
    */
   void setState(State value);
-
-  /**
-   * Returns the value of the '<em><b>Dbg Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Dbg Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Dbg Name</em>' attribute.
-   * @see #setDbgName(String)
-   * @see org.eclipse.ocl.tutorial.eclipsecon2011.states.StatesPackage#getTransition_DbgName()
-   * @model
-   * @generated
-   */
-  String getDbgName();
-
-  /**
-   * Sets the value of the '{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.Transition#getDbgName <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Dbg Name</em>' attribute.
-   * @see #getDbgName()
-   * @generated
-   */
-  void setDbgName(String value);
 
 } // Transition

@@ -83,10 +83,9 @@ ruleModule returns [EObject current=null]
     }
 (
 (
-(
-		lv_name_1_1=RULE_STRING
+		lv_name_1_0=RULE_STRING
 		{
-			newLeafNode(lv_name_1_1, grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -95,26 +94,9 @@ ruleModule returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_1, 
+        		lv_name_1_0, 
         		"STRING");
 	    }
-
-    |		lv_name_1_2=RULE_ID
-		{
-			newLeafNode(lv_name_1_2, grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_1_0_1()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getModuleRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_1_2, 
-        		"ID");
-	    }
-
-)
 
 )
 )(
@@ -267,29 +249,7 @@ ruleStatemachine returns [EObject current=null]
     {
     	newLeafNode(otherlv_10, grammarAccess.getStatemachineAccess().getRightCurlyBracketKeyword_9());
     }
-(	otherlv_11='debug' 
-    {
-    	newLeafNode(otherlv_11, grammarAccess.getStatemachineAccess().getDebugKeyword_10_0());
-    }
-(
-(
-		lv_dbgName_12_0=RULE_ID
-		{
-			newLeafNode(lv_dbgName_12_0, grammarAccess.getStatemachineAccess().getDbgNameIDTerminalRuleCall_10_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStatemachineRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"dbgName",
-        		lv_dbgName_12_0, 
-        		"ID");
-	    }
-
 )
-))?)
 ;
 
 
@@ -474,29 +434,7 @@ ruleSimpleState returns [EObject current=null]
     {
     	newLeafNode(otherlv_7, grammarAccess.getSimpleStateAccess().getRightCurlyBracketKeyword_6());
     }
-(	otherlv_8='debug' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getSimpleStateAccess().getDebugKeyword_7_0());
-    }
-(
-(
-		lv_dbgName_9_0=RULE_ID
-		{
-			newLeafNode(lv_dbgName_9_0, grammarAccess.getSimpleStateAccess().getDbgNameIDTerminalRuleCall_7_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSimpleStateRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"dbgName",
-        		lv_dbgName_9_0, 
-        		"ID");
-	    }
-
 )
-))?)
 ;
 
 
@@ -601,29 +539,7 @@ ruleCompoundState returns [EObject current=null]
     {
     	newLeafNode(otherlv_8, grammarAccess.getCompoundStateAccess().getRightCurlyBracketKeyword_8());
     }
-(	otherlv_9='debug' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getCompoundStateAccess().getDebugKeyword_9_0());
-    }
-(
-(
-		lv_dbgName_10_0=RULE_ID
-		{
-			newLeafNode(lv_dbgName_10_0, grammarAccess.getCompoundStateAccess().getDbgNameIDTerminalRuleCall_9_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCompoundStateRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"dbgName",
-        		lv_dbgName_10_0, 
-        		"ID");
-	    }
-
 )
-))?)
 ;
 
 
@@ -674,29 +590,7 @@ ruleTransition returns [EObject current=null]
 	}
 
 )
-)(	otherlv_3='debug' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getTransitionAccess().getDebugKeyword_3_0());
-    }
-(
-(
-		lv_dbgName_4_0=RULE_ID
-		{
-			newLeafNode(lv_dbgName_4_0, grammarAccess.getTransitionAccess().getDbgNameIDTerminalRuleCall_3_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTransitionRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"dbgName",
-        		lv_dbgName_4_0, 
-        		"ID");
-	    }
-
-)
-))?)
+))
 ;
 
 

@@ -19,7 +19,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.eclipse.ocl.tutorial.eclipsecon2011.states/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/States.ecore#//State"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbgName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -30,7 +29,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="ecore:EClass platform:/resource/org.eclipse.ocl.tutorial.eclipsecon2011.states/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/States.ecore#//Transition"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbgName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleState" eSuperTypes="platform:/resource/org.eclipse.ocl.tutorial.eclipsecon2011.states/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/States.ecore#//State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -41,6 +39,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="ecore:EClass platform:/resource/org.eclipse.ocl.tutorial.eclipsecon2011.states/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/States.ecore#//Event"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="ecore:EClass platform:/resource/org.eclipse.ocl.tutorial.eclipsecon2011.states/src-gen/org/eclipse/ocl/tutorial/eclipsecon2011/States.ecore#//State"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dbgName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

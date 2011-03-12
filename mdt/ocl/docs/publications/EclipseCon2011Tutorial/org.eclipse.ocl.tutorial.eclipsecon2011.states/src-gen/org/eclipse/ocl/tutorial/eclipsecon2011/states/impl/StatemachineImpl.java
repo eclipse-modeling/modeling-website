@@ -39,7 +39,6 @@ import org.eclipse.ocl.tutorial.eclipsecon2011.states.StatesPackage;
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StatemachineImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StatemachineImpl#getEvents <em>Events</em>}</li>
  *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StatemachineImpl#getStates <em>States</em>}</li>
- *   <li>{@link org.eclipse.ocl.tutorial.eclipsecon2011.states.impl.StatemachineImpl#getDbgName <em>Dbg Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -126,26 +125,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * @ordered
    */
   protected EList<State> states;
-
-  /**
-   * The default value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected static final String DBG_NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDbgName() <em>Dbg Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDbgName()
-   * @generated
-   * @ordered
-   */
-  protected String dbgName = DBG_NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -270,29 +249,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDbgName()
-  {
-    return dbgName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDbgName(String newDbgName)
-  {
-    String oldDbgName = dbgName;
-    dbgName = newDbgName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.STATEMACHINE__DBG_NAME, oldDbgName, dbgName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -326,8 +282,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
         return getEvents();
       case StatesPackage.STATEMACHINE__STATES:
         return getStates();
-      case StatesPackage.STATEMACHINE__DBG_NAME:
-        return getDbgName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -360,9 +314,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
         getStates().clear();
         getStates().addAll((Collection<? extends State>)newValue);
         return;
-      case StatesPackage.STATEMACHINE__DBG_NAME:
-        setDbgName((String)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -392,9 +343,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
       case StatesPackage.STATEMACHINE__STATES:
         getStates().clear();
         return;
-      case StatesPackage.STATEMACHINE__DBG_NAME:
-        setDbgName(DBG_NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -419,8 +367,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
         return events != null && !events.isEmpty();
       case StatesPackage.STATEMACHINE__STATES:
         return states != null && !states.isEmpty();
-      case StatesPackage.STATEMACHINE__DBG_NAME:
-        return DBG_NAME_EDEFAULT == null ? dbgName != null : !DBG_NAME_EDEFAULT.equals(dbgName);
     }
     return super.eIsSet(featureID);
   }
@@ -442,8 +388,6 @@ public class StatemachineImpl extends MinimalEObjectImpl.Container implements St
     result.append(name);
     result.append(", value: ");
     result.append(value);
-    result.append(", dbgName: ");
-    result.append(dbgName);
     result.append(')');
     return result.toString();
   }

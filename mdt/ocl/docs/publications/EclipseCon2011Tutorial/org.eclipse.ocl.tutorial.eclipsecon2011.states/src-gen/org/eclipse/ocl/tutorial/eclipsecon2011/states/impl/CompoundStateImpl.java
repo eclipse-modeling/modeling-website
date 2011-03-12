@@ -173,20 +173,4 @@ public class CompoundStateImpl extends StateImpl implements CompoundState
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated NOT
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer();
-    result.append("CompoundState: ");
-    result.append(name);
-    return result.toString();
-  }
-
 } //CompoundStateImpl

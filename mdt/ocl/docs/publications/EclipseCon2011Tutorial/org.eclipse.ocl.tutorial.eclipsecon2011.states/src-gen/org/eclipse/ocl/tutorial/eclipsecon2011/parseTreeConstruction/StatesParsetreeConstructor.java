@@ -47,11 +47,11 @@ protected class ThisRootNode extends RootToken {
 /************ begin Rule Module ****************
  *
  * Module:
- * 	"module" name=(STRING | ID) machines+=Statemachine*;
+ * 	"module" name=STRING machines+=Statemachine*;
  *
  **/
 
-// "module" name=(STRING | ID) machines+=Statemachine*
+// "module" name=STRING machines+=Statemachine*
 protected class Module_Group extends GroupToken {
 	
 	public Module_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -102,7 +102,7 @@ protected class Module_ModuleKeyword_0 extends KeywordToken  {
 
 }
 
-// name=(STRING | ID)
+// name=STRING
 protected class Module_NameAssignment_1 extends AssignmentToken  {
 	
 	public Module_NameAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -126,14 +126,9 @@ protected class Module_NameAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0(), value, null)) {
 			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0_0();
-			return obj;
-		}
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_1_0_1(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_1_0_1();
+			element = grammarAccess.getModuleAccess().getNameSTRINGTerminalRuleCall_1_0();
 			return obj;
 		}
 		return null;
@@ -195,13 +190,11 @@ protected class Module_MachinesAssignment_2 extends AssignmentToken  {
 /************ begin Rule Statemachine ****************
  *
  * Statemachine:
- * 	initial?="initial"? "statemachine" name=ID ("value" value=INT)? "{" "events" events+=Event* ";" states+=State* "}"
- * 	("debug" dbgName=ID)?;
+ * 	initial?="initial"? "statemachine" name=ID ("value" value=INT)? "{" "events" events+=Event* ";" states+=State* "}";
  *
  **/
 
 // initial?="initial"? "statemachine" name=ID ("value" value=INT)? "{" "events" events+=Event* ";" states+=State* "}"
-// ("debug" dbgName=ID)?
 protected class Statemachine_Group extends GroupToken {
 	
 	public Statemachine_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -216,8 +209,7 @@ protected class Statemachine_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Statemachine_Group_10(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Statemachine_RightCurlyBracketKeyword_9(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new Statemachine_RightCurlyBracketKeyword_9(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -584,85 +576,6 @@ protected class Statemachine_RightCurlyBracketKeyword_9 extends KeywordToken  {
 
 }
 
-// ("debug" dbgName=ID)?
-protected class Statemachine_Group_10 extends GroupToken {
-	
-	public Statemachine_Group_10(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getStatemachineAccess().getGroup_10();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Statemachine_DbgNameAssignment_10_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "debug"
-protected class Statemachine_DebugKeyword_10_0 extends KeywordToken  {
-	
-	public Statemachine_DebugKeyword_10_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getStatemachineAccess().getDebugKeyword_10_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Statemachine_RightCurlyBracketKeyword_9(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// dbgName=ID
-protected class Statemachine_DbgNameAssignment_10_1 extends AssignmentToken  {
-	
-	public Statemachine_DbgNameAssignment_10_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getStatemachineAccess().getDbgNameAssignment_10_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Statemachine_DebugKeyword_10_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("dbgName",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("dbgName");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getStatemachineAccess().getDbgNameIDTerminalRuleCall_10_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getStatemachineAccess().getDbgNameIDTerminalRuleCall_10_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
 
 /************ end Rule Statemachine ****************/
 
@@ -829,11 +742,11 @@ protected class State_CompoundStateParserRuleCall_1 extends RuleCallToken {
 /************ begin Rule SimpleState ****************
  *
  * SimpleState:
- * 	initial?="initial"? "state" name=ID ("value" value=INT)? "{" transitions+=Transition* "}" ("debug" dbgName=ID)?;
+ * 	initial?="initial"? "state" name=ID ("value" value=INT)? "{" transitions+=Transition* "}";
  *
  **/
 
-// initial?="initial"? "state" name=ID ("value" value=INT)? "{" transitions+=Transition* "}" ("debug" dbgName=ID)?
+// initial?="initial"? "state" name=ID ("value" value=INT)? "{" transitions+=Transition* "}"
 protected class SimpleState_Group extends GroupToken {
 	
 	public SimpleState_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -848,8 +761,7 @@ protected class SimpleState_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SimpleState_Group_7(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SimpleState_RightCurlyBracketKeyword_6(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new SimpleState_RightCurlyBracketKeyword_6(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1124,85 +1036,6 @@ protected class SimpleState_RightCurlyBracketKeyword_6 extends KeywordToken  {
 
 }
 
-// ("debug" dbgName=ID)?
-protected class SimpleState_Group_7 extends GroupToken {
-	
-	public SimpleState_Group_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getSimpleStateAccess().getGroup_7();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SimpleState_DbgNameAssignment_7_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "debug"
-protected class SimpleState_DebugKeyword_7_0 extends KeywordToken  {
-	
-	public SimpleState_DebugKeyword_7_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getSimpleStateAccess().getDebugKeyword_7_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SimpleState_RightCurlyBracketKeyword_6(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// dbgName=ID
-protected class SimpleState_DbgNameAssignment_7_1 extends AssignmentToken  {
-	
-	public SimpleState_DbgNameAssignment_7_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getSimpleStateAccess().getDbgNameAssignment_7_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SimpleState_DebugKeyword_7_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("dbgName",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("dbgName");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getSimpleStateAccess().getDbgNameIDTerminalRuleCall_7_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getSimpleStateAccess().getDbgNameIDTerminalRuleCall_7_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
 
 /************ end Rule SimpleState ****************/
 
@@ -1210,13 +1043,11 @@ protected class SimpleState_DbgNameAssignment_7_1 extends AssignmentToken  {
 /************ begin Rule CompoundState ****************
  *
  * CompoundState:
- * 	"compound" initial?="initial"? "state" name=ID "machine" machine=[Statemachine] "{" transitions+=Transition* "}"
- * 	("debug" dbgName=ID)?;
+ * 	"compound" initial?="initial"? "state" name=ID "machine" machine=[Statemachine] "{" transitions+=Transition* "}";
  *
  **/
 
 // "compound" initial?="initial"? "state" name=ID "machine" machine=[Statemachine] "{" transitions+=Transition* "}"
-// ("debug" dbgName=ID)?
 protected class CompoundState_Group extends GroupToken {
 	
 	public CompoundState_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1231,8 +1062,7 @@ protected class CompoundState_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new CompoundState_Group_9(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new CompoundState_RightCurlyBracketKeyword_8(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new CompoundState_RightCurlyBracketKeyword_8(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1509,85 +1339,6 @@ protected class CompoundState_RightCurlyBracketKeyword_8 extends KeywordToken  {
 
 }
 
-// ("debug" dbgName=ID)?
-protected class CompoundState_Group_9 extends GroupToken {
-	
-	public CompoundState_Group_9(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getCompoundStateAccess().getGroup_9();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new CompoundState_DbgNameAssignment_9_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "debug"
-protected class CompoundState_DebugKeyword_9_0 extends KeywordToken  {
-	
-	public CompoundState_DebugKeyword_9_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getCompoundStateAccess().getDebugKeyword_9_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new CompoundState_RightCurlyBracketKeyword_8(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// dbgName=ID
-protected class CompoundState_DbgNameAssignment_9_1 extends AssignmentToken  {
-	
-	public CompoundState_DbgNameAssignment_9_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getCompoundStateAccess().getDbgNameAssignment_9_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new CompoundState_DebugKeyword_9_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("dbgName",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("dbgName");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getCompoundStateAccess().getDbgNameIDTerminalRuleCall_9_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getCompoundStateAccess().getDbgNameIDTerminalRuleCall_9_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
 
 /************ end Rule CompoundState ****************/
 
@@ -1595,11 +1346,11 @@ protected class CompoundState_DbgNameAssignment_9_1 extends AssignmentToken  {
 /************ begin Rule Transition ****************
  *
  * Transition:
- * 	event=[Event] "=>" state=[State] ("debug" dbgName=ID)?;
+ * 	event=[Event] "=>" state=[State];
  *
  **/
 
-// event=[Event] "=>" state=[State] ("debug" dbgName=ID)?
+// event=[Event] "=>" state=[State]
 protected class Transition_Group extends GroupToken {
 	
 	public Transition_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1614,8 +1365,7 @@ protected class Transition_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Transition_Group_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Transition_StateAssignment_2(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new Transition_StateAssignment_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1723,85 +1473,6 @@ protected class Transition_StateAssignment_2 extends AssignmentToken  {
 	}
 
 }
-
-// ("debug" dbgName=ID)?
-protected class Transition_Group_3 extends GroupToken {
-	
-	public Transition_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getTransitionAccess().getGroup_3();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Transition_DbgNameAssignment_3_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "debug"
-protected class Transition_DebugKeyword_3_0 extends KeywordToken  {
-	
-	public Transition_DebugKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getTransitionAccess().getDebugKeyword_3_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Transition_StateAssignment_2(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// dbgName=ID
-protected class Transition_DbgNameAssignment_3_1 extends AssignmentToken  {
-	
-	public Transition_DbgNameAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getTransitionAccess().getDbgNameAssignment_3_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Transition_DebugKeyword_3_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("dbgName",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("dbgName");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getTransitionAccess().getDbgNameIDTerminalRuleCall_3_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getTransitionAccess().getDbgNameIDTerminalRuleCall_3_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
 
 
 /************ end Rule Transition ****************/

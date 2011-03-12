@@ -163,16 +163,17 @@ public class SimpleStateImpl extends StateImpl implements SimpleState
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated NOT
+   * @generated
    */
   @Override
   public String toString()
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer();
-    result.append("SimpleState: ");
-    result.append(name);
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (value: ");
+    result.append(value);
+    result.append(')');
     return result.toString();
   }
 
