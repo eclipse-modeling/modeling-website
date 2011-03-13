@@ -12,7 +12,7 @@
  *
  * </copyright>
  *
- * $Id: StatesJavaValidator.java,v 1.1 2011/03/12 20:46:06 ewillink Exp $
+ * $Id: StatesJavaValidator.java,v 1.2 2011/03/13 16:24:24 ewillink Exp $
  */
 package org.eclipse.ocl.tutorial.eclipsecon2011.validation;
 
@@ -20,15 +20,16 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.ocl.examples.xtext.completeocl.validation.CompleteOCLEObjectValidator;
 import org.eclipse.ocl.tutorial.eclipsecon2011.states.StatesPackage;
 import org.eclipse.xtext.validation.EValidatorRegistrar;
- 
 
 public class StatesJavaValidator extends AbstractStatesJavaValidator
 {
-	@Override
-	public void register(EValidatorRegistrar registrar) {
-		super.register(registrar);
-		StatesPackage ePackage = StatesPackage.eINSTANCE;
-		URI oclURI = URI.createPlatformResourceURI("/org.eclipse.ocl.tutorial.eclipsecon2011.states.ocl/model/States.ocl", true);
-		registrar.register(ePackage, new CompleteOCLEObjectValidator(ePackage, oclURI));
-	}
+    @Override
+    public void register(EValidatorRegistrar registrar) {
+        super.register(registrar);
+        StatesPackage ePackage = StatesPackage.eINSTANCE;
+        URI oclURI = URI.createPlatformResourceURI(
+            "/org.eclipse.ocl.tutorial.eclipsecon2011.states.ocl/model/States.ocl", true);
+        registrar.register(ePackage,
+            new CompleteOCLEObjectValidator(ePackage, oclURI));
+    }
 }
