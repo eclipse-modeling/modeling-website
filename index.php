@@ -79,13 +79,20 @@ development technologies within the Eclipse community by providing a unified set
 			</ul>
 		</div>
 		<div class="homeitem3col">
-			<h3><a href="http://www.eclipse.org/modeling/mdt/" style="color:white">Model Development Tools</a></h3>
+			<h3><a href="http://www.eclipse.org/modeling/mdt/">Model Development Tools</a> (MDT)</h3>
 			<ul>
-				<li><a href="http://www.eclipse.org/modeling/mdt/?project=eodm">EMF Ontology Definition Metamodel</a> (EODM) : 
-					an implementation of RDF(S)/OWL metamodels of the <a href="http://www.omg.org/ontology">Ontology Definition Metamodel (ODM)</a> using 
-					EMF with additional parsing, inference, model transformation and editing functions.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=bpmn2">Business Process Metamodel and Notation 2.x</a> (BPMN2) : 
+						an EMF-based implementation of the BPMN 2.x metamodel for the Eclipse platform.</li>
+				<li><a href="http://www.eclipse.org/etrice/">eTrice</a> : 
+						provides an implementation of the ROOM modeling language together with editors, code generator for Java, C++ and C code and exemplary target middleware.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/?project=modisco">MoDisco</a> : 
+						provides an extensible framework to develop model-driven tools to support use-cases of existing software modernization.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=ocl">Object Constraint Language</a> (OCL) : 
-						defines APIs for OCL expression syntax for implementing queries and contraints.</li>
+						defines APIs for OCL expression syntax for implementing queries and constraints.</li>
+				<li><a href="http://www.eclipse.org/modeling/mdt/papyrus/">Papyrus</a> : 
+						provides an integrated and user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE.</li>
+				<li><a href="http://www.eclipse.org/sphinx/">Sphinx</a> : 
+						provides an extensible platform that eases the creation of integrated modeling tool environments supporting individual or multiple modeling languages (which can be UML-based or native DSLs) and has a particular focus on industrial strength and interoperability.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2">Unified Modeling Language 2.x</a> (UML2) : 
 						an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.</li>
 				<li><a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools">UML2 Tools</a> : 
