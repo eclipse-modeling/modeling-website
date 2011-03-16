@@ -22,7 +22,7 @@ public class Machine
     private State state;
 
     public Machine() {
-        setState(State.STATES.STATE_Start);
+        setState(State.STATES.STATE_org.eclipse.emf.ecore.impl.DynamicEObjectImpl@658c79 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@e97bef (name: OclInvalid_Class) (instanceClassName: null) (abstract: false, interface: false)));
     }
 
     public void setState(State.STATES state) {

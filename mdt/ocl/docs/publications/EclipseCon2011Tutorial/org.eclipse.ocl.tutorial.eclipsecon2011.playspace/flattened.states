@@ -2,7 +2,7 @@ module "flattened.compound.states"
 
 statemachine Outer
 {
-	events START LEFT STOP RIGHT;
+	events RIGHT LEFT START STOP;
 
 	initial state Start value 4
 	{
@@ -14,15 +14,15 @@ statemachine Outer
 		STOP => CompoundB_Left
 	}
 
-	state CompoundA_Right
-	{
-		RIGHT => CompoundA_Left
-		START => Stop
-	}
-
 	state CompoundA_Left value 1
 	{
 		LEFT => CompoundA_Right
+		START => Stop
+	}
+
+	state CompoundA_Right
+	{
+		RIGHT => CompoundA_Left
 		START => Stop
 	}
 
