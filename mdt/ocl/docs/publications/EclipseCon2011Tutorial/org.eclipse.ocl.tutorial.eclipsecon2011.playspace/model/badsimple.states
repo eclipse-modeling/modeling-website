@@ -1,16 +1,14 @@
-module "simple.states"
+module "badsimple.states"
 
 statemachine Machine
 {
     events START STOP;
     state Start
     {
-        START  => Start
         STOP  => Stop
     }
-    initial state Stop 
+    state Stop 
     {
         START  => Start
-        STOP  => Stop
-    }  
+ }  
 }

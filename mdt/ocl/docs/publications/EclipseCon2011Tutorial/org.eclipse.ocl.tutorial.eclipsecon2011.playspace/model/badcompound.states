@@ -7,20 +7,24 @@ statemachine Outer
 	initial state Start value 4
 	{
 		START => CompoundA
+		STOP => Stop
 	}
 
 	state Stop value 5
 	{
+		START => Start
 		STOP => CompoundB
 	}
 
 	compound state CompoundA machine Inner
 	{
 		START => Stop
+		STOP => Stop
 	}
 
 	compound state CompoundB machine Inner
 	{
+		START => Stop
 		STOP => Stop
 	}
 }
@@ -31,11 +35,11 @@ statemachine Inner
 
 	initial state Left value 1
 	{
-		LEFT => Right
+		RIGHT => Left
 	}
 
 	state Right
 	{
-		RIGHT => Left
+		LEFT => Right
 	}
 }
