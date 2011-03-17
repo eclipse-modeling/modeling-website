@@ -9,8 +9,8 @@ public class CompoundB_Left implements Outer.State {
         { sm.setState(STATES.STATE_CompoundB_Right); }
     public void doRIGHT()
         { sm.setState(STATES.STATE_CompoundB_Left); }
-    public void doSTOP()
-        { sm.setState(STATES.STATE_Stop); }
     public void doSTART()
+        { sm.setState(STATES.STATE_Stop); }
+    public void doSTOP()
         { sm.setState(STATES.STATE_Stop); }
 }    

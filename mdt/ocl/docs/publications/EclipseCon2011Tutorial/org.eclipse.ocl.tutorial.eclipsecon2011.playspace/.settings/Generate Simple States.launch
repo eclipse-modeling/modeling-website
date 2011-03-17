@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
 <stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
@@ -12,7 +12,10 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.ocl.tutorial.eclipsecon2011.states2classes.files.Generate"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Development/HartLibrary/runtime-EclipseApplication/org.eclipse.ocl.tutorial.eclipsecon2011.playspace/model/simple.states&quot; &quot;C:/Development/HartLibrary/runtime-EclipseApplication/org.eclipse.ocl.tutorial.eclipsecon2011.playspace/src/simple/states&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Development/EclipseCon/runtime-EclipseApplication/org.eclipse.ocl.tutorial.eclipsecon2011.playspace/model/simple.states&quot; &quot;C:/Development/EclipseCon/runtime-EclipseApplication/org.eclipse.ocl.tutorial.eclipsecon2011.playspace/src/simple/states&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.ocl.tutorial.eclipsecon2011.states2classes"/>
 </launchConfiguration>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.m2m.qvt.oml.QvtTransformation">
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
 <booleanAttribute key="org.eclipse.m2m.qvt.oml.interpreter.clearContents1" value="true"/>
 <booleanAttribute key="org.eclipse.m2m.qvt.oml.interpreter.clearContents2" value="true"/>
 <mapAttribute key="org.eclipse.m2m.qvt.oml.interpreter.configurationProperties"/>
