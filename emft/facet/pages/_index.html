@@ -19,8 +19,36 @@
 
 <div id="midcolumn">
 <h3>EMF Facet</h3>
-<div id="introText">%%DESCRIPTION%%</div>
+<!--div id="introText">%%DESCRIPTION%%</div-->
 
+<p>The problem when you develop a tool is that you can never imagine all the possible extensions that the final user will really want. That's why EMF Facet proposes a solution to extend existing Ecore metamodels without having to modify them.</p>
+<p>The idea is to provide non-intrusive mechanisms to add new features (types, attributes, operations and references) to a metamodel and to customize the existing features by adding extra properties (icons, labels, etc.)</p>
+<p>These mechanisms are based on a query abstraction framework order to use all kinds of queries independently of their implementation language (Java, OCL, ATL, JXPath, etc.)</p>
+<div class="img">
+	<img src="images/EMFFacetBigPicture.png"/>
+</div>
+
+<div class="block">
+	<h4>Query abstraction</h4>
+	<p>The core service offered by EMF Facet is the capability to abstract the notion of query. The EMF Facet Query Abstraction framework aims:</p>
+	<ul>
+		<li>to declare a query using any kind of query language such as Java, OCL, ATL, etc.;</li>
+		<li>to refer to a query from an EMF model;</li>
+		<li>to be able to call a query without having to know how it is implemented.</li>
+	</ul>
+</div>
+<div class="block">
+	<h4>Facet</h4>
+	<p>The facet feature is the main feature of EMF Facet. This feature offers the possibility to virtually (at runtime) extend existing meta-models and models. In many cases, we want to add additional attributes, references or operations on a model without modifying it or its meta-model, for instance when we are not the author of the meta-model or when the model cannot be recreated with a new version of the meta-model. That's why the goal of EMF Facet is to provide a non intrusive extension mechanism. The other property of EMF Facet is to provide the capability to load and unload the extension without having to re-open the model (or worse: restart Eclipse).</p>
+</div>
+<div class="block">
+	<h4>Customization</h4>
+	<p>The customization feature provides a way to add UI annotations on a meta-model. This is useful to describe the customization of a model renderer/editor. This customization framework is extensible to allow the model editor developers to declare properties which are specific to their editors.</p>
+</div>
+<div class="block">
+	<h4>Customizable widgets</h4>
+	<p>EMF Facet provides a set of customizable widgets which can be configured using EMF Facet customizations. Those widgets can be used to build your own customizable model editors.</p>
+</div>
 </div>
 
 <div id="rightcolumn">
