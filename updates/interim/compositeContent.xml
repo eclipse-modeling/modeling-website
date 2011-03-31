@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Interim Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-  <children size='9'>
+  <children size='10'>
     <!--  EMF Compare -->
     <child location='http://download.eclipse.org/modeling/emf/updates/interim/'/>
     <!--  EMF EMF (Core) and MDT XSD -->
     <child location='http://download.eclipse.org/modeling/emf/emf/updates/2.6-I-builds/'/>
+    <child location='http://download.eclipse.org/modeling/emf/emf/updates/2.7-I-builds/'/>
     <!--  EMF Teneo -->
     <child location='http://download.eclipse.org/modeling/emf/teneo/updates/1.2.0/interim/'/>
     <!--  EMFT Ecore Tools -->
