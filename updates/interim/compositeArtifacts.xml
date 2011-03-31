@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Interim Site - Artifact Repository' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-  <children size='8'>
+  <children size='9'>
     <!--  EMF Compare -->
     <child location='http://download.eclipse.org/modeling/emf/updates/interim/'/>
     <!--  EMF EMF (Core) and MDT XSD -->
@@ -18,5 +18,7 @@
     <child location='http://download.eclipse.org/modeling/mdt/ocl/updates/interim/'/>
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/interim/'/>
+    <!--  MDT UML2 Tools -->
+    <child location='http://download.eclipse.org/modeling/mdt/uml2tools/updates/interim/'/>
   </children>
 </repository>
