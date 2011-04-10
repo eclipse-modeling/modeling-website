@@ -30,7 +30,7 @@ OCL is widely used by UML and other languages to constrain meta-models and perfo
 \maketitle
 \section{Introduction}
 
-The Object Constraint Language (OCL) evolved, initially within the Unified Modeling Language (UML). As part of the UML 2.0\cite{UML-2.0} revision activities, OCL was separated out as a separate specification in recognition of OCL's utility in non-UML contexts. Unfortunately the UML Revision Task Force had insufficient resources to complete the revision of OCL 1.6\cite{OCL-1.6} to align with UML 2.0. A partially revised OCL 2.0 draft\cite{OCL-2.0-draft} was all that was available to accompany UML 2.0.
+The Object Constraint Language (OCL) evolved, initially within the Unified Modeling Language (UML) as the textual language for expressing constraints that could not be represented graphically. As part of the UML 2.0\cite{UML-2.0} revision activities, OCL was separated out as a separate specification in recognition of OCL's utility in non-UML contexts. Unfortunately the UML Revision Task Force had insufficient resources to complete the revision of OCL 1.6\cite{OCL-1.6} to align with UML 2.0. A partially revised OCL 2.0 draft\cite{OCL-2.0-draft} was all that was available to accompany UML 2.0.
 
 When the QVT specification was developed, the utility of OCL was recognized and OCL 2.0\cite{OCL-2.0} formed the basis for QVT 1.0\cite{QVT-1.0}. The QVT Finalization Task Force also finalized the OCL 2.0 specification, but had insufficient resources to perform the very detailed proof reading and consistency checking for a specification involving so many cross-references.
 
@@ -69,9 +69,9 @@ In this paper we discuss many of the issues that have arisen in building a UML-a
 
 It is hoped that by presenting the community with an early insight into changes that may be proposed for OCL 2.4, the community may be able to contribute constructively before, rather than after, the revised specification is adopted.
 
-A prototype of the modeled OCL Standard Library may be found in the optional Examples and Editors of the Indigo release of Eclipse OCL\cite{MDT/OCL}, which is officially released in June 2011 and for which milestone builds have been available since December 2010. The prototype defines a Domain Specific Language to specify the OCL Standard Library, and uses Xtext\cite{TMF/Xtext} tooling to provide a rich editing capability for the DSL. This facilitates entry of OCL postconditions on library operations and validates that these postconditions are consistent with the library model.
+A prototype of the modeled OCL Standard Library may be found in the optional Examples and Editors of the Indigo release of Eclipse OCL\cite{MDT/OCL}. This is officially released in June 2011. Milestone builds have been available since December 2010. The prototype defines a Domain Specific Language to specify the OCL Standard Library, and uses Xtext\cite{TMF/Xtext} tooling to provide a rich editing capability for the DSL. This facilitates entry of OCL postconditions on library operations and validates that these postconditions are consistent with the library model.
 
-The clarifications outlined below involve very few if any, actual changes to the user perception of OCL; they merely enable the specification to say what many users think it already says. Of course OCL implementations that have resolved ambiguities in alternative directions may see a change. However even changes in the specification need not impact compatibility, since with substantial parts of the OCL semantics migrating to the library model, it may be possible to encapsulate the semantics of a particular OCL tool version in a corresponding OCL Standard Library model and so preserve precisely those semantics for those users that require them.
+The clarifications outlined below involve very few, if any, actual changes to the user perception of OCL; the changes just make the specification say what many users think it already says. Of course OCL implementations that have resolved ambiguities in alternative directions may see a change. However even changes in the specification need not impact compatibility, since with substantial parts of the OCL semantics migrating to the library model, it may be possible to encapsulate the semantics of a particular OCL tool version in a corresponding OCL Standard Library model and so preserve precisely those semantics for those users that require them.
 
 In Section \ref{LibraryUtility} we discuss the basic properties of a library model, then in Section \ref{LibraryModel} we show how a variety of OCL concepts can be captured by the library model. With a modeling capability established, in Section \ref{LibraryContent} we identify aspects of the library that deserve revision and in Section \ref{AwkwardOperations} we examine a number of operations that are difficult to model. Further minor revisions to enhance modeling are considered in Section \ref{FurtherModeling}. Finally we conclude. 
 
@@ -121,7 +121,7 @@ If the OCL Standard Library is to be used by practical OCL tools, the library mo
   \begin{center}
     \includegraphics[width=5.75in]{ImplementationExample.png}
   \end{center}
-  \caption{ImplementationExample.}
+  \caption{Implementation Example.}
   \label{fig:ImplementationExample}
 \end{figure}
 
@@ -131,7 +131,7 @@ A practical tool-independent OMG distribution might facilitate a simple automate
 
 In order to support full specification auto-generation, all editorial content must be present in the model. Simplistically, this can be provided by embedding description in preceding comments, as in Figure~\ref{fig:SimpleExample}. Providing sufficient richness to capture the limited usage of italics, bullets and figures currently in the specification is work in progress. A very limited subset of HTML markup is probably the solution since the Xtext tooling already supports embedded HTML.
 
-Once the full description is present in the model, implementations may present the description to users in their documentation, help or hover text. Acceleo\cite{M2T/Acceleo}, which is the Eclipse implementation of the OMG MOFM2T\cite{MOFM2T} model-to-text transformation language, is being used to auto-generate Clause 11, the OCL Standard Library, from its OCL model.
+Once the full description is present in the model, implementations may present the description to users in their documentation, help or hover text. Acceleo\cite{M2T/Acceleo}, which is the Eclipse implementation of the OMG MOFM2T\cite{MOFM2T} model-to-text transformation language, is being used to auto-generate Clause 11, the OCL Standard Library, from its OCL Pivot model.
 
 \subsection{Extensible}
 
@@ -152,19 +152,19 @@ The merge uses the same yet-to-be-defined merge semantics as for Complete OCL.
 
 \section{Library Model}\label{LibraryModel}
 
-The UML-aligned OCL pivot meta-model is discussed in the companion paper\cite{OCL-UML}. In this section we examine library concepts that require modeling, but for which there is either no UML or OCL representation, or for which the prevailing OCL representation is inconsistent with UML.
+The UML-aligned OCL Pivot Meta-Model is discussed in the companion paper\cite{OCL-UML}. In this section we examine library concepts that require modeling, but for which there is either no UML or OCL representation, or for which the prevailing OCL representation is inconsistent with UML.
 
 \subsection{Precedence and Associativity}\label{Precedence}
 
 The precedence of \verb|and|, \verb|or| and \verb|xor| was changed in the OCL 2.2 specification, so it is desirable to model precedence in order to allow either OCL 2.0 or 2.2 semantics to be used simply by selecting a corresponding OCL Standard Library Model. It is also desirable to allow languages that extend OCL freedom to redefine precedence and associativity to whatever is appropriate for the extended language.
 
-Provision of a precedence label, as in Figure~\ref{fig:SimpleExample}, specifies that a no argument operation can also be used as a prefix operator, and that a single argument operation can be used as an infix operator. Operators sharing a precedence label are equi-precedence, and precedences are ordered by a separate precedence ordering statement as shown in Figure~\ref{fig:Precedence}. In the OCL 2.2 example, \verb|AND| has higher precedence that \verb|OR| so the expression \verb|a and b or c and d| should be interpreted as \verb|(a and b) or (c and d)|. Precedences orderings may be extended by merging non-conflicting orderings from imported libraries.
+Provision of a precedence label, as in Figure~\ref{fig:SimpleExample}, specifies that a no argument operation can also be used as a prefix operator, and that a single argument operation can be used as an infix operator. Operators sharing a precedence label are equi-precedence, and precedences are ordered by a separate precedence ordering statement as shown in Figure~\ref{fig:Precedence}. In the OCL 2.2 example, \verb|AND| has higher precedence than \verb|OR| so the expression \verb|a and b or c and d| should be interpreted as \verb|(a and b) or (c and d)|. Precedences orderings may be extended by merging non-conflicting orderings from imported libraries.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=5.75in]{Precedence.png}
   \end{center}
-  \caption{Precedence Ordering.}
+  \caption{Top level Import, Library and Precedence Ordering declarations.}
   \label{fig:Precedence}
 \end{figure}
 
@@ -247,7 +247,7 @@ Figure~\ref{fig:IterationExample} shows that iterate and iterator operations can
 
 Iterations taking variable numbers of iterators are separately declared for each alternative.
 
-\subsection{Lambda Expressions}
+\subsection{Lambda Types}
 
 \begin{figure}
   \begin{center}
@@ -261,7 +261,7 @@ The equivalent iterator operation declarations to those in Figure~\ref{fig:Itera
 
 Following a casual query at the OCL Workshop in 2010, as to whether OCL should support Lambda Expressions, a discussion on the LinkedIn OCL Users Group\cite{LinkedIn} generally welcomed their introduction. The declarations in Figure~\ref{fig:IterationExample} therefore use a Lambda Type to specify the constraints on the body expression. The syntax of a Lambda type draws on the Tuple and Operation signatures.
 
-\verb|Lambda| context-type \verb|(| parameter-type-list \verb|) : | context-type
+\verb|Lambda| context-type \verb|(| parameter-type-list \verb|) : | result-type
 
 An ExpressionInOcl is also similar to a Lambda Expression but there is one important difference. An ExpressionInOcl is self-contained with all variable references terminated by context, parameter or result variables. An Iteration body has access to the invoking environment, so the analysis resolves variable references, some of which may be implicit, to the appropriate variables which are then available for access while the iteration is evaluated.
 
@@ -277,7 +277,7 @@ OCL specifies that OCL is aligned with UML, and UML specifies that the semantics
 
 For OCL, the most derived unique compatible operation signature can be statically determined when the OCL expression is parsed and persisted as the target of an OperationCallExp::referredOperation in the AST. When evaluated, the dynamic type of the expression source can be used to select the most derived visible operation with the same signature. Analysis of UML 2.4, identified a couple of places where covariant overloading had been assumed; these usages were not significant and await correction in UML 2.5.
 
-Covariant overloading allows a derived operation argument type to vary with the derived source type. This practice is widespread in the OCL standard library, where the equality operation \verb| OclAny::=(OclAny)| is overloaded by \verb|Collection::=(Collection)|.
+Covariant overloading allows a derived operation argument type to vary with the derived source type. This practice is widespread in the OCL standard library, where the equality operation \verb|OclAny::=(OclAny)| is overloaded by \verb|Collection::=(Collection)|.
 
 If evaluation complexity is to be avoided, the library must be revised to eliminate covariant overloading.
 
@@ -351,7 +351,7 @@ A modeled library requires the specification to explicitly choose between:
 
 \verb|Bag<T1>::excluding<T2>(object : T2)|
 
-When dealing with \verb|null| collection content, OCL provides a safe silent helpful behavior, so allowing the \verb|excluding| operation to ignore inappropriate exclusions seems appropriate. This eliminates the first option. Introduction of the T2 template parameter is explicit but redundant so a Java-like \verb| Bag<T>::excluding(object : OclAny)| seems the better clarification.
+When dealing with \verb|null| collection content, OCL provides a safe silent helpful behavior, so allowing the \verb|excluding| operation to ignore inappropriate exclusions seems appropriate. This eliminates the first option. Introduction of the T2 template parameter is explicit but redundant so a Java-like \verb|Bag<T>::excluding(object : OclAny)| seems the better clarification.
 
 \subsection{Modularity}
 
@@ -399,7 +399,7 @@ Examination of the postcondition for \verb|Sequence::first()| reveals a fully re
 
 \verb|if self.oclType().elementType.oclIsKindOf(CollectionType)|. 
 
-The \verb|CollectionType::elementType| access requires oclType to return at least a CollectionType. An \verb|oclAsType(CollectionType)| cast could be introduced to fix the above example, but it demonstrates that the
+The \verb|CollectionType::elementType| access therefore requires oclType to return at least a CollectionType. An \verb|oclAsType(CollectionType)| cast could be introduced to fix the above example, but it demonstrates that the
 derived type is statically determinate and that it is useful to make that type available.
 
 \begin{figure}
@@ -418,7 +418,7 @@ Use of the OclSelf template parameter in conjunction with the templated meta-cla
 
 The \verb!Class<T>! is used to propagate static type information. \verb!Class<T>! conforms to Classifier so a fully reflective tower is possible and it is meaningful to write:
 
- \verb!self.oclType().oclType().oclType().ownedAttributes!
+ \verb!self.oclType().oclType().oclType().ownedAttribute!
 
 \subsection{Type-cast: OclAny::oclAsType(...)}
 
@@ -428,7 +428,7 @@ In OCL 1.6, this is specified as: \verb!OclAny::oclAsType(typename : OclType) : 
 
 In OCL 2.0, this is declared as: \verb!OclAny::oclAsType(typespec : OclType) : T! with OclType now a little-understood power-set.
 
-In OCL 2.2, the declaration is: \verb!OclAny::oclAsType(type : Classifier) : T! with T still ill-defined and the use Classifier at a different meta-level is unexplained. The descriptive text refers to `t' rather than `type'.
+In OCL 2.2, the declaration is: \verb!OclAny::oclAsType(type : Classifier) : T! with T still ill-defined and the use of Classifier at a different meta-level is unexplained. The descriptive text refers to `t' rather than `type'.
 
 In OCL 2.3, the declaration is unchanged but the typo in the descriptive text now refers to`T' rather than `type'.
 
@@ -436,7 +436,7 @@ The underlying rationale seems to be to try and establish an identity for a meta
 
 A consistent specification is: \verb!OclAny::oclAsType<T>(type : Class<T>) : T!
 
-This exploits the conformance of \verb!T! to \verb!Class<T>! to preserve the static type. It assumes that the model of the unspecified TypeValue class is specified to be a \verb!Class<T>!. 
+This exploits the conformance of \verb!T! to the \verb!Class<T>! instance to preserve the static type. It is assumed that the model of the unspecified TypeValue class is specified to be a \verb!Class<T>!. 
 
 \subsection{OclAny::allInstances(...)}
 
