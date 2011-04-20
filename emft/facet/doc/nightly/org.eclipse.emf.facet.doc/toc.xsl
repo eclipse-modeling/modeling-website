@@ -24,9 +24,9 @@
 		<xsl:param name="first" />
 		<xsl:choose>
 			<xsl:when test="$first='notfirst'">
-				<h1>
+				<li>
 					<xsl:value-of select="@label" />
-				</h1>
+				</li>
 				<ul>
 					<xsl:apply-templates select="topic">
 						<xsl:with-param name="location" select="$location" />
@@ -61,12 +61,14 @@
 	<xsl:template match="topic" name="topictpl">
 		<xsl:param name="location" />
 		<xsl:param name="first" />
-		<li>
+
 			<xsl:choose>
 				<xsl:when test="@href">
-					<a href="{$location}/{@href}" target="content">
-						<xsl:value-of select="@label" />
-					</a>
+					<li>
+						<a href="{$location}/{@href}" target="content">
+							<xsl:value-of select="@label" />
+						</a>
+					</li>
 				</xsl:when>
 				<xsl:when test="link">
 					<xsl:apply-templates select="link">
@@ -87,7 +89,7 @@
 					</xsl:apply-templates>
 				</ul>
 			</xsl:if>
-		</li>
+		
 	</xsl:template>
 
 	<xsl:template match="link">
