@@ -13,23 +13,54 @@
 <xsl:stylesheet version="1.1"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:output method="html" indent="no" encoding="ISO-8859-1" />
-
+	<xsl:output 
+		method="xml" indent="yes" encoding="ISO-8859-1" 
+		doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"
+      	doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+      />
 
 	<xsl:template name="toctpl" match="toc">
 		<xsl:param name="location" />
-		<h1>
-			<xsl:value-of select="@label" />
-		</h1>
-		<ul>
-			<xsl:apply-templates select="topic">
-				<xsl:with-param name="location" select="$location" />
-			</xsl:apply-templates>
-		</ul>
+		<xsl:param name="first" />
+		<xsl:choose>
+			<xsl:when test="$first='notfirst'">
+				<h1>
+					<xsl:value-of select="@label" />
+				</h1>
+				<ul>
+					<xsl:apply-templates select="topic">
+						<xsl:with-param name="location" select="$location" />
+						<xsl:with-param name="first" select="$first"></xsl:with-param>
+					</xsl:apply-templates>
+				</ul>
+			</xsl:when>
+			<xsl:otherwise>
+				<html>
+					<head>
+						<title><xsl:value-of select="@label" /> table of content</title>
+					</head>
+					<body>
+						<h1>
+							<xsl:value-of select="@label" />
+						</h1>
+						<ul>
+							<xsl:apply-templates select="topic">
+								<xsl:with-param name="location" select="$location" />
+								<xsl:with-param name="first" select="'notfirst'"></xsl:with-param>
+							</xsl:apply-templates>
+						</ul>
+					</body>
+				</html>
+
+
+
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template match="topic" name="topictpl">
 		<xsl:param name="location" />
+		<xsl:param name="first" />
 		<li>
 			<xsl:choose>
 				<xsl:when test="@href">
@@ -40,6 +71,7 @@
 				<xsl:when test="link">
 					<xsl:apply-templates select="link">
 						<xsl:with-param name="location" select="$location" />
+						<xsl:with-param name="first" select="$first" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:otherwise>
@@ -51,6 +83,7 @@
 				<ul>
 					<xsl:apply-templates>
 						<xsl:with-param name="location" select="$location" />
+						<xsl:with-param name="first" select="$first" />
 					</xsl:apply-templates>
 				</ul>
 			</xsl:if>
@@ -58,8 +91,10 @@
 	</xsl:template>
 
 	<xsl:template match="link">
+		<xsl:param name="first" />
 		<xsl:apply-templates select="document(@toc)">
 			<xsl:with-param name="location" select="concat('./',concat(@toc,'/..'))" />
+			<xsl:with-param name="first" select="$first" />
 		</xsl:apply-templates>
 	</xsl:template>
 
