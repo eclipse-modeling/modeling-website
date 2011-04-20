@@ -1,0 +1,231 @@
+== Edit elements in a table ==
+You can open the table by selecting model elements in a model editor (such as the MoDisco model browser),
+right-clicking and choosing '''Edit in a table editor''' :
+
+[[Image:EMFFacet_NatTable_Edit_In_Table.png|frame]]
+
+== View elements in a table ==
+You can open the table by selecting model elements in a model editor (such as the MoDisco model browser),
+right-clicking and choosing '''Show in a new table view''' :
+
+[[Image:EMFFacet_NatTable_Show_In_Table.png|frame]]
+
+== Drag & Drop ==
+You can drag elements from any model editor and drop them on an open table to add them to this table.
+
+[[Image:EMFFacet_NatTable_Drop_Empty_Space.png|frame]]
+
+You can also drop a model element onto a reference to set a unary reference, or add the element 
+to the list for a n-ary reference :
+
+[[Image:EMFFacet_NatTable_Drop_On_Reference.png|frame]]
+
+=== Create new elements ===
+If the table was opened with a configuration that allows this (for example, you can create instances of Dependency
+in a "table of dependencies"), you can add a model element by clicking on the "plus" icon :
+
+[[Image:EMFFacet_NatTable_Create_Element_Button.png|frame]]
+
+If the table configuration allows creating several types of elements, you can choose which one you want to create 
+in the drop down menu:
+
+[[Image:EMFFacet_NatTable_Create_Element_Drop_Down_Menu.png|frame]]
+
+== Remove elements from the table ==
+You can remove elements from the table by selecting them, right-clicking and choosing '''Remove Lines'''.<br/>
+This only removes the elements from the view, not the model.
+
+[[Image:EMFFacet_NatTable_remove_lines.png|frame]]
+
+== Delete elements from the model ==
+You can delete elements from the model by selecting the elements in the '''Label''' column, right-clicking
+and selecting '''Delete Elements from Model''':
+
+[[Image:EMFFacet_NatTable_Delete_Element.png|frame]]
+
+
+== Editing ==
+To edit an attribute or reference, double-click on its cell in the table, or select the cell and hit F2.<br/>
+The cell should then go in edit mode (if the value is editable):
+
+[[Image:EMFFacet_NatTable_Edit_Cell.png|frame]]
+
+To commit the value, hit '''Enter'''. To cancel the edit, hit '''Escape'''.
+
+=== Editing unary attributes ===
+
+You can edit all the standard Ecore data types: 
+EString, EChar, EFloat, EFloatObject, ECharacterObject, EBoolean,
+EBooleanObject, EDouble, EDoubleObject, EInt, EIntegerObject,
+ELong, ELongObject, EBigInteger, EBigDecimal, EByte, EByteObject,
+EShort, EShortObject.
+
+If the value you entered is not valid for this type, the contents become highlighted in red, and you can't commit the value:
+
+[[Image:EMFFacet_NatTable_Edit_Cell_Invalid.png|frame]]
+
+=== Editing n-ary attributes ===
+
+When you enter edit mode for a n-ary attribute (one which accepts a list of values instead of just a single value), a dialog
+opens to let you edit the values: 
+
+[[Image:EMFFacet_NatTable_Edit_Cell_Nary_Attribute.png|frame]]
+
+You can add, remove, and move elements in the list by using the buttons.
+
+=== Editing unary references ===
+For unary references, you can select a value in several ways:
+* using the drop down
+[[Image:EMFFacet_NatTable_Edit_Cell_Unary_Reference.png|frame]]
+* typing the name of the element, with help from completion
+[[Image:EMFFacet_NatTable_Edit_Cell_Unary_Reference_Autocompletion.png|frame]]
+* clicking on the "..." button and selecting a value in the dialog that pops up
+[[Image:EMFFacet_NatTable_Edit_Cell_Unary_Reference_Dialog.png|frame]]
+
+For composite references, you will be asked for confirmation because changing a composite reference means deleting 
+the previous value (if any) from the model, and moving the new value from its previous parent.
+
+=== Editing n-ary references ===
+When you edit a n-ary reference, this dialog opens: 
+
+[[Image:EMFFacet_NatTable_Edit_Cell_Nary_Reference.png|frame]]
+
+* Select values in the left column and move them to the right column using the ">" button to add them to the feature.
+* Select values in the right column and move them to the left column using the "<" button to remove them from the feature.
+* Use the ">>" and "<<" buttons to move all values at once.
+* Use the "Up" and "Down" buttons to reorder the selected values in the right column.
+
+== Undo/Redo ==
+You can undo/redo modifications done on the model by using the undo/redo actions in the editor in which the model is opened.
+
+== Copy to clipboard ==
+Select cells and use the copy action (either through the context menu or the Edit menu) to copy the contents 
+of the cells as text to the clipboard.
+You can then paste it in any program, such as Text or SpreadSheet editor.
+
+
+== Sort The Columns In The Table==
+There is 2 way to sort the columns : 
+* You can select a column and drag it in an other location.
+* You can use an action Sort Columns By ... to sort them. Currently, you can sort the columns by type or by name. In this last case, the columns beginning with "[" are placed  in first, following by the '''/eContainer''' column. The others columns are sorted using the alphabetical order (ignoring the "/" character).
+
+[[Image:EMFFacet_NatTable_Sort_Columns.png|frame]]
+
+== Customizations ==
+=== Load Customizations ===
+Click on the '''Load Customizations''' [[Image:EMFFacet_uiCustom.gif]] button, and in the dialog that opens,
+move the customizations you want to use to the right column:
+
+[[Image:EMFFacet_NatTable_Load_Customization_2.png]]
+
+The table use a local customization file to store the columns visibility. This file cannot be unloaded by the user, but it is visible in the dialog in grayed mode.
+
+=== Edit Customization ===
+See the documentation for the MoDisco browser customizations.
+
+The features that are customizable for the table are:
+* background color
+* foreground color
+* label
+* icon
+* font
+* italic
+* bold
+* underlined
+* struckthrough
+
+[[Image:EMFFacet_NatTable_customization_example.png]]
+
+== Serialization of Table ==
+=== How to save a table ===
+It is possible to serialize your tables in order to keep your preferences saved.
+To do so, you can use the usual "File" menu to prompt the "Save As" window, or the key binding "CTRL + s". If the table has not already been serialized, the "Save As" window will pop up too.
+
+[[Image:EMFFacet_NatTable_SaveAs.png]]
+
+=== What is serialized in the .table file ?===
+The .table file is a xmi one, which contains : 
+- references to the objects contained in the table
+- the list of the columns with a boolean hidden or not
+- the options you have checked ("Hide empty columns", "Only show commons columns" ... )
+- the size of the columns as well as the height of the rows
+- the list of loaded customization
+- the list of referenced facets
+- an optional reference to a tableConfiguration
+
+
+=== How to open a saved table ===
+To open a saved table in order to edit it, you need to use the editor.You can use the contextual menu and choose "Model table" as a viewer, or simply double click on the .table file. 
+
+[[Image:EMFFacet_NatTable_Open_With_Model_Table.png|frame]]
+
+If you want to use the Table View to only visualize your saved table, you need to open an empty view : 
+
+[[Image:EMFFacet_NatTable_Open_Empty_View.png]]
+
+And open your file with the "Open saved table" button : 
+
+[[Image:EMFFacet_NatTable_Open_Saved_Table_View.png|frame]]
+  
+  
+== Add a Query Column ==
+It is possible to add a column representing the result of a query on every table's elements.
+The "Add query column" menu is accessible in the table contextual menu : 
+
+[[Image:EMFFacet_NatTable_AddQueryColumn.png]] [[Image:EMFFacet_NatTable_SelectQuery.png]]
+
+A new column is added for each query, and the result is updated if the model changes.
+[[Image:EMFFacet_NatTable_QueryColumn.png]]
+
+Once a query Column has been added to the table, you can easily delete it using the usual contextual menu, and pressing "delete".
+[[Image:EMFFacet_NatTable_QueryColumn_Delete.png]]
+
+== Add Facets to the table ==
+It is possible to add some EMF Facets to the table. A first menu button is placed in the main toolbar, another one in the contextual menu.
+
+[[Image:EMFFacet_NatTable_ToolBar.png]] [[Image:EMFFacet_NatTable_ContextualMenu.png]] 
+
+If the applied facets contained FacetAttribute or FacetReference, some new columns will be added to the table to represent their results.
+
+[[Image:EMFFacet_NatTable_Facet_IsAbstract.png]]
+
+You can also provide the facet with a "SetQuery", which will enable you to edit the content of the facet.
+In this example, we can edit the content of the facet "Is Abstract" the same way we could edit any other cell:
+
+[[Image:EMFFacet_NatTable_Facet_IsAbstract_Edited.png]]
+
+Facets applied on a table will automatically be applied again when the .table file is opened. 
+
+== Select Columns to Show/Hide ==
+The EMF Facet table comes with a SelectionDialog to choose whether to show/hide columns. To do so, just open the selection dialog with the menu button in the main toolbar : [[Image:select_columns_to_hide.png]]
+
+[[Image:EMFFacet_NatTable_ShowHideDialog.png]]
+
+Then choose which columns you want to show/hide. You can also sort the column's name by alphabetical order.
+Storage of the hidden columns is done using local customization file. We recommend to set the local file at the top of the customization stack. The following dialog can appear when the local file is not the first :
+ 
+[[Image:EMFFacet_NatTable_Hide_Columns_Warning.png]]
+
+== Preferences ==
+The action Select Columns To Show/Hide can display a warning message with a question. This dialog provides a CheckBox in order not to be displayed each time. The NatTable Editor Preference Page allows to reset the display of the message and to change your answer.
+ 
+ 
+[[Image:EMFFacet_NatTable_Preferences.png]]
+
+== Copyright ==
+ Copyright (c) 2010, 2011 CEA LIST.
+ 
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Nicolas Bros (Mia-Software)
+    Nicolas Guyomar (Mia-Software)
+    Vincent Lorenzo (CEA-LIST)
+
+
+
+
+
