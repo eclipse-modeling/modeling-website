@@ -51,9 +51,9 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("EMF Facet", "/index.php");
-	//$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	//$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
+	$Nav->addNavSeparator("EMF Facet", "/modeling/emft/facet/index.php");
+	$Nav->addCustomNav("Download", "/modeling/emft/facet/downloads/index.php", "_blank", 3);
+	$Nav->addCustomNav("Documentation", "http://wiki.eclipse.org/EMF_Facet/", "_blank", 3);
 	//$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
 	//$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
