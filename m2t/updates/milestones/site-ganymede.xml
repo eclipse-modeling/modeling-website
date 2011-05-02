@@ -32,38 +32,97 @@ M2T MTL SDK 0.7.0RC1 S200809190601: contains runtime, source, and documentation.
 		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
 	</feature>
 
-	<!-- JET 1.2.0M6 S201103140953 -->
-	<category-def label="M2T JET SDK 1.2.0M6 S201103140953" name="M2T JET SDK 1.2.0M6 S201103140953">
+	<!-- JET 1.2.0M7 S201105021502 -->
+	<category-def label="M2T JET SDK 1.2.0M7 S201105021502" name="M2T JET SDK 1.2.0M7 S201105021502">
 		<description>
-M2T JET SDK 1.2.0M6 S201103140953: contains runtime, source, and documentation.
+M2T JET SDK 1.2.0M7 S201105021502: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.jet" version="1.1.1.v201101271243-5319sC7HCAGERASDK3924" url="features/org.eclipse.jet_1.1.1.v201101271243-5319sC7HCAGERASDK3924.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.all" version="1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4" url="features/org.eclipse.jet.all_1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.source" version="1.1.1.v201101271243" url="features/org.eclipse.jet.source_1.1.1.v201101271243.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.doc" version="1.1.0.v201006011447-20-7w312114362635" url="features/org.eclipse.jet.doc_1.1.0.v201006011447-20-7w312114362635.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.sdk" version="1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35" url="features/org.eclipse.jet.sdk_1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.uml2" version="1.1.0.v201006011447-2-07w311A1A152813" url="features/org.eclipse.jet.uml2_1.1.0.v201006011447-2-07w311A1A152813.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v201006011447-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v201006011447-2--7w311A17231A11.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.editor" version="1.1.0.v201004271248-20-7w312113372154" url="features/org.eclipse.jet.editor_1.1.0.v201004271248-20-7w312113372154.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 	<feature id="org.eclipse.jet.core" version="1.1.0.v201006011447-3218s7355358B558B" url="features/org.eclipse.jet.core_1.1.0.v201006011447-3218s7355358B558B.jar" patch="false">
-		<category name="M2T JET SDK 1.2.0M6 S201103140953"/>
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+
+	<!-- MTL 0.7.0RC1 S200809190601 -->
+	<category-def label="M2T MTL SDK 0.7.0RC1 S200809190601" name="M2T MTL SDK 0.7.0RC1 S200809190601">
+		<description>
+M2T MTL SDK 0.7.0RC1 S200809190601: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.mtl.doc" version="0.7.0.v200809190601" url="features/org.eclipse.mtl.doc_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+	<feature id="org.eclipse.mtl.examples" version="0.7.0.v200809190601" url="features/org.eclipse.mtl.examples_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+	<feature id="org.eclipse.mtl.runtime" version="0.7.0.v200809190601" url="features/org.eclipse.mtl.runtime_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+	<feature id="org.eclipse.mtl.sdk" version="0.7.0.v200809190601" url="features/org.eclipse.mtl.sdk_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+	<feature id="org.eclipse.mtl.source" version="0.7.0.v200809190601" url="features/org.eclipse.mtl.source_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+	<feature id="org.eclipse.mtl" version="0.7.0.v200809190601" url="features/org.eclipse.mtl_0.7.0.v200809190601.jar" patch="false">
+		<category name="M2T MTL SDK 0.7.0RC1 S200809190601"/>
+	</feature>
+
+	<!-- JET 1.2.0M7 S201105021502 -->
+	<category-def label="M2T JET SDK 1.2.0M7 S201105021502" name="M2T JET SDK 1.2.0M7 S201105021502">
+		<description>
+M2T JET SDK 1.2.0M7 S201105021502: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet" version="1.1.1.v201101271243-5319sC7HCAGERASDK3924" url="features/org.eclipse.jet_1.1.1.v201101271243-5319sC7HCAGERASDK3924.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.all" version="1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4" url="features/org.eclipse.jet.all_1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="1.1.1.v201101271243" url="features/org.eclipse.jet.source_1.1.1.v201101271243.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="1.1.0.v201006011447-20-7w312114362635" url="features/org.eclipse.jet.doc_1.1.0.v201006011447-20-7w312114362635.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35" url="features/org.eclipse.jet.sdk_1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.uml2" version="1.1.0.v201006011447-2-07w311A1A152813" url="features/org.eclipse.jet.uml2_1.1.0.v201006011447-2-07w311A1A152813.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v201006011447-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v201006011447-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="1.1.0.v201004271248-20-7w312113372154" url="features/org.eclipse.jet.editor_1.1.0.v201004271248-20-7w312113372154.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
+	</feature>
+	<feature id="org.eclipse.jet.core" version="1.1.0.v201006011447-3218s7355358B558B" url="features/org.eclipse.jet.core_1.1.0.v201006011447-3218s7355358B558B.jar" patch="false">
+		<category name="M2T JET SDK 1.2.0M7 S201105021502"/>
 	</feature>
 
 	<!-- JET 1.1.1RC3 S201102081240 -->
@@ -127,6 +186,154 @@ M2T JET SDK 1.0.2RC2 S201001291720: contains runtime, source, and documentation.
 	<feature id="org.eclipse.jet" version="1.0.2.v201001281539-508cAkF78Y7VCLASCK" url="features/org.eclipse.jet_1.0.2.v201001281539-508cAkF78Y7VCLASCK.jar" patch="false">
 		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
 	</feature>
+
+	<!-- JET 1.1.1RC3 S201102081240 -->
+	<category-def label="M2T JET SDK 1.1.1RC3 S201102081240" name="M2T JET SDK 1.1.1RC3 S201102081240">
+		<description>
+M2T JET SDK 1.1.1RC3 S201102081240: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet" version="1.1.1.v201101271243-5319sC7HCAGERASDK3924" url="features/org.eclipse.jet_1.1.1.v201101271243-5319sC7HCAGERASDK3924.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.all" version="1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4" url="features/org.eclipse.jet.all_1.1.1.v201101271243-6307MB9mpZKfPZlmx_xo4GbKT5B4.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="1.1.1.v201101271243" url="features/org.eclipse.jet.source_1.1.1.v201101271243.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="1.1.0.v201006011447-20-7w312114362635" url="features/org.eclipse.jet.doc_1.1.0.v201006011447-20-7w312114362635.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35" url="features/org.eclipse.jet.sdk_1.1.1.v201101271243-42186A5NsKEQPHRQeFaJS4A35.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.uml2" version="1.1.0.v201006011447-2-07w311A1A152813" url="features/org.eclipse.jet.uml2_1.1.0.v201006011447-2-07w311A1A152813.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v201006011447-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v201006011447-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="1.1.0.v201004271248-20-7w312113372154" url="features/org.eclipse.jet.editor_1.1.0.v201004271248-20-7w312113372154.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+	<feature id="org.eclipse.jet.core" version="1.1.0.v201006011447-3218s7355358B558B" url="features/org.eclipse.jet.core_1.1.0.v201006011447-3218s7355358B558B.jar" patch="false">
+		<category name="M2T JET SDK 1.1.1RC3 S201102081240"/>
+	</feature>
+
+	<!-- JET 1.0.2RC2 S201001291720 -->
+	<category-def label="M2T JET SDK 1.0.2RC2 S201001291720" name="M2T JET SDK 1.0.2RC2 S201001291720">
+		<description>
+M2T JET SDK 1.0.2RC2 S201001291720: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.jet.capabilities" version="1.0.0.v200906120900-2--7w311A17231A11" url="features/org.eclipse.jet.capabilities_1.0.0.v200906120900-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet.editor" version="1.0.0.v200906120945-2--7w311A17231A11" url="features/org.eclipse.jet.editor_1.0.0.v200906120945-2--7w311A17231A11.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet.doc" version="1.0.2.v201001281539-2-17w31211239264A" url="features/org.eclipse.jet.doc_1.0.2.v201001281539-2-17w31211239264A.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet.sdk" version="1.0.2.v201001281539-4-5866Eq9sMGMeJfZQJZPL" url="features/org.eclipse.jet.sdk_1.0.2.v201001281539-4-5866Eq9sMGMeJfZQJZPL.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet.all" version="1.0.2.v201001281539-4-17D28T-HLxYz-ePXlhmfRK_QM" url="features/org.eclipse.jet.all_1.0.2.v201001281539-4-17D28T-HLxYz-ePXlhmfRK_QM.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet.source" version="1.0.2.v201001281539" url="features/org.eclipse.jet.source_1.0.2.v201001281539.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+	<feature id="org.eclipse.jet" version="1.0.2.v201001281539-508cAkF78Y7VCLASCK" url="features/org.eclipse.jet_1.0.2.v201001281539-508cAkF78Y7VCLASCK.jar" patch="false">
+		<category name="M2T JET SDK 1.0.2RC2 S201001291720"/>
+	</feature>
+
+	<!-- ACCELEO 3.1.0M1 S201008170310 -->
+	<category-def label="M2T ACCELEO SDK 3.1.0M1 S201008170310" name="M2T ACCELEO SDK 3.1.0M1 S201008170310">
+		<description>
+M2T ACCELEO SDK 3.1.0M1 S201008170310: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.ui.capabilities_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.source" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.source_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.sdk" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.sdk_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.doc" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.doc_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.runtime" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.runtime_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.examples" version="3.1.0.v201008170310" url="features/org.eclipse.acceleo.examples_3.1.0.v201008170310.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.1.0M1 S201008170310"/>
+	</feature>
+
+	<!-- ACCELEO 3.0.1RC4 S201009150356 -->
+	<category-def label="M2T ACCELEO SDK 3.0.1RC4 S201009150356" name="M2T ACCELEO SDK 3.0.1RC4 S201009150356">
+		<description>
+M2T ACCELEO SDK 3.0.1RC4 S201009150356: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.acceleo.doc" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.doc_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.runtime" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.runtime_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.examples" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.examples_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.ui.capabilities_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.source" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.source_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.sdk" version="3.0.1.v201009150356" url="features/org.eclipse.acceleo.sdk_3.0.1.v201009150356.jar" patch="false">
+		<category name="M2T ACCELEO SDK 3.0.1RC4 S201009150356"/>
+	</feature>
+
+	<!-- ACCELEO 0.9.0M5 S201002020636 -->
+	<category-def label="M2T ACCELEO SDK 0.9.0M5 S201002020636" name="M2T ACCELEO SDK 0.9.0M5 S201002020636">
+		<description>
+M2T ACCELEO SDK 0.9.0M5 S201002020636: contains runtime, source, and documentation.
+		</description>
+	</category-def>
+	<feature id="org.eclipse.acceleo.doc" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.doc_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.runtime" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.runtime_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.examples" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.examples_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.ui.capabilities" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.ui.capabilities_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.source" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.source_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+	<feature id="org.eclipse.acceleo.sdk" version="0.9.0.v201002020636" url="features/org.eclipse.acceleo.sdk_0.9.0.v201002020636.jar" patch="false">
+		<category name="M2T ACCELEO SDK 0.9.0M5 S201002020636"/>
+	</feature>
+
+
 
 	<!-- ACCELEO 3.1.0M1 S201008170310 -->
 	<category-def label="M2T ACCELEO SDK 3.1.0M1 S201008170310" name="M2T ACCELEO SDK 3.1.0M1 S201008170310">
