@@ -65,9 +65,18 @@
 			<xsl:choose>
 				<xsl:when test="@href">
 					<li>
-						<a href="{$location}/{@href}" target="content">
-							<xsl:value-of select="@label" />
-						</a>
+					<xsl:choose>
+						<xsl:when test="$location">
+							<a href="{$location}/{@href}" target="content">
+								<xsl:value-of select="@label" />
+							</a>
+						</xsl:when>
+						<xsl:otherwise>
+							<a href="{@href}" target="content">
+								<xsl:value-of select="@label" />
+							</a>
+						</xsl:otherwise>
+					</xsl:choose>
 					</li>
 				</xsl:when>
 				<xsl:when test="link">
