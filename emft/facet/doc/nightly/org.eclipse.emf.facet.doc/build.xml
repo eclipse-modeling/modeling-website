@@ -1,0 +1,48 @@
+<project default="all" basedir="${build_project}">
+	<property name="wikitext.standalone" value="" />
+
+	<path id="wikitext.classpath">
+		<fileset dir="../org.eclipse.emf.facet.doc/wikitext">
+			<include name="org.eclipse.mylyn.wikitext.*core*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef classpathref="wikitext.classpath" resource="org/eclipse/mylyn/wikitext/core/util/anttask/tasks.properties" />
+
+	<target name="test-deltas" if="build_files">
+		<script language="javascript">
+			<![CDATA[
+		        if(build_files.indexOf(".mediawiki") != -1)
+		    		self.getProject().setNewProperty("mediawikiFilesChanged", true);
+			]]>
+		</script>
+	</target>
+
+	<target name="no-deltas" unless="build_files">
+		<script language="javascript">
+			<![CDATA[
+	    		self.getProject().setNewProperty("mediawikiFilesChanged", true);
+			]]>
+		</script>
+	</target>
+
+	<target name="generate-help" depends="test-deltas,no-deltas" if="mediawikiFilesChanged">
+		<echo>files changed : ${build_files}</echo>
+
+		<wikitext-to-eclipse-help markupLanguage="MediaWiki" multipleOutputFiles="false" navigationImages="false">
+			<fileset dir="${basedir}">
+				<include name="*.mediawiki" />
+			</fileset>
+			<!--
+			<stylesheet url="styles/help.css" />
+			<stylesheet url="styles/main.css" />
+			-->
+		</wikitext-to-eclipse-help>
+	</target>
+
+	<target name="no-change" depends="test-deltas" unless="mediawikiFilesChanged">
+		<echo>no mediawiki file changed</echo>
+	</target>
+
+	<target name="all" depends="generate-help,no-change" />
+</project>
