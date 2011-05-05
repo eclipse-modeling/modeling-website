@@ -11,11 +11,25 @@ Contributors:
     Gregoire Dupe (Mia-Software) - Bug 337584 - Documentation set up
 -->
 <toc label="EMF Facet Documentation">
-   <topic label="NatTable widget developer documentation">
-      <link toc="../org.eclipse.emf.facet.widgets.nattable.doc/devdoc-toc.xml"/>
+   <topic label="User documentation">
+	   <topic label="Table widget user documentation">
+	      <link toc="../org.eclipse.emf.facet.widgets.nattable.doc/userdoc-toc.xml"/>
+	   </topic>
+    <topic href="new_and_noteworthy.html" label="What&apos;s New">
+    </topic>
    </topic>
-   <topic label="NatTable widget user documentation">
-      <link toc="../org.eclipse.emf.facet.widgets.nattable.doc/userdoc-toc.xml"/>
+   <topic label="Developer documentation">
+	   <topic label="Table widget developer documentation">
+	      <link toc="../org.eclipse.emf.facet.widgets.nattable.doc/devdoc-toc.xml"/>
+	   </topic>
    </topic>
    <topic href="javadoc/index.html" label="API Reference"/>
+   <topic label="Simultaneous Release Tracker Required Documents">
+   		<topic href="API_Policy.html" label="API Policy"/>
+   		<topic href="ramp_down.html" label="Ramp down"/> 
+   		<topic href="retention_policy.html" label="Retention Policy"/> 
+		<topic href="running_tests.html" label="Running Unit Tests"/>
+		<topic href="checking_BREE.html" label="Checking the Bundle-RequiredExecutionEnvironment"/>
+		<topic href="capabilities.html" label="Capabilities"/> 
+   </topic>
 </toc>

@@ -10,6 +10,7 @@ NatTableEditorFactory.getInstance().openOn(elements, editingDomain, tableConfigu
 * editingDomain : pass an EMF EditingDomain if you want the table to be editable, or <code>null</code> otherwise
 * description : to be displayed at the top of the editor
 * tableConfiguration, context, parameter : for configuring the table (see section about table configurations). Can be <code>null</code>.
+
 === In a view ===
 Use:
 <pre>
