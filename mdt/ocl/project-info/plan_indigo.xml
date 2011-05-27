@@ -32,8 +32,8 @@ working with major consumers in the release after Indigo to assist in migration 
 <html:i><html:b>Note</html:b> that, since the 
 <html:a href="http://www.omg.org/spec/OCL/2.3/Beta2/PDF">OMG OCL 2.3</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
-<html:b>MDT OCL 3.1.0</html:b> release is best endeavours to establish a coherent interpretation
-of the OMG OCL 2.3 and to prototype resolutions and auto-generation of the OMG OCL 2.4 standard. Two of the MDT/OCL
+<html:b>Eclipse (MDT) OCL 3.1.0</html:b> release is best endeavours to establish a coherent interpretation
+of the OMG OCL 2.3 and to prototype resolutions and auto-generation of the OMG OCL 2.4 standard. Two of the Eclipse (MDT) OCL
 committers are also members of the OMG Revision Task Force that resolves the specification issues.</html:i>
 </html:p>
 <html:p>
@@ -44,16 +44,16 @@ committers are also members of the OMG Revision Task Force that resolves the spe
    </introduction>
    <release_deliverables>
      <html:div>
-The release deliverables for the MDT OCL 3.1 release have the same form as 
+The release deliverables for the Eclipse (MDT) OCL 3.1 release have the same form as 
 is found in most Eclipse projects, namely:
 <html:ul>
-<html:li>MDT OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
-<html:li>MDT OCL runtime binary distribution (downloadable and update site).</html:li>
-<html:li>MDT OCL stand-alone binary distribution (downloadable).</html:li>
-<html:li>MDT OCL tests (downloadable)</html:li>
-<html:li>MDT OCL examples (downloadable and update site)</html:li>
+<html:li>OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
+<html:li>OCL runtime binary distribution (downloadable and update site).</html:li>
+<html:li>OCL stand-alone binary distribution (downloadable).</html:li>
+<html:li>OCL tests (downloadable)</html:li>
+<html:li>OCL examples (downloadable and update site)</html:li>
 </html:ul>
-MDT OCL 3.1.0  source code will be available as versions tagged "R3_1" in the project's CVS repository.
+Eclipse (MDT) OCL 3.1.0  source code will be available as versions tagged "R3_1" in the project's CVS repository.
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -62,10 +62,9 @@ MDT OCL 3.1.0  source code will be available as versions tagged "R3_1" in the pr
 Release milestones occur at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
 final 3.7 release of the Platform, upon which MDT OCL and other projects
-will release simultaneously. As MDT OCL is a dependency of numerous
-other projects, MDT OCL Core will deliver its milestones at the +1
-schedule in accordance with the schedule below. MDT OCL Tools will deliver
-at the +3 schedule (two days later).
+will release simultaneously. As Eclipse OCL is a dependency of numerous
+other projects, Eclipse OCL will deliver its milestones at the +1
+schedule in accordance with the schedule below.
          </html:div>
       </preamble>
 <milestone date="Monday 18 August 2010" milestone="3.1.0M1"></milestone>
@@ -81,19 +80,17 @@ at the +3 schedule (two days later).
 <milestone date="Monday 6 June 2011" milestone="3.1.0RC4"></milestone>
 <milestone date="Monday 22 June 2011" milestone="Indigo"></milestone>
       <postamble><html:div>
-MDT OCL may produce interim maintenance releases in addition to these in
-order to satisfy clients requests.
       </html:div></postamble>
    </release_milestones>
    <target_environments>
      <html:div>
         In order to remain current, each Eclipse release targets reasonably
         current versions of the underlying operating environments. The Eclipse
-        Object Constraint Language (MDT OCL) project depends upon on the
+        Object Constraint Language (OCL) project depends upon on the
         Platform and other projects, which are mostly "pure" Java. The 3.7
         release of the Eclipse Platform Project is written and compiled
         against version 5.0 of the Java Platform APIs, and targeted to run on
-        version 5.0 of the Java Runtime Environment, Standard Edition. MDT OCL
+        version 5.0 of the Java Runtime Environment, Standard Edition. Eclipse OCL
         will target the same Java version as EMF and UML2, which currently require
         Java 5. Eclipse Platform SDK 3.7 will be tested and validated on a
         number of reference platforms. MDT OCL will be tested and validated
@@ -105,7 +102,7 @@ The Eclipse Platform is designed as the basis
 for internationalized products. The user interface elements provided
 by the Eclipse SDK components, including dialogs and error messages,
 are externalized. The English strings are provided as the default
-resource bundles. As a result, the MDT OCL
+resource bundles. As a result, the Eclipse OCL
 project will provide English strings in its default bundles and be
 localized to a subset of those locales offered by the Platform.
           </html:div>
@@ -113,7 +110,7 @@ localized to a subset of those locales offered by the Platform.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The MDT OCL 3.1 project
+The Eclipse OCL 3.1 project
 will be developed in parallel, and released simultaneously, with the
 following projects. 
 <html:ul>
@@ -122,11 +119,11 @@ following projects.
     <html:li>Model Development Tools (MDT) UML2 version 3.2</html:li>
 </html:ul>
 <html:p>
-As described above, the MDT OCL 3.1.0 release should address usability of the editors.
+As described above, the Eclipse OCL 3.1.0 release should address usability of the editors.
 The main OCL plugins should be unaffected,
 but the associated examples plugins may be revised significantly.
 
-Again as described above, the MDT OCL 3.2.0 release for Juno will introduce significant new APIs
+Again as described above, the Eclipse OCL 3.2.0 release for Juno will introduce significant new APIs
 in a new namespace that replaces the old. The old namespace will be deprecated once all
 Simultaneous Release projects have migrated to the new namespace.  
 </html:p>
@@ -150,18 +147,18 @@ more detailed information on each.
             <description>
                 <html:div>
 This theme addresses issues related to the OMG OCL 2.3 specification adoption. The bugs related to the inherited deviations
-of the MDT OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.3) also appear here.
+of the Eclipse OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.3) also appear here.
 
 It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
 traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -170,15 +167,15 @@ traditional behaviour until 3.2.0.
         <theme name="Release Currency">
             <description>
                 <html:div>
-The MDT OCL project will maintain currency with its
+The Eclipse OCL project will maintain currency with its
 dependencies, in particular with the EMF and MDT UML2 projects.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -188,18 +185,18 @@ dependencies, in particular with the EMF and MDT UML2 projects.
             <description>
                 <html:div>
 This theme addresses the need for extensibility and usability improvements
-of the MDT OCL language implementation and APIs.
+of the Eclipse OCL language implementation and APIs.
 
 It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
 traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -212,15 +209,15 @@ This theme addresses issues related to prototyping resolutions of problems in th
 will be raised and RTF proposed resolutions submitted in order to  
 
 It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
+revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
 traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.1.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
