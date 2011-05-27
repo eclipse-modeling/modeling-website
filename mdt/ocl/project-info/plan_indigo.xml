@@ -8,22 +8,20 @@
 <html:p>
 This document lays out the feature and API set for the
 sixth annual release of the Eclipse Object Constraint Language (MDT OCL)
-Project, version 3.1.0 or 3.2.0. The Indigo release will be 3.1.0 unless an interim
-release is required in order to provide intermediate support in the event that EMF
-or UML2 deviate from Helios compatibility during the Indigo cycle.
+Project, version 3.1.0.
 
 A late requirement to use Xtext rather than IMP to support editing meant that many 3.0.0 facilities
 were not fully developed in time for release 3.0.0. Resolution of evaluator issues and library usability
 were held back, and the editors provided only as examples. Interim milestones, or if necessary an interim
 3.1.0 release, are intended to resolve quality issues in the editors.
-The 3.1.0 or 3.2.0 release (for Indigo) should prepare for full integration
+The 3.1.0 release (for Indigo) should prepare for full integration
 of the new editors and make the library model-driven. Switchover of the old APIs to the new functionality
 and renaming of examples plugins should occur immediately after Indigo so that OCL clients have the
-entire Indigo+1 development cycle to exploit the enhancements that will appear in 4.0.0.
+entire Indigo+1 development cycle to exploit the enhancements that will appear in 3.2.0.
 
 New external APIs are planned to provide interchangeability with alternate OCL products.
 The existing external APIs should be unaffected, will be deprecated after Indigo, but may be
-retained indefinitely as simple wrappers on the new APIs.
+retained indefinitely.
 
 New semi-internal parsing APIs are planned to resolve a number of hard problems and to provide
 compatibility between the LPG and Xtext parsers. The existing semi-internal parsing APIs will
@@ -32,32 +30,28 @@ working with major consumers in the release after Indigo to assist in migration 
 </html:p>
 <html:p>
 <html:i><html:b>Note</html:b> that, since the 
-<html:a href="http://www.omg.org/cgi-bin/doc?ptc/10-02-01.pdf">OMG OCL 2.2</html:a>
+<html:a href="http://www.omg.org/spec/OCL/2.3/Beta2/PDF">OMG OCL 2.3</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
 <html:b>MDT OCL 3.1.0</html:b> release is best endeavours to establish a coherent interpretation
-of the OMG OCL 2.2 and to prototype resolutions for the OMG OCL 2.3 standards. Two of the MDT/OCL
+of the OMG OCL 2.3 and to prototype resolutions and auto-generation of the OMG OCL 2.4 standard. Two of the MDT/OCL
 committers are also members of the OMG Revision Task Force that resolves the specification issues.</html:i>
 </html:p>
 <html:p>
 </html:p>
 <html:p>
-<html:i>
-A guide aimed to help users to migrate from MDT OCL 3.0.0 releases to MDT OCL 4.0.0 release
-will be provided.
-</html:i>
 </html:p>
      </html:div>
    </introduction>
    <release_deliverables>
      <html:div>
-The release deliverables for the MDT OCL 3.1 or 3.2 release have the same form as 
+The release deliverables for the MDT OCL 3.1 release have the same form as 
 is found in most Eclipse projects, namely:
 <html:ul>
 <html:li>MDT OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
 <html:li>MDT OCL runtime binary distribution (downloadable and update site).</html:li>
 <html:li>MDT OCL stand-alone binary distribution (downloadable).</html:li>
 <html:li>MDT OCL tests (downloadable)</html:li>
-<html:li>MDT OCL examples (downloadable)</html:li>
+<html:li>MDT OCL examples (downloadable and update site)</html:li>
 </html:ul>
 MDT OCL 3.1.0  source code will be available as versions tagged "R3_1" in the project's CVS repository.
      </html:div>
@@ -119,7 +113,7 @@ localized to a subset of those locales offered by the Platform.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The MDT OCL 3.1 or 3.2 project
+The MDT OCL 3.1 project
 will be developed in parallel, and released simultaneously, with the
 following projects. 
 <html:ul>
@@ -132,15 +126,11 @@ As described above, the MDT OCL 3.1.0 release should address usability of the ed
 The main OCL plugins should be unaffected,
 but the associated examples plugins may be revised significantly.
 
-Again as described above, the MDT OCL 4.0.0 release for Indigo+1 will introduce significant new APIs
-with a view to deprecating existing ones, which will be retained whereever possible to
-allow consumers to migrate with assistance after Indigo.  
+Again as described above, the MDT OCL 3.2.0 release for Juno will introduce significant new APIs
+in a new namespace that replaces the old. The old namespace will be deprecated once all
+Simultaneous Release projects have migrated to the new namespace.  
 </html:p>
 <html:p>
-<html:i>
-A guide aimed to help users to migrate from MDT OCL 3.0 releases to MDT OCL 4.0.0 release
-will be provided.
-</html:i>
 </html:p>
        </html:div>
    </compatibility_with_previous_releases>
@@ -159,19 +149,19 @@ more detailed information on each.
         <theme name="Compliance">
             <description>
                 <html:div>
-This theme addresses issues related to the OMG OCL 2.2 specification adoption. The bugs related to the inherited deviations
-of the MDT OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.2) also appear here.
+This theme addresses issues related to the OMG OCL 2.3 specification adoption. The bugs related to the inherited deviations
+of the MDT OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.3) also appear here.
 
-It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
 revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 4.0.0.
+traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Compliance&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -185,10 +175,10 @@ dependencies, in particular with the EMF and MDT UML2 projects.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=1.4.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Release+Currency&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -200,16 +190,16 @@ dependencies, in particular with the EMF and MDT UML2 projects.
 This theme addresses the need for extensibility and usability improvements
 of the MDT OCL language implementation and APIs.
 
-It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
 revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 4.0.0.
+traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Usability&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -218,19 +208,19 @@ traditional behaviour until 4.0.0.
         <theme name="Specification">
             <description>
                 <html:div>
-This theme addresses issues related to prototyping resolutions of problems in the OMG OCL 2.2 specification and enhancements in future specifications. OMG issues
+This theme addresses issues related to prototyping resolutions of problems in the OMG OCL 2.3 specification and enhancements in future specifications. OMG issues
 will be raised and RTF proposed resolutions submitted in order to  
 
-It is anticipated that fixes for the majority of the target 4.0.0 will appear in the
+It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
 revised MDT/OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 4.0.0.
+traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=4.0.0&amp;target_milestone=4.0.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;target_milestone=3.2.0&amp;target_milestone=3.2.0&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo%2B&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;status_whiteboard_type=substring&amp;status_whiteboard=Specification&amp;classification=Modeling&amp;product=MDT&amp;component=OCL&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=indigo-">
@@ -241,7 +231,7 @@ traditional behaviour until 4.0.0.
         <html:div>
 <html:ul>
 <html:li>Java is a trademark or a registered trademark of Oracle Corporation.</html:li>
-<html:li>OCL and OMG are trademarks or registered trademark of the Object Management Group, Inc.</html:li>
+<html:li>OCL and OMG are trademarks or registered trademarks of the Object Management Group, Inc.</html:li>
 <html:li>All other products or company names are mentioned for identification purposes only, and
     may be trademarks or service marks of their respective owners.</html:li>
 </html:ul>
