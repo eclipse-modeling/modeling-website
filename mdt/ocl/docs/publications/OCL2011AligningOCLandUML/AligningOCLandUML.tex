@@ -41,9 +41,9 @@ Each version of OCL 2.x states in its Scope statement that it is aligned with th
 
 It is hoped that by presenting the community with an early insight into changes that may be proposed for OCL 2.4, the community may be able to contribute constructively before, rather than after, the revised specification is adopted.
 
-A prototype of the UML-aligned OCL meta-models may be found in the optional Examples and Editors of the Indigo release of Eclipse OCL\cite{MDT/OCL}. This is officially released in June 2011. Milestone builds have been available since December 2010. The prototype uses automated conversion starting with potentially standard UML meta-models for OCL and UML deriving a merged OCL Pivot Meta-Model and associated Eclipse Ecore\cite{EMF} tooling. Despite the use of Ecore tooling, with this approach the name of a meta-class is an OMG-compliant `Class' rather than the Ecore `EClass'. 
+A prototype of the UML-aligned OCL meta-models may be found in the optional Examples and Editors of the Indigo release of Eclipse OCL\cite{MDT/OCL}. This is officially released in June 2011. Milestone builds have been available since December 2010. The prototype uses automated conversion starting with potentially standard UML meta-models for OCL and UML. From these a merged OCL Pivot Meta-Model and associated Eclipse Ecore\cite{EMF} tooling are derived. Despite the use of Ecore tooling, with this approach the name of a meta-class is an OMG-compliant `Class' rather than the Ecore `EClass'. 
 
-The UML-alignment outlined below involves very few, if any, actual changes to the concrete syntax and semantics of OCL; the changes just make the specification say what many users think it already says. The changes to the abstract syntax are however quite significant.
+The UML-alignment outlined below involves very few, if any, actual changes to the concrete syntax and semantics of OCL; the changes are intended to just make the specification say what many users think it already says. The changes to the abstract syntax are however quite significant.
 
 In Section \ref{Background} we discuss the OCL specification and identify some problems in the way that it is used. Then in Section \ref{Problems} we  identify more technical problems. We propose an OCL Pivot Meta-Model as a solution to all these problems in Section \ref{Solutions}. Finally we conclude. 
 
@@ -77,9 +77,7 @@ Interchange of concrete syntax between tools is moderately successful today, but
  
 \subsubsection{XMI Interchange}
 
-XMI Interchange is important to allow the costs of parsing the Concrete Syntax to be isolated from execution costs. In the XMI representation, all syntax sugar is removed and references directly access target features using properties such as OperationCallExp::referredOperation. This requires the target operation to have a URI, which is only available for user models. The OCL Standard Library has no model and no policy for establishing URIs independent of a model, so XMI Compliance is impossible whenever a library operation is used. The lack of basic URIs is addressed by providing a model for the OCL Standard Library as described in our companion paper\cite{OCL-stdlib}.
-
-More serious URI problems arise with underspecification of Complete OCL and we address these in Section \ref{CompleteOCL}.
+XMI Interchange is important to allow the costs of parsing the Concrete Syntax to be isolated from execution costs. In the XMI representation, all syntax sugar is removed and references directly access target features using properties such as OperationCallExp::referredOperation. This requires the target operation to have a URI, which is only available for user models. The OCL Standard Library has no model and no policy for establishing URIs independent of a model, so XMI Compliance is impossible whenever a library operation is used. The lack of basic URIs is addressed by providing a model for the OCL Standard Library as described in our companion paper\cite{OCL-stdlib}. More serious URI problems arise with underspecification of Complete OCL and we address these in Section \ref{CompleteOCL}.
 
 \begin{figure}
   \begin{center}
@@ -93,13 +91,13 @@ More serious URI problems arise with underspecification of Complete OCL and we a
 
 The specification requires that tools evaluate in accordance with OCL semantics, which is a relatively modest requirement for basic arithmetic values, but becomes quite troublesome for null, invalid and very large or high precision values.
 
-The specification provides no API by which a query can be invoked and, in practice, all OCL evaluation is encapsulated within some modeling environment. It is therefore not possible to detect whether an OCL tool uses the classes specified in the Values package. Models do not and so practical tools do not either. This has allowed some significant problems in the Values package to remain unreported. We address these in Section \ref{Values}.
+The specification provides no API (Application Programming Interface) by which a query can be invoked and, in practice, all OCL evaluation is encapsulated within some modeling environment. It is therefore not possible to detect whether an OCL tool uses the classes specified in the Values package. Models do not and so practical tools do not either. This has allowed some significant problems in the Values package to remain unreported. We address these in Section \ref{Values}.
  
 \subsection{OCL Usage}
 
 A standard way of using UML is shown in Figure~\ref{fig:BasicScenario}. A UML model conforming to a UML meta-model is maintained by an editing activity. When appropriate, this model is exported to an EMOF (or Ecore) model conforming to a corresponding meta-model. The EMOF model contributes to a code generation activity that produces a program that can be executed to exploit EMOF objects that are instances of classes from the EMOF model.
 
-The UML meta-model defines a rich suite of capabilities suitable for meta-modeling. The export to the EMOF meta-model reduces the capabilities to those necessary to support effective use of models at run-time.
+The UML meta-model defines a rich suite of capabilities suitable for meta-modeling. The export to the EMOF meta-model reduces the capabilities to those necessary to support effective use of models at run-time. The export applies Profiles, merges Packages and eliminates Associations leaving just Properties at their ends.
 
 When we extend models with OCL capabilities, we get the scenario shown in Figure~\ref{fig:BasicOCLScenario} for developing a UML model that includes constraints. (We omit the unchanged model execution, in order to simplify the diagram.) 
 
@@ -114,7 +112,7 @@ When we extend models with OCL capabilities, we get the scenario shown in Figure
 The OCL integration with UML is quite tidy with OCL providing an ExpressionInOcl class that extends UML's OpaqueExpression class. Distinct editors are usually required for the very different characteristics of graphical UML and textual OCL.
 
 The corresponding EMOF integration is troublesome because EMOF has discarded too many UML concepts that OCL requires. 
-We discuss the EMOF problems in Section~\ref{EMOF}. When we just treat UML/EMOF and OCL in combination, and then consider evaluation of constraints defined in the meta-model upon a model, we find the evaluation scenarios shown in Figure~\ref{fig:M2Evaluation}.
+We discuss the EMOF problems in Section~\ref{EMOF}. When we just treat UML/EMOF and OCL in combination, and then consider constraints, defined in the meta-model, for evaluation upon a model, we find the evaluation scenarios shown in Figure~\ref{fig:M2Evaluation}.
 
 \begin{figure}
   \begin{center}
@@ -134,9 +132,9 @@ When we consider the desirable characteristics of the different ways that models
 
 The last two OCL considerations pull in opposite directions; a rich OCL + UML environment for development and an efficient environment for evaluation. Neither is compatible with UML or EMOF characteristics. UML is too rich for efficient execution and EMOF is too limited for adequate model navigation.
 
-The current OCL specification with its statement that OCL can be used with both UML and EMOF is unhelpful and unrealistic. The deficiencies for EMOF behavior are too great. Tool implementers are forced into pragmatic solutions to support more than one of EMOF and UML. 
+The current OCL specification with its statement that OCL can be used with both UML and EMOF is unhelpful and unrealistic. The deficiencies for EMOF behavior are too great. Tool implementers are forced into pragmatic Bridge\cite{Bridge} or Pivot\cite{Pivot} solutions to support more than one of EMOF and UML. 
 
-We will therefore propose, in Section \ref{PivotMetaModel},  a combined UML and OCL Pivot Meta-Model that exhibits the more efficient characteristics of EMOF while retaining the relevant richness of UML.
+We will therefore propose, in Section \ref{PivotMetaModel},  that the specification define a combined UML and OCL Pivot Meta-Model that exhibits the more efficient characteristics of EMOF while retaining the relevant richness of UML.
 
 \section{Problems}\label{Problems}
 
@@ -155,33 +153,33 @@ define reusable sub-expressions for use in other OCL expressions.''
 
 [We will ignore the references to LetExps and variables and functions that refer to an obsolete OCL 1.x concrete syntax and so makes the paragraph difficult to interpret for OCL 2.x.]
 
-The subsequent description and figure show that the definition is realized by an ExpressionInOcl that is indirectly owned by the context classifier via a Constraint. The figure is redrawn as Figure \ref{fig:Definition} which corrects trivial UML misalignments. 
+The subsequent description and figure show that the definition Constraint is realized by an ExpressionInOcl that is indirectly owned by the context classifier via a Constraint. The figure is redrawn as Figure \ref{fig:Definition} which corrects trivial UML misalignments. 
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=5.75in]{Definition.png}
+    \includegraphics[width=5.0in]{Definition.png}
   \end{center}
-  \caption{Specified relationship of a Definition to a Classifier.}
+  \caption{Specified relationship of a definition Constraint to a Class.}
   \label{fig:Definition}
 \end{figure}
 
-The intent of ``an identical way as an attribute or operation'' is clear. A defined property\footnote{In UML an attribute is a Property, and both Property and Operation are Features.} or operation must be usable in an OCL expression, and so must be usable in both concrete and abstract syntax as if the definition formed part of the complemented model.
+The intent of ``an identical way as an attribute or operation'' is clear. A definition constraint provides the definition of a feature that is usable in an OCL expression, and so must be usable in both concrete and abstract syntax as if the defined feature formed part of the complemented model. In UML, an attribute is a Property and both Property and Operation are Features, so a definition Constraint should provide either a Property definition or an Operation definition.
 
-Utility in the concrete syntax requires that the definition can be looked up by hierarchical name in the OCL Environment. The specification of Environment lookup in Clause 9 can resolve Property and Operation model elements. Unfortunately the Inherited Attribute rules are missing from Clause 12 so it is unclear how a Property or Operation is resolvable from an object structure that does not include such a feature. It is also unclear how a definition is able to export a name into the Environment in the reverse direction to that for inherited attributes.
+Utility in the concrete syntax requires that the Feature definition can be looked up by hierarchical name in the OCL Environment. The specification of Environment lookup in Clause 9 can resolve Property and Operation model elements. Unfortunately the Inherited Attribute rules are missing from Clause 12 so it is unclear how a Property or Operation is resolvable from an object structure that does not include such a feature. It is also unclear how a definition Constraint is able to export a name into the Environment in the reverse direction to that for inherited attributes.
 
-Utility in the abstract syntax means that a PropertyCallExp::referredProperty or an OperationCallExp::referredOperation is able to refer to the definition. This requires the definition to be either a Property or an Operation. None of the Constraint, ExpressionInOcl or OclExpression classes shown in Figure \ref{fig:Definition} satisfy this requirement.
+Utility in the abstract syntax means that a PropertyCallExp::referredProperty or an OperationCallExp::referredOperation is able to refer to the Feature definition. This requires the Feature definition to be either a Property or an Operation. None of the Constraint, ExpressionInOcl or OclExpression classes shown in Figure \ref{fig:Definition} satisfy this requirement.
 
-These considerations all indicate that the abstract syntax must be revised so that a definition is realized by a Property or Operation as shown in Figure \ref{fig:PropertyDefinition}. With definitions realized by features in models, the problem of installing the definition for lookup in the Environment is resolved; the definitions are installed in the same way as any other feature. The lookup results are features and so can be the target of references from the existing expression abstract syntax.
+These considerations all indicate that the abstract syntax must be revised so that a definition Constraint is realized by a Property or Operation as shown in Figure \ref{fig:PropertyDefinition}. With definition Constraints realized by features defined in models, the problem of installing the definition Constraint for lookup in the Environment is resolved; the defined features are installed in the same way as any other feature. The lookup results are features and so can be the target of references from the existing expression abstract syntax.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=5.75in]{PropertyDefinition.png}
+    \includegraphics[width=5.0in]{PropertyDefinition.png}
   \end{center}
   \caption{Property relationship of a Definition to a Classifier.}
   \label{fig:PropertyDefinition}
 \end{figure}
 
-We have one more major problem to solve. What is the relationship between the Class, which Complete OCL complements with a definition, and the Class, for which the definition is an owned\-Attribute or owned\-Operation? We will examine this problem, shown in Figure \ref{fig:MultipleModels}\footnote{Mis-drawn using class rather than attribute notation to highlight the distinct elements involved.}, from a variety of perspectives.
+We have one more major problem to solve. What is the relationship between the Class, which Complete OCL complements with a definition, and the Class, for which the definition is an owned\-Attribute or owned\-Operation? We will examine this problem, shown in Figure \ref{fig:MultipleModels}\footnote{Mis-drawn using class rather than attribute notation to highlight the distinct elements involved.}, from a variety of perspectives. 
 
 \begin{figure}
   \begin{center}
@@ -193,9 +191,9 @@ We have one more major problem to solve. What is the relationship between the Cl
 
 \subsubsection{Merged or Multiple models}
 
-The simplest solution is that the two Package P's and the two Class X's are combined to form merged Package P and  Class X objects. However this means that the Package P and the Class X in the UML model are modified by usage of Complete OCL.
+The simplest solution is that the two Package P's and the two Class X's are combined to form merged Package P and  Class X objects. However in an implementation, this means that the Package P and the Class X in the UML model are modified by usage of Complete OCL.
 
-The alternative is to maintain some form of composite model in which multiple contributory models are treated as a coherent composite whole.
+The alternative is to maintain some form of composite model or index in which multiple contributory models are treated as a coherent whole.
 
 \subsubsection{Model Maintenance}
 
@@ -217,7 +215,7 @@ Explicit access occurs when reflection is used to access the properties. Since r
 
 In Figure \ref{fig:MultipleModels}, should the reflective access to Class::ownedAttribute for X return both X::y and X::z hiding the distinct origins of the two features, or should there be a mechanism to obtain distinct ownedAttributes from each?
 
-The merged model can only present the coherent view. Additional features are needed to enable helper operations to provide partial returns.
+The merged model can only present the coherent view. Additional capabilities are needed to enable helper operations to provide partial returns.
 
 The composite model naturally supports the disjoint view and helper operations can provide a merged view. Reflection can therefore allow expression access to see disjoint or coherent views.
 
@@ -231,7 +229,7 @@ The composite model preserves the distinct model identities and so will naturall
 
 \subsubsection{Summary}
 
-Neither approach is entirely satisfactory. The merged model has significant problems with sharing, URIs and full reflection. The composite model has fewer problems but requires additional non-UML tooling to represent the composite. In Section \ref{PivotMetaModel} we propose a solution that builds upon the composite model.
+Neither approach is entirely satisfactory. The merged model has significant problems with sharing, URIs and full reflection. The composite model has fewer problems but requires additional non-UML tooling to represent the composite. The first three perspectives identify implementation trade-offs that need not concern the specification. However the specification must make a choice on the reflective behavior and URIs for Complete OCL and so the specification reduces an implementation's freedom from all perspectives. In Section \ref{PivotMetaModel} we propose a solution that builds upon the composite model.
 
 \subsection{EMOF Problems}\label{EMOF}
 
@@ -241,7 +239,7 @@ Some functionality, such as the lack of support for Messages and States,  is exc
 
 Other exclusions such as the lack of support for Associations affect core modeling functionality and limit the ability to navigate models.
 
-The whole of Complete OCL is excluded, since the absence of the ValueSpecification and Constraint classes is not rectified. Figure~\ref{fig:Definition} shows the integration gap between OCL and EMOF.
+The whole of Complete OCL is excluded, since the absence of the ValueSpecification and Constraint classes is not rectified. Figure~\ref{fig:BasicOCLScenario} shows the integration gap between OCL and EMOF.
 
 EMOF omits Classifier and so the the OCL Standard Library cannot define operations for primitive types. A workaround convention is therefore suggested in  Clause 13.2 bullet 6 whereby an accompanying class instance is provided for such types. This convention is not elaborated and the associated packaging and URI issues are not addressed.
 
@@ -251,7 +249,7 @@ The Complete OCL and EMOF problems are serious. We now identify more minor UML-a
 
 \subsubsection{Iterator Operation}
 
-The iterate and iterator operations have no UML counterpart and so cannot be represented by a UML meta-model. As a result, all support for iterators requires built-in functionality, and indeed prior to OCL 2.3, the specification could be interpreted to require all names of iterators to be hard-wired into the OCL grammar. OCL 2.3 clarified the status of names so that any name can be used as an iterate or iterator operation.
+The iterate and iterator operations have no UML counterpart and so cannot be represented by a UML meta-model. The OCL meta-model provides a Types and an Expressions package but omits any reification of an Iterator operation and so the integration of an iteration with its context classifier is unspecified. As a result, all support for iterators requires built-in functionality, and indeed prior to OCL 2.3, the specification could be interpreted to require all names of iterators to be hard-wired into the OCL grammar. OCL 2.3 clarified the status of names so that any name can be used as an iterate or iterator operation.
 
 In our Companion paper\cite{OCL-stdlib} we show how introduction of an Iteration class extending the Operation class is sufficient to allow the OCL Standard Library to be modeled.
 
@@ -277,7 +275,7 @@ We could eliminate the statement that OCL is aligned with UML. This is pretty mu
 
 We could revise UML so that it supports the facilities that OCL requires. This is possible in principle, but hardly desirable since it may incur political difficulties and further practical difficulties in mutual alignment.
 
-In order to make OCL useful for EMOF meta-models we could add the missing parts of UML such as Associations and OpaqueExpressions to OCL. This can solve some EMOF problems but creates inconsistencies whereby OCL provides additional classes solely for use in a simpler context. To offer Complete OCL and OCL Standard Library support for EMOF without requiring distinct EMOF and UML variants of OCL we would need to change EMOF.
+In order to make OCL useful for EMOF meta-models, we could add the missing parts of UML such as Associations and OpaqueExpressions to OCL. This can solve some EMOF problems but creates inconsistencies whereby OCL provides additional classes solely for use in a simpler context. To offer Complete OCL and OCL Standard Library support for EMOF without requiring distinct EMOF and UML variants of OCL we would need to change EMOF.
 
 \subsection{OCL Pivot Meta-Model}\label{PivotMetaModel}
 
@@ -296,7 +294,7 @@ The OCL Pivot Meta-Model is derived by the package merge  shown in Figure~\ref{f
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=5.75in]{UMLMMtoOCLMM.png}
+    \includegraphics[width=5.0in]{UMLMMtoOCLMM.png}
   \end{center}
   \caption{Meta-Model merge to produce the OCL Pivot Meta-Model.}
   \label{fig:UMLMMtoOCLMM}
@@ -312,9 +310,9 @@ OCL Constraint integration requires the InfrastructureLibrary::Core::Abstraction
 
 Full type support requires the InfrastructureLibrary::AuxiliaryConstructs::Templates package.
 
-OCL Message support requires the UML::Actions::BasicActions package to define CallOperationAction and SendSignalAction and the UML::CommonBehaviors::Communications package to define Signal.
+OCL Message support requires the CallOperationAction and SendSignalAction classes that are defined by the UML::Actions::BasicActions package and the Signal class defined by the UML::CommonBehaviors::Communications package.
 
-OCL State support requires the UML::StateMachines::BehaviorStateMachines package to define State.
+OCL State support requires State from the UML::StateMachines::BehaviorStateMachines package.
 
 Unfortunately these packages were not intended to be merged into Basic, so they do not provide the same efficient representation. The Eclipse OCL prototype currently works around this problem by manual creation of `Basic' equivalents.
 
@@ -338,7 +336,7 @@ Following the package merge, the meta-model can be simplified to eliminate redun
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=4.5in]{Load.png}
+    \includegraphics[width=4.0in]{Load.png}
   \end{center}
   \caption{Composite Pivot Model derived from disparate sources.}
   \label{fig:Load}
@@ -348,14 +346,14 @@ Following the package merge, the meta-model can be simplified to eliminate redun
 
 Before any evaluation on a user model can occur, its meta-model must be loaded. This currently presents challenges since users may use a variety of UML, CMOF, EMOF and Ecore dialects not all of which are supported by all tools. With a neutral pivot model the diverse sources are accommodated by a variety of compilation or loading activities as shown in Figure~\ref{fig:Load}.
 
-Introduction of the OCL Pivot Meta-Model requires the user model to be converted to, or at least interpreted in, a normalized form. In this respect the proposed OCL Pivot is similar to that advocated by Wilke\cite{Variability} as a Model Adaptation Variation Point to support meta-model representation diversity.
+Introduction of the OCL Pivot Meta-Model requires the user model to be converted to, or at least interpreted in, a normalized form. The proposed OCL Pivot is similar to that advocated by Br\"{a}uer\cite{Pivot} to make implementation of Dresden OCL more flexible. The OCL Pivot presented here is to make the OCL specification coherent.
 
-The new meta-model load phase enables the following problems to be resolved:
+Introduction of a meta-model load phase to the specification enables the following problems to be resolved:
 
 \begin{itemize}
 \item Diverse meta-model dialects can be intermixed
 \item Complete OCL documents can be represented as OCL Pivot Models
-\item OCL Standard Libraries can be represented as OCL Pivot Models
+\item OCL Standard Libraries can be fully represented as OCL Pivot Models
 \item UML generalization can be re-interpreted as OCL conformance
 \item OclAny can be inserted into the conformance hierarchy
 \end{itemize}
@@ -374,7 +372,7 @@ UML provides a PrimitiveTypes package that defines the primitives, such as Integ
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=5.75in]{String.png}
+    \includegraphics[width=5.0in]{String.png}
   \end{center}
   \caption{The String primitive attributes and their `containers'.}
   \label{fig:String}
@@ -416,7 +414,7 @@ Maintaining the separation between behavioral representation and implementation 
 
 Unfortunately Clause 10.2 is very deficient in supporting this view. There is a StringValue class that conforms to a PrimitiveValue class, but no BooleanValue, NumericValue or IntegerValue classes. Clause 10.2  does not define any features for the PrimitiveValue classes, so they appear to fail to fulfill their role of containing a primitive value. However in Clause 10.4, Figure 10.14 provides a consistent model property for primitive Values, although again unfortunately, Figure 10.14 as a whole exhibits a variety of meta-level confusions. Significant revision of Clause 10 is required to support the actual OCL (and UML) primitives.
 
-The OCL specification already requires that all values to be maintained by derived Value class instances within an evaluation. Once this aspect of the specification is implementable and realized by tools, interchange within sub-tools may be easier. 
+The OCL specification already requires that all values are maintained by derived Value class instances within an evaluation. Once this aspect of the specification is implementable and realized by tools, interchange within sub-tools may be easier.
 
 \subsection{Details}
 
@@ -482,7 +480,7 @@ The way the OCL Pivot Meta-Models work in practice is shown in Figure~\ref{fig:U
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=5.75in]{Usage.png}
+    \includegraphics[width=5.0in]{Usage.png}
   \end{center}
   \caption{OCL Pivot and OCL Value Usage.}
   \label{fig:Usage}
@@ -500,6 +498,16 @@ Then with all values, models and meta-models in normalized form, an evaluation c
 
 Use of this normalization ensures that OCL can operate in the same way for all model and value representations. Use of, for instance, EMOF does not affect OCL. It becomes an EMOF rather than an OCL problem if loading from EMOF provides insufficient model information.
 
+\section{Related Work}
+
+This paper draws on previous academic work and implementations as the foundation for a proposal for a revised OCL specification.
+
+A Bridge model was used by Kent OCL \cite{Bridge} to provide a simple core meta-model. The Bridge subsequently mapped to UML1.x, Java and EMF by providing a distinct Bridge implementation for each target meta-model.
+
+The Pivot model was used by Dresden OCL\cite{Pivot} to provide variability for meta-model representations. A common pivot has adapters for each target meta-model. We take this further to resolve underspecification of Complete OCL and make the XMI compliance realizable. The Dresden pivot adopted an Ecore-like structure for generics with some dynamic typing. The proposal here is UML-aligned and so re-uses UML concepts for generics with static typing. 
+
+The Dresden team\cite{Variability} introduced a kind of pivot and adapters for model representation variability. The proposal here clarifies the Values package to demonstrate that similar variability is already part of the specification. It could form the foundation for a Java binding for OCL and provide a neutral Value interchange API.
+
 \section{Conclusions}
 
 We have identified major problems in the OCL specification in regard to URIs for XMI Interchange and a coherent Abstract Syntax for Complete OCL.
@@ -507,6 +515,8 @@ We have identified major problems in the OCL specification in regard to URIs for
 A UML-derived OCL Pivot Meta-Model has been introduced to solve these problems and we have shown how this solves other problems such as UML-alignment, meta-model diversity, reflection, conformance modeling and OCL Standard Library modeling as well. The OCL Pivot Meta-Model decouples an OCL implementation from UML and EMOF and so facilitates meta-model diversity.
 
 Examination of the OCL Values Package has revealed that it requires a similarly decoupling from model representations. This requirement should be clearly expressed in the specification so that value interchange between OCL tools is possible. 
+
+Many thanks to the anonymous referees for helpful comments.
 
 \nocite{*}
 \bibliographystyle{eceasst}
