@@ -73,6 +73,9 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/indigo</a> <br><font color='#808080'>(Eclipse Indigo Update)</font></li>
 </ul>
+<ul>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/extra/updates/nightly/indigo">http://download.eclipse.org/modeling/mdt/papyrus/extra/updates/nightly/indigo</a> <br><font color='#808080'>(Papyrus extra plugins Update (contains MARTE profile))</font></li>
+</ul>
 </p>
 
 <?php
