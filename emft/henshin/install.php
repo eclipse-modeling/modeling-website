@@ -38,7 +38,7 @@ We recommend though to install Henshin from our update site.
 </p>
 
 <p>
-<i>You need Eclipse Helios to run Henshin.</i>
+<i>You need Eclipse Helios or Indigo to run Henshin.</i>
 </p>
 
 <h2>Update Sites</h2>
