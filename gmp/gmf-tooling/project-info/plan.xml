@@ -70,9 +70,9 @@
 			</html:p>
 		</preamble>
     	<theme name="Maturity and Project Readiness">
-      		<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?type1-0-0=notsubstring;field0-0-0=flagtypes.name;classification=Modeling;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=Maturity%20and%20Project%20Readiness;value1-0-0=indigo-;version=2.4;type0-0-0=substring;value0-0-0=indigo;component=GMF-tooling;field1-0-0=flagtypes.name;product=GMP" />
-      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?type1-0-0=notsubstring;field0-0-0=flagtypes.name;classification=Modeling;status_whiteboard_type=allwordssubstr;query_format=advanced;status_whiteboard=Maturity%20and%20Project%20Readiness;value1-0-0=indigo-;version=2.4;type0-0-0=substring;value0-0-0=indigo;component=GMF-tooling;field1-0-0=flagtypes.name;product=GMP" />
-      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?status_whiteboard_type=allwordssubstr;query_format=advanced;field0-0-0=flagtypes.name;status_whiteboard=Maturity%20and%20Project%20Readiness;version=2.4;type0-0-0=substring;value0-0-0=indigo-;component=GMF-tooling;classification=Modeling;product=GMP" />
+      		<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?type1-0-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;classification=Modeling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;status_whiteboard=Maturity%20and%20Project%20Readiness&amp;value1-0-0=indigo-&amp;version=2.4&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;component=GMF-tooling&amp;field1-0-0=flagtypes.name&amp;product=GMP" />
+      		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?type1-0-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;classification=Modeling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;status_whiteboard=Maturity%20and%20Project%20Readiness&amp;value1-0-0=indigo-&amp;version=2.4&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;component=GMF-tooling&amp;field1-0-0=flagtypes.name&amp;product=GMP" />
+      		<deferred bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;field0-0-0=flagtypes.name&amp;status_whiteboard=Maturity%20and%20Project%20Readiness&amp;version=2.4&amp;type0-0-0=substring&amp;value0-0-0=indigo-&amp;component=GMF-tooling&amp;classification=Modeling&amp;product=GMP" />
     	</theme>
 	</themes_and_priorities>
  </plan>
