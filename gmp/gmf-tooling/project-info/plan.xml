@@ -57,7 +57,7 @@
 	<html:ul><html:li>Eclipse Platform SDK version 3.7</html:li>
 		<html:li>Eclipse Modeling Framework (EMF) version 2.7</html:li>
 		<html:li>Graphical Editing Framework (GEF) version 3.7</html:li>
-		<html:li>GMF Notation & Runtime version 1.5</html:li>
+		<html:li>GMF Notation &amp; Runtime version 1.5</html:li>
 		<html:li>Eclipse OCL version 3.1</html:li>
 	</html:ul>
 	<html:p>Therefore, the GMF initial release will be compatible with these versions and will publish binary and source compatibilities with migration guides on subsequent releases.</html:p>
