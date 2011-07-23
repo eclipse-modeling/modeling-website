@@ -9,18 +9,22 @@
 This document lays out the feature and API set for the
 seventh annual release of the Eclipse Object Constraint Language (MDT OCL)
 Project, version 3.2.0.
-
+</html:p>
+<html:p>
 Versions 3.0 and 3.1 saw the introduction of Xtext-based editors and an associated rewrite of the
 meta-models and evaluator to prototype a UML-aligned pivot meta-model on behalf of OCL 2.4 and to use a model for
 the OCL Standard Library. This functionality was provided in Examples plugins.
-
+</html:p>
+<html:p>
 In version 3.2, the Xtext-based editors and pivot meta-model will be promoted from Examples to Core/Tools plugins and the
 very slow process of deprecation of the old Ecore and UML bindings will begin. The Core plugins will provide non-UI
 functionality; the Tools plugins will provide the IDE comprising editors and consoles.
-
+</html:p>
+<html:p>
 Version 3.2 will introduce an OCL to Java code generator so that OCL embedded in Ecore may be directly
 genmodelled and so that OCL-defined well-formedness rules can be used for validation within the editors.
-
+</html:p>
+<html:p>
 As part of the promotion from Examples to Core/Tools the Examples API will be revisited to facilitate
 re-use by OCL-derived languages such as QVT. The project team anticipates working with major consumers
 to assist in migration to the new APIs.
@@ -50,11 +54,15 @@ is found in most Eclipse projects, namely:
 <html:li>OCL tests (downloadable)</html:li>
 <html:li>OCL examples (downloadable and update site)</html:li>
 </html:ul>
+<html:p>
 Eclipse (MDT) OCL 3.2 will use GIT rather than CVS for source control.
-
+</html:p>
+<html:p>
 Eclipse (MDT) OCL 3.2 will primarily target Eclipse 4.2 rather than Eclipse 3.8.
-
+</html:p>
+<html:p>
 Eclipse (MDT) OCL 3.2.0  source code will be available as versions tagged "R3_2" in the project's GIT repository.
+</html:p>
      </html:div>
    </release_deliverables>
    <release_milestones>
@@ -124,7 +132,8 @@ following projects.
 As described above, the Eclipse OCL 3.2.0 release should address usability of the editors.
 The main OCL plugins should be unaffected,
 but the associated examples plugins may be revised significantly.
-
+</html:p>
+<html:p>
 Again as described above, the Eclipse OCL 3.2.0 release for Juno will introduce significant new APIs
 in a new namespace that replaces the old. The old namespace will be deprecated once all
 Simultaneous Release projects have migrated to the new namespace.  
@@ -150,10 +159,6 @@ more detailed information on each.
                 <html:div>
 This theme addresses issues related to the OMG OCL 2.4 specification adoption. The bugs related to the inherited deviations
 of the Eclipse OCL implementation from the OCL 2.0 specification (and consequently, OCL 2.4) also appear here.
-
-It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
@@ -188,10 +193,6 @@ dependencies, in particular with the EMF and MDT UML2 projects.
                 <html:div>
 This theme addresses the need for extensibility and usability improvements
 of the Eclipse OCL language implementation and APIs.
-
-It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 3.2.0.
                 </html:div>
             </description>
             <committed
@@ -207,12 +208,8 @@ traditional behaviour until 3.2.0.
         <theme name="Specification">
             <description>
                 <html:div>
-This theme addresses issues related to prototyping resolutions of problems in the OMG OCL 2.3 specification and enhancements in future specifications. OMG issues
-will be raised and RTF proposed resolutions submitted in order to  
-
-It is anticipated that fixes for the majority of the target 3.2.0 will appear in the
-revised Eclipse OCL Examples code in 3.1.0, but this will not be promoted to replace the
-traditional behaviour until 3.2.0.
+This theme addresses issues related to prototyping resolutions of problems in the OMG OCL 2.4 specification and enhancements in future specifications. OMG issues
+will be raised and RTF proposed resolutions submitted.  
                 </html:div>
             </description>
             <committed
@@ -230,7 +227,7 @@ traditional behaviour until 3.2.0.
         <html:div>
 <html:ul>
 <html:li>Java is a trademark or a registered trademark of Oracle Corporation.</html:li>
-<html:li>OCL and OMG are trademarks or registered trademarks of the Object Management Group, Inc.</html:li>
+<html:li>OCL, QVT, UML and OMG are trademarks or registered trademarks of the Object Management Group, Inc.</html:li>
 <html:li>All other products or company names are mentioned for identification purposes only, and
     may be trademarks or service marks of their respective owners.</html:li>
 </html:ul>
