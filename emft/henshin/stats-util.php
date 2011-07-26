@@ -5,6 +5,7 @@ $STATS_FILE = "/tmp/.henshin-stats.txt";
 function get_stats() {
     global $STATS_FILE;
     $stats = array();
+    unlink($STATS_FILE);
     if (file_exists($STATS_FILE)) {
 	$f = fopen($STATS_FILE, 'r');
 	while (!feof($f)) {
