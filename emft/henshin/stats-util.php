@@ -1,16 +1,20 @@
 <?php
 
-$STATS_FILE = "/tmp/.henshin-stats.txt";
+unlink("/tmp/.henshin-stats.txt");
+
+function get_stats_file($build) {
+    return "/tmp/.henshin-stats-$build.txt";
+}
 
 function get_month_key() {
     return date('Y-m');
 }
 
-function load_stats() {
-    global $STATS_FILE;
+function load_stats($build) {
     $stats = array();
-    if (file_exists($STATS_FILE)) {
-	$f = fopen($STATS_FILE, 'r');
+    $file = get_stats_file($build);
+    if (file_exists($file)) {
+	$f = fopen($file, 'r');
 	while (!feof($f)) {
 	    $line = fgets($f);
 	    $arr = explode(':',$line);
@@ -21,19 +25,24 @@ function load_stats() {
 	fclose($f);
     } else {
 	$reset = "Reset to initial values.";
-	if (!copy("stats-initial.txt", $STATS_FILE)) {
-	    $reset = "Cannot reinitialize using stats-initial.txt!";
+	if (!reset_stats($build)) {
+	    $reset = "Cannot reset stats file!";
 	}
 	mail("henshin.ck@gmail.com",
 	    "Error loading Henshin download stats",
-	    "Cannot find $STATS_FILE.\n$reset");
+	    "Cannot find $file.\n$reset");
     }
     return $stats;
 }
 
-function save_stats($stats) {
-    global $STATS_FILE;
-    $f = fopen($STATS_FILE, 'w');
+function reset_stats($build) {
+    $file = get_stats_file($build);
+    return copy("stats-initial.txt", $file));
+}
+
+function save_stats($build, $stats) {
+    $file = get_stats_file($build);
+    $f = fopen($file, 'w');
     if ($f!=FALSE) {
         foreach ($stats as $key=>$value) {
 	    fwrite($f, "$key:$value\n");
@@ -42,8 +51,20 @@ function save_stats($stats) {
     } else {
 	mail("henshin.ck@gmail.com",
 	    "Error saving Henshin download stats",
-	    "Cannot write to file $STATS_FILE.");
+	    "Cannot write to file $file");
     }
+}
+
+function update_stats($build) {
+    $stats = load_stats($build);
+    $month = get_month_key();
+    if (!isset($stats[$month])) {
+	$stats[$month] = rand(1,7);
+    } else {
+	$stats[$month] = $stats[$month]+1;
+    }
+    save_stats($build, $stats);
+    return $stats;
 }
 
 ?>
