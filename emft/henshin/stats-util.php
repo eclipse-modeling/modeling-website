@@ -6,7 +6,7 @@ function get_stats() {
     global $STATS_FILE;
     $stats = array();
     if (file_exists($STATS_FILE)) {
-	$f = fopen($stats, 'r');
+	$f = fopen($STATS_FILE, 'r');
 	while (!feof($f)) {
 	    $line = fgets($f);
 	    $arr = explode(':',$line);
@@ -18,14 +18,16 @@ function get_stats() {
     } else {
 	echo "Trying to reset<br>";
 	$reset = "Reset to initial values.";
-	if (!copy("stats-initial.txt", $STATS_FILE)) {
-	    $reset = "Cannot reinitialize using stats-initial.txt!";
-	    echo "cannot reset<br>";
-	}
+	$f = fopen("stats-initial.txt", 'r');
+	print_r($f);
+//	if (!copy("stats-initial.txt", $STATS_FILE)) {
+//	    $reset = "Cannot reinitialize using stats-initial.txt!";
+//	    echo "cannot reset<br>";
+//	}
 	echo "sending email<br>";
 	mail("henshin.ck@gmail.com",
 	    "Error finding Henshin download stats",
-	    "Cannot find $STATS_FILE.\\$reset");
+	    "Cannot find $STATS_FILE.\n$reset");
 	echo "done";
     }
     return $stats;
