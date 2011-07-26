@@ -1,10 +1,9 @@
 <?php
 
-echo "Hello world";
-
 include_once "stats-util.php";
 
-get_stats();
+$stats = get_stats();
+
+print_r($stats);
 
 ?>
-OK
