@@ -37,7 +37,7 @@ function load_stats($build) {
 
 function reset_stats($build) {
     $file = get_stats_file($build);
-    return copy("stats-initial.txt", $file));
+    return copy("stats-initial.txt", $file);
 }
 
 function save_stats($build, $stats) {
