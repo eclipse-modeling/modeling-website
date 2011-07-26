@@ -25,7 +25,7 @@ function load_stats() {
 	    $reset = "Cannot reinitialize using stats-initial.txt!";
 	}
 	mail("henshin.ck@gmail.com",
-	    "Error finding Henshin download stats",
+	    "Error loading Henshin download stats",
 	    "Cannot find $STATS_FILE.\n$reset");
     }
     return $stats;
@@ -34,10 +34,16 @@ function load_stats() {
 function save_stats($stats) {
     global $STATS_FILE;
     $f = fopen($STATS_FILE, 'w');
-    foreach ($stats as $key=>$value) {
-	fwrite($f, "$key:$value\n");
+    if ($f!=FALSE) {
+        foreach ($stats as $key=>$value) {
+	    fwrite($f, "$key:$value\n");
+	}
+        fclose($f);
+    } else {
+	mail("henshin.ck@gmail.com",
+	    "Error saving Henshin download stats",
+	    "Cannot write to file $STATS_FILE.");
     }
-    fclose($f);
 }
 
 ?>
