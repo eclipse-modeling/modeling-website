@@ -2,10 +2,13 @@
 
 $STATS_FILE = "/tmp/.henshin-stats.txt";
 
-function get_stats() {
+function get_month_key() {
+    return date('Y-m');
+}
+
+function load_stats() {
     global $STATS_FILE;
     $stats = array();
-    unlink($STATS_FILE);
     if (file_exists($STATS_FILE)) {
 	$f = fopen($STATS_FILE, 'r');
 	while (!feof($f)) {
@@ -17,19 +20,24 @@ function get_stats() {
 	}
 	fclose($f);
     } else {
-	echo "Trying to reset<br>";
 	$reset = "Reset to initial values.";
 	if (!copy("stats-initial.txt", $STATS_FILE)) {
 	    $reset = "Cannot reinitialize using stats-initial.txt!";
-	    echo "cannot reset<br>";
 	}
-	echo "sending email<br>";
 	mail("henshin.ck@gmail.com",
 	    "Error finding Henshin download stats",
 	    "Cannot find $STATS_FILE.\n$reset");
-	echo "done";
     }
     return $stats;
+}
+
+function save_stats($stats) {
+    global $STATS_FILE;
+    $f = fopen($STATS_FILE, 'w');
+    foreach ($stats as $key=>$value) {
+	fwrite($f, "$key:$value\n");
+    }
+    fclose($f);
 }
 
 ?>

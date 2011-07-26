@@ -8,7 +8,7 @@ $month = get_month_key();
 if (isset($stats[$month])) {
     $stats[$month]++;
 } else {
-    $state[$month] = 0;
+    $stats[$month] = 0;
 }
 
 print_r($stats);
