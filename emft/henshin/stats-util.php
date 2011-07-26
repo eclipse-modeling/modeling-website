@@ -1,7 +1,5 @@
 <?php
 
-unlink("/tmp/.henshin-stats.txt");
-
 function get_stats_file($build) {
     return "/tmp/.henshin-stats-$build.txt";
 }
