@@ -23,11 +23,10 @@ function get_stats() {
 	    echo "cannot reset<br>";
 	}
 	echo "sending email<br>";
-	flush();
 	mail("henshin.ck@gmail.com",
 	    "Error finding Henshin download stats",
 	    "Cannot find $STATS_FILE.\\$reset");
-	echo "done;"
+	echo "done";
     }
     return $stats;
 }
