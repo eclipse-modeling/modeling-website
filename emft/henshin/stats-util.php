@@ -17,7 +17,11 @@ function get_stats() {
 	}
 	fclose($f);
     } else {
-	mail("henshin.ck@gmail.com", "Error finding Henshin download stats", "Cannot find $STATS_FILE");
+	if (mail("henshin.ck@gmail.com", "Error finding Henshin download stats", "Cannot find $STATS_FILE")) {
+	echo "yes";
+	} else {
+	echo "no";
+	}
     }
     return $stats;
 }
