@@ -16,13 +16,18 @@ function get_stats() {
 	}
 	fclose($f);
     } else {
+	echo "Trying to reset<br>";
 	$reset = "Reset to initial values.";
 	if (!copy("stats-initial.txt", $STATS_FILE)) {
 	    $reset = "Cannot reinitialize using stats-initial.txt!";
+	    echo "cannot reset<br>";
 	}
+	echo "sending email<br>";
+	flush();
 	mail("henshin.ck@gmail.com",
 	    "Error finding Henshin download stats",
 	    "Cannot find $STATS_FILE.\\$reset");
+	echo "done;"
     }
     return $stats;
 }
