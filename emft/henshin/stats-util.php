@@ -19,12 +19,10 @@ function get_stats() {
     } else {
 	echo "Trying to reset<br>";
 	$reset = "Reset to initial values.";
-	$f = fopen("stats-initial.txt", 'r');
-	print_r($f);
-//	if (!copy("stats-initial.txt", $STATS_FILE)) {
-//	    $reset = "Cannot reinitialize using stats-initial.txt!";
-//	    echo "cannot reset<br>";
-//	}
+	if (!copy("stats-initial.txt", $STATS_FILE)) {
+	    $reset = "Cannot reinitialize using stats-initial.txt!";
+	    echo "cannot reset<br>";
+	}
 	echo "sending email<br>";
 	mail("henshin.ck@gmail.com",
 	    "Error finding Henshin download stats",
