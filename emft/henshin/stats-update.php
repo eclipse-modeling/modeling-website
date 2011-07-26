@@ -2,9 +2,9 @@
 
 echo "Hello world";
 
-include_once "stats_util.php";
+// include_once "stats_util.php";
 
-get_stats();
+// get_stats();
 
 ?>
 OK

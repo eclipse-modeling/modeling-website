@@ -26,4 +26,6 @@ function get_stats() {
     return $stats;
 }
 
+echo "yeah";
+
 ?>
