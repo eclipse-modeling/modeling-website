@@ -1,10 +1,6 @@
 <?php
 
-print_r(stat("stats"));
-echo "<br><br>";
-
-echo "<br>UID: ".getmyuid();
-echo "<br>GID: ".getmygid();
+phpinfo();
 
 function get_stats_file($build) {
 //    return "/tmp/.henshin-stats-$build.txt";
