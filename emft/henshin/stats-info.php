@@ -1,12 +1,26 @@
+<html>
+<body>
+
+<p>
+<i>Download stats for Henshin releases:</i>
+</p>
+
+<p>
 <?php
 include_once "stats-util.php";
-
-$stats = load_stats('R');
-echo "Release stats:<br>\n";
-print_r($stats);
-echo "<br><br>\n";
-
-$stats = load_stats('N');
-echo "Nightly stats:<br>\n";
-print_r($stats);
+print_stats('R');
 ?>
+</p>
+
+<p>
+<i>Download stats for Henshin nightly builds:</i>
+</p>
+
+<p>
+<?php
+print_stats('N');
+?>
+</p>
+
+</body>
+</html>
