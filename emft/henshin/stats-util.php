@@ -1,5 +1,11 @@
 <?php
 
+print_r(stat("stats"));
+echo "<br><br>";
+
+echo "<br>UID: ".getmyuid();
+echo "<br>GID: ".getmygid();
+
 function get_stats_file($build) {
 //    return "/tmp/.henshin-stats-$build.txt";
     return "stats/henshin-stats-$build.txt";
