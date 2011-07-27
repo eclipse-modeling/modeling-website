@@ -34,6 +34,11 @@ $html = <<<EOHTML
 <div id="midcolumn">
 <h1>$pageTitle</h1>
 
+<p>
+We recommend to use the <a href="install.php">update sites</a> for installation!
+If you want to download Henshin as compiled archives, se below.
+</p>
+
 <h2>Latest Stable Release</h2>
 <p>
 <table>
