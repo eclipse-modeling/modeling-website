@@ -34,22 +34,25 @@ $html = <<<EOHTML
 		
 <p>
 Please use one of our update sites below and install Henshin using the update manager in Eclipse.
-Alternatively, there are also <a href="downloads.php">downloads</a> available. We highly recommend
-to use the update site though.
+Alternatively, there are also downloads available. We highly recommend
+to use the update site though. You can find the URLs of our update sites below.
 </p>
 
 <p>
-<i>You need Eclipse Helios or Indigo to run Henshin.</i>
+<i>Requirements:</i> 
+You need Eclipse Helios or Indigo to run Henshin.
+Moreover, there are dependencies to EMF and GMF.
+These are automatically resolved if you install
+Henshin using one of our update sites.
 </p>
 
 <h2>Update Sites</h2>
 <p>
-You can get the latest version of Henshin from one of our update sites:
+Simply go to <i>Help -> Install New Software...</i> and enter one of the following URLs:
 <ul>
 <li>Releases: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
 <li>Nightly Builds: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/nightly">http://download.eclipse.org/modeling/emft/henshin/updates/nightly</a></li>
 </ul>
-Simply go to <i>Help -> Install New Software...</i> and enter one of the above URLs.
 </p>
 
 

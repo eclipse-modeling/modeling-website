@@ -1,5 +1,12 @@
+<html>
+<body>
+
+<i>Updating download stats for Henshin releases...</i>
+
 <?php
 include_once "stats-util.php";
-$stats = update_stats('R');
-print_r($stats);
+update_stats('R');
+print_stats('R');
 ?>
+</body>
+</html>

@@ -47,8 +47,8 @@ function save_stats($build, $stats) {
     $file = get_stats_file($build);
     $f = fopen($file, 'w');
     if ($f!=FALSE) {
-        foreach ($stats as $key=>$value) {
-	    fwrite($f, "$key:$value\n");
+        foreach ($stats as $month=>$count) {
+	    fwrite($f, "$month:$count\n");
 	}
         fclose($f);
     } else {
@@ -68,6 +68,16 @@ function update_stats($build) {
     }
     save_stats($build, $stats);
     return $stats;
+}
+
+function print_stats($build) {
+    $stats = load_stats($build);
+    echo "<table border=\"1\">\n";
+    echo "<tr><th>Month</th><th>Count</th></tr>\n";
+    foreach ($stats as $month=>$count) {
+	echo "<tr><td>$month</td><td>$count</td></tr>\n";
+    }
+    echo "</table>\n";
 }
 
 ?>
