@@ -33,8 +33,9 @@ $html = <<<EOHTML
 <h1>$pageTitle</h1>
 		
 <p>
-You can <a href="downloads.php">download</a> the latest version and install it directly.
-We recommend though to install Henshin from our update site.
+Please use one of our update sites below and install Henshin using the update manager in Eclipse.
+Alternatively, there are also <a href="downloads.php">downloads</a> available. We highly recommend
+to use the update site though.
 </p>
 
 <p>
@@ -43,11 +44,12 @@ We recommend though to install Henshin from our update site.
 
 <h2>Update Sites</h2>
 <p>
-You can get the latest version of Henshin from one of our update sites (to be used with the update manager in Eclipse):
+You can get the latest version of Henshin from one of our update sites:
 <ul>
-<li><b>Releases:</b> <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
+<li>Releases: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
 <li>Nightly Builds: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/nightly">http://download.eclipse.org/modeling/emft/henshin/updates/nightly</a></li>
 </ul>
+Simply go to <i>Help -> Install New Software...</i> and enter one of the above URLs.
 </p>
 
 
