@@ -36,7 +36,7 @@ $html = <<<EOHTML
 
 <p>
 We recommend to use the <a href="install.php">update sites</a> for installation!
-If you want to download Henshin as compiled archives, se below.
+If you want to download Henshin as compiled archives, see below.
 </p>
 
 <h2>Latest Stable Release</h2>
