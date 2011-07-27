@@ -1,7 +1,11 @@
 <?php
 
 function get_stats_file($build) {
-    return "/home/data/httpd/writable/henshin/download-stats-$build.txt";
+    $dir = "/home/data/httpd/writable/henshin";
+    if (!file_exists($dir)) {
+	mkdir($dir);
+    }
+    return "$dir/download-stats-$build.txt";
 }
 
 function get_month_key() {

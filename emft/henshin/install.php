@@ -43,7 +43,7 @@ We recommend though to install Henshin from our update site.
 
 <h2>Update Sites</h2>
 <p>
-You can get the latest version of the source code directly from our SVN repository:
+You can get the latest version of Henshin from one of our update sites (to be used with the update manager in Eclipse):
 <ul>
 <li><b>Releases:</b> <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
 <li>Nightly Builds: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/nightly">http://download.eclipse.org/modeling/emft/henshin/updates/nightly</a></li>
@@ -53,7 +53,7 @@ You can get the latest version of the source code directly from our SVN reposito
 
 <h2>Sources</h2>
 <p>
-You can get the latest version of the source code directly from our SVN repository:
+You can also get the latest version of the source code directly from our SVN repository:
 <ul>
 <li><a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin</a></li>
 </ul>
