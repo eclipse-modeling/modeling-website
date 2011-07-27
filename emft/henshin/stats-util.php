@@ -35,7 +35,7 @@ function load_stats($build) {
 }
 
 function reset_stats($build) {
-    $init = get_stats_file($build."-init")
+    $init = get_stats_file($build."-init");
     $file = get_stats_file($build);
     return copy($init, $file);
 }
