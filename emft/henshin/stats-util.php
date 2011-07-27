@@ -1,10 +1,7 @@
 <?php
 
-phpinfo();
-
 function get_stats_file($build) {
-//    return "/tmp/.henshin-stats-$build.txt";
-    return "stats/henshin-stats-$build.txt";
+    return "/home/data/httpd/writable/henshin/download-stats-$build.txt";
 }
 
 function get_month_key() {
@@ -37,7 +34,7 @@ function load_stats($build) {
 }
 
 function reset_stats($build) {
-    $init = get_stats_file($build."-init");
+    $init = "stats-init-$build.txt";
     $file = get_stats_file($build);
     return copy($init, $file);
 }
