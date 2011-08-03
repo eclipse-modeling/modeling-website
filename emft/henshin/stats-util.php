@@ -62,7 +62,7 @@ function update_stats($build) {
     $stats = load_stats($build);
     $month = get_month_key();
     if (!isset($stats[$month])) {
-	$stats[$month] = 0;
+	$stats[$month] = 1;
     } else {
 	$stats[$month] = $stats[$month]+1;
     }
