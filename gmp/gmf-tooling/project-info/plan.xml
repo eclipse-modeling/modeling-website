@@ -9,10 +9,10 @@
      <html:p>
     The release deliverables have the same form as is found in most Eclipse projects, namely:
 <html:ul>
-<html:li>GMF Tolling source code release, available as versions tagged "R2_4" in the project's CVS repository.</html:li>
-<html:li>GMF Tolling SDK (includes sources, examples, and documentation) (downloadable zip and update site).</html:li>
-<html:li>GMF Tolling Runtime binary distribution (downloadable zip and update site).</html:li>
-<html:li>GMF Tolling Tests (downloadable zip and update site)</html:li>
+<html:li>GMF Tooling source code release, available as versions tagged "R2_4" in the project's CVS repository.</html:li>
+<html:li>GMF Tooling SDK (includes sources, examples, and documentation) (downloadable zip and update site).</html:li>
+<html:li>GMF Tooling Runtime binary distribution (downloadable zip and update site).</html:li>
+<html:li>GMF Tooling Tests (downloadable zip and update site)</html:li>
 </html:ul>
 </html:p>
     </release_deliverables>
