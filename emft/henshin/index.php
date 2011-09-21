@@ -43,6 +43,12 @@ $html = <<<EOHTML
 	$description
 		
 		
+	<h3>News</h3>
+	
+	<ul>
+	<li><i>21-09-2011: Henshin SDK 0.8.0 released</i></li>
+	</ul>
+	
 	<h3>Screenshots</h3>
 	
 	<a href="http://wiki.eclipse.org/Henshin_Transformation_Rules"><img height="120" src="http://wiki.eclipse.org/images/b/bc/Henshin_example_transformation_rule.png"></a>
