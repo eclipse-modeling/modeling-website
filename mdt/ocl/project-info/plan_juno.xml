@@ -8,7 +8,7 @@
 <html:p>
 This document lays out the feature and API set for the
 seventh annual release of the Eclipse Object Constraint Language (MDT OCL)
-Project, version 3.2.0.
+Project, version 4.0.0.
 </html:p>
 <html:p>
 Versions 3.0 and 3.1 saw the introduction of Xtext-based editors and an associated rewrite of the
@@ -16,13 +16,19 @@ meta-models and evaluator to prototype a UML-aligned pivot meta-model on behalf 
 the OCL Standard Library. This functionality was provided in Examples plugins.
 </html:p>
 <html:p>
-In version 3.2, the Xtext-based editors and pivot meta-model will be promoted from Examples to Core/Tools plugins and the
+In version 4.0, the Xtext-based editors and pivot meta-model will be promoted from Examples to Core/Tools plugins and the
 very slow process of deprecation of the old Ecore and UML bindings will begin. The Core plugins will provide non-UI
 functionality; the Tools plugins will provide the IDE comprising editors and consoles.
 </html:p>
 <html:p>
-Version 3.2 will introduce an OCL to Java code generator so that OCL embedded in Ecore may be directly
+Version 4.0 will introduce an OCL to Java code generator so that OCL embedded in Ecore may be directly
 genmodelled and so that OCL-defined well-formedness rules can be used for validation within the editors.
+</html:p>
+<html:p>
+The original plan for a major version increment to 4.0 was abandoned in favour of a 3.2 increment, however tight
+coupling to MDT/UML2, which plans a major increment, mandates the increment to 4.0 for the overall project, features
+and UML-dependent plugins. The non-UML-dependent plugins will have a minor increment to 3.2. The newly promoted
+example plugins will start at 1.0.
 </html:p>
 <html:p>
 As part of the promotion from Examples to Core/Tools the Examples API will be revisited to facilitate
@@ -33,7 +39,7 @@ to assist in migration to the new APIs.
 <html:i><html:b>Note</html:b> that, since the 
 <html:a href="http://www.omg.org/spec/OCL/2.3/Beta2/PDF">OMG OCL 2.3</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
-<html:b>Eclipse (MDT) OCL 3.2.0</html:b> release is a best endeavours atempt to establish a coherent interpretation
+<html:b>Eclipse (MDT) OCL 4.0.0</html:b> release is a best endeavours atempt to establish a coherent interpretation
 of the OMG OCL 2.3 and to prototype resolutions and auto-generation of the OMG OCL 2.4 standard. Two of the Eclipse (MDT) OCL
 committers are also members of the OMG Revision Task Force that resolves the specification issues.</html:i>
 </html:p>
@@ -45,7 +51,7 @@ committers are also members of the OMG Revision Task Force that resolves the spe
    </introduction>
    <release_deliverables>
      <html:div>
-The release deliverables for the Eclipse (MDT) OCL 3.2 release have the same form as 
+The release deliverables for the Eclipse (MDT) OCL 4.0 release have the same form as 
 is found in most Eclipse projects, namely:
 <html:ul>
 <html:li>OCL SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
@@ -55,13 +61,13 @@ is found in most Eclipse projects, namely:
 <html:li>OCL examples (downloadable and update site)</html:li>
 </html:ul>
 <html:p>
-Eclipse (MDT) OCL 3.2 will use GIT rather than CVS for source control.
+Eclipse (MDT) OCL 4.0 will use GIT rather than CVS for source control.
 </html:p>
 <html:p>
-Eclipse (MDT) OCL 3.2 will primarily target Eclipse 4.2 rather than Eclipse 3.8.
+Eclipse (MDT) OCL 4.0 will primarily target Eclipse 4.2 rather than Eclipse 3.8.
 </html:p>
 <html:p>
-Eclipse (MDT) OCL 3.2.0  source code will be available as versions tagged "R3_2" in the project's GIT repository.
+Eclipse (MDT) OCL 4.0.0  source code will be available as versions tagged "R3_2" in the project's GIT repository.
 </html:p>
      </html:div>
    </release_deliverables>
@@ -78,16 +84,16 @@ will be two days later on the +3 schedule.
          </html:div>
       </preamble>
 <milestone date="Monday 15 August 2011" milestone="3.2.0M1"></milestone>
-<milestone date="Monday 26 September 2011" milestone="3.2.0M2"></milestone>
-<milestone date="Monday 7 November 2011" milestone="3.2.0M3"></milestone>
-<milestone date="Monday 12 December 2011" milestone="3.2.0M4"></milestone>
-<milestone date="Monday 30 January 2012" milestone="3.2.0M5"></milestone>
-<milestone date="Monday 19 March 2012" milestone="3.2.0M6"><html:div>API freeze</html:div></milestone>
-<milestone date="Monday 7 May 2012" milestone="3.2.0M7"><html:div>Feature Freeze</html:div></milestone>
-<milestone date="Monday 21 May 2012" milestone="3.2.0RC1"></milestone>
-<milestone date="Monday 28 May 2012" milestone="3.2.0RC2"></milestone>
-<milestone date="Monday 4 June 2012" milestone="3.2.0RC3"></milestone>
-<milestone date="Monday 11 June 2012" milestone="3.2.0RC4"></milestone>
+<milestone date="Monday 26 September 2011" milestone="4.0.0M2"></milestone>
+<milestone date="Monday 7 November 2011" milestone="4.0.0M3"></milestone>
+<milestone date="Monday 12 December 2011" milestone="4.0.0M4"></milestone>
+<milestone date="Monday 30 January 2012" milestone="4.0.0M5"></milestone>
+<milestone date="Monday 19 March 2012" milestone="4.0.0M6"><html:div>API freeze</html:div></milestone>
+<milestone date="Monday 7 May 2012" milestone="4.0.0M7"><html:div>Feature Freeze</html:div></milestone>
+<milestone date="Monday 21 May 2012" milestone="4.0.0RC1"></milestone>
+<milestone date="Monday 28 May 2012" milestone="4.0.0RC2"></milestone>
+<milestone date="Monday 4 June 2012" milestone="4.0.0RC3"></milestone>
+<milestone date="Monday 11 June 2012" milestone="4.0.0RC4"></milestone>
 <milestone date="Wednesday 27 June 2012" milestone="Juno"></milestone>
       <postamble><html:div>
       </html:div></postamble>
@@ -120,7 +126,7 @@ localized to a subset of those locales offered by the Platform.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-The Eclipse OCL 3.2 project
+The Eclipse OCL 4.0 project
 will be developed in parallel, and released simultaneously, with the
 following projects. 
 <html:ul>
@@ -129,12 +135,12 @@ following projects.
     <html:li>Model Development Tools (MDT) UML2 version 3.3</html:li>
 </html:ul>
 <html:p>
-As described above, the Eclipse OCL 3.2.0 release should address usability of the editors.
+As described above, the Eclipse OCL 4.0.0 release should address usability of the editors.
 The main OCL plugins should be unaffected,
 but the associated examples plugins may be revised significantly.
 </html:p>
 <html:p>
-Again as described above, the Eclipse OCL 3.2.0 release for Juno will introduce significant new APIs
+Again as described above, the Eclipse OCL 4.0.0 release for Juno will introduce significant new APIs
 in a new namespace that replaces the old. The old namespace will be deprecated once all
 Simultaneous Release projects have migrated to the new namespace.  
 </html:p>
