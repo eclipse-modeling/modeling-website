@@ -50,7 +50,7 @@ Henshin using one of our update sites.
 <p>
 Simply go to <i>Help -> Install New Software...</i> and enter one of the following URLs:
 <ul>
-<li>Releases: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/releases">http://download.eclipse.org/modeling/emft/henshin/updates/releases</a></li>
+<li>Releases: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/release">http://download.eclipse.org/modeling/emft/henshin/updates/release</a></li>
 <li>Nightly Builds: <a href="http://download.eclipse.org/modeling/emft/henshin/updates/nightly">http://download.eclipse.org/modeling/emft/henshin/updates/nightly</a></li>
 </ul>
 </p>

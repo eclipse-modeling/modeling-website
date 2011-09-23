@@ -44,10 +44,10 @@ If you want to download Henshin as compiled archives, see below.
 <table>
 <tr>
 <td>
-<a href="$drops/0.7.0/R201109190426/Henshin-SDK-Incubation-0.7.0.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.8.0/R201109190426/Henshin-SDK-Incubation-0.8.0.zip"><img src="go-bottom.png"></a>
 </td>
 <td>
-<a href="$drops/0.7.0/R201109190426/Henshin-SDK-Incubation-0.7.0.zip">Henshin SDK 0.8.0</a>
+<a href="$drops/0.8.0/R201109190426/Henshin-SDK-Incubation-0.8.0.zip">Henshin SDK 0.8.0</a>
 </td>
 </tr>
 </table>
