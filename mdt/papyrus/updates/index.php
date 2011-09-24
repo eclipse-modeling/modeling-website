@@ -61,10 +61,12 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <!-- RS: no update site for release for now... Only one nightly update site -->
 
 <p>
-<h4>Main update sites: (Recommended)</h4>
+<h4>Main update site: (Recommended)</h4>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo</a> <br><font color='#808080'>(Papyrus 0.8.1 Indigo SR1 Update)</font></li>
 </ul>
+<p>
+<h4>Previous releases update sites:</h4>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/indigo</a> <br><font color='#808080'>(Papyrus 0.8.0 for Indigo Release Update)</font></li>
 </ul>
