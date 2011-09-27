@@ -187,44 +187,44 @@ EMF VALIDATION SDK 1.0.2: contains runtime, source, and documentation.
 		<category name="EMF VALIDATION SDK 1.0.2"/>
 	</feature>
 
-	<!-- TRANSACTION 1.5.0 -->
-	<category-def label="EMF TRANSACTION SDK 1.5.0" name="EMF TRANSACTION SDK 1.5.0">
+	<!-- TRANSACTION 1.5.1 -->
+	<category-def label="EMF TRANSACTION SDK 1.5.1" name="EMF TRANSACTION SDK 1.5.1">
 		<description>
-EMF TRANSACTION SDK 1.5.0: contains runtime, source, and documentation.
+EMF TRANSACTION SDK 1.5.1: contains runtime, source, and documentation.
 		</description>
 	</category-def>
 	<feature id="org.eclipse.emf.workspace.examples" version="1.5.0.v20110502-1600-478-9oB56O5E8N5EFK1" url="features/org.eclipse.emf.workspace.examples_1.5.0.v20110502-1600-478-9oB56O5E8N5EFK1.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction" version="1.5.0.v20110502-1600-377-8s734C3E7D15D6B" url="features/org.eclipse.emf.transaction_1.5.0.v20110502-1600-377-8s734C3E7D15D6B.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.examples.source" version="1.5.0.v20110502-1600" url="features/org.eclipse.emf.workspace.examples.source_1.5.0.v20110502-1600.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace" version="1.5.0.v20110502-1600-36-8s734C367E3CBC7" url="features/org.eclipse.emf.workspace_1.5.0.v20110502-1600-36-8s734C367E3CBC7.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
-	</feature>
-	<feature id="org.eclipse.emf.transaction.sdk" version="1.5.0.v20110502-1600-777T-9AZP-F1cMhjSqjhYl0eU20D" url="features/org.eclipse.emf.transaction.sdk_1.5.0.v20110502-1600-777T-9AZP-F1cMhjSqjhYl0eU20D.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.doc" version="1.5.0.v20110502-1600-358Z8s733L466F3C6D4" url="features/org.eclipse.emf.transaction.doc_1.5.0.v20110502-1600-358Z8s733L466F3C6D4.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace" version="1.5.1.v20110823-1800-37708s734D3C7D3CCC1" url="features/org.eclipse.emf.workspace_1.5.1.v20110823-1800-37708s734D3C7D3CCC1.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.transaction.sdk" version="1.5.1.v20110823-1800-777T19A_WsXmjNatPxcrPm1rOKlH" url="features/org.eclipse.emf.transaction.sdk_1.5.1.v20110823-1800-777T19A_WsXmjNatPxcrPm1rOKlH.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
+	</feature>
+	<feature id="org.eclipse.emf.workspace.source" version="1.5.1.v20110823-1800-37708s734D3C7D3CCC1" url="features/org.eclipse.emf.workspace.source_1.5.1.v20110823-1800-37708s734D3C7D3CCC1.jar" patch="false">
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.examples" version="1.5.0.v20110502-1600-47B8Z8yGD5OtMCKTJQMQ6FGL2" url="features/org.eclipse.emf.transaction.examples_1.5.0.v20110502-1600-47B8Z8yGD5OtMCKTJQMQ6FGL2.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
-	</feature>
-	<feature id="org.eclipse.emf.workspace.source" version="1.5.0.v20110502-1600-36-8s734C367E3CBC7" url="features/org.eclipse.emf.workspace.source_1.5.0.v20110502-1600-36-8s734C367E3CBC7.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.source" version="1.5.0.v20110502-1600-377-8s734C3E7D15D6B" url="features/org.eclipse.emf.transaction.source_1.5.0.v20110502-1600-377-8s734C3E7D15D6B.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.transaction.examples.source" version="1.5.0.v20110502-1600" url="features/org.eclipse.emf.transaction.examples.source_1.5.0.v20110502-1600.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 	<feature id="org.eclipse.emf.workspace.doc" version="1.5.0.v20110502-1600-22-7w311A1238292A" url="features/org.eclipse.emf.workspace.doc_1.5.0.v20110502-1600-22-7w311A1238292A.jar" patch="false">
-		<category name="EMF TRANSACTION SDK 1.5.0"/>
+		<category name="EMF TRANSACTION SDK 1.5.1"/>
 	</feature>
 
 	<!-- TRANSACTION 1.4.0 -->
