@@ -15,7 +15,7 @@ $pageAuthor	= "Christian Krause";
 
 # Figure out which example should be displayed:
 $example = '';
-if (isset($_GET['example']) {
+if (isset($_GET['example'])) {
     $example = preg_replace('/\W/', '', $_GET['example']);
 }
 if (!empty($example) && !file_exists("examples/$example/index.html")) {
