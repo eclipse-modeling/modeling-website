@@ -18,7 +18,7 @@ Go to <i>File &rarr; Import &rarr; General &rarr; Existing Projects into Workspa
 <h2>Metamodel and Instance Model</h2>
 
 <p>
-<a href="examples/bank/bank.png"><image src="examples/bank/bank.png" align="right" hspace="10" width="300" /></a>
+<a href="examples/bank/bank.png"><image src="examples/bank/bank.png" align="right" width="300" /></a>
 The metamodel is defined in the file <i>bank.ecore</i>. We used 
 the Ecore Tools to draw a diagram (depicted on the right). 
 The diagram is stored in the file <i>bank.ecorediag</i>.
@@ -38,7 +38,7 @@ but also to find out to which client a given account belongs to.
 </p>
 
 <p>
-<a href="examples/bank/example-bank.png"><image src="examples/bank/example-bank.png" align="right" hspace="10" width="300" /></a>
+<a href="examples/bank/example-bank.png"><image src="examples/bank/example-bank.png" align="right" width="300" /></a>
 An example instance model is depicted on the right using
 the Sample Reflective Ecore Model editor. It contains one
 manager, three clients and four accounts. Note that
@@ -51,9 +51,12 @@ extension <i>*.xmi</i> here and not, say, <i>*.bank</i>.
 
 <h2>Transformation Rules</h2>
 
+<p>
 We define a couple of transformation rules for the above
 metamodel. We use the integrated graphical editor of Henshin.
+</p>
 
+<p>
 To set-up the transformation, go to 
 <i>File &rarr; New &rarr; Other &rarr; Henshin &rarr; Henshin transformation Diagram</i>.
 This wizard will create two files, one for storing the transformation
@@ -67,7 +70,18 @@ editor and selecting <i>Import Package... &rarr; From Workspace</i>.
 Then select the file <i>bank.ecore</i> and within this file the
 package <i>bank</i>. If the import was successfull you will see all
 classes of the metamodel appearing in the palette of the editor.
+</p>
 
+<p>
+<a href="examples/bank/rule-create-account.png"><image src="examples/bank/rule-create-account.png" align="right" width="300" /></a>
+To create a new transformation rule, use the <i>Rule</i> tool
+in the palette. In the top of every rule, its name and parameters
+are specified (and some optional information which we do not consider 
+here). In our case, we write <i>createAccount(client, accountId)</i>,
+where the <i>client</i> parameter is the name of the client for whom
+an account should be created, and <i>accountId</i> is the ID to be used
+for the new account.
+</p>
 
 
 
