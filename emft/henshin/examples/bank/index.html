@@ -123,6 +123,21 @@ its ID to the value given in <i>accountId</i>. The rule is applicable only if no
 other account exists already with the same ID.
 </p>
 
+<p>
+<a href="examples/bank/rule-transfer-money.png"><image src="examples/bank/rule-transfer-money.png" align="right" width="150" /></a>
+The rule <i>transferMoney(client,fromId,toId,amount)</i>
+matches a client with the name <i>client</i> and his
+account with the ID given in <i>fromId</i> and another account
+with the ID <i>toId</i>. The <i>credit</i> attribute of both
+account is changed, which is denoted using an arrow notation:
+<i>old value -&gt; new value</i>. In the source account,
+the old credit is matched using a variable <i>x</i> and set
+to <i>x-amount</i>, analogously for the destination account.
+Note that this rule does not check whether <i>x &gt;= amount</i>.
+This is currently note supported in the graphical Henshin editor.
+Nevertheless, you can simply open the rule in the <i>*.henshin</i>
+file and add an attribute condition as an additional check.
+</p>
 
 
 
