@@ -125,6 +125,7 @@ other account exists already with the same ID.
 </p>
 
 <br>
+<br>
 
 <p>
 <a href="examples/bank/rule-transfer-money.png"><image src="examples/bank/rule-transfer-money.png" align="right" width="200" /></a>
@@ -142,6 +143,23 @@ Nevertheless, you can simply open the rule in the <i>*.henshin</i>
 file and add an attribute condition as an additional check.
 </p>
 
+<br>
 
-
+<p>
+<a href="examples/bank/rule-delete-all-accounts.png"><image src="examples/bank/rule-delete-all-accounts.png" align="right" width="300" /></a>
+The rule <i>deleteAllAccounts(client)</i>
+deletes all accounts of a given client. This is
+done using a star-operator, i.e. using the action
+<span style="color:red">&laquo;delete*&raquo;</span>.
+Note that in the current version of Henshin, such a rule
+is translated into a so-called AmalgamationUnit which
+applies an unbounded number of rules in an atomic step.
+Note also that the parameters of this AmalgamationUnit
+currently have to be added manually in the tree-based
+Henshin editor, together with parameter mappings which
+link parameters of the AmalgamationUnit to parameters of
+the references rules. This will be automated in the near
+future. Independent star-operations are also supported,
+but nesting is not.
+</p>
 
