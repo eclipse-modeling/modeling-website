@@ -21,10 +21,8 @@ $pageAuthor	= "Christian Krause";
 # $Nav->addNavSeparator("My Page Links", 	"downloads.php");
 # $Nav->addCustomNav("My Link", "mypage.php", "_self", 3);
 # $Nav->addCustomNav("Google", "http://www.google.com/", "_blank", 3);
-
 # End: page-specific settings
 #
-		
 
 $drops = "http://www.eclipse.org/downloads/download.php?file=/modeling/emft/henshin/downloads/drops";
 $html = <<<EOHTML
@@ -66,49 +64,6 @@ If you want to download Henshin as compiled archives, see below.
 </tr>
 </table>
 </p>
-
-
-<!--
-		
-<div class="homeitem">
-<h3>Narrow column</h3>
-<ul>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-</ul>
-</div>
-		
-<div class="homeitem">
-<h3>Narrow column</h3>
-<ul>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-</ul>
-</div>
-<div class="homeitem3col">
-<h3>This is a wide column</h3>
-<ul>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-<li><a href="#">Link</a>. Teaser text <a href="#">'Reference'</a><span class="dates">02/05/05</span></li>
-</ul>
-</div>
-<hr class="clearer" />
-<p>Some free text</p>
-<ul class="midlist">
-<li>list of items in free text</li>
-<li>list of items in free text</li>
-<li>list of items in free text</li>
-</ul>
-<ol>
-<li>Ordered list</li>
-<li>Ordered list</li>
-<li>Ordered list</li>
-</ol>
-		
--->
 
 </div>
 </div>
