@@ -34,7 +34,7 @@ ob_end_clean();
 $html = <<<EOHTML
 
 <div id="maincontent">
-<div id="midcolumn" style="width:100%;">
+<div id="fullcolumn">
 $contents
 </div>
 </div>
