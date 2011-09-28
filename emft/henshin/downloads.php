@@ -28,8 +28,8 @@ $drops = "http://www.eclipse.org/downloads/download.php?file=/modeling/emft/hens
 $html = <<<EOHTML
 
 <div id="maincontent">
-
 <div id="midcolumn">
+
 <h1>$pageTitle</h1>
 
 <p>
@@ -67,7 +67,6 @@ If you want to download Henshin as compiled archives, see below.
 
 </div>
 </div>
-
 
 EOHTML;
 
