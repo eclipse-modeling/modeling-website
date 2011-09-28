@@ -54,9 +54,6 @@ extension <i>*.xmi</i> here and not, say, <i>*.bank</i>.
 <p>
 We define a couple of transformation rules for the above
 metamodel. We use the integrated graphical editor of Henshin.
-</p>
-
-<p>
 To set-up the transformation, go to 
 <i>File &rarr; New &rarr; Other &rarr; Henshin &rarr; Henshin transformation Diagram</i>.
 This wizard will create two files, one for storing the transformation
@@ -79,7 +76,10 @@ are specified (and some optional information which we do not consider
 here). In the below example, we write <i>createAccount(client, accountId)</i>,
 where the <i>client</i> parameter is the name of the client for whom
 an account should be created, and <i>accountId</i> is the ID to be used
-for the new account. <br>
+for the new account.
+</p>
+
+<p>
 <b>Nodes:</b> Inside of the rule, we now create a number of nodes now,
 as shown in the screenshot on the right. For example, to
 create the bank node in the top, you can use the <i>Bank</i> tool 
@@ -88,20 +88,29 @@ name and also its type. For changing the name of this object to <i>bank</i>
 click on the name label of the node and enter <i>bank:Bank</i>.
 Note that these names can be important when you want to pass an object
 as a parameter of the rule. In this case you would add <i>bank</i> to the
-list of the rule.<br>
+list of the rule.
+</p>
+
+<p>
 <b>Edges:</b> To specify a link between two nodes use the tool <i>Edge</i>
 in the palette and draw a line between two lines. This is possible only if
 the metamodel contains a reference between the two corresponding classes.
-If multiple references are possible, you can choose from a pop-up menu.<br>
+If multiple references are possible, you can choose from a pop-up menu.
+</p>
+
+<p>
 <b>Attributes</b>: Attributes can be created within nodes and are specified
 by the name of the attribute and an '=' followed by an expression which is 
 evaluated during the rule application.
+</p>
+
+<p>
 <b>Actions:</b> Nodes and edges are annotated with stereotypes which we refer
 to as actions. A number of actions are supported: 
-<span style="text-color:grey">&laquo;preserve&raquo;</span> matches an object and preserves it during the rule application,
-<span style="text-color:green">&laquo;create&raquo;</span> creates a new object or link between objects,
-<span style="text-color:red">&laquo;delete&raquo;</span> deletes an existing object or link,
-<span style="text-color:blue">&laquo;forbid&raquo;</span> forbid the existience of an object or link.
+<span style="color:gray">&laquo;preserve&raquo;</span> matches an object and preserves it during the rule application,
+<span style="color:green">&laquo;create&raquo;</span> creates a new object or link between objects,
+<span style="color:red">&laquo;delete&raquo;</span> deletes an existing object or link,
+<span style="color:blue">&laquo;forbid&raquo;</span> forbid the existience of an object or link.
 Note that these are the basic actions, which can be further parameterized (see below).
 </p>
 
