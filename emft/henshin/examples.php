@@ -18,11 +18,11 @@ $example = '';
 if (isset($_GET['example'])) {
     $example = preg_replace('/\W/', '', $_GET['example']);
 }
-#if (!empty($example) && file_exists("examples/$example/index.html")) {
-#    $target = "examples/$example/index.html";
-#} else {
+if (!empty($example) && file_exists("examples/$example/index.html")) {
+    $target = "examples/$example/index.html";
+} else {
     $target = "examples/index.html";
-#}
+}
 
 # Display the target file:
 ob_start();
