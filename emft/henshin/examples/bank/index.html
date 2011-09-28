@@ -73,14 +73,45 @@ classes of the metamodel appearing in the palette of the editor.
 </p>
 
 <p>
-<a href="examples/bank/rule-create-account.png"><image src="examples/bank/rule-create-account.png" align="right" width="300" /></a>
 To create a new transformation rule, use the <i>Rule</i> tool
 in the palette. In the top of every rule, its name and parameters
 are specified (and some optional information which we do not consider 
-here). In our case, we write <i>createAccount(client, accountId)</i>,
+here). In the below example, we write <i>createAccount(client, accountId)</i>,
 where the <i>client</i> parameter is the name of the client for whom
 an account should be created, and <i>accountId</i> is the ID to be used
-for the new account.
+for the new account. <br>
+<b>Nodes:</b> Inside of the rule, we now create a number of nodes now,
+as shown in the screenshot on the right. For example, to
+create the bank node in the top, you can use the <i>Bank</i> tool 
+in the palette. After you have created the node, you can change its 
+name and also its type. For changing the name of this object to <i>bank</i>
+click on the name label of the node and enter <i>bank:Bank</i>.
+Note that these names can be important when you want to pass an object
+as a parameter of the rule. In this case you would add <i>bank</i> to the
+list of the rule.<br>
+<b>Edges:</b> To specify a link between two nodes use the tool <i>Edge</i>
+in the palette and draw a line between two lines. This is possible only if
+the metamodel contains a reference between the two corresponding classes.
+If multiple references are possible, you can choose from a pop-up menu.<br>
+<b>Attributes</b>: Attributes can be created within nodes and are specified
+by the name of the attribute and an '=' followed by an expression which is 
+evaluated during the rule application.
+<b>Actions:</b> Nodes and edges are annotated with stereotypes which we refer
+to as actions. A number of actions are supported: 
+<span style="text-color:grey">&laquo;preserve&raquo;</span> matches an object and preserves it during the rule application,
+<span style="text-color:green">&laquo;create&raquo;</span> creates a new object or link between objects,
+<span style="text-color:red">&laquo;delete&raquo;</span> deletes an existing object or link,
+<span style="text-color:blue">&laquo;forbid&raquo;</span> forbid the existience of an object or link.
+Note that these are the basic actions, which can be further parameterized (see below).
+</p>
+
+<p>
+<a href="examples/bank/rule-create-account.png"><image src="examples/bank/rule-create-account.png" align="right" width="300" /></a>
+The rule <i>createAccount(client,accountId)</i>
+matches a bank, a client with the name given in the rule parameter <i>client</i>
+and the client's manager. The rule creates a new account for the client and sets
+its ID to the value given in <i>accountId</i>. The rule is applicable only if now
+other account exists already with the same ID.
 </p>
 
 
