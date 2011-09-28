@@ -13,8 +13,18 @@ $pageTitle 	= "Henshin - Examples";
 $pageKeywords	= "EMF, Henshin, model transformation, examples";
 $pageAuthor	= "Christian Krause";
 
-$target = 'examples/index.html';
+# Figure out which example should be displayed:
+$example = '';
+if (isset($_GET['example']) {
+    $example = preg_replace('/\W/', '', $_GET['example']);
+}
+if (!empty($example) && !file_exists("examples/$example/index.html")) {
+    $target = "examples/$example/index.html";
+} else {
+    $target = "examples/index.html";
+}
 
+# Display the target file:
 ob_start();
 include "$target";
 $contents = ob_get_contents();
