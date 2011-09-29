@@ -129,7 +129,7 @@ other account exists already with the same ID.
 
 <p>
 <a href="examples/bank/rule-transfer-money.png"><image src="examples/bank/rule-transfer-money.png" align="right" width="200" /></a>
-The rule <i>transferMoney(client,fromId,toId,amount)</i>
+The rule <i>transferMoney(client,fromId,toId,amount,x,y)</i>
 matches a client with the name <i>client</i> and his
 account with the ID given in <i>fromId</i> and another account
 with the ID <i>toId</i>. The <i>credit</i> attribute of both
@@ -165,7 +165,7 @@ the references rules. This ensures that the parameters of the
 AmalgamationUnit are correctly passed to the underlying rules.
 Note also that currently, when deleting bidirectional edges,
 both directions have to be specified. A node can only be deleted
-if <b>all</b> its links are deleted, too.
+if all its links are deleted, too.
 </p>
 
 <h2>Execution</h2>
