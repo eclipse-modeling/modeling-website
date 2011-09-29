@@ -135,12 +135,15 @@ account with the ID given in <i>fromId</i> and another account
 with the ID <i>toId</i>. The <i>credit</i> attribute of both
 account is changed, which is denoted using an arrow notation:
 <i>old value -&gt; new value</i>. In the source account,
-the old credit is matched using a variable <i>x</i> and set
+the old credit is matched using a parameter <i>x</i> and set
 to <i>x-amount</i>, analogously for the destination account.
-Note that this rule does not check whether <i>x &gt;= amount</i>.
-This is currently note supported in the graphical Henshin editor.
-Nevertheless, you can simply open the rule in the <i>*.henshin</i>
+Note that this rule a check whether <i>x &gt;= amount</i>
+can currently only specified using the tree-based editor.
+For this, you can simply open the rule in the <i>*.henshin</i>
 file and add an attribute condition as an additional check.
+Note also that <i>x</i> and <i>y</i> have to be specified as 
+parameters. When executing this rule, these parameters will
+be automatically initialized by the found match.
 </p>
 
 <br>
@@ -158,13 +161,35 @@ Note also that the parameters of this AmalgamationUnit
 currently have to be added manually in the tree-based
 Henshin editor, together with parameter mappings which
 link parameters of the AmalgamationUnit to parameters of
-the references rules. This will be automated in the near
-future. Independent star-operations are also supported,
-but nesting is not (yet).
+the references rules. This ensures that the parameters of the 
+AmalgamationUnit are correctly passed to the underlying rules.
+Note also that currently, when deleting bidirectional edges,
+both directions have to be specified. A node can only be deleted
+if <b>all</b> its links are deleted, too.
 </p>
 
 <h2>Execution</h2>
 
+<p>
 We now show how to execute single transformation rules
-using the Henshin interpreter, invoked using a dialog...
+using the Henshin interpreter, invoked using a dialog.
+To run this dialog, save your transformation and
+right-click on the <i>*.henshin</i> file and select
+<i>Henshin &rarr; Apply with Henshin</i>. Then select
+the transformation rule or unit that you want to apply
+and choose an instance model that should be transformed.
+Finally, set the parameters of the rule (not all have to
+be specified) and click on <i>Preview</i> to see the changes.
+</p>
 
+<p>
+<a href="examples/bank/apply-create-account.png"><image src="examples/bank/apply-create-account.png" align="right" width="300" /></a>
+<br>
+<br>
+An application of the ruleThe rule <i>createAccount(client)</i>
+is shown on the right. As parameters we specified <i>client="Alice"</i>
+and <i>accountId=5</i>. The preview window on the right shows the
+result of applying the rule with these parameters.
+<br>
+<br>
+</p>
