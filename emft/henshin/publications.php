@@ -37,7 +37,7 @@ Advanced Concepts and Tools for In-place EMF Model Transformations</a>.
 Proceedings of <a href="http://models2010.ifi.uio.no/">MoDELS'10</a>, 
 Lecture Notes in Computer Science, 2010, Volume&nbsp;6394/2010, 121-135, DOI: 10.1007/978-3-642-16145-2_9.
 </li>
-<ul>
+</ul>
 
 <br>
 <br>
