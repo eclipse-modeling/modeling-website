@@ -7,7 +7,7 @@
 
 <p>
 <?php
-include_once "stats-util.php";
+include_once "util.php";
 update_stats('R');
 print_stats('R');
 ?>

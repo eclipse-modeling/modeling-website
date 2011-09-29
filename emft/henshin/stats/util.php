@@ -38,7 +38,7 @@ function load_stats($build) {
 }
 
 function reset_stats($build) {
-    $init = "stats-init-$build.txt";
+    $init = "init-$build.txt";
     $file = get_stats_file($build);
     return copy($init, $file);
 }
@@ -67,6 +67,9 @@ function update_stats($build) {
 	$stats[$month] = $stats[$month]+1;
     }
     save_stats($build, $stats);
+    mail("henshin.ck@gmail.com",
+	    "Henshin download notification",
+	    "See http://www.eclipse.org/modeling/emft/henshin/stats/info.php");
     return $stats;
 }
 
