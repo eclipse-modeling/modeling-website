@@ -39,6 +39,12 @@ Lecture Notes in Computer Science, 2010, Volume&nbsp;6394/2010, 121-135, DOI: 10
 </li>
 <ul>
 
+<br>
+<br>
+
+<i>If you would like to see your Henshin-related paper here too,
+please contact us on our <a href="https://dev.eclipse.org/mailman/listinfo/henshin-dev">mailing list</a>.</i>
+
 </div>
 </div>
 
