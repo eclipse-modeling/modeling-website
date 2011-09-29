@@ -41,13 +41,14 @@ $html = <<<EOHTML
 	<img style="float:right" src="henshin_small.png" alt="" style="border-width:0px"/>
 	
 	$description
-		
-		
-	<h3>News</h3>
-	
-	<ul>
-	<li><i>21-09-2011: Henshin SDK 0.8.0 released</i></li>
-	</ul>
+				
+	<div class="homeitem">
+		<h3>News</h3>
+		<ul>
+		<li><span class="dates">29-09-2011</span>: New <a href="examples.php">examples page</a> launched</li>
+		<li><span class="dates">21-09-2011</span>: Henshin SDK 0.8.0 released</li>
+		</ul>
+	</div>
 	
 	<h3>Screenshots</h3>
 	
