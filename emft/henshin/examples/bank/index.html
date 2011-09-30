@@ -13,6 +13,7 @@ how to use the Interpreter Wizard to execute rules on an example model.
 The example files can be downloaded here: <a href="examples/bank/bank.zip">bank.zip</a>.
 You can import the example project directly into your Eclipse workspace:
 Go to <i>File &rarr; Import &rarr; General &rarr; Existing Projects into Workspace &rarr; Select archive file</i>
+and choose the downloaded Zip-file.
 </p>
 
 <h2>Metamodel and Instance Model</h2>
@@ -165,14 +166,15 @@ the references rules. This ensures that the parameters of the
 AmalgamationUnit are correctly passed to the underlying rules.
 Note also that currently, when deleting bidirectional edges,
 both directions have to be specified. A node can only be deleted
-if all its links are deleted, too.
+if all its links are deleted, too. As an exercise, you may define 
+a rule which moves all accounts from one client to another client.
 </p>
 
-<h2>Execution</h2>
+<h2>Execution using the Interpreter</h2>
 
 <p>
 We now show how to execute single transformation rules
-using the Henshin interpreter, invoked using a dialog.
+using the Henshin interpreter, invoked through a dialog.
 To run this dialog, save your transformation and
 right-click on the <i>*.henshin</i> file and select
 <i>Henshin &rarr; Apply with Henshin</i>. Then select
