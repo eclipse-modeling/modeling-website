@@ -188,9 +188,27 @@ be specified) and click on <i>Preview</i> to see the changes.
 <a href="examples/bank/apply-create-account.png"><image src="examples/bank/apply-create-account.png" align="right" width="200" /></a>
 <br>
 <br>
-An application of the ruleThe rule <i>createAccount(client)</i>
-is shown on the right. As parameters we specified <i>client="Alice"</i>
-and <i>accountId=5</i>. The preview window on the right shows the
+An application of the rule <i>createAccount(client)</i>
+is shown on the right. As parameters we specified <i>client=Alice</i>
+with type <i>String</i>, and <i>accountId=5</i> with type <i>Int</i>. 
+The preview window on the right shows the
+result of applying the rule with these parameters.
+<br>
+<br>
+<br>
+</p>
+
+<p>
+<a href="examples/bank/apply-transfer-money.png"><image src="examples/bank/apply-transfer-money.png" align="right" width="200" /></a>
+<br>
+<br>
+An application of the rule <i>transferMoney</i>
+is shown on the right. We have specified the parameters <i>client</i>,
+<i>fromId</i>, <i>toid</i> and <i>amount</i>. The other parameters
+are automatically matched by the transformation engine. Note also
+that is important to specify the correct parameter types, because
+otherwise the rule cannot be matched.
+The preview window on the right shows the
 result of applying the rule with these parameters.
 <br>
 <br>
@@ -202,7 +220,8 @@ result of applying the rule with these parameters.
 <br>
 <br>
 An application of the ruleThe rule <i>deleteAllAccounts(client)</i>
-is shown on the right. As parameter we specified <i>client="Charles"</i>. 
+is shown on the right. As parameter we specified <i>client=Charles</i> 
+with type <i>String</i>.
 The preview window on the right shows the
 result of applying the rule with these parameters.
 <br>
