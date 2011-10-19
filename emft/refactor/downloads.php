@@ -12,10 +12,11 @@
 		<h1>$pageTitle</h1>
 		<p>
 <h2>Releases</h2>
+<h3>Version 0.6.0 (released Oct 19, 2011)</h3>
 <ul class="midlist">
     <li><a href="downloads/refactor-0.6.0.20111019150545.jar">refactor-0.6.0.20111019150545.jar</a> (released 19. Oct 2011 15:06)</li>
 </ul>
-		<h3>Version 0.5.0 (released Jan 11, 2011)
+		<h3>Version 0.5.0 (released Jan 11, 2011)</h3>
 		<ul class="midlist">
     		<li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released Jan 11, 2011 15:54)</li>
 		</ul>
