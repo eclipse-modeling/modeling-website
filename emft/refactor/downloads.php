@@ -15,7 +15,7 @@
 		
 <h2>Releases</h2>
 <ul class="midlist">
-    <li><a href="downloads/refactor-0.6.0.20111019165436.jar">refactor-0.6.0.20111019165436.jar</a> (released 19. Okt 2011 16:57)</li>
+    <li><a href="downloads/refactor-0.6.0.20111019171158.jar">refactor-0.6.0.20111019171158.jar</a> (released 19. Okt 2011 17:12)</li>
 </ul>
 		<h3>Version 0.5.0 (released Jan 11, 2011)</h3>
 		<ul class="midlist">
