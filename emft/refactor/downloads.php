@@ -10,17 +10,16 @@
 
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
-		
 		<p>
-		
-		<h2>Releases</h2>
+<h2>Releases</h2>
+<ul class="midlist">
+    <li><a href="downloads/refactor-0.6.0.20111019150545.jar">refactor-0.6.0.20111019150545.jar</a> (released 19. Oct 2011 15:06)</li>
+</ul>
 		<h3>Version 0.5.0 (released Jan 11, 2011)
 		<ul class="midlist">
     		<li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released Jan 11, 2011 15:54)</li>
 		</ul>
-		</p>	
 		
-		<p>	
 		<h2>How to's</h2>
 		<ul class="midlist">
 			<li><a href="downloads/manual_application.pdf" target="_blank">How to apply EMF model refactorings</a></li>
@@ -28,7 +27,6 @@
 			<li><a href="downloads/manual_henshin.pdf" target="_blank">How to generate new EMF model refactorings using Henshin transformations</a></li>
 		</ul>
 		</p>	
-
 	</div>
 	
 	<div id="rightcolumn">
