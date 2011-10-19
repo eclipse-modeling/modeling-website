@@ -11,13 +11,13 @@
 	<div id="midcolumn">
 		<h1>$pageTitle</h1>
 		<p>
-	<h3>Version 0.6.0 (released Oct 19, 2011)</h3>
+	<h2>Releases</h2>
 		
-<h2>Releases</h2>
+<h3>Version 0.6.0</h3>
 <ul class="midlist">
     <li><a href="downloads/refactor-0.6.0.20111019171158.jar">refactor-0.6.0.20111019171158.jar</a> (released 19. Okt 2011 17:12)</li>
 </ul>
-		<h3>Version 0.5.0 (released Jan 11, 2011)</h3>
+		<h3>Version 0.5.0</h3>
 		<ul class="midlist">
     		<li><a href="downloads/refactor-0.5.0.20110111155417.jar">refactor-0.5.0.20110111155417.jar</a> (released Jan 11, 2011 15:54)</li>
 		</ul>
