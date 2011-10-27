@@ -45,8 +45,9 @@
       <id>org.eclipse.emf.eef.edt</id>
       <hiddingFeatureID>org.eclipse.emf.eef.runtime</hiddingFeatureID>
     </components>
-    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" description="GMF Tooling is a framework to generate functional graphical editors based on the GMF Runtime." license="EPL" image32="images/gmf.png" visible="false">
+    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" description="GMF Tooling is a framework to generate functional graphical editors based on the GMF Runtime." license="EPL" image32="images/gmf.png" visible="true">
       <sitesURLS>http://download.eclipse.org/releases/indigo/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/</sitesURLS>
       <id>org.eclipse.gmf.sdk</id>
     </components>
     <components name="Graphiti" provider="Eclipse.org" description="Graphiti is a graphical API that enables the fast and easy creation of graphical tools for any kind of domain models." license="EPL" groups="//@filters.0" image32="images/graphiti.png" incubation="true">
