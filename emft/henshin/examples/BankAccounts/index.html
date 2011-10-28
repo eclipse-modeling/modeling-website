@@ -20,7 +20,7 @@ and choose the downloaded Zip-file.
 <h2>Metamodel and Instance Model</h2>
 
 <p>
-<a href="examples/bank/bank.png"><image src="examples/bank/bank.png" align="right" width="300" /></a>
+<a href="examples/BankAccounts/bank.png"><image src="examples/BankAccounts/bank.png" align="right" width="300" /></a>
 The metamodel is defined in the file <i>bank.ecore</i>. We used 
 the Ecore Tools to draw a diagram (depicted on the right). 
 The diagram is stored in the file <i>bank.ecorediag</i>.
@@ -40,7 +40,7 @@ but also to find out to which client a given account belongs to.
 </p>
 
 <p>
-<a href="examples/bank/example-bank.png"><image src="examples/bank/example-bank.png" align="right" width="300" /></a>
+<a href="examples/BankAccounts/example-bank.png"><image src="examples/BankAccounts/example-bank.png" align="right" width="300" /></a>
 An example instance model is depicted on the right using
 the Sample Reflective Ecore Model editor. It contains one
 manager, three clients and four accounts. Note that
@@ -117,7 +117,7 @@ Note that these are the basic actions, which can be further parameterized (see b
 </p>
 
 <p>
-<a href="examples/bank/rule-create-account.png"><image src="examples/bank/rule-create-account.png" align="right" width="300" /></a>
+<a href="examples/BankAccounts/rule-create-account.png"><image src="examples/BankAccounts/rule-create-account.png" align="right" width="300" /></a>
 <br>
 The rule <i>createAccount(client,accountId)</i>
 matches a bank, a client with the name given in the rule parameter <i>client</i>
@@ -130,7 +130,7 @@ other account exists already with the same ID.
 <br>
 
 <p>
-<a href="examples/bank/rule-transfer-money.png"><image src="examples/bank/rule-transfer-money.png" align="right" width="200" /></a>
+<a href="examples/BankAccounts/rule-transfer-money.png"><image src="examples/BankAccounts/rule-transfer-money.png" align="right" width="200" /></a>
 The rule <i>transferMoney(client,fromId,toId,amount,x,y)</i>
 matches a client with the name <i>client</i> and his
 account with the ID given in <i>fromId</i> and another account
@@ -151,7 +151,7 @@ be automatically initialized by the found match.
 <br>
 
 <p>
-<a href="examples/bank/rule-delete-all-accounts.png"><image src="examples/bank/rule-delete-all-accounts.png" align="right" width="300" /></a>
+<a href="examples/BankAccounts/rule-delete-all-accounts.png"><image src="examples/BankAccounts/rule-delete-all-accounts.png" align="right" width="300" /></a>
 The rule <i>deleteAllAccounts(client)</i>
 deletes all accounts of a given client. This is
 done using a star-operator, i.e. using the action
@@ -186,7 +186,7 @@ be specified) and click on <i>Preview</i> to see the changes.
 </p>
 
 <p>
-<a href="examples/bank/apply-create-account.png"><image src="examples/bank/apply-create-account.png" align="right" width="200" /></a>
+<a href="examples/BankAccounts/apply-create-account.png"><image src="examples/BankAccounts/apply-create-account.png" align="right" width="200" /></a>
 <br>
 <br>
 An application of the rule <i>createAccount(client)</i>
@@ -200,7 +200,7 @@ result of applying the rule with these parameters.
 </p>
 
 <p>
-<a href="examples/bank/apply-transfer-money.png"><image src="examples/bank/apply-transfer-money.png" align="right" width="200" /></a>
+<a href="examples/BankAccounts/apply-transfer-money.png"><image src="examples/BankAccounts/apply-transfer-money.png" align="right" width="200" /></a>
 <br>
 <br>
 An application of the rule <i>transferMoney</i>
@@ -217,7 +217,7 @@ result of applying the rule with these parameters.
 </p>
 
 <p>
-<a href="examples/bank/apply-delete-all-accounts.png"><image src="examples/bank/apply-delete-all-accounts.png" align="right" width="200" /></a>
+<a href="examples/BankAccounts/apply-delete-all-accounts.png"><image src="examples/BankAccounts/apply-delete-all-accounts.png" align="right" width="200" /></a>
 <br>
 <br>
 An application of the ruleThe rule <i>deleteAllAccounts(client)</i>
