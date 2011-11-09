@@ -8,22 +8,9 @@ ob_start();
 $extraZips = array(
 	"emf-xsd-Update",
 	"emf-sdo-xsd-Update",
-# Different OCL Core/Tools builds produce different downloadable artifacts, so every zip may be absent	
 	"mdt-ocl-standalone",
-	"mdt-ocl-automated-tests",	# deprecated Modeling build version
-	"mdt-ocl-Automated-Tests"	# new Athena version
-	"mdt-ocl-Update", 			# deprecated
-	"mdt-ocl-Update-core",      # new in buckminster based tools/core builds
-	"mdt-ocl-Update-tools", 	# new in buckminster based tools/core builds
-	"mdt-ocl-SDK", 				# deprecated
-	"mdt-ocl-SDK-core", 		# new in buckminster based tools/core builds
-	"mdt-ocl-CoreSDK", 			# deprecated
-	"mdt-ocl-CoreSDK-core", 	# new in buckminster based tools/core builds	
-	"mdt-ocl-Runtime",			# deprecated
-	"mdt-ocl-Runtime-core", 	# new in buckminster based tools/core builds	
-	"mdt-ocl-Examples",			# deprecated
-	"mdt-ocl-Examples-tools",	# new in buckminster based tools/core builds
-# End OCL Stuff
+	"mdt-ocl-automated-tests", # deprecated Modeling build version
+	"mdt-ocl-Automated-Tests", # new Athena version
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
 	"emf-sdo-xsd-sourcedoc", # never existed
@@ -54,17 +41,11 @@ $dls = array(
 	),
 	"/ocl" => array(
 		"OCL" => array(
-			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update", # deprecated
-			"<acronym title=\"Click to download archived All-In-One Core P2 Repository\"><img alt=\"Click to download archived All-In-One Core P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update-core", # new in buckminster based tools/core builds
-			"<acronym title=\"Click to download archived All-In-One Tools P2 Repository\"><img alt=\"Click to download archived All-In-One Tools P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update-tools", # new in buckminster based tools/core builds
-			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK", #deprecated						
-			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-core", # new in buckminster based tools/core builds
-			"Core SDK (Runtime, Source)" => "CoreSDK", # deprecated
-			"Core SDK (Runtime, Source)" => "CoreSDK-core", # new in buckminster based tools/core builds
-			"Runtime" => "runtime", # deprecated
-			"Runtime" => "runtime-core", # new in buckminster based tools/core builds
-			"Examples" => "examples",  # deprecated
-			"Examples" => "examples-tools", # new in buckminster based tools/core builds
+			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",
+			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK",
+			"Core SDK (Runtime, Source)" => "CoreSDK",
+			"Runtime" => "runtime",
+			"Examples" => "examples",
 			"Automated Tests" => "automated-tests",  # deprecated Modeling build 
 			"Automated Tests" => "Automated-Tests",  # new Athena build
 			"Stand-alone" => "standalone"
