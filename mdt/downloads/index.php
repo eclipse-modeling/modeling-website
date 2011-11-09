@@ -19,10 +19,10 @@ $extraZips = array(
 	"mdt-ocl-SDK-core", 		# new in buckminster based tools/core builds
 	"mdt-ocl-CoreSDK", 			# deprecated
 	"mdt-ocl-CoreSDK-core", 	# new in buckminster based tools/core builds	
-	"mdt-ocl-Runtime",			# deprecated
-	"mdt-ocl-Runtime-core", 	# new in buckminster based tools/core builds	
-	"mdt-ocl-Examples",			# deprecated
-	"mdt-ocl-Examples-tools",	# new in buckminster based tools/core builds
+	"mdt-ocl-runtime",			# deprecated
+	"mdt-ocl-runtime-core", 	# new in buckminster based tools/core builds	
+	"mdt-ocl-examples",			# deprecated
+	"mdt-ocl-examples-tools",	# new in buckminster based tools/core builds
 # End OCL Stuff
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
@@ -57,7 +57,7 @@ $dls = array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",  # deprecated
 			"<acronym title=\"Click to download archived SDK P2 Repository\"><img alt=\"Click to download archived SDK P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">SDK Update Site</b></acronym>" => "Update-core", # new in buckminster based tools/core builds
 			"<acronym title=\"Click to download archived All-In-One Tools P2 Repository\"><img alt=\"Click to download archived All-In-One Tools P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update-tools", # new in buckminster based tools/core builds
-			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK", #deprecated						
+			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK", # deprecated						
 			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-core", # new in buckminster based tools/core builds
 			"Core SDK (Runtime, Source)" => "CoreSDK", # deprecated
 			"Core SDK (Runtime, Source)" => "CoreSDK-core", # new in buckminster based tools/core builds
