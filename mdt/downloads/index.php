@@ -8,9 +8,22 @@ ob_start();
 $extraZips = array(
 	"emf-xsd-Update",
 	"emf-sdo-xsd-Update",
+# Different OCL Core/Tools builds produce different downloadable artifacts, so every zip may be absent	
 	"mdt-ocl-standalone",
-	"mdt-ocl-automated-tests", # deprecated Modeling build version
-	"mdt-ocl-Automated-Tests", # new Athena version
+	"mdt-ocl-automated-tests",	# deprecated Modeling build version
+	"mdt-ocl-Automated-Tests",	# new Athena version
+	"mdt-ocl-Update", 			# deprecated
+	"mdt-ocl-Update-core",      # new in buckminster based tools/core builds
+	"mdt-ocl-Update-tools", 	# new in buckminster based tools/core builds
+	"mdt-ocl-SDK", 				# deprecated
+	"mdt-ocl-SDK-core", 		# new in buckminster based tools/core builds
+	"mdt-ocl-CoreSDK", 			# deprecated
+	"mdt-ocl-CoreSDK-core", 	# new in buckminster based tools/core builds	
+	"mdt-ocl-Runtime",			# deprecated
+	"mdt-ocl-Runtime-core", 	# new in buckminster based tools/core builds	
+	"mdt-ocl-Examples",			# deprecated
+	"mdt-ocl-Examples-tools",	# new in buckminster based tools/core builds
+# End OCL Stuff
 	"xsd-SDK", # deprecated
 	"xsd-sourcedoc", # new EMF 2.4.0M5 x 3
 	"emf-sdo-xsd-sourcedoc", # never existed
