@@ -97,8 +97,8 @@
      		<html:p>
      			The work on the next release can be followed on the Eclipse Bugzilla thanks to the following bug entries.
      		</html:p>
-     		<proposed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc=Acceleo%20Juno%20Release%20-&amp;classification=Modeling&amp;query_format=advanced&amp;short_desc_type=allwordssubstr&amp;component=Acceleo&amp;product=M2T"></proposed>
      	</description>
+     	<committed bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc=Acceleo%20Juno%20Release%20-%20&amp;classification=Modeling&amp;query_format=advanced&amp;short_desc_type=allwordssubstr&amp;component=Acceleo&amp;product=M2T"></committed>
      </theme>
      <theme name="Eclipse IDE components">
         <description>
