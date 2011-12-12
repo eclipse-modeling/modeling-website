@@ -50,8 +50,9 @@
      Acceleo 4.0.0 will be compatible with Eclipse Ganymede, Galileo, Helios, Indigo and Juno. 
      EMF is used throughout Acceleo both for its inner mechanics and accessing the target models.
      The MDT-OCL component is reused to edit, parse, and interpret OCL as a sub-language of Acceleo. 
-     Acceleo will target the same Java version as EMF, which currently requires Java 5.
-     Acceleo will be tested and validated against Eclipse SDK 3.4.2, 3.5.2, 3.6.2, 3.7.2, 3.8.0 and 4.2.0.
+     Acceleo will target the same Java version as EMF, which currently requires Java 5. It will also be tested
+     on the latest release of Java 6 and Java 7. Acceleo will be tested and validated against Eclipse SDK 3.4.2, 
+     3.5.2, 3.6.2, 3.7.2, 3.8.0 and 4.2.0.
      </html:div>
           <internationalization>
           <html:div>
@@ -68,7 +69,7 @@
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-       The acceleo 4.0 version will be compatible with the 3.1 and 3.0 versions.
+       The acceleo 4.0 version will be compatible with the 3.2, 3.1 and 3.0 versions.
        </html:div>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
