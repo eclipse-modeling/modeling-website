@@ -71,10 +71,12 @@
        <html:div>
        <p><strong>API compatibility. </strong> Acceleo 4 will be compatible with the extension points defined
        in Acceleo 3.0, 3.1 and 3.2 but some Java APIs may be deprecated and replaced with new APIs.</p>
+       
        <p><strong>Workspace compatibility. </strong>A workspace being used with Acceleo 3.0, 3.1 or 3.2
        will still open and work with Acceleo 4. In general, though, once a workspace is opened with Acceleo 4
        there is no guarantee it will continue to work with older versions (that is, there may be some one-time
        migration of some workspace meta data that prevents it being usable in older versions.</p>
+       
        <p><strong>Project compatibility. </strong>A project being used with Acceleo 3.0, 3.1 or 3.2
        will stay compatible with Acceleo 4.</p>
        </html:div>
