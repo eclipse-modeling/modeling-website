@@ -67,7 +67,7 @@ Eclipse (MDT) OCL 4.0 will use GIT rather than CVS for source control.
 Eclipse (MDT) OCL 4.0 will primarily target Eclipse 4.2 rather than Eclipse 3.8.
 </html:p>
 <html:p>
-Eclipse (MDT) OCL 4.0.0  source code will be available as versions tagged "R3_2" in the project's GIT repository.
+Eclipse (MDT) OCL 4.0.0  source code will be available as versions tagged "R4_0" in the project's GIT repository.
 </html:p>
      </html:div>
    </release_deliverables>
@@ -76,7 +76,7 @@ Eclipse (MDT) OCL 4.0.0  source code will be available as versions tagged "R3_2"
          <html:div>
 Release milestones occur at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
-final 4.2 release of the Platform, upon which MDT OCL and other projects
+final 4.2 release of the Platform, upon which Eclipse OCL and other projects
 will release simultaneously. As Eclipse OCL is a dependency of numerous
 other projects, Eclipse OCL will deliver its Core plugins at the +1
 milestones schedule in accordance with the schedule below. Tools plugins
@@ -109,7 +109,7 @@ will be two days later on the +3 schedule.
         version 5.0 of the Java Runtime Environment, Standard Edition. Eclipse OCL
         will target the same Java version as EMF and UML2, which currently require
         Java 5. Eclipse Platform SDK 4.2 will be tested and validated on a
-        number of reference platforms. MDT OCL will be tested and validated
+        number of reference platforms. Eclipse OCL will be tested and validated
         against a subset of those listed for the platform.
      </html:div>
      <internationalization>
@@ -132,7 +132,7 @@ following projects.
 <html:ul>
     <html:li>Eclipse Platform SDK version 4.2</html:li>
     <html:li>Eclipse Modeling Framework (EMF) version 2.8</html:li>
-    <html:li>Model Development Tools (MDT) UML2 version 3.3</html:li>
+    <html:li>Model Development Tools (MDT) UML2 version 4.0</html:li>
 </html:ul>
 <html:p>
 As described above, the Eclipse OCL 4.0.0 release should address usability of the editors.
