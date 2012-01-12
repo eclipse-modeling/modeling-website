@@ -32,7 +32,6 @@ $dls = array(
 	"/mwe" => array(
 		"Model Workflow Engine" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE</b></acronym>" => "Update",
-			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE2</b></acronym>" => "2-Update",
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site MWE2 Language</b></acronym>" => "2-lang-Update",
 			"SDK MWE(Runtime, Source)" => "SDK",
 			"SDK MWE2 (Runtime, Source)" => "2-SDK",
