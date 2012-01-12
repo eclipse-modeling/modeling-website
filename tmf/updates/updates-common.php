@@ -50,8 +50,8 @@ EOHTML;
 		$cnt=0;
 		foreach ($siteXMLs as $type => $sitexml)
 		{
-			print !$cnt ? "Location: " : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(or): ";
-			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
+			print !$cnt ? "$label Repository Locations: \n" : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;";
+			print "$type: <b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
 			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
 			$cnt++;
 		}

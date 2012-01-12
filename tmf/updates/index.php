@@ -18,5 +18,5 @@ function notes()
 {
 }
 
-update_manager("TMF", "Eclipse Modeling", $PRS, false, true);
+update_manager("TMF", "Eclipse Modeling", $PRS, false, true, $siteXMLs);
 ?>
