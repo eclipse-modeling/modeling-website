@@ -3,7 +3,7 @@ if ($_SERVER["SERVER_NAME"] != "www.eclipse.org") {
 	header("Location: http://www.eclipse.org/modeling/tmf/updates/");
 }
 require_once ("../../includes/buildServer-common.php");
-require($_SERVER["DOCUMENT_ROOT"] . "./updates-common.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/modeling/tmf/updates/updates-common.php");
 
 $PRS = array(
 "TMF Xtext" => "modeling/tmf/xtext",
