@@ -6,20 +6,24 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"), $siteXMLsEclipse33 = array())
+function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false,
+							$siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"),
+							$MP_id, $siteXMLsEclipse33 = array())
 {
 	global $App, $Nav, $Menu, $theme, $PR;
 	$PRS = array (
-		$shortname => $PR,
+	$shortname => $PR,
 
 	);
 	$PRS = $replace ? $extra_PRS : array_merge($PRS, $extra_PRS);
 
 	ob_start();
-?>
-	<div id="midcolumn">
-		<h1><?php print $shortname; ?> Update Sites</h1>
-
+	?>
+<div id="midcolumn">
+	<h1>
+	<?php print $shortname; ?>
+		Update Sites
+	</h1>
 <?php
 
 	if (function_exists("doRequirements"))
@@ -33,33 +37,37 @@ function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubat
 	}
 ?>
 	<div class="homeitem3col">
-		<h3>Using Eclipse 3.4's Install Manager</h3>
+		<h3>Install Using Eclipse Update Manager</h3>
 		<p>To install these plugins, point your Install Manager at this site. 
 		<!-- For more on how to do this, <a href="http://www.eclipse.org/modeling/emf/docs/misc/UsingUpdateManager/UsingUpdateManager.html">click here</a>. --> 
-		</p>
-
-		<ul>
-			<li>Help &gt; Software Updates... &gt; Available Software &gt; Add Site...
-			<ul><?php
+		<br>Help &gt; Install new Software ... &gt; Available Software &gt; Add Site...
+			<p><?php
 	foreach ($PRS as $label => $thisPR)
 	{
 		print <<<EOHTML
-				<li>
+				
 											
 EOHTML;
-		$cnt=0;
+		print "<h3>$label</h3>";
+		print "<h4>Repository Locations: <br/></h4><ul>";
 		foreach ($siteXMLs as $type => $sitexml)
 		{
-			print !$cnt ? "$label Repository Locations: \n" : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;";
-			print "$type: <b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
-			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
-			$cnt++;
+			print "<li>$type : <a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></acronym></li>";
+		
 		}
-		print "			</li>\n";
+		
+		print "</ul>			\n";
+		if (true) {
+		?><p><h4>Install into a running Eclipse Indigo workspace</h4>
+		Just drag and drop this icon in to your Eclipse :
+		<a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=<?= $MP_id?>"  title="Drag and drop into a running Eclipse to install <?= $label?>">
+		<img src="http://marketplace.eclipse.org/misc/installbutton.png"/>
+		</a></p>
+<?php    }
 	} ?>
-				</ul>
-			</li>
-		</ul>
+				</p>
+		</p>
+		</p>
 	</div>
 <?php if ($siteXMLsEclipse33 && is_array($siteXMLsEclipse33) && sizeof($siteXMLsEclipse33 > 0)) { ?>
 	<div class="homeitem3col">
@@ -96,13 +104,15 @@ EOHTML;
 <?php } ?>
 
 	</div>
+
+
 	<?php
 
 	print "<div id=\"rightcolumn\">\n";
 
 	if (isset($isIncubating) && $isIncubating)
 	{
-	print '
+		print '
 		<div class="sideitem">
 		   <h6>Incubation</h6>
 		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
@@ -128,9 +138,10 @@ EOHTML;
 	ob_end_clean();
 	$pageTitle= "$longname - $shortname - Updates";
 	$pageKeywords= ""; // TODO: add something here
-	$pageAuthor= "Neil Skrypuch, Nick Boldt";
+	$pageAuthor= "Dennis Huebner, Neil Skrypuch, Nick Boldt";
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/modeling/includes/downloads.css"/>' . "\n");
 	$App->AddExtraHtmlHeader('<script src="/modeling/includes/downloads.js" type="text/javascript"></script>' . "\n"); //ie doesn't understand self closing script tags, and won't even try to render the page if you use one
+	$App->AddExtraHtmlHeader('<style type="text/css"> div#midcolumn { width:570px; }</style>'."\n");
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 }
 

@@ -6,17 +6,18 @@ require_once ("../../includes/buildServer-common.php");
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/tmf/updates/updates-common.php");
 
 $PRS = array(
-"TMF Xtext" => "modeling/tmf/xtext"
+"Xtext" => "modeling/tmf/xtext"
 );
 
-$siteXMLs = array("Releases (R)" => "releases/",
-				 "Milestones &amp; RCs (S)" => "milestones/",
-				 "Nightly Builds (N)" => "nightly/");
+$siteXMLs = array("Releases" => "composite/releases/",
+				 "Milestones" => "composite/milestones/",
+				 "Nightly" => "composite/nightly/");
 
+$MP_id = 1073;
 
 function notes()
 {
 }
 
-update_manager("TMF", "Eclipse Modeling", $PRS, false, true, $siteXMLs);
+update_manager("TMF", "Eclipse Modeling", $PRS, false, true, $siteXMLs, $MP_id);
 ?>
