@@ -6,7 +6,7 @@ require_once ("../../includes/buildServer-common.php");
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/tmf/updates/updates-common.php");
 
 $PRS = array(
-"TMF Xtext" => "modeling/tmf/xtext",
+"TMF Xtext" => "modeling/tmf/xtext"
 );
 
 $siteXMLs = array("Releases (R)" => "releases/",
