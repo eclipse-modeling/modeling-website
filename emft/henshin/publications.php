@@ -31,7 +31,7 @@ $html = <<<EOHTML
 <div id="midcolumn">
 <h1>$pageTitle</h1>
 
-<h2>Conferences and Workshops</h2>
+<h3>Conference and Workshop Proceedings</h3>
 <ul>
 <li><a href="http://www.springerlink.com/content/qrlj332wxhn01227/">Henshin: 
 Advanced Concepts and Tools for In-place EMF Model Transformations</a>.
@@ -47,7 +47,7 @@ Electronic Communications of the EASST, 2010, Volume&nbsp;32.
 
 <br>
 
-<h2>Unpublished Material</h2>
+<h3>Unpublished Material</h3>
 
 <br>
 <br>
