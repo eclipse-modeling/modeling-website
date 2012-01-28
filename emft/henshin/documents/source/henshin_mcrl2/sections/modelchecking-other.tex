@@ -1,0 +1,141 @@
+
+\section{Other model checkers supported by \henshin}
+\label{sec:modelchecking-other}
+
+\paragraph{OCL invariants}
+The Object Constraint Language (OCL)~\cite{ocl} can be used in \henshin to specify and check structural state invariants. For small state spaces, found counterexamples are highlighted in the state space explorer and can be inspected in more detail.
+ 
+\halflineup\paragraph{\cadp}
+Besides \mcrl, model checking of modal $\mu$-calculus formulas for explicit state spaces, e.g., given as LTSs, is also supported by the the \cadp toolsuite~\cite{cadp}. The \henshin state space tools include an adapter which translates state spaces generated from graph transformation systems into the input format of \cadp, and invokes the \texttt{evaluator} model checking tool. In contrast to \mcrl, \cadp can output counterexamples which are automatically extracted and --if possible-- shown in the graphical state space explorer. However, \cadp can currently not be used for instance-aware model checking.
+ 
+\halflineup\paragraph{\prism}
+Based on the approach of stochastic graph transformation~\cite{HGM06}, \henshin rules can be annotated with stochastic delays (formally, rates of exponential distributions). The rates together with the generated state space give rise to a Continuous Time Markov Chain. The \henshin state space tools can generate such a stochastic model in the input format of the \prism model checker. Using a front-end in the state space explorer, the steady state probabilities can be computed, formulas
+specified in Continuous Stochastic Logic (CSL) %~\cite{BHHK00}
+can be verified, and plots can be generated using \prism.
+
+% WICHTIGSTEN SACHEN MERGEN MIT DEM OBEREN TEIL. DANN HIER NUR NOCH ZUSAETZLICHE FEATURES UND AVAILABILITY OF THE TOOL
+% 
+% GENERAL TOOL OVERVIEW -- UPDATE!!! 
+% We interpret EMF instance models as states
+% and rule applications as transitions which are labeled with
+% the name of the applied rule. Provided with one or more
+% initial state models, this gives rise to a labeled
+% transition system which can be model checked.
+% We have implemented this state space analysis approach in a
+% graphical environment as part of the Henshin
+% toolset~\cite{henshin-website}. Our tool (shown in
+% Fig.~\ref{fig:tool}) supports efficient state space
+% generation, the use of abstractions, state space
+% visualization, and model checking using third-party~tools.
+
+%\begin{figure}
+%\centering
+%\setlength\fboxsep{0pt}
+%\setlength\fboxrule{0.5pt}
+%\fbox{\includegraphics[width=\textwidth]{images/tool}}
+%\caption{NEU, WENN UEBERHAUPT. screenshot of the Henshin state space explorer}
+%\label{fig:tool}
+%\vspace{-3mm}
+%\end{figure}
+
+% \paragraph{State space generation}\ldots
+% graph hash functions\ldots 
+% Optimization for graph isomorphy checking for graph transformation systems with fixed topologies such as the RailCab example. Idea: statically check which parts types of elements cannot be changed by the rules. Based on the containment tree structure in EMF models, we can precompute a partial match for these elements and use it for the isomorphy checking. SPEEDUP fuers BEISPIEL??
+% 
+% \paragraph{State space visualization}\ldots
+% 
+% UPDATE!!!
+% A core functionality of our state space analysis tools is
+% the generation of an explicit state space, which can be done
+% in a graphical state space explorer or `off\-line', which is
+% more efficient. States are represented by an index and
+% additionally contain a hash value of the EMF model they
+% represent, which allows efficient lookup of states given an
+% arbitrary EMF model.
+% Note that in a state space, links to the
+% models are stored only for the initial states. The models of
+% all other states are derived at runtime and cached only. A
+% flag associated with the states indicates whether they are
+% already unfolded or not, allowing to resume the 
+% state space generation at a later point. Our underlying
+% state space implementation is itself based on an EMF model.
+% For efficient storage, we use a custom binary file format,
+% which can also be exported to standard LTS formats.
+% Moreover, on multi-core machines, the state space generation 
+% is done using multiple worker threads.
+% However, this requires to lock the whole state space for
+% checking whether a generated model is already represented by
+% a state and adding a new state if it is unknown. Since the
+% lookup of states requires a possibly expensive equality
+% check of state models, we removed the locking for the state
+% lookup phase and added a monitoring for concurrently 
+% occurring state space modifications. Using this
+% optimization, the state space needs to be locked only 
+% for comparison with the states that have been added
+% by other worker threads during the lookup phase. Initial
+% experiments showed that the multi-threaded implementation
+% can indeed increase the performance of the state space
+% generation significantly. For instance, in our dining
+% philosophers example without the use of any abstractions,
+% the multi-threaded implementation was approximately
+% 2.6~times faster on a machine with 4 cores. 
+% Using the lightweight state space model and
+% multi-threaded state space generation, our 
+% tool can handle state spaces with millions of
+% states on recent desktop computers, depending on
+% the size of the models.
+% Moreover, small state spaces can be visualized in a
+% graphical state space explorer, 
+% as shown in Fig.~\ref{fig:tool}. This tool supports animated
+% layouting using a force-based (spring) algorithm and export
+% to \LaTeX. Moreover, instance models of initial and
+% derived states can be inspected.
+% 
+% \paragraph{Configurable isomorphy checks}
+% 
+% UPDATE!!! NICHT ZU TECHNISCH! 
+% The lookup of states during the state space generation
+% is done using hash values and a standard equality
+% check for EMF models. References between objects in 
+% EMF are stored and compared as lists. However, in our
+% graph-based transformation approach, the order of references
+% is not considered. Therefore, switching from the EMF-based
+% equality check to a graph isomorphism check yields a
+% bisimulation-preserving abstraction of the original state
+% space, which prevents an exponential blowup. Note that
+% the used hash function needs to be adapted,~too.
+% Moreover, if none of the rules defines an application
+% condition on the objects' attributes, the values of all
+% attributes can be ignored as well in the equality
+% check and the hash value calculation, which yields another
+% bisimulation-preserving abstraction. Note that rules
+% can be analyzed statically to determine whether they contain
+% attribute conditions or not. Ensuring bisimulation
+% equivalence of the abstract state space is particularly
+% important for applying model checking, as discussed in
+% Section~\ref{sec:model-checking}. The two abstractions
+% mentioned above are both implemented in the state space
+% analysis tools in Henshin and can be enabled
+% in the state space explorer, as shown in
+% the right part of Fig.~\ref{fig:tool}.
+% 
+% TABELLE MIT VERGLEICH DER VERSCHIEDENEN VARIANTEN: Zustaende, Transitionen, (Zeit ?)
+% 
+% \paragraph{Invariant Checking}
+% The Object Constraint Language (OCL)~\cite{ocl} can be used
+% to specify structural properties of EMF models. In Henshin,
+% OCL is supported for validating structural invariants
+% in state spaces. Found counterexamples are highlighted in
+% the state space explorer and can be inspected in more
+% detail.
+% 
+% \paragraph{Model checking}
+% 
+% State space generation, abstraction and visualization is
+% implemented directly in Henshin. Model checking, however,
+% is not done by Henshin itself. Instead, third-party model
+% checkers and other analysis tools are used to validate
+% structural and behavioral properties. The Henshin state
+% space explorer provides a uniform front-end to a number
+% of analysis tools, as discussed in the following.
+% 

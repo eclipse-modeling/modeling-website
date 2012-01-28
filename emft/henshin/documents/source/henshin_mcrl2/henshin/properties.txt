@@ -1,0 +1,11 @@
+
+For every shuttle it holds that in every state it can eventually form a convoy with another shuttle.
+
+forall s:Vehicle . val(isShuttle(s)) => ([true*] ( exists t:Vehicle. val(isShuttle(t)) && (<true*.createConvoy(s,t)> true )) )
+
+
+
+For every shuttle it holds that in every state it can eventually form a convoy with another shuttle only by moving itself.
+
+forall s:Vehicle . val(isShuttle(s)) => ([true*] ( exists t:Vehicle. val(isShuttle(t)) && (<move(s)*.createConvoy(s,t)> true )) )
+

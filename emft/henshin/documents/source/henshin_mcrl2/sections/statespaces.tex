@@ -1,0 +1,28 @@
+
+\section{State space generation and visualization with \henshin}
+\label{sec:statespaces}
+
+The \henshin toolset contains an interpreter engine implementing graph matching algorithms based on constraint solving for executing transformations. In addition, a number of tools for state space generation, visualization, and verification using invariant checking and model checking are included.
+
+\begin{wraptable}{r}{5.3cm}
+\vspace{-3mm}
+\centering
+\begin{tabular}{|c||r|r|r|}
+\hline
+IDs & States	& Trans. & Time \\ \hline\hline
+no  & 1,274		& 4,297  & 1s \\ \hline
+yes & 15,030	& 51,384 & 20s \\ \hline
+\end{tabular}
+\caption{RailCab LTS details}
+\label{tab:details}
+\vspace{-3mm}
+\end{wraptable}
+\halflineup\paragraph{State space generation}
+State spaces are generated as labeled transition systems (LTSs) where the states are graphs. 
+Two different modes are supported: without and with nodes IDs. In the mode without node IDs, transition labels consist only of rule names, without parameters. In this mode, states are compared using mere graph isomorphy checking and thus, different instances of the same node type cannot be distinguished. In the mode with node IDs, all nodes whose type occurs as a parameter type in a rule, get a unique ID, e.g. all nodes of type \textsf{Train} and \textsf{Shuttle} in the RailCab example. These node IDs are then used as identifiers in the parameters of transition labels. The mode with node~IDs yields  significantly larger state spaces. However, it is required to distinguish between different nodes of the same type and to track their history, which is a key ingredient for the instance-aware model checking as we argue in Section~\ref{sec:modelchecking-mcrl2}.
+The sizes of the generated LTSs for the RailCab example without and with node IDs are shown in Table~\ref{tab:details} together with the time required for generating the complete state spaces.\footnote{The tests were conducted on a 64-bit Intel(R) Xeon(R) CPU with 4$\times$2.50GHz and 8GB memory
+running Linux 2.6.26.} \henshin also supports interactive visualization and exploration of small state spaces (for $\sim\!10^4$ states).
+
+
+\halflineup\paragraph{Optimizations}
+The state space generation tool is based on a memory-efficient state space model and makes extensive use of caching. On multi-core processors, the state space generation is performed using multiple threads. The state space generation is implemented as a hybrid approach of depth-first and breadth-first search.\footnote{Depth-first search can make better use of caching, but cannot be parallelized. Therefore, the tool unfolds a fixed number of new states at once using multiple threads. Thus, the tool implements a hybrid approach of depth-first and breadth-first search.} Indexing of states is crucial to avoid unnecessary isomorphy checks and is implemented using a graph hash function. For the graph isomorphy checking, the rule match finding engine of the \henshin interpreter is used. Node IDs are generated only for those nodes whose type is used as a parameter in a rule. Thereby, symmetries in the underlying system topology can be used to reduce the size of the state space. For instance, in the RailCab example the topology of the track network can be mirrored vertically (see Figure~\ref{fig:system}), which reduces the size of the state space by a factor of~2.

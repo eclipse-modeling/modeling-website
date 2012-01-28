@@ -1,0 +1,95 @@
+\documentclass[copyright,creativecommons]{eptcs-patched}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[strings]{underscore}
+\usepackage{todonotes}
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{enumitem
+}
+
+%%% COMMANDS %%%
+\setcounter{tocdepth}{3}
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\newcommand{\blankline}{\vspace{\baselineskip}}
+\newcommand{\halflineup}{\vspace{-0.5\baselineskip}}
+
+% Names
+\newcommand{\henshin}{\textsc{Henshin}\xspace}
+\newcommand{\prism}{\textsc{PRISM}\xspace}
+\newcommand{\groove}{\textsc{GROOVE}\xspace}
+\newcommand{\cadp}{\textsc{CADP}\xspace}
+\newcommand{\mcrl}{\textsc{mCRL}2\xspace}
+\newcommand{\moment}{\textsc{MOMENT}2\xspace}
+\newcommand{\maude}{\textsc{Maude}\xspace}
+
+% Enable bold face in type writer font:
+\DeclareFontShape{OT1}{cmtt}{bx}{n}{<5><6><7><8><9><10><10.95><12><14.4><17.28><20.74><24.88>cmttb10}{}
+
+\definecolor{keyword}{RGB}{127,0,85}
+
+\lstset{%
+	% Keywords:
+   keywords={sort,map,var,struct,eqn,forall,val,true,false,exists,act},
+   keywordstyle={\color{keyword}\bfseries},
+   emphstyle={\underbar},
+	% Columns & spacing:
+	columns=flexible,
+	mathescape=true,
+	% Styles
+	basicstyle=\small\tt,
+	commentstyle=\itshape\color{gray},
+	texcl=true,
+%	keywordstyle=\bfseries\color{black},
+	frame=single,
+	% Numbers
+	numbers=left,
+	numbersep=5pt
+}
+
+% mCLR2 listing style:
+\lstnewenvironment{mcrlcode}[1][]{\lstset{#1}}{}
+
+%%% TITLE %%%
+\title{Instance-Aware Model Checking of Graph~Transformation~Systems using Henshin and mCRL2}
+
+\def\titlerunning{Instance-Aware Model Checking of Graph Transformation Systems using Henshin and mCRL2}
+
+\author{
+Christian Krause
+\and
+Stefan Neumann
+\and
+\institute{Hasso Plattner Institute for Software Systems Engineering,
+Prof.-Dr.-Helmert-Str. 2-3, D-14482 Potsdam, Germany}
+\email{\{christian.krause|stefan.neumann\}@hpi.uni-potsdam.de}
+}
+
+\def\authorrunning{Christian Krause, Stefan Neumann}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/abstract}
+
+\input{sections/introduction}
+\input{sections/modeling}
+\input{sections/statespaces}
+\input{sections/modelchecking-mcrl2}
+\input{sections/modelchecking-other}
+\input{sections/relatedwork}
+\input{sections/conclusions}
+
+\bibliographystyle{eptcs}
+\bibliography{henshin_mcrl2}
+
+\end{document}

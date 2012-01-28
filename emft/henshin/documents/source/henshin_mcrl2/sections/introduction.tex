@@ -1,0 +1,17 @@
+
+\section{Introduction}
+\label{sec:introduction}
+
+Graph transformation systems constitute a formal modeling approach for systems with structural state models and operational semantics that is defined in terms of rule-based rewriting of these models. Due to the graph-based nature of the state models, graph transformation is particularly well-suited to specify applications where the network topologies must be modeled explicitly, such as in distributed, mobile and reconfigurable systems (see, e.g.,~\cite{HGM06}). As a running example in this paper, we consider the RailCab system~\cite{RailCab} in which small, intelligent, autonomous shuttles provide on-demand passenger transfers. In our modeling, the shuttles operate on an existing and fixed railway network and share the tracks with other vehicles, e.g. trains. The dynamics of the system is defined using graph transformation rules that model the movement of vehicles on the tracks and the forming of convoys between shuttles.
+
+As a standard approach in formal verification methods, finite graph transformation systems can be analyzed by constructing an explicit state space and applying model checking. However, the standard approach of using atomic propositions or simple transition labels for the model checking of graph transformation systems is rather unsatisfactory, since it does not provide a means to refer to entities in the structural state models. In this paper, we therefore describe an approach and a toolchain for \emph{instance-aware} model checking of graph transformation systems, which allows to refer to specific nodes in the graph models and to use quantification over node types in the specification of formulas. As technical contributions of this paper, we describe (1) our work on the state space generation tools for the graph transformation-based modeling language and toolset \henshin~\cite{henshin}, and (2) an adapter and user front-end which allows to automatically perform instance-aware model checking using the \mcrl~\cite{mcrl2} toolsuite.
+
+
+
+% \bigskip
+% 
+% background info; motivation; case study; contributions: tool: state space generation + visualization + adapters for third-party model checker; particularly \mcrl for instance-ware model checking.
+% 
+% \vfill
+% \paragraph{Organization} 
+% In Section~\ref{sec:modeling} we describe the modeling in \henshin. In Section~\ref{sec:statespaces} we discuss the state space generation and vizualization tools in \henshin. In Section~\ref{sec:modelchecking-mcrl2} we present our approach for instance-aware model checking using an adapter for \mcrl. In Section~\ref{sec:modelchecking-other} we give an overview of other model checkers supported by \henshin. Section~\ref{sec:conclusions} contains conclusions and future work.
