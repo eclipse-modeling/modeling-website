@@ -86,6 +86,7 @@ $Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
 $Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
 $Nav->addNavSeparator("Documentation", "$rooturl/docs.php?project=$proj");
+$Nav->addCustomNav("Javadoc", "$downurl/$PR/javadoc", "_self", 2);
 $Nav->addCustomNav("FAQ", "$rooturl/faq.php?project=$proj", "_self", 2);
 $Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.m2t", "_self", 2);
 $Nav->addCustomNav("Release Notes", "http://www.eclipse.org/$PR/news/relnotes.php?project=$proj&amp;version=HEAD", "_self", 2);
