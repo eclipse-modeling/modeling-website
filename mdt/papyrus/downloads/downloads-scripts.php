@@ -341,6 +341,11 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 					$didnotruns += $results[2];
 					$icon = "not";
 					$results = null;
+					
+					$formattedResult = "testresults/html/index.html";
+					if (is_file("$PWD${path}$formattedResult")){
+						$link2 = ($isBuildServer ? "" : "http://download.eclipse.org/") . $mid.$path.$formattedResult;
+					}
 				}
 			}
 
