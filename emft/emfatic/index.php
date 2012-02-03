@@ -12,7 +12,7 @@
       body {
         padding-top: 60px;
       }
-      p {
+      body {
       	text-align:justify;	
       }
     </style>
@@ -92,7 +92,8 @@ single <code>EClass</code> named "Foo".<br>
 <br>
 As is probably clear from the first Emfatic program above, the keyword <span>package</span> introduces an Ecore <code>EPackage</code> and the identifier
 following it maps to the <code>name</code>
-attribute of the generated <code>EPackage</code>.<br>
+attribute of the generated <code>EPackage</code>.<br><br>
+
 <h4>1.1 Main Package</h4>
 The only thing required in an Emfatic source file is a package
 declaration.&nbsp; This required element is called the main package
@@ -101,6 +102,34 @@ it defines will contain (directly or indirectly) all of the other
 elements of the generated Ecore model.&nbsp; Thus the simplest possible
 Emfatic program would look something like this:<br>
 <br>
+</div>
+<div class="span4">
+			<h3>Update site</h3>
+			<div class="alert alert-info"><b>http://download.eclipse.org/emfatic/update</b></div>
+			<div class="alert alert-warning"><b>Warning:</b> If you've installed a previous version of Emfatic from a different update site you'll need to uninstall it before installing this one.</div>
+			
+		</div>
+		
+		<div class="span4">
+			<h3>Links</h3>
+			<ul class="nav nav-pills nav-stacked">
+			  <li class="active"><a href="#">Home</a>
+			  <li><a href="http://www.eclipse.org/forums/index.php/f/19/">Forum</a>
+			  <li><a href="http://wiki.eclipse.org/Emfatic">Wiki Article and Screenshots</a>
+			  <li><a href="http://www.emn.fr/z-info/atlanmod/index.php/Emfatic">A Large Collection of Emfatic Models</a>
+			</ul>
+		</div>
+		<div class="span4">
+			<h3>Source code</h3>
+			
+			<ul>
+				<li><b>Server:</b> cvs.eclipse.org
+				<li><b>Repository:</b> /cvsroot/modeling
+				<li><b>Module:</b> org.eclipse.emf/org.eclipse.emf.emfatic
+			</ul>
+						
+		</div>
+<div class="span12">
 <pre>package p;</pre>
 Specifying values for the <code>EPackage</code>
 attributes <code>nsURI</code> and <code>nsPrefix</code> is done like this:<br>
@@ -113,7 +142,7 @@ be written in
 any case.&nbsp; Also note that the order of declaration for <span>uri</span> and <span>prefix</span> is not important<span></span>.&nbsp; The syntax of the <span>@namespace</span> declaration is
 actually a special case of the more general syntax for declaring
 EAnnotations, which will be described in full detail in section 5 below.<br>
-<br>
+<br>		
 <h4>1.2 Sub-Packages</h4>
 Ecore allows packages to be nested inside packages.&nbsp; In Emfatic,
 the syntax for nested packages differs from that of the main
@@ -1052,22 +1081,9 @@ generated Java code when working with an EMF genmodel.<br>
 This article was originally written by Chris Daly (cjdaly@us.ibm.com)
 (Copyright IBM Corp. 2004) and was hosted under IBM alphaWorks.		
 </div>
-		<div class="span4">
-			<h3>Update site</h3>
-			<div class="alert alert-info">http://download.eclipse.org/emfatic/update</div>
-			<div class="alert alert-warning"><b>Warning:</b> If you've installed the version of Emfatic available from sharf.gr you'll need to uninstall it before installing this one.</div>
-			
-		</div>
 		
-		<div class="span4">
-			<h3>Links</h3>
-			<ul class="nav nav-pills nav-stacked">
-			  <li class="active"><a href="#">Home</a>
-			  <li><a href="http://www.eclipse.org/forums/index.php/f/19/">Forum</a>
-			</ul>
-		</div>
 	</div>
-      <footer>
+      <footer style="padding-top:20px">
         <ul class="nav nav-pills">
         <li><a href="#">Home</a>
         <li><a href="http://www.eclipse.org/legal/privacy.php">Privacy Policy</a>
@@ -1075,8 +1091,9 @@ This article was originally written by Chris Daly (cjdaly@us.ibm.com)
         <li><a href="http://www.eclipse.org/legal/copyright.php">Copyright Agent</a>
         <li><a href="http://www.eclipse.org/legal/">Legal</a>
         <li><a href="http://www.eclipse.org/org/foundation/contact.php">Contact us</a>
+        <li class="active"><a> Copyright © 2012 The Eclipse Foundation. All Rights Reserved.</a>
         </ul>
-        Copyright © 2012 The Eclipse Foundation. All Rights Reserved.
+        
       </footer>
 
     </div> <!-- /container -->
