@@ -1050,14 +1050,8 @@ generated Java code when working with an EMF genmodel.<br>
 <br>
 <h3 id="about">6. About this article</h3>
 This article was originally written by Chris Daly (cjdaly@us.ibm.com)
-(Copyright IBM Corp. 2004) and was hosted under IBM alphaWorks. 
-When Emfatic graduated from alphaWorks and moved to Eclipse.org, 
-this part of its documentation somehow got lost in the way. 
-Since all metamodel examples in the Epsilon website are expressed 
-in Emfatic, we thought we'd share it here until a more 
-permanent solution is found.<br>
-<br>
-		</div>
+(Copyright IBM Corp. 2004) and was hosted under IBM alphaWorks.		
+</div>
 		<div class="span4">
 			<h3>Update site</h3>
 			<div class="alert alert-info">http://download.eclipse.org/emfatic/update</div>
