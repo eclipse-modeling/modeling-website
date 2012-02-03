@@ -53,7 +53,7 @@
     <a href="http://www.eclipse.org">Eclipse.org</a> <span class="divider">/</span>
   </li>
   <li>
-    <a href="http://www.eclipse.org/modeling">Modeling</a> <span class="divider">/</span>
+    <a href="http://www.eclipse.org/modeling">Eclipse Modeling Project</a> <span class="divider">/</span>
   </li>
   <li>
     <a href="http://www.eclipse.org/modeling/emft">Eclipse Modeling Framework Technology (EMFT)</a> <span class="divider">/</span>
@@ -1060,7 +1060,9 @@ permanent solution is found.<br>
 		</div>
 		<div class="span4">
 			<h3>Update site</h3>
-			<div class="alert alert-info">Not yet available. Stay tuned.</div>
+			<div class="alert alert-info">http://download.eclipse.org/emfatic/update</div>
+			<div class="alert alert-warning"><b>Warning:</b> If you've installed the version of Emfatic available from sharf.gr you'll need to uninstall it before installing this one.</div>
+			
 		</div>
 		
 		<div class="span4">
