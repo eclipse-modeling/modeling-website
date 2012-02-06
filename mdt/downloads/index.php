@@ -55,7 +55,7 @@ $dls = array(
 	"/ocl" => array(
 		"OCL" => array(
 			"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update",  # deprecated
-			"<acronym title=\"Click to download archived SDK P2 Repository\"><img alt=\"Click to download archived SDK P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">SDK Update Site</b></acronym>" => "Update-core", # new in buckminster based tools/core builds
+			"<acronym title=\"Click to download archived Core SDK P2 Repository\"><img alt=\"Click to download archived Core SDK P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">Core SDK Update Site</b></acronym>" => "Update-core", # new in buckminster based tools/core builds
 			"<acronym title=\"Click to download archived All-In-One Tools P2 Repository\"><img alt=\"Click to download archived All-In-One Tools P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update-tools", # new in buckminster based tools/core builds
 			"SDK (Runtime, EMF Edit Support, Source, Documentation) " => "SDK", # deprecated						
 			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-core", # new in buckminster based tools/core builds
