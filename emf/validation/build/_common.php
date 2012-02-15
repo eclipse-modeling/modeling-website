@@ -6,7 +6,8 @@ $options = array (
 	
 	"BranchAndJDK" => array (
 		"modeling.eclipse.org=------------,------------",
-        "1.5.0=HEAD,/opt/sun-java2-5.0",
+        "1.6.0=HEAD,/opt/sun-java2-5.0",
+        "1.5.0=R1_5_maintenance,/opt/sun-java2-5.0",
         "1.4.1=R1_4_maintenance,/opt/sun-java2-5.0",
         "1.3.1=R1_3_maintenance,/opt/sun-java2-5.0",
         "1.2.1=R1_2_maintenance,/opt/sun-java2-5.0",
@@ -26,13 +27,13 @@ $options = array (
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
 	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|" .
-			"2\.7\..+/[ISR]20.*/emf-xsd-SDK-|" .
-			"3\.2\..+/[ISR]20.*/mdt-uml2-SDK|" .
-			"3\.1\..+/[ISR]20.*mdt-ocl-.*SDK-",
+			"2\.8\..+/[ISR]20.*/emf-xsd-SDK-|" .
+			"4\.0\..+/[ISR]20.*/mdt-uml2-SDK|" .
+			"4\.0\..+/[ISR]20.*mdt-ocl-.*SDK-",
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "boris.gruschko@sap.com,anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list
 	
     "Users" => array("ahunter","ahunter",NULL) /* build user, eclipse cvs user, IES cvs user */
 );

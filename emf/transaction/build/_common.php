@@ -26,15 +26,15 @@ $options = array (
 	 * and /home/www-data/build/requests/dependencies.urls.txt 
 	 * */ 	
 	"regex" => "I20.*/eclipse-SDK-|[SR]-.*20.*/eclipse-SDK-|" .
-			"2\.7\..+/[ISR]20.*/emf-xsd-SDK-|" .
-			"1\.5\..+/[ISR]20.*/emf-query-SDK-|" .
-			"1\.5\..+/[ISR]20.*/emf-validation-SDK-|" .
-			"3\.2\..+/[ISR]20.*/mdt-uml2-SDK|" .
-			"3\.1\..+/[ISR]20.*/mdt-ocl-.*SDK-",
+			"2\.8\..+/[ISR]20.*/emf-xsd-SDK-|" .
+			"1\.6\..+/[ISR]20.*/emf-query-SDK-|" .
+			"1\.6\..+/[ISR]20.*/emf-validation-SDK-|" .
+			"4\.0\..+/[ISR]20.*/mdt-uml2-SDK|" .
+			"4\.0\..+/[ISR]20.*/mdt-ocl-.*SDK-",
 	
 	"Mapfile_Rule_Default" => 0, // 0: "Use Map, No Tagging=use-false" or 1:"Generate Map, No Tagging=gen-false"
 
-	"EmailDefault" => "boris.gruschko@sap.com,anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list
+	"EmailDefault" => "anthonyh@ca.ibm.com", // prefil email contact box with comma-sep'd list
 	
     "Users" => array("ahunter","ahunter",NULL) /* build user, eclipse cvs user, IES cvs user */
 );
