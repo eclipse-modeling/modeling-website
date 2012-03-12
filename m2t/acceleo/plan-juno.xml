@@ -2,14 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="Project Name">
-   <release projectid="modeling.m2t.acceleo" version="4.0.0"/>
+   <release projectid="modeling.m2t.acceleo" version="3.3.0"/>
    <introduction>
      <html:div>
-     This document lays out the feature and API set for the 4.0.0 release of the M2T Acceleo project.  
+     This document lays out the feature and API set for the 3.3.0 release of the M2T Acceleo project.  
      The Acceleo component is an open source component under the Eclipse Modeling / Model-To-Text (M2T) project.
      Its primary goal is to provide an implementation of the MOF Model-To-Text OMG standard.
      
-	 The Juno release of Acceleo introduces some API or feature breakages, and is thus labeled 4.0.0.
+	 The Juno release of Acceleo introduces some new APIs and is labeled 3.3.0.
      </html:div>
    </introduction>
    <release_deliverables>
@@ -41,13 +41,13 @@
       <milestone date="06/01/2012" milestone="RC2"><html:div></html:div></milestone>
       <milestone date="06/08/2012" milestone="RC3"><html:div></html:div></milestone>
       <milestone date="06/15/2012" milestone="RC4"><html:div></html:div></milestone>
-      <milestone date="06/27/2012" milestone="4.0.0 Final"><html:div></html:div></milestone>
+      <milestone date="06/27/2012" milestone="3.3.0 Final"><html:div></html:div></milestone>
       <postamble><html:div></html:div></postamble>
    </release_milestones>
    <target_environments>
      <html:div>
      The acceleo project depends upon the Platform and other projects, which are mostly "pure" Java.
-     Acceleo 4.0.0 will be compatible with Eclipse Ganymede, Galileo, Helios, Indigo and Juno. 
+     Acceleo 3.3.0 will be compatible with Eclipse Ganymede, Galileo, Helios, Indigo and Juno. 
      EMF is used throughout Acceleo both for its inner mechanics and accessing the target models.
      The MDT-OCL component is reused to edit, parse, and interpret OCL as a sub-language of Acceleo. 
      Acceleo will target the same Java version as EMF, which currently requires Java 5. It will also be tested
@@ -69,16 +69,16 @@
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-       <html:p><html:strong>API compatibility. </html:strong> Acceleo 4 will be compatible with the extension points defined
+       <html:p><html:strong>API compatibility. </html:strong> Acceleo 3.3 will be compatible with the extension points defined
        in Acceleo 3.0, 3.1 and 3.2 but some Java APIs may be deprecated and replaced with new APIs.</html:p>
        
        <html:p><html:strong>Workspace compatibility. </html:strong>A workspace being used with Acceleo 3.0, 3.1 or 3.2
-       will still open and work with Acceleo 4. In general, though, once a workspace is opened with Acceleo 4
+       will still open and work with Acceleo 3.3. In general, though, once a workspace is opened with Acceleo 3.3
        there is no guarantee it will continue to work with older versions (that is, there may be some one-time
        migration of some workspace meta data that prevents it being usable in older versions.</html:p>
        
        <html:p><html:strong>Project compatibility. </html:strong>A project being used with Acceleo 3.0, 3.1 or 3.2
-       will stay compatible with Acceleo 4.</html:p>
+       will stay compatible with Acceleo 3.3.</html:p>
        </html:div>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
