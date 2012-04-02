@@ -1,19 +1,196 @@
 
 <h1>Henshin Benchmark: Sierpinski Triangle</h1>
 
+<style type="text/css">
+table { 
+    border-collapse:collapse;
+}
+td {
+    border: 1px solid black;
+    vertical-align:top;
+    text-align:right;
+    overflow:hidden;
+}
+th {
+    border: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+tr {
+    border: 1px solid black;
+}
+</style>
+
 <p>
-<img src="http://upload.wikimedia.org/wikipedia/en/8/88/Sierpinski_Triangle.svg" width="200px" align="right" />
-This is a very simple example which we use to do some benchmarking for the Henshin interpreter.
+<img src="http://upload.wikimedia.org/wikipedia/en/8/88/Sierpinski_Triangle.svg" width="150px" align="right" />
+This is a very simple example which we use to do some benchmarking for the Henshin interpreter. 
+The <a href="http://en.wikipedia.org/wiki/Sierpinski_triangle">Sierpinski triangle</a> is a fractal 
+which is constructed by iteratively dividing triangles into sub-triangles.
+The number of nodes in the triangle grows exponentially with the number of iterations. 
 </p>
 
 <p>
-The transformation consists of a single rule, which divides and adds new triangles 
+The transformation consists of a single rule, which divides and adds new triangles. 
+The screenshot below shows this rule in the graphical editor. Before opening the file,
+make sure you register the package in the runtime by right-clicking on the Ecore file 
+and selecting <i>Henshin -- Register EPackages </i>.
+</p>
 
-<br>
-SCREENSHOT
+<p>
+<a href="examples/sierpinski/addtriangle.png"><img width="500" src="examples/sierpinski/addtriangle.png" /></a>
+</p>
 
+<p>
 The Java code for conducting the benchmark is shown at the
 <a href="http://wiki.eclipse.org/Henshin_Interpreter">Interpreter wikipage</a>.
 </p>
 
-BENCHMARK
+<p>
+The following benchmark was conducted on a Intel(R) Xeon(R) CPU @ 2.50GHz with 4 cores and 8GB of main memory. 
+The benchmark was run using these JVM parameters: "-Xms7G -Xmx7G". All times are in milliseconds.
+</p>
+
+<table>
+<tbody>
+
+<tr>
+<th>&nbsp; Level &nbsp;</th>
+<th>&nbsp; Rule applications &nbsp;</th>
+<th>&nbsp; Matching Time &nbsp;</th>
+<th>&nbsp; Application Time &nbsp;</th>
+<th>&nbsp; Total Time &nbsp;</th>
+<th>&nbsp; Nodes &nbsp;</th>
+</tr>
+
+
+<tr><td>1</td>
+<td>1</td>
+<td>1ms</td>
+<td>0ms</td>
+<td>1ms</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>3</td>
+<td>0ms</td>
+<td>2ms</td>
+<td>2ms</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>9</td>
+<td>1ms</td>
+<td>6ms</td>
+<td>7ms</td>
+<td>42</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>27</td>
+<td>27ms</td>
+<td>20ms</td>
+<td>47ms</td>
+<td>123</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>81</td>
+<td>16ms</td>
+<td>63ms</td>
+<td>79ms</td>
+<td>366</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>243</td>
+<td>46ms</td>
+<td>181ms</td>
+<td>227ms</td>
+<td>1,095</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>729</td>
+<td>174ms</td>
+<td>552ms</td>
+<td>726ms</td>
+<td>3,282</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>2,187</td>
+<td>98ms</td>
+<td>300ms</td>
+<td>398ms</td>
+<td>9,843</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>6,561</td>
+<td>67ms</td>
+<td>318ms</td>
+<td>385ms</td>
+<td>29,526</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>19,683</td>
+<td>197ms</td>
+<td>810ms</td>
+<td>1,007ms</td>
+<td>88,575</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>59,049</td>
+<td>583ms</td>
+<td>2,386ms</td>
+<td>2,969ms</td>
+<td>265,722</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>177,147</td>
+<td>1,135ms</td>
+<td>7,764ms</td>
+<td>8,899ms</td>
+<td>797,163</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>531,441</td>
+<td>4,254ms</td>
+<td>26,139ms</td>
+<td>30,393ms</td>
+<td>2,391,486</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>1,594,323</td>
+<td>14,713ms</td>
+<td>570,023ms</td>
+<td>584,736ms</td>
+<td>&nbsp;7,174,455</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>
+For level 15, we get an out of memory exception.
+</p>
