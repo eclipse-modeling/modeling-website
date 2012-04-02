@@ -1,0 +1,207 @@
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+stepping	: 6
+cpu MHz		: 2493.763
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+bogomips	: 4991.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+stepping	: 6
+cpu MHz		: 2493.763
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+bogomips	: 4987.55
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+stepping	: 6
+cpu MHz		: 2493.763
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+bogomips	: 4987.56
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz
+stepping	: 6
+cpu MHz		: 2493.763
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 10
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr dca sse4_1 lahf_lm
+bogomips	: 4987.54
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+
+
+
+java -Xms7G -Xmx7G
+
+
+
+
+6869M memory
+Level: 1
+Rule applications:1
+Matching: 14ms
+Application: 49ms
+Total: 63ms
+Nodes: 6
+
+Level: 2
+Rule applications:3
+Matching: 0ms
+Application: 2ms
+Total: 2ms
+Nodes: 15
+
+Level: 3
+Rule applications:9
+Matching: 1ms
+Application: 6ms
+Total: 7ms
+Nodes: 42
+
+Level: 4
+Rule applications:27
+Matching: 27ms
+Application: 20ms
+Total: 47ms
+Nodes: 123
+
+Level: 5
+Rule applications:81
+Matching: 16ms
+Application: 63ms
+Total: 79ms
+Nodes: 366
+
+Level: 6
+Rule applications:243
+Matching: 46ms
+Application: 181ms
+Total: 227ms
+Nodes: 1095
+
+Level: 7
+Rule applications:729
+Matching: 174ms
+Application: 552ms
+Total: 726ms
+Nodes: 3282
+
+Level: 8
+Rule applications:2187
+Matching: 98ms
+Application: 300ms
+Total: 398ms
+Nodes: 9843
+
+Level: 9
+Rule applications:6561
+Matching: 67ms
+Application: 318ms
+Total: 385ms
+Nodes: 29526
+
+Level: 10
+Rule applications:19683
+Matching: 197ms
+Application: 810ms
+Total: 1007ms
+Nodes: 88575
+
+Level: 11
+Rule applications:59049
+Matching: 583ms
+Application: 2386ms
+Total: 2969ms
+Nodes: 265722
+
+Level: 12
+Rule applications:177147
+Matching: 1135ms
+Application: 7764ms
+Total: 8899ms
+Nodes: 797163
+
+Level: 13
+Rule applications:531441
+Matching: 4254ms
+Application: 26139ms
+Total: 30393ms
+Nodes: 2391486
+
+Level: 14
+Rule applications:1594323
+Matching: 14713ms
+Application: 570023ms
+Total: 584736ms
+Nodes: 7174455
+
