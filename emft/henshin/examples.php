@@ -33,6 +33,26 @@ ob_end_clean();
 # Paste your HTML content between the EOHTML markers!	
 $html = <<<EOHTML
 
+<style type="text/css">
+table { 
+    border-collapse:collapse;
+}
+td {
+    border: 1px solid black;
+    vertical-align:top;
+    text-align:right;
+    overflow:hidden;
+}
+th {
+    border: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+tr {
+    border: 1px solid black;
+}
+</style>
+
 <div id="maincontent">
 <div id="midcolumn" style="width:735px;">
 $contents
