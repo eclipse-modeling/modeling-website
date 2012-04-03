@@ -1,8 +1,8 @@
-
+/
 <h1>Henshin Example: Dining Philosophers</h1>
 
 <p>
-We use the simple dining philosophers example here to give an intuition about the rule-based modeling and Henshin and to conduct a benchmark for the state space generation tool in Henshin.
+We use the simple dining philosophers example here to give an intuition about the rule-based modeling in Henshin and to conduct a benchmark for the state space generation tool.
 </p>
 
 <p>
@@ -14,6 +14,7 @@ The transformation consists of four rules shown below.
 </p>
 
 <p>
+In rule <i>left(p)</i> philosopher <i>p</i> picks up his left fork, and analogously for the rule <i>right(p)</i>. In rule <i>release(p)</i> the philospher <i>p</i> releases his fork again. The most interesting rule is <i>createPhilosopher(x)</i> where <i>x</i> refers to the highest philosopher ID in the model (note that Henshin can find all parameters automatically here). The rule <i>createPhilosopher(x)</i> can be used to dynamically add a philosopher to the table and to link it to its neighbors. We use this rule to derive initial models for different numbers of philosophers below.
 </p>
 
 <p>
