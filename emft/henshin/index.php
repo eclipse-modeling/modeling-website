@@ -45,10 +45,12 @@ $html = <<<EOHTML
 	<div class="homeitem">
 		<h3>News</h3>
 		<ul>
+		<li><span class="dates">03-04-2012</span>: Version 0.9.0 released!</li>
 		<li><span class="dates">17-10-2011</span>: Update 0.8.0 R201110170738 released which adds support for parameter types in the interpreter wizard</li>
 		<li><span class="dates">29-09-2011</span>: New <a href="examples.php">examples page</a> launched</li>
 		<li><span class="dates">21-09-2011</span>: Henshin SDK 0.8.0 released</li>
 		</ul>
+		<a href="https://twitter.com/#!/henshintool"><img src="followus.png"></a>
 	</div>
 	
 	<h3>Screenshots</h3>
