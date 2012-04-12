@@ -5,6 +5,8 @@
 We use the simple dining philosophers example here to give an intuition about the rule-based modeling in Henshin and to conduct a benchmark for the state space generation tool.
 </p>
 
+<h3>Transformation System</h3>
+
 <p>
 The transformation consists of four rules shown below.
 </p>
@@ -17,59 +19,13 @@ The transformation consists of four rules shown below.
 In rule <i>left(p)</i> philosopher <i>p</i> picks up his left fork, and analogously for the rule <i>right(p)</i>. In rule <i>release(p)</i> the philospher <i>p</i> releases his fork again. The most interesting rule is <i>createPhilosopher(x)</i> where <i>x</i> refers to the highest philosopher ID in the model (note that Henshin can find all parameters automatically here). The rule <i>createPhilosopher(x)</i> can be used to dynamically add a philosopher to the table and to link it to its neighbors. We use this rule to derive initial models for different numbers of philosophers below.
 </p>
 
-<pre class="sh_java">
-		// Create a resource set with a base directory:
-		StateSpaceResourceSet resourceSet = new StateSpaceResourceSet(
-				"src/org/eclipse/emf/henshin/examples/diningphils/model");
-		
-		// Load the state space and create a state space manager:
-		StateSpace stateSpace = resourceSet.getStateSpace("3-phils.statespace");
-		StateSpaceManager manager = StateSpaceFactory.eINSTANCE.createStateSpaceManager(stateSpace);
-		
-		// To improve the performance, we omit the identity types:
-		stateSpace.getProperties().remove(StateSpaceProperties.IDENTITY_TYPES);
-		
-		// Find the rule for adding a philosopher:
-		Rule createPhilRule = stateSpace.getRules().get(0).
-				getTransformationSystem().findRuleByName("createPhil");
+<h3>Benchmark</h3>
 
-		// Now do the benchmark...
-		try {
-			for (int phils=3; true; phils++) {
-				
-				// First reset the state space:
-				manager.resetStateSpace();
-				System.gc();
-				System.gc();
-				System.gc();
-				
-				// Then explore it again:
-				long time = System.currentTimeMillis();
-				int expectedStates = (int) Math.pow(3, phils);
-				StateSpaceExplorationHelper.doExploration(manager, expectedStates, new NullProgressMonitor());
-				if (stateSpace.getStateCount()!=expectedStates || !stateSpace.getOpenStates().isEmpty()) {
-					throw new StateSpaceException("Unexpected number of states");
-				}
-				time = (System.currentTimeMillis() - time);
-				
-				System.out.println("Philosophers: " + phils);
-				System.out.println("States: " + stateSpace.getStateCount());
-				System.out.println("Transitions: " + stateSpace.getTransitionCount());
-				System.out.println("Time: " + time + "ms");
-				System.out.println();
-				
-				// Add a philosopher:
-				EmfGraph initialStateGraph = manager.getModel(stateSpace.getInitialStates().get(0)).getEmfGraph();
-				EmfEngine engine = new EmfEngine(initialStateGraph);
-				RuleApplication app = new RuleApplication(engine, createPhilRule);
-				app.apply();
-				
-			}
-			
-		} catch (StateSpaceException e) {
-			e.printStackTrace();
-		}		
-</pre>
+<p>
+We conducted a benchmark to measure the speed of the state space generator.
+The source code for the benchmark can be found 
+<a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin/trunk/plugins/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/diningphils/DiningPhilsBenchmark.java">here</a>.
+</p>
 
 <p>
 The following benchmark was conducted on a Intel(R) Xeon(R) CPU @ 2.50GHz with 4 cores and 8GB of main memory. 
