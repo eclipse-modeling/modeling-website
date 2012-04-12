@@ -59,6 +59,13 @@ $contents
 </div>
 </div>
 
+<link type="text/css" rel="stylesheet" href="shjs/css/sh_ide-eclipse.css">
+<script type="text/javascript" src="shjs/sh_main.js"></script>
+<script type="text/javascript" src="shjs/lang/sh_java.js"></script>
+<script type="text/javascript">
+sh_highlightDocument();
+</script>
+
 EOHTML;
 
 # Generate the web page

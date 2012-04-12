@@ -1,4 +1,4 @@
-/
+
 <h1>Henshin Example: Dining Philosophers</h1>
 
 <p>
@@ -17,11 +17,66 @@ The transformation consists of four rules shown below.
 In rule <i>left(p)</i> philosopher <i>p</i> picks up his left fork, and analogously for the rule <i>right(p)</i>. In rule <i>release(p)</i> the philospher <i>p</i> releases his fork again. The most interesting rule is <i>createPhilosopher(x)</i> where <i>x</i> refers to the highest philosopher ID in the model (note that Henshin can find all parameters automatically here). The rule <i>createPhilosopher(x)</i> can be used to dynamically add a philosopher to the table and to link it to its neighbors. We use this rule to derive initial models for different numbers of philosophers below.
 </p>
 
+<pre class="sh_java">
+		// Create a resource set with a base directory:
+		StateSpaceResourceSet resourceSet = new StateSpaceResourceSet(
+				"src/org/eclipse/emf/henshin/examples/diningphils/model");
+		
+		// Load the state space and create a state space manager:
+		StateSpace stateSpace = resourceSet.getStateSpace("3-phils.statespace");
+		StateSpaceManager manager = StateSpaceFactory.eINSTANCE.createStateSpaceManager(stateSpace);
+		
+		// To improve the performance, we omit the identity types:
+		stateSpace.getProperties().remove(StateSpaceProperties.IDENTITY_TYPES);
+		
+		// Find the rule for adding a philosopher:
+		Rule createPhilRule = stateSpace.getRules().get(0).
+				getTransformationSystem().findRuleByName("createPhil");
+
+		// Now do the benchmark...
+		try {
+			for (int phils=3; true; phils++) {
+				
+				// First reset the state space:
+				manager.resetStateSpace();
+				System.gc();
+				System.gc();
+				System.gc();
+				
+				// Then explore it again:
+				long time = System.currentTimeMillis();
+				int expectedStates = (int) Math.pow(3, phils);
+				StateSpaceExplorationHelper.doExploration(manager, expectedStates, new NullProgressMonitor());
+				if (stateSpace.getStateCount()!=expectedStates || !stateSpace.getOpenStates().isEmpty()) {
+					throw new StateSpaceException("Unexpected number of states");
+				}
+				time = (System.currentTimeMillis() - time);
+				
+				System.out.println("Philosophers: " + phils);
+				System.out.println("States: " + stateSpace.getStateCount());
+				System.out.println("Transitions: " + stateSpace.getTransitionCount());
+				System.out.println("Time: " + time + "ms");
+				System.out.println();
+				
+				// Add a philosopher:
+				EmfGraph initialStateGraph = manager.getModel(stateSpace.getInitialStates().get(0)).getEmfGraph();
+				EmfEngine engine = new EmfEngine(initialStateGraph);
+				RuleApplication app = new RuleApplication(engine, createPhilRule);
+				app.apply();
+				
+			}
+			
+		} catch (StateSpaceException e) {
+			e.printStackTrace();
+		}		
+</pre>
+
 <p>
 The following benchmark was conducted on a Intel(R) Xeon(R) CPU @ 2.50GHz with 4 cores and 8GB of main memory. 
-The benchmark was run using these JVM parameters: "-Xms7G -Xmx7G". All times are in milliseconds. We measured the
+The benchmark was run using these JVM parameters: "-Xmx7G". All times are in milliseconds. We measured the
 time to generate the full state space.
 </p>
+
 
 <table>
 <tbody>
@@ -31,6 +86,76 @@ time to generate the full state space.
 <th>&nbsp; States (= 3^p) &nbsp;</th>
 <th>&nbsp; Transitions &nbsp;</th>
 <th>&nbsp; Time &nbsp;</th>
+</tr>
+
+<tr>
+<td>3</td>
+<td>27</td>
+<td>63</td>
+<td>221ms</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>81</td>
+<td>252</td>
+<td>368ms</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>243</td>
+<td>945</td>
+<td>1s</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>729</td>
+<td>3,402</td>
+<td>3s</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>2,187</td>
+<td>11,907</td>
+<td>6s</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>6,561</td>
+<td>40,824</td>
+<td>13s</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>19,683</td>
+<td>137,781</td>
+<td>44s</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>59,049</td>
+<td>459,270</td>
+<td>5min</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>177,147</td>
+<td>1,515,591</td>
+<td>17min</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>531,441</td>
+<td>4,960,116</td>
+<td>2h</td>
 </tr>
 
 </tbody>

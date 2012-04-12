@@ -1,0 +1,50 @@
+Philosophers: 3
+States: 27
+Transitions: 63
+Time: 221ms
+
+Philosophers: 4
+States: 81
+Transitions: 252
+Time: 368ms
+
+Philosophers: 5
+States: 243
+Transitions: 945
+Time: 1266ms
+
+Philosophers: 6
+States: 729
+Transitions: 3402
+Time: 2794ms
+Speed: 1218 transition/sec
+
+Philosophers: 7
+States: 2187
+Transitions: 11907
+Time: 6488ms
+
+Philosophers: 8
+States: 6561
+Transitions: 40824
+Time: 13796ms
+
+Philosophers: 9
+States: 19683
+Transitions: 137781
+Time: 44220ms
+
+Philosophers: 10
+States: 59049
+Transitions: 459270
+Time: 291779ms
+
+Philosophers: 11
+States: 177147
+Transitions: 1515591
+Time: 1030946ms
+
+Philosophers: 12
+States: 531441
+Transitions: 4960116
+Time: 7687244ms
