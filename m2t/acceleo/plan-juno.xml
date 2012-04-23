@@ -85,6 +85,9 @@
      <preamble>
          <html:div></html:div>
      </preamble>
+     <theme name="Support for Eclipse 3.8 workbench">
+        <description>We will support 3.8 and 4.2 equally, and all the functionalities will be the same.</description>
+     </theme>
      <theme name="Advanced feature compliance">
         <description>
         	<html:ul>
