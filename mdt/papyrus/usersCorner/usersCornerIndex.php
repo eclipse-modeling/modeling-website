@@ -78,7 +78,7 @@
 			<h6>Related Links</h6>
 			<ul>
 				<li>For developpers, let's see at the <a href="http://wiki.eclipse.org/MDT/Papyrus">Papyrus wiki</a></li>
-				<li>For any questions, let's go to the <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.papyrus">Papyrus forum</a></li>
+				<li>For any questions, let's go to the <a href="http://www.eclipse.org/forums/index.php/f/121/">Papyrus forum</a></li>
 			</ul>
 		</div>
 		
