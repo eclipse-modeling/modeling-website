@@ -14,13 +14,11 @@
         description="MARTE is the language dedicated to Real Time Embedded systems"
         license="EPL"
         groups="//@filters.0"
-        image32="images/marte.png"
+        image32="images/marte-32x32.png"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/&#xD;
-http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/&#xD;
-http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="MARTE is the reference implementation of the OMG language for real time embedded systems (MARTE OMG)"
           screenshot="images/marte.png"
