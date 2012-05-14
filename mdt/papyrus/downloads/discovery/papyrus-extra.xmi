@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<discovery:DiscoveryDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:discovery="http://www.eclipse.org/amalgamation/discovery/1.0">
+  <categories
+      name="Languages"
+      description="UML language extensions"
+      relevance="6"
+      image48="">
+    <components
+        name="MARTE"
+        provider="Eclipse Modeling Project"
+        description="MARTE is the language dedicated to Real Time Embedded systems"
+        license="EPL"
+        groups="//@filters.0"
+        image32="images/marte.png"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/&#xD;
+http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/&#xD;
+http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <overview
+          summary="MARTE is the reference implementation of the OMG language for real time embedded systems (MARTE OMG)"
+          screenshot="images/marte.png"
+          url="http://www.omgmarte.org/"/>
+      <id>org.eclipse.papyrus.extra.marte.feature</id>
+    </components>
+  </categories>
+  <categories
+      name="Modeler extensions"
+      description="Extension of the tool"
+      image48="">
+    <components
+        name="Automatic Layouts"
+        provider="Eclipse.org"
+        description="This feature proposes additional layout functionalities for Papyrus GMF-based diagrams"
+        license="EPL"
+        groups="//@filters.1"
+        image32="images/layout.gif"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
+      <overview
+          summary="This feature provides an automatic layout tool for all GMF-based diagrams for Papyrus modeler"
+          screenshot="images/layout.gif"
+          url="http://www.eclipse.org/papyrus"/>
+      <id>org.eclipse.papyrus.extra.layout.feature</id>
+    </components>
+  </categories>
+  <filters name="Stable"/>
+  <filters name="Experimental"/>
+</discovery:DiscoveryDefinition>
