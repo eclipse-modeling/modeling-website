@@ -45,7 +45,7 @@
       <id>org.eclipse.emf.eef.edt</id>
       <hiddingFeatureID>org.eclipse.emf.eef.runtime</hiddingFeatureID>
     </components>
-    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" description="GMF Tooling is a framework to generate functional graphical editors based on the GMF Runtime." license="EPL" image32="images/gmf.png" visible="true">
+    <components name="Graphical Modeling Framework Tooling" provider="Eclipse.org" description="GMF Tooling is a framework to generate functional graphical editors based on the GMF Runtime." license="EPL" image32="images/gmf.png">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases/</sitesURLS>
       <id>org.eclipse.gmf.sdk</id>
@@ -105,6 +105,11 @@
       <overview summary="In order to improve the software development industrialization, a major step consists in mass-producing software. This mass-production must be customizable, and must be able to support complex, large-scale and heterogeneous generations. Given the today's available Eclipse tools, the issue here is not to provide either a new transformation engine (model-to-model, model-to-text, text-to-model, text-to-text) or DSL (Domain-Specific Language) editor but to realize their integration for flexible software mass-production." screenshot="images/egf-screenshot-320x240.png" url="http://wiki.eclipse.org/EGF"/>
       <id>org.eclipse.egf.sdk</id>
       <hiddingFeatureID>org.eclipse.egf.sdk</hiddingFeatureID>
+    </components>
+    <components name="EMFStore" provider="Eclipse.org" description="EMFStore is a model repository for EMF-based models/data. It allows storage, versioning, collaboration, offline work and interactive merging. All functions are available via API and via GUI included in the release." license="EPL" groups="//@filters.0" image32="images/emfstore.png" incubation="true">
+      <sitesURLS>http://download.eclipse.org/emf-store/releases/latest</sitesURLS>
+      <overview summary="EMFStore is a repository for EMF-based models. It features an offline mode and&#xA;is geared towards collaborative editing of the stored models. Therefore support&#xA;for conflict detection and interactive merging of models is built into the&#xA;repository including versioning. EMFStore also ships with a set of client&#xA;plugins containing an API for the server and even views for commiting changes&#xA;to, updating changes from the repository as well as merging models in a local&#xA;workspace. In addition EMFStore provides access control on the repository and&#xA;storage for the models and their meta data on client and server side. EMFStore&#xA;also supports changing the Ecore model of the stored EMF model instances by&#xA;generating model migrators based on Edapt. This is a useful feature if your&#xA;application evolves and requires changing your data model for example.&#xA;&#xA;Feature Overview:&#xA;- Offline Mode (No server connection neccessary)&#xA;- Interactive Merging&#xA;- Extensible Model Conflict Detection and Merging&#xA;- Model Versioning with full history&#xA;- Model Storage (client and server-side)&#xA;- Access Control&#xA;- Model Migration" screenshot="images/emfstore-screenshot-320x240.png" url="http://emfstore.org"/>
+      <id>org.eclipse.emf.emfstore.ecp.feature</id>
     </components>
     <components name="Teneo" provider="Eclipse.org" description="Teneo is a Model-Relational mapping and runtime database persistence solution for the Eclipse Modeling Framework (EMF) using Hibernate and EclipseLink." license="EPL">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
