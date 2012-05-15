@@ -2,7 +2,7 @@
 <discovery:DiscoveryDefinition
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:discovery="http://www.eclipse.org/amalgamation/discovery/1.0">
+    xmlns:discovery="http://www.eclipse.org/papyrus/discovery/1.0">
   <categories
       name="Languages"
       description="UML language extensions"
