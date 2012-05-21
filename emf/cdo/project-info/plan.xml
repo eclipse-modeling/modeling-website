@@ -31,19 +31,19 @@ The release deliverables have the same form as is found in most Eclipse projects
   <html:li><html:b>CDO Model Repository Definitions</html:b> (Contains the EMF-based definition and wiring plugins for CDO.)</html:li>
   <html:li><html:b>CDO Model Repository Documentation</html:b> (Contains the documentation of the CDO Model Repository.)</html:li>
   <html:li><html:b>CDO Model Repository EPP</html:b> (Contains a minimum CDO client and server environment for the Eclipse Modeling package.)</html:li>
-  <html:li><html:b>CDO Model Repository Examples Hibernate</html:b> (Contains the CDO Hibernate example plugin and sources. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/update for a p2 repository that contains Hibernate.)</html:li>
+  <html:li><html:b>CDO Model Repository Examples Hibernate</html:b> (Contains the CDO Hibernate example plugin and sources. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/2.0.0/update for a p2 repository that contains Hibernate.)</html:li>
   <html:li><html:b>CDO Model Repository Examples</html:b> (Contains the CDO example plugin, models and sources.)</html:li>
   <html:li><html:b>CDO Model Repository Explorer Product</html:b> (Contains the product definition of an installable CDO explorer.)</html:li>
   <html:li><html:b>CDO Model Repository Migrator Tool</html:b> (Contains the CDO Genmodel migrator/importer plugin.)</html:li>
   <html:li><html:b>CDO Model Repository SDK</html:b> (Includes Client, Server, Tools, Examples, Documentation and Source.)</html:li>
   <html:li><html:b>CDO Model Repository Server DB4O</html:b> (Contains the DB4O Store bundle. Ensure that DB4O Driver is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains DB4O Driver.)</html:li>
   <html:li><html:b>CDO Model Repository Server DB</html:b> (Contains the DBStore plugins.)</html:li>
-  <html:li><html:b>CDO Model Repository Server Hibernate</html:b> (Contains the HibernateStore and Teneo integration plugins. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/update for a p2 repository that contains Hibernate.)</html:li>
+  <html:li><html:b>CDO Model Repository Server Hibernate</html:b> (Contains the HibernateStore and Teneo integration plugins. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/2.0.0/update for a p2 repository that contains Hibernate.)</html:li>
   <html:li><html:b>CDO Model Repository Server MongoDB</html:b> (Contains the MongoDBStore plugins. Ensure that a MongoDB Java driver is already installed! Visit http://net4j.sourceforge.net/update for a p2 repository that contains a MongoDB Java driver.)</html:li>
   <html:li><html:b>CDO Model Repository Server Objectivity</html:b> (Contains the Objectivity Store and stubbed jar file bundle. For runtime, ensure that you have Objectivity /DB installed!)</html:li>
   <html:li><html:b>CDO Model Repository Server Product</html:b> (Contains the product definition of an installable CDO server.)</html:li>
   <html:li><html:b>CDO Model Repository Server</html:b> (Contains the CDO server plugins.)</html:li>
-  <html:li><html:b>CDO Model Repository Tests Hibernate</html:b> (Contains the CDO Hibernate test plugins and sources. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/update for a p2 repository that contains Hibernate.)</html:li>
+  <html:li><html:b>CDO Model Repository Tests Hibernate</html:b> (Contains the CDO Hibernate test plugins and sources. Ensure that Hibernate is already installed! Visit http://www.elver.org/eclipse/2.0.0/update for a p2 repository that contains Hibernate.)</html:li>
   <html:li><html:b>CDO Model Repository Tests</html:b> (Contains the CDO test plugins, models and sources.)</html:li>
   <html:li><html:b>CDO Release Engineering Documentation</html:b> (Contains the documentation of the CDO release engineering infrastructure.)</html:li>
   <html:li><html:b>CDO Release Engineering Dynamic Working Sets</html:b> (Contains a set of CDO-specific working sets that are automatically populated with the appropriate workspace projects.)</html:li>
