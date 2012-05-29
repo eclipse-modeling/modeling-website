@@ -68,7 +68,8 @@ $projects = array(
 
 /* if set, both home and download page will redirect to a different landing page */
 $emf_download_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install", 
-	"cdo" => "http://www.eclipse.org/cdo/downloads/");
+	"cdo" => "http://www.eclipse.org/cdo/downloads/",
+	"compare" => "http://www.eclipse.org/emf/compare/downloads/");
 $emf_home_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo",
 	"cdo" => "http://www.eclipse.org/cdo/",
 	"compare" => "http://www.eclipse.org/emf/compare");
