@@ -77,9 +77,9 @@
       		<committed bugzilla=
       			"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=358929;bug_id_type=anyexact;query_format=advanced" />
       		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-1-0=juno+;value0-2-0=juno-;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Currency" />
       		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno-;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Currency" />
     	</theme>
     	<theme name="Diagram Features">
       		<committed bugzilla=
