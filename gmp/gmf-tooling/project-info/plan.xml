@@ -73,10 +73,23 @@
 				<html:a href="http://www.eclipse.org/org/councils/roadmap_v4_0/themesandpriorities.html">Eclipse Themes and Priorities</html:a>).
 			</html:p>
 		</preamble>
-    	<theme name="Transition To Git">
+    	<theme name="Currency">
       		<committed bugzilla=
       			"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=358929;bug_id_type=anyexact;query_format=advanced" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-1-0=juno+;value0-2-0=juno-;status_whiteboard=Currency" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno-;status_whiteboard=Currency" />
     	</theme>
+    	<theme name="Diagram Features">
+      		<committed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno+;status_whiteboard=Diagram%20Features" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-1-0=juno+;value0-2-0=juno-;status_whiteboard=Diagram%20Features" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno-;status_whiteboard=Diagram%20Features" />
+    	</theme>
+
 <!--    	
 
 
@@ -86,14 +99,6 @@
       			"https://bugs.eclipse.org/bugs/buglist.cgi?status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;field0-0-0=flagtypes.name&amp;status_whiteboard=Maturity%20and%20Project%20Readiness&amp;version=2.4&amp;type0-0-0=substring&amp;value0-0-0=indigo-&amp;component=GMF-tooling&amp;classification=Modeling&amp;product=GMP" />
 
 
-    	<theme name="Diagram Features">
-      		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno+;status_whiteboard=Diagram%20Features" />
-      		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-1-0=juno+;value0-2-0=juno-;status_whiteboard=Diagram%20Features" />
-      		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno-;status_whiteboard=Diagram%20Features" />
-    	</theme>
     	<theme name="Development">
       		<committed bugzilla=
       			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring;type0-1-0=notsubstring;type0-2-0=notsubstring;field0-0-0=flagtypes.name;field0-1-0=flagtypes.name;field0-2-0=flagtypes.name;version=3.0;classification=Modeling;product=GMF-Tooling;status_whiteboard_type=allwordssubstr;query_format=advanced;value0-0-0=juno+;status_whiteboard=Development" />
