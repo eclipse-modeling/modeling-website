@@ -19,13 +19,12 @@ The screenshot below shows this rule in the graphical editor.
 </p>
 
 <p>
-The Java code for conducting the benchmark is shown at the
-<a href="http://wiki.eclipse.org/Henshin_Interpreter">Interpreter wikipage</a>.
+The transformation files and the Java source code are available in the examples plug-in in the <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin/trunk/plugins/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/sierpinski/">sierpinski</a> package.
 </p>
 
 <p>
 The following benchmark was conducted on a Intel(R) Xeon(R) CPU @ 2.50GHz with 4 cores and 8GB of main memory. 
-The benchmark was run using these JVM parameters: "-Xms7G -Xmx7G". All times are in milliseconds.
+The parameters for the benchmark were automatically set using a script. All times are in milliseconds.
 </p>
 
 <table>
@@ -34,136 +33,137 @@ The benchmark was run using these JVM parameters: "-Xms7G -Xmx7G". All times are
 <tr>
 <th>&nbsp; Level &nbsp;</th>
 <th>&nbsp; Rule applications &nbsp;</th>
+<th>&nbsp; Nodes &nbsp;</th>
 <th>&nbsp; Matching Time &nbsp;</th>
 <th>&nbsp; Application Time &nbsp;</th>
 <th>&nbsp; Total Time &nbsp;</th>
-<th>&nbsp; Nodes &nbsp;</th>
 </tr>
 
 
-<tr><td>1</td>
+<tr>
 <td>1</td>
-<td>1ms</td>
-<td>0ms</td>
-<td>1ms</td>
+<td>1</td>
 <td>6</td>
+<td>37ms</td>
+<td>4ms</td>
+<td>41ms</td>
 </tr>
 
 <tr>
 <td>2</td>
 <td>3</td>
-<td>0ms</td>
-<td>2ms</td>
-<td>2ms</td>
 <td>15</td>
+<td>0ms</td>
+<td>1ms</td>
+<td>1ms</td>
 </tr>
 
 <tr>
 <td>3</td>
 <td>9</td>
-<td>1ms</td>
-<td>6ms</td>
-<td>7ms</td>
 <td>42</td>
+<td>1ms</td>
+<td>3ms</td>
+<td>4ms</td>
 </tr>
 
 <tr>
 <td>4</td>
 <td>27</td>
-<td>27ms</td>
-<td>20ms</td>
-<td>47ms</td>
 <td>123</td>
+<td>4ms</td>
+<td>8ms</td>
+<td>12ms</td>
 </tr>
 
 <tr>
 <td>5</td>
 <td>81</td>
-<td>16ms</td>
-<td>63ms</td>
-<td>79ms</td>
 <td>366</td>
+<td>13ms</td>
+<td>27ms</td>
+<td>40ms</td>
 </tr>
 
 <tr>
 <td>6</td>
 <td>243</td>
-<td>46ms</td>
-<td>181ms</td>
-<td>227ms</td>
 <td>1,095</td>
+<td>37ms</td>
+<td>67ms</td>
+<td>104ms</td>
 </tr>
 
 <tr>
 <td>7</td>
 <td>729</td>
-<td>174ms</td>
-<td>552ms</td>
-<td>726ms</td>
 <td>3,282</td>
+<td>73ms</td>
+<td>158ms</td>
+<td>231ms</td>
 </tr>
 
 <tr>
 <td>8</td>
 <td>2,187</td>
-<td>98ms</td>
-<td>300ms</td>
-<td>398ms</td>
 <td>9,843</td>
+<td>125ms</td>
+<td>195ms</td>
+<td>320ms</td>
 </tr>
 
 <tr>
 <td>9</td>
 <td>6,561</td>
-<td>67ms</td>
-<td>318ms</td>
-<td>385ms</td>
 <td>29,526</td>
+<td>107ms</td>
+<td>231ms</td>
+<td>338ms</td>
 </tr>
 
 <tr>
 <td>10</td>
 <td>19,683</td>
-<td>197ms</td>
-<td>810ms</td>
-<td>1,007ms</td>
 <td>88,575</td>
+<td>185ms</td>
+<td>219ms</td>
+<td>404ms</td>
 </tr>
 
 <tr>
 <td>11</td>
 <td>59,049</td>
-<td>583ms</td>
-<td>2,386ms</td>
-<td>2,969ms</td>
 <td>265,722</td>
+<td>441ms</td>
+<td>723ms</td>
+<td>1,164ms</td>
 </tr>
 
 <tr>
 <td>12</td>
 <td>177,147</td>
-<td>1,135ms</td>
-<td>7,764ms</td>
-<td>8,899ms</td>
 <td>797,163</td>
+<td>1,309ms</td>
+<td>2,500ms</td>
+<td>3,809ms</td>
 </tr>
 
 <tr>
 <td>13</td>
 <td>531,441</td>
-<td>4,254ms</td>
-<td>26,139ms</td>
-<td>30,393ms</td>
 <td>2,391,486</td>
+<td>3,627ms</td>
+<td>9,944ms</td>
+<td>13,571ms</td>
 </tr>
 
 <tr>
 <td>14</td>
 <td>1,594,323</td>
-<td>14,713ms</td>
-<td>570,023ms</td>
-<td>584,736ms</td>
-<td>&nbsp;7,174,455</td>
+<td>7,174,455&nbsp;</td>
+<td>14,609ms</td>
+<td>117,470ms</td>
+<td>132,079ms</td>
 </tr>
 
 </tbody>
@@ -172,3 +172,4 @@ The benchmark was run using these JVM parameters: "-Xms7G -Xmx7G". All times are
 <p>
 For level 15, we get an out of memory exception.
 </p>
+

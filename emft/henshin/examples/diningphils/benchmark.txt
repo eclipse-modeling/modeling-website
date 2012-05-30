@@ -48,3 +48,26 @@ Philosophers: 12
 States: 531441
 Transitions: 4960116
 Time: 7687244ms
+
+
+
+
+
+Starting benchmark...
+NumThreads: 4
+MaxMemory: 6476MB
+
+Phils	States	Trans	Time
+3	27	63	102
+4	81	252	103
+5	243	945	216
+6	729	3402	732
+7	2187	11907	2587
+8	6561	40824	11111
+9	19683	137781	50826
+Free memory: 83.13952197322322% (checking again in 243 seconds)
+10	59049	459270	249553
+Free memory: 78.29373061294747% (checking again in 180 seconds)
+Free memory: 61.60834929864468% (checking again in 517 seconds)
+Free memory: 46.49338513743801% (checking again in 600 seconds)
+
