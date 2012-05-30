@@ -75,7 +75,7 @@
 		</preamble>
     	<theme name="Transition To Git">
       		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/show_bug.cgi?id=358929" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?bug_id=358929%2C358930;bug_id_type=anyexact;query_format=advanced" />
       		<proposed bugzilla=
       			"https://bugs.eclipse.org/bugs/buglist.cgi?type1-0-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;classification=Modeling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;status_whiteboard=Maturity%20and%20Project%20Readiness&amp;value1-0-0=indigo-&amp;version=2.4&amp;type0-0-0=substring&amp;value0-0-0=indigo&amp;component=GMF-tooling&amp;field1-0-0=flagtypes.name&amp;product=GMP" />
       		<deferred bugzilla=
