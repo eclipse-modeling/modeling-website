@@ -19,10 +19,9 @@ and UML-dependent plugins. The non-UML-dependent plugins have a minor increment 
 Versions 3.0 and 3.1 saw the introduction of Xtext-based editors and an associated rewrite of the
 meta-models and evaluator to prototype a UML-aligned pivot meta-model on behalf of OCL 2.3.1 and to use a model for
 the OCL Standard Library. This functionality was provided in Examples plugins.
-</html:p>
-<html:p>
-The planned promotion of Xtext-based editors and pivot meta-model from Examples to Core/Tools plugins has been deferred
-till Kepler since the code was not ready and the timescales foir review were totally unreasonable.
+The planned promotion of these Xtext-based editors and the associated pivot meta-model
+from Examples to Core/Tools plugins has been deferred
+till Kepler since the code was not ready and the timescales for review were totally unreasonable.
 </html:p>
 <!--html:p>
 In version 4.0, the Xtext-based editors and pivot meta-model will be promoted from Examples to Core/Tools plugins and the
@@ -49,7 +48,7 @@ to assist in migration to the new APIs.
 <html:i><html:b>Note</html:b> that, since the 
 <html:a href="http://www.omg.org/spec/OCL/2.3/Beta2/PDF">OMG OCL 2.3.1</html:a>
 standard suffers from significant ambiguities and conflicts making a compliant implementation impossible,
-<html:b>Eclipse (MDT) OCL 4.0.0</html:b> release is a best endeavours atempt to establish a coherent interpretation
+<html:b>Eclipse (MDT) OCL 4.0.0</html:b> release is a best endeavours attempt to establish a coherent interpretation
 of the OMG OCL 2.3.1 and to prototype resolutions and auto-generation of the OMG OCL 2.5 standard. Two of the Eclipse (MDT) OCL
 committers are also members of the OMG Revision Task Force that resolves the specification issues.</html:i>
 </html:p>
