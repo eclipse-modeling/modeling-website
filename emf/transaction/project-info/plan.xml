@@ -2,13 +2,13 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml"
       name="Project Name">
-   <release projectid="modeling.emf" version="1.4.0"/>
+   <release projectid="modeling.emf" version="1.6.0"/>
    <introduction>
      <html:div>
 <html:p>
 This document lays out the feature and API set for the
-fifth release of the EMF Model Transaction (EMF Transaction)
-Project, version 1.4.0. This project plan inherits from the Modeling
+seventh release of the EMF Model Transaction (EMF Transaction)
+Project, version 1.6.0. This project plan inherits from the Modeling
 Project Plan, which should be referenced when consulting this
 individual project plan.
 </html:p><html:p>
@@ -22,7 +22,7 @@ community will be processed as efficiently as possible.
      <html:div>
 The release deliverables have the same form as is found in most Eclipse projects, namely:
 <html:ul>
-<html:li>EMF Transaction source code release, available as versions tagged "R1_4" in the project's CVS repository.</html:li>
+<html:li>EMF Transaction source code release, available as versions tagged "R1_6" in the project's CVS repository.</html:li>
 <html:li>EMF Transaction SDK (includes runtime, sources, examples, and documentation) (downloadable and update site).</html:li>
 <html:li>EMF Transaction runtime binary distribution (downloadable and update site).</html:li>
 <html:li>EMF Transaction tests (downloadable)</html:li>
@@ -34,34 +34,34 @@ The release deliverables have the same form as is found in most Eclipse projects
          <html:div>
 Release milestone occurring at roughly 6 week intervals and follow the
 Platform milestone releases by approximately 1 week; that is, until the
-final 3.6 release of the Platform, upon which EMF Transaction and other projects
+final 4.2 release of the Platform, upon which EMF Transaction and other projects
 will release simultaneously. It is anticipated that EMF Transaction will synchronize its
-milestones with the Galileo milestone schedule.
+milestones with the Juno milestone schedule.
          </html:div>
       </preamble>
-      <milestone date="08/18/2009" milestone="M1"></milestone>
-      <milestone date="09/29/2009" milestone="M2"></milestone>
-      <milestone date="11/10/2009" milestone="M3"></milestone>
-      <milestone date="12/15/2009" milestone="M4"></milestone>
-      <milestone date="02/02/2010" milestone="M5"></milestone>
-      <milestone date="03/16/2010" milestone="M6"><html:p>API freeze</html:p></milestone>
-      <milestone date="05/04/2010" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
-      <milestone date="05/18/2010" milestone="RC1"></milestone>
-      <milestone date="05/25/2010" milestone="RC2"></milestone>
-      <milestone date="06/01/2010" milestone="RC3"></milestone>
-      <milestone date="06/08/2010" milestone="RC4"></milestone>
-      <milestone date="06/15/2010" milestone="RC5"></milestone>
-      <milestone date="06/23/2010" milestone="1.4.0"></milestone>
+      <milestone date="08/18/2011" milestone="M1"></milestone>
+      <milestone date="09/29/2011" milestone="M2"></milestone>
+      <milestone date="11/10/2011" milestone="M3"></milestone>
+      <milestone date="12/15/2011" milestone="M4"></milestone>
+      <milestone date="02/02/2012" milestone="M5"></milestone>
+      <milestone date="03/16/2012" milestone="M6"><html:p>API freeze</html:p></milestone>
+      <milestone date="05/04/2012" milestone="M7"><html:div>Feature Freeze</html:div></milestone>
+      <milestone date="05/18/2012" milestone="RC1"></milestone>
+      <milestone date="05/25/2012" milestone="RC2"></milestone>
+      <milestone date="06/01/2012" milestone="RC3"></milestone>
+      <milestone date="06/08/2012" milestone="RC4"></milestone>
+      <milestone date="06/15/2012" milestone="RC5"></milestone>
+      <milestone date="06/23/2012" milestone="1.6.0"></milestone>
       <postamble><html:div>
-EMF Transaction will produce maintenance releases to align with the Helios SR
-releases, that includes the Eclipse Platform 3.6.1 and 3.6.2 releases.
+EMF Transaction will produce maintenance releases to align with the Juno SR
+releases, that includes the Eclipse Platform 4.2.1 and 4.2.2 releases.
 EMF Transaction may produce interim maintenance releases in addition to these in
 order to satisfy clients requests.  Maintenance releases will only be published
 if they have any new fixes to offer.
 <html:ul>
-  <html:li>Friday, September 24, 2010 (last Friday of September) - EMF Transaction 1.4.1 maintenance release (if necessary)</html:li>
-  <html:li>Friday, February 25, 2010 (last Friday of February) - EMF Transaction 1.4.2 maintenance release (if necessary)</html:li>
-  <html:li>A list of issues indicated for the 1.4.x maintenance stream can be found in
+  <html:li>Friday, September 24, 2012 (last Friday of September) - EMF Transaction 1.6.1 maintenance release (if necessary)</html:li>
+  <html:li>Friday, February 25, 2013 (last Friday of February) - EMF Transaction 1.6.2 maintenance release (if necessary)</html:li>
+  <html:li>A list of issues indicated for the 1.6.x maintenance stream can be found in
       bugzilla, or by using links on maintenance stream build pages.</html:li>
 </html:ul> 
       </html:div></postamble>
@@ -71,12 +71,12 @@ if they have any new fixes to offer.
 In order to remain current, each Eclipse release targets reasonably
 current versions of the underlying operating environments. The EMF Transaction
 project depends upon on the
-Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. The 3.6
+Platform and other projects, which are mostly "pure" Java<html:sup>TM</html:sup>. The 4.2
 release of the Eclipse Platform Project is written and compiled
-against version 1.4 of the Java Platform APIs, and targeted to run on
-version 1.4 of the Java Runtime Environment, Standard Edition. EMF Transaction
+against version 1.5 of the Java Platform APIs, and targeted to run on
+version 1.5 of the Java Runtime Environment, Standard Edition. EMF Transaction
 will target the same Java version as EMF Core, which currently requires
-Java 5. Eclipse Platform SDK 3.6 will be tested and validated on a
+Java 5. Eclipse Platform SDK 4.2 will be tested and validated on a
 number of reference platforms. EMF Transaction will be tested and validated
 against a subset of those listed for the platform.
      </html:div>
@@ -96,19 +96,19 @@ the time frame for availability.
    </target_environments>
    <compatibility_with_previous_releases>
        <html:div>
-Compatibility of Release 1.3: The EMF Transaction project
+Compatibility of Release 1.6: The EMF Transaction project
 will be developed in parallel, and released simultaneously, with the
 following projects. As stated above, each milestone release of the
 EMF Transaction project will be compatible with the
 corresponding milestones for each of these projects, and delivered the
 appropriate offset.
 <html:ul>
-    <html:li>Eclipse Platform SDK version 3.6</html:li>
-    <html:li>Eclipse Modeling Framework (EMF) version 2.6</html:li>
-    <html:li>Eclipse MDT OCL version 3.0</html:li>
-    <html:li>Eclipse MDT UML2 version 3.1</html:li>
-    <html:li>Eclipse EMF Query version 1.4</html:li>
-    <html:li>Eclipse EMF Validation version 1.4</html:li>
+    <html:li>Eclipse Platform SDK version 4.2</html:li>
+    <html:li>Eclipse Modeling Framework (EMF) version 2.8</html:li>
+    <html:li>Eclipse MDT OCL version 3.2</html:li>
+    <html:li>Eclipse MDT UML2 version 4.0</html:li>
+    <html:li>Eclipse EMF Query version 1.6</html:li>
+    <html:li>Eclipse EMF Validation version 1.6</html:li>
 </html:ul>
 Therefore, the EMF Transaction initial release will be
 compatible with these versions and will publish binary and source
@@ -127,6 +127,13 @@ document and associated Bugzilla entries are left to those wanting
 more detailed information on each.
          </html:div>
      </preamble>
+		<theme name="Eclipse 3.8">
+			<description>
+				<html:div>
+					No support, no testing on 3.8
+                </html:div>
+			</description>
+		</theme>
         <theme name="Community Responsiveness">
             <description>
                 <html:div>
@@ -140,7 +147,7 @@ availability.  No committer-driven content is planned.
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMF&amp;component=Transaction&amp;target_milestone=M1&amp;target_milestone=M2&amp;target_milestone=M3&amp;target_milestone=M4&amp;target_milestone=M5&amp;target_milestone=M6&amp;target_milestone=M7&amp;target_milestone=RC&amp;status_whiteboard_type=substring&amp;status_whiteboard=Broader+Community&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </committed>
             <proposed
-                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMF&amp;component=Transaction&amp;target_milestone=Galileo&amp;status_whiteboard_type=substring&amp;status_whiteboard=Broader+Community&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
+                bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMF&amp;component=Transaction&amp;target_milestone=Juno&amp;status_whiteboard_type=substring&amp;status_whiteboard=Broader+Community&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo%2B">
             </proposed>
             <deferred
                 bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&amp;classification=Modeling&amp;product=EMF&amp;component=Transaction&amp;status_whiteboard_type=substring&amp;status_whiteboard=Broader+Community&amp;field0-0-0=flagtypes.name&amp;type0-0-0=equals&amp;value0-0-0=galileo-">

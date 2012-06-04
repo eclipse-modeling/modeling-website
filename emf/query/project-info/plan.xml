@@ -34,14 +34,6 @@
 				<html:li>EMF Query runtime binary distribution (downloadable and
 					update site).</html:li>
 				<html:li>EMF Query tests (downloadable)</html:li>
-				<html:li>EMF Query2 source code release, available as versions
-					tagged
-					"R1_6" in the project's CVS repository.</html:li>
-				<html:li>EMF Query2 SDK (includes runtime, sources, examples, and
-					documentation) (downloadable and update site).</html:li>
-				<html:li>EMF Query2 runtime binary distribution (downloadable and
-					update site).</html:li>
-				<html:li>EMF Query2 tests and examples (downloadable)</html:li>
 			</html:ul>
 		</html:div>
 	</release_deliverables>
@@ -171,8 +163,7 @@
 					contributions of new features from the community at large. Bugzilla
 					items with patches are encouraged, but other items may be
 					considered at the committers' discretion, according to their
-					availability. EMF Query 1.6 will mark inclusion of EMF Query2. EMF
-					Query2 will provide improved query capabilities. 
+					availability. 
 				</html:div>
 			</description>
 			<committed
