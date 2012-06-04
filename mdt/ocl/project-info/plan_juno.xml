@@ -24,7 +24,7 @@ the OCL Standard Library. This functionality was provided in Examples plugins.
 The planned promotion of Xtext-based editors and pivot meta-model from Examples to Core/Tools plugins has been deferred
 till Kepler since the code was not ready and the timescales foir review were totally unreasonable.
 </html:p>
-<--html:p>
+<!--html:p>
 In version 4.0, the Xtext-based editors and pivot meta-model will be promoted from Examples to Core/Tools plugins and the
 very slow process of deprecation of the old Ecore and UML bindings will begin. The Core plugins will provide non-UI
 functionality; the Tools plugins will provide the IDE comprising editors and consoles.
