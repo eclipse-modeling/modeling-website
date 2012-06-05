@@ -55,15 +55,18 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 
 <!-- RS: no update site for release for now... Only one nightly update site -->
 
-<h4>Update sites for stable versions:</h4>
-<h5>Papyrus stable build, version 0.8.2 (Indigo) (Recommended)</h5>
+<h4>Update sites for release versions:</h4>
+<h5>Papyrus release 0.8.2 (Indigo) (Recommended)</h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo</a> <br><font color='#808080'>(Papyrus 0.8.x / Eclipse Indigo)</font></li>
 </ul>
-<h5>Papyrus stable build, version 0.7.3 (Helios) </h5>
+<h5>Papyrus release 0.7.3 (Helios) </h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios</a> <br><font color='#808080'>(Papyrus 0.7.3 / Eclipse Helios)</font></li>
 </ul>
+
+<h4>Update sites for Stable Builds (Milestones):</h4>
+
 
 <h4>Update sites for nightly builds:</h4>
 <h5>Papyrus nightly builds, version 0.9.x (Juno):</h5>
@@ -74,6 +77,7 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/indigo</a> <br><font color='#808080'>(Papyrus 0.8.x / Eclipse Indigo)</font></li>
 </ul>
+</div>
 
 <?php
 
