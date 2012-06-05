@@ -36,17 +36,15 @@ ob_start();
 <!-- Middle part -->
 <div id="midcolumn">
 <!--<img src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>-->
-<h1>Papyrus Update Sites</h1>
-
-<h3>Recommended installation, using Eclipse Modeling Package:</h3>
-<p align="JUSTIFY">
+<h1>Papyrus Installation Guide</h1>
 <ul>
-<li>You can download <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
-<li>Use the discovery interface ("Help" => "Install Modeling Component") and select Papyrus.</li>
-<li>Proceed through installation steps.</li>
-<li>Papyrus is now ready to use!</li>
+<li>The most basic procedure for installing Papyrus consists in installing the <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
+<li>Then, you have to use the discovery interface ("Help" => "Install Modeling Component") and select Papyrus.</li>
+<li>Proceed through installation steps. Once the installation is completed, you will be asked to restart your eclipse platform and then Papyrus is ready to use!</li>
 </ul>
 </p>
+
+<h1>Papyrus Update Sites</h1>
 
 <h3>How to add the Papyrus update site</h3>
 <p align="JUSTIFY">
