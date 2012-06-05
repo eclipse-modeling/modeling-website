@@ -53,8 +53,6 @@ In all cases, the site location (i.e. the Web URL or the archived Update Site pr
 To add the Papyrus site, one of the procedures described from the <a href="http://help.eclipse.org/galileo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-129.htm">Install Manager documentation</a> must be followed.
 </p>  
 
-<!-- RS: no update site for release for now... Only one nightly update site -->
-
 <h4>Update sites for release versions:</h4>
 <h5>Papyrus release 0.8.2 (Indigo) (Recommended)</h5>
 <ul>
@@ -66,7 +64,9 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 </ul>
 
 <h4>Update sites for nightly builds:</h4>
-For advanced users and pioneers, you can access the last developments done within Papyrus by accessing its nightly builds...
+<p>
+For advanced users and pioneers, you can access the latest commits done within Papyrus by accessing its nightly builds...
+</p>
 <h5>Papyrus nightly builds, version 0.9.x (Juno):</h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
