@@ -44,6 +44,13 @@ ob_start();
 </ul>
 </p>
 
+<object type="application/x-shockwave-flash"data="PapyrusInstallation&UpdateProcedure.swf" width="800" height="250"> 
+<param name="movie" value="PapyrusInstallation&UpdateProcedure.swf" /> 
+<param name="wmode" value="transparent" /> 
+<param name="quality" value="high"/>
+</object>
+
+
 <h1>Papyrus Update Sites</h1>
 
 <p align="JUSTIFY">
