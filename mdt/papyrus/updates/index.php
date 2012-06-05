@@ -47,7 +47,7 @@ ob_start();
 <h1>Papyrus Update Sites</h1>
 
 <p align="JUSTIFY">
-Eclipse provides facilities for adding new software to the platform or updating software in the system. 
+Eclipse provides also facilities for adding new software to the platform or updating software in the system. 
 In all cases, the site location (i.e. the Web URL or the archived Update Site provided above) is the only required item to update or insatll a software within Eclipse.
 <p align="JUSTIFY">
 To add the Papyrus site, one of the procedures described from the <a href="http://help.eclipse.org/galileo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-129.htm">Install Manager documentation</a> must be followed.
