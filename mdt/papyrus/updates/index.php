@@ -65,10 +65,8 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/helios</a> <br><font color='#808080'>(Papyrus 0.7.3 / Eclipse Helios)</font></li>
 </ul>
 
-<h4>Update sites for Stable Builds (Milestones):</h4>
-
-
 <h4>Update sites for nightly builds:</h4>
+For advanced users and pioneers, you can access the last developments done within Papyrus by accessing its nightly builds...
 <h5>Papyrus nightly builds, version 0.9.x (Juno):</h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
