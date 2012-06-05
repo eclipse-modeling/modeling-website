@@ -36,6 +36,14 @@ ob_start();
 <!-- Middle part -->
 <div id="midcolumn">
 <!--<img src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>-->
+
+<object type="application/x-shockwave-flash"data="PapyrusInstallation&UpdateProcedure.swf" width="600" height="450"> 
+<param name="movie" value="PapyrusInstallation&UpdateProcedure.swf" /> 
+<param name="wmode" value="transparent" /> 
+<param name="quality" value="high"/>
+</object>
+
+
 <h1>Papyrus Installation Guide</h1>
 <ul>
 <li>The most basic procedure for installing Papyrus consists in installing the <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
@@ -43,12 +51,6 @@ ob_start();
 <li>Proceed through installation steps. Once the installation is completed, you will be asked to restart your eclipse platform and then Papyrus is ready to use!</li>
 </ul>
 </p>
-
-<object type="application/x-shockwave-flash"data="PapyrusInstallation&UpdateProcedure.swf" width="800" height="250"> 
-<param name="movie" value="PapyrusInstallation&UpdateProcedure.swf" /> 
-<param name="wmode" value="transparent" /> 
-<param name="quality" value="high"/>
-</object>
 
 
 <h1>Papyrus Update Sites</h1>
