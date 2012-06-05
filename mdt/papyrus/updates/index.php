@@ -37,7 +37,7 @@ ob_start();
 <div id="midcolumn">
 <!--<img src="../images/backgroundMainPapyrus.png" alt="Papyrus Logo"/>-->
 
-<object type="application/x-shockwave-flash"data="PapyrusInstallation&UpdateProcedure.swf" width="600" height="450"> 
+<object type="application/x-shockwave-flash"data="PapyrusInstallation&UpdateProcedure.swf" width="400" height="350"> 
 <param name="movie" value="PapyrusInstallation&UpdateProcedure.swf" /> 
 <param name="wmode" value="transparent" /> 
 <param name="quality" value="high"/>
