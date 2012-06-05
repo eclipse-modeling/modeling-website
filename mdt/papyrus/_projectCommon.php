@@ -50,7 +50,7 @@
 	
 	$Nav->setLinkList(array());
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
-	$Nav->addCustomNav("Installation & Updates", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
+	$Nav->addCustomNav("Install & Update", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("Update Sites", "/modeling/mdt/papyrus/updates/index.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/index.php", "_self", 3);
