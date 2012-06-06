@@ -16,7 +16,8 @@ $extraZips = array(
 	"mdt-ocl-Update-core",      # new in buckminster based tools/core builds
 	"mdt-ocl-Update-tools", 	# new in buckminster based tools/core builds
 	"mdt-ocl-SDK", 				# deprecated
-	"mdt-ocl-SDK-core", 		# new in buckminster based tools/core builds
+	"mdt-ocl-SDK-core", 		# deprecated (SDK moved to tools build)
+	"mdt-ocl-SDK-tools", 		# new in buckminster based tools/core builds
 	"mdt-ocl-CoreSDK", 			# deprecated
 	"mdt-ocl-CoreSDK-core", 	# new in buckminster based tools/core builds	
 	"mdt-ocl-runtime",			# deprecated
@@ -58,7 +59,8 @@ $dls = array(
 			"<acronym title=\"Click to download archived Core SDK P2 Repository\"><img alt=\"Click to download archived Core SDK P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">Core SDK Update Site</b></acronym>" => "Update-core", # new in buckminster based tools/core builds
 			"<acronym title=\"Click to download archived All-In-One Tools P2 Repository\"><img alt=\"Click to download archived All-In-One Tools P2 Repository\" src=\"/modeling/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "Update-tools", # new in buckminster based tools/core builds
 			"SDK (Runtime, EMF Edit Support, Source, Documentation) " => "SDK", # deprecated						
-			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-core", # new in buckminster based tools/core builds
+			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-core", # deprecated
+			"SDK (Runtime, EMF Edit Support, Source, Documentation)" => "SDK-tools", # new in buckminster based tools/core builds
 			"Core SDK (Runtime, Source) " => "CoreSDK", # deprecated
 			"Core SDK (Runtime, Source)" => "CoreSDK-core", # new in buckminster based tools/core builds
 			"Runtime " => "runtime", # deprecated
