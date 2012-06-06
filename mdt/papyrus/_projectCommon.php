@@ -54,7 +54,7 @@
 	$Nav->addCustomNav("Downloads", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/index.php", "_self", 3);
-	$Nav->addCustomNav("Getting Involved", "/modeling/mdt/papyrus/developpersCorner/developpersCornerIndex.php", "_self", 3);
+	$Nav->addCustomNav("Getting involved", "/modeling/mdt/papyrus/developpersCorner/developpersCornerIndex.php", "_self", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
 	$pageKeywords	= "papyrus, dsl, modeling, domain specific language, graphical, uml, sysml";
@@ -64,12 +64,13 @@
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
-	# $Menu->setMenuItemList(array());
-	# $Menu->addMenuItem("Home", "/project", "_self");
-	# $Menu->addMenuItem("Download", "/project/download.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/project/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/project/support.php", "_self");
-	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
+	$Menu->setMenuItemList(array());
+	$Menu->addMenuItem("Home", "/modeling/mdt/papyrus", "_self");
+	$Menu->addMenuItem("Install & Update", "/modeling/mdt/papyrus/updates/index.php", "_self");
+	$Menu->addMenuItem("Download", "/modeling/mdt/papyrus/downloads/index.php", "_self");
+	$Menu->addMenuItem("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self");
+	$Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/index.php", "_self");
+	$Menu->addMenuItem("Getting involved", "/modeling/mdt/papyrus/developpersCorner/developpersCornerIndex.php", "_self");
 	
 	# To define additional CSS or other pre-body headers
 	# $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
