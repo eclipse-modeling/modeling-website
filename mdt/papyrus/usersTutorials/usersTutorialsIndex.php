@@ -34,7 +34,7 @@
 				<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnActivityDiagrams_v0.2_d20110719.pdf">A tutorial on Papyrus activity diagram editor (2011-07-19).</a></li>
 			</ul>
-		<h3>Tutorials for desiging dsml support within Papyrus</h3>
+		<h3>Tutorials for desiging DSML support within Papyrus</h3>
 			<ul>
 				<li><a href="resources/PapyrusUserGuideSeries_AboutUMLProfile_v1.0.0_d20120606.pdf">A tutorial on designing and using UML profiles with Papyrus (2012-06-06).</a></li>
 			</ul>	
