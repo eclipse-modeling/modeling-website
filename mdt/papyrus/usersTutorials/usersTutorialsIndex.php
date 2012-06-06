@@ -27,13 +27,17 @@
 			This page is about the Papyrus documentation dedicated to both its users. It contains both tutorials and examples. In addition to this page, users may find documentation in the online help of the Eclipse tool.
 		</p>
 		
-		<h3>Tutorials</h3>
+		<h3>Tutorials for modeling with Papyrus</h3>
 			<ul>
 				<li><a href="resources/TutorialOnPapyrusUSE_d20101001.pdf">A slide-ware tutorial on Papyrus usage for starters (2010-10-01).</a></li>
 				<li><a href="resources/PapyrusTutorial_CollaborativeWork_v1.0_d20110727.pdf">A tutorial on Papyrus usage for collaborative work  (2011-07-27).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnActivityDiagrams_v0.2_d20110719.pdf">A tutorial on Papyrus activity diagram editor (2011-07-19).</a></li>
 			</ul>
+		<h3>Tutorials for desiging dsml support within Papyrus</h3>
+			<ul>
+				<li><a href="resources/PapyrusUserGuideSeries_AboutUMLProfile_v1.0.0_d20120606.pdf">A tutorial on designing and using UML profiles with Papyrus (2012-06-06).</a></li>
+			</ul>	
 		<h3>Examples</h3>
 			<ul>
 				<li>Coming soon...</li>
