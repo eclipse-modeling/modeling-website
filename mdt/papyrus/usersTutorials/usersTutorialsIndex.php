@@ -38,11 +38,12 @@
 			<ul>
 				<li><a href="resources/PapyrusUserGuideSeries_AboutUMLProfile_v1.0.0_d20120606.pdf">A tutorial on designing and using UML profiles with Papyrus (2012-06-06).</a></li>
 			</ul>	
+		<!--
 		<h3>Examples</h3>
 			<ul>
 				<li>Coming soon...</li>
 			</ul>
-		
+		-->
 		<!--
 		<h3>&lt;h3&gt; tag</h3>
 		<div class="homeitem">
