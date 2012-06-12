@@ -4,11 +4,44 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>transaction Builds</title>
   <link href="http://download.eclipse.org/modeling/emf/feeds/builds-transaction.xml" rel="self" type="application/atom+xml"/>
-  <updated>2012-05-17T20:36:42Z</updated>
+  <updated>2012-06-12T16:07:10Z</updated>
   <author>
     <name>transaction Build Team</name>
   </author>
   <id>http://download.eclipse.org/modeling/emf/feeds/builds-transaction.xml</id>
+  <entry>
+    <title>[announce] transaction 1.6.0RC4 (S201206121200) is available</title>
+    <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S201206121200#S201206121200"/>
+    <id>http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S201206121200#S201206121200</id>
+    <updated>2012-06-12T16:07:10Z</updated>
+    <summary>
+      <build xmlns="http://www.eclipse.org/2006/BuildFeed" branch="HEAD" datetime="201206121200" href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S201206121200#S201206121200" type="S" vanityname="1.6.0RC4" version="1.6.0">
+        <detail config="build.cfg" href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.6.0/S201206121200/" log="buildlog.txt" map="directory.txt"/>
+        <update>http://download.eclipse.org/modeling/emf/updates/</update>
+        <downloads>http://www.eclipse.org/modeling/emf/downloads/?project=transaction</downloads>
+        <releasenotes>http://www.eclipse.org/modeling/emf/news/relnotes.php?project=transaction&amp;version=S201206121200
+          </releasenotes>
+        <releases>
+          <release arch="ALL" os="ALL" type="SDK" ws="ALL">emf-transaction-SDK-1.6.0RC4.zip</release>
+        </releases>
+        <tests>
+          <test href="http://www.eclipse.org/downloads/download.php?r=1&amp;file=/modeling/emf/transaction/downloads/drops/1.6.0/S201206121200/testResults.php" type="junit">
+            <result arch="ALL" os="ALL" ws="ALL">PASS</result>
+          </test>
+        </tests>
+        <dependencies>
+          <dependency>http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M7-201205031800/eclipse-SDK-S-4.2M7-201205031800-linux-gtk.tar.gz</dependency>
+          <dependency>http://download.eclipse.org/modeling/emf/emf/downloads/drops/2.8.0/S201205070712/emf-xsd-SDK-2.8.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/ocl/downloads/drops/4.0.0/S201205071304/mdt-ocl-CoreSDK-core-4.0.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/modeling/mdt/uml2/downloads/drops/4.0.0/S201205070907/mdt-uml2-SDK-4.0.0M7.zip</dependency>
+          <dependency>http://download.eclipse.org/tools/gef/downloads/drops/3.8.0/S201205041431/GEF-ALL-3.8.0M7.zip.md5</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/query/downloads/drops/1.6.0/S201205091129/emf-query-SDK-1.6.0RC4.zip</dependency>
+          <dependency>http://modeling.eclipse.org/modeling/emf/validation/downloads/drops/1.6.0/S201205171327/emf-validation-SDK-1.6.0RC4.zip</dependency>
+        </dependencies>
+        <coordinated status=""/>
+      </build>
+    </summary>
+  </entry>
   <entry>
     <title>[announce] transaction 1.6.0M7 (S201205171405) is available</title>
     <link href="http://www.eclipse.org/modeling/emf/downloads/?project=transaction&amp;showAll=1&amp;hlbuild=S201205171405#S201205171405"/>
