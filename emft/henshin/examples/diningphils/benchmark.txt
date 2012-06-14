@@ -1,73 +1,18 @@
-Philosophers: 3
-States: 27
-Transitions: 63
-Time: 221ms
+******* BENCHMARK ********
 
-Philosophers: 4
-States: 81
-Transitions: 252
-Time: 368ms
-
-Philosophers: 5
-States: 243
-Transitions: 945
-Time: 1266ms
-
-Philosophers: 6
-States: 729
-Transitions: 3402
-Time: 2794ms
-Speed: 1218 transition/sec
-
-Philosophers: 7
-States: 2187
-Transitions: 11907
-Time: 6488ms
-
-Philosophers: 8
-States: 6561
-Transitions: 40824
-Time: 13796ms
-
-Philosophers: 9
-States: 19683
-Transitions: 137781
-Time: 44220ms
-
-Philosophers: 10
-States: 59049
-Transitions: 459270
-Time: 291779ms
-
-Philosophers: 11
-States: 177147
-Transitions: 1515591
-Time: 1030946ms
-
-Philosophers: 12
-States: 531441
-Transitions: 4960116
-Time: 7687244ms
-
-
-
-
-
-Starting benchmark...
+Starting dining philosophers benchmark...
 NumThreads: 4
-MaxMemory: 6476MB
+MaxMemory: 6933MB
 
 Phils	States	Trans	Time
-3	27	63	102
-4	81	252	103
-5	243	945	216
-6	729	3402	732
-7	2187	11907	2587
-8	6561	40824	11111
-9	19683	137781	50826
-Free memory: 83.13952197322322% (checking again in 243 seconds)
-10	59049	459270	249553
-Free memory: 78.29373061294747% (checking again in 180 seconds)
-Free memory: 61.60834929864468% (checking again in 517 seconds)
-Free memory: 46.49338513743801% (checking again in 600 seconds)
-
+3		27		63			56
+4		81		252			69
+5		243		945			224
+6		729		3402		616
+7		2187	11907		1316
+8		6561	40824		4987
+9		19683	137781		19746
+10		59049	459270		80504
+11		177147	1515591		376618
+12		531441	4960116		3704128
+13		1594323	16120377	35583849
