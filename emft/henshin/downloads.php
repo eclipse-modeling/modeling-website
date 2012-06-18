@@ -42,10 +42,10 @@ If you want to download Henshin as compiled archives, see below.
 <table>
 <tr>
 <td>
-<a href="$drops/0.9.0/R201204031418/Henshin-SDK-Incubation-0.9.0.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.9.2/R201206181654/Henshin-SDK-Incubation-0.9.2.zip"><img src="go-bottom.png"></a>
 </td>
 <td>
-<a href="$drops/0.9.0/R201204031418/Henshin-SDK-Incubation-0.9.0.zip">Henshin SDK 0.9.0</a>
+<a href="$drops/0.9.2/R201206181654/Henshin-SDK-Incubation-0.9.2.zip">Henshin SDK 0.9.2</a>
 </td>
 </tr>
 </table>
@@ -56,10 +56,10 @@ If you want to download Henshin as compiled archives, see below.
 <table>
 <tr>
 <td>
-<a href="$drops/0.9.1/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip"><img src="go-bottom.png"></a>
+<a href="$drops/0.9.3/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip"><img src="go-bottom.png"></a>
 </td>
 <td>
-<a href="$drops/0.9.1/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip">Henshin SDK 0.9.1 SNAPSHOT</a>
+<a href="$drops/0.9.3/N-SNAPSHOT/Henshin-SDK-Incubation-N-SNAPSHOT.zip">Henshin SDK 0.9.3 SNAPSHOT</a>
 </td>
 </tr>
 </table>
