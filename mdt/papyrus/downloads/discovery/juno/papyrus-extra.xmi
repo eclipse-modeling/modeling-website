@@ -57,7 +57,7 @@
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <overview
-          summary="This features offers the support of CSS Stylesheets for Papyrus GMF-based diagrams"/>
+          summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
       <id>org.eclipse.papyrus.infra.gmfdiag.css.feature</id>
     </components>
   </categories>
