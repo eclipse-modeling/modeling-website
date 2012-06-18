@@ -50,7 +50,7 @@
     <components
         name="Diagram Stylesheets"
         provider="Eclipse Modeling Project"
-        description="This features offers the support of CSS Stylesheets for Papyrus GMF-based diagrams"
+        description="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"
         license="EPL"
         groups="//@filters.0"
         incubation="true">
@@ -59,6 +59,20 @@
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
       <id>org.eclipse.papyrus.infra.gmfdiag.css.feature</id>
+    </components>
+    <components
+        name="Diagram generation"
+        provider="Eclipse Modeling Project"
+        description="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"
+        license="EPL"
+        groups="//@filters.1"
+        image32="images/DiagramTemplate.gif"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/releases/juno</sitesURLS>
+      <overview
+          summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
+      <id>org.eclipse.papyrus.diagramtemplate.feature</id>
     </components>
   </categories>
   <filters name="Stable"/>
