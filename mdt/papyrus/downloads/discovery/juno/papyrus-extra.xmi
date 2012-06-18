@@ -47,6 +47,19 @@
           url="http://www.eclipse.org/papyrus"/>
       <id>org.eclipse.papyrus.extra.layout.feature</id>
     </components>
+    <components
+        name="Diagram Stylesheets"
+        provider="Eclipse Modeling Project"
+        description="This features offers the support of CSS Stylesheets for Papyrus GMF-based diagrams"
+        license="EPL"
+        groups="//@filters.0"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <overview
+          summary="This features offers the support of CSS Stylesheets for Papyrus GMF-based diagrams"/>
+      <id>org.eclipse.papyrus.infra.gmfdiag.css.feature</id>
+    </components>
   </categories>
   <filters name="Stable"/>
   <filters name="Experimental"/>
