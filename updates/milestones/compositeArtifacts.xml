@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Milestone Site - Artifact Repository' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-  <children size='17'>
+  <children size='18'>
+    <!--  EMF CDO -->
+    <child location='http://download.eclipse.org/modeling/emf/cdo/updates/maintenance/stable/'/>
     <!--  EMF Compare -->
     <child location='http://download.eclipse.org/modeling/emf/updates/milestones/'/>
     <!--  EMF EMF (Core) and MDT XSD -->
@@ -27,7 +29,7 @@
     <child location='http://download.eclipse.org/modeling/mdt/ocl/updates/milestones/'/>            
     <!--  MDT UML2 -->
     <child location='http://download.eclipse.org/modeling/mdt/updates/milestones/'/>
-    <child location='http://download.eclipse.org/modeling/mdt/uml2/updates/4.0milestones/'/>
+    <child location='http://download.eclipse.org/modeling/mdt/uml2/updates/milestones/'/>
     <!--  MDT UML2 Tools -->
     <child location='http://download.eclipse.org/modeling/mdt/uml2tools/updates/milestones/'/>
     <!--  TMF Xtext -->
