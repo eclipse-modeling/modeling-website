@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Interim Site - Artifact Repository' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-  <children size='13'>
+  <children size='14'>
     <!--  EMF CDO -->
     <child location='http://download.eclipse.org/modeling/emf/cdo/updates/maintenance/'/>
     <!--  EMF Compare -->
@@ -12,6 +12,7 @@
     <child location='http://download.eclipse.org/modeling/emf/emf/updates/2.8-I-builds/'/>
     <!--  EMF Teneo -->
     <child location='http://download.eclipse.org/modeling/emf/teneo/updates/1.2.0/interim/'/>
+    <child location='http://download.eclipse.org/modeling/emf/teneo/updates/2.0.0/interim/'/>
     <!--  EMFT Ecore Tools -->
     <child location='http://download.eclipse.org/modeling/emft/ecoretools/updates/0.10-I-builds/'/>
     <!--  EMFT EEF -->

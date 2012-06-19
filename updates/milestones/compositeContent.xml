@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='Eclipse Modeling Project Milestone Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-  <children size='18'>
+  <children size='19'>
   	<!--  EMF CDO -->
     <child location='http://download.eclipse.org/modeling/emf/cdo/updates/maintenance/stable/'/>
     <!--  EMF Compare -->
@@ -13,6 +13,7 @@
     <child location='http://download.eclipse.org/modeling/emf/emf/updates/2.8milestones/'/>
     <!--  EMF Teneo -->
     <child location='http://download.eclipse.org/modeling/emf/teneo/updates/1.2.0/milestones/'/>
+    <child location='http://download.eclipse.org/modeling/emf/teneo/updates/2.0.0/milestones/'/>
     <!--  EMFT Ecore Tools -->
     <child location='http://download.eclipse.org/modeling/emft/ecoretools/updates/0.10milestones/'/>
     <!--  EMFT EEF -->
