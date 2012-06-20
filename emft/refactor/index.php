@@ -53,12 +53,14 @@ models, e.g. UML EMF models.
 	<h3>Refactoring Application Module</h3>
 		
 	<p>
-	EMF Refactor uses the Eclipse <a href="http://www.eclipse.org/articles/Article-LTK/ltk.html" target="_blank">Language Toolkit</a> (LTK) for homogenous refactorings application consisting of three parts.
+	EMF Refactor uses the Eclipse <a href="http://www.eclipse.org/articles/Article-LTK/ltk.html" target="_blank">Language Toolkit</a> 
+	(LTK) for homogenous refactoring application consisting of three parts.
 	After triggering a model element, refactoring-specific basic conditions are checked (<i>initial check</i>). Then,
-	the user has to set all parameters and the RAM checks whether the user input does not violate further conditions
+	the user has to set all parameters and the EMF Refactor checks whether the user input does not violate further conditions
 	(<i>final check</i>). In case of erroneous parameters a detailed error message is shown. If the final check has passed, 
 	EMF Refactor provides a preview of the changes that will be performed by the refactoring using <a href="http://www.eclipse.org/emf/compare/" target="_blank">EMF Compare</a>. 
 	Last but not least, these changes can be committed and the refactoring can take place (<i>model change</i>).
+	Here, EMF Refactor supports undo and redo functionality, of course.
 	</p>
 	
 	<h3>Structured Refactoring Suite</h3>
@@ -77,7 +79,7 @@ models, e.g. UML EMF models.
 	<ul>
 		<li>Java,
 		<li>OCL expressions (for pre-condition checking), or
-		<li>the EMF model transformation tool <a href="http://www.eclipse.org/modeling/emft/henshin/" target="_blank">Henshin</a>
+		<li>the EMF model transformation tool <a href="http://www.eclipse.org/modeling/emft/henshin/" target="_blank">Henshin</a>.
 		Here, EMF Refactor uses Henshin's model transformation engine for executing the refactoring as well as Henshin's pattern 
 		matching algorithm to detect violated preconditions.
 	</ul>
