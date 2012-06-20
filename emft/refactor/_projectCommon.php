@@ -11,6 +11,7 @@
 	# these are optional
 	$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=modeling.emft.refactor", "_self", 2);
 	$Nav->addNavSeparator("Project Home", 	"index.php");
+	$Nav->addCustomNav("Refactorings", 	"refactorings.php", 	"_self", 2);
 	$Nav->addCustomNav("Downloads", 		"downloads.php", 	"_self", 2);
 	$Nav->addCustomNav("Installation", 		"install.php", 		"_self", 2);
 	$Nav->addCustomNav("Documentation", 		"docu.php", 		"_self", 2);

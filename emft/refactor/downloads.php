@@ -31,7 +31,7 @@
 		<h2>Specials</h2>
 		<h3>Besser modellieren - Qualit&auml;tssicherung von UML-Modellen</h3>
 		This download area is dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
-		submitted to the OBJEKTspektrum magazine on June 20, 2012.
+		submitted to the <a href="http://www.sigs-datacom.de/fachzeitschriften/objektspektrum.html" target="_blank">OBJEKTspektrum</a> magazine on June 20, 2012.
 		<ul class="midlist">
 			<li><a href="downloads/Papyrus.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus</a></li>
 			<li><a href="downloads/ExampleProjectPapyrus.zip" target="_blank">Example project for UML modeling environment Papyrus</a></li>
