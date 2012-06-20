@@ -18,27 +18,27 @@
 	<ul>
 	<b>2012</b>
 	<li>Thorsten Arendt, Gabriele Taentzer: 
-	<a href="downloads/AT2012.pdf"><i>Integration of Smells and Refactorings within the Eclipse Modeling Framework</i></a>.
-	Proceedings of <a href="http://refactoring.info/WRT12/">Fifth Workshop on Refactoring Tools (WRT 2012)</a>
+	<a href="downloads/AT2012.pdf" target="_blank"><i>Integration of Smells and Refactorings within the Eclipse Modeling Framework</i></a>.
+	Proceedings of <a href="http://refactoring.info/WRT12/" target="_blank">Fifth Workshop on Refactoring Tools (WRT 2012)</a>
 	co-located with ICSE 2012, June 1 2012 in Rapperswil, Switzerland. To appear in ACM Digital Library 2012.
 	</li>
 	<b>2011</b>
 	<li>Thorsten Arendt, Sieglinde Kranz, Florian Mantz, Nikolaus Regnat, Gabriele Taentzer: 
-	<a href="downloads/AKMRT2011.pdf"><i>Towards Syntactical Model Quality Assurance in Industrial Software Development: 
+	<a href="downloads/AKMRT2011.pdf" target="_blank"><i>Towards Syntactical Model Quality Assurance in Industrial Software Development: 
 	Process Definition and Tool Support</i></a>.
-	Proceedings of <a href="http://http://se2011.ipd.kit.edu">Software Engineering 2011</a>, 
+	Proceedings of <a href="http://http://se2011.ipd.kit.edu" target="_blank">Software Engineering 2011</a>, 
 	February 21-25 2011 in Karlsruhe, Germany. Volume 183 of LNI, pages 63-74, GI, 2011.
 	</li>
 	<b>2010</b>
 	<li>Thorsten Arendt, Florian Mantz, Gabriele Taentzer: 
-	<a href="downloads/AMT2010.pdf"><i>EMF Refactor: Specification and Application of Model Refactorings within the Eclipse Modeling Framework</i></a>.
-	Proceedings of <a href="http://rmod.lille.inria.fr/benevol/">9th BElgian-NEtherlands software eVOLution seminar (BENEVOL 2010)</a>,
+	<a href="downloads/AMT2010.pdf" target="_blank"><i>EMF Refactor: Specification and Application of Model Refactorings within the Eclipse Modeling Framework</i></a>.
+	Proceedings of <a href="http://rmod.lille.inria.fr/benevol/" target="_blank">9th BElgian-NEtherlands software eVOLution seminar (BENEVOL 2010)</a>,
 	December 17 2010 in Lille, France.
 	</li>
 	<b>2009</b>
 	<li>Thorsten Arendt, Florian Mantz, Lars Schneider, Gabriele Taentzer: 
-	<a href="downloads/AMST2009.pdf"><i>Model Refactoring in Eclipse by LTK, EWL, and EMF Refactor: A Case Study</i></a>.
-	Proceedings of <a href="http://www.modse.fr/modsemccm09/doku.php">Model-Driven Software Evolution, Workshop Models and Evolution (MoDSE-MCCM 2009)</a>, 
+	<a href="downloads/AMST2009.pdf" target="_blank"><i>Model Refactoring in Eclipse by LTK, EWL, and EMF Refactor: A Case Study</i></a>.
+	Proceedings of <a href="http://www.modse.fr/modsemccm09/doku.php" target="_blank">Model-Driven Software Evolution, Workshop Models and Evolution (MoDSE-MCCM 2009)</a>, 
 	co-located with MoDELS 2009, October 4 2009 in Denver, USA.
 	</li>
 	</ul>
