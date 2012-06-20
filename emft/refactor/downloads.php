@@ -30,18 +30,19 @@
 		</ul>
 		<h2>Specials</h2>
 		<h3>Besser modellieren - Qualit&auml;tssicherung von UML-Modellen</h3>
+		This download area is dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
+		submitted to the OBJEKTspektrum magazine on June 20, 2012.
 		<ul class="midlist">
 			<li><a href="downloads/Papyrus.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus</a></li>
 			<li><a href="downloads/ExampleProjectPapyrus.zip" target="_blank">Example project for UML modeling environment Papyrus</a></li>
 			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 		</ul>
-		This download area is dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
-		submitted to the OBJEKTspektrum magazine on June 20, 2012.
 		<b>Papyrus:</b> Please install the Eclipse Modeling Tools from <a href="www.eclipse.org/downloads" target="_blank">www.eclipse.org/downloads</a></li>.
 		Start Eclispe and install the UML modeling environment Papyrus (<i>Install Modeling Components > Papyrus</i>). Download <i>Papyrus.zip</i> from above, unzip it
 		into the plugins directory of your Eclipse installation and restart Eclipse. Download <i>ExampleProjectPapyrus.zip</i> from above and import the example
 		project <i>VehicleRentalCompany</i> into your workspace.
+		<br/>
 		<b>IBM RSA v7.5.5:</b> Download <i>RSA755.zip</i> from above, unzip it
 		into the plugins directory of your RSA installation and restart IBM RSA. Download <i>ExampleProjectRSA755.zip</i> from above and import the example
 		project <i>VRC</i> into your workspace.
