@@ -53,7 +53,7 @@ models, e.g. UML EMF models.
 	<h3>Refactoring Application Module</h3>
 		
 	<p>
-	EMF Refactor uses the Eclipse <a href="http://www.eclipse.org/articles/Article-LTK" target="_blank">Language Toolkit</a> (LTK) for homogenous refactorings application consisting of three parts.
+	EMF Refactor uses the Eclipse <a href="http://www.eclipse.org/articles/Article-LTK/ltk.html" target="_blank">Language Toolkit</a> (LTK) for homogenous refactorings application consisting of three parts.
 	After triggering a model element, refactoring-specific basic conditions are checked (<i>initial check</i>). Then,
 	the user has to set all parameters and the RAM checks whether the user input does not violate further conditions
 	(<i>final check</i>). In case of erroneous parameters a detailed error message is shown. If the final check has passed, 
