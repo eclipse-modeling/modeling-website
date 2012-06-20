@@ -26,7 +26,7 @@
 	<li>Thorsten Arendt, Sieglinde Kranz, Florian Mantz, Nikolaus Regnat, Gabriele Taentzer: 
 	<a href="downloads/AKMRT2011.pdf" target="_blank"><i>Towards Syntactical Model Quality Assurance in Industrial Software Development: 
 	Process Definition and Tool Support</i></a>.
-	Proceedings of <a href="http://http://se2011.ipd.kit.edu" target="_blank">Software Engineering 2011</a>, 
+	Proceedings of <a href="http://se2011.ipd.kit.edu" target="_blank">Software Engineering 2011</a>, 
 	February 21-25 2011 in Karlsruhe, Germany. Volume 183 of LNI, pages 63-74, GI, 2011.
 	</li>
 	<b>2010</b>
