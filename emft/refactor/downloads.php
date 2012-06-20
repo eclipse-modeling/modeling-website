@@ -28,6 +28,14 @@
 			<li><a href="downloads/manual_generation.pdf" target="_blank">How to generate new EMF model refactorings using Java code</a></li>
 			<li><a href="downloads/manual_henshin.pdf" target="_blank">How to generate new EMF model refactorings using Henshin transformations</a></li>
 		</ul>
+		<h2>Specials</h2>
+		<h3>Article: Besser modellieren - Qualitässicherung von UML-Modellen</h3>
+		<ul class="midlist">
+			<li><a href="downloads/Papyrus.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus</a></li>
+			<li><a href="downloads/ExampleProjectPapyrus.zip" target="_blank">Example project for UML modeling environment Papyrus</a></li>
+			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
+			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
+		</ul>
 		</p>	
 	</div>
 	
