@@ -36,7 +36,7 @@
 			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 		</ul>
-		This downloads are dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
+		This download area is dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
 		submitted to the OBJEKTspektrum magazine on June 20, 2012.
 		<b>Papyrus:</b> Please install the Eclipse Modeling Tools from <a href="www.eclipse.org/downloads" target="_blank">www.eclipse.org/downloads</a></li>.
 		Start Eclispe and install the UML modeling environment Papyrus (<i>Install Modeling Components > Papyrus</i>). Download <i>Papyrus.zip</i> from above, unzip it
