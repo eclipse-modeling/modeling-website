@@ -1,6 +1,6 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 
-	$pageTitle 		= "Supported Refactorings";
+	$pageTitle 		= "EMF Refactor - Publications";
 	$pageKeywords	= "EMF, Refactor, model refactoring, refactoring";
 	$pageAuthor		= "Thorsten Arendt";
 	
@@ -12,7 +12,6 @@
 		<h1>$pageTitle</h1>
 		<p>
 		
-	<h1>EMF Refactor - Publications</h1>
 
 	<br>
 	<h2>Conference and Workshop Proceedings</h2>
