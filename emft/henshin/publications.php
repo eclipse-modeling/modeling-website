@@ -35,45 +35,45 @@ $html = <<<EOHTML
 <h2>Conference and Workshop Proceedings</h2>
 <ul>
 
-<b>2012</b>
+<br><b>2012</b>
 <li>Christian Krause, Holger Giese: 
 <i>Probabilistic Graph Transformation Systems</i>.
 Accepted for <a href="http://www.informatik.uni-bremen.de/icgt2012/">ICGT'12</a> -- Applications Track, 
-To appear in Lecture Notes of Computer Science (LNCS), Springer-Verlag.
+To appear in LNCS, Springer-Verlag.
 </li>
 
-<b>2011</b>
+<br><b>2011</b>
 <li>Stefan Jurack, Johannes Tietje: 
 <a href="http://arxiv.org/abs/1111.4752v1">Solving the TTC 2011 Reengineering Case with Henshin</a>.
 Proceedings of <a href="http://planet-research20.org/ttc2011/">TTC'11</a>, 
-Electronic Proceedings in Theoretical Computer Science (EPTCS), 2011, Volume&nbsp;74, 181-203.
+EPTCS&nbsp;74, 181-203, 2011.
 </li>
 <li>Stefan Jurack, Johannes Tietje: 
 <a href="http://arxiv.org/abs/1111.4756v1">Saying Hello World with Henshin - A Solution to the TTC 2011 Instructive Case</a>.
 Proceedings of <a href="http://planet-research20.org/ttc2011/">TTC'11</a>, 
-Electronic Proceedings in Theoretical Computer Science (EPTCS), 2011, Volume&nbsp;74, 253-280.
+EPTCS&nbsp;74, 253-280, 2011.
 </li>
 
-<b>2010</b>
+<br><b>2010</b>
 <li>Thorsten Arendt, Enrico Biermann, Stefan Jurack, Christian Krause, Gabriele Taentzer:
 <a href="http://www.springerlink.com/content/qrlj332wxhn01227/">Henshin: Advanced Concepts and Tools for In-place EMF Model Transformations</a>.
 Proceedings of <a href="http://models2010.ifi.uio.no/">MoDELS'10</a>, 
-Lecture Notes in Computer Science (LNCS), 2010, Volume&nbsp;6394, 121-135, Springer-Verlag.
+LNCS&nbsp;6394, 121-135, Springer-Verlag, 2010.
 </li>
 <li>Claudia Ermel, Enrico Biermann, Johann Schmidt, Angeline Warning:
 <a href="http://journal.ub.tu-berlin.de/eceasst/article/view/528">Visual Modeling of Controlled EMF Model Transformation using Henshin</a>.
 Proceedings of <a href="http://grabats2010.inf.mit.bme.hu/">GraBaTs'10</a>, 
-Electronic Communications of the EASST (ECEASST), 2010, Volume&nbsp;32.
+ECEASST&nbsp;32, 2010.
 </li>
 <li>Stefan Jurack: 
 <a href="http://www.springerlink.com/content/q82x8004mh26t621/">Composite EMF Modeling Based on Typed Graphs with Inheritance and Containment Structures</a>.
 Proceedings of <a href="http://www.utwente.nl/ewi/icgt2010/">ICGT'10</a> -- Doctoral Symposium.
-Lecture Notes in Computer Science (LNCS), 2010, Volume&nbsp;6372, 397-399, Springer-Verlag.
+LNCS&nbsp;6372, 397-399, Springer-Verlag, 2010.
 </li>
 <li>Enrico Biermann: 
 <a href="http://www.springerlink.com/content/d73v62nlnk65517j/">EMF Model Transformation Based on Graph Transformation: Formal Foundation and Tool Environment</a>.
 Proceedings of <a href="http://www.utwente.nl/ewi/icgt2010/">ICGT'10</a> -- Doctoral Symposium.
-Lecture Notes in Computer Science (LNCS), 2010, Volume&nbsp;6372, 381-383, Springer-Verlag.
+LNCS&nbsp;6372, 381-383, Springer-Verlag, 2010.
 </li>
 
 </ul>
