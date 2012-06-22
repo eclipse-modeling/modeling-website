@@ -15,20 +15,48 @@ models, e.g. UML EMF models.
 	</p>
 	
 	<p>
-	EMF Refactor will consist of 
+	EMF Refactor consists of 
 	<ul>
-		<li>a <strong>Refactoring Generation Module</strong> for specifying EMF model refactorings using several model transformation approaches,
-		<li>a <strong>structured suite</strong> of predefined EMF model refactorings, and
-		<li>a <strong>Refactoring Application Module</strong> for applying EMF model refactorings in a uniform and user-friendly way.
+		<li>a <strong>Refactoring Application Module</strong> for applying EMF model refactorings in a uniform and user-friendly way,
+		<li>a <strong>Structured Refactoring Suite</strong> of predefined EMF model refactorings supporting several EMF-based languages, and
+		<li>a <strong>Refactoring Generation Module</strong> for specifying EMF model refactorings using several model transformation approaches.
 	</ul>
 	</p>
 	
-	<p>
-	A first community technical preview is targeted in spring 2011.
-	</p>
+	<h3>Refactoring Application Module</h3>
 		
 	<p>
-	<i>More information here soon...</i>
+	EMF Refactor uses the Eclipse <a href="http://www.eclipse.org/articles/Article-LTK/ltk.html" target="_blank">Language Toolkit</a> 
+	(LTK) for homogenous refactoring application consisting of three parts.
+	After triggering a model element, refactoring-specific basic conditions are checked (<i>initial check</i>). Then,
+	the user has to set all parameters and the EMF Refactor checks whether the user input does not violate further conditions
+	(<i>final check</i>). In case of erroneous parameters a detailed error message is shown. If the final check has passed, 
+	EMF Refactor provides a preview of the changes that will be performed by the refactoring using <a href="http://www.eclipse.org/emf/compare/" target="_blank">EMF Compare</a>. 
+	Last but not least, these changes can be committed and the refactoring can take place (<i>model change</i>).
+	Here, EMF Refactor supports undo and redo functionality, of course.
+	</p>
+	
+	<h3>Structured Refactoring Suite</h3>
+	
+	<p>
+	EMF Refactor currently supports 22 refactorings for Ecore models and 30 refactorings for UML2EMF models.
+	</p>
+	
+	<h3>Refactoring Generation Module</h3>
+		
+	<p>
+	Since EMF Refactor uses the LTK technology mentioned above, a concrete refactoring specification requires up 
+	to three parts (i.e., specifications for initial checks, final checks, and the proper model changes). EMF Refactor 
+	currently supports three concrete mechanisms for EMF model refactoring specification. They can be specified using 
+	<ul>
+		<li>Java,
+		<li>OCL expressions (for pre-condition checking), or
+		<li>the EMF model transformation tool <a href="http://www.eclipse.org/modeling/emft/henshin/" target="_blank">Henshin</a>.
+		Here, EMF Refactor uses Henshin's model transformation engine for executing the refactoring as well as Henshin's pattern 
+		matching algorithm to detect violated preconditions.
+	</ul>
+	Actually, we are working on a combination mechanism of existing refactorings to more complex ones by using a dedicated domain-specific language called
+	CoMReL (Composite Model Refactoring Language) that will be integrated soon into the official release of EMF Refactor.
 	</p>
 	
 </body>
