@@ -74,6 +74,20 @@
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
       <id>org.eclipse.papyrus.diagramtemplate.feature</id>
     </components>
+    <components
+        name="Papyrus Compare Editor"
+        provider="Eclipse Modeling Project"
+        description="Offers a Customizable CompareEditor for Papyrus"
+        license="EPL"
+        groups="//@filters.1"
+        image32="images/papyrus_compare_32x32.png"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
+      <overview
+          summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
+    </components>
   </categories>
   <filters name="Stable"/>
   <filters name="Experimental"/>
