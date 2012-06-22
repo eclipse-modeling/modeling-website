@@ -87,6 +87,7 @@
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
+      <id>org.eclipse.papyrus.extra.uml.compare.feature</id>
     </components>
   </categories>
   <filters name="Stable"/>
