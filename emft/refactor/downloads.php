@@ -40,7 +40,7 @@
 		</ul>
 		<b>Papyrus:</b> Please install the Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads" target="_blank">www.eclipse.org/downloads</a></li>.
 		Start Eclipse and install the UML modeling environment Papyrus (<i>Install Modeling Components > Papyrus</i>) as well as the reporting tool BIRT 
-		(<i>Help > Install New Software... > Work with: http://download.eclipse.org/birt/update-site/3.7-interim/ > Select All > Next > ...). 
+		(<i>Help > Install New Software... > Work with: http://download.eclipse.org/birt/update-site/3.7-interim/ > Select All > Next > ...</i>). 
 		Download <i>Papyrus.zip</i> from above, unzip it
 		into the plugins directory of your Eclipse installation and restart Eclipse. Download <i>ExampleProjectPapyrus.zip</i> from above and import the example
 		project <i>VehicleRentalCompany</i> into your workspace.
