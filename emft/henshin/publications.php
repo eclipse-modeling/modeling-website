@@ -32,7 +32,7 @@ $html = <<<EOHTML
 <h1>$pageTitle</h1>
 
 <br>
-<h2>Conference and Workshop Proceedings</h2>
+<h2>Published Conference and Workshop Proceedings</h2>
 <ul>
 
 <br><b>2012</b>
@@ -84,6 +84,10 @@ LNCS&nbsp;6372, 381-383, Springer-Verlag, 2010.
 <ul>
 <li>Christian Krause: <a href="documents/henshin_mcrl2.pdf">Instance-aware Model Checking of Graph Transformation Systems using Henshin and mCRL2</a>.
 Unpublished article, 2011.
+</li>
+<li>Enrico Biermann, Claudia Ermel, Stefan Jurack: 
+<a href="http://www.ctit.utwente.nl/library/proceedings/wp10-03.pdf">Modeling the "Ecore to GenModel" Transformation with EMF Henshin</a>.
+Proceedings of <a href="http://planet-research20.org/ttc2010">TTC'10</a>, 2010.
 </li>
 </ul>
 
