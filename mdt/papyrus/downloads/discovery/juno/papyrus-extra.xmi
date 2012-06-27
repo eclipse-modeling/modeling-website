@@ -59,7 +59,7 @@
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
-      <id>org.eclipse.papyrus.infra.gmfdiag.css.feature</id>
+      <id>org.eclipse.papyrus.extra.infra.gmfdiag.css.feature</id>
     </components>
     <components
         name="Diagram generation"
@@ -74,7 +74,7 @@
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
-      <id>org.eclipse.papyrus.diagramtemplate.feature</id>
+      <id>org.eclipse.papyrus.extra.diagramtemplate.feature</id>
     </components>
     <components
         name="Papyrus Compare Editor"
