@@ -56,6 +56,7 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
       <id>org.eclipse.papyrus.infra.gmfdiag.css.feature</id>
@@ -70,6 +71,7 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
       <id>org.eclipse.papyrus.diagramtemplate.feature</id>
