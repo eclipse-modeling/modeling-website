@@ -18,7 +18,6 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="MARTE is the reference implementation of the OMG language for real time embedded systems (MARTE OMG)"
           screenshot="images/marte.png"
@@ -40,7 +39,6 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="This feature provides an automatic layout tool for all GMF-based diagrams for Papyrus modeler"
           screenshot="images/layout.gif"
@@ -56,7 +54,6 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
       <id>org.eclipse.papyrus.extra.infra.gmfdiag.css.feature</id>
@@ -71,7 +68,6 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
       <id>org.eclipse.papyrus.extra.diagramtemplate.feature</id>
@@ -86,7 +82,6 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/main/</sitesURLS>
       <overview
           summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
       <id>org.eclipse.papyrus.extra.uml.compare.feature</id>
