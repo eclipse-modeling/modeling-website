@@ -29,8 +29,7 @@
 			<li><a href="downloads/manual_henshin.pdf" target="_blank">How to generate new EMF model refactorings using Henshin transformations</a></li>
 		</ul>
 		<h2>Specials</h2>
-		<h3>Besser modellieren - Qualit&auml;tssicherung von UML-Modellen</h3>
-		This download area is dedicated to the article 'Besser modellieren - Qualit&auml;tssicherung von UML-Modellen' 
+		This download area is dedicated to the article <b><i>Besser modellieren - Qualit&auml;tssicherung von UML-Modellen</i></b> 
 		submitted to the <a href="http://www.sigs-datacom.de/fachzeitschriften/objektspektrum.html" target="_blank">OBJEKTspektrum</a> magazine on June 20, 2012, 
 		as well as to the tutorial at <a href="http://www2.imm.dtu.dk/conferences/ECMFA-2012/" target="_blank">ECMFA 2012</a> on July 2, 2012 (find tutorial slides in
 		the <a href="docu.php">documentation</a> section).
