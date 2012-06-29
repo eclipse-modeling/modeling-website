@@ -22,7 +22,7 @@
 		<p>
 		<h2>Slides from Tutorial at <a href="http://www2.imm.dtu.dk/conferences/ECMFA-2012/" target="_blank">ECMFA 2012</a></h2>
 		<ul class="midlist">
-			<<a href="downloads/ImprovingTheQualityOfEMFModels.pdf" target="_blank"><i>Improving the Quality of EMF models using metrics, smells, and refactorings</i></a>
+			<li><<a href="downloads/ImprovingTheQualityOfEMFModels.pdf" target="_blank"><i>Improving the Quality of EMF models using metrics, smells, and refactorings</i></a></li>
 		</ul>
 		</p>
 		
