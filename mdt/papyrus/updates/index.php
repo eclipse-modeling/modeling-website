@@ -46,7 +46,7 @@ ob_start();
 
 <h1>Papyrus Installation Guide</h1>
 <ul>
-<li>The most basic procedure for installing Papyrus consists in installing the <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/heliosr">Eclipse Modeling Package</a> for your own platform.</li>
+<li>The most basic procedure for installing Papyrus consists in installing the <a href= "http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junor">Eclipse Modeling Package</a> for your own platform.</li>
 <li>Then, you have to use the discovery interface ("Help" => "Install Modeling Component") and select Papyrus.</li>
 <li>Proceed through installation steps. Once the installation is completed, you will be asked to restart your eclipse platform and then Papyrus is ready to use!</li>
 </ul>
@@ -63,7 +63,11 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 </p>  
 
 <h4>Update sites for Papyrus release versions:</h4>
-<h5>Papyrus release 0.8.2 (Indigo) (Recommended):</h5>
+<h5>Papyrus release 0.9.0 (Juno) (Recommended):</h5>
+<ul>
+<li><a href="http://download.eclipse.org/releases/juno/">http://download.eclipse.org/releases/juno/</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
+</ul>
+<h5>Papyrus release 0.8.2 (Indigo):</h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/indigo</a> <br><font color='#808080'>(Papyrus 0.8.x / Eclipse Indigo)</font></li>
 </ul>
