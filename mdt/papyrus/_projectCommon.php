@@ -67,7 +67,7 @@
 	$Menu->setMenuItemList(array());
 	$Menu->addMenuItem("Home", "/modeling/mdt/papyrus", "_self");
 	$Menu->addMenuItem("Install & Update", "/modeling/mdt/papyrus/updates/index.php", "_self");
-	$Menu->addMenuItem("Download", "/modeling/mdt/papyrus/downloads/index.php", "_self");
+	$Menu->addMenuItem("Downloads", "/modeling/mdt/papyrus/downloads/index.php", "_self");
 	$Menu->addMenuItem("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self");
 	$Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/index.php", "_self");
 	$Menu->addMenuItem("Getting involved", "/modeling/mdt/papyrus/developpersCorner/developpersCornerIndex.php", "_self");
