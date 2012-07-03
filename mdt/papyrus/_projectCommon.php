@@ -50,7 +50,7 @@
 	
 	$Nav->setLinkList(array());
 	$Nav->addNavSeparator("Papyrus", 	"/modeling/mdt/papyrus");
-	$Nav->addCustomNav("Install & Update", "/modeling/mdt/papyrus/updates/index.php", "_self", 3);
+	$Nav->addCustomNav("Getting started", "/modeling/mdt/papyrus/updates/index.php", "_self", 3);
 	$Nav->addCustomNav("Downloads", "/modeling/mdt/papyrus/downloads/index.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self", 3);
 	$Nav->addCustomNav("Support", "/modeling/mdt/papyrus/support/index.php", "_self", 3);
@@ -66,7 +66,7 @@
 	# To override and replace the navigation with your own, uncomment the line below.
 	$Menu->setMenuItemList(array());
 	$Menu->addMenuItem("Home", "/modeling/mdt/papyrus", "_self");
-	$Menu->addMenuItem("Install & Update", "/modeling/mdt/papyrus/updates/index.php", "_self");
+	$Menu->addMenuItem("Getting started", "/modeling/mdt/papyrus/updates/index.php", "_self");
 	$Menu->addMenuItem("Downloads", "/modeling/mdt/papyrus/downloads/index.php", "_self");
 	$Menu->addMenuItem("Documentation", "/modeling/mdt/papyrus/usersCorner/usersCornerIndex.php", "_self");
 	$Menu->addMenuItem("Support", "/modeling/mdt/papyrus/support/index.php", "_self");
