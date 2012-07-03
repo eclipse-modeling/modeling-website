@@ -33,9 +33,6 @@
 	  window.addEvent('domready', function(){
 	    var data = {
 	      'ProfileDiagramEditor.jpg': { caption: 'Profile diagram editor.' }, 
-	      '2.jpg': { caption: 'A Ceibu tree.' }, 
-	      '3.jpg': { caption: 'The view from Volcano Maderas.' }, 
-	      '4.jpg': { caption: 'Beer and ice cream.' }
 	    };
 	    var myShow = new Slideshow('show', data, {controller: true, height: 300, hu: 'images/', thumbnails: true, width: 400});
 	  });
