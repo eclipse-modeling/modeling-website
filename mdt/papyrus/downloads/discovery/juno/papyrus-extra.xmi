@@ -82,6 +82,7 @@
         incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/emf/compare/updates/releases/1.3</sitesURLS>
       <overview
           summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
       <id>org.eclipse.papyrus.extra.uml.compare.feature</id>
