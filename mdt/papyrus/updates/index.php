@@ -65,7 +65,7 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <h4>Update sites for Papyrus release versions:</h4>
 <h5>Papyrus release 0.9.0 (Juno) (Recommended):</h5>
 <ul>
-<li><a href="http://download.eclipse.org/releases/juno/">http://download.eclipse.org/releases/juno/</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno/main">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno/main</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
 </ul>
 <h5>Papyrus release 0.8.2 (Indigo):</h5>
 <ul>
