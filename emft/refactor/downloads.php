@@ -41,16 +41,20 @@
 			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 		</ul>
 		<br/>
-		<b>Papyrus:</b> Please install the Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads" target="_blank">www.eclipse.org/downloads</a></li>.
-		Start Eclipse and install the UML modeling environment Papyrus (<i>Install Modeling Components > Papyrus</i>) as well as the reporting tool BIRT 
-		(<i>Help > Install New Software... > Work with: http://download.eclipse.org/birt/update-site/3.7-interim/ > Select All > Next > ...</i>). 
+		<b>Papyrus:</b> Please install the Indigo (!) Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/packages/release/indigo/sr2" target="_blank">
+		http://www.eclipse.org/downloads/packages/release/indigo/sr2</a></li>.
+		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Indigo > Modeling
+		> MDT Papyrus > next > ...</i>) as well as the reporting tool BIRT 
+		(<i>Help > Install New Software... > Work with: Indigo > Bussiness... > BIRT Framework > next > ...</i>). 
 		Download <i>Papyrus.zip</i> from above, unzip it
 		into the plugins directory of your Eclipse installation and restart Eclipse. Download <i>ExampleProjectPapyrus.zip</i> from above and import the example
-		project <i>VehicleRentalCompany</i> into your workspace.
+		project <i>VehicleRentalCompany</i> into your workspace 
+		(<i>File > Import... > General > Existing Projects into Workspace > Next > Select archive file > Browse (to the zip file) > Finish</i>).
 		<br/><br/>
 		<b>IBM RSA v7.5.5:</b> Download <i>RSA755.zip</i> from above, unzip it
 		into the plugins directory of your RSA installation and restart IBM RSA. Download <i>ExampleProjectRSA755.zip</i> from above and import the example
-		project <i>VRC</i> into your workspace.
+		project <i>VRC</i> into your workspace
+		(<i>File > Import... > General > Existing Projects into Workspace > Next > Select archive file > Browse (to the zip file) > Finish</i>).
 		</p>	
 	</div>
 	
