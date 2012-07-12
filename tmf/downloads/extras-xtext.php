@@ -16,8 +16,8 @@ function showNotes()
 ?>
 	<div class="homeitem3col">
 		<h3>Notes</h3>
-		<p>In addition we highly recommend to install the ANTLR generator from <a href="http://download.itemis.de/updates/releases/2.0.0" target="new_window">http://download.itemis.de/updates/releases/2.0.0</a>.</p>
-		<p>Read more <a href="http://www.eclipse.org/Xtext/download.html" target="new_window">http://www.eclipse.org/Xtext/download.html</a>.</p>
+		<p>In addition we highly recommend to install the ANTLR generator from <a href="http://download.itemis.de/updates/releases/2.0.0" target="new_window">http://download.itemis.de/updates/releases/2.0.0</a></p>
+		<p>Read more <a href="http://www.eclipse.org/Xtext/download.html" target="new_window">http://www.eclipse.org/Xtext/download.html</a></p>
 	</div>
 <?php
 }
