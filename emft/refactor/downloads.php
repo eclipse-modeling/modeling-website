@@ -34,26 +34,47 @@
 		as well as to the tutorial at <a href="http://www2.imm.dtu.dk/conferences/ECMFA-2012/" target="_blank">ECMFA 2012</a> on July 2, 2012 (find tutorial slides in
 		the <a href="docu.php">documentation</a> section).
 		<br/><br/>
+		<h3>Eclipse Juno</h3>
 		<ul class="midlist">
-			<li><a href="downloads/Papyrus.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus</a></li>
-			<li><a href="downloads/ExampleProjectPapyrus.zip" target="_blank">Example project for UML modeling environment Papyrus</a></li>
-			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
-			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
+			<li><a href="downloads/Juno.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus (Eclipse Juno)</a></li>
+			<li><a href="downloads/ExampleProjectJuno.zip" target="_blank">Example project for UML modeling environment Papyrus (Eclipse Juno)</a></li>
 		</ul>
 		<br/>
-		<b>Papyrus:</b> Please install the Indigo (!) Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/packages/release/indigo/sr2" target="_blank">
+		Please install the Juno Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/" target="_blank">
+		http://www.eclipse.org/downloads/packages/release/indigo/sr2</a></li>.
+		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Juno > Modeling
+		> MDT Papyrus > next > ...</i>) as well as the reporting tool BIRT 
+		(<i>Help > Install New Software... > Work with: Indigo > Bussiness... > BIRT Framework > next > ...</i>). 
+		Download <b>Juno.zip</b> from above, unzip it
+		into the plugins directory of your Eclipse installation and restart Eclipse. Download <b>ExampleProjectJuno.zip</b> from above and import the example
+		project <b>VehicleRentalCompany</b> into your workspace 
+		(<i>File > Import... > General > Existing Projects into Workspace > Next > Select archive file > Browse (to the zip file) > Finish</i>).
+		<br/><br/>
+		<h3>Eclipse Indigo</h3>
+		<ul class="midlist">
+			<li><a href="downloads/Indigo.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus (Eclipse Indigo)</a></li>
+			<li><a href="downloads/ExampleProjectIndigo.zip" target="_blank">Example project for UML modeling environment Papyrus (Eclipse Indigo)</a></li>
+		</ul>
+		<br/>
+		Please install the Indigo Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/packages/release/indigo/sr2" target="_blank">
 		http://www.eclipse.org/downloads/packages/release/indigo/sr2</a></li>.
 		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Indigo > Modeling
 		> MDT Papyrus > next > ...</i>) as well as the reporting tool BIRT 
 		(<i>Help > Install New Software... > Work with: Indigo > Bussiness... > BIRT Framework > next > ...</i>). 
-		Download <i>Papyrus.zip</i> from above, unzip it
-		into the plugins directory of your Eclipse installation and restart Eclipse. Download <i>ExampleProjectPapyrus.zip</i> from above and import the example
-		project <i>VehicleRentalCompany</i> into your workspace 
+		Download <b>Indigo.zip</b> from above, unzip it
+		into the plugins directory of your Eclipse installation and restart Eclipse. Download <b>ExampleProjectIndigo.zip</b> from above and import the example
+		project <b>VehicleRentalCompany</b> into your workspace 
 		(<i>File > Import... > General > Existing Projects into Workspace > Next > Select archive file > Browse (to the zip file) > Finish</i>).
 		<br/><br/>
-		<b>IBM RSA v7.5.5:</b> Download <i>RSA755.zip</i> from above, unzip it
-		into the plugins directory of your RSA installation and restart IBM RSA. Download <i>ExampleProjectRSA755.zip</i> from above and import the example
-		project <i>VRC</i> into your workspace
+		<h3>IBM RSA v7.5.5</h3>
+		<ul class="midlist">
+			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
+			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
+		</ul>
+		<br/>
+		Download <b>RSA755.zip</b> from above, unzip it
+		into the plugins directory of your RSA installation and restart IBM RSA. Download <b>ExampleProjectRSA755.zip</b> from above and import the example
+		project <b>VehicleRentalCompany</b> into your workspace
 		(<i>File > Import... > General > Existing Projects into Workspace > Next > Select archive file > Browse (to the zip file) > Finish</i>).
 		</p>	
 	</div>
