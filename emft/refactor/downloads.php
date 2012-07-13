@@ -39,7 +39,6 @@
 			<li><a href="downloads/Juno.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus (Eclipse Juno)</a></li>
 			<li><a href="downloads/ExampleProjectJuno.zip" target="_blank">Example project for UML modeling environment Papyrus (Eclipse Juno)</a></li>
 		</ul>
-		<br/>
 		Please install the Juno Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/" target="_blank">
 		http://www.eclipse.org/downloads/packages/release/indigo/sr2</a></li>.
 		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Juno > Modeling
@@ -55,7 +54,6 @@
 			<li><a href="downloads/Indigo.zip" target="_blank">Plugins bundle for UML modeling environment Papyrus (Eclipse Indigo)</a></li>
 			<li><a href="downloads/ExampleProjectIndigo.zip" target="_blank">Example project for UML modeling environment Papyrus (Eclipse Indigo)</a></li>
 		</ul>
-		<br/>
 		Please install the Indigo Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads/packages/release/indigo/sr2" target="_blank">
 		http://www.eclipse.org/downloads/packages/release/indigo/sr2</a></li>.
 		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Indigo > Modeling
@@ -71,7 +69,6 @@
 			<li><a href="downloads/RSA755.zip" target="_blank">Plugins bundle for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 			<li><a href="downloads/ExampleProjectRSA755.zip" target="_blank">Example project for UML modeling environment IBM Rational Software Architect v7.5.5</a></li>
 		</ul>
-		<br/>
 		Download <b>RSA755.zip</b> from above, unzip it
 		into the plugins directory of your RSA installation and restart IBM RSA. Download <b>ExampleProjectRSA755.zip</b> from above and import the example
 		project <b>VehicleRentalCompany</b> into your workspace
