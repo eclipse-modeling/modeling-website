@@ -42,7 +42,7 @@
 		Please install the Juno Eclipse Modeling Tools from <a href="http://www.eclipse.org/downloads" target="_blank">
 		http://www.eclipse.org/downloads</a></li>.
 		Start Eclipse and install the UML modeling environment Papyrus (<i>Help > Install New Software... > Work with: Juno > Modeling
-		> MDT Papyrus > next > ...</i>) as well as the reporting tool BIRT 
+		> Papyrus SDK Binaries > next > ...</i>) as well as the reporting tool BIRT 
 		(<i>Help > Install New Software... > Work with: Indigo > Bussiness... > BIRT Framework > next > ...</i>). 
 		Download <b>Juno.zip</b> from above, unzip it
 		into the plugins directory of your Eclipse installation and restart Eclipse. Download <b>ExampleProjectJuno.zip</b> from above and import the example
