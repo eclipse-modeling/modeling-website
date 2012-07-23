@@ -33,7 +33,7 @@
     		 	<li>Report Enhancements: Got an idea for a killer feature? Or maybe something you use often could use some tweaking? Post an enhancement request!</li>
    			</ul>
    			
-   			You can achieve this going to the Eclipse bugzilla: <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=MDT&amp;version=0.7.0&amp;component=Papyrus&amp;rep_platform=All&amp;op_sys=All"/>New Bug</a>
+   			You can achieve this going to the Eclipse bugzilla: <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=MDT.Papyrus&amp;version=0.9.0&amp;component=Core&amp;rep_platform=All&amp;op_sys=All"/>New Bug</a>
 		</p>
 				
 		<h3>Fix Bugs or Implement Enhancements</h3>
