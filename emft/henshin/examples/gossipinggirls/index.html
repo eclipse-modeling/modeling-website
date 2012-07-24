@@ -48,6 +48,7 @@ The green state is the initial state. The selected state is the target state in 
 <pre>
 girls->forAll(g : Girl | g.secrets->size()=girls->size())
 </pre>
+<br>
 which basically says that for all girls it holds that the number of secrets that she knows is equal to the number of girls there exists. To determine the minimum number of phone calls required, select the validation tool <i>OCL (shortest path)</i> and enter the above constraint in the text field and hit the run button. You should see now the shortest path to the goal state. Note that in the state space, in every state a self loop transition is possible. This models the situation where two girls call each other which already know all secrets of each other.
 </p>
 

@@ -54,10 +54,11 @@ exactly one message (remember that more than one message per node are considered
 <i>send</i> rule also matches a node with exactly one message, but it does not forward the message to its 
 neighbors. Note that in both <i>send</i> rules, the node was active-status of the node <i>x</i> changes from
 <i>true</i> to <i>false</i>. The rational for having these two rules with the same name is that the sending
-of the message is decided probabilistically. That means, if matched, the left <i>send</i> rule is executed
-with a probability <i>pSend</i> and the right <i>send</i> rule with a probability of 1-<i>pSend</i>. 
-The third allows a node to reset itself by deleting all its messages whenever a collision occurred (it has more
-than one message). 
+of the message is decided probabilistically. That means, the two rules are formally considered as on 
+<i>probabilistic rule</i> which consists of one LHS and two RHSs (modeled in the two send <i>rules</i>). 
+If matched, the left <i>send</i> rule is executed with a probability <i>pSend</i> and the right <i>send</i> 
+rule with a probability of 1-<i>pSend</i>. The third allows a node to reset itself by deleting all its 
+messages whenever a collision occurred (it has more than one message). 
 </p>
 
 <h3>Evaluation</h3>
@@ -114,11 +115,11 @@ to drop abruptly for nodes 7-11.
 
 <p>
 All conducted analysis is based on the state space generation support in Henshin. The figure below
-shows a visualization of the state space for network (b) (*.statespace file opened in the
-<a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer">Henshin state space explorer</a>.
+shows a visualization of the state space for network (b) (State space visualized using the
+<a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer">Henshin state space explorer</a>).
 </p>
 <p>
-<a href="examples/probbroadcast/statespace.png"><img width="500" src="examples/probbroadcast/statespace.png" /></a>
+<a href="examples/probbroadcast/statespace2.png"><img width="500" src="examples/probbroadcast/statespace2.png" /></a>
 </p>
 
 
