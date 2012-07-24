@@ -10,8 +10,15 @@ This tutorial shows some of the basic concepts of the Henshin transformation
 language and tool environment. The example transformation is <i>endogenous</i>,
 meaning that it operates on a single metamodel. We explain how to define
 transformation rules using Henshin's integrated graphical editor, and
-how to use the Interpreter Wizard to execute rules on an example model.
+how to use the interpreter (wizard and programmatically) to execute rules 
+on an example model.
 </p>
+
+<p>
+The transformation model, example input models and source code can be found
+<a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin/trunk/plugins/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/bank">here</a>.
+</p>
+
 
 <h2>Metamodel and Instance Model</h2>
 
@@ -162,7 +169,7 @@ As an exercise, you may define a rule which moves all accounts
 from one client to another client.
 </p>
 
-<h2>Execution using the Interpreter</h2>
+<h2>Execution using the Interpreter Wizard</h2>
 
 <p>
 We now show how to execute single transformation rules
@@ -216,5 +223,13 @@ The preview window on the right shows the
 result of applying the rule with these parameters.
 <br>
 <br>
+</p>
+
+<h2>Execution using the Interpreter API</h2>
+
+<p>
+Of course, you can also invoke the interpreter programmatically. You can find an implementation of 
+the example transformations above using the interpreter in the 
+<a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin/trunk/plugins/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/bank/BankExample.java">BankExample</a> class.
 </p>
 
