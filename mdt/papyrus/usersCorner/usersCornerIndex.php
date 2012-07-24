@@ -82,12 +82,12 @@
 			</ul>
 		</div>
 		
-		<div class="sideitem">
+		<!--div class="sideitem">
 			<h6>&lt;h6&gt; tag</h6>
 				<div class="modal">
 					Wrapping your content using a div.modal tag here will add the gradient background
 				</div>
-		</div>
+		</div-->
 		
 	</div>
 
