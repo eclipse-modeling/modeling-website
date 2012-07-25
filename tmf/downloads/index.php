@@ -8,6 +8,7 @@ ob_start();
 
 /* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
 $extraZips = array(
+	"tmf-xtext-gwt",
 	"tmf-xtext-Automated-Tests",
 	"tmf-xtext-automated-tests",
 );
@@ -30,6 +31,7 @@ $dls = array(
 			"SDK (Runtime, Source, Examples)" => "SDK",
 			"Runtime" => "runtime",
 			"Examples" => "examples",
+			"GWT Libraries (Xbase,Xtend)" => "gwt",
 			"Automated Tests" => "automated-tests",
 			"Automated Tests" => "Automated-Tests"
 		)
