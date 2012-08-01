@@ -162,7 +162,7 @@ for more detailed information.
           <description>
             <html:div>
               <html:p>
-              Some performances bottlenecks in EMF Compare 1.3 have been identified yet cannot be solved without
+              Some performance bottlenecks in EMF Compare 1.3 have been identified yet cannot be solved without
               fully re-thinking the comparison process. EMF Compare 2.0 will provide these enhancements and will
               be faster than the 1.* stream even without the aforementioned changes that are planned for version
               2.1.
