@@ -158,6 +158,25 @@ for more detailed information.
           </description>          
         </theme>
         
+        <theme name="Integration with the Eclipse UI">
+          <description>
+            <html:div>
+              <html:p>
+                EMF Compare 1 presented a user interface mimicking the standard Eclipse compare UI, but which
+                was not really integrated with it : folder comparison was not using EMF Compare to show
+                structural differences, the viewers were our own, the displayed elements weren't compatible with
+                what Eclipse Compare was expecting...
+              </html:p>
+              <html:p>
+                EMF Compare 2 is now deeply integrated with Eclipse Compare, reusing its API in each and every
+                possible means. This means that the icons will be the exact same as the standard "text"
+                comparisons, the behavior will be closer to Eclipse compare (notably on folder comparisons and
+                viewer switching)...
+              </html:p>
+            </html:div>
+          </description>
+        </theme>
+        
         <theme name="Performance Enhancements">
           <description>
             <html:div>
