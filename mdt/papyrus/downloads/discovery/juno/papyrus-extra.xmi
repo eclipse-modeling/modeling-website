@@ -16,7 +16,7 @@
         groups="//@filters.0"
         image32="images/marte-32x32.png"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <overview
           summary="MARTE is the reference implementation of the OMG language for real time embedded systems (MARTE OMG)"
@@ -39,7 +39,7 @@
         image32="images/layout.gif"
         incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <overview
           summary="This feature provides an automatic layout tool for all GMF-based diagrams for Papyrus modeler"
           screenshot="images/layout.gif"
@@ -53,7 +53,7 @@
         license="EPL"
         groups="//@filters.0"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
@@ -67,7 +67,7 @@
         groups="//@filters.1"
         image32="images/DiagramTemplate.gif"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <sitesURLS>http://download.eclipse.org/releases/juno</sitesURLS>
       <overview
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
@@ -82,7 +82,7 @@
         image32="images/papyrus_compare_32x32.png"
         incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno/extra/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/emf/compare/updates/releases/1.3</sitesURLS>
       <overview
           summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
