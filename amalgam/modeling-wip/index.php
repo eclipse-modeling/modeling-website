@@ -6,8 +6,8 @@ $App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();
 include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 	
     $App->AddExtraHtmlHeader('<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->' . "\n\t");
-    $App->AddExtraHtmlHeader('<link href="assets/css/bootstrap.css" rel="stylesheet">' . "\n\t");
-    $App->AddExtraHtmlHeader('<link href="assets/css/modeling.css" rel="stylesheet">' . "\n\t");
+    $App->AddExtraHtmlHeader('<link href="assets/css/bootstrap.css" rel="stylesheet"/>' . "\n\t");
+    $App->AddExtraHtmlHeader('<link href="assets/css/modeling.css" rel="stylesheet"/>' . "\n\t");
     $App->AddExtraHtmlHeader('<script src="assets/js/jquery.js"></script>' . "\n\t");
     $App->AddExtraHtmlHeader('<script src="assets/js/bootstrap-collapse.js"></script>' . "\n\t");
 	
