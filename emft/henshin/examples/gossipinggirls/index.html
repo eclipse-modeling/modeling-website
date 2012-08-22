@@ -44,7 +44,7 @@ To solve the gossiping girls problem, we generate the state space with Henshin a
 </p>
 
 <p>
-The green state is the initial state. The selected state is the target state in which all girls know all secrets. We use the following OCL constraint to identify the target states:
+The green state is the initial state. State 12 is the target state in which all girls know all secrets. We use the following OCL constraint to identify the target states:
 <pre>
 girls->forAll(g : Girl | g.secrets->size()=girls->size())
 </pre>
