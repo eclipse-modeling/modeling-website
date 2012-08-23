@@ -6,9 +6,9 @@
 </p>
 
 <p>
-This is an example for state space analysis of probabilistic graph transformation systems modeled in Henshin. 
-We model here a probabilistic broadcast protocol for wireless sensor networks. A detailed description of the
-approach and the example can be found in this paper:
+This is an example for state space analysis of so-called <i>probabilistic graph transformation systems</i> modeled in Henshin. 
+We model here a probabilistic broadcast protocol for wireless sensor networks. A detailed description of the approach and the 
+example can be found in this paper:
 <ul>
 <li>Christian Krause, Holger Giese: 
 <i>Probabilistic Graph Transformation Systems</i>.
@@ -19,6 +19,7 @@ To appear in LNCS, Springer-Verlag.
 </p>
 
 <p>
+The slides for this paper are available <a href="http://www.hpi.uni-potsdam.de/fileadmin/hpi/FG_Giese/Personen/pgts-slides.pdf">here</a>.
 The transformation rules, topology models and the source code can be found
 <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.henshin/trunk/plugins/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/probbroadcast">here</a>. 
 To run the Java executable you need Henshin 0.9.3 or higher and <a href="http://www.prismmodelchecker.org/">PRISM 4.0</a> or higher.
@@ -38,9 +39,9 @@ nodes are active.
 </p>
 
 <p>
-The goal of the probabilistic broadcasting is to send the message to all nodes in the network. This sending is
-possible only to direct neighbors of a node. Moreover, if a node receives a message from more than one neighbor,
-it is considered as a collision and the node considers the message as corrupt. The idea of <i>probabilistic</i>
+The goal of the probabilistic broadcasting is to send the message to all nodes in the network. The sending of messages
+is possible only to direct neighbors of a node. Moreover, if a node receives a message from more than one neighbor,
+it is interpreted as a collision and the node considers the message as corrupt. The idea of <i>probabilistic</i>
 broadcasting is that every node decides with a certain probability whether to forward its message or not. This
 lowers the chance of message collisions and reduces the general communication costs. We model the probabilistic
 broadcasting using three rules in Henshin shown below.
@@ -50,14 +51,14 @@ broadcasting using three rules in Henshin shown below.
 </p>
 <p>
 There are two rules called <i>send</i>. The one on the left adds messages to all neighbors of a node that has
-exactly one message (remember that more than one message per node are considered as collisions). The second
+exactly one message (remember that more than one message per node are considered as collisions). The second 
 <i>send</i> rule also matches a node with exactly one message, but it does not forward the message to its 
-neighbors. Note that in both <i>send</i> rules, the node was active-status of the node <i>x</i> changes from
-<i>true</i> to <i>false</i>. The rational for having these two rules with the same name is that the sending
-of the message is decided probabilistically. That means, the two rules are formally considered as on 
+neighbors. Note that in both <i>send</i> rules, the active-status of the node <i>x</i> changes from
+<i>true</i> to <i>false</i>. The rationale for having these two rules with the same name is that the sending
+of the message is decided probabilistically. That means, the two rules are formally considered as one 
 <i>probabilistic rule</i> which consists of one LHS and two RHSs (modeled in the two send <i>rules</i>). 
 If matched, the left <i>send</i> rule is executed with a probability <i>pSend</i> and the right <i>send</i> 
-rule with a probability of 1-<i>pSend</i>. The third allows a node to reset itself by deleting all its 
+rule with a probability of 1-<i>pSend</i>. The third rule allows a node to reset itself by deleting all its 
 messages whenever a collision occurred (it has more than one message). 
 </p>
 
@@ -65,7 +66,7 @@ messages whenever a collision occurred (it has more than one message).
 
 <p>
 Based on the theory presented in the ICGT paper, we evaluated the modeled system to determine the probabilities
-of reception of a message by the nodes in a network. We analyzed the protocol for 4 different network topologies
+of the reception of a message by the nodes in a network. We analyzed the protocol for 4 different network topologies
 shown in the image below. In each of these networks, node 1 is the one that initiates the broadcasting. Network
 (a) is the one shown in abstract syntax in the previous section.
 </p>
@@ -115,7 +116,7 @@ to drop abruptly for nodes 7-11.
 
 <p>
 All conducted analysis is based on the state space generation support in Henshin. The figure below
-shows a visualization of the state space for network (b) (State space visualized using the
+shows a visualization of the state space for network (b) (state space visualized using the
 <a href="http://wiki.eclipse.org/Henshin_Statespace_Explorer">Henshin state space explorer</a>).
 </p>
 <p>
