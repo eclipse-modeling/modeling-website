@@ -32,7 +32,7 @@ $html = <<<EOHTML
 <h1>$pageTitle</h1>
 
 <br>
-<h2>Published Conference and Workshop Proceedings</h2>
+<h2>Conference and Workshop Proceedings</h2>
 <ul>
 
 <br><b>2012</b>
@@ -80,7 +80,7 @@ LNCS&nbsp;6372, 381-383, Springer-Verlag, 2010.
 
 <br>
 
-<h2>Other Documents</h2>
+<h2>Other Material</h2>
 <ul>
 <li>Christian Krause: <a href="documents/henshin_mcrl2.pdf">Instance-aware Model Checking of Graph Transformation Systems using Henshin and mCRL2</a>.
 Unpublished article, 2011.
