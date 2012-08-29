@@ -35,7 +35,7 @@ $html = <<<EOHTML
 This page gives an overview about projects which use Henshin.
 </p>
 
-<h3>Latest Stable Release</h3>
+<h2>SPELL</h2>
 <p>
 The <a href="http://wwwen.uni.lu/snt">Interdisciplinary Centre for Security, Reliability and Trust (SnT)</a>
 at the University of Luxembourg uses Henshin for automatic translations of programming languages for 

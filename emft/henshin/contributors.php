@@ -35,7 +35,7 @@ $html = <<<EOHTML
 <li>Enrico Biermann</li>
 <li>Gregor Bonifer</li>
 <li><a href="http://www.mathematik.uni-marburg.de/~sjurack/">Stefan Jurack</a></li>
-<li><a href="http://www.hpi.uni-potsdam.de/giese/personen/dr_christian_krause.html">Christian Krause</a></li>
+<li><a href="http://www.hpi.uni-potsdam.de/giese/personen/dr_christian_krause.html">Christian Krause</a> (project leader)</li>
 <li>Felix Rieger</li>
 <ul>
 
