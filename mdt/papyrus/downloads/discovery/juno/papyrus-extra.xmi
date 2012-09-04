@@ -95,7 +95,8 @@
         license="EPL"
         groups="//@filters.0"
         image32="images/table_32x32.png"
-        incubation="true">
+        incubation="true"
+        visible="false">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <overview
