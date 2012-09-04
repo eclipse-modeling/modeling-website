@@ -88,6 +88,20 @@
           summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
       <id>org.eclipse.papyrus.extra.uml.compare.feature</id>
     </components>
+    <components
+        name="Papyrus EFacet Table Editor"
+        provider="Eclipse Modeling Project"
+        description="Offers EFacet table for Papyrus"
+        license="EPL"
+        groups="//@filters.0"
+        image32="images/table_32x32.png"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
+      <overview
+          summary="Offers a tool for comparing and merging UML Model, keeping Diagram Consistency"/>
+      <id>org.eclipse.papyrus.table.efacet.feature</id>
+    </components>
   </categories>
   <filters name="Stable"/>
   <filters name="Experimental"/>
