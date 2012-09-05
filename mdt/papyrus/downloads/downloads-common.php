@@ -139,7 +139,7 @@ if (is_array($projects) && sizeof($projects) > 1)
 }
 
 $branches = loadDirSimple($PWD, ".*", "d");
-rsort($branches);
+rsort($branches, SORT_NATURAL | SORT_FLAG_CASE);
 $buildTypes = getBuildTypes($branches, $buildtypes);
 
 $builds = getBuildsFromDirs();
