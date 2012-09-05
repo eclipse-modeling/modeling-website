@@ -43,7 +43,11 @@ if (isset($dls[$proj]) && is_array($dls[$proj]))
 $hiddenBuilds = is_readable($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/hidden.txt") ? file($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/hidden.txt") : array();
 
 // include extras-$proj.php or extras-$PR.php
-$files = array ($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $projct . ".php", $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $PR . ".php");
+$files = array (
+		$_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $projct . ".php", 
+		$_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $PR . ".php",
+		$_SERVER["DOCUMENT_ROOT"] . "/$PR/$projct/downloads/extras-$projct.php"
+		);
 foreach ($files as $file)
 {
 	if (file_exists($file))
