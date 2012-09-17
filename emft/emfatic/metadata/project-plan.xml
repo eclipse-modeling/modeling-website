@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?-->
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan"
@@ -18,7 +17,7 @@
 	</release_milestones>
 	<target_environments>
 		<html:div>
-			Emfatic depends on the Platform and EMF projects. Epsilon has been compiled using Java 1.6 and does not depend on any non-Java libraries.
+			Emfatic depends on the Platform and EMF projects. Emfatic has been compiled using Java 1.6 and does not depend on any non-Java libraries.
 		</html:div>
 		<internationalization>
 			<html:div>
