@@ -20,5 +20,5 @@ $Nav->addCustomNav("Contributors", "contributors.php", "_self", 2);
 #$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Henshin", "_self", 2);
 $Nav->addCustomNav("Mailing List", "https://dev.eclipse.org/mailman/listinfo/henshin-dev", "_self", 2);
 $Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/Henshin_FAQ", "_self", 2);
-
+$Nav->addCustomNav("Javadoc", "http://download.eclipse.org/modeling/emft/henshin/javadoc/nightly/", "_self", 2);
 ?>
