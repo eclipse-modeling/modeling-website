@@ -31,6 +31,15 @@ $html = <<<EOHTML
 <div id="midcolumn">
 <h1>$pageTitle</h1>
 
+<p>
+Henshin is a joint project by developers at
+the <a href="http://www.uni-marburg.de/index_html-en?set_language=en">Philipps-University</a> in Marburg,
+the <a href="http://www.hpi.uni-potsdam.de/willkommen.html?L=1">Hasso&nbsp;Plattner Institute</a> in Potsdam,
+the <a href="http://www.tu-berlin.de/menue/home/parameter/en/">Technical University of Berlin</a>, and others.
+</p>
+
+<p>
+Contributors:
 <ul>
 <li>Enrico Biermann</li>
 <li>Gregor Bonifer</li>
@@ -38,6 +47,7 @@ $html = <<<EOHTML
 <li><a href="http://www.hpi.uni-potsdam.de/giese/personen/dr_christian_krause.html">Christian Krause</a> (project leader)</li>
 <li>Felix Rieger</li>
 <ul>
+</p>
 
 </div>
 </div>
