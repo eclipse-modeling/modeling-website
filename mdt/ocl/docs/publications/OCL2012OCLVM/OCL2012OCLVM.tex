@@ -102,11 +102,11 @@ framework is extensible to OCL-based languages such as QVT.
 %\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
 
 \section{Introduction}
-It is nearly 20 years since OCL first emerged at IBM as an evolution from Syntropy, and nearly 10 years since the OCL 2.0 specification was drafted\cite{OCL-2.0-draft}. OCL is critical to the specification of UML and since no clear alternative to UML or OCL has emerged,
-why is OCL uptake so limited?
+It is nearly 20 years since OCL first emerged at IBM as an evolution from Syntropy, and nearly 10 years since the OCL 2.0 specification was drafted\cite{OCL-2.0-draft}. OCL is critical to the specification of UML and since no clear alternative to UML or OCL has emerged, why is OCL uptake so limited?
 
-Perhaps we OCL enthusiasts need to be honest and look hard at why OCL doesn't work today, despite it's tremendous
-promise for the future and the many demonstrations of the power of its formality at research institutions.
+Perhaps OCL enthusiasts need to be honest and look hard at why OCL doesn't work today.
+Then it may be possible to realize the tremendous promise for the future and to exploit the many
+demonstrations of the power of OCL formality at research institutions.
 
 \subsection{Quality}
 
@@ -118,8 +118,8 @@ If the WFRs are so semantically incorrect, what chance is there that they are fu
 
 Can we expect the wider software community to take OCL seriously when its most obvious exposition is so poor?
 
-The UML 2.5 specification is now `complete' and undergoing review. The specification is a major simplification
-reorganizing the previous layers of merge-able concepts in the Superstructure and Infrastructure specifications into
+The UML 2.5 specification is now `complete' and undergoing review. The specification is a major simplification. It
+reorganizes the previous layers of merge-able concepts in the Superstructure and Infrastructure specifications into
 a single specification of the merged concepts; this is a tremendous improvement and is supported by the use of
 model-driven auto-generation of the specification from normative models. With high quality models in place, attention has
 turned to the OCL embedded within them. Eclipse OCL\cite{MDT/OCL} tooling was used to remove 74 syntax errors and correct one or more semantic errors in 250 distinct text regions. Further errors were corrected as missing OCL constraints were added and Diagram Interchange introduced.
@@ -139,7 +139,7 @@ executable. On the one hand this facilitates the empirical discovery of the mean
 Attempting to use OCL in earnest encounters another credibility gap. OCL execution is often slow, despite the very favorable showing of Eclipse OCL in comparison with other technologies reported in Slide 11 of \cite{Rath-Queries}.
 
 In Eclipse OCL, this is because execution has used an interpreter; directly on Ecore for many years, and recently
-on a UML-aligned pivot representation. Table \ref{Evaluator performance} shows the relative performance using the simplest benchmark from \cite{Rath-Queries} for which the optimal Java code is just
+on a UML-aligned pivot representation. Table \ref{Evaluator performance} shows the relative performance using the simplest benchmark from \cite{Rath-Queries} for which the minimal Java code is just
 \begin{verbatim}        return this.feature <= 0\end{verbatim}
  evaluated on a set of 12800 model elements.
 A preliminary code generator was introduced in the Juno release and this gives a 3-fold
@@ -176,11 +176,11 @@ Some of the problems that a full-functionality OCL evaluator must accommodate ar
 \item Collections can be nested and can contain null values
 \item Null values may participate in computations and the OclVoid type conforms to all types
 \item Invalid values may participate in computations but may not be used in collections
-\item operations may be overloaded
-\item additional features may be added by a Complete OCL document
+\item Operations may be overloaded
+\item Additional features may be added by a Complete OCL document
 \item oclType() may be a gateway to reflective functionality
 \item allInstances() requires access to a global model view 
-\item the specification lacks precision in some critical areas
+\item The specification lacks precision in some critical areas
 \end{itemize}
 
 \section{OCL Virtual Machine}\label{VM now}
@@ -239,7 +239,7 @@ The Value types specified by the OCL specification and those used in the OCL VM 
 Use of types as values is implicit in OCL expressions such as \verb|oclIsKindOf(SomeType)| but left rather vague in the specification. A practical system must recognize that types can be values and that their types can be templated. Thus a modeled
 library element declaration\cite{OCL-stdlib} might be:
 \begin{verbatim}
-operation oclAsType<TT>(type : Classifier<TT>) : TT
+operation oclAsType<TT>(type : Metaclass<TT>) : TT
 \end{verbatim}
 %This enables the type system to propagate the known argument type to the result.
 
@@ -394,6 +394,8 @@ Egea\cite{MySQL4OCL} describes a MySQL generator to avoid the heavy overhead of 
 Shidqie\cite{Shidqie} introduces Imperative Ecore as an intermediate model to separate OCL restructuring and Java formatting concerns, but ignores non-Java-like aspects such as unbounded numbers.
 
 Moiseev\cite{rodion-models2009} takes a more progressive transformational approach realized as rewrites in Maude. This is clearly beneficial when supporting multiple target languages, unfortunately it ignores the awkward aspects of OCL.
+
+Mezei\cite{OCL-relocation} relocates and caches OCL evaluations to reduce navigation costs.
 
 Efficient code is one important aspect of OCL execution. Efficient scheduling is an equally important
 but largely orthogonal issue. 
