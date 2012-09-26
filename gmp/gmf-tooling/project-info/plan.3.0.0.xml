@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan xmlns="http://www.eclipse.org/project/plan" xmlns:html="http://www.w3.org/1999/xhtml">
+   <release projectid="modeling.gmp.gmf-tooling" version="3.0.0"/>
+   <introduction>
+   		<html:p>This document lays out the feature and API set for the Juno release of the Eclipse Graphical Modeling Framework Tooling (GMF-T) Project, version 3.0.0. This project plan inherits from the Modeling Project Plan, which should be referenced when consulting this individual project plan.</html:p>
+   </introduction>
+   <release_deliverables>
+     <html:p>
+    The release deliverables have the same form as is found in most Eclipse projects, namely:
+<html:ul>
+<html:li>GMF Tooling source code release, available as versions tagged "R3_0" in the project's GIT repository.</html:li>
+<html:li>GMF Tooling SDK (includes sources, examples, and documentation) (downloadable zip and update site).</html:li>
+<html:li>GMF Tooling Runtime binary distribution (downloadable zip and update site).</html:li>
+<html:li>GMF Tooling Tests (downloadable zip and update site)</html:li>
+</html:ul>
+</html:p>
+    </release_deliverables>
+   <release_milestones>
+      <preamble>
+      	<html:p>
+      		Release milestones occur at roughly 6 week intervals and follow the Platform milestone releases by approximately 2 weeks; 
+      		that is, until the final 3.8 release of the Platform, upon which GMF Tooling and other projects will release simultaneously. 
+      		It is anticipated that GMF Tooling will synchronize its release milestones with the Juno release schedule for +3 components.
+      		</html:p>
+      </preamble>
+      <milestone date="12/13/2011" milestone="M4"></milestone>
+      <milestone date="02/01/2012" milestone="M5"></milestone>
+      <milestone date="03/21/2012" milestone="M6"></milestone>
+      <milestone date="05/09/2012" milestone="M7"></milestone>
+      <milestone date="05/23/2012" milestone="RC1"></milestone>
+      <milestone date="05/30/2012" milestone="RC2"></milestone>
+      <milestone date="06/06/2012" milestone="RC3"></milestone>
+      <milestone date="13/06/2012" milestone="RC4"></milestone>
+      <milestone date="27/06/2012" milestone="3.0.0"></milestone>
+      <postamble>
+      	<html:p>
+      	GMF Tooling will produce maintenance releases to align with the Juno SR releases, that includes the Eclipse Platform 3.8.1 and 3.8.2 releases. 
+      	GMF Tooling may produce interim maintenance releases in addition to these in order to satisfy clients requests.
+<html:ul>
+<html:li>9/28/2012 (last Friday of September) - GMF Tooling 3.0.1 maintenance release (Juno Service Release 1)</html:li>
+<html:li>2/22/2013 (last Friday of February) - GMF Tooling 3.0.2 maintenance release (Juno Service Release 2)</html:li>
+<html:li>A list of issues indicated for the 3.0.x maintenance stream can be found in Bugzilla, or by using links on maintenance stream build pages.</html:li>
+</html:ul> 
+      	</html:p>
+      </postamble>
+   </release_milestones>
+   <target_environments>
+   		<html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.</html:p>
+   		<html:p>
+   		The Eclipse GMF Tooling project depends upon on the Platform and other projects, which are mostly "pure" Java. 
+   		The 3.8 release of the Eclipse Platform Project is written and compiled against and targeted to run on Java SE 5 and Java SE 6 VMs. GMF Tooling will target the same Java version(s).</html:p>
+		<html:p>Eclipse Platform SDK 3.8 will be tested and validated on a number of reference platforms. GMF Tooling is expected to be platform-independent, but will be tested and validated against a subset of those listed for the platform.</html:p>
+     <internationalization>
+     	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the GMF Tooling project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
+     </internationalization>
+   </target_environments>
+   <compatibility_with_previous_releases>
+     <html:p>Compatibility of Release 3.0</html:p>
+	<html:p>The GMF Tooling Project will be developed in parallel with the following projects. As stated above, each milestone release of the GMF Tooling Project will be compatible with the corresponding milestones for each of these projects, and delivered the appropriate offset.</html:p>
+	<html:ul><html:li>Eclipse Platform SDK version 3.8</html:li>
+		<html:li>Eclipse Modeling Framework (EMF) version 2.8</html:li>
+		<html:li>Graphical Editing Framework (GEF) version 3.8</html:li>
+		<html:li>GMF Notation &amp; Runtime version 1.6</html:li>
+		<html:li>Eclipse OCL version 3.2</html:li>
+	</html:ul>
+	<html:p>Therefore, the GMF tooling release will be compatible with these versions and will publish binary and source compatibilities with migration guides on subsequent releases.</html:p>
+   </compatibility_with_previous_releases>
+   <themes_and_priorities>
+		<preamble>
+			<html:p>
+				The project has identified major areas of work, that will be the priorities for this development cycle. These areas will address the major themes identified by the Eclipse Requirements Council (
+				<html:a href="http://www.eclipse.org/org/councils/roadmap_v4_0/themesandpriorities.html">Eclipse Themes and Priorities</html:a>).
+			</html:p>
+		</preamble>
+    	<theme name="Currency">
+      		<committed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;value0-1-0=juno-&amp;status_whiteboard=Currency" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Currency" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Currency" />
+    	</theme>
+    	<theme name="Design for Extensibility">
+    		<!-- whiteboard="Extensibility" -->
+      		<committed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;status_whiteboard=Extensibility" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Extensibility" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Extensibility" />
+    	</theme>
+    	<theme name="Ease Of Use">
+    		<!-- whiteboard="Diagram%20Features" -->
+      		<committed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;status_whiteboard=Diagram%20Features" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Diagram%20Features" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Diagram%20Features" />
+    	</theme>
+	</themes_and_priorities>
+ </plan>
