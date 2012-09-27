@@ -52,7 +52,7 @@
    		The 3.8 release of the Eclipse Platform Project is written and compiled against and targeted to run on Java SE 5 and Java SE 6 VMs. GMF Tooling will target the same Java version(s).</html:p>
 		<html:p>Eclipse Platform SDK 3.8 will be tested and validated on a number of reference platforms. GMF Tooling is expected to be platform-independent, but will be tested and validated against a subset of those listed for the platform.</html:p>
      <internationalization>
-     	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the GMF Tooling project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
+     	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the GMF Tooling project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan may be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
    </target_environments>
    <compatibility_with_previous_releases>
