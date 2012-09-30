@@ -65,7 +65,7 @@
 
 	<div class="hero-unit">
 	<h1>Emfatic</h1>
-	<p>A language designed to represent <a href="http://www.eclipse.org/emf">EMF Ecore</a> models in a textual form.</p>
+	<p>A textual syntax for <a href="http://www.eclipse.org/emf">EMF Ecore</a> (meta-)models.</p>
 	</div>
 	
 	<div class="row">
@@ -106,7 +106,8 @@ Emfatic program would look something like this:<br>
 <div class="span4">
 			<h3>Update site</h3>
 			<div class="alert alert-info"><b>http://download.eclipse.org/emfatic/update</b></div>
-			<div class="alert alert-warning"><b>Warning:</b> If you've installed a previous version of Emfatic from a different update site you'll need to uninstall it before installing this one.</div>
+			<div class="alert alert-warning"><b>Warning:</b> The current version of Emfatic is <b>0.8.0</b>. 
+			If you've installed a previous version of Emfatic from a different update site you'll need to uninstall it before installing this one.</div>
 			
 		</div>
 		
