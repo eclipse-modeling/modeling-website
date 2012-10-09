@@ -63,9 +63,9 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 </p>  
 
 <h4>Update sites for Papyrus release versions:</h4>
-<h5>Papyrus release 0.9.0 (Juno) (Recommended):</h5>
+<h5>Papyrus release 0.9.1a (Juno) (Recommended):</h5>
 <ul>
-<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno/main">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno/main</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/juno/main</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
 </ul>
 <h5>Papyrus release 0.8.2 (Indigo):</h5>
 <ul>
@@ -80,6 +80,10 @@ To add the Papyrus site, one of the procedures described from the <a href="http:
 <p>
 For advanced users and pioneers, you can access the latest commits done within Papyrus by accessing its nightly builds...
 </p>
+<h5>Papyrus nightly builds, version 0.10.x (Kepler):</h5>
+<ul>
+<li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/kepler</a> <br><font color='#808080'>(Papyrus 0.10.x / Eclipse Kepler)</font></li>
+</ul>
 <h5>Papyrus nightly builds, version 0.9.x (Juno):</h5>
 <ul>
 <li><a href="http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno">http://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/juno</a> <br><font color='#808080'>(Papyrus 0.9.x / Eclipse Juno)</font></li>
