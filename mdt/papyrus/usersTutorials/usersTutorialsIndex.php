@@ -33,6 +33,7 @@
 				<li><a href="resources/PapyrusTutorial_CollaborativeWork_v1.0_d20110727.pdf">A tutorial on Papyrus usage for collaborative work  (2011-07-27).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnSequenceDiagrams_v0.1_d2010100.pdf">A tutorial on Papyrus sequence diagram editor  (2010-10-01).</a></li>
 				<li><a href="resources/PapyrusTutorial_OnActivityDiagrams_v0.2_d20110719.pdf">A tutorial on Papyrus activity diagram editor (2011-07-19).</a></li>
+				<li><a href="resources/PapyrusTutorial_OnDiagramStylesheets.pdf">A tutorial on Papyrus diagram stylesheets (2012-09-27).</a></li>
 			</ul>
 		<h3>Tutorials for desiging DSML support within Papyrus</h3>
 			<ul>
