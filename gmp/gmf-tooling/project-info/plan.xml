@@ -75,11 +75,11 @@
 		</preamble>
     	<theme name="Currency">
       		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;value0-1-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler+&amp;value0-1-0=kepler-&amp;status_whiteboard=Currency" />
       		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=kepler+&amp;value0-2-0=kepler-&amp;status_whiteboard=Currency" />
       		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler-&amp;status_whiteboard=Currency" />
     	</theme>
     	<theme name="Design for Extensibility">
     		<!-- whiteboard="Extensibility" -->
