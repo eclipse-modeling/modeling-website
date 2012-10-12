@@ -51,6 +51,7 @@
    		<html:p>In order to remain current, each Eclipse release targets reasonably current versions of the underlying operating environments.</html:p>
    		<html:p>
    			To Be Added Here
+   		</html:p>
      <internationalization>
      	<html:p>The Eclipse Platform is designed as the basis for internationalized products. The user interface elements provided by the Eclipse SDK components, including dialogs and error messages, are externalized. The English strings are provided as the default resource bundles. As a result, the GMF Tooling project will provide English strings in its default bundles and be localized to a subset of those locales offered by the Platform. This plan will be updated to indicate which locales will be provided and the time frame for availability.</html:p>
      </internationalization>
@@ -59,6 +60,7 @@
      <html:p>Compatibility of Release 3.1</html:p>
 	<html:p> 
 			To Be Added Here
+	</html:p>
 	<html:p>Therefore, the GMF tooling release will be compatible with these versions and will publish binary and source compatibilities with migration guides on subsequent releases.</html:p>
    </compatibility_with_previous_releases>
    <themes_and_priorities>
@@ -70,29 +72,38 @@
 		</preamble>
     	<theme name="Currency">
       		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;value0-1-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler+&amp;value0-1-0=kepler-&amp;status_whiteboard=Currency" />
       		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=kepler+&amp;value0-2-0=kepler-&amp;status_whiteboard=Currency" />
       		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Currency" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler-&amp;status_whiteboard=Currency" />
     	</theme>
     	<theme name="Design for Extensibility">
     		<!-- whiteboard="Extensibility" -->
       		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;status_whiteboard=Extensibility" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler+&amp;status_whiteboard=Extensibility" />
       		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Extensibility" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=kepler+&amp;value0-2-0=kepler-&amp;status_whiteboard=Extensibility" />
       		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Extensibility" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler-&amp;status_whiteboard=Extensibility" />
     	</theme>
     	<theme name="Ease Of Use">
     		<!-- whiteboard="Diagram%20Features" -->
       		<committed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno+&amp;status_whiteboard=Diagram%20Features" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler+&amp;status_whiteboard=Diagram%20Features" />
       		<proposed bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=juno+&amp;value0-2-0=juno-&amp;status_whiteboard=Diagram%20Features" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=kepler+&amp;value0-2-0=kepler-&amp;status_whiteboard=Diagram%20Features" />
       		<deferred bugzilla=
-      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.0&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=juno-&amp;status_whiteboard=Diagram%20Features" />
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler-&amp;status_whiteboard=Diagram%20Features" />
+    	</theme>
+    	<theme name="Lower Entry Barrier">
+    		<!-- whiteboard="Entry%20Barrier" -->
+      		<committed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler+&amp;status_whiteboard=Entry%Barrier" />
+      		<proposed bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-1-0=kepler+&amp;value0-2-0=kepler-&amp;status_whiteboard=Entry%Barrier" />
+      		<deferred bugzilla=
+      			"https://bugs.eclipse.org/bugs/buglist.cgi?type0-0-0=substring&amp;type0-1-0=notsubstring&amp;type0-2-0=notsubstring&amp;field0-0-0=flagtypes.name&amp;field0-1-0=flagtypes.name&amp;field0-2-0=flagtypes.name&amp;version=3.1&amp;classification=Modeling&amp;product=GMF-Tooling&amp;status_whiteboard_type=allwordssubstr&amp;query_format=advanced&amp;value0-0-0=kepler-&amp;status_whiteboard=Entry%Barrier" />
     	</theme>
 	</themes_and_priorities>
  </plan>
