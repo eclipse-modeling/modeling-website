@@ -16,8 +16,8 @@
         groups="//@filters.0"
         image32="images/marte-32x32.png"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/releases/kepler/</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/main</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/extra</sitesURLS>
       <overview
           summary="MARTE is the reference implementation of the OMG language for real time embedded systems (MARTE OMG)"
           screenshot="images/marte.png"
@@ -38,8 +38,8 @@
         groups="//@filters.1"
         image32="images/layout.gif"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/releases/kepler/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/main</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/extra</sitesURLS>
       <overview
           summary="This feature provides an automatic layout tool for all GMF-based diagrams for Papyrus modeler"
           screenshot="images/layout.gif"
@@ -53,8 +53,8 @@
         license="EPL"
         groups="//@filters.0"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/releases/kepler/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/extra</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/main</sitesURLS>
       <overview
           summary="Support of CSS Stylesheets and Themes for Papyrus GMF-based diagrams"/>
       <id>org.eclipse.papyrus.extra.infra.gmfdiag.css.feature</id>
@@ -67,8 +67,8 @@
         groups="//@filters.1"
         image32="images/DiagramTemplate.gif"
         incubation="true">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/releases/kepler</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/extra</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/main</sitesURLS>
       <overview
           summary="Offers a tool for generating Papyrus Diagrams from a semantic UML Model"/>
       <id>org.eclipse.papyrus.extra.diagramtemplate.feature</id>
@@ -82,8 +82,8 @@
         image32="images/table_32x32.png"
         incubation="true"
         visible="false">
-      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
-      <sitesURLS>http://download.eclipse.org/releases/kepler/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/extra</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/milestones/0.10/M2/main</sitesURLS>
       <overview
           summary="Offers a new version of the table for Papyrus"/>
       <id>org.eclipse.papyrus.table.efacet.feature</id>
