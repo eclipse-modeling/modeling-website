@@ -38,8 +38,8 @@ $html = <<<EOHTML
 <br><b>2012</b>
 <li>Christian Krause, Holger Giese: 
 <i>Probabilistic Graph Transformation Systems</i>.
-Accepted for <a href="http://www.informatik.uni-bremen.de/icgt2012/">ICGT'12</a> -- Applications Track, 
-To appear in LNCS, Springer-Verlag. See also these <a href="http://www.hpi.uni-potsdam.de/fileadmin/hpi/FG_Giese/Personen/pgts-slides.pdf">slides</a>.
+Proc. of <a href="http://www.informatik.uni-bremen.de/icgt2012/">ICGT'12</a>, 
+Lecture Notes in Computer Science 7562, Springer-Verlag. See also these <a href="http://www.hpi.uni-potsdam.de/fileadmin/hpi/FG_Giese/Personen/pgts-slides.pdf">slides</a>.
 </li>
 
 <br><b>2011</b>
