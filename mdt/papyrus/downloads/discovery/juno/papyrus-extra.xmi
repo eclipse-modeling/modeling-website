@@ -115,6 +115,19 @@
           summary="Component to generate a validation plug-in from a UML Profile"/>
       <id>org.eclipse.papyrus.extra.dsml.validation.feature</id>
     </components>
+    <components
+        name="Papyrus Profile Export"
+        provider="Eclipse Modeling Project"
+        description="Component to export and install applied profiles from worksapce"
+        license="EPL"
+        groups="//@filters.1"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
+      <overview
+          summary="Component to export and install applied profiles from worksapce"/>
+      <id>org.eclipse.papyrus.uml.export.feature</id>
+    </components>
   </categories>
   <filters name="Stable"/>
   <filters name="Experimental"/>
