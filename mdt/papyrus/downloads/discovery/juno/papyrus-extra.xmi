@@ -95,13 +95,25 @@
         license="EPL"
         groups="//@filters.0"
         image32="images/table_32x32.png"
-        incubation="true"
-        visible="false">
+        incubation="true">
       <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
       <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
       <overview
           summary="Offers a new version of the table for Papyrus"/>
       <id>org.eclipse.papyrus.table.efacet.feature</id>
+    </components>
+    <components
+        name="Papyrus DSML Validation"
+        provider="Eclipse Modeling Project"
+        description="Component to generate a validation plug-in from a UML Profile"
+        license="EPL"
+        groups="//@filters.1"
+        incubation="true">
+      <sitesURLS>http://download.eclipse.org/releases/juno/</sitesURLS>
+      <sitesURLS>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/maintenance/juno</sitesURLS>
+      <overview
+          summary="Component to generate a validation plug-in from a UML Profile"/>
+      <id>org.eclipse.papyrus.extra.dsml.validation.feature</id>
     </components>
   </categories>
   <filters name="Stable"/>
