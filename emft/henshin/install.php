@@ -40,10 +40,10 @@ to use the update site though. You can find the URLs of our update sites below.
 
 <p>
 <i>Requirements:</i> 
-You need Eclipse Helios or a later version of Eclipse to run Henshin.
-There are dependencies to EMF and GMF. These are automatically resolved 
-if you install Henshin using one of our update sites. We recommend to
-use the release update site.
+You need Eclipse Indigo or a later version of Eclipse to run Henshin.
+There are dependencies to EMF and GMF (the runtime requires only EMF). 
+These are automatically resolved if you install Henshin using one of 
+our update sites.
 </p>
 
 <h2>Update Sites</h2>
