@@ -45,6 +45,7 @@ $html = <<<EOHTML
 	<div class="homeitem">
 		<h3>News</h3>
 		<ul>
+		<li><span class="dates">06-11-2012</span>: Version 0.9.4 released with lots of bug-fixes and new features.</li>
 		<li><span class="dates">19-06-2012</span>: Version 0.9.2 released with new interpreter API, performance improvements and bugfixes, support for IteratedUnits, logging, profiling and more.</li>
 		<li><span class="dates">03-04-2012</span>: Version 0.9.0 released!</li>
 		<li><span class="dates">17-10-2011</span>: Update 0.8.0 R201110170738 released which adds support for parameter types in the interpreter wizard</li>
