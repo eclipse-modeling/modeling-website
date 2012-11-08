@@ -352,7 +352,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 [3] - MDT OCL started depending on MDT UML2 in Europa.<br>
 [4] - GMF Tooling started depending on M2M QVT in Galileo.<br>
 [5] - Graphiti will have its first release in Indigo.<br>
-Last Updated Feb 03 2011
+Last Updated Nov 08 2012
 </td>
 </tr>
 </table>
