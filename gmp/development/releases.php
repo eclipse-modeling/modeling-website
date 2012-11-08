@@ -329,7 +329,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 
 <tr class="kepler">
 <td>Kepler</td>
-<td>06/27/12</td>
+<td>06/27/13</td>
 <td>1.7.0</td>
 <td>1.7.0</td>
 <td>4.3.0</td>
