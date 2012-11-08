@@ -272,23 +272,28 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <tr class="helios">
 <td>09/24/10</td>
 <td>1.4.1</td>
-<td rowspan="2">1.4.1</td>
+<td rowspan="3">1.4.1</td>
 <td>3.6.1</td>
 <td>3.6.1</td>
-<td rowspan="2">2.6.1</td>
+<td rowspan="3">2.6.1</td>
 <td>3.1.1</td>
 <td>3.0.1</td>
-<td rowspan="2">2.3.1</td>
-<td rowspan="2">3.0.1</td>
+<td rowspan="3">2.3.1</td>
+<td rowspan="3">3.0.1</td>
 </tr>
 
 <tr class="helios">
 <td>2/25/2011</td>
-<td>1.4.2</td>
-<td>3.6.2</td>
-<td>3.6.2</td>
-<td>3.0.2</td>
-<td>3.1.2</td>
+<td rowspan="2">1.4.2</td>
+<td rowspan="2">3.6.2</td>
+<td rowspan="2">3.6.2</td>
+<td rowspan="2">3.0.2</td>
+<td rowspan="2">3.1.2</td>
+</tr>
+
+<tr class="helios">
+<td>08/27/12<br>(patch)</td>
+<td>1.4.3</td>
 </tr>
 
 <tr class="indigo">
