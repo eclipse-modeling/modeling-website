@@ -259,14 +259,14 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>3.6.0</td>
 <td>3.6.0</td>
 <td>2.6.0</td>
-<td rowspan="3">1.4.0</td>
-<td rowspan="3">1.4.0</td>
-<td rowspan="3">1.4.0</td>
+<td rowspan="4">1.4.0</td>
+<td rowspan="4">1.4.0</td>
+<td rowspan="4">1.4.0</td>
 <td>3.0.0</td>
 <td>3.1.0</td>
 <td>2.3.0</td>
 <td>3.0.0</td>
-<td rowspan="3">[5]</td>
+<td rowspan="4">[5]</td>
 </tr>
 
 <tr class="helios">
