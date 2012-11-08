@@ -252,7 +252,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 </tr>
 
 <tr class="helios">
-<td rowspan="3">Helios</td>
+<td rowspan="4">Helios</td>
 <td>06/23/10</td>
 <td>1.4.0</td>
 <td>1.4.0</td>
