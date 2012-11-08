@@ -27,6 +27,8 @@ $html = <<<EOHTML
    tr.galileo { background-color: #FFCCCC; border: 1px solid black; }
    tr.helios { background-color: #CCFFFF; border: 1px solid black; }
    tr.indigo { background-color: #CCCCFF; border: 1px solid black; }
+   tr.juno { background-color: #FFCCFF; border: 1px solid black; }
+   tr.kepler { background-color: #FFFFCC; border: 1px solid black; }
    td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 8pt; text-align: left; vertical-align: top; border: 1px solid black;}
 </style>
 
@@ -305,6 +307,42 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>2.4.0</td>
 <td>3.1.0</td>
 <td>0.8.0</td>
+</tr>
+
+<tr class="juno">
+<td>Juno</td>
+<td>06/27/12</td>
+<td>1.6.0</td>
+<td>1.6.0</td>
+<td>4.2.0</td>
+<td>3.8.0</td>
+<td>2.8.0</td>
+<td>1.6.0</td>
+<td>1.6.0</td>
+<td>1.6.0</td>
+<td>4.0.0</td>
+<td>4.0.0</td>
+<td>3.0.0</td>
+<td>3.2.0</td>
+<td>0.9.0</td>
+</tr>
+
+<tr class="kepler">
+<td>Kepler</td>
+<td>06/27/12</td>
+<td>1.7.0</td>
+<td>1.7.0</td>
+<td>4.3.0</td>
+<td>3.9.0</td>
+<td>2.9.0</td>
+<td>1.7.0</td>
+<td>1.7.0</td>
+<td>1.7.0</td>
+<td>4.1.0</td>
+<td>4.1.0</td>
+<td>3.1.0</td>
+<td>3.3.0</td>
+<td>0.10.0</td>
 </tr>
 
 <tr class="white">
