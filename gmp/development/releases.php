@@ -284,7 +284,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 
 <tr class="helios">
 <td>2/25/2011</td>
-<td rowspan="2">1.4.2</td>
+<td>1.4.2</td>
 <td rowspan="2">3.6.2</td>
 <td rowspan="2">3.6.2</td>
 <td rowspan="2">3.0.2</td>
@@ -318,18 +318,28 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>Juno</td>
 <td>06/27/12</td>
 <td>1.6.0</td>
-<td>1.6.0</td>
+<td rowspan="2">1.6.0</td>
 <td>4.2.0</td>
 <td>3.8.0</td>
 <td>2.8.0</td>
-<td>1.6.0</td>
-<td>1.6.0</td>
-<td>1.6.0</td>
+<td rowspan="2">1.6.0</td>
+<td rowspan="2">1.6.0</td>
+<td rowspan="2">1.6.0</td>
 <td>4.0.0</td>
-<td>4.0.0</td>
-<td>3.0.0</td>
-<td>3.2.0</td>
-<td>0.9.0</td>
+<td rowspan="2">4.0.0</td>
+<td rowspan="2">3.0.0</td>
+<td rowspan="2">3.2.0</td>
+<td rowspan="2">0.9.0</td>
+</tr>
+
+<tr class="juno">
+<td>Juno</td>
+<td>09/27/12</td>
+<td>1.6.1</td>
+<td>4.2.1</td>
+<td>3.8.1</td>
+<td>2.8.1</td>
+<td>4.0.1</td>
 </tr>
 
 <tr class="kepler">
