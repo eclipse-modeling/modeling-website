@@ -292,7 +292,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 </tr>
 
 <tr class="helios">
-<td>08/27/12<br>(patch)</td>
+<td>(patch)</td>
 <td>1.4.3</td>
 </tr>
 
