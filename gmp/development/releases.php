@@ -315,7 +315,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 </tr>
 
 <tr class="juno">
-<td>Juno</td>
+<td rowspan="2">Juno</td>
 <td>06/27/12</td>
 <td>1.6.0</td>
 <td rowspan="2">1.6.0</td>
@@ -333,8 +333,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 </tr>
 
 <tr class="juno">
-<td>Juno</td>
-<td>09/27/12</td>
+<td>09/22/12</td>
 <td>1.6.1</td>
 <td>4.2.1</td>
 <td>3.8.1</td>
