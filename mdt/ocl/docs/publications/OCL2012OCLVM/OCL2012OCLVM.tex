@@ -121,6 +121,7 @@ framework is extensible to OCL-based languages such as QVT.
 %\category{H.4}{Information Systems Applications}{Miscellaneous}
 %A category including the fourth, optional field follows...
 %\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+\category{D.3.4}{Processors}{Run-time environments, Code generation}
 
 %\terms{Theory}
 
@@ -245,7 +246,7 @@ A polymorphic Value system can have a family of IntegerValue implementations so 
  \begin{itemize}
 \item IntIntegerValueImpl wraps a 32 bit java.lang.int
 \item LongIntegerValueImpl wraps a 64 bit java.lang.long 
-\item BigIntegerValueImpl wraps java.number.BigDecimal for unbounded support.
+\item BigIntegerValueImpl wraps java.number.BigDecimal \linebreak for unbounded support.
 \end{itemize}
 IntIntegerValueImpl is almost identical to java.lang.Integer, except that 
 \begin{itemize}
@@ -256,8 +257,8 @@ For typical 32 bit usage, the performance penalty of using IntIntegerValueImpl r
 
 The Value types specified by the OCL specification and those used in the OCL VM are shown in the second and third columns of Table \ref{Values+Types}. The differences show the need for a certain amount of remedial action
 \begin{itemize}
-\item Missing Boolean/Real/Integer/Invalid/OrderedSet Values are defined
-\item Spelling of Bag/Sequence/Set/EnumerationLiteral Values are made consistent 
+\item Boolean/Real/Integer/Invalid/OrderedSet Values are defined
+\item Bag/Sequence/EnumerationLiteral Values are spelled consistently 
 \item Type-valued expressions are are supported.
 \end{itemize}
 
@@ -296,7 +297,7 @@ Lamda &  &  & ? & LambdaType \\ \hline
 
 \subsection{Pivot Type System}
 
-Values of course have types, and with a polymorphic value system, the type is obtainable internally as \verb|Value.getType()| which provides the underlying support for a fully reflective  \verb|oclType()|.
+Values of course have types, and with a polymorphic value system, the type is available internally as \verb|Value.getType()| which provides the underlying support for a fully reflective  \verb|oclType()|.
 
 The Type types specified by the OCL specification and those used in the UML-aligned OCL VM\cite{OCL-UML} are shown in the fourth and fifth columns of Table \ref{Values+Types}.
 
@@ -315,7 +316,7 @@ so that AST nodes have properties such as \verb|VariableExp.referredVariable| fo
 
 The OCL specification does not model iterations and so there is no  \verb|IteratorExp.referredIteration|. Iterations are resolved by a run-time name lookup. The OCL VM models an \verb|Iteration| as an extension of \verb|Operation| and so can exploit an \verb|IteratorExp.referredIteration|\cite{OCL-UML}.
 
-Operations (and iterations)  can be overloaded, even though the OCL specification fails to define a dynamic dispatch algorithm. The OCL VM dynamic dispatch support is described in \ref{DispatchTables}.
+Operations (and iterations)  can be overloaded, although the OCL specification fails to define a dynamic dispatch algorithm. The OCL VM dynamic dispatch support is described in \ref{DispatchTables}.
 
 \subsection{Operations}
 
@@ -331,7 +332,7 @@ A literal expression could be regarded as a zero argument static operation of Oc
 
 \subsubsection{Model Access}
 
-The \verb|AssociationClassCallExp| and \verb|PropertyCallExp| nodes provide the interaction between user models and the OCL evaluation. The various accesses can be modeled as operation on a host \verb|ObjectValue|. The OCL VM therefore augments each property in the metamodel with an implementation appropriate to the composition, multiplicity or navigability characteristics of the property. This migrates some computation from run-time to compile-time.
+\verb|AssociationClassCallExp| and \verb|PropertyCallExp| nodes provide the interaction between user models and the OCL evaluation. The various accesses can be modeled as operation on a host \verb|ObjectValue|. The OCL VM therefore augments each property in the metamodel with an implementation appropriate to the composition, multiplicity or navigability characteristics of the property. This migrates some computation from run-time to compile-time.
 
 \subsubsection{Operation Bodies}
 
@@ -381,7 +382,7 @@ With a full-functionality VM in place, it is now possible to look at optimizatio
 
 Initial manual experiments suggest that a further 100-fold speed improvement is available by:
 \begin{itemize}
-\item Directly accessing EMF properties as getXXX(), rather than eGet(XXX) 
+\item Directly accessing EMF properties as getXX(), rather than eGet(XX) 
 \item Directly dispatching operations for which dynamic dispatch is redundant
 \item Inlining operations that are directly dispatched
 \item Unboxing Pivot Values to use the underlying Java values or EObjects directly
@@ -407,7 +408,7 @@ OCL sections.
 
 \section{Related Work}
 
-Many authors have provided a partial OCL code generator demonstrating good characteristics aligned with some research goal. Omission of OCL facilities such as allInstances(), oclIsNew(), @pre, States, Messages and even Tuples and opposites is common, but in many cases this just represents a pragmatic reduction of scope to facilitate research; these omissions can be rectified by a little more work. Failure to address unbounded numerics, numeric equality, null/invalid propagation, nested Collections and oclType() is a more fundamental challenge to some of the approaches. 
+Many authors have provided a partial OCL code generator demonstrating good characteristics aligned with some research goal. Omission of OCL facilities such as oclIsNew(), @pre,  allInstances(), States, Messages and even Tuples and opposites is common, but in many cases this just represents a pragmatic reduction of scope to facilitate research; these omissions can be rectified by a little more work. Failure to address unbounded numerics, numeric equality, null/invalid propagation, nested Collections and oclType() is a more fundamental challenge to some of the approaches. 
 
 Wilke\cite{Dresden/JavaCG} describes a reworked  Java generator for Dresden OCL based on parameterized fragments.
 AspectJ is used to support model access in Java models. However many Java types are used directly and so functionality is limited to Java-like semantics for numeric range and equality.
