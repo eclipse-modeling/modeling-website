@@ -51,7 +51,7 @@ EOHTML;
 		foreach ($siteXMLs as $type => $sitexml)
 		{
 			print !$cnt ? "Location: " : "&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(or): ";
-			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
+			print "<b><a href=\"http://download.eclipse.org/$thisPR/emf/updates/$sitexml\">http://download.eclipse.org/$thisPR/emf/updates/<acronym title=\"$type\">$sitexml</acronym></a></b></acronym>";
 			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
 			$cnt++;
 		}
@@ -82,7 +82,7 @@ EOHTML;
 		foreach ($siteXMLsEclipse33 as $type => $sitexml)
 		{
 			print !$cnt ? "* URL: " : "&#160;&#160;&#160;&#160;&#160;(or): ";
-			print "<b><a href=\"http://download.eclipse.org/$thisPR/updates/$sitexml\">http://download.eclipse.org/$thisPR/updates/<acronym title=\"$type\">$sitexml</acronym></a></b>";
+			print "<b><a href=\"http://download.eclipse.org/$thisPR/emf/updates/$sitexml\">http://download.eclipse.org/$thisPR/emf/updates/<acronym title=\"$type\">$sitexml</acronym></a></b>";
 			print $cnt < sizeof($siteXMLs) - 1 ? "<br/>\n" : "";
 			$cnt++;
 		}
