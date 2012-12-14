@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule	  ^(.*)    http://www.eclipse.org/emf-refactor/$1 [R,L]
