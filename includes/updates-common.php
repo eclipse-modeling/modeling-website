@@ -6,7 +6,7 @@ $App= new App();
 $Nav= new Nav();
 $Menu= new Menu();
 include ($App->getProjectCommon());
-function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/", "Nightly Builds (N)" => "nightly/"), $siteXMLsEclipse33 = array())
+function update_manager($shortname, $longname, $extra_PRS = array (), $isIncubating = false, $replace = false, $siteXMLs = array("Releases (R)" => "releases/", "Milestones &amp; RCs (S)" => "milestones/", "Interim Builds (I &amp; M)" => "interim/"), $siteXMLsEclipse33 = array())
 {
 	global $App, $Nav, $Menu, $theme, $PR;
 	$PRS = array (
