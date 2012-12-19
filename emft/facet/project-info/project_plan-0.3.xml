@@ -6,14 +6,10 @@
 	<release projectid="modeling.emft.emf-facet" version="0.3" />
 	<introduction>
 		<html:div>---- DRAFT ----</html:div>
-		<html:div>
-			This document lays out the feature and API set for the next
-			release of
-			EMF Facet (EMFT Project), version 0.3. This project plan
-			inherits
-			from the Modeling Project Plan, which should be referenced
-			when
-			consulting this individual project plan.
+		<html:div> This document lays out the feature and API set for the next
+			release of EMF Facet (EMFT Project), version 0.3. This project plan
+			inherits from the Modeling Project Plan, which should be referenced
+			when consulting this individual project plan.
 		</html:div>
 	</introduction>
 	<release_deliverables>
@@ -139,11 +135,12 @@
 		<theme name="Restructuring">
 			<description>
 				<html:div>
-					The main goals of this year is are to:
+					The main goals of this year are to:
 					<ul>
-						<li>to finish the migration of features from MDT MoDisco (Query
-							Manager and Facet Manager components) to EMF Facet &amp;</li>
-						<li>to merge the existing versions of the EMF Facet framework.
+						<li>finish the migration of features from MDT MoDisco (Query
+							Manager and Facet Manager components) to EMF Facet,</li>
+						<li>merge features of existing versions into the new version of
+							the EMF Facet framework.
 						</li>
 					</ul>
 					This restructuring is a priority otherwise we will not be able to
