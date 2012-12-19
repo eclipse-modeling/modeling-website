@@ -153,11 +153,11 @@
 				</html:div>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P1;priority=P2;priority=P4;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;short_desc_type=allwordssubstr;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P1;priority=P2;priority=P4;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;query_format=advanced;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;bug_status=RESOLVED;bug_status=VERIFIED;bug_status=CLOSED;short_desc_type=allwordssubstr;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;short_desc_type=allwordssubstr;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;short_desc_type=allwordssubstr;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
 			<deferred
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;short_desc_type=allwordssubstr;type0-0-0=notsubstring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;short_desc=%5BRestructuring%5D;field0-0-0=flagtypes.name;short_desc_type=allwordssubstr;type0-0-0=notsubstring;value0-0-0=kepler%2B;product=EMFT.facet" />
 		</theme>
 		<theme name="Service, Support and Maintenance">
 			<description>
@@ -169,11 +169,11 @@
 				</html:div>
 			</description>
 			<committed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P1;priority=P2;priority=P4;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P1;priority=P2;priority=P4;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
 			<proposed
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=substring;value0-0-0=kepler%2B;product=EMFT.facet" />
 			<deferred
-				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=notsubstring;value0-0-0=kepler%2B;product=EMFT.facet" />
+				bugzilla="http://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=notsubstring;value0-0-0=kepler%2B;product=EMFT.facet" />
 		</theme>
 
 
