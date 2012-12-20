@@ -135,17 +135,12 @@
 		<theme name="Restructuring">
 			<description>
 				<html:div>
-					The main goals of this year are to:
-					<ul>
-						<li>finish the migration of features from MDT MoDisco (Query
-							Manager and Facet Manager components) to EMF Facet,</li>
-						<li>merge features of existing versions into the new version of
-							the EMF Facet framework.
-						</li>
-					</ul>
-					This restructuring is a priority otherwise we will not be able to
-					provide stable and usable software. That's why non critical bugs
-					will be fixed after this restructuring.
+					The main goal of this year is to finish the migration of
+					features from MDT MoDisco (Query Manager and Facet Manager
+					components) to EMF Facet.
+					This restructuring is a priority otherwise
+					we will not be able to provide stable and usable software. That's
+					why non critical bugs will be fixed after this restructuring.
 
 				</html:div>
 			</description>
@@ -172,8 +167,6 @@
 			<deferred
 				bugzilla="https://bugs.eclipse.org/bugs/buglist.cgi?priority=P5;query_format=advanced;field0-0-0=flagtypes.name;bug_severity=blocker;bug_severity=critical;bug_severity=major;bug_severity=normal;bug_severity=minor;bug_severity=trivial;type0-0-0=notsubstring;value0-0-0=kepler%2B;product=EMFT.facet" />
 		</theme>
-
-
 		<!-- <postamble> <html:div> </html:div> </postamble> -->
 	</themes_and_priorities>
 	<appendix name="Legal Notices">
