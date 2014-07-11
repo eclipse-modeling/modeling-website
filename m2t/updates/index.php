@@ -6,6 +6,7 @@ require_once ("../../includes/buildServer-common.php");
 require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 
 $PRS = array(
+    "M2T Xpand" => "modeling/m2t/xpand"	
 );
 
 function notes()
