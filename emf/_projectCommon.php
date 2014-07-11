@@ -24,7 +24,7 @@ if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Laza
 }
 else
 {
-	$theme = "Nova";
+	$theme = "solstice";
 }
 
 /* projects/components in cvs */
