@@ -14,7 +14,7 @@ if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Laza
 }
 else
 {
-	$theme = "Nova";
+	$theme = "solstice";
 }
 
 include_once $_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/scripts.php";
