@@ -38,7 +38,6 @@ $cvscoms = array(
 		"compare" => "org.eclipse.emf.compare",
 		"search" => "org.eclipse.emf.search",
 		"jcrm" => "org.eclipse.emf.jcrm",
-		"mwe" => "org.eclipse.emf.mwe",
 		"teneo" => "org.eclipse.emf.teneo",
 		"texo" => "org.eclipse.emf.texo",
 		"cdo" => "org.eclipse.emf.cdo",
@@ -89,7 +88,23 @@ $extraprojects = array(); //components with only downloads, no info yet, "pretty
 $nodownloads = array("coordinated","jcrm","temporality", "emf4net", "emfatic"); //components with only information, no downloads, or no builds available yet, "projectkey"
 $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
-$incubating = $projects; // ALL components are incubating
+$incubating = array(
+"b3",
+"compare",
+"ecoretools",
+"mint",
+"search",
+"emfatic",
+"eef",
+"egf",
+"emfindex",
+"teneo",
+"texo",
+"net4j",
+"emf4net",
+"jcrm",
+"temporality"); // project id's
+
 $hasmoved = array(
 	"teneo" => "emf", "net4j" => "emf",	"cdo" => "emf", "compare" => "emf" , 
 	"query" => "emf", "transaction" => "emf", "validation" => "emf",
