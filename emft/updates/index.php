@@ -7,7 +7,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/updates-common.php");
 $PRS = array(
 /*	"EMF (Query, Validation, Transaction)" => "modeling/emf",
 	"MDT (EODM, OCL)" => "modeling/mdt",
-	"M2T (JET, JET Editor)" => "modeling/m2t"*/	
+	"M2T (JET, JET Editor)" => "modeling/m2t"*/
+    "MWE" => "modeling/emft/mwe"
 );
 
 function notes()
