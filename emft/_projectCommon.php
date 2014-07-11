@@ -24,7 +24,7 @@ if (isset ($_GET["skin"]) && preg_match("/^(Blue|EclipseStandard|Industrial|Laza
 }
 else
 {
-	$theme = "Nova";
+	$theme = "solstice";
 }
 
 /* projects/components in cvs */
@@ -58,12 +58,11 @@ $projects = array(
     "B3" => "b3",
 	"Compare" => "compare",
 	"Ecore Tools" => "ecoretools",
-	"Mint" => "mint",
 	"Search" => "search",
 	"EMFatic" => "emfatic",
 	"EEF" => "eef",
 	"EGF" => "egf",
-	"Modeling Workflow" => "mwe",
+	"MWE" => "mwe",
 	"EMF Index" => "emfindex",
 	// graduated
 	"Teneo" => "teneo",
@@ -90,17 +89,12 @@ $nonewsgroup = array(); //components without newsgroup
 $nomailinglist = array(); //components without mailinglist
 $incubating = array(
 "b3",
-"compare",
 "ecoretools",
-"mint",
 "search",
 "emfatic",
-"eef",
 "egf",
 "emfindex",
-"teneo",
 "texo",
-"net4j",
 "emf4net",
 "jcrm",
 "temporality"); // project id's
