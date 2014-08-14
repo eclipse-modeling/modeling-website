@@ -418,7 +418,7 @@ function showBuildResults($PWD, $path, $styled=1) // given path to /../downloads
 		else
 		{
 			$mightHavePassed = false;
-			if (grep("/BUILD SUCCESSFUL/", $buildlog, $buildlog_cache))
+			if (grep("/BUILD SUCCESSFUL/", $buildlog, $buildlog_cache) || grep("/Finished: SUCCESS/", $buildlog, $buildlog_cache))
 			{
 				$mightHavePassed = true;
 			}
