@@ -152,7 +152,8 @@ if ($sortBy != "date")
 }
 else
 {
-	krsort($builds); reset($builds);
+	// Sort builds by version (key in $builds) i.e. 2.10.0 > 2.9.2
+	krsort($builds, SORT_NATURAL); reset($builds);
 }
 
 if (function_exists("doRequirements"))

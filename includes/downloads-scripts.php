@@ -60,9 +60,6 @@ function getBuildsFromDirs() // massage the builds into more useful structures
 	global $PWD, $sortBy;
 
 	$branchDirs = loadDirSimple($PWD, ".*", "d");
-    // Sort branch dirs by version i.e. 2.10.0 > 2.9.2
-    natsort($branchDirs);
-    
 	$buildDirs = array();
 
 	foreach ($branchDirs as $branch)
