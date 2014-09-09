@@ -1,0 +1,12 @@
+
+<% for(var i=0; i< projects.length; i++) {%>
+   <div class="row">
+		<a href="<%= projects[i].URL %>"><h2 class="projectEntry"><%= projects[i].Title %></h2></a>
+		<img class="projectLogo col-xs-3 img-rounded" src="<%= projects[i].Logo %>">
+		<p class="projectDescription col-xs-9">
+			<%= projects[i].Description %>
+		<a href="<%= projects[i].URL %>">Learn more...</a>
+		</p>
+		</div>
+<% } %>
+

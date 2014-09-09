@@ -12,3 +12,25 @@ abbr, acronym
 	list-style-image: url('/eclipse.org-common/themes/Nova/images/separator.png');	
 	padding: 5px 10px 5px 5px;
 }
+
+.technologyGroup {
+	
+}
+.projectEntry {
+	background-color: #0B0528;
+	color: white;
+	padding: 0.2em;
+	border-radius: 0.2em;
+}
+
+.projectLogo {
+	width: 25%;
+	float: left;
+}
+
+.projectDescription {
+	float: left;
+	width: 73%;
+	padding-left: 0.3em;
+	padding-right: 0.2em;
+}
