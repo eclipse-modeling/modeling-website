@@ -41,7 +41,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<h1>$pageTitle</h1>
 		<table>
 		<tr>
-		<td><p><a href="/emf/">EMF (Core)</a> EMF (Core) allows you to generate classes based on a data model, a.k.a. the domain model. In many applications - no matter whether it is a tool or a business application - instances of the domain model need to be  stored efficiently and versioned. Moreover, such applications often have to enable multiple users to access and modify domain model instances concurrently and hence require a client-server architecture as well as support for transactions. The following technologies provide the necessary infrastructure to cater for such scenarios in your project.</p>
+		<td><p><a href="/emf/">EMF (Core)</a> allows you to generate classes based on a data model, a.k.a. the domain model. In many applications - no matter whether it is a tool or a business application - instances of the domain model need to be  stored efficiently and versioned. Moreover, such applications often have to enable multiple users to access and modify domain model instances concurrently and hence require a client-server architecture as well as support for transactions. The following technologies provide the necessary infrastructure to cater for such scenarios in your project.</p>
 		</td>
 		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
 		</td>
