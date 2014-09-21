@@ -51,7 +51,7 @@ $Nav->addCustomNav("Mailing Lists", "http://www.eclipse.org/mail/index_project.p
 
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-
+$App->AddExtraHtmlHeader("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css\">\n");
 
 
 
