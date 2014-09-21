@@ -101,6 +101,8 @@ $buildtypes = array(
 $Nav->addNavSeparator("Home", "/modeling/emf");
 $Nav->addNavSeparator("Getting started", "/modeling/emf/gettingstarted.php");
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
+$Nav->addCustomNav("Tutorials and Articles", "$rooturl/docs/", "_self", 2);
+$Nav->addCustomNav("Javadoc", "$downurl/$PR/javadoc", "_self", 2);
 
 $Nav->addNavSeparator("Downloads", "/modeling/emf/downloads/");
 
