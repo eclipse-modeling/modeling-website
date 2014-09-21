@@ -51,21 +51,8 @@ $cvscoms = array(
 	)
 );
 
-$projects = array(
-	"EMF (Core)" => "emf",
-	"Model Query" => "query",
-	"Model Query 2" => "query2",
-	"Model Transaction" => "transaction",
-	"Validation Framework" => "validation",
-);
 
-/* if set, both home and download page will redirect to a different landing page */
-$emf_download_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo/Hibernate/Download_and_Install", 
-	"cdo" => "http://www.eclipse.org/cdo/downloads/",
-	"compare" => "http://www.eclipse.org/emf/compare/downloads/");
-$emf_home_redirects = array("teneo" => "http://wiki.eclipse.org/Teneo",
-	"cdo" => "http://www.eclipse.org/cdo/",
-	"compare" => "http://www.eclipse.org/emf/compare");
+
 
 $extraprojects = array("QTV All-In-One" => "emfqtv"); //components with only downloads, no info yet, "prettyname" => "directory"
 $nodownloads =   array("emfqtv"); //components with only information, no downloads, or no builds available yet, "projectkey"
@@ -88,28 +75,30 @@ $buildtypes = array(
 	"N" => "Nightly"
 );
 
+$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=" . str_replace("/", ".", $PR), "", 1);
+$Nav->addNavSeparator($projectName, "$rooturl/");
 
 
 
+$Nav->addNavSeparator("Downloads", "$downurl/$PR/downloads/?project=$proj");
+$Nav->addCustomNav("Installation", "http://wiki.eclipse.org/EMF/Installation", "_self", 2);
+$Nav->addCustomNav("Update Manager", "$rooturl/updates/", "_self", 2);
 
-
-
-
-
-
-
-$Nav->addNavSeparator("Home", "/modeling/emf");
-$Nav->addNavSeparator("Getting started", "/modeling/emf/gettingstarted.php");
 $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
-
-$Nav->addNavSeparator("Downloads", "/modeling/emf/downloads/");
+$Nav->addCustomNav("Getting Started", "http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html", "_self", 2);
+$Nav->addCustomNav("FAQ", "http://wiki.eclipse.org/index.php/EMF/FAQ", "_self", 2);
+$Nav->addCustomNav("Plan", "http://www.eclipse.org/projects/project-plan.php?projectid=modeling.emf", "_self", 2);
 
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
-
+$Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/" . $projectName, "_self", 2);
 $Nav->addCustomNav("Newsgroups", "$rooturl/newsgroup-mailing-list.php", "_self", 2);
-$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $projectName . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
 
-$Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=emf");
+
+
+$Nav->addCustomNav("Open Bugs", "$bugurl/bugs/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&product=" . $projectName . (isset ($bugcoms[$proj]) ? "&component=$bugcoms[$proj]" : "") . "&query_format=advanced&order=bug_status%2Ctarget_milestone%2Cbug_id$collist", "_self", 2);
+$Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $projectName . (isset ($bugcoms[$proj]) ? "&amp;component=$bugcoms[$proj]" : ""), "_self", 2);
+$Nav->addCustomNav("Contributors", "http://www.eclipse.org/$PR/project-info/team.php", "_self", 2);
+unset ($bugcoms);
 
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
 addGoogleAnalyticsTrackingCodeToHeader();

@@ -247,96 +247,29 @@ foreach ($extras as $z)
 
 print "</div>\n";
 
-print "<div id=\"rightcolumn\">\n";
 
-$extras = array("doBleedingEdge");
 
-foreach ($extras as $z)
-{
-	if (function_exists($z))
-	{
-		call_user_func($z);
-	}
-}
 
-print "<div class=\"sideitem\">\n";
-print "<h6>Additional Info</h6>\n";
-print "<ul>\n";
-print "<li><a href=\"http://www.eclipse.org/$PR/faq.php\">FAQs</a></li>\n";
-print "<li><a href=\"#archives\">Archived Releases</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/modeling/downloads/build-types.php\">About Build Types</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/modeling/downloads/verifyMD5.php\">Using md5 Files</a></li>\n";
-
-print "<li><a href=\"https://bugs.eclipse.org/bugs/buglist.cgi?" . 
-	($parentProj != "NONE" && $parentProj != "" && $parentProj != $projct ? "product=$parentProj&amp;component=$projct" : "product=$projct") . 
-	"&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED\">Open Bugs</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/$PR/news/relnotes.php?project=$projct&amp;version=HEAD\">Release Notes</a></li>\n";
-print "</ul>\n";
-print "</div>\n";
-
-print "<div class=\"sideitem\">\n";
-print "<h6>Getting Sources</h6>\n";
-print "<ul>\n";
-print "<li><a href=\"http://wiki.eclipse.org/EMF/Getting_Source\">CVS + Eclipse</a></li>\n";
-print "<li><a href=\"http://wiki.eclipse.org/index.php/CVS_Source_From_Mapfile\">CVS + Map File + Script</a></li>\n";
-print "<li><a href=\"http://www.eclipse.org/$PR/downloads/?project=$projct\">SDK zip</a> or <a href=\"http://www.eclipse.org/$PR/updates/\">Update Manager</a> (org.*.source_x.y.z.*/*src.zip)</li>\n";
-print "</ul>\n";
-print "</div>\n";
-
-if (isset($NLpacks) && is_array($NLpacks))
-{
-	print "<div class=\"sideitem\">\n";
-	print "<h6>Language Packs</h6>\n";
-	print "<ul>\n";
-	foreach (array_keys($NLpacks) as $z)
-	{
-		print "<li><a href=\"#$NLpacks[$z]\">$z</a></li>\n";
-	}
-	print "</ul>\n";
-	print "</div>\n";
-}
-
-print "<div class=\"sideitem\">\n";
-print "<h6>Sort</h6>\n";
-$newsort = ($sortBy == "date" ? "type" : "date");
-print "<ul>\n";
-print "<li><a href=\"?project=$projct&amp;showAll=$showAll&amp;showMax=$showMax&amp;sortBy=$newsort\">By " . ucfirst($newsort) . "</a></li>\n";
-print "</ul>\n";
-print "</div>\n";
-
-$f = $_SERVER["DOCUMENT_ROOT"] . "/$PR/build/sideitems-common.php";
-if (file_exists($f))
-{
-	include_once($f);
-}
-
-if (function_exists("sidebar"))
-{
-	sidebar();
-}
-
-if (isset($incubating) && in_array($projct, $incubating))
-{
 ?>
-<div class="sideitem">
-   <h6>Incubation</h6>
-   <p>This component is currently in its <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
-   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img
-        align="center" src="http://www.eclipse.org/images/egg-incubation.png"
-        border="0" /></a></div>
- </div>
+<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>News on Twitter</h6>
+		<a class="twitter-timeline" href="https://twitter.com/hashtag/eclipsemf" data-widget-id="503883842478809088">#eclipsemf Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+	</div>
 <?php
-}
 
-if (is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/eclipse-project-ip-log.php"))
-{
+
+
 print<<<EOHTML
 <div class="sideitem">
 	<h6>IP Log</h6>
 	<p>See committer/contributor <a href="/$PR/eclipse-project-ip-log.php">IP log</a>.</p>
 </div>
 EOHTML;
-}
+
 
 print "</div>\n";
 
