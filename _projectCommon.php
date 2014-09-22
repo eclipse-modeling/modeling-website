@@ -61,7 +61,7 @@ $App->AddExtraHtmlHeader("
   ga('create', 'UA-55011482-1', 'auto');
   ga('send', 'pageview');
 
-</script>")
+</script>");
 
 
 
