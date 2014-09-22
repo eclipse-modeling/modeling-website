@@ -59,6 +59,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		URL:'http://wiki.eclipse.org/MDT-BPMN2',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
+	{Title:'EcoreTools', 
+        Description:'A flexible graphical modeler to design .ecore models.',
+        URL:'https://www.eclipse.org/ecoretools/',                 
+		Logo:'https://www.eclipse.org/ecoretools/images/logos/logo.png'
+    },
 	{Title:'eTrice', 
 		Description:'eTrice provides an implementation of the ROOM modeling language together with editors, code generator for Java, C++ and C code and exemplary target middleware.',
 		URL:'http://www.eclipse.org/etrice/',

@@ -54,6 +54,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 (function () {
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
+	{Title:'Sirius', 
+        Description:'Sirius enables the specification of a modeling workbench in terms of graphical, table or tree editors with validation rules and actions requiring only a minimum technical knowledge. ',
+        URL:'https://www.eclipse.org/sirius',
+        Logo:'https://www.eclipse.org/sirius/images/logos/logo.png'
+	},
 	{Title:'GMF Tooling', 
 		Description:'GMF Tooling is a Model Driven Architecture approach to domain of graphical editors. By defining a tooling, graphical and mapping model definition, one can generate a fully functional graphical editor in Eclipse.',
 		URL:'http://eclipse.org/gmf-tooling/',
