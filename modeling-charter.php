@@ -210,7 +210,7 @@ development.</p>
 		
 			Below is a diagram representing the projects found in the Modeling project, as well as those under recruitment by the PMC.</p>
 			
-			<img src="modeling.png"/>
+			
 			
 		<p>
 			[1] The PMC will look to the EMO's judgement as to which cases would benefit from board review.
