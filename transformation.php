@@ -64,6 +64,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		URL:'http://eclipse.org/atl/',
 		Logo:'http://projects.eclipse.org/sites/default/files/logoATL-transparent.png'
 	},
+	{Title:'Epsilon', 
+		Description:'Epsilon is a family of languages and tools for code generation, model-to-model transformation, model validation, comparison, migration and refactoring that work out of the box with EMF and other types of models.',
+		URL:'http://www.eclipse.org/epsilon/',
+		Logo:'http://projects.eclipse.org/sites/default/files/epsilon.png'
+	},
 	{Title:'JET', 
 		Description:'JET is typically used in the implementation of a "code generator". A code-generator is an important component of Model Driven Development (MDD). The goal of MDD is to describe a software system using abstract models (such as EMF/ECORE models or UML models), and then refine and transform these models into code. Although is possible to create abstract models, and manually transform them into code, the real power of MDD comes from automating this process. Such transformations accelerate the MDD process, and result in better code quality. The transformations can capture the "best practices" of experts, and can ensure that a project consistently employes these practices.',
 		URL:'http://www.eclipse.org/modeling/m2t/?project=jet',
