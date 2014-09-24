@@ -94,11 +94,6 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		URL:'http://www.eclipse.org/modeling/mdt/?project=uml2',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
-	{Title:'UML 2 Tools', 
-		Description:'UML 2 Tools is a set of GMF-based editors for viewing and editing UML models.',
-		URL:'http://www.eclipse.org/modeling/mdt/?project=uml2tools',
-		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
-	},
 	{Title:'XML Schema Definition (XSD)', 
 		Description:'(XSD) is a reference library that provides an API for use with any code that examines, creates or modifies W3C XML Schema.',
 		URL:'http://www.eclipse.org/modeling/mdt/?project=xsd',
