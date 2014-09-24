@@ -74,6 +74,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		URL:'http://www.eclipse.org/modeling/m2t/?project=jet',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
+	{Title:'Model-to-Model Transformation (MMT)', 
+		Description:'Model-to-Model Transformation is a key aspect of Model-Driven Development (MDD). The MMT project hosts Model-to-Model Transformation languages. Transformations are executed by transformation engines that are plugged into the Eclipse Modeling infrastructure.',
+		URL:'https://projects.eclipse.org/projects/modeling.mmt',
+		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
+	},
 	{Title:'Xpand', 
 		Description:'Xpand is a statically-typed template language featuring: polymorphic template invocation, aspect oriented programming, functional extensions, a flexible type system abstraction, model transformation, model validation and much more',
 		URL:'http://wiki.eclipse.org/Xpand',
