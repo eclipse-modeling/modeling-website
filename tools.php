@@ -76,7 +76,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	},
 	{Title:'Object Constraint Language (OCL)', 
 		Description:'OCL defines APIs for OCL expression syntax for implementing queries and constraints.',
-		URL:'http://www.eclipse.org/modeling/mdt/?project=ocl',
+		URL:'https://projects.eclipse.org/projects/modeling.mdt.ocl',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
 	{Title:'Papyrus', 
@@ -91,7 +91,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	},
 	{Title:'Unified Modeling Language 2.x', 
 		Description:'(UML2) is an EMF-based implementation of the UML 2.x metamodel for the Eclipse platform.',
-		URL:'http://www.eclipse.org/modeling/mdt/?project=uml2',
+		URL:'https://projects.eclipse.org/projects/modeling.mdt.uml2',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
 	{Title:'XML Schema Definition (XSD)', 
