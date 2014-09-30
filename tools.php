@@ -70,9 +70,9 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		Logo:'http://projects.eclipse.org/sites/default/files/eTRICE-logo_200x200.jpg'
 	},
 	{Title:'MoDisco', 
-		Description:'provides an extensible framework to develop model-driven tools to support use-cases of existing software modernization.',
-		URL:'http://www.eclipse.org/MoDisco/',
-		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
+		Description:'MoDisco provides a generic and extensible framework for developing model-driven tools to support existing software modernization, including OMG ADM standards implementations in Ecore.',
+		URL:'http://www.eclipse.org/MoDisco/',                 
+		Logo:'http://www.eclipse.org/MoDisco/images/MoDiscoLogo.png'
 	},
 	{Title:'Object Constraint Language (OCL)', 
 		Description:'OCL defines APIs for OCL expression syntax for implementing queries and constraints.',
