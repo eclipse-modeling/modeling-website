@@ -108,7 +108,7 @@ or headless from a command line.</p>
 <p>Want to learn more about how easy it is to use this exciting new
 technology to help you boost your Java programming productivity,
 application compatibility and integration? Start by reading the <a
-href="gettingstarted.html">getting started</a>,
+href="gettingstarted.php">getting started</a>,
 followed by <a href="docs/">more documentation</a>,
 and then sit back and watch your applications write themselves!
 Well, not completely, but this wouldn't be a sales pitch if there
