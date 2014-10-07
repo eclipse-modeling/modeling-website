@@ -59,6 +59,12 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		URL:'http://www.eclipse.org/emf/compare/#compare',
 		Logo:'http://www.eclipse.org/emf/compare/images/logos/logo.png'
 	},
+	{
+		Title:'EMF Diff/Merge',
+		Description:'EMF Diff/Merge is a diff/merge tool for models. Its main purpose is to help build higher-level tools that need to merge models based on consistency rules. Typical usages include model refactoring, iterative model transformations, bridges between models or modeling tools, collaborative modeling environments, or versioning systems.',
+		URL:'http://www.eclipse.org/diffmerge/',
+		Logo:'https://projects.eclipse.org/sites/default/files/EDM_Logo_Small.png'
+	},
 	
 	{Title:'Dawn', 
 		Description:'Dawn is a sub-component of Connected Data Objects project and achieves to create collaborative network solutions for user interfaces basing on CDO. E.g. it provides collaborative access for GMF diagrams. Beside the real time shared editing Dawn provides conflict visualisation and handling and other useful feature for collaborative modeling. In addition to this, Dawn will also provide a Web-Viewer which allows to view every diagram change online.', 
