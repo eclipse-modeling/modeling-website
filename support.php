@@ -43,8 +43,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<tr>
 		<td><p>Open-source software is free of licensing fees. Furthermore, it is easy to adapt and enhance with new features. Nevertheless, using open-source frameworks is not free. Like in closed-source software, not everybody is an expert on every framework. The total cost of ownership includes training, adoption, enhancement and maintenance of a framework. It might take significantly more time for somebody new to the project to extend a certain feature than for a person who is familiar with the framework. Furthermore, software has to be maintained. Even if this can be done literally by everybody for open-source software, a professional maintenance agreement with fixed response times is often mandatory in an industrial setting to ensure productivity. The following vendors offer training, professional support, sponsored development and implementation services. Please raise a BR in the modeling project, if you want to be listed here.</p>
 		</td>
-		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
-		</td>
+		
 		</table>
 		<div class="container-fluid">
 		<div id="content"></div>
@@ -55,7 +54,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
 	{Title:'EclipseSource', 
-		Description:'Professional training, developer support, sponsored development, implementation services',
+		Description:'Professional training, developer support, sponsored development, implementation services - ',
 		URL:'http://developer.eclipsesource.com/technology/modeling/',
 		Logo:'http://eclipsesource.com/fileadmin/images/es-logo.png'
 	}

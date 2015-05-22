@@ -39,10 +39,11 @@ $Nav->addCustomNav("Eclipse Modeling Tools", "http://eclipse.org/downloads/packa
 
 
 
+$Nav->addNavSeparator("Support", "/modeling/support.php");
 
 $Nav->addNavSeparator("Community", "/modeling/");
 
-$Nav->addNavSeparator("Support", "/modeling/support.php");
+
 
 
 $Nav->addCustomNav("Newsgroups", "http://www.eclipse.org/newsgroups/index_project.php", "_self", 2);
