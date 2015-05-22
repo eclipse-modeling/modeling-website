@@ -106,6 +106,8 @@ $Nav->addCustomNav("Javadoc", "$downurl/$PR/javadoc", "_self", 2);
 
 $Nav->addNavSeparator("Downloads", "/modeling/emf/downloads/");
 
+$Nav->addNavSeparator("Support", "/modeling/support.php");
+
 $Nav->addNavSeparator("Community", "http://wiki.eclipse.org/Modeling_Corner");
 
 $Nav->addCustomNav("Newsgroups", "$rooturl/newsgroup-mailing-list.php", "_self", 2);
