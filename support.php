@@ -57,6 +57,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		Description:'Professional training, developer support, sponsored development, implementation services - ',
 		URL:'http://developer.eclipsesource.com/technology/modeling/',
 		Logo:'http://eclipsesource.com/fileadmin/images/es-logo.png'
+	},
+	{Title:'ES-Computersysteme', 
+		Description:'Consulting for Modeling, professional training, workshops and development for CDO - ',
+		URL:'http://www.esc-net.de',
+		Logo:'http://projects.eclipse.org/sites/default/files/Logo-CDO.png'
 	}
 ]});
     document.getElementById("content").innerHTML = html;
