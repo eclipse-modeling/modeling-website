@@ -1006,7 +1006,10 @@ function getBuildArtifacts($dir, $branchID)
 		}
 		else
 		{
-			$ret .= "<li><i>Missing or empty build.cfg!</i></li>\n";
+			if($projct != "mwe") {
+				$ret .= "<li><i>Missing or empty build.cfg!</i></li>\n";
+			}
+			
 		}
 		$ret .= "</ul>\n";
 		$ret .= "</li>\n";
