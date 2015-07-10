@@ -817,7 +817,7 @@ function outputBuild($branch, $ID, $c)
 	}
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
-    if($projct != "mwe") {
+    if($projct != "mwe" && $projct != "xpand" && $projct != "xtext" ) {
 	$ret .= $extraTestsResults[2];
 	$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
 	}
