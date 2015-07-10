@@ -14,7 +14,7 @@ ob_start();
 /* config */
 /* zips that are allowed to be absent from the downloads page (eg., new ones added/removed mid-stream) */
 $extraZips = array(
-	"emft-mwe-Automated-Tests",
+	"emft-mwe-Automated-Tests", "emft-mwe-2-lang-SDK", "emft-mwe-SDK", "emft-mwe-2-SDK"
 );
 
 /* $project => sections/Project Name => (prettyname => filename) */
