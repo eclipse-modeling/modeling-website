@@ -817,11 +817,12 @@ function outputBuild($branch, $ID, $c)
 	}
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
+    if($projct != "mwe") {
 	$ret .= $extraTestsResults[2];
 	$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
+	}
 	$ret .= "</ul>\n";
 	$ret .= "</li>\n";
-
 	return $ret;
 }
 
@@ -927,7 +928,7 @@ function getBuildArtifacts($dir, $branchID)
 	}
 	
 	$ret = "";
-
+	
 	if (is_array($havedeps))
 	{
 		$details = array(
