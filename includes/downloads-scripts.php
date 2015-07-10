@@ -817,12 +817,18 @@ function outputBuild($branch, $ID, $c)
 	}
 	$ret .= createFileLinks($dls, $PWD, $branch, $ID, $pre2, $filePre[$proj], $ziplabel);
 
-    if($projct != "mwe" && $projct != "xpand" && $projct != "xtext" ) {
-	$ret .= $extraTestsResults[2];
-	$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
+    if($projct == "mwe" || $projct == "xpand" || $projct == "xtext" )
+    {
+		$ret .= "</ul>\n";
+		$ret .= "</li>\n";	
 	}
-	$ret .= "</ul>\n";
-	$ret .= "</li>\n";
+	else
+	{
+		$ret .= $extraTestsResults[2];
+		$ret .= getBuildArtifacts("$PWD", "$branch/$ID");
+		$ret .= "</ul>\n";
+		$ret .= "</li>\n";
+	}
 	return $ret;
 }
 
