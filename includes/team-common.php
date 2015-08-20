@@ -1,4 +1,27 @@
 <?php
+
+/**
+ * [Bug 474734] [security] xss vulnerability on mmt website
+ *
+ * SQL injection is a code injection technique,
+ * used to attack data-driven applications, in which malicious
+ * SQL statements are inserted into an entry field for execution
+ * (e.g. to dump the database contents to the attacker).
+ *
+ * Cross-Site Scripting (XSS) vulnerabilities are a type of
+ * computer security vulnerability typically found in Web applications.
+ * XSS vulnerabilities enable attackers to inject client-side script
+ * into Web pages viewed by other users.
+ *
+ * Given the severity of this bug, we added an exit() at the top
+ * of this file to stop it from being executed on our servers.
+ *
+ * The owner(s) of this website should review every request to MYSQL before
+ * removing the exit() on this page.
+ *
+ */
+exit();
+
 /* See also /modeling/includes/team-common.sql for database schema */
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); require_once ($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App= new App(); $Nav= new Nav(); $Menu= new Menu(); include ($App->getProjectCommon());
@@ -7,7 +30,7 @@ include ($_SERVER["DOCUMENT_ROOT"] . "/modeling/includes/db.php");
 $projct= preg_replace("#.+/#", "", $PR);
 
 $PMCsOnly = isset($_GET["PMCs"]);
-$people = $PMCsOnly ? "PMCs" : "Committers"; 
+$people = $PMCsOnly ? "PMCs" : "Committers";
 
 $exportFormats = array(
 	"project,component,committerid", # Bjorn's format preference
@@ -15,10 +38,10 @@ $exportFormats = array(
 	"groupname,path,committerid",
 	"groupname,committerid"
 	);
-if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$exportFormats)) 
+if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$exportFormats))
 {
-	$query = "SELECT ".$_GET["export"]." FROM teams NATURAL JOIN developers NATURAL JOIN groups ORDER BY ".$_GET["export"]; 
-	
+	$query = "SELECT ".$_GET["export"]." FROM teams NATURAL JOIN developers NATURAL JOIN groups ORDER BY ".$_GET["export"];
+
 	$result= wmysql_query($query);
 	$data = array();
 	if ($result && mysql_num_rows($result) > 0)
@@ -29,7 +52,7 @@ if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$expor
 			for ($i = 0; $i < sizeof($row) - 1; $i++) {
 				$key .= $row[$i]."\t";
 			}
-			if (!isset($data[$key])) 
+			if (!isset($data[$key]))
 			{
 				$data[$key] = array();
 			}
@@ -46,7 +69,7 @@ if (isset($_GET["export"]) && $_GET["export"] && in_array($_GET["export"],$expor
 			if ($c)
 			{
 				if ($cnt > 0)
-				{ 
+				{
 					print ",";
 				}
 				print $c;
@@ -70,16 +93,16 @@ else
 	        $data[strtoupper($p) . " $people"] = getDevelopers(true, $p);
 	        $data[strtoupper($p) . " Contributors"] = getDevelopers(false, $p);
 	    }
-	} 
+	}
 	else
 	{
 	    $data[$people] = getDevelopers(true, $projct);
 	    $data["Contributors"] = getDevelopers(false, $projct);
 	}
-	
+
 	ob_start();
 	$pageTitle= "Meet The Team";
-	
+
 	$exportFormatsList = "";
 	foreach ($exportFormats as $ef)
 	{
@@ -96,7 +119,7 @@ EOHTML;
 	    {
 	        if ($data[strtoupper($p) . " $people"][0])
 	        {
-	            print '<a href="#' . strtoupper($p) . '_' . $people . '">' . strtoupper($p) . '</a> &#160;'."\n";  
+	            print '<a href="#' . strtoupper($p) . '_' . $people . '">' . strtoupper($p) . '</a> &#160;'."\n";
 	        }
 	    }
 	    print "</li>\n<li>Contributors: ";
@@ -105,7 +128,7 @@ EOHTML;
 	        if ($data[strtoupper($p) . " $people"][0])
 	        {
 	            print '<a href="#' . strtoupper($p) . '_' . $people . '">' . strtoupper($p) . '</a> &#160;'."\n";
-	        }  
+	        }
 	    }
 	    print "</li></ul>\n";
 	    print "</blockquote>\n";
@@ -123,7 +146,7 @@ EOHTML;
 	    }
 	    print "</li></ul>\n";
 	    print "</blockquote>\n";
-	    
+
 	}
 	foreach ($data as $label => $arr) {
 		if ($arr && is_array($arr) && sizeof($arr)>0 && $arr[0])
@@ -144,12 +167,12 @@ EOHTML;
 	print '
 		<div class="sideitem">
 		   <h6>Incubation</h6>
-		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p> 
-		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img 
-		        align="center" src="http://www.eclipse.org/images/egg-incubation.png" 
+		   <p>Some components are currently in their <a href="http://www.eclipse.org/projects/dev_process/validation-phase.php">Validation (Incubation) Phase</a>.</p>
+		   <div align="center"><a href="http://www.eclipse.org/projects/what-is-incubation.php"><img
+		        align="center" src="http://www.eclipse.org/images/egg-incubation.png"
 		        border="0" /></a></div>
 		</div>
-		'; 
+		';
 	}
 	if (is_file($_SERVER['DOCUMENT_ROOT'] . "/$PR/eclipse-project-ip-log.php"))
 	{
@@ -180,7 +203,7 @@ EOHTML;
 		<ul>
 			<li><a href="?'.(isset($_GET["byProject"])? '' : 'byProject').'">'.(isset($_GET["byProject"]) ? 'Overall Team' : 'Sort By Project').'</a></li>
 			<li><a href="?'.($PMCsOnly ? '' : 'PMCs').'">'.($PMCsOnly ? 'Overall Team' : 'PMCs Only').'</a></li>
-		</ul>		
+		</ul>
 	</div>
 ';
 	}
@@ -199,9 +222,9 @@ function getDevelopers($isCommitter = true, $projct)
 {
 	global $PMCsOnly;
 	$query= "SELECT DISTINCT Name, Role, Company, Location, Website, PhotoURL FROM developers NATURAL JOIN groups NATURAL JOIN teams " .
-			"WHERE committer = " . ($isCommitter ? "1" : "0") . 
+			"WHERE committer = " . ($isCommitter ? "1" : "0") .
 			($projct != "modeling" ? " AND " . ($projct == "emft" ? "(groupname LIKE 'emft%' OR project LIKE '%$projct')" : "project LIKE '%$projct'") : "") .
-			($PMCsOnly ? " AND Role LIKE '%PMC%'" : "") . 
+			($PMCsOnly ? " AND Role LIKE '%PMC%'" : "") .
 			" ORDER BY SUBSTRING_INDEX(Name,' ',-1)"; // by last name
 	$result= wmysql_query($query);
 	$groups= array ();
@@ -215,11 +238,11 @@ function getDevelopers($isCommitter = true, $projct)
 		{
 			# [did, CommitterID, Name, Email, Role, Company, Location, Website, PhotoURL]
 			$data .= '<td width="33%" height="200" align="center" valign="bottom">' .
-				($row[5] && (preg_match("#https+://#", $row[5]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[5])) ? 
+				($row[5] && (preg_match("#https+://#", $row[5]) || is_file($_SERVER['DOCUMENT_ROOT'] . $row[5])) ?
 					'<img border="0" src="' . $row[5] . '" style="" height="120"/>' : '<img border="0" src="/modeling/images/team/eclipseface.png"/>') .
-					"<br/>" . 
+					"<br/>" .
 				($row[4] ? '<a href="' . $row[4] . '">' . $row[0] . '</a>' : $row[0]) .	'<br/>' .
-				($row[1] ? $row[1] . "<br/>" : "") . 
+				($row[1] ? $row[1] . "<br/>" : "") .
 				($row[2] ? $row[2] . "<br/>" : "") .
 				($row[3] ? $row[3] . "<br/>" : "") .
 				'</td>' . "\n";

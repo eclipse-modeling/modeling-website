@@ -1,4 +1,27 @@
 <?php
+
+/**
+ * [Bug 474734] [security] xss vulnerability on mmt website
+ *
+ * SQL injection is a code injection technique,
+ * used to attack data-driven applications, in which malicious
+ * SQL statements are inserted into an entry field for execution
+ * (e.g. to dump the database contents to the attacker).
+ *
+ * Cross-Site Scripting (XSS) vulnerabilities are a type of
+ * computer security vulnerability typically found in Web applications.
+ * XSS vulnerabilities enable attackers to inject client-side script
+ * into Web pages viewed by other users.
+ *
+ * Given the severity of this bug, we added an exit() at the top
+ * of this file to stop it from being executed on our servers.
+ *
+ * The owner(s) of this website should review every request to MYSQL before
+ * removing the exit() on this page.
+ *
+ */
+exit();
+
 /*
  * A plugin/feature version checking auditor with support for cli and www mode.
  */
@@ -199,7 +222,7 @@ foreach ($dirs as $dir)
 					$query = "SELECT MIN(`date`) FROM `cvsfiles` NATURAL JOIN `commits` WHERE `project` = '$proj' AND `branch` = '$branch' AND `cvsname` LIKE '/cvsroot/modeling/$p/$type/$plugin/%' AND `date` >= COALESCE(" . join(", ", $lastbuild) . ")";
 					$result2 = wmysql_query($query);
 					logger(LOGGER_SQL, "$query\n");
-					
+
 					$row2 = mysql_fetch_row($result2);
 					$plugtext = "<a href=\"http://www.eclipse.org/modeling/emf/searchcvs.php?q=" . urlencode("file: $p/$type/$plugin/ startdate: $row2[0] branch: $branch") . "\">$plugin</a>";
 				}
