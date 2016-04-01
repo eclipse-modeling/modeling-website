@@ -64,7 +64,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		Logo:'http://projects.eclipse.org/sites/default/files/Logo-CDO.png'
 	},
 	{Title:'Obeo', 
-    Description:'Obeo provides open software solutions to create or transform Industrial systems (avionics, space, defense, energy, transportation, etc.)  and complex softwares. A strategic member of the Eclipse Foundation, Obeo develops technologies such as Eclipse Sirius (graphic modeling) or Acceleo (code generation). Obeo’s solutions combine the openness of Open Source and the reliability of a software provider.  Our core business consists in helping our customers implement innovative and custom modeling solutions - ',
+    Description:'Since 2008 Obeo has been one of the ten strategic members of the Eclipse Foundation. Our leading position is the result of an unwavering contribution to numerous successful projects. We bring you the expertise of an Eclipse leader: training, custom development (plug-ins, Eclipse technologies integration,...), support and maintenance to ensure the success of your projects, consulting and coaching.  - ',
 		URL:'https://www.obeo.fr/en/services',
 		Logo:'https://www.obeo.fr/images/logos/logo_obeo.png'
 	}
