@@ -62,6 +62,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		Description:'Consulting for Modeling, professional training, workshops and development for CDO - ',
 		URL:'http://www.esc-net.de',
 		Logo:'http://projects.eclipse.org/sites/default/files/Logo-CDO.png'
+	},
+	{Title:'Obeo', 
+    Description:'Obeo provides open software solutions to create or transform Industrial systems (avionics, space, defense, energy, transportation, etc.)  and complex softwares. A strategic member of the Eclipse Foundation, Obeo develops technologies such as Eclipse Sirius (graphic modeling) or Acceleo (code generation). Obeo’s solutions combine the openness of Open Source and the reliability of a software provider.  Our core business consists in helping our customers implement innovative and custom modeling solutions - ',
+		URL:'https://www.obeo.fr/en/services',
+		Logo:'https://www.obeo.fr/images/logos/logo_obeo.png'
 	}
 ]});
     document.getElementById("content").innerHTML = html;
