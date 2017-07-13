@@ -41,13 +41,13 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<h1>$pageTitle</h1>
 		<table>
 		<tr>
-		<td><p></p>
+		<td><p>Slowly but steadily, selected modeling tools are being migrated to web technology using emerging technologies such as Atom, Eclipse Che, Monaco, Thea, or LSP. The following technologies allow you to develop modeling tools and model-based application in the web.</p>
 		</td>
 		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
 		</td>
 		</table>
 		<div class="container-fluid">
-		<div id="content">Slowly but steadily, selected modeling tools are being migrated to web technology using emerging technologies such as Atom, Eclipse Che, Monaco, Thea, or LSP. The following technologies allow you to develop modeling tools and model-based application in the web.</div>
+		<div id="content"></div>
   </div>
 <script type="text/javascript" src="ejs_production.js"></script>
 	<script>
@@ -57,7 +57,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	{Title:'JSON Forms', 
 		Description:'JSON Forms is a framework to efficiently build form-based web UIs. These UIs are targeted at entering, modifying, and viewing data and are usually embedded within an application. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand in order to create customizable forms. It does so by leveraging the capabilities of JSON and JSON schema and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on AngularJS. ',
 		URL:'http://jsonforms.io',
-		Logo:'http://jsonforms.io/images/jsonforms-logo-white.svg'
+		Logo:'http://jsonforms.io/images/jsonforms-logo.png'
 	},
 	
 ]});
