@@ -55,7 +55,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
 	{Title:'JSON Forms', 
-		Description:'JSON Forms is a framework to efficiently build form-based web UIs. These UIs are targeted at entering, modifying, and viewing data and are usually embedded within an application. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand in order to create customizable forms. It does so by leveraging the capabilities of JSON and JSON schema and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on AngularJS. ',
+		Description:'JSON Forms is alternative renderer engine for EMF Forms. It allows to efficiently build form-based web UIs. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand in order to create customizable forms. It does so by leveraging the capabilities of JSON and JSON schema and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on Angular. If you already use EMF Forms, there is an exporter to transfer data models and view models to the JSON Forms format.',
 		URL:'http://jsonforms.io',
 		Logo:'http://jsonforms.io/images/jsonforms-logo.png'
 	},

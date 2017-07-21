@@ -30,6 +30,7 @@ $Nav->addCustomNav("Graphical Modeling", "/modeling/graphical.php", "_self", 3);
 $Nav->addCustomNav("Modeling Tools", "/modeling/tools.php", "_self", 3);
 $Nav->addCustomNav("Transformation", "/modeling/transformation.php", "_self", 3);
 $Nav->addCustomNav("Textual Modeling", "/modeling/textual.php", "_self", 3);
+$Nav->addCustomNav("Web Modeling", "/modeling/web.php", "_self", 3);
 $Nav->addCustomNav("More...", "/modeling/more.php", "_self", 3);
 
 
