@@ -51,14 +51,6 @@ $oldrels = array(
 	"1.x" => array("2003","http://www.eclipse.org/modeling/emf/downloads/dl-emf1x.html")
 );
 
-function doBleedingEdge ()
-{
-	print '<div class="sideitem">
-			<h6>News on Twitter</h6>
-		<a class="twitter-timeline" href="https://twitter.com/hashtag/eclipsemf" data-widget-id="503883842478809088">#eclipsemf Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>';
-}
 
 function doRequirements()
 {
@@ -67,6 +59,11 @@ function doRequirements()
 	$isUpdate = strpos($_SERVER["PHP_SELF"],"/updates/")!==false;
 	$reqNotePrefix = $isUpdate ? "/$PR/downloads/?project=$projct" : "";
 ?>
+<div class="sideitem">
+			<h6>News on Twitter</h6>
+		<a class="twitter-timeline" href="https://twitter.com/hashtag/eclipsemf" data-widget-id="503883842478809088">#eclipsemf Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
 <div class="homeitem3col">
 	<h3>Getting Started</h3>
 		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest<br/>
