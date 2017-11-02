@@ -67,7 +67,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	{Title:'eTrice', 
 		Description:'eTrice provides an implementation of the ROOM modeling language together with editors, code generator for Java, C++ and C code and exemplary target middleware.',
 		URL:'http://www.eclipse.org/etrice/',
-		Logo:'http://projects.eclipse.org/sites/default/files/eTRICE-logo_200x200.jpg'
+		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
 	{Title:'MoDisco', 
 		Description:'MoDisco provides a generic and extensible framework for developing model-driven tools to support existing software modernization, including OMG ADM standards implementations in Ecore.',
@@ -81,7 +81,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	},
 	{Title:'Papyrus', 
 		Description:'Papyrus provides an integrated and user-consumable environment for editing any kind of EMF model and particularly supporting UML and related modeling languages such as SysML and MARTE.',
-		URL:'http://www.eclipse.org/etrice/',
+		URL:'http://www.eclipse.org/papyrus/',
 		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
 	},
 	{Title:'Sphinx', 
