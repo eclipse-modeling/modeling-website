@@ -56,7 +56,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	{Title:'EclipseSource', 
 		Description:'Professional training, developer support, sponsored development, implementation services for EMF and all related technologies - ',
 		URL:'http://developer.eclipsesource.com/technology/modeling/',
-		Logo:'http://eclipsesource.com/fileadmin/images/es-logo.png'
+		Logo:'https://eclipsesource.com/wp-content/uploads/2016/09/es-logo-sticky.png'
 	},
 	{Title:'ES-Computersysteme', 
 		Description:'Consulting for Modeling, professional training, workshops and development for CDO - ',
