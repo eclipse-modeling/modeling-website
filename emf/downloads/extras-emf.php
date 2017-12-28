@@ -65,10 +65,10 @@ function doRequirements()
 		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest Eclipse Modeling Edition Package. It is available <a href="https://www.eclipse.org/downloads/eclipse-packages/">here</a>.<br/></br>
 		
 		As an alternative, you can download a
-		<acronym title="Click to download archived All-In-One p2 Repo Update Site"><img alt="Archived All-In-One p2 Repo Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> <b style="color:green">All-In-One Update Site</b></acronym>, which is available below per release. 
+		<acronym title="Click to download archived All-In-One p2 Repo Update Site"><img alt="Archived All-In-One p2 Repo Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> <b style="color:green">All-In-One Update Site</b></acronym>, which is available below per release. Please click on <b>"show all"</b> to reveal the newest releases.
 		 It includes source, runtime and docs for EMF and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT project).</a> </br></br>
 		Finally, you can use the Eclipse update site. The URL is formed like this:</br> 
-<b>http://download.eclipse.org/modeling/emf/emf/updates/${releasenumber}milestones </br> 
+<b>http://download.eclipse.org/modeling/emf/emf/updates/${releasenumber}milestones </b></br> 
 e.g. for EMF 2.14:</br> 
 <b>http://download.eclipse.org/modeling/emf/emf/updates/2.14milestones<b></p>
 
