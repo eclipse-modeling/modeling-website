@@ -62,13 +62,15 @@ function doRequirements()
 
 <div class="homeitem3col">
 	<h3>Getting Started</h3>
-		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest Eclipse Modeling Edition Package. It is available <a href="https://www.eclipse.org/downloads/eclipse-packages/">here</a>.<br/>
+		<p style="padding-left:10px"><b>First-time users</b> can get started quickly by simply downloading the latest Eclipse Modeling Edition Package. It is available <a href="https://www.eclipse.org/downloads/eclipse-packages/">here</a>.<br/></br>
 		
 		As an alternative, you can download a
 		<acronym title="Click to download archived All-In-One p2 Repo Update Site"><img alt="Archived All-In-One p2 Repo Update Site" src="/modeling/images/dl-icon-update-zip.gif"/> <b style="color:green">All-In-One Update Site</b></acronym>, which is available below per release. 
-		 It includes source, runtime and docs<br/>
-		for EMF and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT project).</a> 
-		Finally, you can use the Eclipse update site. The URL is formed like this: http://download.eclipse.org/modeling/emf/emf/updates/<releasenumber>milestones, e.g. for EMF 2.14: http://download.eclipse.org/modeling/emf/emf/updates/2.14milestones</p>
+		 It includes source, runtime and docs for EMF and <a href="http://eclipse.org/modeling/mdt/downloads/index.php?project=xsd&showAll=0&showMax=5">XSD</a> (part of the <a href="http://eclipse.org/modeling/mdt/?project=xsd">MDT project).</a> </br></br>
+		Finally, you can use the Eclipse update site. The URL is formed like this:</br> 
+<b>http://download.eclipse.org/modeling/emf/emf/updates/${releasenumber}milestones </br> 
+e.g. for EMF 2.14:</br> 
+<b>http://download.eclipse.org/modeling/emf/emf/updates/2.14milestones<b></p>
 
 	<p>&nbsp;</p>
 	<h2 style="padding-left:10px">Minimum Requirements</h2>
