@@ -104,7 +104,11 @@ $Nav->addNavSeparator("Documentation", "$rooturl/docs/");
 $Nav->addCustomNav("Tutorials and Articles", "$rooturl/docs/", "_self", 2);
 $Nav->addCustomNav("Javadoc", "$downurl/$PR/javadoc", "_self", 2);
 
-$Nav->addNavSeparator("Downloads", "/modeling/emf/downloads/");
+$Nav->addNavSeparator("Downloads", "http:/download.eclipse.org/modeling/emf/emf/builds/index.html");
+$Nav->addCustomNav("Core", "http:/download.eclipse.org/modeling/emf/emf/builds/index.html", "_self", 2);
+$Nav->addCustomNav("Query", "/modeling/emf/downloads/index.php?project=query", "_self", 2);
+$Nav->addCustomNav("Transaction", "/modeling/emf/downloads/index.php?project=transaction", "_self", 2);
+$Nav->addCustomNav("Validation", "/modeling/emf/downloads/index.php?project=validation", "_self", 2);
 
 $Nav->addNavSeparator("Support", "/modeling/support.php");
 
