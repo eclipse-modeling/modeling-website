@@ -135,6 +135,11 @@ weren't a little bit of exaggeration.</p>
 		</div>
 	</div>
 </div>
+<script>(function() {
+if (getCookie("eclipse_cookieconsent_status") === "allow") {
+      createTimeline();
+  }
+})()</script>
 
 
 EOHTML;

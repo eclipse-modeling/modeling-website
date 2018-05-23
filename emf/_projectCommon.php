@@ -119,7 +119,47 @@ $Nav->addCustomNav("Submit A Bug", "$bugurl/bugs/enter_bug.cgi?product=" . $proj
 
 $Nav->addCustomNav("About This Project", "/projects/project_summary.php?projectid=emf");
 
+$App->AddExtraHtmlHeader('<meta name="twitter:dnt" content="on">');
+
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
+
+$App->AddExtraHtmlHeader('<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+$App->AddExtraHtmlHeader('<script>
+// via https://stackoverflow.com/questions/5968196/check-cookie-if-cookie-exists
+function getCookie(name) {
+var dc = document.cookie;
+var prefix = name + "=";
+var begin = dc.indexOf("; " + prefix);
+if (begin === -1) {
+  begin = dc.indexOf(prefix);
+  if (begin !== 0) return null;
+} else {
+  begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end === -1) {
+    end = dc.length;
+  }
+}
+
+return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+function createTimeline() {
+var twitterContainer = document.getElementById("twitter-timeline");
+twttr.widgets.createTimeline(
+  "503883842478809088",
+  twitterContainer,
+  {
+    height: 400
+  }
+);
+twitterContainer.innerText = "";
+}
+
+
+</script>');
+
+
 addGoogleAnalyticsTrackingCodeToHeader();
 $App->Promotion = TRUE; # set true to enable current eclipse.org site-wide promo
 ?>
