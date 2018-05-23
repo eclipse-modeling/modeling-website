@@ -89,11 +89,7 @@ twttr.widgets.createTimeline(
 twitterContainer.innerText = "";
 }
 
-(function() {
-if (getCookie("eclipse_cookieconsent_status") === "allow") {
-      createTimeline();
-  }
-})()
+
 </script>');
 
 

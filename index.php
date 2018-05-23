@@ -90,6 +90,11 @@ development technologies within the Eclipse community by providing a unified set
 	</div>
 </div>
 
+<script>(function() {
+if (getCookie("eclipse_cookieconsent_status") === "allow") {
+      createTimeline();
+  }
+})()</script>
 
 EOHTML;
 

@@ -731,11 +731,10 @@ function tokenize($in) # split a shell command into flag/value pairs
 	return $pairs;
 }
 
-function addGoogleAnalyticsTrackingCodeToHeader($UA = "UA-2566337-8")
+function addGoogleAnalyticsTrackingCodeToHeader()
 {
 	# http://wiki.eclipse.org/Using_Phoenix#Google_Analytics
-	global $App;
-	$App->SetGoogleAnalyticsTrackingCode("$UA");
+	
 }
 
 function getDownloadScript()
