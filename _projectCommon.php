@@ -86,7 +86,7 @@ twttr.widgets.createTimeline(
     height: 400
   }
 );
-twitterContainer.innerText = '';
+twitterContainer.innerText = "";
 }
 
 (function() {

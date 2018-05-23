@@ -32,5 +32,4 @@
 	
 	$App->Promotion = TRUE;
 
-	$App->SetGoogleAnalyticsTrackingCode("UA-16777490-2");
 ?>
