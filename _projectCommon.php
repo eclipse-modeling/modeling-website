@@ -54,19 +54,47 @@ $Nav->addCustomNav("Mailing Lists", "http://www.eclipse.org/mail/index_project.p
 
 
 
-
+$App->AddExtraHtmlHeader('<meta name="twitter:dnt" content="on">');
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-$App->AddExtraHtmlHeader("
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+$App->AddExtraHtmlHeader('<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+$App->AddExtraHtmlHeader('<script>
+// via https://stackoverflow.com/questions/5968196/check-cookie-if-cookie-exists
+function getCookie(name) {
+var dc = document.cookie;
+var prefix = name + "=";
+var begin = dc.indexOf("; " + prefix);
+if (begin === -1) {
+  begin = dc.indexOf(prefix);
+  if (begin !== 0) return null;
+} else {
+  begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end === -1) {
+    end = dc.length;
+  }
+}
 
-  ga('create', 'UA-55011482-1', 'auto');
-  ga('send', 'pageview');
+return decodeURI(dc.substring(begin + prefix.length, end));
+}
 
-</script>");
+function createTimeline() {
+var twitterContainer = document.getElementById("twitter-timeline");
+twttr.widgets.createTimeline(
+  "503883842478809088",
+  twitterContainer,
+  {
+    height: 400
+  }
+);
+twitterContainer.innerText = '';
+}
+
+(function() {
+if (getCookie("eclipse_cookieconsent_status") === "allow") {
+      createTimeline();
+  }
+})()
+</script>');
 
 
 
