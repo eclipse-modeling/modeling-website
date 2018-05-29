@@ -56,7 +56,7 @@ $Nav->addCustomNav("Mailing Lists", "http://www.eclipse.org/mail/index_project.p
 
 $App->AddExtraHtmlHeader('<meta name="twitter:dnt" content="on">');
 $App->AddExtraHtmlHeader("<link rel=\"stylesheet\" type=\"text/css\" href=\"/modeling/includes/common.css\"/>\n");
-$App->AddExtraHtmlHeader('<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+
 $App->AddExtraHtmlHeader('<script>
 // via https://stackoverflow.com/questions/5968196/check-cookie-if-cookie-exists
 function getCookie(name) {
@@ -78,6 +78,14 @@ return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
 function createTimeline() {
+	$.getScript(
+          "https://platform.twitter.com/widgets.js",
+          function () { createWidget() }
+        );
+}
+
+
+function createWidget() {
 var twitterContainer = document.getElementById("twitter-timeline");
 twttr.widgets.createTimeline(
   "503883842478809088",
