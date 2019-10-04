@@ -54,7 +54,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
 	{Title:'EclipseSource', 
-		Description:'Professional training, developer support, sponsored development, implementation services for EMF and all related technologies - ',
+		Description:'Professional training, developer support, sponsored development, and tool implementation services for <a href = "https://eclipsesource.com/technology/modeling/">EMF</a>, model tools based on <a href="https://eclipsesource.com/technology/eclipse-theia/">Eclipse Theia</a> and all related technologies.',
 		URL:'http://developer.eclipsesource.com/technology/modeling/',
 		Logo:'https://eclipsesource.com/wp-content/uploads/2016/09/es-logo-sticky.png'
 	},
