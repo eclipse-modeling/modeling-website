@@ -30,7 +30,7 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 	# Begin: page-specific settings.  Change these. 
 	$pageTitle 		= "Textual Modeling";
 	$pageKeywords	= "modeling, UML, UML2, MDD, MDA, model-driven";
-	$pageAuthor		= "Richard Gronback";
+	$pageAuthor		= "Jonas Helming";
 	
 	# Paste your HTML content between the EOHTML markers!	
 	$html = <<<EOHTML
