@@ -54,6 +54,11 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 (function () {
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
+{Title:'GLSP', 
+		Description:'The Graphical Language Server Platform (GLSP) enables diagram editors in the web/browser. It integrates well with existing graphical modeling editors based on EMF, but also supports the development of browser-based diagram editors from scratch. GLSP-based diagram editors can be hosted stand-alone or embedded into web-based tools such as <a href="https://eclipsesource.com/technology/eclipse-theia/">Eclipse Theia</a>',
+		URL:'https://www.eclipse.org/glsp/',
+		Logo:'https://www.eclipse.org/glsp/images/logo.png'
+	},
 	{Title:'Sirius', 
         Description:'Sirius enables the specification of a modeling workbench in terms of graphical, table or tree editors with validation rules and actions requiring only a minimum technical knowledge. ',
         URL:'https://www.eclipse.org/sirius',
