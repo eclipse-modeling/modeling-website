@@ -41,9 +41,9 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<h1>$pageTitle</h1>
 		<table>
 		<tr>
-		<td><p>Slowly but steadily, selected modeling tools are being migrated to web technology using emerging technologies such as Atom, Eclipse Che, Monaco, Thea, or LSP. The following technologies allow you to develop modeling tools and model-based application in the web.</p>
+		<td><p>More and more modeling tools are being migrated to the web/cloud using technologies such as <a href="https://www.eclipse.org/emfcloud/">EMF.cloud</a>, <a href="https://www.eclipse.org/glsp/">GLSP</a>, <a href="https://eclipse.org/che">Eclipse Che</a>, Monaco, <a href="https://eclipsesource.com/blogs/2019/12/24/eclipse-theia-ide-faq/">Eclipse Theia</a>, or LSP. The following Eclipse technologies allow you to develop modeling tools and model-based application in the web.</p>
 		</td>
-		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
+		<td align="right"><img src="https://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
 		</td>
 		</table>
 		<div class="container-fluid">
@@ -54,10 +54,20 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 (function () {
 	// Render the template using the specified data.
     var html = new EJS({url: "projects.ejs"}).render({projects: [
+    {Title:'EMF.cloud', 
+		Description:'EMF.cloud is the web version of EMF. The umbrella project for web-related modeling components makes the benefits of EMF available in a web- and cloud based scenario. Further, it supports migrating existing EMF-based tools to the browser.',
+		URL:'https://www.eclipse.org/emfcloud/',
+		Logo:'https://www.eclipse.org/emfcloud/images/logo.png'
+	},
+	{Title:'GLSP', 
+		Description:'The Graphical Language Server Platform (GLSP) enables diagram editors in the web/browser. It integrates well with existing graphical modeling editors based on EMF, but also supports the development of browser-based diagram editors from scratch. GLSP-based diagram editors can be hosted stand-alone or embedded into web-based tools such as <a href="https://eclipsesource.com/technology/eclipse-theia/">Eclipse Theia</a>',
+		URL:'https://www.eclipse.org/glsp/',
+		Logo:'https://www.eclipse.org/glsp/images/logo.png'
+	},
 	{Title:'JSON Forms', 
-		Description:'JSON Forms is alternative renderer engine for EMF Forms. It allows to efficiently build form-based web UIs. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand in order to create customizable forms. It does so by leveraging the capabilities of JSON and JSON schema and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on Angular. If you already use EMF Forms, there is an exporter to transfer data models and view models to the JSON Forms format.',
+		Description:'JSON Forms is alternative renderer engine for EMF Forms. It allows to efficiently build form-based web UIs and is especially suited for the creation of data-centric modeling tools. JSON Forms eliminates the need to write HTML templates and Javascript for data binding by hand in order to create customizable forms. It does so by leveraging the capabilities of JSON and JSON schema and providing a simple and declarative way of describing forms. Forms are then rendered with a UI framework, currently one that is based on React or plain HTML. If you already use EMF Forms, there is an exporter to transfer data models and view models to the JSON Forms format.',
 		URL:'http://jsonforms.io',
-		Logo:'http://jsonforms.io/images/jsonforms-logo.png'
+		Logo:'https://www.eclipse.org/modeling/images/jsonformslogo.svg'
 	},
 	
 ]});
@@ -95,3 +105,4 @@ EOHTML;
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
+
