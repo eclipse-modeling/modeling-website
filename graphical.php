@@ -46,62 +46,56 @@ include($App->getProjectCommon());    # All on the same line to unclutter the us
 		<td align="right"><img src="http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg">
 		</td>
 		</table>
-		<div class="container-fluid">
-		<div id="content"></div>
+		<div class="homeitem3col">
+		  <h2>GLSP</h2>
+            <table>
+                <tbody><tr>
+                <td style="padding-right:20px">
+                <img width="100" margin-right="20" src="https://www.eclipse.org/glsp/images/logo.png">
+                </td>
+                <td>
+                <p>
+                    The Graphical Language Server Platform (GLSP) enables diagram editors in the web/browser. It integrates well with existing graphical modeling editors based on EMF, but also supports the development of browser-based diagram editors from scratch. GLSP-based diagram editors can be hosted stand-alone or embedded into web-based tools such as <a href="https://eclipsesource.com/technology/eclipse-theia/">Eclipse Theia</a>
+                <a href="https://www.eclipse.org/glsp/">Learn more...</a>
+                </p></td>
+                </tr>
+                </tbody></table>
+          <h2>Eclipse Sirius</h2>
+                <table>
+                <tbody><tr>
+                <td style="padding-right:20px">
+                <a href="https://www.eclipse.org/sirius"><img width="100" margin-right="20" src="https://www.eclipse.org/sirius/common_assets/images/logos/logo_sirius.png"></a>
+                </td>
+                <td>
+                <p>Create complete graphical modeling workbenches for your specific visual notation and your own domain concepts with minimum technical knowledge.</p>
+                <p>Target either a <b>Desktop</b> or a <b>Web</b> tool featuring graphical views, form, tree based editors, validation rules and get it to your users in a matter of hours.
+                <a href="https://www.eclipse.org/sirius">Learn more...</a>
+                </p>
+               </td>
+                </tr>
+                </tbody></table>
+          <h2>Graphiti</h2>
+          <table>
+		<tbody><tr>
+		<td style="padding-right:20px">
+		</td>
+		<td>
+		<p>
+			Graphiti provides a modeling infrastructure evolving around the Eclipse Modeling Framework (EMF) for which offering graphical representations and editing possibilities is essential. Graphiti is an Eclipse-based graphics framework that enables rapid development of state-of-the-art diagram editors for domain models. Graphiti can use EMF-based domain models very easily but can deal with any Java-based objects on the domain side as well.
+		<a href="http://eclipse.org/graphiti/">Learn more...</a>
+		</p></td>
+		</tr>
+		</tbody></table>
+    </div>
+    <hr class="clearer" />
   </div>
-<script type="text/javascript" src="ejs_production.js"></script>
-	<script>
-(function () {
-	// Render the template using the specified data.
-    var html = new EJS({url: "projects.ejs"}).render({projects: [
-{Title:'GLSP', 
-		Description:'The Graphical Language Server Platform (GLSP) enables diagram editors in the web/browser. It integrates well with existing graphical modeling editors based on EMF, but also supports the development of browser-based diagram editors from scratch. GLSP-based diagram editors can be hosted stand-alone or embedded into web-based tools such as <a href="https://eclipsesource.com/technology/eclipse-theia/">Eclipse Theia</a>',
-		URL:'https://www.eclipse.org/glsp/',
-		Logo:'https://www.eclipse.org/glsp/images/logo.png'
-	},
-	{Title:'Sirius', 
-        Description:'Sirius enables the specification of a modeling workbench in terms of graphical, table or tree editors with validation rules and actions requiring only a minimum technical knowledge. ',
-        URL:'https://www.eclipse.org/sirius',
-        Logo:'https://www.eclipse.org/sirius/images/logos/logo.png'
-	},
-	{Title:'GMF Tooling', 
-		Description:'GMF Tooling is a Model Driven Architecture approach to domain of graphical editors. By defining a tooling, graphical and mapping model definition, one can generate a fully functional graphical editor in Eclipse.',
-		URL:'http://eclipse.org/gmf-tooling/',
-		Logo:'http://wiki.eclipse.org/images/3/3d/Gmf_logo_banner.png'
-	},
-	{Title:'GMF Runtime', 
-		Description:'The GMF Runtime is an industry proven application framework for creating graphical editors using EMF and GEF. The GMF Runtime provides many features that one would have to code by hand if using EMF and GMF directly.',
-		URL:'http://www.eclipse.org/modeling/gmp/',
-		Logo:'http://wiki.eclipse.org/images/3/3d/Gmf_logo_banner.png'
-	},
-	{Title:'GMF Notation', 
-		Description:'The GMF Notation Project provides a standard EMF notational meta model.',
-		URL:'http://www.eclipse.org/modeling/gmp/',
-		Logo:'http://wiki.eclipse.org/images/3/3d/Gmf_logo_banner.png'
-	},
-	{Title:'Graphiti', 
-		Description:'Eclipse provides a modeling infrastructure evolving around the Eclipse Modeling Framework (EMF) for which offering graphical representations and editing possibilities is essential. Graphiti is an Eclipse-based graphics framework that enables rapid development of state-of-the-art diagram editors for domain models. Graphiti can use EMF-based domain models very easily but can deal with any Java-based objects on the domain side as well.',
-		URL:'http://eclipse.org/graphiti/',
-		Logo:'http://www.eclipse.org/modeling/images/modeling_pos_logo_fc_med.jpg'
-	}
-]});
-    document.getElementById("content").innerHTML = html;
-}());
-</script>
-		
-		
-		
-		
-		
 
-	</div>
 	
 	
 	<div id="rightcolumn">
 		<div class="sideitem">
 			<h6>News on Twitter</h6>
 		<a id="twitter-timeline" href="https://twitter.com/hashtag/eclipsemf" >#eclipsemf Tweets</a>
-
 		</div>
 	</div>
 </div>
