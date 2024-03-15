@@ -1,4 +1,16 @@
 <?php
+if (isset($_GET["project"])) {
+  if ($_GET["project"] == "ocl") {
+    header("Location: https://download.eclipse.org/modeling/mdt/ocl/builds/release/latest");
+    die();
+  } else if ($_GET["project"] == "modisco") {
+    header("Location: https://download.eclipse.org/modeling/mdt/modisco/builds/release/latest");
+    die();
+  } else if ($_GET["project"] == "xsd") {
+    header("Location: https://download.eclipse.org/modeling/emf/emf/builds/release/latest");
+    die();
+  }
+}
 require_once ("../../includes/buildServer-common.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php"); require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php");  require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); $App = new App(); $Nav = new Nav(); $Menu = new Menu(); include($App->getProjectCommon());
 
