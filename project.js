@@ -113,7 +113,7 @@ const groups = {
 	},
 	web: {
 		label: 'Web',
-		members: ['ecd.emfcloud', 'ecd.glsp', 'modeling.syson']
+		members: ['ecd.emfcloud', 'ecd.glsp', 'modeling.sirius', 'modeling.syson']
 	},
 	more: {
 		label: 'More&hellip;',
