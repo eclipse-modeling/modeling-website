@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/projects/1.0 https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/models/Projects.ecore"
+    name="modeling"
+    label="Modeling">
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="User Preferences">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/UserPreferences">
+      <detail
+          key="/instance/org.eclipse.oomph.setup.ui/showToolBarContributions">
+        <value>record</value>
+      </detail>
+    </annotation>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.oomph.setup.ui">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.oomph.setup.ui/showToolBarContributions"
+          value="true"/>
+    </setupTask>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Xmx"
+      value="2048m"
+      vm="true">
+    <description>Set the heap space needed to work with the projects of ${scope.project.label}</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      excludedTriggers="STARTUP MANUAL"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml"
+      encoding="UTF-8">
+    <description>Initialize JDT's package explorer to show working sets as its root objects</description>
+    <content>
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+      &lt;section name=&quot;Workbench&quot;>
+      	&lt;section name=&quot;org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart&quot;>
+      		&lt;item value=&quot;true&quot; key=&quot;group_libraries&quot;/>
+      		&lt;item value=&quot;false&quot; key=&quot;linkWithEditor&quot;/>
+      		&lt;item value=&quot;2&quot; key=&quot;layout&quot;/>
+      		&lt;item value=&quot;2&quot; key=&quot;rootMode&quot;/>
+      		&lt;item value=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;packageExplorer configured=&amp;quot;true&amp;quot; group_libraries=&amp;quot;1&amp;quot; layout=&amp;quot;2&amp;quot; linkWithEditor=&amp;quot;0&amp;quot; rootMode=&amp;quot;2&amp;quot; sortWorkingSets=&amp;quot;false&amp;quot; workingSetName=&amp;quot;&amp;quot;&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;workingSet editPageId=&amp;quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&amp;quot; factoryID=&amp;quot;org.eclipse.ui.internal.WorkingSetFactory&amp;quot; id=&amp;quot;1382792884467_1&amp;quot; label=&amp;quot;Other Projects&amp;quot; name=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/localWorkingSetManager&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;activeWorkingSet workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;allWorkingSets workingSetName=&amp;quot;Other Projects&amp;quot;/&amp;gt;&amp;#x0D;&amp;#x0A;&amp;lt;/packageExplorer&amp;gt;&quot; key=&quot;memento&quot;/>
+      	&lt;/section>
+      &lt;/section>
+
+    </content>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:ResourceCreationTask"
+      targetURL="${workspace.location|uri}/.metadata/.plugins/org.eclipse.debug.core/.launches/http-server.launch">
+    <description>Create a launch configuration to launch the simple http server</description>
+    <content>
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>
+      &lt;launchConfiguration type=&quot;org.eclipse.pde.ui.RuntimeWorkbench&quot;>
+          &lt;booleanAttribute key=&quot;append.args&quot; value=&quot;true&quot;/>
+          &lt;stringAttribute key=&quot;application&quot; value=&quot;org.eclipse.oomph.util.HTTPServer&quot;/>
+          &lt;booleanAttribute key=&quot;askclear&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;automaticAdd&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;automaticValidate&quot; value=&quot;true&quot;/>
+          &lt;stringAttribute key=&quot;bootstrap&quot; value=&quot;&quot;/>
+          &lt;stringAttribute key=&quot;checked&quot; value=&quot;[NONE]&quot;/>
+          &lt;booleanAttribute key=&quot;clearConfig&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;clearws&quot; value=&quot;false&quot;/>
+          &lt;booleanAttribute key=&quot;clearwslog&quot; value=&quot;false&quot;/>
+          &lt;stringAttribute key=&quot;configLocation&quot; value=&quot;$${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/http-server&quot;/>
+          &lt;booleanAttribute key=&quot;default&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;includeOptional&quot; value=&quot;true&quot;/>
+          &lt;stringAttribute key=&quot;location&quot; value=&quot;@none&quot;/>
+          &lt;booleanAttribute key=&quot;org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING&quot; value=&quot;false&quot;/>
+          &lt;booleanAttribute key=&quot;org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE&quot; value=&quot;false&quot;/>
+          &lt;booleanAttribute key=&quot;org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD&quot; value=&quot;true&quot;/>
+          &lt;stringAttribute key=&quot;org.eclipse.jdt.launching.JRE_CONTAINER&quot; value=&quot;org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21&quot;/>
+          &lt;stringAttribute key=&quot;org.eclipse.jdt.launching.PROGRAM_ARGUMENTS&quot; value=&quot;-os $${target.os} -ws $${target.ws} -arch $${target.arch} -nl $${target.nl} -consoleLog&amp;#13;&amp;#10;&amp;#13;&amp;#10;-alias &amp;#13;&amp;#10;/modeling-&amp;gt;$${project_loc:/modeling}&amp;#13;&amp;#10;/emf-&amp;gt;$${project_loc:/emf}&quot;/>
+          &lt;stringAttribute key=&quot;org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER&quot; value=&quot;org.eclipse.pde.ui.workbenchClasspathProvider&quot;/>
+          &lt;stringAttribute key=&quot;org.eclipse.jdt.launching.VM_ARGUMENTS&quot; value=&quot;-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true&amp;#13;&amp;#10;-Duser.home=$${system_property:user.home}&quot;/>
+          &lt;stringAttribute key=&quot;pde.version&quot; value=&quot;3.3&quot;/>
+          &lt;stringAttribute key=&quot;product&quot; value=&quot;org.eclipse.epp.package.committers.product&quot;/>
+          &lt;booleanAttribute key=&quot;show_selected_only&quot; value=&quot;false&quot;/>
+          &lt;stringAttribute key=&quot;templateConfig&quot; value=&quot;$${target_home}\configuration\config.ini&quot;/>
+          &lt;booleanAttribute key=&quot;tracing&quot; value=&quot;false&quot;/>
+          &lt;booleanAttribute key=&quot;useCustomFeatures&quot; value=&quot;false&quot;/>
+          &lt;booleanAttribute key=&quot;useDefaultConfig&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;useDefaultConfigArea&quot; value=&quot;true&quot;/>
+          &lt;booleanAttribute key=&quot;useProduct&quot; value=&quot;false&quot;/>
+      &lt;/launchConfiguration>
+
+    </content>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="eclipse.target.platform"
+      value="none"
+      storageURI="scope://Workspace"/>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="modeling.gitRepository.filter.override.pattern"
+      value=".*/([a-z]+)-[^/]+->$1"/>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="WildWeb">
+    <requirement
+        name="org.eclipse.wildwebdeveloper.feature.feature.group"
+        optional="true"/>
+    <repository
+        url="https://download.eclipse.org/wildwebdeveloper/releases/latest"/>
+  </setupTask>
+  <setupTask
+      xsi:type="git:GitCloneTask"
+      id="github.clone.modeling"
+      remoteURI="eclipse-modeling/modeling-website">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>github.remoteURIs</value>
+      </detail>
+      <detail
+          key="label">
+        <value>EMF GitHub repository</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>Modeling</description>
+  </setupTask>
+  <setupTask
+      xsi:type="git:GitCloneTask"
+      id="github.clone.modeling.emf"
+      remoteURI="eclipse-emf/emf-website">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>github.remoteURIs</value>
+      </detail>
+      <detail
+          key="label">
+        <value>Modeling GitHub repository</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>EMF</description>
+  </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask"
+      label="Model + EMF">
+    <sourceLocator
+        rootFolder="${github.clone.modeling.location}"/>
+    <sourceLocator
+        rootFolder="${github.clone.modeling.emf.location}"/>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      disabled="true"
+      name="Linux">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="github.clone.linuxtools"
+        remoteURI="eclipse-linuxtools/linuxtools-website"
+        checkoutBranch="master">
+      <annotation
+          source="http://www.eclipse.org/oomph/setup/InducedChoices">
+        <detail
+            key="inherit">
+          <value>github.remoteURIs</value>
+        </detail>
+        <detail
+            key="label">
+          <value>LinuxTools GitHub repository</value>
+        </detail>
+        <detail
+            key="target">
+          <value>remoteURI</value>
+        </detail>
+      </annotation>
+      <description>Linux Tools GitHub Repository</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask"
+        label="Linux">
+      <sourceLocator
+          rootFolder="${github.clone.linuxtools.location}"/>
+    </setupTask>
+  </setupTask>
+  <stream name="master"
+      label="Master">
+    <setupTask
+        xsi:type="setup:EclipseIniTask"
+        option="-Doomph.redirection.modeling2"
+        value="=https://raw.githubusercontent.com/eclipse-modeling/modeling-website/refs/heads/master/Modeling.setup->${github.clone.modeling.location|uri}/Modeling.setup">
+      <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
+    </setupTask>
+  </stream>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>The Modeling Project Website</description>
+</setup:Project>
