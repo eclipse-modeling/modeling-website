@@ -160,7 +160,7 @@
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsImportTask"
-      label="Model + EMF">
+      label="Modeling + EMF">
     <sourceLocator
         rootFolder="${github.clone.modeling.location}"/>
     <sourceLocator
@@ -203,8 +203,9 @@
       label="Master">
     <setupTask
         xsi:type="setup:EclipseIniTask"
-        option="-Doomph.redirection.modeling2"
-        value="=https://raw.githubusercontent.com/eclipse-modeling/modeling-website/refs/heads/master/Modeling.setup->${github.clone.modeling.location|uri}/Modeling.setup">
+        option="-Doomph.redirection.modeling"
+        value="=https://raw.githubusercontent.com/eclipse-modeling/modeling-website/refs/heads/master/Modeling.setup->${github.clone.modeling.location|uri}/Modeling.setup"
+        vm="true">
       <description>Set an Oomph redirection system property to redirect the logical location of this setup to its physical location in the Git clone.</description>
     </setupTask>
   </stream>
