@@ -15,3 +15,13 @@
 	padding-right: 1em;
 	width: 10em;
 }
+
+details>summary::before {
+	content: '\0025B6 ';
+	color: orange;
+}
+
+details[open]>summary::before {
+	content: '\0025E2 ';
+	color: orange;
+}

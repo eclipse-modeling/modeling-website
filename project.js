@@ -178,6 +178,8 @@ let defaultAside = toElements(`
 
 let additionalAside = ``;
 
+let tableOfContentsAside = '';
+
 const modelingDefaultAside = defaultAside;
 
 function generate() {
@@ -244,6 +246,7 @@ function generateBody() {
 				</div>
 				${generateAside()}
 				${generateAdditionalAside()}
+				${tableOfContentsAside}
 			</div>
 		</div>
 	</main>

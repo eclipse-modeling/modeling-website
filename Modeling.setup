@@ -28,6 +28,14 @@
           key="/instance/org.eclipse.oomph.setup.ui/showToolBarContributions"
           value="true"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.wildwebdeveloper">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.wildwebdeveloper/html.format.wrapLineLength"
+          value="0"/>
+    </setupTask>
   </setupTask>
   <setupTask
       xsi:type="setup:EclipseIniTask"
