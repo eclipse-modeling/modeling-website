@@ -25,20 +25,18 @@ const modelingProjects = [
 	'modeling.eef',
 	'modeling.efm',
 	'modeling.elk',
-	// 'modeling.emf',
+	'modeling.emf',
 	'modeling.emf-parsley',
-	'modeling.emf.cdo',
-	'modeling.emf.diffmerge',
-	'modeling.emf.egf',
-	// 'modeling.emf.emf',
-	'modeling.emf.mwe',
-	'modeling.emf.teneo',
+	'modeling.cdo',
+	'modeling.diffmerge',
+	'modeling.egf',
+	'modeling.mwe',
+	'modeling.teneo',
 	'modeling.emfcompare',
 	'modeling.emfservices',
 	'modeling.emfstore',
-	// 'modeling.emft',
-	'modeling.emft.emfatic',
-	'modeling.emft.henshin',
+	'modeling.emfatic',
+	'modeling.henshin',
 	'modeling.epsilon',
 	'modeling.fennec',
 	'modeling.gemoc',
@@ -46,26 +44,20 @@ const modelingProjects = [
 	'modeling.gmf-runtime',
 	'modeling.graphiti',
 	'modeling.hawk',
-	// 'modeling.m2t',
-	// 'modeling.m2t.xpand',
 	'modeling.mdht',
-	// 'modeling.mdt',
-	// 'modeling.mdt.bpmn2',
-	'modeling.mdt.etrice',
-	'modeling.mdt.ocl',
-	'modeling.mdt.papyrus',
-	'modeling.mdt.rmf',
-	'modeling.mdt.uml2',
-	// 'modeling.mmt',
-	'modeling.mmt.atl',
-	'modeling.mmt.qvt-oml',
-	'modeling.mmt.qvtd',
+	'modeling.etrice',
+	'modeling.ocl',
+	'modeling.papyrus',
+	'modeling.rmf',
+	'modeling.uml2',
+	'modeling.atl',
+	'modeling.qvt-oml',
+	'modeling.qvtd',
 	'modeling.modisco',
 	'modeling.poosl',
 	'modeling.sirius',
 	'modeling.syson',
-	// 'modeling.tmf',
-	'modeling.tmf.xtext',
+	'modeling.xtext',
 	'modeling.viatra',
 	'modeling.xpect',
 	'modeling.xsemantics',
@@ -84,22 +76,22 @@ const groups = {
 	tools: {
 		label: 'Tools',
 		members: [
-			'modeling.ecoretools', 'modeling.emft.emfatic', 'modeling.mdt.etrice', 'modeling.modisco', 'modeling.mdt.ocl',
-			'modeling.mdt.papyrus', 'modeling.edapt', 'modeling.epsilon', 'modeling.emfcompare', 'modeling.emf.diffmerge',
-			'modeling.emf.mwe', 'modeling.emf.egf', 'modeling.gemoc', 'automotive.sphinx', 'modeling.mdt.uml2', 'modeling.agileuml']
+			'modeling.ecoretools', 'modeling.emfatic', 'modeling.etrice', 'modeling.modisco', 'modeling.ocl',
+			'modeling.papyrus', 'modeling.edapt', 'modeling.epsilon', 'modeling.emfcompare', 'modeling.diffmerge',
+			'modeling.mwe', 'modeling.egf', 'modeling.gemoc', 'automotive.sphinx', 'modeling.uml2', 'modeling.agileuml']
 	},
 	transformation: {
 		label: 'Transformation',
-		members: ['modeling.acceleo', 'modeling.viatra', 'modeling.mmt.atl', 'modeling.emft.henshin', 'modeling.mmt.qvt-oml', 'modeling.mmt.qvtd']
+		members: ['modeling.acceleo', 'modeling.viatra', 'modeling.atl', 'modeling.henshin', 'modeling.qvt-oml', 'modeling.qvtd']
 
 	},
 	text: {
 		label: 'Textual',
-		members: ['modeling.tmf.xtext', 'modeling.xsemantics', 'modeling.xpect']
+		members: ['modeling.xtext', 'modeling.xsemantics', 'modeling.xpect']
 	},
 	traceablity: {
 		label: 'Traceability',
-		members: ['modeling.capra', 'modeling.mdt.rmf']
+		members: ['modeling.capra', 'modeling.rmf']
 
 	},
 	runtime: {
@@ -109,7 +101,7 @@ const groups = {
 	},
 	server: {
 		label: 'Server and Storage',
-		members: ['modeling.emf.cdo', 'modeling.emfstore', 'modeling.emf.teneo', 'modeling.hawk']
+		members: ['modeling.cdo', 'modeling.emfstore', 'modeling.teneo', 'modeling.hawk']
 	},
 	web: {
 		label: 'Web',
